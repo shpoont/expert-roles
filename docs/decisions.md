@@ -39,3 +39,28 @@ and the choices that remain open.
   to be agreed first.
 - **Source:** Owner's setup-only scope and requirement to discuss role contents
   before implementation.
+
+## D003 — 2026-10-18: Adopt Project Structure v1.0.0
+
+- **Status:** Adopted structure; product choices remain pending.
+- **Owner:** Leon.id Komarovsky.
+- **Context:** The owner asked this library to follow Project Structure.
+- **Decision:** Use its connected agreement, design, current-work, decisions,
+  delivery, working-materials, exploration, checks and evidence records. Follow
+  its independent changelog and release convention without making a release in
+  this task. Rename this canonical record to `docs/decisions.md`, preserving the
+  preceding entries.
+- **Rationale:** Make the current agreement, active work, reasons and check
+  results discoverable for contributors and continuation.
+- **Consequences:** Keep `roles/` at the top level and link it from the
+  working-materials guide. Add no duplicate role catalogue, role format,
+  implementation, license or outcome claim. The current agreement is
+  [PROJECT.md](../PROJECT.md), with the approach in [design](design.md),
+  prepared [checks](../tests/README.md) and results in
+  [evidence](../evidence/README.md).
+- **Alternatives:** Leaving only a repository overview and decision log would
+  omit the requested project's agreement, continuation and delivery records.
+  Moving the role catalogue into `src/` would reduce its intended visibility.
+- **Sources:** Owner's structure-alignment request;
+  [Project Structure v1.0.0](https://github.com/shpoont/project-structure/releases/tag/v1.0.0),
+  commit `96fdd6bd7950778f5b6c6f8269ab2b82167cb99a`.
