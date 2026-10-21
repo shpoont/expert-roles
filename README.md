@@ -131,8 +131,8 @@ request corrections or removal by emailing
 [leonid@komarovsky.info](mailto:leonid@komarovsky.info). You do not need to submit
 a legal complaint or explain why you prefer removal.
 
-We aim to acknowledge requests within three business days and complete
-straightforward removals within seven business days. We may request minimal
+I aim to acknowledge requests within three business days and complete
+straightforward removals within seven business days. I may request minimal
 confirmation of identity or authority.
 
 Removal covers the maintained catalogue and future releases. Historical

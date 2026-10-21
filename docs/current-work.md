@@ -4,7 +4,8 @@
 
 D046 adds a [private correction/removal request process](../README.md#requests-from-featured-experts)
 and explicit AI-inspired identity wording in the shared instruction and both
-native formats. The owner authorizes a signed commit and push for this focused
+native formats. The request policy uses the maintainer's singular first-person
+voice. The owner authorizes a signed commit and push for this focused
 follow-up. It is recorded under Unreleased; the published v1.0.0 snapshot remains
 fixed. See the [contract](design.md#expert-identity-wording-and-removal-requests)
 and [decision](decisions.md#d046--2026-10-21-clarify-ai-identity-and-offer-featured-expert-removal).
