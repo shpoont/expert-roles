@@ -1028,3 +1028,23 @@ validation remain separate from this addition.
   commit, exact-commit hosted checks, verified annotated tag, public release
   readback and clean local state. Source archives follow the peer convention;
   host-specific packages and consumer changes remain outside this release.
+
+## D046 — 2026-10-21: Clarify AI identity and offer featured-expert removal
+
+- **Status:** Adopted; signed commit and push authorized.
+- **Decision:** Add a dedicated main README section for featured experts and
+  representatives to request corrections or voluntary removal privately at
+  `leonid@komarovsky.info`. State target response times, minimal identity
+  confirmation and the limits concerning historical and third-party copies.
+  Replace the shared role opening with an explicitly AI-inspired perspective
+  and a prohibition on claiming to be or represent the expert or their estate;
+  substitute each expert's own name and regenerate both native formats.
+- **Rationale:** Make independence explicit in execution instructions and offer
+  an accessible request process without requiring a legal complaint. This is
+  a presentation and maintenance policy, not legal clearance or a claim of
+  improved role behavior.
+- **Checks and boundary:** Follow the
+  [focused contract](design.md#expert-identity-wording-and-removal-requests).
+  Keep the roster, profiles, descriptions, images, vocabulary, remaining shared
+  instruction and generated indexes unchanged. Record the work under Unreleased;
+  preserve published tags and leave deployment to consuming integrations.

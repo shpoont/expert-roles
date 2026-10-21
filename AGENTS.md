@@ -3,6 +3,13 @@
 This repository owns the public role collection, its documentation, references,
 examples and contribution guidance. Leon.id Komarovsky is the project owner.
 
+D046 adopts explicit AI-identity wording and the main README's private request
+process for featured experts. Follow the
+[focused contract](docs/design.md#expert-identity-wording-and-removal-requests),
+preserving the rest of each instruction and regenerating both native formats.
+The owner authorizes a signed commit and push for this follow-up. Record it
+under Unreleased and keep published release tags fixed.
+
 Read [README.md](README.md), [PROJECT.md](PROJECT.md) and
 [current work](docs/current-work.md) before acting. Follow relevant links to
 recover the existing agreement and context before asking the owner to repeat it.

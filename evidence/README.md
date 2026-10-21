@@ -1952,3 +1952,25 @@ or commit was performed.
   and [workflow runs](https://github.com/shpoont/expert-roles/actions/workflows/checks.yml)
   hold those external delivery results; local preparation is not their proof.
   Existing host-validation and effectiveness limits remain unchanged.
+
+## AI identity and featured-expert requests — 2026-10-21
+
+- **Scope:** D046's [focused contract](../docs/design.md#expert-identity-wording-and-removal-requests)
+  adds the main README's private correction/removal request process and replaces
+  the shared opening with explicit AI-inspired identity and nonrepresentation
+  wording. The owner authorizes a signed commit and push; changes remain under
+  Unreleased and the published v1.0.0 tag stays fixed.
+- **Observed checks:** All 25 existing tests pass and all 119 generated outputs
+  match their sources. All 57 native pairs parse and agree. Comparison with
+  v1.0.0 confirms that each of the 114 exports changes only the approved opening;
+  names, descriptions, the remaining instructions, expert sources, visuals,
+  vocabulary and generated catalogue/index content are preserved.
+- **README and public tree:** Rendered the new section as HTML and verified its
+  heading, private email link, target response times and placement near the
+  bottom. All 1,932 local references/anchors across 136 Markdown files resolve;
+  all 316 public files pass UTF-8 and bounded public-content checks. Whitespace
+  and the proposed diff pass review.
+- **Delivery and limits:** Git history and
+  [hosted checks](https://github.com/shpoont/expert-roles/actions/workflows/checks.yml)
+  record the published revision and CI result. These are source, rendering and
+  consistency checks; no new host-runtime or legal-clearance claim is made.

@@ -2,6 +2,17 @@
 
 ## Current focus and status
 
+D046 adds a [private correction/removal request process](../README.md#requests-from-featured-experts)
+and explicit AI-inspired identity wording in the shared instruction and both
+native formats. The owner authorizes a signed commit and push for this focused
+follow-up. It is recorded under Unreleased; the published v1.0.0 snapshot remains
+fixed. See the [contract](design.md#expert-identity-wording-and-removal-requests)
+and [decision](decisions.md#d046--2026-10-21-clarify-ai-identity-and-offer-featured-expert-removal).
+Local checks pass: 25 tests, all 119 generated outputs, 57 matching native
+pairs and 1,932 resolved local references. Only the approved opening changes in
+the 114 exports; profiles, visuals, metadata, descriptions and generated indexes
+are preserved. See the [follow-up evidence](../evidence/README.md#ai-identity-and-featured-expert-requests--2026-10-21).
+
 The **v1.0.0** whole-library baseline is complete. D044's
 [distribution layout](design.md#distribution-layout-and-generated-indexes)
 provides one native file per expert and host, plus generated alphabetical and
@@ -84,6 +95,11 @@ remain untested. A separate plugin owns deployment, registration and lifecycle.
 These follow-ups are separate from the accepted catalogue and commit readiness.
 
 ## Next actions
+
+D046's implementation and local verification are complete. The Git history and
+hosted checks record delivery of the authorized signed commit and push, including
+the exact-commit CI outcome. This follow-up does not authorize a new release or
+consuming-integration changes.
 
 No catalogue implementation remains for the v1.0.0 baseline. Use the
 [release procedure](delivery.md#versions-and-releases) for delivery; published

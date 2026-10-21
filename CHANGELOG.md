@@ -5,7 +5,16 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
-Record changes intended for the next release here.
+### Added
+
+- A private correction/removal contact and voluntary request process for
+  featured experts and their representatives in the main README.
+
+### Changed
+
+- Explicitly identify every role as an AI perspective inspired by public work
+  and prohibit claiming to be or represent the expert or their estate.
+  Regenerate all Codex and Claude Code role files from the shared instruction.
 
 ## v1.0.0 — 2026-10-21
 

@@ -124,6 +124,20 @@ pin a released tag or commit when consuming the library.
 
 Maintained by Leon.id Komarovsky.
 
+## Requests from featured experts
+
+If you are featured in this catalogue, or represent someone who is, you may
+request corrections or removal by emailing
+[leonid@komarovsky.info](mailto:leonid@komarovsky.info). You do not need to submit
+a legal complaint or explain why you prefer removal.
+
+We aim to acknowledge requests within three business days and complete
+straightforward removals within seven business days. We may request minimal
+confirmation of identity or authority.
+
+Removal covers the maintained catalogue and future releases. Historical
+versions, existing downloads and third-party copies may remain available.
+
 ## License
 
 Original project content and code, including role files, the SVG template

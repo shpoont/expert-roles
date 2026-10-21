@@ -1059,6 +1059,24 @@ portraits and eight full-name placeholders give thirty-one photos and nineteen
 placeholders. The other forty profiles, earlier concept definitions, shared
 instruction and fixed README sample are preserved.
 
+## Expert identity wording and removal requests
+
+D046 authorizes a focused follow-up to the published v1.0.0 baseline:
+
+- Add **Requests from featured experts** near the bottom of the main README,
+  with a private correction/removal route to `leonid@komarovsky.info`, voluntary
+  removal without a legal complaint, minimal identity confirmation, target
+  response times and an explicit limit concerning historical and third-party copies.
+- Replace the shared role opening with an explicitly AI-inspired perspective
+  and a prohibition on claiming to be or represent the expert or their estate.
+  Substitute each expert's own name and regenerate both native distributions.
+- Preserve the rest of the shared instruction, expert roster, profiles, metadata,
+  visuals, descriptions, vocabulary and generated catalogue/index content.
+- Run the existing suite and generation check; verify both hosts' instructions,
+  README rendering/link targets, preserved content and the final diff. Commit
+  with the configured signature, push and read back the remote commit and CI.
+  Record the changes under Unreleased; published release tags remain fixed.
+
 ## Findings and changes
 
 Record the handover in [current work](current-work.md), lasting reasons and
