@@ -1,33 +1,205 @@
 # Tests and assessments
 
 Checks follow the [project expectations](../PROJECT.md#scope-and-expectations)
-and the [implementation contract](../docs/design.md#implementation-contract).
-Manual review is appropriate for this documentation-only change; no runtime or
-role-performance tests are introduced.
+and [implementation contract](../docs/design.md#implementation-contract).
 
-## Structure-alignment checks
+## Profile prototype checks
 
-Before committing and pushing this change, the implementer checks:
-
-| Check | Pass condition |
+| Check | Observable pass condition |
 | --- | --- |
-| Starter coverage | All Project Structure v1.0.0 record locations are represented and adapted to this library. |
-| Navigation | Every relative Markdown file link and local heading anchor resolves. |
-| Canonical records | `PROJECT.md` holds the current agreement; `docs/decisions.md` is the sole decision log and preserves D001/D002. |
-| Catalogue visibility | The root README links directly to top-level `roles/`; no duplicate role catalogue is introduced. |
-| Scope and status | No role definitions, schemas, runtime, license choice or release is introduced; pending choices remain explicit. |
-| Public suitability | Proposed public files contain no private project identities, conversation IDs, machine paths or credential material. |
-| Git hygiene | The reviewed diff has no whitespace errors or unrelated changes. |
+| Source layout | Profiles, specialties and templates live under `src/`; generator paths, fixtures and links resolve there. |
+| Profile coverage | Each completed expert in the catalogue has a linked profile, valid photo or name visual and two portable native files. Accepted drafts outside the current addition step are accurately recorded. Missing photographs do not block a profile that uses standard name. |
+| Expert selection guidance | The main README defines an expert, and the linked contribution criteria cover established expertise, accessible work, useful task fit and a preference for public familiarity within the field. Fame alone is insufficient; formal credentials are optional, and living and historical people may qualify. Existing profile fields support editorial selection, without claims of model familiarity or effectiveness. |
+| Profile layout | Every completed profile and the starter show linked specialties once, a short introduction, early role-file/setup links and one independent-AI notice. Suggested uses and references precede a full visible photo credit or an Image note identifying the name placeholder and template; a collapsed Source files footer retains metadata and shared-instruction links. |
+| Metadata | Names and specialty lists are nonempty, identifiers are unique and all specialty references exist. An optional perspective is nonempty authored text; malformed values and unknown fields are rejected before generation or placeholder writes. Registry entries require name, group and an absolute HTTP(S) concept reference; duplicate names/concepts and invalid references are rejected before writes. |
+| Selection descriptions | An optional perspective distinguishes an expert's emphasis within overlapping specialties, grounded in the profile's public work. Both host descriptions match, retain all labels and remain nonexhaustive. Omission is supported; quotes, Unicode and folded text survive correctly. The phrase also appears beneath catalogue specialty labels but does not enter execution instructions. |
+| Specialty guidance | One linked rules document covers task matching, shared terms, source selection, overlap and grouping. Source meanings and public work support the assigned specialties; concept matching is editorial review, not an inference from URL validity. |
+| Shared vocabulary | Experts reuse canonical specialty IDs and labels. Only assigned specialties appear in the catalogue, grouped consistently and sorted by name. Reference URLs stay out of native instructions. |
+| Shared instruction | Each native instruction is exactly the shared template with the expert name and labels substituted. |
+| Breadth | Specialty labels are nonexhaustive guidance; the task and evidence determine the focus within documented expertise. |
+| Professional scope and independence | The shared instruction requires a fit/context check, out-of-expertise decline, bounded handling of mixed requests, clarification, independent challenge and transparent attribution. Generated text can be checked structurally; actual behavior needs separate assessment. |
+| Catalogue growth and display text | The expert table has three columns and one row per expert; accepted punctuation renders as text without changing cells or links. |
+| README entry points | The main README has exactly six featured experts in two rows, a generated total and a full-catalogue link. The full alphabetical and specialty catalogue lives in src/roles/README.md. Adding an expert grows that catalogue and both counts without enlarging the sample. Authored text outside each marker pair survives; missing, duplicate, reversed, overlapping or nested boundaries fail before writes. Invalid curated sources also fail before writes. |
+| Native syntax | Codex files parse as TOML with the three required fields; Claude files have valid YAML frontmatter and a nonempty instruction body. |
+| Generated consistency | Exporter check mode reports no missing, changed or obsolete generated role files or catalogue content. |
+| Invalid input | An invalid profile sorted after a valid profile is rejected before outputs are written; malformed metadata is also rejected. |
+| Multiple specialties | Both host files retain Goldratt's identity and all four assigned specialty labels. |
+| Navigation | Relative Markdown file links, local HTML image references, heading anchors and explicit canonical specialty anchors resolve. Named specialty links land on the exact row; IDs remain stable across label/group changes. |
+| Images | Every expert has exactly one of portrait.jpg (a decodable 512 × 512 RGB JPEG) or placeholder.svg (matching the shared 512 × 512 SVG template and complete expert name). Missing, ambiguous, malformed or altered visuals fail before generated outputs are written. The catalogue selects the correct filename and labels placeholders accurately. |
+| Placeholder creation | The documented command reads the full name from expert.yaml, wraps and sizes it to fit, escapes XML text and creates only that profile's SVG. It rejects invalid names/arguments and never overwrites a photo or SVG. An isolated copy/fill/create/generate/check trial completes the starter. Full-name and photographic variants render at both display sizes without changing native instructions. |
+| Photo reuse | Accept any verified free reuse grant, with or without an attribution requirement, including custom terms. Manual review confirms compatibility with the actual catalogue use and required image preparation; license categories alone do not decide eligibility. Missing or unclear permission is excluded. Profiles and the starter always retain available creator, title and source attribution, license/version or other permission terms, required notices and edit history. Applicable conditions are followed; modified CC BY-SA portraits retain their license. |
+| Library license | Root LICENSE matches the standard MIT text and Copyright (c) 2026 Shpoont. Current guidance applies MIT to original material, the SVG template and name artwork, excludes photographs and requires retaining the notice with standalone role copies. Earlier photo bytes and credits are preserved. |
+| Public suitability | Proposed files contain no credentials, private repository identities, coordination identifiers or author-machine paths. |
+| Handover | Current work, scope, decisions, contribution guidance and delivery accurately describe the initial catalogue and documented host limits. |
+| Direct use | A linked central section explains obtaining an export, tested Codex registration, untested host paths and the separate deployment responsibility. Explicit expert requests are optional; exact names are useful for targeted requests and invocation validation. |
+| Starter profile | The documented starter can be copied, completed with name and generated into a linked catalogue entry and valid native files without changing the real expert collection. Exact instructions also explain replacing name with a permitted photo and restoring name. |
+| Git boundary | Diff has no whitespace errors; no changes are staged or committed and no push, persistent deployment or release occurs. Temporary host-validation placement follows the separately authorized contract below. |
 
-Record actual results, date, baseline and limitations in
-[evidence](../evidence/README.md). Missing or failed required checks block the
-corresponding completion claim; only the owner may authorize a permitted
-exception within the agreed scope, recorded in [decisions](../docs/decisions.md)
-without relabeling the check as passed.
+Run the exporter in check mode as described in [src](../src/README.md).
+Record actual results, baseline and limitations in
+[evidence](../evidence/README.md). Review the rendered catalogue and profiles
+before handover; source validity alone does not establish a good presentation.
 
-## Later role assessments
+## Four requested expert additions
 
-Role behavior and benefit assessments remain pending design agreement. Prepare
-their tasks, conditions, expected outcomes, comparison method, evidence and
-responsible owner before implementation. A clean repository, valid role file or
-well-formed output alone does not establish task usefulness.
+For [D031's addition contract](../docs/design.md#four-requested-expert-additions),
+review all four experts against the existing definition, linked primary work
+and neighboring perspectives. Confirm the three new specialty meanings and
+assignments, verify both new portraits' grants and credits, and check the two
+name placeholders against the shared template. Review the rendered catalogue
+and four profiles. Run the existing suite, generated consistency, native-file
+syntax/equality, local-link, public-content and Git checks. Compare every
+pre-existing expert directory, shared template, generator and test file with
+the pre-addition hashes. Preserve earlier decision and evidence text; confirm
+an empty index and unchanged HEAD. No new runtime test is required or authorized.
+
+Apply the same source, generated-file, image, navigation, preservation and Git
+checks to [D032's Rybka addition](../docs/design.md#zdeněk-rybka-addition), reusing
+the established specialty and full-name placeholder without changing templates.
+
+Apply those checks to [D035's Peterson addition](../docs/design.md#jordan-peterson-addition),
+including the new Personality psychology concept and the photograph's source,
+CC BY-SA 3.0 attribution and recorded crop. Preserve earlier expert directories,
+shared templates, generator, tests and the fixed six-expert README sample.
+
+Apply those checks to
+[D036's four additions](../docs/design.md#hawkins-premack-levels-and-frawley-additions).
+Verify their fit against linked public work, the four new concept meanings and
+the Animal behavior group, Hawkins's CC BY-SA 2.0 source and edits, and the
+three full-name placeholders. Preserve all thirty-seven earlier expert
+directories, the shared instruction, templates, code, tests and README sample.
+Review the four rendered profiles and full catalogue; no runtime invocation
+is included.
+
+Apply those checks to
+[D039's ten additions and Rybka removal](../docs/design.md#ten-expert-additions-and-rybka-removal).
+Verify all ten profiles against their public work and all thirteen new concept
+mappings. Check Edmondson's CC BY-SA 2.0 source and earlier crop credit, Ross's
+MIT CC BY-NC 4.0 video source and frame/crop credit, and the eight full-name
+placeholders. Confirm exactly Rybka's five files are removed, all other forty
+expert directories retain their bytes, both native formats agree, and the fixed
+README sample is unchanged. Preserve historical inclusion records, replacing
+the removed profile link with its public references. Review the rendered new
+profiles and fifty-expert catalogue; no runtime invocation is included.
+
+## Selection criteria and company coverage review (D037)
+
+For [D037's selection update](../docs/design.md#selection-criteria-and-company-coverage-review),
+check consistency with the short expert definition, separate source-backed
+eligibility from initial selection priorities and observed role benefit, and
+confirm additions and deferrals remain proposals. Run generated consistency,
+local-link, UTF-8, public-content, full-diff and Git checks. Compare every
+expert directory, registry, shared template, code and test file with the
+pre-update hashes; reuse the existing code-test results while these stay unchanged.
+
+For [D038's scope clarification](../docs/design.md#broad-catalogue-scope-clarification),
+check that current guidance describes a broad expert catalogue and supersedes
+deferral recommendations based on the earlier narrow interpretation. Apply the same
+documentation and preservation checks without changing the roster or exports.
+
+## Completed documentation review (D030)
+
+The completed [documentation cleanup](../docs/design.md#documentation-cleanup-and-final-checks)
+checked guidance for the thirty-one-expert baseline and initial export
+formats, distinguishing the sampled Codex registration result from unresolved
+discovery and untested Claude runtime, and keeps deployment external. Remove
+temporary contributor restrictions while retaining the owner's no-commit
+constraint in project guidance. Preserve historical decision and evidence text.
+
+Run the existing suite and exporter check; validate both hosts' actual files,
+all local references and public content. Compare protected content with the
+pre-cleanup hashes, review the complete proposed Git inventory and diff,
+including untracked files and portrait credits, and confirm an empty index and
+unchanged HEAD. Retain observations in [evidence](../evidence/README.md).
+
+## Codex host validation
+
+The owner authorized the three-case
+[Codex check](../docs/design.md#codex-host-validation), using unchanged exports
+in a temporary project and fresh sessions. Observe actual custom-agent calls,
+description-guided selection, an in-scope challenge and an out-of-scope decline.
+Retain private raw evidence and a public summary of results and limitations.
+This exception does not authorize persistent deployment or plugin work.
+The initial attempt was blocked at catalogue-role discovery. The subsequent
+`codex exec` retry used invocation-only name/description/file registrations;
+all three sampled cases met their expected results, with native calls confirming
+the exact catalogue agents. See the
+[retry results and limits](../evidence/README.md#codex-exec-retry--2026-10-20).
+Automatic directory discovery remains unresolved; this is not a broad benchmark.
+
+## Role benefit assessments
+
+The bounded Codex check above is complete. Claude launches and comparative
+benefit assessments remain outside the current task. Broader discovery,
+runtime reliability and useful expert judgment remain unverified.
+Future behavioral checks should cover an in-scope assignment, clear
+out-of-expertise work, mixed requests, uncertain fit or missing essential
+context, forced conclusions, suppression of expert judgment and legitimate
+constraints or contrary evidence. Also check work supported by the expert's
+public record but absent from the specialty tags. Expected responses follow
+the [shared instruction](../src/templates/invocation.md). The three samples above
+cover only a clear heuristic-review match, one forced conclusion and one
+out-of-expertise decline; the remaining scenarios and repeatability are untested.
+Future selection checks should also cover clear matches, overlapping expertise,
+irrelevant name or topic mentions, mixed requests, and legitimate expertise
+absent from the description's examples. Assess the parent choice and distinct
+assignments, including when no role or clarification is appropriate. Description
+review and structural checks alone do not establish selection reliability.
+Before assessing benefit, agree representative tasks, comparison conditions,
+criteria and responsibility. Structural checks do not establish model uplift.
+
+## Previous structure alignment
+
+The completed documentation-only adoption checks are retained in
+[evidence](../evidence/README.md#project-structure-adoption--2026-10-18).
+
+## Seven philosophy additions (D040)
+
+Apply the existing checks to the [seven additions](../docs/design.md#seven-philosophy-additions).
+Review each expert's fit, references, historical attribution limits and
+distinguishing perspective. Confirm the eight concept mappings and Philosophy
+group. Verify the image terms separately from the underlying artwork: Socrates'
+photograph retains CC BY-SA 2.5, Aristotle's photographer supplies a public-domain
+dedication, four historical two-dimensional portraits are public domain, and
+Popper's archive photograph uses LSE Library's explicit Flickr reuse statement.
+Retain credits, source links and crops; label later artistic depictions.
+
+Run the existing suite, generated/native consistency, image, navigation, UTF-8,
+public-content and Git checks. Preserve the other fifty expert directories,
+all earlier registry definitions, templates, generator, tests, license and
+authored main README; only its generated counts change. Review the rendered
+catalogue and seven profiles. No runtime invocation or deployment is included.
+
+## Accepted catalogue documentation closeout (D041)
+
+For the [closeout contract](../docs/design.md#final-documentation-closeout-for-the-accepted-catalogue),
+confirm that current guidance records owner acceptance, completed implementation
+and commit readiness without stale pending-review requests. Keep historical
+records and runtime limitations distinct from current work. Verify current
+counts and evidence links, including both noncommercial portrait conditions.
+
+Run the existing suite, generated/native consistency, image, local-reference,
+UTF-8, bounded public-content and complete Git-inventory/whitespace checks.
+Compare the entire tree with the accepted baseline: only current guidance and
+linked design, decision, test-guidance, changelog and evidence records may
+change. Every expert file, source registry, shared template, generator, code
+test, requirement, license and both catalogue entry points must retain its
+bytes. Confirm an empty Git index and unchanged HEAD. Existing render acceptance
+remains applicable while all catalogue and visual content is preserved.
+
+## Visitor journey review (D042)
+
+Walk through first-time discovery, expert comparison, profile/file access and
+setup, then known-name retrieval, precise specialty alternatives, changes and
+contribution. Use independent reviewer feedback and saved fresh screenshots;
+re-review supported fixes and run an independent final review. Separate local
+Markdown rendering from hosted GitHub, actual users and assistive-technology
+outcomes. Long-code overflow in a preview alone is not a repository defect.
+
+Run the existing suite, generated/native equality, image, complete local-link,
+explicit-anchor, UTF-8, public-tree and Git checks. The navigation regression
+check must preserve specialty targets when labels or groups change. Confirm
+all fifty-seven metadata records, visuals and native pairs remain unchanged;
+profile README changes are limited to specialty destinations. Keep the fixed
+six-expert sample and previous decision/evidence bodies. Record results in
+[evidence](../evidence/README.md); do not invoke or install roles.

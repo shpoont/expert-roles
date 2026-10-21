@@ -1,0 +1,7 @@
+name: Martin Kleppmann
+specialties:
+- distributed-computing
+- software-architecture
+perspective: >-
+  data-system reliability, consistency, replication and failure, including
+  the tradeoffs of distributed architectures

@@ -1,0 +1,412 @@
+# Shared vocabulary for task matching and catalogue navigation.
+# Each reference URL identifies the source concept, including its external ID.
+# Source attribution and rules: docs/elements/specialties.md.
+access-to-justice:
+  name: Access to justice
+  group: Law
+  reference: https://www.wikidata.org/wiki/Q28135689
+
+activity-based-costing:
+  name: Activity-based costing
+  group: Finance
+  reference: https://www.wikidata.org/wiki/Q754331
+
+artificial-intelligence:
+  name: Artificial intelligence
+  group: Computing
+  reference: https://www.wikidata.org/wiki/Q11660
+
+bayesian-networks:
+  name: Bayesian networks
+  group: Computing
+  reference: https://www.wikidata.org/wiki/Q812540
+
+brand-equity:
+  name: Brand equity
+  group: Marketing
+  reference: https://www.wikidata.org/wiki/Q513100
+
+brand-management:
+  name: Brand management
+  group: Marketing
+  reference: https://www.wikidata.org/wiki/Q453181
+
+business-process-reengineering:
+  name: Business process reengineering
+  group: Management
+  reference: https://www.wikidata.org/wiki/Q876690
+
+causal-inference:
+  name: Causal inference
+  group: Computing
+  reference: https://www.wikidata.org/wiki/Q5054566
+
+cognitive-psychology:
+  name: Cognitive psychology
+  group: Psychology
+  reference: http://data.europa.eu/esco/skill/2618f336-8e71-4666-83b5-f368edb0906d
+
+comparative-psychology:
+  name: Comparative psychology
+  group: Psychology
+  reference: https://www.wikidata.org/wiki/Q1483503
+
+computational-neuroscience:
+  name: Computational neuroscience
+  group: Computing
+  reference: https://www.wikidata.org/wiki/Q8037925
+
+contextual-design:
+  name: Contextual design
+  group: Design
+  reference: https://www.wikidata.org/wiki/Q5165191
+
+contract-law:
+  name: Contract law
+  group: Law
+  reference: http://data.europa.eu/esco/skill/5c606d18-6404-4047-b235-350f18e11827
+
+copyright-legislation:
+  name: Copyright legislation
+  group: Law
+  reference: http://data.europa.eu/esco/skill/e2103a1d-4a84-47a9-b4f7-774787573449
+
+corporate-finance:
+  name: Corporate finance
+  group: Finance
+  reference: https://www.wikidata.org/wiki/Q1134763
+
+critical-chain-project-management:
+  name: Critical Chain project management
+  group: Management
+  reference: https://www.wikidata.org/wiki/Q1140520
+
+customer-development:
+  name: Customer development
+  group: Management
+  reference: https://www.wikidata.org/wiki/Q27134988
+
+customer-service:
+  name: Customer service
+  group: Management
+  reference: http://data.europa.eu/esco/skill/15a33d76-4640-438d-ae64-fdc0c1d3eebc
+
+cyber-security:
+  name: Cyber security
+  group: Computing
+  reference: http://data.europa.eu/esco/skill/8088750d-8388-4170-a76f-48354c469c44
+
+deep-learning:
+  name: Deep learning
+  group: Computing
+  reference: https://www.wikidata.org/wiki/Q197536
+
+devops:
+  name: DevOps
+  group: Computing
+  reference: http://data.europa.eu/esco/skill/f0de4973-0a70-4644-8fd4-3a97080476f4
+
+distributed-computing:
+  name: Distributed computing
+  group: Computing
+  reference: http://data.europa.eu/esco/skill/897b393f-e7e0-4248-a40d-d77119694e83
+
+dog-training:
+  name: Dog training
+  group: Animal behavior
+  reference: https://www.wikidata.org/wiki/Q38490
+
+domain-driven-design:
+  name: Domain-driven design
+  group: Computing
+  reference: https://www.wikidata.org/wiki/Q524367
+
+earnings-quality:
+  name: Earnings quality
+  group: Finance
+  reference: https://www.wikidata.org/wiki/Q5326947
+
+effectuation:
+  name: Effectuation
+  group: Management
+  reference: https://www.wikidata.org/wiki/Q1295852
+
+enterprise-architecture:
+  name: Enterprise architecture
+  group: Computing
+  reference: https://www.wikidata.org/wiki/Q1048431
+
+entrepreneurship:
+  name: Entrepreneurship
+  group: Management
+  reference: http://data.europa.eu/esco/skill/658605f2-1c95-49f0-bd98-0af7b15ad0b0
+
+epistemology:
+  name: Epistemology
+  group: Philosophy
+  reference: https://www.wikidata.org/wiki/Q9471
+
+ethics:
+  name: Ethics
+  group: Philosophy
+  reference: http://data.europa.eu/esco/skill/cef5c0f8-1e40-4c09-b6a7-aa7811849e5d
+
+extreme-programming:
+  name: Extreme programming
+  group: Computing
+  reference: https://www.wikidata.org/wiki/Q209711
+
+financial-accounting:
+  name: Financial accounting
+  group: Finance
+  reference: https://www.wikidata.org/wiki/Q949180
+
+graphic-design:
+  name: Graphic design
+  group: Design
+  reference: http://data.europa.eu/esco/skill/7fb699d9-182a-430e-b7a0-6d8ed05c284b
+
+heuristic-evaluation:
+  name: Heuristic evaluation
+  group: Design
+  reference: https://www.wikidata.org/wiki/Q1616517
+
+human-centered-design:
+  name: Human-centered design
+  group: Design
+  reference: https://www.wikidata.org/wiki/Q19602141
+
+human-computer-interaction:
+  name: Human-computer interaction
+  group: Design
+  reference: http://data.europa.eu/esco/skill/9136cbf1-7916-4f1c-bc9a-0318ee1d6016
+
+human-resource-management:
+  name: Human resource management
+  group: Management
+  reference: http://data.europa.eu/esco/skill/e437eba1-3e22-41f2-8703-741e94785cba
+
+information-technology-law:
+  name: Information technology law
+  group: Law
+  reference: https://www.wikidata.org/wiki/Q977345
+
+interaction-design:
+  name: Interaction design
+  group: Design
+  reference: http://data.europa.eu/esco/skill/de0be6e8-644c-4cc9-9c8d-925dd98dda56
+
+large-language-models:
+  name: Large language models
+  group: Computing
+  reference: https://www.wikidata.org/wiki/Q115305900
+
+lean-manufacturing:
+  name: Lean manufacturing
+  group: Management
+  reference: https://www.wikidata.org/wiki/Q380772
+
+legal-informatics:
+  name: Legal informatics
+  group: Law
+  reference: https://www.wikidata.org/wiki/Q10302162
+
+logic:
+  name: Logic
+  group: Philosophy
+  reference: http://data.europa.eu/esco/skill/294cf13e-4fdf-4cb8-bb6b-31b9da7f4819
+
+logistics:
+  name: Logistics
+  group: Management
+  reference: http://data.europa.eu/esco/skill/e843973c-23dd-416a-8a9c-9e89512542fb
+
+machine-learning:
+  name: Machine learning
+  group: Computing
+  reference: https://www.wikidata.org/wiki/Q2539
+
+management-accounting:
+  name: Management accounting
+  group: Finance
+  reference: https://www.wikidata.org/wiki/Q2990807
+
+marketing-management:
+  name: Marketing management
+  group: Marketing
+  reference: http://data.europa.eu/esco/skill/5bbaa0e6-0fd7-4df2-9db7-34f78b40dc34
+
+multiple-criteria-decision-analysis:
+  name: Multiple-criteria decision analysis
+  group: Management
+  reference: https://www.wikidata.org/wiki/Q1895805
+
+negotiation:
+  name: Negotiation
+  group: Management
+  reference: https://www.wikidata.org/wiki/Q202875
+
+operant-conditioning:
+  name: Operant conditioning
+  group: Psychology
+  reference: https://www.wikidata.org/wiki/Q847079
+
+operations-management:
+  name: Operations management
+  group: Management
+  reference: https://www.wikidata.org/wiki/Q1423657
+
+organizational-learning:
+  name: Organizational learning
+  group: Management
+  reference: https://www.wikidata.org/wiki/Q1430172
+
+personality-psychology:
+  name: Personality psychology
+  group: Psychology
+  reference: https://www.wikidata.org/wiki/Q271716
+
+philosophy-of-science:
+  name: Philosophy of science
+  group: Philosophy
+  reference: https://www.wikidata.org/wiki/Q59115
+
+political-philosophy:
+  name: Political philosophy
+  group: Philosophy
+  reference: https://www.wikidata.org/wiki/Q179805
+
+principled-negotiation:
+  name: Principled negotiation
+  group: Management
+  reference: https://www.wikidata.org/wiki/Q17069009
+
+product-design:
+  name: Product design
+  group: Design
+  reference: https://www.wikidata.org/wiki/Q1043226
+
+product-management:
+  name: Product management
+  group: Management
+  reference: https://www.wikidata.org/wiki/Q1780667
+
+project-management:
+  name: Project management
+  group: Management
+  reference: http://data.europa.eu/esco/skill/7111b95d-0ce3-441a-9d92-4c75d05c4388
+
+psychological-safety:
+  name: Psychological safety
+  group: Psychology
+  reference: https://www.wikidata.org/wiki/Q17150189
+
+quality-management:
+  name: Quality management
+  group: Management
+  reference: https://www.wikidata.org/wiki/Q757012
+
+sales-management:
+  name: Sales management
+  group: Sales
+  reference: https://www.wikidata.org/wiki/Q5657855
+
+security-engineering:
+  name: Security engineering
+  group: Computing
+  reference: https://www.wikidata.org/wiki/Q365674
+
+socratic-method:
+  name: Socratic method
+  group: Philosophy
+  reference: https://www.wikidata.org/wiki/Q839475
+
+software-architecture:
+  name: Software architecture
+  group: Computing
+  reference: https://www.wikidata.org/wiki/Q846636
+
+software-engineering:
+  name: Software engineering
+  group: Computing
+  reference: https://www.wikidata.org/wiki/Q80993
+
+software-refactoring:
+  name: Software refactoring
+  group: Computing
+  reference: https://www.wikidata.org/wiki/Q116877
+
+spin-selling:
+  name: SPIN Selling
+  group: Sales
+  reference: https://www.huthwaiteinternational.com/blog/complete-guide-to-spin-selling
+
+statistical-process-control:
+  name: Statistical process control
+  group: Management
+  reference: http://data.europa.eu/esco/skill/0c77bcd5-b94a-475d-98e9-5a4327e4d726
+
+stoicism:
+  name: Stoicism
+  group: Philosophy
+  reference: https://www.wikidata.org/wiki/Q48235
+
+strategic-alliances:
+  name: Strategic alliances
+  group: Management
+  reference: https://www.wikidata.org/wiki/Q1328230
+
+strategic-management:
+  name: Strategic management
+  group: Management
+  reference: https://www.wikidata.org/wiki/Q376657
+
+supply-chain-management:
+  name: Supply chain management
+  group: Management
+  reference: http://data.europa.eu/esco/skill/f929c89e-c363-4132-a918-e021d57b307c
+
+technology-adoption-lifecycle:
+  name: Technology adoption lifecycle
+  group: Marketing
+  reference: https://www.wikidata.org/wiki/Q7692587
+
+test-driven-development:
+  name: Test-driven development
+  group: Computing
+  reference: https://www.wikidata.org/wiki/Q950250
+
+theory-of-constraints:
+  name: Theory of Constraints
+  group: Management
+  reference: http://data.europa.eu/esco/skill/2abb7341-11a9-4799-9aef-7f2a83de0358
+
+toyota-production-system:
+  name: Toyota Production System
+  group: Management
+  reference: https://www.wikidata.org/wiki/Q1553383
+
+typography:
+  name: Typography
+  group: Design
+  reference: https://www.wikidata.org/wiki/Q159964
+
+usability-engineering:
+  name: Usability engineering
+  group: Design
+  reference: http://data.europa.eu/esco/skill/95ee5e38-5c1e-4cd2-a21d-6921390025a9
+
+valuation-finance:
+  name: Valuation (finance)
+  group: Finance
+  reference: https://www.wikidata.org/wiki/Q4008379
+
+virtue-ethics:
+  name: Virtue ethics
+  group: Philosophy
+  reference: https://www.wikidata.org/wiki/Q1086395
+
+web-accessibility:
+  name: Web accessibility
+  group: Design
+  reference: https://www.wikidata.org/wiki/Q808932

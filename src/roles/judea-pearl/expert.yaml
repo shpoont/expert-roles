@@ -1,0 +1,8 @@
+name: Judea Pearl
+specialties:
+- causal-inference
+- bayesian-networks
+- artificial-intelligence
+perspective: >-
+  causal assumptions, interventions and counterfactuals, using causal
+  diagrams to distinguish causation from prediction

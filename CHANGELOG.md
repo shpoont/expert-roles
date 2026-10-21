@@ -1,22 +1,303 @@
 # Changelog
 
 Record meaningful changes by version under the
-[release convention](README.md#versions-and-releases). There are no released
+[release convention](docs/delivery.md#versions-and-releases). There are no released
 role-library versions yet.
 
 ## Unreleased
 
-### Added
+### Current collection
+
+- 57 experts, 82 specialties in ten groups, 38 credited portraits and 19
+  full-name placeholders, with Codex and Claude Code files for every expert.
+- A compact six-expert README sample, a full alphabetical and specialty
+  catalogue, shared instructions and a copyable contributor starter.
+- Original material uses MIT; photographs and referenced vocabulary retain
+  their individually documented terms.
+
+### Changed
+
+- Explain independent AI interpretation near the introduction. Show existing
+  perspective cues for comparison, add a browser Find hint and link specialty
+  labels to stable, precise catalogue rows.
+- Clarify copying the whole starter once, preparing Python and choosing the
+  image before generation. Separate this current summary from historical notes.
+
+### Validation
+
+Three sampled Codex calls passed through explicit registration. Claude runtime,
+automatic Codex discovery and comparative role benefit remain unverified. No
+release or tag exists. The owner accepted the reviewed catalogue and authorized
+its initial commit; push and publication require separate instructions.
+
+## Initial development history
+
+The notes below preserve intermediate states and superseded choices in the
+initial implementation. Earlier counts and pending work describe those stages;
+the current collection and validation summary above describe today's state.
+
+### Documentation and selection changes
+
+- Recorded owner acceptance of the fifty-seven-expert catalogue and closed
+  its implementation and visual-review work. Aligned current instructions,
+  agreement, delivery and handover guidance with completed status, preserving
+  all expert content and historical records. Final verification and later
+  runtime/effectiveness work remain separately documented; work is uncommitted.
+
+- Clarified the project's scope as a broad expert catalogue. Superseded deferral
+  recommendations based on a narrower interpretation while retaining the
+  criteria and research. All forty-one experts and their files are preserved.
+
+- Refined expert selection criteria to distinguish evidence of expertise,
+  accessible approaches, task fit and scope, collection contribution and
+  faithful use. Adopted main company functions as a curation coverage
+  checklist, alongside the existing specialty vocabulary. Candidate additions
+  and possible initial deferrals remain proposals; the forty-one-expert roster,
+  native files and short expert definition are preserved.
+
+- Simplified the README's expert-request example and removed the exporter
+  aside. Clarified documented Codex name-based requests and Claude Code's
+  `@` selection in the setup guide. Retained License before Disclaimer to
+  match the existing public projects.
+
+### Removed during development
+
+- Zdeněk Rybka's current profile and both native exports, as selected by the
+  owner after reviewing overlap with Tomáš Baťa. Historical inclusion records
+  and source references remain available.
+
+### Additions during development
+
+- Socrates, Aristotle, Epictetus, Immanuel Kant, John Stuart Mill, Confucius
+  and Karl Popper, with concise sourced profiles, credited reusable portraits
+  and both generated native formats. Eight mapped specialties and a Philosophy
+  group bring the catalogue to fifty-seven experts and eighty-two specialties.
+  Profiles distinguish historical sources and later artistic representations;
+  Socrates' photograph retains CC BY-SA 2.5 and Popper's photograph records
+  LSE Library's explicit reuse terms. Earlier profiles, shared instructions
+  and the fixed README sample are preserved. Work remains uncommitted.
+- Dave Ulrich, Amy Edmondson, Marty Cagan, Mark Roberge, Benjamin Gomes-Casseres,
+  Bill Price, Patricia Dechow, Jeanne Ross, Hau Lee and Kenneth A. Adams, with
+  sourced profiles, both native formats, two credited portraits and eight
+  full-name placeholders. Thirteen mapped specialties bring the catalogue to
+  fifty experts and seventy-four specialties. Earlier retained profiles,
+  shared instructions and the fixed README sample are preserved.
+
+- Jeff Hawkins, David Premack, Pieter Levels and Ed Frawley, checked against
+  the expert criteria and their documented public work. Added concise profiles,
+  both native formats, a credited CC BY-SA 2.0 Hawkins portrait and three
+  full-name placeholders. Added Computational neuroscience, Comparative
+  psychology, Operant conditioning and Dog training, with Animal behavior as
+  a new navigation group. The catalogue now has forty-one experts and
+  sixty-one specialties. Earlier profiles, shared instructions and the fixed
+  README sample are preserved; work remains uncommitted.
+
+- Jordan Peterson's sourced personality-psychology profile, credited CC BY-SA
+  3.0 portrait and generated Codex and Claude Code files. Added Personality
+  psychology under the existing Psychology group. The catalogue now has
+  thirty-seven experts and fifty-seven specialties; the fixed README sample,
+  earlier experts and shared instruction are preserved. Work remains uncommitted.
+
+- A README disclaimer following the public project pattern: no warranty,
+  liability limits and independence from the featured experts, their estates
+  or organizations and the host vendors. AI-generated role output is not a
+  statement by the actual expert.
+
+- Zdeněk Rybka's profile on the Bata management system, with the existing
+  Operations management specialty, a distinguishing perspective, full-name
+  placeholder and both generated native formats. The catalogue now has
+  thirty-six experts; its fifty-six specialty definitions and earlier profiles
+  are preserved. Work remains uncommitted.
+- Tomáš Baťa, Milan Zelený, Steve Jobs and Nicole Forsgren, assessed against the
+  existing expert criteria and documented public work. Added concise profiles,
+  distinctive perspective cues and both generated native formats. Zelený and
+  Jobs have credited reusable portraits; Baťa and Forsgren use full-name
+  placeholders. Added DevOps, Product design and Multiple-criteria decision
+  analysis, bringing the catalogue to thirty-five experts and fifty-six
+  specialties. Earlier profiles and shared instructions are preserved; work
+  remains local and uncommitted.
+- A bounded three-case Codex host-validation contract, covering discovery and
+  selection, independent judgment and professional scope with temporary project
+  placement. The CLI attempt stopped at catalogue-role discovery, leaving
+  behavior initially unverified. An owner-requested `codex exec` retry explicitly
+  registered the unchanged exports for each invocation; native calls and child
+  answers confirm the three sampled checks. Automatic directory discovery and
+  broader reliability remain unverified. Temporary placement is removed;
+  exports and personal role files are preserved. Deployment and management
+  remain a separate plugin's responsibility.
+- Completed the four remaining accepted profiles: Michael Hammer, Karen
+  Holtzblatt, Neil Rackham and Richard Susskind, with full-name placeholders and
+  both native formats. Added five sourced specialties and Sales navigation.
+  The catalogue now contains thirty-one experts and fifty-three specialties;
+  existing profiles and instructions are preserved and work remains uncommitted.
+- Shared SVG initials template, exact contributor commands and support for
+  either a photo or standardized initials image in each profile and catalogue
+  row. D023 makes photos optional while retaining photo permissions and credits.
+  Added Taiichi Ohno (TO) and Roger Fisher (RF), both native formats and four
+  sourced specialties. The catalogue now has twenty-seven experts and
+  forty-eight specialties. Earlier profiles and photographs are preserved;
+  all work remains uncommitted.
+- Léonie Watson's accessibility profile with a credited CC BY-NC 2.0 portrait,
+  a new Web accessibility specialty and both generated native formats. D022
+  reassesses Watson, Ohno and Fisher under the general photo policy: Watson's
+  crop is permitted for this noncommercial prototype; Ohno's known photo does
+  not permit the required crop, and Fisher's sources still lack a free reuse
+  grant. The catalogue has twenty-five experts and forty-four specialties,
+  with six portrait dependencies remaining. All work remains uncommitted.
+- Chip Huyen's previously accepted profile, using a credited frame from her
+  Creative Commons-licensed Linux Foundation keynote. Reused the existing
+  Machine learning and Large language models specialties and generated both
+  native formats. The catalogue now has twenty-four experts and forty-three
+  specialties; seven portrait dependencies remain. New source checks retain
+  the existing permission rules, with all work uncommitted.
+- Five profiles to broaden field coverage: Judea Pearl, Ellen Lupton, Ross
+  Anderson, Andy Grove and David Aaker, with credited reusable portraits and
+  generated native files. Added eight sourced specialty concepts using the
+  existing groups, bringing the catalogue to twenty-three experts and forty-three
+  specialties. Léonie Watson, Taiichi Ohno and Roger Fisher qualify but join
+  the five earlier candidates pending cleared portraits. Other recommendations
+  remain proposals outside this first batch.
+- Twelve profiles spanning entrepreneurship, software, quality improvement,
+  marketing, finance and law: Steve Blank, Saras Sarasvathy, Martin Fowler,
+  Kent Beck, Eric Evans, Martin Kleppmann, W. Edwards Deming, Geoffrey Moore,
+  Aswath Damodaran, Robert S. Kaplan, Lawrence Lessig and Philip Kotler. Each
+  includes sourced task fit, a credited reusable portrait and generated native
+  files. Added twenty-one mapped specialty concepts and Finance, Law and
+  Marketing navigation. Huyen, Hammer, Holtzblatt, Rackham and Susskind qualify
+  but remain pending portraits with verified reuse permission.
+- AI profiles for Andrej Karpathy and Andrew Ng, with sourced specialties,
+  credited reusable portraits and generated native files. Added four precise
+  Computing concepts to the shared vocabulary. Chip Huyen meets the expert
+  criteria; her addition remains pending a cleared portrait.
+- Expert definition in the main README and concise selection criteria in the
+  contribution guide, linked from project guidance and the profile starter.
+  Existing profile fields provide the supporting evidence; no extra fields
+  or detailed expert briefs are required.
+- Coherent specialty rules for human and AI task matching, shared vocabulary,
+  reference concepts and consistent grouping, with an assessment of central
+  registry storage. Existing entries and the YAML format remain under review.
+- MIT license for original profiles, role instructions, metadata, documentation
+  and tooling, with matching contribution terms and standalone-copy guidance.
+  Portraits retain their individually credited licenses and are excluded from MIT.
+- Uncommitted profile prototype for Don Norman, Alan Cooper, Jakob Nielsen and
+  Eliyahu Goldratt, including short introductions, credited photos and sources.
+- Provisional specialty vocabulary, one shared instruction and deterministic
+  catalogue / Codex / Claude Code exports with source-validation checks.
+- Central native-role usage steps linked from the catalogue and profiles, and
+  an independent multiple-specialty export check.
+- Expert-addition checklist in `CONTRIBUTING.md` and a copyable profile README /
+  metadata starter under `src/templates/profile/`.
 
 - Public role-library scaffold with a visible catalogue, contribution guidance
   and retained owner decisions.
 - Project Structure v1.0.0 organization for the current agreement, design, active
   work, delivery, working materials, explorations, checks and evidence.
 
-### Changed
+### Catalogue and instruction changes
 
+- Applied the owner's section-by-section README review under D034. Shortened
+  the introduction, usage, selection, contribution, project links and license
+  sections; explicit expert requests are optional. Moved the full alphabetical
+  and specialty catalogue into `src/roles/README.md`, with a fixed six-expert
+  showcase and generated total in the main README. Updated the generator,
+  boundary/growth checks, profile/starter navigation and connected guidance;
+  release procedure now lives in delivery documentation. Role metadata,
+  specialties, images, credits, shared instructions and native exports are
+  preserved. Work remains unstaged and uncommitted.
+
+- Closed the initial catalogue implementation records and recorded the owner's
+  acceptance of its rendered presentation. Updated current guidance and
+  handover to make the planned README improvement review the next step;
+  the README and role sources are preserved and work remains uncommitted.
+- Prepared the initial catalogue documentation for commit review: clarified the
+  current thirty-one-expert scope and export status, shortened current-work
+  guidance, removed temporary contributor restrictions and documented explicit
+  Codex registration with the known discovery and Claude runtime limits.
+  Historical records and role content are preserved; work remains uncommitted.
+- Extended Holtzblatt's perspective to include design alongside contextual
+  research and product requirements; regenerated both native descriptions.
+- Added optional `perspective` metadata for twenty-four experts with overlapping
+  specialties and regenerated all thirty-one Codex/Claude description pairs.
+  Seven profiles retain name/specialty descriptions. Updated the starter,
+  contribution and selection guidance, and both metadata validation paths.
+  Shared execution instructions, specialty assignments and images are preserved;
+  selection reliability remains unverified and work stays uncommitted.
+- Applied both accepted Pro review refinements: continue clear, independent
+  in-scope work during clarification and explicitly prohibit fabricated
+  biographical facts. Regenerated both native formats; work stays uncommitted.
+- Made professional-role adoption explicit in the shared instruction and
+  replaced the blanket impersonation prohibition with precise authorship and
+  attribution limits. Regenerated both native formats; work stays uncommitted.
+- Clarified mixed-request handling in the shared instruction: mark excluded
+  parts as out of scope without recommending other experts or next steps.
+  Regenerated both native formats; all work remains uncommitted.
+- Refined the shared instruction to require professional scope checks,
+  out-of-expertise decline, clarification and independent challenge of forced
+  conclusions or suppressed expertise. Clarified documented ideas versus AI
+  adaptations, aligned discovery descriptions and scope guidance, and
+  regenerated both native formats for all thirty-one experts. Runtime behavior
+  remains unverified; all work stays uncommitted.
+- Refined the shared full-name placeholders with regular Georgia serif type,
+  a warm paper background, an inset frame and subtle accent rules. Updated all
+  six existing SVGs and the image guide; full names and image sizes are retained.
+  The design is ready for review and remains uncommitted.
+- Replaced abbreviated initials with full-name SVG placeholders. The command
+  now reads the full name from expert metadata and wraps/sizes it automatically.
+  Renamed the template and both profile images to `placeholder.svg`, simplified
+  contributor commands and updated Ohno, Fisher and the starter. Photos and
+  native role instructions are preserved; work remains uncommitted.
+- Portrait eligibility accepts any verified free reuse permission, with or
+  without attribution, including custom grants. The collection always keeps
+  attribution. Replaced the fixed license list and automatic category exclusions
+  with review of conditions against actual use and image preparation. Updated
+  the contribution guide, starter, checks and project records; pending sources
+  are marked for reassessment. Existing profiles and portraits are unchanged.
+- Adopted the central YAML specialty registry with source concept references.
+  Updated all four experts with shared broad fields and distinctive approaches,
+  replaced provisional Usability evaluation with Usability engineering, and
+  regenerated the main catalogue and both native formats. Added reference and
+  duplicate-concept validation; catalogue groups show only assigned terms in
+  name order. Recorded vocabulary attribution and reuse terms.
+- Clarified the task-matching purpose of specialties in project guidance and
+  linked contribution steps and the starter to the shared rules. Current
+  assignments, generated roles and instructions are unchanged.
+- Applied the simplified layout to all four profiles and the starter: linked
+  specialties appear once, introductions are shorter, role-file/setup links
+  appear earlier and source-file links move to a collapsed footer. Full photo
+  credits, reference lists and suggested uses are preserved.
+- Portraits now explicitly require verified reuse permission; missing, unclear
+  and fair-use-only permissions are excluded. Updated the contribution guide,
+  starter and project records, including the Goldratt source findings. Existing
+  photos and role files are unchanged.
+- Expert profiles now show labeled image Source and License links. The starter
+  explicitly requires the image's own source page, with matching contribution
+  guidance. Current photos are unchanged.
+- Added recommended portrait sources and explicit credit, notice, edit-history
+  and ShareAlike requirements to the contributor guide and starter. Completed
+  Nielsen's credit with the supplied photo title. A further image search
+  retained the four current portraits and prepared alternatives for review.
+- Broader photo-source review replaced Cooper's and Norman's portraits with
+  clearer freely reusable photographs and updated their credits. Nielsen's and
+  Goldratt's existing portraits were retained in that first source review.
+- Every expert now requires a credited 512 × 512 RGB JPEG, with uniform display
+  sizes. Portraits are cropped consistently; Norman uses a clearer source photo.
+  The exporter validates images with Pillow before writing generated files.
+- Contribution guidance is shortened to essential steps, and the starter now
+  requires a portrait and photo credit.
+- Shared instructions and descriptions clarify that specialties guide the
+  perspective while the task determines the focus.
+- The full expert catalogue is generated directly in the main README, preserving
+  authored sections outside its markers. It uses three columns and one expert
+  per row; the source-folder README points back to it.
+- Goldratt's portrait crop and caption identify him, with source credits and
+  image modifications recorded.
+- Profiles, specialty vocabulary and shared templates moved under `src/`, with
+  matching generator paths, fixtures, navigation and project guidance.
 - Canonical decision record moved from `docs/decision-log.md` to
   `docs/decisions.md`; existing decision contents are preserved.
 
-The catalogue is empty. No role definitions, role format, runtime capabilities,
-evaluation results or license have been added by this scaffold.
+### Fixes during development
+
+- The no-partial-output test now places the invalid profile after a valid one.
+- Markdown display text is escaped so punctuation preserves table cells and
+  expert links.

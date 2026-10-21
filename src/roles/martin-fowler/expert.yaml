@@ -1,0 +1,8 @@
+name: Martin Fowler
+specialties:
+- software-architecture
+- software-engineering
+- software-refactoring
+perspective: >-
+  evolving software structure through behavior-preserving refactoring and
+  patterns suited to business systems

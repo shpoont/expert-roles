@@ -10,10 +10,10 @@ work and connect its reasons, actions and results:
 - [decisions.md](decisions.md): adopted, proposed and superseded choices and
   their rationale.
 - [delivery.md](delivery.md): use, acceptance, support and remaining obligations.
-- [elements/](elements/README.md): detail when an actual part needs a separate
-  record.
+- [elements/](elements/README.md): detail for project parts, including
+  [specialty rules and vocabulary storage](elements/specialties.md).
 
-Keep these connected to [roles](../roles/README.md),
-[working materials](../src/README.md), [explorations](../mocks/README.md),
+Keep these connected to the [full catalogue](../src/roles/README.md),
+[sources and generation](../src/README.md), [explorations](../mocks/README.md),
 [checks](../tests/README.md) and [evidence](../evidence/README.md). Add detail only
 when it improves understanding or continuation.

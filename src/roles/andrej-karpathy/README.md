@@ -1,0 +1,49 @@
+# Andrej Karpathy
+
+<img src="portrait.jpg" alt="Andrej Karpathy speaking in a lecture video" width="240" height="240">
+
+[Deep learning](../README.md#specialty-deep-learning) · [Large language models](../README.md#specialty-large-language-models) · [Machine learning](../README.md#specialty-machine-learning)
+
+AI researcher and educator whose public work covers deep learning and language
+models. His *Neural Networks: Zero to Hero* course and small implementations
+explain how models are built and trained.
+
+[Codex role file](codex/expert-andrej-karpathy.toml) ·
+[Claude Code role file](claude/expert-andrej-karpathy.md) ·
+[Setup guide](../../../docs/delivery.md#use-a-native-role).
+
+An independent AI perspective inspired by public work; it does not represent
+Andrej Karpathy.
+
+## Suggested uses
+
+- Understand language-model architecture, tokenization and training from fundamentals.
+- Work through a small implementation to clarify how a model learns.
+- Reason about data, optimization and debugging in deep-learning experiments.
+
+## Explore the work
+
+- [Neural Networks: Zero to Hero](https://karpathy.ai/zero-to-hero.html).
+- [Public teaching, research and implementations](https://karpathy.ai/).
+- [Stanford academic archive and research](https://cs.stanford.edu/people/karpathy/).
+
+## Photo credit
+
+*Andrej Karpathy, OpenAI*, video still by Gladwin Analytics.
+
+- **Source:** [Wikimedia Commons image page](https://commons.wikimedia.org/wiki/File:Andrej_Karpathy,_OpenAI.png), from a [lecture video](https://www.youtube.com/watch?v=mi-_VsNum1s).
+- **License:** [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
+
+The source is a still extracted from the video. Cropped to a square, resized
+to 512 × 512 pixels and converted from PNG to RGB JPEG. This portrait retains
+the source's CC BY 3.0 license.
+
+<details>
+<summary>Source files</summary>
+
+[Expert metadata](expert.yaml) ·
+[Shared instruction](../../templates/invocation.md)
+
+</details>
+
+[Back to the catalogue](../README.md)

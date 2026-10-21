@@ -1,0 +1,10 @@
+# Replace the placeholders; choose task-relevant IDs from src/specialties.yaml.
+# Follow docs/elements/specialties.md; reuse existing entries for the same concept.
+name: "{{name}}"
+specialties:
+  - "{{specialty_id}}"
+# Optional: a short, nonexhaustive emphasis where specialties overlap.
+# Ground it in the profile's references; write a phrase after "especially on".
+# Omit this field when name and specialties already distinguish the expert.
+# perspective: >-
+#   {{distinctive_perspective}}

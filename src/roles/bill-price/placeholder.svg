@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Bill Price — name placeholder</title>
+  <rect width="512" height="512" fill="#f8f5f0"/>
+  <rect x="24" y="24" width="464" height="464" fill="none" stroke="#ded8ce" stroke-width="2"/>
+  <path d="M224 112h64" fill="none" stroke="#a38256" stroke-width="4"/>
+  <path d="M224 400h64" fill="none" stroke="#d5c6b0" stroke-width="2"/>
+  <text text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="400" fill="#263d3a">
+    <tspan x="256" y="281.2">Bill Price</tspan>
+  </text>
+</svg>

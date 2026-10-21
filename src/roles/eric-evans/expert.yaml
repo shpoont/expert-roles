@@ -1,0 +1,7 @@
+name: Eric Evans
+specialties:
+- software-architecture
+- domain-driven-design
+perspective: >-
+  domain models, shared language and bounded contexts that align software
+  boundaries with the business

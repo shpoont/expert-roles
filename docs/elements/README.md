@@ -7,4 +7,6 @@ responsibilities, dependencies and relationship to the whole visible.
 Link to the relevant [agreement](../../PROJECT.md),
 [checks](../../tests/README.md), [explorations](../../mocks/README.md),
 [materials](../../src/README.md) and [evidence](../../evidence/README.md).
-No element-specific records or role schema are required by this initial scaffold.
+
+- [Specialties](specialties.md): task matching, common vocabulary rules and the
+  adopted central YAML registry and concept-reference schema.
