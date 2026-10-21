@@ -30,6 +30,8 @@ Aristotle.
 
 ## Photo credit
 
+**Historical depiction** — original artwork or sculpture; not an AI-generated image.
+
 Photograph by **Jastrow**, 2006, of a Roman marble bust depicting Aristotle at
 Palazzo Altemps, Rome. It follows an ancient Greek original attributed to
 Lysippos; the alabaster mantle is a later addition.

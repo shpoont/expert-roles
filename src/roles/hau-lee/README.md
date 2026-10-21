@@ -1,6 +1,6 @@
 # Hau Lee
 
-<img src="placeholder.svg" alt="Hau Lee — name placeholder" width="240" height="240">
+<img src="portrait.jpg" alt="Hau Lee — AI-generated portrait" width="240" height="240">
 
 [Supply chain management](../README.md#specialty-supply-chain-management) · [Logistics](../README.md#specialty-logistics) · [Operations management](../README.md#specialty-operations-management)
 
@@ -32,9 +32,39 @@ Hau Lee.
 
 ## Image
 
-Full-name placeholder, created from the
-[shared SVG template](../../templates/placeholder.svg). Original project artwork
-under [MIT](../../../LICENSE).
+**AI-generated portrait** — A synthetic likeness, not an authentic photograph or evidence of endorsement.
+
+**Style:** [studio-v1](../../../docs/elements/portraits.md), background variant **0**;
+direct eye contact and an individual moderately muted background.
+**Palette:** `#AAB1CF`, `#CDB9D4`, `#D4CCC3`.
+**Flow:** A broad off-center arc, with a slightly deeper outer corner and a soft center.
+
+**Tool:** OpenAI built-in ImageGen
+**Created:** 2026-10-21
+**Model:** not disclosed
+**Method:** Reference-based studio generation followed by a recorded targeted correction. A source crop and its full original, where both were supplied, count as one photograph.
+
+**Changes:** new studio presentation, lighting, framing, clothing or pose where
+appropriate, direct gaze and individual background; removal of props and logos;
+deterministic EXIF-aware square preparation to **512 × 512 RGB JPEG** using the
+[shared method](../../../docs/elements/portraits.md#prepare-and-credit-the-image).
+Monochrome subjects retain their source appearance. Fine details remain generated
+interpretations; structural checks do not verify likeness.
+
+**Generated adaptation license:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Preserve the reference attribution, license and change notices below, including any share-alike or noncommercial conditions. This image is excluded from the project’s MIT license.
+
+### Reference attribution
+
+Photograph by **Globalsupplychains**,
+*Professor Hau Lee of Stanford University spoke at 2022 INFORMS International
+Conference*, 5 June 2022.
+
+- **Source:** [Wikimedia Commons image page](https://commons.wikimedia.org/wiki/File:Professor_Hau_Lee_of_Stanford_University_spoke_at_2022_INFORMS_International_Conference.jpg).
+- **License:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+
+The full photograph and a head-and-shoulders crop of that same photograph were
+supplied as one photographic reference. The face occupies a small area of the
+original, so fine detail in the generated adaptation is interpretive.
 
 <details>
 <summary>Source files</summary>

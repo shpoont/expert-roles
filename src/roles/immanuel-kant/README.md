@@ -31,6 +31,8 @@ Immanuel Kant.
 
 ## Photo credit
 
+**Historical depiction** — original artwork or sculpture; not an AI-generated image.
+
 **Johann Gottlieb Becker**, painted portrait of Immanuel Kant, 1768; Schiller-
 Nationalmuseum, Marbach am Neckar. Digital reproduction via Wikimedia Commons.
 

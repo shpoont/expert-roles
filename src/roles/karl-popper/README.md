@@ -1,6 +1,6 @@
 # Karl Popper
 
-<img src="portrait.jpg" alt="Photographic portrait of Karl Popper by Franz Barta, circa 1980" width="240" height="240">
+<img src="portrait.jpg" alt="Karl Popper — AI-generated portrait" width="240" height="240">
 
 [Philosophy of science](../README.md#specialty-philosophy-of-science) · [Epistemology](../README.md#specialty-epistemology)
 
@@ -28,7 +28,32 @@ Karl Popper.
 - [Karl Popper: critical rationalism and scientific method](https://plato.stanford.edu/entries/popper/).
 - [Karl Popper’s work and legacy at LSE](https://www.lse.ac.uk/philosophy/research/sir-karl-popper).
 
-## Photo credit
+## Image
+
+**AI-generated portrait** — A synthetic likeness, not an authentic photograph or evidence of endorsement.
+
+**Style:** [studio-v1](../../../docs/elements/portraits.md), background variant **0**;
+direct eye contact and an individual moderately muted background.
+**Palette:** `#A8CAB6`, `#B7C7D3`, `#D3C2D1`.
+**Flow:** A gently rising diagonal fold, with a soft secondary-color transition near the lower edge.
+
+**Tool:** OpenAI built-in ImageGen
+**Created:** 2026-10-21
+**Model:** not disclosed
+**Method:** Reference-based generation from the recorded studio-v1 prompt and photographic inputs. A source crop and its full original, where both were supplied, count as one photograph.
+
+**Changes:** new studio presentation, lighting, framing, clothing or pose where
+appropriate, direct gaze and individual background; removal of props and logos;
+deterministic EXIF-aware square preparation to **512 × 512 RGB JPEG** using the
+[shared method](../../../docs/elements/portraits.md#prepare-and-credit-the-image).
+Monochrome subjects retain their source appearance. Fine details remain generated
+interpretations; structural checks do not verify likeness.
+
+**Generated contribution license:** [MIT](../../../LICENSE), to the extent the project can grant rights in its generated contribution. The source photograph is covered by [LSE Library’s custom reuse permission](https://www.lse.ac.uk/library/about/library-rules-and-policies), which allows copying and adaptation, including commercial use, and requests credit to **LSE Library**. This is not a Creative Commons license; source terms and attribution remain below.
+
+### Reference attribution
+
+The reference photograph and its earlier preparation were credited as follows:
 
 **Franz Barta / LSE Library**, photograph of Karl Popper, circa 1980, accession
 IMAGELIBRARY/5. The Commons copy includes minor cleanup by **Beao**, 24 March
@@ -46,7 +71,7 @@ statement, not a Creative Commons license.
 **Original archive source:** [LSE Library on Flickr](https://www.flickr.com/photos/lselibrary/3833724834/).
 
 Cropped to a square, resized to 512 × 512 pixels and re-encoded as RGB JPEG.
-The portrait is excluded from the project’s MIT license.
+The reference crop is excluded from the project’s MIT license.
 
 <details>
 <summary>Source files</summary>

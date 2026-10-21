@@ -1,6 +1,6 @@
 # John Stuart Mill
 
-<img src="portrait.jpg" alt="Photographic portrait of John Stuart Mill, circa 1870" width="240" height="240">
+<img src="portrait.jpg" alt="John Stuart Mill — AI-generated portrait" width="240" height="240">
 
 [Ethics](../README.md#specialty-ethics) · [Political philosophy](../README.md#specialty-political-philosophy)
 
@@ -28,7 +28,32 @@ John Stuart Mill.
 - [On Liberty](https://www.gutenberg.org/ebooks/34901).
 - [John Stuart Mill: utilitarianism, liberty and public reasoning](https://plato.stanford.edu/entries/mill/).
 
-## Photo credit
+## Image
+
+**AI-generated portrait** — A synthetic likeness, not an authentic photograph or evidence of endorsement.
+
+**Style:** [studio-v1](../../../docs/elements/portraits.md), background variant **0**;
+direct eye contact and an individual moderately muted background.
+**Palette:** `#CDCAAA`, `#D5BFBE`, `#C6CCD5`.
+**Flow:** A wide gentle S-shaped flow, with the smallest color field confined to a corner.
+
+**Tool:** OpenAI built-in ImageGen
+**Created:** 2026-10-21
+**Model:** not disclosed
+**Method:** Reference-based generation from the recorded studio-v1 prompt and photographic inputs. A source crop and its full original, where both were supplied, count as one photograph.
+
+**Changes:** new studio presentation, lighting, framing, clothing or pose where
+appropriate, direct gaze and individual background; removal of props and logos;
+deterministic EXIF-aware square preparation to **512 × 512 RGB JPEG** using the
+[shared method](../../../docs/elements/portraits.md#prepare-and-credit-the-image).
+Monochrome subjects retain their source appearance. Fine details remain generated
+interpretations; structural checks do not verify likeness.
+
+**Generated contribution license:** [MIT](../../../LICENSE), to the extent any rights can be granted. The public-domain status and attribution of the reference remain recorded below.
+
+### Reference attribution
+
+The reference image and its earlier preparation were credited as follows:
 
 **London Stereoscopic Company**, photograph of John Stuart Mill, circa 1870;
 Hulton Archive, via Wikimedia Commons.
@@ -40,7 +65,7 @@ page](https://commons.wikimedia.org/wiki/File:John_Stuart_Mill_by_London_Stereos
 The historical photograph is excluded from the project’s MIT license.
 
 Cropped to a square, resized to 512 × 512 pixels and re-encoded as RGB JPEG.
-The portrait is excluded from the project’s MIT license.
+The reference crop is excluded from the project’s MIT license.
 
 <details>
 <summary>Source files</summary>

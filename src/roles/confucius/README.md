@@ -31,6 +31,8 @@ Confucius.
 
 ## Photo credit
 
+**Historical depiction** — original artwork or sculpture; not an AI-generated image.
+
 **Anonymous artist**, Confucius from *Half Portraits of the Great Sage and
 Virtuous Men of Old*, Yuan dynasty (1279–1368); National Palace Museum, Taipei.
 This later artistic depiction is a faithful digital reproduction supplied via

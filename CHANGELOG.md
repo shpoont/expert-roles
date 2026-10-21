@@ -5,17 +5,56 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+## v1.1.0 — 2026-10-22
+
+Prepared locally; tag and publication are pending.
+
+Compatible portrait tooling and catalogue presentation improvements. Existing
+expert identifiers, metadata, native formats and export paths are preserved.
+
 ### Added
 
 - A private correction/removal contact and voluntary request process for
   featured experts and their representatives in the main README.
+- A reproducible studio-v1 portrait workflow, shared prompt and local helper;
+  a copyable generated-image credit block and provenance-validation checks.
 
 ### Changed
 
 - Use first-person wording for the maintainer in the README request policy.
 - Explicitly identify every role as an AI perspective inspired by public work
   and prohibit claiming to be or represent the expert or their estate.
-  Regenerate all Codex and Claude Code role files from the shared instruction.
+  Regenerate all 114 Codex and Claude Code role files from the shared instruction.
+- Use 29 owner-accepted reference-based studio portraits, with direct eye
+  contact, a new studio sitting and individual moderately muted backgrounds.
+  Retain five photographs, five historical depictions and eighteen name
+  placeholders where generation is unsupported or blocked.
+- Document the reproducible studio-v1 workflow. Add a versioned shared prompt
+  and local helper for stable per-expert palettes, exact input records,
+  reference hashes and deterministic 512 × 512 RGB JPEG preparation.
+- Preserve source creators, licenses, permission notices and edit histories.
+  Record synthetic-image disclosures, palette variants and methods on profiles;
+  carry visible and accessible image-type labels into both catalogues.
+- Add a copyable generated-image credit block and validate disclosures, stable
+  background recipes, explicit generation fields and linked provenance in the
+  normal generator/check and CI path, including terms for each reference.
+  Clarify source attribution versus output
+  rights; add a synthetic new-profile contract test and a separate independent
+  walkthrough protocol. Complete one temporary contribution walkthrough with
+  actual built-in generation; clarify the minimum generation record and allowed
+  preview-tool choice from its findings.
+- Keep artwork and statues unchanged. The portrait work preserves expert
+  biographies, metadata, vocabulary and the AI-identity instruction and 114
+  native role files already delivered on main.
+
+### Validation and limits
+
+43 local tests pass and all 119 generated files match their sources. All 173
+protected files, 57 selected visuals and 57 profile READMEs match the accepted
+rebased portrait tree. One independent temporary contribution walkthrough passed;
+this is bounded evidence, not repeatability or identity verification. Portrait
+selections were accepted by the owner. No new host-runtime or comparative role
+testing was performed. Hosted checks and publication remain pending.
 
 ## v1.0.0 — 2026-10-21
 

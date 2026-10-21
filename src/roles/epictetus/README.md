@@ -30,6 +30,8 @@ Epictetus.
 
 ## Photo credit
 
+**Historical depiction** — original artwork or sculpture; not an AI-generated image.
+
 **Henri Bonnart**, engraved depiction of Epictetus, circa 1700; digital source
 supplied through LIAS and Wikimedia Commons. This is a much later artistic
 representation, rather than a documented lifetime likeness.

@@ -1,6 +1,6 @@
 # Chip Huyen
 
-<img src="portrait.jpg" alt="Portrait of Chip Huyen" width="240" height="240">
+<img src="portrait.jpg" alt="Chip Huyen — AI-generated portrait" width="240" height="240">
 
 [Machine learning](../README.md#specialty-machine-learning) · [Large language models](../README.md#specialty-large-language-models)
 
@@ -28,7 +28,32 @@ Chip Huyen.
 - [Stanford CS 329S: Machine Learning Systems Design](https://web.stanford.edu/class/cs329s/).
 - [Public writing and background](https://huyenchip.com/).
 
-## Photo credit
+## Image
+
+**AI-generated portrait** — A synthetic likeness, not an authentic photograph or evidence of endorsement.
+
+**Style:** [studio-v1](../../../docs/elements/portraits.md), background variant **0**;
+direct eye contact and an individual moderately muted background.
+**Palette:** `#BCB0CF`, `#AEBFD2`, `#D6C7C1`.
+**Flow:** Violet and steel blue merge in a broad off-center arc, with a quiet pinkish-taupe accent.
+
+**Tool:** OpenAI built-in ImageGen
+**Created:** 2026-10-21
+**Model:** not disclosed
+**Method:** Reference-based studio generation with targeted background or gaze edits; the owner-approved sample is reused. The original inputs are two frames from one credited keynote video.
+
+**Changes:** new studio presentation, lighting, framing, clothing or pose where
+appropriate, direct gaze and individual background; removal of props and logos;
+deterministic EXIF-aware square preparation to **512 × 512 RGB JPEG** using the
+[shared method](../../../docs/elements/portraits.md#prepare-and-credit-the-image).
+Monochrome subjects retain their source appearance. Fine details remain generated
+interpretations; structural checks do not verify likeness.
+
+**Generated adaptation license:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Preserve the reference attribution, license and change notices below, including any share-alike or noncommercial conditions. This image is excluded from the project’s MIT license.
+
+### Reference attribution
+
+The reference image and its earlier preparation were credited as follows:
 
 *Keynote: Learnings from Studying 800 Generative AI Open Source Repos - Chip
 Huyen, Claypot AI*. Video published by **The Linux Foundation**.
@@ -39,7 +64,13 @@ Huyen, Claypot AI*. Video published by **The Linux Foundation**.
   when checked on 2026-10-20.
 
 Extracted a video frame, cropped it to a square, resized to 512 × 512 pixels
-and encoded as RGB JPEG. This portrait retains the credited CC BY 4.0 license.
+and encoded as RGB JPEG. This reference crop retains the credited CC BY 4.0 license.
+
+The supplied views were frames at **06:40** and **08:00** from the same
+credited keynote, rather than independent photographs.
+**Source:** [Additional frame at 08:00](https://www.youtube.com/watch?v=YSrTjnK1AKE&t=480s).
+**License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+The same Linux Foundation attribution and CC BY 4.0 terms apply to both frames.
 
 <details>
 <summary>Source files</summary>

@@ -18,14 +18,24 @@ roster changes.
 
 ## Scope and expectations
 
-The current catalogue contains fifty-seven completed experts, eighty-two
-specialties in ten groups, thirty-eight portraits and nineteen full-name
-placeholders. Every profile has canonical metadata, a short human-readable
+The current catalogue contains fifty-seven experts, eighty-two specialties in
+ten groups, twenty-nine generated portraits, five retained photographs, five
+original historical depictions and eighteen full-name placeholders. D048's
+[studio-v1 rollout](docs/design.md#reproducible-studio-portrait-method-and-catalogue-rollout)
+is applied, locally checked and accepted by the owner under D050. Every profile
+has canonical metadata, a short human-readable
 README, one square visual and generated Codex and Claude Code files under
 `dist/codex/` and `dist/claude/`. Generated distribution indexes provide
 alphabetical and specialty navigation without duplicating exports. All
-accepted additions are included; there are no outstanding profile or image
-requirements. Future additions follow the same contribution process.
+accepted additions are included. Portrait acceptance is an editorial decision;
+structural validity does not establish likeness. Future additions follow the
+same contribution process.
+
+Retain drawings, paintings, sculpture and similar depictions unchanged. The
+owner found the first photographic results too close to background removal,
+then adopted direct eye contact, an individual moderately muted background and
+a new studio sitting. D048 documented the method before applying it across the supported photographic
+subjects. Preserve uncertain originals and placeholders.
 
 The initial catalogue implementation and owner review are complete. The owner
 accepted the compact main README and its fixed six-expert sample, and accepted
@@ -48,13 +58,17 @@ unchanged exports. Automatic directory discovery remains unresolved. Claude
 files have structural checks but no runtime validation. These observations do
 not establish broad selection reliability or comparative expert benefit.
 
-- **Current status and boundary:** The accepted initial catalogue was signed,
-  committed and pushed after D041's closeout and D042's visitor review. D044's
-  distribution layout and local checks are complete. D045 adopts `v1.0.0` as
-  the first whole-library baseline and authorizes committing all pending work,
-  pushing it and publishing the release after final checks. Preserve accepted
-  content and require hosted checks for the release commit, a fixed annotated
-  tag and matching GitHub release. No integration or runtime work is included.
+- **Current status and boundary:** D048 supplies the portrait rollout; D049 adds
+  a copyable credit block and repository/CI validation in the isolated worktree.
+  The independent fresh-session contribution walkthrough completed one temporary
+  Grace Hopper case in a disposable copy; broader reliability remains unverified.
+  D050 records portrait-owner acceptance. D051's rebase and disposable squash
+  assessment passed. D052 authorizes a signed squash commit into local main and
+  preparation of v1.1.0. Do not push, tag or publish the candidate.
+  Preserve biographies, expert metadata,
+  vocabulary, shared instructions
+  and all 114 native file bytes. The delivered `v1.0.0` baseline remains fixed.
+  No integration or runtime work is included.
 - **Delivery acceptance:** the catalogue, profiles, contribution process, image
   policy, source schema and usage guidance agree with the initial collection
   and accurately state host-validation limits.
@@ -95,7 +109,9 @@ portraits in the accepted initial catalogue.
 
 Original profiles, instructions, metadata, documentation, tooling and placeholder
 artwork use [MIT](LICENSE). Original contributions use the same license.
-Photographs retain their individually credited terms and are excluded from MIT;
+Photographs and generated adaptations of licensed references retain their
+individually credited terms and are excluded from MIT. Original generated
+contributions follow MIT to the extent rights can be granted;
 always preserve attribution, source, permission and edit history. The
 [photo policy](CONTRIBUTING.md#photo-sources-and-licenses) accepts any verified
 free reuse grant compatible with the actual use and required image preparation.
@@ -110,8 +126,9 @@ This repository follows [Project Structure v1.0.0](https://github.com/shpoont/pr
 commit `96fdd6bd7950778f5b6c6f8269ab2b82167cb99a`. Expert sources live under
 `src/`; the full catalogue is generated in `src/roles/README.md`, with a fixed
 six-expert showcase and generated count in the main README. Ready-to-use
-exports and their indexes live under `dist/`. The library's baseline is
-`v1.0.0`, independently versioned from the starter and consuming integrations.
+exports and their indexes live under `dist/`. The prepared library version is
+`v1.1.0` (unpublished), independently versioned from the starter and consuming
+integrations. The latest published baseline remains `v1.0.0`.
 The [release record](https://github.com/shpoont/expert-roles/releases/tag/v1.0.0)
 and annotated tag identify the delivered snapshot; see the
 [release procedure](docs/delivery.md#versions-and-releases).

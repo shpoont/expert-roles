@@ -1,6 +1,6 @@
 # Amy Edmondson
 
-<img src="portrait.jpg" alt="Portrait of Amy Edmondson" width="240" height="240">
+<img src="portrait.jpg" alt="Amy Edmondson — AI-generated portrait" width="240" height="240">
 
 [Psychological safety](../README.md#specialty-psychological-safety) · [Organizational learning](../README.md#specialty-organizational-learning)
 
@@ -29,7 +29,32 @@ Amy Edmondson.
 - [Research, books and professional background](https://amycedmondson.com/about/).
 - [Psychological Safety and Learning Behavior in Work Teams (1999)](https://doi.org/10.2307/2666999).
 
-## Photo credit
+## Image
+
+**AI-generated portrait** — A synthetic likeness, not an authentic photograph or evidence of endorsement.
+
+**Style:** [studio-v1](../../../docs/elements/portraits.md), background variant **5**;
+direct eye contact and an individual moderately muted background.
+**Palette:** `#D3C5AE`, `#D0B5BD`, `#C2CCD1`.
+**Flow:** Asymmetrical sideways curves, with a quiet accent along one edge.
+
+**Tool:** OpenAI built-in ImageGen
+**Created:** 2026-10-21
+**Model:** not disclosed
+**Method:** Reference-based studio generation followed by a recorded targeted correction. A source crop and its full original, where both were supplied, count as one photograph.
+
+**Changes:** new studio presentation, lighting, framing, clothing or pose where
+appropriate, direct gaze and individual background; removal of props and logos;
+deterministic EXIF-aware square preparation to **512 × 512 RGB JPEG** using the
+[shared method](../../../docs/elements/portraits.md#prepare-and-credit-the-image).
+Monochrome subjects retain their source appearance. Fine details remain generated
+interpretations; structural checks do not verify likeness.
+
+**Generated adaptation license:** [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/). Preserve the reference attribution, license and change notices below, including any share-alike or noncommercial conditions. This image is excluded from the project’s MIT license.
+
+### Reference attribution
+
+The reference image and its earlier preparation were credited as follows:
 
 Evgenia Eliseeva, *Professor Amy C. Edmondson* (23 June 2018),
 shared by the Amy Edmondson office on Flickr. Uses Rosiestep's
@@ -40,7 +65,7 @@ converted to RGB JPEG for this collection.
 [Original Flickr photograph](https://www.flickr.com/photos/192946563@N06/51158730099/).
 
 **License:** [CC BY-SA 2.0 Generic](https://creativecommons.org/licenses/by-sa/2.0/).
-The modified portrait retains this license; preserve attribution and
+The modified reference crop retains this license; preserve attribution and
 the source, license and edit information when reusing it.
 
 <details>

@@ -15,6 +15,16 @@ import yaml
 from PIL import Image
 
 from src.generate import FEATURED_EXPERTS, main, plan_outputs, render_placeholder
+from src.portraits import make_recipe, prepare_image, save_recipe
+from portrait_fixtures import generated_profile
+
+
+# Synthetic test images exercise the credit contract, not portrait likeness.
+PHOTO_CREDIT = (
+    "\n## Photo credit\n\n"
+    "**Source:** [Synthetic fixture](https://example.org/fixtures/portrait).\n\n"
+    "**License:** [CC0](https://creativecommons.org/publicdomain/zero/1.0/).\n"
+)
 
 
 class GenerationContractTests(unittest.TestCase):
@@ -35,6 +45,7 @@ class GenerationContractTests(unittest.TestCase):
         shutil.copyfile(source / "src/specialties.yaml", self.root / "src/specialties.yaml")
         shutil.copyfile(source / "src/templates/invocation.md", self.root / "src/templates/invocation.md")
         shutil.copyfile(source / "src/templates/placeholder.svg", self.root / "src/templates/placeholder.svg")
+        shutil.copyfile(source / "src/templates/portrait.txt", self.root / "src/templates/portrait.txt")
         self.catalogue = self.root / "src/roles/README.md"
         self.catalogue.parent.mkdir(parents=True)
         self.catalogue.write_text(
@@ -46,7 +57,7 @@ class GenerationContractTests(unittest.TestCase):
             profile = self.root / "src/roles" / slug
             profile.mkdir()
             shutil.copyfile(source / "src/roles" / slug / "expert.yaml", profile / "expert.yaml")
-            (profile / "README.md").write_text("# Test expert\n", encoding="utf-8")
+            (profile / "README.md").write_text("# Test expert\n" + PHOTO_CREDIT, encoding="utf-8")
             self.write_portrait(profile)
         self.profile = self.root / "src/roles/don-norman"
 
@@ -62,7 +73,7 @@ class GenerationContractTests(unittest.TestCase):
         second = self.root / "src/roles/zz-invalid-expert"
         second.mkdir()
         self.write_portrait(second)
-        (second / "README.md").write_text("# Another expert\n", encoding="utf-8")
+        (second / "README.md").write_text("# Another expert\n" + PHOTO_CREDIT, encoding="utf-8")
         (second / "expert.yaml").write_text(
             "name: Another expert\nspecialties: [unknown-specialty]\n", encoding="utf-8"
         )
@@ -112,7 +123,7 @@ class GenerationContractTests(unittest.TestCase):
         second = self.root / "src/roles/another-designer"
         second.mkdir()
         self.write_portrait(second)
-        (second / "README.md").write_text("# Another designer\n")
+        (second / "README.md").write_text("# Another designer\n" + PHOTO_CREDIT)
         (second / "expert.yaml").write_text(
             "name: Another designer\nspecialties: [human-centered-design]\n"
         )
@@ -142,7 +153,7 @@ class GenerationContractTests(unittest.TestCase):
     def test_invalid_portraits_do_not_write_partial_outputs(self):
         second = self.root / "src/roles/zz-photo-expert"
         second.mkdir()
-        (second / "README.md").write_text("# Photo expert\n", encoding="utf-8")
+        (second / "README.md").write_text("# Photo expert\n" + PHOTO_CREDIT, encoding="utf-8")
         (second / "expert.yaml").write_text(
             "name: Photo expert\nspecialties: [human-centered-design]\n", encoding="utf-8"
         )
@@ -196,7 +207,7 @@ class GenerationContractTests(unittest.TestCase):
         second = self.root / "src/roles/another-designer"
         second.mkdir()
         self.write_portrait(second)
-        (second / "README.md").write_text("# Another designer\n")
+        (second / "README.md").write_text("# Another designer\n" + PHOTO_CREDIT)
         (second / "expert.yaml").write_text("name: Another designer\nspecialties: [human-centered-design]\n")
         self.assertEqual(self.run_exporter(), 0)
         showcase = self.readme.read_text()
@@ -232,13 +243,32 @@ class GenerationContractTests(unittest.TestCase):
         second = self.root / "src/roles/photo-expert"
         second.mkdir()
         self.write_portrait(second)
-        (second / "README.md").write_text("# Photo expert\n")
+        (second / "README.md").write_text("# Photo expert\n" + PHOTO_CREDIT)
         (second / "expert.yaml").write_text("name: Photo expert\nspecialties: [human-centered-design]\n")
         self.assertEqual(self.run_exporter(), 0)
         self.assertEqual(self.run_exporter("--check"), 0)
         catalogue = self.catalogue.read_text()
         self.assertIn('don-norman/placeholder.svg" alt="Don Norman; name placeholder"', catalogue)
         self.assertIn('photo-expert/portrait.jpg" alt="Photo expert; photo credits on profile"', catalogue)
+
+    def test_image_type_disclosure_reaches_catalogues_without_changing_roles(self):
+        before = plan_outputs(self.root)
+        native = {p: data for p, data in before.items()
+                  if p.name.startswith("expert-") and p.suffix in {".toml", ".md"}}
+        for label, heading in (("AI-generated portrait", "Image"),
+                               ("Historical depiction", "Photo credit")):
+            with self.subTest(label=label):
+                text = (generated_profile("don-norman", "Don Norman") if label == "AI-generated portrait"
+                        else f"# Don Norman\n\n## {heading}\n\n**{label}**\n\n" + PHOTO_CREDIT.split("## Photo credit", 1)[1])
+                (self.profile / "README.md").write_text(text)
+                after = plan_outputs(self.root)
+                for path in (Path("README.md"), Path("src/roles/README.md")):
+                    self.assertIn(f"Don Norman; {label}; sources and terms on profile",
+                                  after[path])
+                    self.assertIn(f"<sub>{label}</sub>", after[path])
+                self.assertEqual(native, {p: data for p, data in after.items()
+                                          if p.name.startswith("expert-")
+                                          and p.suffix in {".toml", ".md"}})
 
     def test_placeholder_creation_escapes_the_accessible_name(self):
         (self.profile / "portrait.jpg").unlink()
@@ -387,7 +417,7 @@ class GenerationContractTests(unittest.TestCase):
         profile = self.root / "src/roles/zz-early-expert"
         profile.mkdir()
         self.write_portrait(profile)
-        (profile / "README.md").write_text("# Aaron Example\n")
+        (profile / "README.md").write_text("# Aaron Example\n" + PHOTO_CREDIT)
         (profile / "expert.yaml").write_text(
             "name: Aaron Example\nspecialties: [human-centered-design]\n")
         outputs = plan_outputs(self.root)
@@ -474,7 +504,7 @@ class GenerationContractTests(unittest.TestCase):
         second = self.root / "src/roles/zz-invalid-expert"
         second.mkdir()
         self.write_portrait(second)
-        (second / "README.md").write_text("# Another expert\n")
+        (second / "README.md").write_text("# Another expert\n" + PHOTO_CREDIT)
         source = second / "expert.yaml"
         for value in (None, True, 7, [], {}, "", " \n ", ".", "{{perspective}}"):
             with self.subTest(value=value):
@@ -508,7 +538,7 @@ class GenerationContractTests(unittest.TestCase):
         profile = self.root / "src/roles/eliyahu-goldratt"
         profile.mkdir(exist_ok=True)
         self.write_portrait(profile)
-        (profile / "README.md").write_text("# Eliyahu Goldratt\n", encoding="utf-8")
+        (profile / "README.md").write_text("# Eliyahu Goldratt\n" + PHOTO_CREDIT, encoding="utf-8")
         (profile / "expert.yaml").write_text(
             "name: Eliyahu Goldratt\nspecialties:\n"
             "  - operations-management\n  - project-management\n"
@@ -529,6 +559,70 @@ class GenerationContractTests(unittest.TestCase):
                     self.assertIn(value, instruction)
                 self.assertNotIn("Don Norman", instruction)
                 self.assertIn("Let the task determine the focus", instruction)
+
+
+    def test_credit_errors_are_rejected_before_any_output_write(self):
+        original = generated_profile("don-norman", "Don Norman")
+        (self.profile / "README.md").write_text(original)
+        self.assertEqual(self.run_exporter(), 0)
+        for old, new in (("**Tool:**", "Tool:"),
+                         ("**Source:**", "Source:"),
+                         ("**AI-generated portrait**", "Portrait"),
+                         ("#CFB4A6", "#000000"),
+                         ("Don Norman — AI-generated portrait", "Don Norman")):
+            for args in ((), ("--check",)):
+                with self.subTest(replacement=new, args=args):
+                    (self.profile / "README.md").write_text(original.replace(old, new, 1))
+                    before = {p: p.read_bytes() for p in self.root.rglob("*") if p.is_file()}
+                    self.assertEqual(self.run_exporter(*args), 1)
+                    self.assertEqual(before, {p: p.read_bytes() for p in self.root.rglob("*") if p.is_file()})
+
+    def test_new_profile_from_starter_uses_method_without_changing_existing_roles(self):
+        self.assertEqual(self.run_exporter(), 0)
+        native_before = {p: p.read_bytes() for p in (self.root / "dist").rglob("expert-*")}
+        source = Path(__file__).resolve().parents[1]
+        slug, name = "future-expert", "Future Expert"
+        profile = self.root / "src/roles" / slug
+        shutil.copytree(source / "src/templates/profile", profile)
+        (profile / "expert.yaml").write_text(yaml.safe_dump({"name": name, "specialties": ["human-centered-design"]}))
+        text = re.sub(r"<!--.*?-->", "", (profile / "README.md").read_text(), flags=re.S)
+        values = {"name": name, "slug": slug, "specialty_name": "Human-centered design",
+                  "specialty_id": "human-centered-design", "short_introduction": "A synthetic contributor fixture.",
+                  "suggested_use_1": "Exercise the contribution contract.",
+                  "suggested_use_2": "Check generated files.", "public_work_url": "https://example.org/fixture"}
+        for key, value in values.items():
+            text = text.replace("{{" + key + "}}", value)
+        self.assertNotIn("{{", text)
+        (profile / "README.md").write_text(text)
+        self.assertEqual(self.run_exporter("--create-placeholder", slug), 0)
+        self.assertEqual(self.run_exporter(), 0)
+        self.assertEqual(self.run_exporter("--check"), 0)
+
+        # A synthetic master stands in for a reviewed output; no model or likeness test occurs.
+        master = self.root / "synthetic-master.png"
+        Image.new("RGB", (800, 600), "#AFC8BD").save(master)
+        recipe = make_recipe(self.root, slug, [master])
+        archive = tempfile.TemporaryDirectory()
+        self.addCleanup(archive.cleanup)
+        save_recipe(recipe, Path(archive.name) / "recipe.json", self.root)
+        self.assertIn(name, recipe["prompt"])
+        self.assertIn("DIRECT EYE CONTACT", recipe["prompt"])
+        prepare_image(master, profile / "portrait.jpg")
+        (profile / "placeholder.svg").unlink()
+        generated = generated_profile(slug, name)
+        hero = re.search(r"<img\b[^>]*>", generated)[0]
+        text = re.sub(r"<img\b[^>]*>", hero, text, count=1)
+        credit = "## Image" + generated.split("## Image", 1)[1] + "\n"
+        text = re.sub(r"^## Image\n.*?(?=^<details>|\Z)", lambda _: credit, text, count=1, flags=re.M | re.S)
+        (profile / "README.md").write_text(text)
+        self.assertEqual(self.run_exporter(), 0)
+        self.assertEqual(self.run_exporter("--check"), 0)
+        self.assertIn("A synthetic contributor fixture.", text)
+        self.assertIn('future-expert/portrait.jpg" alt="Future Expert; AI-generated portrait;', self.catalogue.read_text())
+        self.assertTrue((self.root / "dist/codex/expert-future-expert.toml").exists())
+        self.assertTrue((self.root / "dist/claude/expert-future-expert.md").exists())
+        for path, expected in native_before.items():
+            self.assertEqual(path.read_bytes(), expected)
 
 
 if __name__ == "__main__":

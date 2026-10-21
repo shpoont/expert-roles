@@ -51,10 +51,11 @@ describe the expert's emphasis; the assignment supplies the activities.
    [specialty rules](docs/elements/specialties.md#rules); propose an entry if needed.
    Add `perspective` where useful, following the
    [metadata guide](src/README.md#role-metadata-and-descriptions).
-3. Use a permitted `portrait.jpg` or create a `placeholder.svg` placeholder using
+3. Use a permitted photo or clearly labeled generated `portrait.jpg`, or create
+   a `placeholder.svg` using
    the [exact image instructions](src/README.md#choose-the-profile-image).
-   Photos need attribution, terms, edits and a **Source** link. Placeholders need
-   an **Image** section identifying the placeholder.
+   Portraits need provenance, applicable terms, edits and **Source** links.
+   Placeholders need an **Image** section identifying the placeholder.
 4. Run the [generator and checks](src/README.md#generate-the-catalogue-and-native-files),
    then review the catalogue, profile and links. Replace every unfilled `{{...}}`
    field and include source changes and regenerated outputs in the pull request.
@@ -64,19 +65,44 @@ Maintainers assign the release version using the [release guide](docs/delivery.m
 
 ## Profile image
 
-Require exactly one square visual: a photo named `portrait.jpg`, or a
+Require exactly one square visual: a portrait named `portrait.jpg`, or a
 `placeholder.svg` made from the [shared template](src/templates/placeholder.svg).
 Use the expert's full name from `expert.yaml`; the command handles line breaks
 and type size automatically.
-Photos are preferred when suitable and permitted; their absence does not block
-an expert. Display either visual at **160 × 160** in the catalogue and
-**240 × 240** on the profile. Follow the linked image instructions to switch.
+Use a suitable, permitted photo, a clearly labeled AI-generated studio portrait,
+or an existing historical depiction.
+Faithful appearance takes priority over polish; keep an existing image or name
+placeholder when a generated likeness is uncertain. Display either at
+**160 × 160** in the catalogue and **240 × 240** on the profile.
+Follow the linked image instructions to switch.
 
 ## Photo standard
 
-For photos: **512 × 512 pixels, RGB JPEG**, named `portrait.jpg`. Use a clear
-crop of the expert's face and shoulders. Placeholders use the template's 512 × 512
+For photographs and generated portraits: **512 × 512 pixels, RGB JPEG**, named
+`portrait.jpg`. Use a clear crop of the expert's face and shoulders.
+Placeholders use the template's 512 × 512
 SVG canvas and consistent styling.
+
+## AI-generated portraits
+
+Follow the reproducible [studio-v1 method](docs/elements/portraits.md): permitted
+photographic references, a new studio sitting, direct eye contact and a distinct,
+moderately muted background for each expert. The shared prompt and helper record
+the exact inputs, stable background recipe and JPEG preparation. Compare likeness
+separately from polish; keep the original or placeholder when uncertain.
+Keep existing drawings, paintings, statues and similar depictions unchanged;
+do not generate replacements for them.
+
+Label generated images on the profile and in image descriptions. Record the tool,
+generation method, source links, credits, applicable terms and changes. Do not
+invent a historical likeness or present an interpretation as an authentic photo.
+Uncertain candidates need owner review; a placeholder remains acceptable.
+Use the [copyable Image credit block](src/templates/portrait-credit/README.md); the
+normal generator/check and CI validate its required fields and stable recipe.
+Keep source attribution even for generated outputs; the
+[rights guidance](docs/elements/portraits.md#source-credits-and-ai-generation)
+separates project provenance policy, applicable source conditions and rights in
+any new contribution.
 
 ## Photo sources and licenses
 
@@ -110,7 +136,8 @@ check the individual file's terms, not the article's text license.
   its terms, and retain required credits, notices and earlier edit history.
 - Describe our crop, resize and other changes. For CC BY-SA, keep the modified
   portrait under the same license; the library's own license is separate. Do not
-  impose additional restrictions on reuse of the photo.
+  impose additional restrictions on reuse of the photo. Reference-based generation
+  must retain applicable source conditions; generated output does not automatically remove them.
 - Do not imply the photographer or expert endorses this project. Check the
   specific photo's terms; a website's general license may exclude its images.
 
@@ -124,7 +151,9 @@ include source changes and updated outputs together. Both hosts
 use the same description and all experts use the shared execution instruction.
 
 Submit original contributions under [MIT](LICENSE), and only contribute material
-you have the right to license. Portraits retain their individually credited
-licenses. The SVG template and original name placeholders use MIT. Preserve
+you have the right to license. Photographs and adaptations of licensed references
+retain their individually credited terms. Original generated contributions use
+MIT to the extent rights can be granted. The SVG template and original name
+placeholders use MIT. Preserve
 the [vocabulary source credits](docs/elements/specialties.md#source-attribution)
 when copying referenced terms.

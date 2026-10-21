@@ -6,7 +6,8 @@ Choose the person using the
 [expert selection criteria](../../../CONTRIBUTING.md#expert-selection).
 After filling expert.yaml, create placeholder.svg using the command in
 [the image guide](../../README.md#choose-the-profile-image).
-Use a permitted portrait.jpg instead when available, following that guide.
+Use a permitted photo or clearly labeled generated portrait.jpg when suitable,
+following that guide and docs/elements/portraits.md.
 -->
 
 <img src="placeholder.svg" alt="{{name}} — name placeholder" width="240" height="240">
@@ -46,7 +47,16 @@ Full-name placeholder, created from the
 [shared SVG template](../../templates/placeholder.svg). Original project artwork
 under [MIT](../../../LICENSE).
 
-<!-- If using a photograph, change the image filename and alt text above,
+<!-- For a generated portrait, change the filename and accessible text; replace
+this Image note with an AI-generated portrait label, tool, generation method/date,
+supplied reference sources/credits/terms and changes. Follow docs/elements/portraits.md.
+Start with the copyable src/templates/portrait-credit/README.md Image section. Fill its
+explicit Tool/Created/Model/Method/Changes fields, output terms and references.
+Use studio-v1: direct eye contact and an individual moderately muted background;
+record its variant and palette. Save the full input/prompt recipe outside the repo.
+Keep a placeholder when likeness is uncertain. Do not claim verified identity.
+Do not generate replacements for drawings, paintings, statues or similar depictions.
+If using a photograph, change the image filename and alt text above,
 then replace this Image section with Photo credit. Record the creator, title,
 exact license/version or other permission terms, required notices and edits,
 and labeled Source and License links. Always retain attribution. Verify that

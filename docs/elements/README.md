@@ -10,3 +10,5 @@ Link to the relevant [agreement](../../PROJECT.md),
 
 - [Specialties](specialties.md): task matching, common vocabulary rules and the
   adopted central YAML registry and concept-reference schema.
+- [Profile portraits](portraits.md): source selection, generation prompt,
+  likeness review, historical depictions, preparation and attribution.

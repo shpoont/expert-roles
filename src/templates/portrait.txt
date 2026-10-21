@@ -1,0 +1,36 @@
+Style: $style_id. Reference-based studio portrait of $name.
+
+Create a NEW professional studio portrait, as if this person sat for a separate
+photoshoot. The supplied photographs establish identity and apparent age, not
+the original composition, clothing, lighting or background to copy. Image 1
+identifies the target person; ignore other people in wider source photographs.
+A crop and its higher-resolution original are one photographic reference.
+
+Square head-and-upper-chest composition, full head visible with comfortable
+margins, eye-level portrait-lens perspective. Relaxed shoulders may turn slightly;
+keep the head upright and facing sufficiently toward the camera for comfortable,
+DIRECT EYE CONTACT with the lens. Both eyes focus naturally on the viewer.
+Calm natural expression, soft directional studio lighting, gentle fill, realistic
+skin texture and understated clothing suitable for the person. Create a new
+studio sitting rather than just removing the source background. Preserve familiar
+headwear and glasses only when worn in the references; remove stage props and logos.
+
+Preserve distinctive facial structure, proportions, eye shape and spacing, nose,
+mouth, jaw, hairline, facial hair, individual asymmetry and apparent age. Do not
+beautify, de-age, reshape features, enlarge eyes or smooth skin excessively.
+For monochrome references, preserve the subject in monochrome rather than invent
+skin, hair or eye colors; the separate abstract background may still use color.
+If a faithful camera-facing view cannot be supported, do not force an invented face.
+
+Reference-specific notes: $appearance_note
+
+Background: $background
+Use three coordinated colors in broad, soft, flowing gradients with restrained
+desktop-wallpaper polish. Moderately muted color: between candy pastels and
+nearly monochrome gray, roughly 20–30% HSL saturation, with gentle tonal contrast.
+Keep visible hue differences and a light-to-medium background. No bright rainbow,
+neon color, hard outlines, props, scenery, text or logos. Do not make every expert
+share the same backdrop. Keep natural hair edges and avoid a bright silhouette halo.
+Do not add colored light spill to the subject's face or clothing.
+
+This is a disclosed AI-generated studio likeness, not an authentic photograph.

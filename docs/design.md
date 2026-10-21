@@ -1082,3 +1082,146 @@ D046 authorizes a focused follow-up to the published v1.0.0 baseline:
 Record the handover in [current work](current-work.md), lasting reasons and
 pending choices in [decisions](decisions.md), and meaningful changes in the
 [changelog](../CHANGELOG.md).
+
+
+## Studio portrait refresh for owner review
+
+D047 authorizes an isolated, uncommitted portrait refresh and contribution-guidance update. Assess all fifty-seven experts; prioritize recognizable appearance over photographic polish. Preserve biographies, expert metadata, vocabulary, shared instructions and the bytes of all native exports. No push, commit, tag, release or integration change is authorized in this step.
+
+Retain original visuals and credits outside the public tree. Compare name-only, one-reference and complementary-reference approaches on the four calibration experts, without claiming a universal winner or a model version the tool does not expose. Use permitted, reliably attributed visual references, preserve their applicable terms, and distinguish generated likenesses and historical interpretations from authentic photographs. Retain an existing visual where a replacement lacks adequate support.
+
+Acceptance requires accurate image disclosure and provenance, valid 512 x 512 RGB JPEGs or existing name placeholders, coherent contributor instructions, generated consistency, the existing test suite, unchanged protected role content, public-content and local-link checks, rendered catalogue review and opening the final local preview in Safari for the owner. Automated visual inspection is not biometric identity verification; owner review and uncertain likenesses remain explicit.
+
+The owner's first visual review found the photographic results too close to
+background removal and excluded drawings, paintings, statues and similar
+depictions from generation. Restore the five existing historical visuals and
+credits, retaining their depiction status. Refine the photographic prompt to
+permit a new studio pose, lighting and understated clothing while preserving
+facial identity and age. Compare two new photographic trials before replacing
+more catalogue portraits; trials remain outside the public tree for owner review.
+
+## Reproducible studio portrait method and catalogue rollout
+
+D048 adopts the owner's approved moderately muted sample direction: a distinct
+palette and flowing gradient per expert, direct eye contact, a new professional
+studio sitting and faithful apparent age and facial characteristics. Document
+the method before the catalogue rollout. Use a versioned shared prompt and a
+small local helper for stable per-expert background recipes, reference hashes
+and deterministic JPEG preparation. Reproducible inputs and procedure do not
+guarantee identical model output pixels.
+
+Assess all fifty-seven experts. Generate only photographic subjects supported
+by permitted references; preserve drawings, paintings, statues, unsupported
+placeholders and uncertain likenesses. Retain original images and credits.
+Use approved samples where suitable, then generate and inspect remaining
+eligible portraits. Record a per-expert outcome, including every retention.
+Preserve biographies, expert metadata, specialties, shared role instructions
+and all 114 native exports. No commit, push, release or integration change is
+authorized. Continue in the existing isolated worktree.
+
+Check reference provenance, direct eye contact, identity, individual backgrounds,
+image labels and dimensions, native-content hashes, source/export consistency,
+the full test suite, public suitability and local links. Render the updated
+catalogue and make its comparison preview available for owner review. Keep
+generation records and local paths outside the public tree. Editorial likeness
+inspection remains separate from file validation and owner acceptance.
+
+## Portrait contribution consistency closeout
+
+D049 authorizes a copyable generated-image credit block, reusable repository
+validation of portrait content through the normal generator/check and CI path,
+and a fresh-session new-profile walkthrough. Keep the accepted studio-v1
+appearance, all 57 image bytes, biographies, expert metadata, specialties,
+shared instructions and 114 native exports unchanged. Changes stay in the
+isolated worktree, uncommitted and unpushed.
+
+Use one authored credit template and explicit tool/date/model/method fields.
+Validate generated disclosures, the stable background recipe and reference
+sources/terms before the exporter writes any outputs. Cover missing or malformed
+credits, accidental loss of disclosure and drift in the stable palette, together
+with a new-profile path built from the contributor starter. File checks cannot
+establish identity, legal clearance or visual quality. Keep source attribution
+as project policy; source-license conditions apply where the underlying rights
+and actual use require them. Generation is not a blanket waiver or automatic
+transfer of reference licenses to every output.
+
+Final review also checks mixed-reference credits: each separately labeled Source
+entry must retain its own linked terms or explicit public-domain notice. A
+public-domain reference must not waive another reference's declaration. Repeat
+shared terms after each Source entry so the requirement is unambiguous, and
+cover missing and unlinked terms with regression checks before closing out.
+
+An independent agent walkthrough is a separate acceptance check. Run its
+documented prompt in a disposable copy of the complete reviewed working tree,
+including untracked feature files, without the implementation conversation or
+author coaching. A temporary expert is a fixture, not a roster addition. Keep
+the actual image inputs, masters, commands and rendered evidence outside the
+public tree; do not substitute a self-review or deterministic fixture for an
+actual independent contribution.
+
+The owner subsequently authorized this fresh-session run and confirmed-issue
+cleanup, without committing or pushing. The first bounded Grace Hopper case
+completed. Clarify the minimum post-generation record and allowed preview-tool
+choice from its findings, then rerun the normal checks and protected-content
+comparison. Preserve the shared prompt and all existing expert content and
+images. Record the [observations](../evidence/README.md#independent-portrait-contribution-walkthrough--2026-10-21)
+separately from broader reliability and portrait-owner acceptance, which remain
+unverified.
+
+## Portrait owner acceptance and local commit
+
+D050 records the owner's acceptance of the selected portraits after D049's
+independent contribution check. Close out current review notes, verify the
+complete proposed commit, run the normal checks and preserve the 57-expert
+roster, selected visuals and native role bytes. Create one signed commit in the
+existing portrait worktree. This supersedes the earlier no-commit boundary;
+do not push, merge, tag, publish a release or change the published v1.0.0 baseline.
+Owner acceptance is an editorial decision, separate from identity verification
+and the bounded contributor walkthrough.
+
+## Local portrait integration assessment
+
+D051 authorizes rebasing the accepted portrait work onto local main and assessing
+a local squash merge. Keep the maintained main checkout unchanged; do not push,
+merge into main, tag or release. A disposable copy may stage the squash result
+for verification without committing it.
+
+Preserve main's AI-identity instruction, all 114 current native exports and the
+featured-expert request policy. Preserve the accepted portrait bytes, roster,
+metadata and source permissions. Resolve the competing D046 allocation by keeping
+main's identity/request decision as D046 and renumbering the local portrait
+records to D047–D050, with their existing dates and meaning unchanged.
+
+Require a backup of the original signed commit, clean conflict resolution, the
+full suite, read-only generation, native equality, protected-content comparison,
+local links, public suitability and whitespace checks. Verify the rebased
+signature and simulate the squash result separately from actually merging main.
+
+## Local squash merge and v1.1.0 preparation
+
+D052 authorizes squashing the accepted, rebased portrait work into local main
+and preparing the next minor version. Create one signed local commit containing
+the portrait work and release preparation. No push, tag, hosted workflow run or
+release publication is included. Preserve the published v1.0.0 tag.
+
+Use v1.1.0 for the compatible portrait-generation and provenance-validation
+capability. Include the already delivered AI-identity and featured-expert
+request changes since v1.0.0 in the release notes. The version covers the whole
+library; existing expert identifiers, metadata, specialty vocabulary, native
+formats, export paths and intended role scope remain compatible.
+
+Finalize a dated v1.1.0 changelog entry and retain Unreleased for later work.
+Keep the latest published version distinct from the prepared local candidate
+in current entry points. Provide draft publication notes and the remaining
+exact-commit CI, annotated-tag and release-readback steps in the delivery guide.
+Align current instructions, agreement, checks and handover with this boundary.
+
+Before committing, run the full suite, read-only generated consistency, native
+syntax/equality, local links, UTF-8, public-suitability and staged-diff checks.
+Compare all 173 protected files, 57 selected visuals and 57 individual profile
+READMEs with the accepted rebased tree. Release preparation may change only
+documentation; the squash must preserve the feature implementation and accepted
+content. Reuse the existing portrait-owner acceptance and bounded walkthrough
+evidence rather than infer new visual or runtime results. Verify the final
+signature, single-parent squash commit and clean local tree; report publication
+as pending.

@@ -1029,6 +1029,7 @@ validation remain separate from this addition.
   readback and clean local state. Source archives follow the peer convention;
   host-specific packages and consumer changes remain outside this release.
 
+
 ## D046 — 2026-10-21: Clarify AI identity and offer featured-expert removal
 
 - **Status:** Adopted; signed commit and push authorized.
@@ -1048,3 +1049,96 @@ validation remain separate from this addition.
   Keep the roster, profiles, descriptions, images, vocabulary, remaining shared
   instruction and generated indexes unchanged. Record the work under Unreleased;
   preserve published tags and leave deployment to consuming integrations.
+
+## D047 — 2026-10-21: Review a generated studio portrait refresh
+
+- **Status:** Adopted implementation scope; portrait acceptance remains pending owner review.
+- **Decision:** Refresh suitable catalogue visuals using ImageGen, calibrate generation approaches, preserve reference provenance and applicable terms, and update contribution guidance to distinguish synthetic portraits from photographs and existing historical depictions.
+- **Boundary:** Isolated worktree; no commit, push or release. Preserve role content and retain existing visuals where likeness is uncertain. See the [implementation contract](design.md#studio-portrait-refresh-for-owner-review).
+- **Owner review:** Exclude drawings, paintings, statues and similar depictions
+  from generation and restore the five original historical visuals. The first
+  photographic results resembled background removal; compare a new studio pose,
+  lighting and clothing on two trials before further replacements.
+
+## D048 — 2026-10-21: Adopt the studio portrait method and apply it across the catalogue
+
+- **Status:** Adopted style, implemented and locally checked; final portrait review pending.
+- **Decision:** Use direct eye contact, reference-grounded likeness and a new
+  studio sitting with a different moderately muted background for each expert.
+  Document a reproducible method and apply it to every supported photographic
+  subject. Preserve historical depictions, unsupported placeholders and uncertain
+  likenesses. Keep source conditions and attribution.
+- **Boundary:** Existing isolated worktree, no commit or push, no role-content
+  or integration changes. See the [implementation contract](design.md#reproducible-studio-portrait-method-and-catalogue-rollout).
+
+- **D048 result:** All 57 experts are assessed: 29 generated portraits, five
+  retained photographs, five historical depictions and eighteen placeholders.
+  The documented prompt/helper and 32 tests pass; 119 generated outputs match
+  and 173 protected files remain unchanged. See the
+  [rollout evidence](../evidence/README.md#studio-v1-method-and-catalogue-rollout--2026-10-21).
+
+## D049 — 2026-10-21: Make portrait contributions consistently checkable
+
+- **Status:** Credit template and repository validation implemented and locally
+  checked; one independent fresh-session walkthrough completed in a disposable
+  copy. The owner subsequently accepted the portrait selections under D050.
+- **Decision:** Provide a copyable Image block, use explicit tool/date/model/
+  method fields, and validate declarations and stable background recipes through
+  normal generation, read-only check mode and the existing CI path. Invalid
+  provenance must fail before exporter writes.
+- **Source rights:** Keep supplied-reference attribution as project provenance.
+  Preserve applicable source conditions when material is reused or adapted;
+  generation does not automatically remove rights, transfer every input license
+  to every output or create copyright in generated portions. Record source and
+  contribution terms separately, using the existing conservative image policy.
+- **Evidence boundary:** The synthetic new-profile test validates the documented
+  tooling path, not image generation, independent agent behavior or likeness.
+  The separate [walkthrough](../tests/portrait-walkthrough.md) subsequently
+  completed one temporary Grace Hopper case with actual built-in generation,
+  both exports, passing checks and rendered review. Its findings clarify the
+  minimum generation record and permitted preview-tool choice; see the
+  [observed results](../evidence/README.md#independent-portrait-contribution-walkthrough--2026-10-21).
+  This is a bounded contributor observation, not repeatability or owner approval.
+  Images, biographies, metadata, vocabulary, shared instructions and native role
+  bytes are preserved. Keep the work uncommitted and unpushed.
+
+## D050 — 2026-10-21: Accept the portrait refresh for a local commit
+
+- **Status:** Portrait selections accepted by the owner after the bounded
+  independent contributor check.
+- **Decision:** Close current review notes and create one signed commit in the
+  existing isolated worktree after final local checks. This supersedes the
+  earlier no-commit boundary for the portrait refresh.
+- **Boundary:** No push, merge, tag, release, roster change, role deployment or
+  global configuration change. The published v1.0.0 baseline remains fixed.
+- **Evidence:** See the [local closeout](../evidence/README.md#portrait-owner-acceptance-and-local-commit--2026-10-21).
+
+## D051 — 2026-10-22: Assess local integration of the portrait work
+
+- **Status:** Local rebase and squash-readiness assessment authorized; no push
+  or merge into maintained main is included.
+- **Decision:** Preserve both main's identity/request follow-up and the accepted
+  portrait work. Keep the already delivered D046 record and renumber the local
+  portrait decisions to D047–D050 to avoid conflicting identifiers. Preserve
+  their original dates, policy and acceptance meaning.
+- **Checks:** Follow the [integration contract](design.md#local-portrait-integration-assessment).
+  Keep the original signed commit recoverable; verify the new signature,
+  generated consistency, protected content and a disposable squash result.
+
+## D052 — 2026-10-22: Squash locally and prepare v1.1.0
+
+- **Status:** Owner-authorized local integration and minor-release preparation.
+- **Decision:** Squash the accepted, rebased portrait work into local main and
+  create one signed commit including release preparation. This supersedes
+  D051's no-merge boundary. Keep the published v1.0.0 tag fixed; do not push,
+  create a version tag or publish a release.
+- **Version rationale:** The reproducible portrait workflow and provenance
+  checks are compatible capabilities. Use v1.1.0 for the whole library,
+  including main's AI-identity and featured-expert request follow-up since
+  v1.0.0. Existing identifiers, metadata, formats, export paths and intended
+  role scope remain compatible.
+- **Checks and handover:** Follow the
+  [preparation contract](design.md#local-squash-merge-and-v110-preparation).
+  Preserve the accepted portrait tree outside release documentation. Provide
+  a dated changelog, draft notes, signed commit and local evidence. Hosted CI,
+  annotated tagging, publication and remote readback await separate authority.

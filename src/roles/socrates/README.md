@@ -31,6 +31,8 @@ Socrates.
 
 ## Photo credit
 
+**Historical depiction** — original artwork or sculpture; not an AI-generated image.
+
 Photograph by **Eric Gaba (Wikimedia Commons user Sting)**, July 2005, of a
 first-century Roman marble depiction of Socrates at the Louvre. The sculpture
 is a later representation, possibly after a lost work by Lysippos.

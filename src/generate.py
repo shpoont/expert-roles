@@ -15,6 +15,11 @@ import xml.etree.ElementTree as ET
 import yaml
 from PIL import Image, ImageFont
 
+if __package__:
+    from .portraits import validate_credit
+else:
+    from portraits import validate_credit
+
 
 # Curated for breadth; each display label resolves through an assigned specialty.
 FEATURED_EXPERTS = (
@@ -112,9 +117,11 @@ def update_readme(readme: str, content: str, section: str, source: str) -> str:
 
 def catalogue_image(expert: dict, profile_path: str) -> str:
     name = html.escape(expert["name"], quote=True).replace("|", "&#124;")
-    caption = "name placeholder" if expert["image"] == "placeholder.svg" else "photo credits on profile"
+    caption = expert["image_caption"]
+    kind = (caption.split(";", 1)[0] if caption.startswith(("AI-generated", "Historical depiction"))
+            else "Name placeholder" if expert["image"] == "placeholder.svg" else "Photograph")
     return (f'<a href="{profile_path}/README.md"><img src="{profile_path}/{expert["image"]}" '
-            f'alt="{name}; {caption}" width="160" height="160"></a>')
+            f'alt="{name}; {caption}" width="160" height="160"></a><br><sub>{kind}</sub>')
 
 
 def specialty_group_links(groups: list[str]) -> str:
@@ -280,6 +287,7 @@ def plan_outputs(root: Path) -> dict[Path, str]:
 
     experts = []
     names = set()
+    portrait_palettes = {}
     directories = sorted(path for path in (root / "src/roles").iterdir() if path.is_dir())
     for directory in directories:
         slug = directory.name
@@ -297,8 +305,14 @@ def plan_outputs(root: Path) -> dict[Path, str]:
         if unknown:
             raise ValueError(f"Unknown specialties in {slug}: {', '.join(sorted(unknown))}")
         image = validate_image(directory, name, image_template)
+        credit = validate_credit(directory, image, name)
+        if credit["palette"] is not None:
+            if credit["palette"] in portrait_palettes:
+                raise ValueError(f"Duplicate generated-portrait palette: {slug}, {portrait_palettes[credit['palette']]}")
+            portrait_palettes[credit["palette"]] = slug
         names.add(name)
         experts.append({"slug": slug, "name": name, "tags": tags, "image": image,
+                        "image_caption": credit["caption"],
                         "perspective": entry.get("perspective")})
     if not experts:
         raise ValueError("At least one expert profile is required")

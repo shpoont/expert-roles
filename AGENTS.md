@@ -1,14 +1,31 @@
 # Expert Roles library guidance
 
+Current work is D052's [local squash merge and v1.1.0 preparation](docs/design.md#local-squash-merge-and-v110-preparation).
+The owner authorizes one signed squash commit on local main, including the
+accepted portrait work and minor-release preparation. Do not push, tag or
+publish a release. The latest published version remains v1.0.0; v1.1.0 is an
+unpublished candidate. Preserve the accepted images, profile bodies, shared
+instruction and native role bytes. Use the linked evidence and current work
+for completed checks and remaining publication steps.
+Require direct eye contact and a distinct moderately muted background per expert.
+Use the [shared prompt and local helper](docs/elements/portraits.md#create-a-reproducible-recipe)
+and [copyable Image credit block](src/templates/portrait-credit/README.md). The normal
+generator/check and CI validate the declared image provenance and stable recipe.
+D051's rebase and disposable squash assessment are complete. D052 supersedes
+their no-merge boundary for the local squash commit only.
+Preserve all role content and source licenses; distinguish synthetic portraits,
+historical depictions, photographs and placeholders. Keep drawings, paintings,
+statues and similar images unchanged; generate new studio portraits only from
+photographic subjects. Earlier release
+authorization below describes the delivered v1.0.0 baseline, not this work.
+
 This repository owns the public role collection, its documentation, references,
 examples and contribution guidance. Leon.id Komarovsky is the project owner.
 
-D046 adopts explicit AI-identity wording and the main README's private request
-process for featured experts. Follow the
-[focused contract](docs/design.md#expert-identity-wording-and-removal-requests),
-preserving the rest of each instruction and regenerating both native formats.
-The owner authorizes a signed commit and push for this follow-up. Record it
-under Unreleased and keep published release tags fixed.
+D046's delivered AI-identity wording and featured-expert request policy remain
+in force. Preserve the [focused contract](docs/design.md#expert-identity-wording-and-removal-requests),
+the current shared instruction and both generated native formats. Its earlier
+publication authorization does not authorize a push during this preparation.
 
 Read [README.md](README.md), [PROJECT.md](PROJECT.md) and
 [current work](docs/current-work.md) before acting. Follow relevant links to
@@ -18,13 +35,12 @@ Use [design](docs/design.md), [decisions](docs/decisions.md),
 [delivery](docs/delivery.md) to keep intent, work and results connected.
 
 D044's [distribution layout](docs/design.md#distribution-layout-and-generated-indexes)
-is complete and locally verified. D045 establishes the first whole-library
+is complete and locally verified. D045 established the first whole-library
 baseline, `v1.0.0`, following the
 [release contract](docs/design.md#versioning-and-first-release). The owner
-explicitly authorizes committing all pending work, pushing it and publishing
-the first release after checks. This supersedes D044's earlier uncommitted
-boundary. Keep the commit signed, require hosted checks for that exact commit,
-and verify the fixed annotated tag and GitHub release before claiming delivery.
+authorized committing, pushing and publishing the first release after checks.
+That release is delivered; its authorization does not apply to later work. Later
+delivery requires its own owner authorization and the documented release checks.
 
 D042's [visitor journey review](docs/design.md#first-time-and-returning-visitor-journey-review)
 is complete after D041's documentation closeout. Independent first-time and
@@ -32,8 +48,8 @@ returning-visitor reviewers confirmed all five findings resolved; a fresh final
 review found no blockers in the source and captured local rendering. Relevant
 checks pass. The owner accepted the result and authorized its initial signed
 commit on 2026-10-21 under D043.
-Preserve all fifty-seven experts, source vocabulary, images, licenses, shared
-instructions and native exports. The review improved navigation, catalogue
+D042 preserved all fifty-seven experts, source vocabulary, images, licenses,
+shared instructions and native exports. The review improved navigation, catalogue
 comparison, starter guidance and relevant checks within its contract.
 This is a broad expert catalogue under D038, using D037's adopted criteria;
 other candidates remain proposals. This review authorizes no roster changes.
@@ -41,10 +57,13 @@ other candidates remain proposals. This review authorizes no roster changes.
 The owner accepted the compact main README and the updated full catalogue.
 Keep six featured experts in the main README and the
 [full catalogue](src/roles/README.md) beside the profiles. The
-[current work](docs/current-work.md#next-actions) records D045's delivery scope
+[current work](docs/current-work.md#next-actions) records D052's preparation scope
 and later follow-ups. Subsequent releases need their own owner authorization.
 The catalogue contains fifty-seven experts, with eighty-two
-specialties in ten groups, thirty-eight portraits and nineteen full-name placeholders. See the
+specialties in ten groups. D048 selects twenty-nine generated portraits, retains
+five photographs and five original historical depictions, and preserves eighteen
+full-name placeholders. All fifty-seven experts have an explicit outcome; the
+owner accepted the image selections under D050. See the
 [implementation contract](docs/design.md#implementation-contract). Keep expert
 instructions short and shared; the profiles are for human browsing. The owner
 adopted the simplified profile layout in D013 and the central specialty registry
@@ -145,8 +164,9 @@ turn structural validation into a claim that roles improve model performance.
 Update [current work](docs/current-work.md) before handover and meaningful changes
 in [CHANGELOG.md](CHANGELOG.md). Follow the
 [release convention](docs/delivery.md#versions-and-releases) when a release is
-authorized. D045 authorizes the first release; version guidance, dated changelog,
-commit, annotated tag and hosted release must identify the same baseline. Keep
+authorized. Version guidance, dated changelog, commit, annotated tag and hosted
+release must identify the same baseline at publication. D052 authorizes local
+preparation only; it does not authorize those publication steps. Keep
 records proportionate and link existing detail instead of copying
 it into competing sources.
 

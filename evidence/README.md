@@ -1953,6 +1953,7 @@ or commit was performed.
   hold those external delivery results; local preparation is not their proof.
   Existing host-validation and effectiveness limits remain unchanged.
 
+
 ## AI identity and featured-expert requests — 2026-10-21
 
 - **Scope:** D046's [focused contract](../docs/design.md#expert-identity-wording-and-removal-requests)
@@ -1974,3 +1975,353 @@ or commit was performed.
   [hosted checks](https://github.com/shpoont/expert-roles/actions/workflows/checks.yml)
   record the published revision and CI result. These are source, rendering and
   consistency checks; no new host-runtime or legal-clearance claim is made.
+
+## Studio portrait refresh — 2026-10-21
+
+D047 prepares an image-only catalogue refresh from the delivered `v1.0.0`
+baseline for owner review. The owner authorized an isolated worktree, contribution
+updates and Safari review, with no push; changes remain uncommitted.
+
+The built-in ImageGen tool produced **96 saved candidates**. Its model identifier
+was not disclosed. Four outputs were blocked without specific explanations
+(Popper, Ulrich, Hammer and Susskind); no retry was attempted for these cases.
+A small calibration compared name-only and photographic-reference candidates
+for Norman, Goldratt, Huyen and Fowler. Norman used three photographs, Fowler two,
+Huyen two frames of one video, and Goldratt only one usable permitted photograph.
+This is an exploratory comparison, not evidence of an optimal reference count
+or consistent superiority across people or models.
+
+The initial review tree selected **35 generated images**: thirty studio likenesses and
+five historical interpretations preserving the attributed artwork or sculpture
+medium. It retains **four photographs** and **eighteen full-name placeholders**.
+Goldratt, Watson and Kaplan retain photographs because source limitations leave
+likeness uncertain; Popper's generation was blocked. Unverified name-only
+candidates remain outside the public tree for owner review. Historical
+interpretations do not establish lifetime appearance.
+
+Generated-image profiles and both catalogues disclose the image type. Profiles
+record the tool, date, method, available source creators and titles, source links,
+earlier transformations, generation and encoding changes, and applicable terms.
+Licensed-reference adaptations retain their separate image conditions, including
+share-alike and Ross's noncommercial terms. Original generated contributions
+from public-domain references use MIT to the extent rights can be granted.
+The previous photographs, source credits, original-resolution references,
+generated masters, exact prompts and selection notes remain in local task
+review artifacts outside the public tree.
+
+Verification completed for this review:
+
+- **26 tests passed**, including visible and accessible generated-image labels
+  reaching both catalogues without changing native role outputs.
+- **All 119 generated files match** their sources.
+- Hashes match for **173 protected files**: all 114 native exports, 57 metadata
+  files, the specialty registry and the shared instruction. Non-image content
+  in all 57 expert profiles is unchanged.
+- All 57 profiles have exactly one valid visual. JPEG images decode as
+  **512 × 512 RGB**; retained photographs and placeholders preserve their bytes.
+- Supplied-reference attribution URLs remain present. New complementary
+  reference credits and Hau Lee's newly located conference source are recorded.
+
+Fresh local HTML includes **137 rendered Markdown pages**, 57 comparison cards
+and 96 candidate thumbnails. Safari readback confirmed **210 of 210 images
+loaded**, no broken images and no horizontal overflow at a 1712 × 1016 viewport.
+The comparison gallery and main README's six-expert portrait grid were visually
+inspected. Image-type labels are visible, and the gallery remains open for owner
+review. These observations do not verify identity, prove role effectiveness or
+replace the owner's acceptance.
+
+All **1,939 local references resolve**. A scan of 317 public files found no
+private paths or coordination links, and `git diff --check` passed. The original
+checkout remains clean; the isolated refresh remains uncommitted and unpushed.
+
+### Owner feedback: photo-only generation and new studio trials
+
+The owner found the initial photographic treatment too close to the source
+images with their backgrounds removed, and excluded drawings, paintings,
+statues and similar depictions from generation. The five original historical
+visuals are restored byte-for-byte, with their original credits retained and an
+explicit **Historical depiction** label added. The catalogue now contains
+**30 provisional generated portraits, four retained photographs, five original
+historical depictions and eighteen name placeholders**.
+
+The shared prompt now separates facial identity and age from the photographic
+staging. Two new built-in ImageGen trials for Fowler and Norman permit a fresh
+pose, lighting and understated clothing. They remain outside the public tree
+and are not selected or installed. Both outputs, their exact prompts and supplied
+references are saved with the local task artifacts; the full history contains
+98 saved candidates. The tool did not expose its model identifier. The revised
+direction and likeness still require owner review before further replacements.
+
+The revised image-type disclosure test and complete suite pass: **26 tests**.
+All **119 generated files match**, and **173 protected-file hashes** still
+match, including all 114 native role files and 57 expert metadata files.
+Non-image profile content is unchanged for all 57 experts. All **1,935 local
+references resolve**; public-content and active-image checks pass. No commit,
+push, release or integration change was made.
+
+The dedicated Safari trial window reached the Fowler/Norman comparison.
+Guarded readback confirmed both expert sections, the original/first-pass/new-trial
+labels, **six of six images loaded**, no broken images and no horizontal overflow.
+The new images were inspected individually; owner acceptance remains pending.
+
+## Studio-v1 method and catalogue rollout — 2026-10-21
+
+D048 follows the owner's adoption of individual moderately muted backgrounds,
+direct eye contact and a new studio sitting. The method was documented before
+the rollout. Its versioned prompt and local helper preserve exact inputs,
+reference hashes, background variants, template hash and deterministic JPEG
+preparation. AI output itself is variable; no fixed seed or model identifier
+was exposed by the built-in ImageGen tool.
+
+All **57 experts** have an explicit outcome: **29 generated portraits, five
+retained photographs, five original historical depictions and eighteen full-name
+placeholders**. The adopted Fowler, Norman and Huyen samples are reused. Targeted
+corrections give Amy Edmondson a distinct background, adjust Jeff Hawkins's gaze
+and reduce Hau Lee's source-noise texture; fine detail from soft references
+remains interpretive. The exact correction chain and generated masters are
+saved outside the public repository.
+
+Goldratt, Watson and Kaplan retain photographs because source detail is
+insufficient. Lupton's attempted frontal view was rejected because the available
+profile photographs cannot support its invented frontal features. Zelený's
+output was blocked by the tool, with the authentic original restored. No bypass
+was attempted. Steve Blank uses a newly credited permitted frontal photograph
+alongside the later side view, with the later apparent age preserved. Drawings,
+paintings and statues remain outside generation.
+
+Profiles retain the supplied reference creators, source URLs, earlier edits and
+individual terms. Popper's source uses LSE Library's custom reuse statement;
+it is not mislabeled as Creative Commons. Blank's complementary reference and
+resulting share-alike terms are recorded. The original Norman catalogue crop is
+credited as earlier provenance, with the two photographs actually used for the
+new sitting identified separately. Noncommercial conditions remain attached to
+the affected portraits. Every generated profile discloses its synthetic nature,
+style, palette/variant, tool, date and actual method.
+
+Local verification:
+
+- **32 tests pass**, including six portrait-helper contract tests.
+- **All 119 generated files match** their sources.
+- **173 protected hashes match**: 114 native role files, 57 metadata files,
+  the specialty registry and shared execution instruction.
+- Non-image content in all **57 profiles** is unchanged. Each has exactly one
+  valid visual; every JPEG is **512 × 512 RGB**. Retained originals and
+  placeholders preserve their expected bytes.
+- All **29 selected background recipes are unique**. This is an input check;
+  direct gaze, likeness and visible palette differences require visual review.
+- Source/license links, local references and public-content checks pass.
+
+Fresh local rendering contains **137 Markdown pages** and **57 source-comparison
+cards**. Guarded Safari readback confirmed **143 of 143 comparison images
+loaded**, no broken images and no horizontal overflow at a **1712 × 1016**
+viewport. The comparison gallery and a separate 29-portrait overview were
+visually inspected in the owned Safari windows; the overview uses the actual
+160-pixel catalogue images. Individual generated masters were also inspected.
+The gallery remains open for owner review.
+
+All **2,003 local references resolve**, the **320-file public-content scan**
+passes and `git diff --check` passes. The original checkout remains clean.
+These checks establish file and source consistency, not identity verification
+or owner acceptance. The isolated worktree remains uncommitted and unpushed;
+no release or integration change is included.
+
+## Portrait contribution consistency closeout — 2026-10-21
+
+D049 implements a [copyable Image credit block](../src/templates/portrait-credit/README.md)
+and reusable provenance checks in the normal generator and read-only check path.
+The existing CI command runs that validation. The block occupies the same
+directory depth as an expert profile, so its relative method link works both
+while browsing the template and after copying the Image section into a profile.
+
+All 29 generated profiles now use explicit tool, ISO creation date, model and
+method fields. The selected image bytes, source attribution, license/permission
+URLs, prior credits and edit notices are preserved. Guidance distinguishes
+source-provenance policy, applicable duties for reuse/adaptation and rights the
+contributor can grant in any new contribution. No image was generated or edited
+in this closeout.
+
+Local verification:
+
+- **43 tests pass**. New cases reject missing/blank credit fields, lost
+  disclosures, mismatched accessible image text, stable-recipe drift, invalid
+  dates and unlinked provenance. Both normal generation and check mode reject
+  invalid credits without changing exporter outputs.
+- Final source review reproduced three cases where missing or unlinked terms
+  escaped the mixed-reference check. Validation now scopes terms to each Source
+  entry; two regression tests cover missing declarations and distinct reuse
+  grants. Norman's two MMG photographs and Huyen's second video frame repeat
+  their existing license links beside each source; no permission or image changed.
+- A synthetic new-profile test copies the contributor starter, creates a
+  placeholder, records a recipe outside its test repository, prepares a master,
+  applies the actual credit template and generates/checks both native files.
+  It preserves the fixture's existing exports. No image model is called.
+- **All 119 generated files match**. The catalogue remains at 57 experts with
+  29 generated portraits, five photographs, five historical depictions and
+  eighteen full-name placeholders.
+- Hashes confirm all **57 active visuals**, **173 protected files**, including
+  **114 native exports**, and all non-image profile prose remain unchanged from
+  the relevant baselines. Retained profile texts are unchanged; existing source
+  and permission URLs remain present for every expert.
+- Local references, the full public-content scan and whitespace checks pass.
+  CI is configured; this unpushed tree has no fresh hosted run.
+
+Final closeout refreshed all 139 rendered Markdown pages and the 57-card local
+comparison gallery. Safari readback of the 29-portrait overview confirmed 29
+loaded images, zero broken images, 160 × 160 display size and no horizontal
+overflow at 1712 × 1016. Native screenshot capture returned a blank page both
+before and after raising the owned review window. This is a readback result,
+not a fresh screenshot-backed visual review; the earlier D048 visual evidence
+remains separate and owner acceptance is still pending.
+
+At this closeout's initial check, the independent
+[fresh-session walkthrough](../tests/portrait-walkthrough.md) was **prepared, not
+run**. Its prompt, disposable-copy boundary and pass criteria were documented.
+The synthetic fixture and author review did not establish independent agent
+reliability, image-generation success or likeness quality. The later authorized
+run is recorded [below](#independent-portrait-contribution-walkthrough--2026-10-21).
+Owner acceptance of individual portraits remained pending. The original checkout
+was clean; the isolated worktree stayed uncommitted and unpushed.
+
+## Independent portrait contribution walkthrough — 2026-10-21
+
+The owner authorized the [prepared protocol](../tests/portrait-walkthrough.md)
+in a regular chat with a fresh independent agent. It completed one temporary
+Grace Hopper contribution in a disposable copy containing all 323 current
+public files, including untracked portrait feature files. The agent received
+only that copy's location and the protocol prompt, without the implementation
+conversation or author coaching. The copy used independent Git data and had no
+push remote. This case is not a real roster addition.
+
+Observed contribution results:
+
+- The agent followed the contributor starter, existing Software engineering
+  vocabulary, shared studio-v1 prompt and copyable Image credit block.
+- It verified the individual source-page public-domain declarations for James
+  S. Davis's 1984 U.S. Navy photograph and Pete Souza's 1983 federal-work
+  photograph. Only the detailed 1984 original was supplied to generation; the
+  1983 photograph was held out for comparison. Earlier denoising is credited.
+- One actual built-in ImageGen call succeeded. Its prompt matches the saved
+  recipe exactly and the shared template hash is unchanged. The tool did not
+  disclose a model identifier. There were no corrections, fallback image
+  services, accepted-sample reuse or placeholder substitutions.
+- The original 1254 × 1254 generated master and exact inputs remain outside
+  the copy. The documented helper prepared a 512 × 512 RGB JPEG. Its public
+  credit identifies the synthetic likeness, source terms, earlier edits,
+  generation and encoding changes, and scoped MIT contribution terms.
+- Normal generation updated seven files; read-only check mode reported all
+  121 generated files matching and changed no content. All 43 tests passed.
+  All 58 Codex/Claude pairs parsed and agreed.
+- Hash comparisons preserved all 171 existing expert files, all 114 existing
+  native files, vocabulary, templates, tooling and tests. Only the new profile,
+  metadata, JPEG and native pair were added; normal catalogue/index changes and
+  a temporary changelog entry were the only existing-file changes. No file was
+  removed, and the fixed showcase retained six experts.
+- All 2,031 checked local references resolved, with intentional authoring
+  templates excluded. Public-content and tracked whitespace checks passed;
+  HEAD and index were unchanged.
+- Actual Safari screenshots show the 240-pixel profile and credit section,
+  the 160-pixel catalogue entry and all 30 generated backgrounds, including the
+  temporary fixture. All 58 catalogue images loaded without horizontal
+  overflow. The source photographs, full-resolution candidate and both display
+  sizes were inspected separately for likeness, gaze and background.
+
+The fresh agent found two nonblocking documentation gaps: preview-tool choice
+and the post-generation record format. The [workflow](../docs/elements/portraits.md)
+now explicitly permits an available renderer and specifies a minimum `run.json`,
+unchanged tool-argument receipts, hashes and separate review notes. Maintainer
+checks also found and removed a trailing blank line in the new test fixture.
+The shared portrait prompt, all existing expert content and all image bytes
+remain unchanged. The maintainer rerun passes all 43 tests and all 119 generated
+outputs in the real 57-expert worktree. All 173 protected files, 57 existing
+visuals and 57 profile bodies retain their starting hashes. UTF-8, local links,
+bounded public-content and tracked/untracked whitespace checks pass; HEAD is
+unchanged. The same independent agent's post-fix re-review confirms both
+clarifications, all 16 minimum record fields, matching argument receipts and
+image hashes, 43 passing tests and 121 matching generated files in the copy.
+Read-only behavior and whitespace checks pass. A final wording mismatch was
+corrected: linked review notes may live beside `run.json` or at the review
+folder's root. This re-review is separate from the initial unassisted case.
+
+Exact commands, generation inputs, references, masters, screenshots and the
+independent report are retained outside the public tree. This supports one
+bounded contributor-usability observation, not general reliability, identity
+verification, hosted rendering, role effectiveness or owner acceptance. The
+temporary candidate's official uniform insignia remains an explicit owner-review
+item; no shared-prompt policy change was inferred from it. Final owner review of
+the real 29 portrait selections was pending at this check and subsequently
+completed under D050. No commit, push, release,
+installation or global configuration change occurred, and the real catalogue
+remains at 57 experts.
+
+## Portrait owner acceptance and local commit — 2026-10-21
+
+After the [independent contribution check](#independent-portrait-contribution-walkthrough--2026-10-21),
+the owner accepted the real portrait selections and requested a signed local
+commit without any push. D050 supersedes the earlier no-commit boundary.
+The accepted refresh retains 57 experts, with 29 generated portraits, five
+photographs, five historical depictions and eighteen full-name placeholders.
+The temporary Grace Hopper fixture remains outside the real catalogue.
+
+Final local checks cover the complete proposed Git tree, the 43-test suite,
+119 matching generated files, portrait metadata, links, public suitability,
+whitespace and unchanged selected-image and protected-content hashes. The
+commit includes the portrait workflow, images, credits, checks and updated
+acceptance records. Source rights, host-runtime limits and bounded contributor
+evidence remain as documented. Owner acceptance does not establish biometric
+identity or broader agent reliability. No push, merge, tag, release or role
+installation is included.
+
+## Local portrait integration preparation — 2026-10-22
+
+D051 assesses the accepted portrait commit against local main, without merging
+main or pushing. Initial inspection found one signed portrait commit and two
+main-side commits since the common v1.0.0 baseline. The main-side follow-up adds
+explicit AI identity in all native roles and a private correction/removal policy.
+
+The rebase conflicts are confined to current-work, decision and evidence records.
+Both histories are retained. Main's D046 decision remains fixed; the portrait
+records become D047–D050, retaining dates, meaning and owner acceptance. The
+changelog keeps both feature groups under one Changed heading. The original
+signed portrait commit is retained under a local recovery reference.
+
+The resolved candidate passes all 43 tests and all 119 generated files match.
+All 114 native exports and the shared instruction match main exactly; all 57
+accepted visuals and profile bodies match the original portrait commit. The
+protected-content comparison covers 173 files. All 2,039 checked local references
+resolve, and UTF-8, bounded public-content and whitespace checks pass across 323
+public files. Rebased-signature verification and a disposable squash preview
+remain required by the integration contract, separate from actually merging
+maintained main. No portrait, role identity, source permission, roster or release
+change is authorized by this assessment.
+
+## Local squash and v1.1.0 preparation — 2026-10-22
+
+D051's completed readback verified the rebased portrait commit's SSH signature
+and a conflict-free disposable squash whose staged tree exactly matched the
+accepted feature tree. Maintained main remained unchanged during that assessment.
+
+D052 subsequently authorizes the actual local squash and minor-release
+preparation. Preflight confirmed clean main and portrait checkouts, one portrait
+commit ahead and zero behind main, a valid signature and the unchanged v1.0.0
+tag. The actual squash applied without conflicts. Release preparation updates
+documentation only: v1.1.0 is an unpublished compatible candidate, the dated
+changelog includes all changes since v1.0.0, and draft publication notes and
+remaining delivery steps are in the delivery guide.
+
+Pre-commit local checks pass: all 43 tests, all 119 generated outputs, 57
+matching native pairs, and 2,045 resolved local references. All 173 protected
+files, 57 accepted visuals and 57 profile READMEs retain their accepted hashes.
+The full 323-file public tree passes UTF-8 and bounded public-suitability checks;
+staged and unstaged whitespace checks pass. Only the ten release-documentation
+files differ from the accepted rebased tree. Original v1.0.0 changelog history,
+expert identifiers, vocabulary, role files and image selections are preserved.
+
+Final handover checks verify the resulting commit's signature, pre-merge main
+as its sole parent and a clean tree. Git history identifies that local commit;
+the task's external run record retains the readback and preservation results.
+
+No new visual, host-runtime or comparative-role outcome is inferred from this
+integration. Existing portrait-owner acceptance and the bounded independent
+walkthrough remain the applicable evidence. No push, hosted workflow execution,
+version tag, release publication, installation or consumer change is authorized
+or performed; exact-commit hosted CI and release readback remain pending.

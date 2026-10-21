@@ -40,7 +40,9 @@ the destination. The catalogue also links its labels to those specialty rows.
 Original sources and generated role files use [MIT](../LICENSE). Keep its
 copyright and permission notice with copies, including standalone exports.
 Vocabulary labels retain their [source credits and terms](../docs/elements/specialties.md#source-attribution).
-Original name placeholders and their template use MIT. Photographs retain their separately credited licenses; see the
+Original name placeholders, their template and original generated contributions
+use MIT to the extent rights can be granted. Photographs and adaptations of
+licensed references retain their separately credited terms; see the
 [license scope](../README.md#license).
 
 ```text
@@ -153,7 +155,12 @@ Each profile requires exactly one image: a decodable 512 × 512 RGB JPEG named
 expert's name. The exporter validates either image before writing outputs and
 rejects a missing image or both files together. Display either at 160 × 160 in
 the catalogue and 240 × 240 on profiles. See the exact steps below.
-Photograph reuse permission requires manual verification under the
+JPEGs may be photographs, original historical depictions or explicitly labeled
+AI-generated studio portraits. Keep drawings, paintings and statues unchanged.
+Follow the [portrait workflow](../docs/elements/portraits.md) for source selection,
+generation, appearance review, provenance and uncertainty. File validation does
+not establish likeness or authentic historical appearance.
+Photograph and supplied-reference reuse permission requires manual verification under the
 [photo policy](../CONTRIBUTING.md#photo-sources-and-licenses); image-format
 validation does not establish it. Do not add photos with unclear permission.
 
@@ -202,9 +209,18 @@ files. Perspective whitespace is normalized as described above.
 
 ## Choose the profile image
 
-Use a suitable photograph with verified reuse permission when available.
-Otherwise use a full-name placeholder; a missing photo does not block an accepted expert.
-Each profile has exactly one of `portrait.jpg` or `placeholder.svg`.
+Use a suitable photograph with verified reuse permission, an existing historical
+depiction or a clearly labeled generated studio portrait following the
+[portrait workflow](../docs/elements/portraits.md). Do not generate replacements
+for drawings, paintings, statues or similar depictions.
+The versioned [portrait prompt](templates/portrait.txt) and [helper](portraits.py)
+provide stable individual backgrounds, reference hashes and deterministic JPEG
+preparation. Generated portraits require direct eye contact; save run recipes
+outside this public repository.
+Otherwise use a full-name placeholder; uncertain likeness does not block an accepted expert.
+Each profile has exactly one of `portrait.jpg` or `placeholder.svg`. Identify an
+existing artwork or statue with **Historical depiction** in its credit section
+so both catalogue entries retain that distinction.
 
 ### Create a full-name placeholder
 
@@ -237,6 +253,21 @@ To correct the name, update `expert.yaml` and the README, remove that profile's
 `placeholder.svg` and rerun the first command. Review at both display sizes.
 The template and generated placeholder artwork use
 [MIT](../LICENSE); no third-party photo credit is needed.
+
+### Use a generated studio portrait
+
+Follow the [studio-v1 method](../docs/elements/portraits.md), including permitted
+references, the shared prompt, an individual background and visual review.
+Prepare the selected master with the portrait helper, then remove the profile's
+`placeholder.svg`. Keep exactly one active visual.
+
+Change the existing hero image to `portrait.jpg`, with accessible text
+`Full Name — AI-generated portrait` and width/height **240**. Replace only the
+profile's **Image** section using the [copyable credit block](templates/portrait-credit/README.md).
+Fill every field from the actual recipe and run, including all supplied-reference
+credits and terms. Keep this section titled **Image**. Run the generator and
+checks above; the same validation runs in CI. Image generation does not remove
+applicable source rights or establish copyright in the generated portion.
 
 ### Use a photograph instead
 

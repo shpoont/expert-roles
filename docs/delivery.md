@@ -4,8 +4,27 @@
 
 Start at the [full catalogue](../src/roles/README.md), then open individual
 profiles and their Codex or Claude Code files. The fifty-seven completed profiles
-use one simplified layout, eighty-two shared specialties, thirty-eight credited
-portraits and nineteen full-name placeholders. All accepted additions are included.
+use one simplified layout and eighty-two shared specialties. D048's accepted
+studio-v1 refresh contains twenty-nine generated portraits, five retained
+photographs, five original historical depictions and eighteen full-name
+placeholders. All
+accepted experts remain included.
+
+Review images and their provenance using the
+[portrait workflow](elements/portraits.md). Historical depictions remain unchanged;
+generation applies only to supported photographic subjects. The adopted style
+uses direct eye contact, a new studio sitting and an individual moderately muted
+background. The documented method, shared prompt and helper are locally checked:
+43 tests pass and all 119 generated files match. The owner accepted the final
+image selections; file checks do not verify likeness. D049 adds the copyable
+credit block and repository validation. The independent
+[fresh-session walkthrough](../tests/portrait-walkthrough.md) completed one
+temporary Grace Hopper contribution in a disposable copy, with actual built-in
+generation and screenshot-backed profile/catalogue review. See the
+[bounded results](../evidence/README.md#independent-portrait-contribution-walkthrough--2026-10-21).
+This does not establish repeatability; owner acceptance is recorded separately.
+D052 authorizes a signed squash commit into local main and preparation of
+v1.1.0 after the final checks. Do not push, tag or publish the candidate.
 
 The catalogue remains broad under D038 and uses D037's adopted criteria.
 D039 implements the owner's ten selected additions and Rybka removal; D040
@@ -143,9 +162,11 @@ establish broad reliability or comparative benefit.
 
 ## Delivery acceptance and remaining work
 
-The owner accepted the compact main README and the updated fifty-seven-expert
-catalogue. The initial implementation and rendered review are complete; no
-accepted profile, required portrait, layout or specialty decision remains open.
+The owner accepted the compact main README and the fifty-seven-expert catalogue
+that became the published `v1.0.0` baseline. Its implementation and rendered
+review were complete; no baseline profile, portrait, layout or specialty
+decision remained open. The owner separately accepted D048's studio-v1 selections
+under D050, authorizing a signed local commit without a push or release.
 D041 records the acceptance and the
 [documentation closeout](design.md#final-documentation-closeout-for-the-accepted-catalogue).
 
@@ -170,17 +191,18 @@ the rendering is separate from structural checks and observed runtime behavior.
 
 Automatic Codex directory discovery, Claude runtime validation, deployment and
 comparative role benefit remain later consumer or assessment work. They do not
-block committing this accepted catalogue. No new invocation or deployment is
-included. D045 authorizes committing D044's completed changes with the versioning
+block the accepted baseline's publication. No new invocation or deployment is
+included. D045 authorized committing D044's completed changes with the versioning
 setup and publishing `v1.0.0` after final checks. The
 [release contract](design.md#versioning-and-first-release) requires verifying the
 remote commit, successful hosted checks, annotated tag and GitHub release.
 
 Original sources, role instructions, tooling and name artwork use [MIT](../LICENSE).
-Photographs retain the terms and credits on their profiles; they are excluded
-from MIT. Always preserve attribution, source, permission notices and edit
+Photographs and generated adaptations of licensed references retain the terms
+and credits on their profiles; they are excluded from MIT. Original generated
+contributions use MIT to the extent rights can be granted. Always preserve attribution, source, permission notices and edit
 history, and follow each image's conditions. Watson's CC BY-NC 2.0 portrait and
-Ross's CC BY-NC 4.0 video-derived portrait retain their noncommercial conditions.
+Ross's CC BY-NC 4.0 video-derived adaptation retain their noncommercial conditions.
 The collection does not promise uniform photo reuse rights. Vocabulary labels retain their
 [source credits and terms](elements/specialties.md#source-attribution).
 Follow the [photo policy](../CONTRIBUTING.md#photo-sources-and-licenses) and
@@ -188,7 +210,8 @@ Follow the [photo policy](../CONTRIBUTING.md#photo-sources-and-licenses) and
 
 ## Versions and releases
 
-Current baseline: **[v1.0.0](https://github.com/shpoont/expert-roles/releases/tag/v1.0.0)**.
+Prepared version: **v1.1.0** (unpublished). Latest published version:
+**[v1.0.0](https://github.com/shpoont/expert-roles/releases/tag/v1.0.0)**.
 One `MAJOR.MINOR.PATCH` version covers profiles, metadata, vocabulary, shared
 instructions, templates, tooling and both native formats. The consuming plugin
 and other integrations keep independent histories. Individual experts and export
@@ -208,7 +231,9 @@ The first stable baseline includes `dist/codex/expert-<slug>.toml` and
 `dist/claude/expert-<slug>.md`; classification changes do not move those files.
 A versioned export is not a broader host-compatibility or effectiveness claim.
 
-For each owner-authorized release:
+Preparation, local commits and publication follow the owner's current
+authorization. D052 includes local preparation only. For an authorized
+publication, complete the applicable steps below:
 
 1. Review scope, compatibility impact and evidence. Regenerate and run the
    [checks](../tests/README.md), including local links, native consistency and
@@ -230,6 +255,56 @@ For each owner-authorized release:
 6. Read back the remote commit, tag target, release metadata/notes and relevant
    source files. Confirm the local tree is clean. Keep preparation evidence
    distinct from successful publication; a commit alone does not make a release.
+
+### v1.1.0 preparation and remaining delivery
+
+D052's [local preparation contract](design.md#local-squash-merge-and-v110-preparation)
+combines the accepted portrait work and release documentation in one signed
+squash commit on local main. Version v1.1.0 is a minor increment because the
+portrait workflow and validation are compatible additions. Expert identifiers,
+metadata, native formats, export paths and intended role scope remain compatible.
+The AI-identity and request-policy follow-up since v1.0.0 is included in these
+whole-library release notes.
+
+The local candidate has no version tag or hosted release. After separate owner
+authorization, finalize release wording for the intended v1.1.0 baseline without
+claiming publication in advance. Commit any final documentation edits with a
+signature and rerun local checks. Push the reviewed release commit and require
+successful hosted Checks for that exact commit. Then create and verify the
+annotated `v1.1.0` tag, push it explicitly, publish **Expert Roles v1.1.0** as
+Latest, and read back the remote commit, tag target, release and tagged source
+files. Record observed delivery only after that readback. Never move an existing
+released tag.
+
+### Draft release notes for v1.1.0
+
+**Expert Roles v1.1.0** adds a reproducible studio-portrait contribution workflow
+and clearer image provenance across the 57-expert catalogue.
+
+- 29 owner-accepted generated portraits, five retained photographs, five
+  historical depictions and eighteen full-name placeholders. Visible and
+  accessible labels identify image types; individual profiles retain source
+  creators, licenses, permission notices, generation disclosures and edit history.
+- A versioned studio-v1 prompt, stable per-expert background recipes, reference
+  hashes and deterministic 512 × 512 RGB JPEG preparation. The generator and CI
+  check required credit fields, stable recipes and per-reference source/terms
+  declarations before writes.
+- Explicit AI-inspired identity in all 114 native roles and a private voluntary
+  correction/removal request process for featured experts and representatives.
+- Existing expert identifiers, metadata, specialties, Codex/Claude formats and
+  flat `dist/` export paths are preserved. Consumer integrations remain separate.
+
+Local validation: 43 tests pass; all 119 generated files match; all 173 protected
+files, 57 selected visuals and 57 profile READMEs match the accepted rebased tree.
+One independent temporary contribution walkthrough passed. Identical image-model
+output, general contributor reliability, biometric identity, Claude runtime,
+automatic Codex discovery and comparative role benefit are not established.
+No new host-runtime testing was performed. Images retain individually credited
+terms, including existing noncommercial conditions where applicable.
+
+Publication must add the successful exact-commit hosted-check result and a link
+to the verified tagged snapshot. Until then, these are draft notes for an
+unpublished local candidate.
 
 ## Outcomes and learning
 
