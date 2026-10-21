@@ -24,8 +24,8 @@ overlap, add a short, supported perspective phrase in expert.yaml; it need not
 be copied here. -->
 {{short_introduction}}
 
-[Codex role file](codex/expert-{{slug}}.toml) ·
-[Claude Code role file](claude/expert-{{slug}}.md) ·
+[Codex role file](../../../dist/codex/expert-{{slug}}.toml) ·
+[Claude Code role file](../../../dist/claude/expert-{{slug}}.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

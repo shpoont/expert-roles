@@ -122,17 +122,19 @@ class GenerationContractTests(unittest.TestCase):
                                     "reference": "https://example.org/concepts/unused"}
         registry.write_text(yaml.safe_dump(data))
         self.assertEqual(self.run_exporter(), 0)
-        catalogue = self.catalogue.read_text()
-        shared = next(line for line in catalogue.splitlines()
-                      if 'id="specialty-human-centered-design"' in line)
-        self.assertIn("[Don Norman]", shared)
-        self.assertIn("[Another designer]", shared)
-        self.assertNotIn("Unused specialty", catalogue)
-        self.assertNotIn("Unused group", catalogue)
-        design = catalogue.split("### Design", 1)[1].split("###", 1)[0]
-        self.assertLess(design.index("Human-centered design"), design.index("Human-computer interaction"))
+        for path in (self.catalogue, self.root / "dist/codex/README.md",
+                     self.root / "dist/claude/README.md"):
+            catalogue = path.read_text()
+            shared = next(line for line in catalogue.splitlines()
+                          if 'id="specialty-human-centered-design"' in line)
+            self.assertIn("[Don Norman]", shared)
+            self.assertIn("[Another designer]", shared)
+            self.assertNotIn("Unused specialty", catalogue)
+            self.assertNotIn("Unused group", catalogue)
+            design = catalogue.split("### Design", 1)[1].split("###", 1)[0]
+            self.assertLess(design.index("Human-centered design"), design.index("Human-computer interaction"))
         for slug in ("don-norman", "another-designer"):
-            role = self.root / f"src/roles/{slug}/codex/expert-{slug}.toml"
+            role = self.root / f"dist/codex/expert-{slug}.toml"
             metadata = tomllib.loads(role.read_text())
             self.assertIn("Human-centered design", metadata["description"])
             self.assertNotIn("wikidata.org", metadata["developer_instructions"])
@@ -338,21 +340,93 @@ class GenerationContractTests(unittest.TestCase):
             plan_outputs(self.root)
 
     def test_specialty_targets_survive_label_and_group_changes(self):
-        before = plan_outputs(self.root)[Path("src/roles/README.md")]
+        before_outputs = plan_outputs(self.root)
         registry = self.root / "src/specialties.yaml"
         data = yaml.safe_load(registry.read_text())
         data["human-centered-design"]["name"] = "People-centered design"
         data["human-centered-design"]["group"] = "Another design group"
         registry.write_text(yaml.safe_dump(data))
-        after = plan_outputs(self.root)[Path("src/roles/README.md")]
-        for catalogue in (before, after):
-            self.assertEqual(catalogue.count('id="specialty-human-centered-design"'), 1)
-            self.assertIn("](#specialty-human-centered-design)", catalogue)
-            anchors = re.findall(r'<a id="([^"]+)"', catalogue)
-            self.assertEqual(len(anchors), len(set(anchors)))
-            targets = re.findall(r'\]\(#(specialty-[^)]+)\)', catalogue)
-            self.assertTrue(set(targets) <= set(anchors))
+        after_outputs = plan_outputs(self.root)
+        self.assertEqual(set(before_outputs), set(after_outputs))
+        for path in (Path("src/roles/README.md"), Path("dist/codex/README.md"),
+                     Path("dist/claude/README.md")):
+            for content in (before_outputs, after_outputs):
+                catalogue = content[path]
+                self.assertEqual(catalogue.count('id="specialty-human-centered-design"'), 1)
+                anchors = re.findall(r'<a id="([^"]+)"', catalogue)
+                self.assertEqual(len(anchors), len(set(anchors)))
+                targets = re.findall(r'\]\(#(specialty-[^)]+)\)', catalogue)
+                self.assertTrue(set(targets) <= set(anchors))
+            self.assertIn("### Another design group", after_outputs[path])
+        after = after_outputs[Path("src/roles/README.md")]
         self.assertIn('[People-centered design](#specialty-human-centered-design)', after)
+
+    def test_distribution_indexes_link_multiple_specialties_to_one_file_per_host(self):
+        self.assertEqual(self.run_exporter(), 0)
+        chooser = (self.root / "dist/README.md").read_text()
+        self.assertIn("(codex/README.md)", chooser)
+        self.assertIn("(claude/README.md)", chooser)
+        for host, extension in (("codex", "toml"), ("claude", "md")):
+            directory = self.root / "dist" / host
+            index = (directory / "README.md").read_text()
+            expected = {f"expert-{slug}.{extension}" for slug, _ in FEATURED_EXPERTS}
+            self.assertEqual({path.name for path in directory.iterdir()}, expected | {"README.md"})
+            names = index.split("## By name\n", 1)[1].split("## By specialty\n", 1)[0]
+            profiles = re.findall(r'\]\(\.\./\.\./src/roles/([^/]+)/README\.md\)', names)
+            self.assertEqual(len(profiles), len(FEATURED_EXPERTS))
+            for slug, _ in FEATURED_EXPERTS:
+                self.assertIn(f"(expert-{slug}.{extension})", names)
+                self.assertIn(slug, profiles)
+            for tag in ("human-centered-design", "cognitive-psychology", "human-computer-interaction"):
+                row = next(line for line in index.splitlines() if f'id="specialty-{tag}"' in line)
+                self.assertIn(f"[Don Norman](expert-don-norman.{extension})", row)
+        self.assertFalse(list(self.root.glob("src/roles/*/codex/*")))
+        self.assertFalse(list(self.root.glob("src/roles/*/claude/*")))
+
+    def test_distribution_indexes_sort_by_display_name(self):
+        profile = self.root / "src/roles/zz-early-expert"
+        profile.mkdir()
+        self.write_portrait(profile)
+        (profile / "README.md").write_text("# Aaron Example\n")
+        (profile / "expert.yaml").write_text(
+            "name: Aaron Example\nspecialties: [human-centered-design]\n")
+        outputs = plan_outputs(self.root)
+        for host in ("codex", "claude"):
+            index = outputs[Path(f"dist/{host}/README.md")]
+            names = index.split("## By name\n", 1)[1].split("## By specialty\n", 1)[0]
+            self.assertLess(names.index("[Aaron Example]"), names.index("[Chip Huyen]"))
+            row = next(line for line in index.splitlines() if 'id="specialty-human-centered-design"' in line)
+            self.assertLess(row.index("[Aaron Example]"), row.index("[Don Norman]"))
+
+    def test_unexpected_distribution_or_legacy_files_are_rejected_without_changes(self):
+        self.assertEqual(self.run_exporter(), 0)
+        for relative in (
+            "dist/codex/expert-removed.toml", "dist/claude/expert-removed.md",
+            "dist/codex/nested/expert-don-norman.toml", "dist/claude/nested/expert-don-norman.md",
+            "src/roles/don-norman/codex/expert-don-norman.toml",
+            "src/roles/don-norman/claude/expert-don-norman.md",
+        ):
+            with self.subTest(path=relative):
+                path = self.root / relative
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("Unexpected role file\n")
+                before = {p: p.read_bytes() for p in self.root.rglob("*") if p.is_file()}
+                for args in ((), ("--check",)):
+                    self.assertEqual(self.run_exporter(*args), 1)
+                    self.assertEqual(before, {p: p.read_bytes() for p in self.root.rglob("*") if p.is_file()})
+                path.unlink()
+
+    def test_profile_and_starter_download_links_use_distribution_paths(self):
+        source = Path(__file__).resolve().parents[1]
+        profiles = list((source / "src/roles").glob("*/README.md"))
+        self.assertTrue(profiles)
+        for profile in profiles + [source / "src/templates/profile/README.md"]:
+            slug = profile.parent.name if profile.parent.name != "profile" else "{{slug}}"
+            text = profile.read_text()
+            for host, extension in (("codex", "toml"), ("claude", "md")):
+                with self.subTest(profile=profile.parent.name, host=host):
+                    self.assertIn(f"](../../../dist/{host}/expert-{slug}.{extension})", text)
+                    self.assertNotIn(f"]({host}/expert-", text)
 
     def test_optional_perspective_changes_catalogue_and_matching_host_descriptions(self):
         source = self.profile / "expert.yaml"
@@ -368,9 +442,8 @@ class GenerationContractTests(unittest.TestCase):
         row = next(line for line in outputs[Path("src/roles/README.md")].splitlines()
                    if line.startswith("| [Don Norman]"))
         self.assertIn("Perspective: " + phrase, row)
-        native = Path("src/roles/don-norman")
-        codex_path = native / "codex/expert-don-norman.toml"
-        claude_path = native / "claude/expert-don-norman.md"
+        codex_path = Path("dist/codex/expert-don-norman.toml")
+        claude_path = Path("dist/claude/expert-don-norman.md")
         for content, expected in ((baseline, False), (outputs, True)):
             codex = tomllib.loads(content[codex_path])
             _, frontmatter, instruction = content[claude_path].split("---\n", 2)
@@ -392,7 +465,7 @@ class GenerationContractTests(unittest.TestCase):
         source.write_text(yaml.safe_dump(entry) +
                           "perspective: >\n  conceptual models,\n  feedback and error.\n")
         outputs = plan_outputs(self.root)
-        codex = tomllib.loads(outputs[Path("src/roles/don-norman/codex/expert-don-norman.toml")])
+        codex = tomllib.loads(outputs[Path("dist/codex/expert-don-norman.toml")])
         self.assertIn("especially on conceptual models, feedback and error.", codex["description"])
         self.assertNotIn("\n", codex["description"])
         self.assertNotIn("error..", codex["description"])
@@ -414,11 +487,22 @@ class GenerationContractTests(unittest.TestCase):
     def test_check_detects_drift_without_rewriting_it(self):
         self.assertEqual(self.run_exporter(), 0)
         self.assertEqual(self.run_exporter("--check"), 0)
-        role = self.profile / "codex/expert-don-norman.toml"
-        changed = role.read_text(encoding="utf-8") + "# Local change\n"
-        role.write_text(changed, encoding="utf-8")
-        self.assertEqual(self.run_exporter("--check"), 1)
-        self.assertEqual(role.read_text(encoding="utf-8"), changed)
+        for relative in ("dist/README.md", "dist/codex/README.md", "dist/claude/README.md",
+                         "dist/codex/expert-don-norman.toml", "dist/claude/expert-don-norman.md"):
+            path = self.root / relative
+            original = path.read_text()
+            for missing in (False, True):
+                with self.subTest(path=relative, missing=missing):
+                    if missing:
+                        path.unlink()
+                    else:
+                        path.write_text(original + "# Local change\n")
+                    before = {p: p.read_bytes() for p in self.root.rglob("*") if p.is_file()}
+                    self.assertEqual(self.run_exporter("--check"), 1)
+                    self.assertEqual(before, {p: p.read_bytes() for p in self.root.rglob("*") if p.is_file()})
+                    self.assertEqual(self.run_exporter(), 0)
+                    self.assertEqual(path.read_text(), original)
+        self.assertEqual(self.run_exporter("--check"), 0)
 
     def test_multiple_specialties_preserve_expert_identity_in_both_hosts(self):
         profile = self.root / "src/roles/eliyahu-goldratt"
@@ -433,8 +517,8 @@ class GenerationContractTests(unittest.TestCase):
         )
         self.assertEqual(self.run_exporter(), 0)
         self.assertIn("[Eliyahu Goldratt](eliyahu-goldratt/README.md)", self.catalogue.read_text())
-        codex = tomllib.loads((profile / "codex/expert-eliyahu-goldratt.toml").read_text())
-        _, frontmatter, body = (profile / "claude/expert-eliyahu-goldratt.md").read_text().split("---\n", 2)
+        codex = tomllib.loads((self.root / "dist/codex/expert-eliyahu-goldratt.toml").read_text())
+        _, frontmatter, body = (self.root / "dist/claude/expert-eliyahu-goldratt.md").read_text().split("---\n", 2)
         claude = yaml.safe_load(frontmatter)
         for metadata, instruction in ((codex, codex["developer_instructions"]), (claude, body)):
             with self.subTest(host="Codex" if metadata is codex else "Claude Code"):

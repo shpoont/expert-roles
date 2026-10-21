@@ -8,8 +8,8 @@ Business leader and author of *High Output Management* and *Only the Paranoid
 Survive*. His public work examines managerial effectiveness, organizational
 output and how companies respond to strategic inflection points.
 
-[Codex role file](codex/expert-andy-grove.toml) ·
-[Claude Code role file](claude/expert-andy-grove.md) ·
+[Codex role file](../../../dist/codex/expert-andy-grove.toml) ·
+[Claude Code role file](../../../dist/claude/expert-andy-grove.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

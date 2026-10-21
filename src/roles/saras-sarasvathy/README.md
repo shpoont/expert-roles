@@ -9,8 +9,8 @@ creating ventures under uncertainty. Her research examines how experienced
 entrepreneurs start with available means, limit affordable loss and build
 commitments with others.
 
-[Codex role file](codex/expert-saras-sarasvathy.toml) ·
-[Claude Code role file](claude/expert-saras-sarasvathy.md) ·
+[Codex role file](../../../dist/codex/expert-saras-sarasvathy.toml) ·
+[Claude Code role file](../../../dist/claude/expert-saras-sarasvathy.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

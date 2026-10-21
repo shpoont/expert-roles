@@ -8,8 +8,8 @@ Management author known for business process reengineering and coauthor of
 *Reengineering the Corporation*. His work examines how organizations can
 redesign end-to-end processes around customer outcomes.
 
-[Codex role file](codex/expert-michael-hammer.toml) ·
-[Claude Code role file](claude/expert-michael-hammer.md) ·
+[Codex role file](../../../dist/codex/expert-michael-hammer.toml) ·
+[Claude Code role file](../../../dist/claude/expert-michael-hammer.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

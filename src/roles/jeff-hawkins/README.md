@@ -8,8 +8,8 @@ Scientist and inventor, cofounder of Numenta and author of *On Intelligence*
 and *A Thousand Brains*. His research explores theories of cortical learning
 and how those ideas could inform sensorimotor AI.
 
-[Codex role file](codex/expert-jeff-hawkins.toml) ·
-[Claude Code role file](claude/expert-jeff-hawkins.md) ·
+[Codex role file](../../../dist/codex/expert-jeff-hawkins.toml) ·
+[Claude Code role file](../../../dist/claude/expert-jeff-hawkins.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

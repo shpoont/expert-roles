@@ -22,8 +22,9 @@ The featured experts are not affiliated with or endorsing this project.
 
 1. Choose roles from the [catalogue](src/roles/README.md) whose expertise
    suits your work.
-2. Open their profiles, download the **Codex** or **Claude Code** role files,
-   and follow the [setup guide](docs/delivery.md#use-a-native-role).
+2. Download the [Codex](dist/codex/README.md) or
+   [Claude Code](dist/claude/README.md) role files and follow the
+   [setup guide](docs/delivery.md#use-a-native-role).
 3. Describe your task, relevant evidence and constraints. The assistant can
    select a suitable expert role when useful. You can also request a specific
    expert by name.
@@ -100,6 +101,18 @@ an expert.
 Suggest experts and improvements through
 [issues](https://github.com/shpoont/expert-roles/issues).
 Follow the [contribution guide](CONTRIBUTING.md) to submit changes.
+
+## Versions and releases
+
+Current baseline: **[v1.0.0](https://github.com/shpoont/expert-roles/releases/tag/v1.0.0)**.
+One `MAJOR.MINOR.PATCH` version covers the whole library and both export formats:
+major for incompatible changes, minor for compatible additions, and patch for
+corrections that preserve intended behavior. Consuming integrations are versioned
+independently.
+
+See the [changelog](CHANGELOG.md) and
+[release guide](docs/delivery.md#versions-and-releases). Released tags stay fixed;
+pin a released tag or commit when consuming the library.
 
 ## Project documentation
 

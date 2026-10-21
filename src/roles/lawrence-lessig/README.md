@@ -8,8 +8,8 @@ Legal scholar and author known for work on technology, copyright and
 regulation. His books examine how law, software architecture, markets and
 social norms shape what people can do in a digital environment.
 
-[Codex role file](codex/expert-lawrence-lessig.toml) ·
-[Claude Code role file](claude/expert-lawrence-lessig.md) ·
+[Codex role file](../../../dist/codex/expert-lawrence-lessig.toml) ·
+[Claude Code role file](../../../dist/claude/expert-lawrence-lessig.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

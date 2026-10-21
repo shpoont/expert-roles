@@ -8,8 +8,8 @@ Computer scientist and author of *Designing Data-Intensive Applications*. His
 public work explains the reliability, consistency and scalability trade-offs
 of databases and distributed data systems.
 
-[Codex role file](codex/expert-martin-kleppmann.toml) ·
-[Claude Code role file](claude/expert-martin-kleppmann.md) ·
+[Codex role file](../../../dist/codex/expert-martin-kleppmann.toml) ·
+[Claude Code role file](../../../dist/claude/expert-martin-kleppmann.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

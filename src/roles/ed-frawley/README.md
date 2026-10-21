@@ -8,8 +8,8 @@ Professional dog trainer, founder of Leerburg and producer of dog-training
 instruction since 1982. His courses and articles cover obedience, marker
 training, reward delivery and everyday management of dogs in the home.
 
-[Codex role file](codex/expert-ed-frawley.toml) ·
-[Claude Code role file](claude/expert-ed-frawley.md) ·
+[Codex role file](../../../dist/codex/expert-ed-frawley.toml) ·
+[Claude Code role file](../../../dist/claude/expert-ed-frawley.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

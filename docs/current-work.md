@@ -2,6 +2,30 @@
 
 ## Current focus and status
 
+The **v1.0.0** whole-library baseline is complete. D044's
+[distribution layout](design.md#distribution-layout-and-generated-indexes)
+provides one native file per expert and host, plus generated alphabetical and
+specialty indexes. D045 adopts the
+[versioning and release procedure](delivery.md#versions-and-releases) and
+explicitly authorizes committing all pending work, pushing it and releasing
+this first version after checks. This supersedes the earlier uncommitted boundary.
+
+Local verification passes: 25 tests, all 119 generated outputs, native syntax and
+equality, local links/anchors and an isolated completed-starter trial. All 114
+relocated exports retain their original bytes; expert metadata, visuals,
+vocabulary, shared instructions and generated catalogue sections are preserved.
+See the [distribution evidence](../evidence/README.md#distribution-layout--2026-10-21)
+and [release preparation](../evidence/README.md#first-release-preparation--2026-10-21).
+
+The [release record](https://github.com/shpoont/expert-roles/releases/tag/v1.0.0),
+[fixed snapshot](https://github.com/shpoont/expert-roles/tree/v1.0.0) and
+[hosted checks](https://github.com/shpoont/expert-roles/actions/workflows/checks.yml)
+record publication and CI state. Delivery verifies the signed commit, successful
+hosted checks for that exact commit, annotated tag, matching public release and
+clean local tree; source preparation alone does not establish publication.
+
+## Accepted baseline
+
 The initial catalogue implementation and owner review are complete. On
 2026-10-21, the owner accepted the rendered fifty-seven-expert catalogue,
 including the seven philosophical additions, after the compact main README
@@ -14,7 +38,8 @@ before commit. Independent first-time and returning-visitor walkthroughs used
 source files and fresh local-render screenshots. All five findings are resolved
 in re-review, and a fresh independent final review found no blockers. Relevant
 checks pass. The owner accepted the result and authorized the reviewed
-catalogue's initial signed commit on 2026-10-21 under D043.
+catalogue's initial signed commit on 2026-10-21 under D043. That signed commit
+was completed and subsequently pushed before D044 began.
 
 The catalogue contains fifty-seven experts and eighty-two specialties in ten
 groups, with thirty-eight credited portraits and nineteen full-name SVG
@@ -60,21 +85,21 @@ These follow-ups are separate from the accepted catalogue and commit readiness.
 
 ## Next actions
 
-D042 is complete. No further implementation is required for the initial
-catalogue. D043 records the owner's acceptance and commit authorization,
-superseding the earlier no-commit restriction for this reviewed tree. Push,
-publication, tags and releases require separate instructions.
+No catalogue implementation remains for the v1.0.0 baseline. Use the
+[release procedure](delivery.md#versions-and-releases) for delivery; published
+tags remain fixed and subsequent changes go under **Unreleased**. The owner has
+authorized this first release, not future releases or consuming-integration work.
 
 Further experts and optional portrait improvements follow the existing
 [contribution process](../CONTRIBUTING.md). Later runtime or effectiveness work
-needs its own agreed scope; it is not part of this closeout.
+needs its own agreed scope. Deployment and role management remain external.
 
 ## Findings and handover
 
 Use [delivery](delivery.md#delivery-acceptance-and-remaining-work) for acceptance
 and remaining obligations, [usage](delivery.md#use-a-native-role) for host limits,
 [checks](../tests/README.md) for validation and
-[evidence](../evidence/README.md#visitor-journey-review--2026-10-21)
+[evidence](../evidence/README.md#distribution-layout--2026-10-21)
 for observed results. The Project Structure organization and independent
 release convention remain in place. Original content uses MIT; portraits retain
 their individually credited permission terms and are excluded from MIT.

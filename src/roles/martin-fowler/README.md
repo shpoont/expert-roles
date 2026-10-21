@@ -8,8 +8,8 @@ Software author known for *Refactoring* and *Patterns of Enterprise Application
 Architecture*. His public work connects software design, incremental improvement
 and the practical trade-offs of building business systems.
 
-[Codex role file](codex/expert-martin-fowler.toml) ·
-[Claude Code role file](claude/expert-martin-fowler.md) ·
+[Codex role file](../../../dist/codex/expert-martin-fowler.toml) ·
+[Claude Code role file](../../../dist/claude/expert-martin-fowler.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

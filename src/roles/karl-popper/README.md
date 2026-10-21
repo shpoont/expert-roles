@@ -9,8 +9,8 @@ demarcating science from non-science and the growth of knowledge through
 criticism. His work distinguishes testability from conclusive proof and treats
 the acceptance of an apparent refutation as a methodological judgment.
 
-[Codex role file](codex/expert-karl-popper.toml) ·
-[Claude Code role file](claude/expert-karl-popper.md) ·
+[Codex role file](../../../dist/codex/expert-karl-popper.toml) ·
+[Claude Code role file](../../../dist/claude/expert-karl-popper.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

@@ -9,8 +9,8 @@ framework. Her public research examines software delivery performance,
 developer productivity and well-being, including the organizational conditions
 and measurement choices that affect them.
 
-[Codex role file](codex/expert-nicole-forsgren.toml) ·
-[Claude Code role file](claude/expert-nicole-forsgren.md) ·
+[Codex role file](../../../dist/codex/expert-nicole-forsgren.toml) ·
+[Claude Code role file](../../../dist/claude/expert-nicole-forsgren.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

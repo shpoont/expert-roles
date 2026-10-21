@@ -8,8 +8,8 @@ Sales researcher and author of *SPIN Selling*. His research on complex sales
 examines how questions about problems, implications and value help sellers
 understand customer needs.
 
-[Codex role file](codex/expert-neil-rackham.toml) ·
-[Claude Code role file](claude/expert-neil-rackham.md) ·
+[Codex role file](../../../dist/codex/expert-neil-rackham.toml) ·
+[Claude Code role file](../../../dist/claude/expert-neil-rackham.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

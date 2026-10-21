@@ -8,8 +8,8 @@ Business author known for *Crossing the Chasm*. His work examines how
 technology businesses move from early adopters to mainstream customers
 through focused markets, positioning and a complete customer solution.
 
-[Codex role file](codex/expert-geoffrey-moore.toml) ·
-[Claude Code role file](claude/expert-geoffrey-moore.md) ·
+[Codex role file](../../../dist/codex/expert-geoffrey-moore.toml) ·
+[Claude Code role file](../../../dist/claude/expert-geoffrey-moore.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

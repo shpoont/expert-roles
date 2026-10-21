@@ -8,8 +8,8 @@ Legal technology author known for examining how technology changes legal
 services and courts. His books explore the organization of legal work, online
 justice and new ways to meet people's legal needs.
 
-[Codex role file](codex/expert-richard-susskind.toml) ·
-[Claude Code role file](claude/expert-richard-susskind.md) ·
+[Codex role file](../../../dist/codex/expert-richard-susskind.toml) ·
+[Claude Code role file](../../../dist/claude/expert-richard-susskind.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

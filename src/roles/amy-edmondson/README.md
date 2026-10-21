@@ -8,8 +8,8 @@ Management scholar known for research on psychological safety, teaming and
 learning in organizations. Her research and books, including The Fearless
 Organization, examine how people speak up, collaborate and learn from mistakes.
 
-[Codex role file](codex/expert-amy-edmondson.toml) ·
-[Claude Code role file](claude/expert-amy-edmondson.md) ·
+[Codex role file](../../../dist/codex/expert-amy-edmondson.toml) ·
+[Claude Code role file](../../../dist/claude/expert-amy-edmondson.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

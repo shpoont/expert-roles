@@ -9,8 +9,8 @@ by his student Arrian. His teaching examines judgment, choice, integrity and
 responsibilities to others, with a central distinction between what depends on
 us and what lies outside our control.
 
-[Codex role file](codex/expert-epictetus.toml) ·
-[Claude Code role file](claude/expert-epictetus.md) ·
+[Codex role file](../../../dist/codex/expert-epictetus.toml) ·
+[Claude Code role file](../../../dist/claude/expert-epictetus.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

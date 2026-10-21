@@ -30,10 +30,78 @@ The optional perspective contributes to their shared generated description and
 appears beneath specialty labels in the full catalogue for human comparison,
 as described in the [metadata guide](../src/README.md#role-metadata-and-descriptions).
 The portable files are versioned outputs. D043 records owner acceptance and
-authorization to commit the reviewed initial catalogue. Integrations own their
+authorization to commit the reviewed initial catalogue. D044 moves the unchanged
+native files to `dist/codex/` and `dist/claude/` and generates alphabetical and
+specialty indexes there. File paths depend only on host and expert slug;
+classification changes affect index links. Integrations own their
 installation, model configuration and lifecycle.
 
 ## Implementation contract
+
+### Versioning and first release
+
+Under D045, finish whole-library versioning using the existing peer convention:
+`MAJOR.MINOR.PATCH`, a dated changelog, an annotated immutable Git tag and a
+matching GitHub release. Adopt `v1.0.0` as the first stable baseline for profiles,
+metadata, shared instructions, templates, tooling and both native formats.
+The consuming plugin keeps its own version history. Keep policy in the main
+README and delivery guide, changes in the changelog and decisions in the
+[decision log](decisions.md); no separate version file or per-expert versions are needed.
+
+Define compatibility around stable expert identifiers, documented source/native
+formats and export paths, and the intended scope and execution behavior of
+existing roles. Compatible expert or specialty additions are minor changes;
+corrections preserving intended behavior are patches. A stable release does
+not expand the recorded host validation or prove role effectiveness.
+
+Finalize the dated first-release changelog and current version/status references.
+Preserve all accepted expert content and the completed D044 distribution work.
+Run the full suite, generated/native consistency, local links, public suitability,
+preservation and Git checks. The owner explicitly authorizes staging and signing
+the complete pending tree, pushing it, then publishing the first release.
+This supersedes D044's no-commit/no-release boundary for this delivery.
+
+After pushing the signed commit, require successful hosted checks for that exact
+commit before tagging. Create and verify an annotated `v1.0.0` tag on it, push
+the tag, and create the matching public GitHub release as Latest. Use GitHub's
+tagged source archives, matching the peer releases; additional host-specific
+packages are not part of this step. Verify the remote branch, tag target,
+release state and notes, and clean local tree before reporting completion.
+Keep local preparation evidence separate from actual publication results.
+No host installation, invocation or consuming-integration change is included.
+
+### Distribution layout and generated indexes
+
+Under D044, keep canonical profiles, metadata, visuals, specialty vocabulary
+and templates under `src/`. Move each unchanged native export to exactly one
+stable path: `dist/codex/expert-<slug>.toml` or
+`dist/claude/expert-<slug>.md`. Remove the former per-profile export copies and
+update profile, starter and usage links. Specialty or group changes must not
+change export paths or require a primary specialty.
+
+Generate `dist/README.md` as the host chooser and one complete `README.md` per
+host, with alphabetical role links and specialty tables grouped from the same
+registry and assignments as the source catalogue. An expert may appear in
+several index rows while retaining one file per host. Include links to the
+source profiles, setup guidance and license notices. Keep the existing compact
+main README, full source catalogue and native file bytes intact apart from
+authored navigation links.
+
+Treat exports and distribution indexes as committed, deterministic outputs:
+edit sources, regenerate and include both in changes. Extend read-only check
+mode and regression tests to cover missing or stale indexes/exports, obsolete
+or duplicate native files in either layout, multi-specialty navigation, stable
+paths and invalid-input rejection before writes. Add a read-only CI workflow
+that runs the suite and generation consistency check. Temporary release
+archives and build/cache files stay untracked.
+
+Verify all 114 moved exports byte-for-byte against the committed baseline;
+preserve metadata, images, shared instructions, specialty assignments and
+profile prose/credits. Run the full suite, consistency, native syntax/equality,
+local-link and public-content checks, then inspect the complete diff. Record
+results and current status. Leave work unstaged and uncommitted; no runtime
+invocation, deployment, consumer changes, push, tag or release is included.
+Versioning and the first release remain a separate pending step.
 
 ### First-time and returning-visitor journey review
 

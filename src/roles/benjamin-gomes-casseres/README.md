@@ -8,8 +8,8 @@ Strategy scholar known for research on alliances and business combinations. His
 book Remix Strategy examines how organizations combine resources, govern
 partnerships and share the value they create together.
 
-[Codex role file](codex/expert-benjamin-gomes-casseres.toml) ·
-[Claude Code role file](claude/expert-benjamin-gomes-casseres.md) ·
+[Codex role file](../../../dist/codex/expert-benjamin-gomes-casseres.toml) ·
+[Claude Code role file](../../../dist/claude/expert-benjamin-gomes-casseres.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

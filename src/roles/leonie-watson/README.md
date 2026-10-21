@@ -8,8 +8,8 @@ Accessibility specialist known for web standards contributions and
 co-creating the Inclusive Design Principles. Her public writing and practice
 connect inclusive design with the technical behavior of accessible interfaces.
 
-[Codex role file](codex/expert-leonie-watson.toml) ·
-[Claude Code role file](claude/expert-leonie-watson.md) ·
+[Codex role file](../../../dist/codex/expert-leonie-watson.toml) ·
+[Claude Code role file](../../../dist/claude/expert-leonie-watson.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

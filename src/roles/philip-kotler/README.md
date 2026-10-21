@@ -8,8 +8,8 @@ Marketing scholar and author known for *Marketing Management*. His public
 work connects understanding customer needs with segmentation, positioning
 and the design of a coherent marketing strategy.
 
-[Codex role file](codex/expert-philip-kotler.toml) ·
-[Claude Code role file](claude/expert-philip-kotler.md) ·
+[Codex role file](../../../dist/codex/expert-philip-kotler.toml) ·
+[Claude Code role file](../../../dist/claude/expert-philip-kotler.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

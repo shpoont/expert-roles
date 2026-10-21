@@ -981,3 +981,50 @@ validation remain separate from this addition.
   generated consistency, local references and whitespace before committing,
   then verify the signed commit and clean working tree. Push, publication,
   installation, integration changes, tags and releases remain unauthorized.
+
+## D044 — 2026-10-21: Consolidate native exports and generate specialty indexes
+
+- **Status:** Implemented and locally verified; unstaged and uncommitted.
+- **Decision:** Generate and commit one native file per expert and host under
+  `dist/codex/` and `dist/claude/`. Generate a host chooser and alphabetical and
+  specialty indexes from the existing canonical metadata. Keep profiles and
+  the full human catalogue under `src/roles/`; update download links and remove
+  the old export copies.
+- **Rationale:** Ready-to-use text exports are directly consumable from a Git
+  revision. Forty-nine of the fifty-seven experts have multiple specialties,
+  including seven spanning groups. Index links support those relationships
+  without duplicated files, arbitrary primary specialties or unstable paths.
+- **Checks and boundary:** Follow the
+  [distribution contract](design.md#distribution-layout-and-generated-indexes).
+  Preserve native bytes and source content, check all indexes and links, and
+  add CI consistency checks. Leave this work uncommitted; deployment, consuming
+  integrations, tags and releases are separate. Versioning and the first release
+  remain pending.
+- **Verification:** 25 tests pass and all 119 generated files match. All 114
+  exports are byte-identical after relocation; source content, generated
+  catalogue sections and profile prose/credits are preserved. Local links and
+  an isolated starter trial pass. The CI workflow is configured but has not run
+  on GitHub. See the
+  [distribution evidence](../evidence/README.md#distribution-layout--2026-10-21).
+
+## D045 — 2026-10-21: Establish whole-library versioning and release v1.0.0
+
+- **Status:** Adopted first stable baseline and authorized delivery.
+- **Decision:** Version the complete library as `MAJOR.MINOR.PATCH`, independently
+  of consuming integrations. Start at `v1.0.0`, finalize its dated changelog and
+  version references, and publish a fixed annotated tag and matching GitHub
+  release. Keep version guidance in the main README and delivery guide rather
+  than adding a competing version document or per-expert version fields.
+- **Rationale:** Follow the release conventions already used by Project
+  Structure and the public method repositories. One version identifies a
+  reviewed snapshot of the profiles, metadata, templates, tooling and both
+  native distributions. Compatibility concerns documented interfaces, stable
+  identifiers/paths and intended role behavior; it does not imply broader host
+  validation or measured role benefit.
+- **Authority and checks:** The owner explicitly requests committing all pending
+  work and releasing the first version. This supersedes the earlier uncommitted
+  boundary for D044. Follow the
+  [release contract](design.md#versioning-and-first-release), including signed
+  commit, exact-commit hosted checks, verified annotated tag, public release
+  readback and clean local state. Source archives follow the peer convention;
+  host-specific packages and consumer changes remain outside this release.

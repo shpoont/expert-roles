@@ -2,3 +2,7 @@
 .venv/
 __pycache__/
 *.pyc
+/build/
+/dist/*.zip
+/dist/*.tar.gz
+/dist/*.tgz

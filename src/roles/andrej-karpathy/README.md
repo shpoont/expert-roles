@@ -8,8 +8,8 @@ AI researcher and educator whose public work covers deep learning and language
 models. His *Neural Networks: Zero to Hero* course and small implementations
 explain how models are built and trained.
 
-[Codex role file](codex/expert-andrej-karpathy.toml) ·
-[Claude Code role file](claude/expert-andrej-karpathy.md) ·
+[Codex role file](../../../dist/codex/expert-andrej-karpathy.toml) ·
+[Claude Code role file](../../../dist/claude/expert-andrej-karpathy.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

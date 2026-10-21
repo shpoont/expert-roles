@@ -8,8 +8,8 @@ Entrepreneur and educator known for developing Customer Development. His books
 *The Four Steps to the Epiphany* and *The Startup Owner's Manual* describe how
 startups can test assumptions about customers and business models.
 
-[Codex role file](codex/expert-steve-blank.toml) ·
-[Claude Code role file](claude/expert-steve-blank.md) ·
+[Codex role file](../../../dist/codex/expert-steve-blank.toml) ·
+[Claude Code role file](../../../dist/claude/expert-steve-blank.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

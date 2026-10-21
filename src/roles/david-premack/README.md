@@ -9,8 +9,8 @@ and research on animal cognition. With Guy Woodruff, he introduced the
 theory-of-mind question into comparative psychology through their work with
 chimpanzees.
 
-[Codex role file](codex/expert-david-premack.toml) ·
-[Claude Code role file](claude/expert-david-premack.md) ·
+[Codex role file](../../../dist/codex/expert-david-premack.toml) ·
+[Claude Code role file](../../../dist/claude/expert-david-premack.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

@@ -8,8 +8,8 @@ Industrial engineer known for helping develop the Toyota Production System.
 His work connects just-in-time production, built-in quality and process flow
 with the practical elimination of waste.
 
-[Codex role file](codex/expert-taiichi-ohno.toml) ·
-[Claude Code role file](claude/expert-taiichi-ohno.md) ·
+[Codex role file](../../../dist/codex/expert-taiichi-ohno.toml) ·
+[Claude Code role file](../../../dist/claude/expert-taiichi-ohno.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

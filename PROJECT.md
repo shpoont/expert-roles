@@ -21,7 +21,9 @@ roster changes.
 The current catalogue contains fifty-seven completed experts, eighty-two
 specialties in ten groups, thirty-eight portraits and nineteen full-name
 placeholders. Every profile has canonical metadata, a short human-readable
-README, one square visual and generated Codex and Claude Code files. All
+README, one square visual and generated Codex and Claude Code files under
+`dist/codex/` and `dist/claude/`. Generated distribution indexes provide
+alphabetical and specialty navigation without duplicating exports. All
 accepted additions are included; there are no outstanding profile or image
 requirements. Future additions follow the same contribution process.
 
@@ -46,22 +48,22 @@ unchanged exports. Automatic directory discovery remains unresolved. Claude
 files have structural checks but no runtime validation. These observations do
 not establish broad selection reliability or comparative expert benefit.
 
-- **Current status and boundary:** D041's documentation closeout is complete.
-  D042's [visitor journey review](docs/design.md#first-time-and-returning-visitor-journey-review)
-  is complete: two independent journey reviewers confirmed all five findings
-  resolved, and a fresh final review found no blockers in source or captured
-  local rendering. Navigation, comparison and contribution guidance improved;
-  expert content and native exports are preserved. Relevant checks pass.
-  Other candidates remain proposals. On 2026-10-21 the owner accepted the result
-  and authorized its initial signed commit under D043. Push, publication, tags
-  and release require separate owner instructions.
+- **Current status and boundary:** The accepted initial catalogue was signed,
+  committed and pushed after D041's closeout and D042's visitor review. D044's
+  distribution layout and local checks are complete. D045 adopts `v1.0.0` as
+  the first whole-library baseline and authorizes committing all pending work,
+  pushing it and publishing the release after final checks. Preserve accepted
+  content and require hosted checks for the release commit, a fixed annotated
+  tag and matching GitHub release. No integration or runtime work is included.
 - **Delivery acceptance:** the catalogue, profiles, contribution process, image
   policy, source schema and usage guidance agree with the initial collection
   and accurately state host-validation limits.
 - **Required checks:** the full existing suite, source and generated consistency,
   native syntax and equality, local links, portrait credits and retained reuse
   conditions, public suitability, protected-content hashes and the complete
-  proposed Git inventory and diff, including untracked files.
+  proposed Git inventory and diff, including untracked files. Distribution checks
+  cover generated indexes, stable paths, duplicate or obsolete files, and
+  byte-for-byte preservation of the moved native exports.
 - **Outcome success:** useful expert judgment and a good contributor experience.
   These require representative use and review beyond the completed samples.
 - **Integration boundary:** a separate plugin will deploy and manage roles in
@@ -107,9 +109,12 @@ vocabulary labels retain their
 This repository follows [Project Structure v1.0.0](https://github.com/shpoont/project-structure/releases/tag/v1.0.0),
 commit `96fdd6bd7950778f5b6c6f8269ab2b82167cb99a`. Expert sources live under
 `src/`; the full catalogue is generated in `src/roles/README.md`, with a fixed
-six-expert showcase and generated count in the main README. Its release history
-is independent of the starter and consuming integrations. No role-library
-release or tag has been created.
+six-expert showcase and generated count in the main README. Ready-to-use
+exports and their indexes live under `dist/`. The library's baseline is
+`v1.0.0`, independently versioned from the starter and consuming integrations.
+The [release record](https://github.com/shpoont/expert-roles/releases/tag/v1.0.0)
+and annotated tag identify the delivered snapshot; see the
+[release procedure](docs/delivery.md#versions-and-releases).
 
 Continue through [design](docs/design.md), [current work](docs/current-work.md),
 [decisions](docs/decisions.md) and [delivery](docs/delivery.md). Historical

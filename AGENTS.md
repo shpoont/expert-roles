@@ -10,6 +10,15 @@ Use [design](docs/design.md), [decisions](docs/decisions.md),
 [checks](tests/README.md), [evidence](evidence/README.md) and
 [delivery](docs/delivery.md) to keep intent, work and results connected.
 
+D044's [distribution layout](docs/design.md#distribution-layout-and-generated-indexes)
+is complete and locally verified. D045 establishes the first whole-library
+baseline, `v1.0.0`, following the
+[release contract](docs/design.md#versioning-and-first-release). The owner
+explicitly authorizes committing all pending work, pushing it and publishing
+the first release after checks. This supersedes D044's earlier uncommitted
+boundary. Keep the commit signed, require hosted checks for that exact commit,
+and verify the fixed annotated tag and GitHub release before claiming delivery.
+
 D042's [visitor journey review](docs/design.md#first-time-and-returning-visitor-journey-review)
 is complete after D041's documentation closeout. Independent first-time and
 returning-visitor reviewers confirmed all five findings resolved; a fresh final
@@ -24,10 +33,9 @@ other candidates remain proposals. This review authorizes no roster changes.
 
 The owner accepted the compact main README and the updated full catalogue.
 Keep six featured experts in the main README and the
-[full catalogue](src/roles/README.md) beside the profiles. D043 supersedes the
-earlier no-commit restriction for this accepted tree. The
-[current work](docs/current-work.md#next-actions) records the approval and later
-follow-ups. Push, publication, tags and releases require separate instructions.
+[full catalogue](src/roles/README.md) beside the profiles. The
+[current work](docs/current-work.md#next-actions) records D045's delivery scope
+and later follow-ups. Subsequent releases need their own owner authorization.
 The catalogue contains fifty-seven experts, with eighty-two
 specialties in ten groups, thirty-eight portraits and nineteen full-name placeholders. See the
 [implementation contract](docs/design.md#implementation-contract). Keep expert
@@ -60,8 +68,8 @@ human and AI task matching and consistent catalogue organization; follow the
 [specialty rules](docs/elements/specialties.md). Each shared entry requires
 `name`, `group` and a specific external concept `reference` URL. Keep canonical
 IDs in expert metadata and use accurate source concepts for future additions.
-The initial catalogue commit is authorized; push, agent installation,
-integration changes and releases remain outside this step. The completed bounded
+Native-file relocation is authorized under D044 and first release under D045;
+agent installation and integration changes remain outside this step. The completed bounded
 [Codex host validation](docs/design.md#codex-host-validation) used temporary
 placement and invocation; this update does not authorize further runtime tests. A separate
 plugin will own deployment and management. Do not copy third-party role prompts.
@@ -74,6 +82,14 @@ marked sections, preserving all authored text outside those boundaries. Curate
 `FEATURED_EXPERTS` in `src/generate.py` for breadth, using existing experts and
 assigned specialties; new experts grow the full catalogue and counts without
 expanding this sample.
+Generate ready-to-use native files once under `dist/codex/` and `dist/claude/`,
+with a generated host chooser and alphabetical/specialty README indexes.
+Keep paths independent of specialties; use index links for overlapping fields.
+Edit sources and commit regenerated exports/indexes together when a commit is
+authorized. Check mode and CI must detect missing, changed, obsolete or duplicate
+exports, including copies in the former per-profile directories. The exporter
+never deletes unexpected files automatically. Consumers select `expert-*.toml`
+or `expert-*.md` files; the READMEs provide navigation.
 Require exactly one square visual for every expert: a credited 512 × 512 RGB
 JPEG named `portrait.jpg`, or `placeholder.svg` created from the
 [shared SVG template](src/templates/placeholder.svg). The command uses the full
@@ -94,8 +110,8 @@ permission terms, credits and edit history.
 Host-specific integrations are separate
 consumers. Keep plugin manifests, marketplace workflows and
 consumer-specific configuration out of this repository. The initial catalogue
-includes portable, generated Codex and Claude Code role files within each
-expert directory. Temporary placement and invocation are limited to the
+includes portable, generated Codex and Claude Code role files under `dist/`.
+Temporary placement and invocation are limited to the
 separately authorized validation above; persistent deployment remains external.
 
 Every tracked file must be suitable for public viewing and self-contained.
@@ -122,7 +138,9 @@ turn structural validation into a claim that roles improve model performance.
 Update [current work](docs/current-work.md) before handover and meaningful changes
 in [CHANGELOG.md](CHANGELOG.md). Follow the
 [release convention](docs/delivery.md#versions-and-releases) when a release is
-authorized; this catalogue update does not authorize tags or a release. Keep records proportionate and link existing detail instead of copying
+authorized. D045 authorizes the first release; version guidance, dated changelog,
+commit, annotated tag and hosted release must identify the same baseline. Keep
+records proportionate and link existing detail instead of copying
 it into competing sources.
 
 For documentation-only changes, check relative links, UTF-8 readability, the

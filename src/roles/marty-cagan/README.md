@@ -9,8 +9,8 @@ Inspired. His product leadership experience and books, including Empowered with
 Chris Jones, examine discovery, team autonomy and the responsibilities of
 product leaders.
 
-[Codex role file](codex/expert-marty-cagan.toml) ·
-[Claude Code role file](claude/expert-marty-cagan.md) ·
+[Codex role file](../../../dist/codex/expert-marty-cagan.toml) ·
+[Claude Code role file](../../../dist/claude/expert-marty-cagan.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

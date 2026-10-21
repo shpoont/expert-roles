@@ -8,8 +8,8 @@ Management scientist known for multiple-criteria decision making and human
 systems management. His work examines decisions with competing objectives and
 the integration of knowledge, people and production in management systems.
 
-[Codex role file](codex/expert-milan-zeleny.toml) ·
-[Claude Code role file](claude/expert-milan-zeleny.md) ·
+[Codex role file](../../../dist/codex/expert-milan-zeleny.toml) ·
+[Claude Code role file](../../../dist/claude/expert-milan-zeleny.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

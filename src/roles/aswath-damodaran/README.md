@@ -8,8 +8,8 @@ Finance educator and author known for company valuation and corporate finance.
 His public books, teaching materials and spreadsheets connect business
 narratives with cash flows, risk and valuation assumptions.
 
-[Codex role file](codex/expert-aswath-damodaran.toml) ·
-[Claude Code role file](claude/expert-aswath-damodaran.md) ·
+[Codex role file](../../../dist/codex/expert-aswath-damodaran.toml) ·
+[Claude Code role file](../../../dist/claude/expert-aswath-damodaran.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

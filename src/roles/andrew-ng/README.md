@@ -8,8 +8,8 @@ AI researcher and educator known for machine-learning teaching and practical
 AI adoption. His public work includes technical courses, research and the
 *AI Transformation Playbook*.
 
-[Codex role file](codex/expert-andrew-ng.toml) ·
-[Claude Code role file](claude/expert-andrew-ng.md) ·
+[Codex role file](../../../dist/codex/expert-andrew-ng.toml) ·
+[Claude Code role file](../../../dist/claude/expert-andrew-ng.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

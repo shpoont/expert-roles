@@ -8,8 +8,8 @@ Computer scientist and author focused on building AI applications and bringing
 machine learning into production. Her books include *Designing Machine Learning
 Systems* and *AI Engineering*.
 
-[Codex role file](codex/expert-chip-huyen.toml) ·
-[Claude Code role file](claude/expert-chip-huyen.md) ·
+[Codex role file](../../../dist/codex/expert-chip-huyen.toml) ·
+[Claude Code role file](../../../dist/claude/expert-chip-huyen.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

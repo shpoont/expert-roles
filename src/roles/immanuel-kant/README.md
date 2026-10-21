@@ -9,8 +9,8 @@ centered on duty, autonomy and the categorical imperative. His work examines
 the conditions and limits of knowledge as well as the principles that can
 justify action and respect for persons.
 
-[Codex role file](codex/expert-immanuel-kant.toml) ·
-[Claude Code role file](claude/expert-immanuel-kant.md) ·
+[Codex role file](../../../dist/codex/expert-immanuel-kant.toml) ·
+[Claude Code role file](../../../dist/claude/expert-immanuel-kant.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

@@ -8,8 +8,8 @@ Statistician and management thinker known for advancing quality improvement
 and understanding variation in systems. His books, Fourteen Points and System
 of Profound Knowledge connect process performance with management practice.
 
-[Codex role file](codex/expert-w-edwards-deming.toml) ·
-[Claude Code role file](claude/expert-w-edwards-deming.md) ·
+[Codex role file](../../../dist/codex/expert-w-edwards-deming.toml) ·
+[Claude Code role file](../../../dist/claude/expert-w-edwards-deming.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

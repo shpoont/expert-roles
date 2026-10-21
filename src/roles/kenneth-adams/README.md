@@ -9,8 +9,8 @@ Drafting, published by the American Bar Association. His work examines how
 language, structure and consistent usage affect the clarity and interpretation
 of contracts.
 
-[Codex role file](codex/expert-kenneth-adams.toml) ·
-[Claude Code role file](claude/expert-kenneth-adams.md) ·
+[Codex role file](../../../dist/codex/expert-kenneth-adams.toml) ·
+[Claude Code role file](../../../dist/claude/expert-kenneth-adams.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

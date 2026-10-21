@@ -9,8 +9,8 @@ financial reporting. Her work, including Earnings Quality with Catherine
 Schrand, examines what reported profits reveal about performance and how
 accounting choices can distort that picture.
 
-[Codex role file](codex/expert-patricia-dechow.toml) ·
-[Claude Code role file](claude/expert-patricia-dechow.md) ·
+[Codex role file](../../../dist/codex/expert-patricia-dechow.toml) ·
+[Claude Code role file](../../../dist/claude/expert-patricia-dechow.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

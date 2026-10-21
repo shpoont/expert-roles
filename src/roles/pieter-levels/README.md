@@ -8,8 +8,8 @@ Entrepreneur and independent product builder known for Nomad List (now
 Nomads.com), Remote OK and Photo AI. His book *MAKE* and public writing describe
 his approach to building internet businesses without outside funding.
 
-[Codex role file](codex/expert-pieter-levels.toml) ·
-[Claude Code role file](claude/expert-pieter-levels.md) ·
+[Codex role file](../../../dist/codex/expert-pieter-levels.toml) ·
+[Claude Code role file](../../../dist/claude/expert-pieter-levels.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

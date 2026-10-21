@@ -1894,3 +1894,61 @@ or commit was performed.
   downloads, installation or role effectiveness. Existing duplicate name/portrait
   links remain a low-priority accessibility observation. No new runtime test,
   deployment, commit, push, publication, tag or release occurred.
+
+## Distribution layout — 2026-10-21
+
+- **Scope:** D044 and its
+  [distribution contract](../docs/design.md#distribution-layout-and-generated-indexes).
+  Consolidate the native exports and generate specialty navigation without
+  changing expert content, classifications or native instructions.
+- **Changes:** Move 57 Codex TOML and 57 Claude Code Markdown exports into the
+  flat host directories under `dist/`. Generate a host chooser and two indexes
+  with alphabetical and specialty views. Update all 57 profile download links,
+  the starter, entry points, source/usage guidance and relevant project records.
+  Add CI for the suite and read-only generated consistency.
+- **Checks:** All 25 tests pass; all 119 generated files match. Checks cover
+  missing/edited indexes and exports, read-only drift detection, legacy/nested
+  duplicates, stable paths/anchors and alphabetical/multi-specialty navigation.
+  All 57 native pairs parse and agree. Local file/image links, heading and
+  canonical anchors, UTF-8, bounded public suitability and tracked/untracked
+  whitespace checks pass across the 316-file proposed public tree.
+- **Preservation:** All 114 moved exports are byte-identical to the committed
+  baseline. Metadata, 38 JPEGs, 19 SVGs, vocabulary, shared instruction and SVG
+  templates, starter metadata and license retain their bytes. Profile changes affect only
+  native-file links; generated catalogue sections and historical records are
+  preserved. An isolated completed-starter trial creates its name placeholder
+  and produces 121 matching outputs with resolved local links, leaving the
+  actual library unchanged.
+- **Limits and boundary:** CI YAML, pinned action references and check commands
+  are inspected locally; no hosted CI execution is claimed. No new host/runtime
+  or comparative-effectiveness test ran. The index is empty and HEAD is unchanged.
+  This update creates no commit, push, deployment, integration change, tag or
+  release. Versioning and the first release remain pending.
+
+## First release preparation — 2026-10-21
+
+- **Scope:** D045's [release contract](../docs/design.md#versioning-and-first-release)
+  adopts `v1.0.0` for the complete library and authorizes committing all pending
+  D044 changes, pushing, tagging and publishing the first public release.
+- **Convention:** Reviewed Project Structure's v1.0.0 and the public method
+  repository's v1.4.0 release guidance and hosted records. Use one library
+  version, a dated changelog, fixed annotated tag and matching GitHub release.
+  Both peers use tagged source archives without additional uploaded packages.
+- **Preparation:** Updated version references, compatibility rules, changelog,
+  contribution guidance and current records. Accepted expert content, original
+  native bytes and the completed distribution layout are preserved. The
+  [distribution checks](#distribution-layout--2026-10-21) remain applicable;
+  release delivery reruns the suite, generated consistency, local links,
+  public-content, preservation and Git checks on the final candidate.
+- **Observed local checks:** 25 tests pass, all 119 generated files match,
+  all 57 native pairs agree and all 114 relocated exports remain byte-identical.
+  The final public tree contains 316 files; local links/anchors, UTF-8, bounded
+  public suitability, version references, source preservation and whitespace
+  checks pass. Only versioning documentation changed after D044's review.
+- **Publication evidence:** The release procedure requires a verified signed
+  commit, hosted Checks passing for that exact commit, a verified annotated tag
+  and remote target, and public release readback. The
+  [release record](https://github.com/shpoont/expert-roles/releases/tag/v1.0.0)
+  and [workflow runs](https://github.com/shpoont/expert-roles/actions/workflows/checks.yml)
+  hold those external delivery results; local preparation is not their proof.
+  Existing host-validation and effectiveness limits remain unchanged.

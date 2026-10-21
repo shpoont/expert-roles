@@ -8,8 +8,8 @@ Law professor and negotiation practitioner known for co-developing
 principled negotiation and coauthoring *Getting to Yes*. His public work
 focuses on interests, options and objective criteria in reaching agreements.
 
-[Codex role file](codex/expert-roger-fisher.toml) ·
-[Claude Code role file](claude/expert-roger-fisher.md) ·
+[Codex role file](../../../dist/codex/expert-roger-fisher.toml) ·
+[Claude Code role file](../../../dist/claude/expert-roger-fisher.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

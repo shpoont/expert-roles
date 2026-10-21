@@ -20,8 +20,34 @@ The [specialty registry](../src/specialties.yaml) resolves labels; one
 Profiles, public references and visuals support browsing. Follow the
 [source guide](../src/README.md) to edit sources and regenerate outputs.
 
-Codex TOML and Claude Code Markdown are the initial export formats. The current
-work is uncommitted at the owner's request; no role-library release is made.
+Codex TOML and Claude Code Markdown are the initial export formats. The
+`v1.0.0` baseline includes the accepted catalogue and D044's distribution layout.
+The [release record](https://github.com/shpoont/expert-roles/releases/tag/v1.0.0)
+identifies the published snapshot.
+
+## Distribution files
+
+Start at the [host chooser](../dist/README.md), or browse the
+[Codex](../dist/codex/README.md) and [Claude Code](../dist/claude/README.md)
+indexes directly. Each host index lists experts alphabetically and by specialty,
+using the existing vocabulary and assignments. One expert may appear under
+several specialties while retaining exactly one file per host:
+
+- `dist/codex/expert-<slug>.toml`
+- `dist/claude/expert-<slug>.md`
+
+These paths depend on the expert's stable slug, not specialty labels or groups.
+Consumers importing a collection select `expert-*.toml` or `expert-*.md`;
+the README files provide navigation. Retain [LICENSE](../LICENSE) and the
+[vocabulary credits](elements/specialties.md#source-attribution) with redistributed
+material as applicable. The profiles hold the separate portrait credits.
+
+Native files and distribution indexes are generated and committed with their
+sources. Edit source metadata or shared templates, then
+[regenerate and check](../src/README.md#generate-the-catalogue-and-native-files).
+CI checks consistency without rewriting files. The exporter reports obsolete
+or duplicate files for review rather than deleting them. Temporary release
+archives and build/cache files are excluded from Git.
 
 ## Use a native role
 
@@ -30,7 +56,8 @@ Profiles and references support browsing; include any source material the task
 needs in the assignment.
 
 1. Open an expert in the [catalogue](../src/roles/README.md) and choose the
-   **Codex** or **Claude Code** file. From a checkout, use the generated file.
+   **Codex** or **Claude Code** file, or use the [distribution indexes](../dist/README.md).
+   From a checkout, use the generated file under `dist/codex/` or `dist/claude/`.
    On GitHub, use **Download raw file**, preserving its filename and contents.
    Retain [LICENSE](../LICENSE) with copies of the role files.
 2. Register the export with the intended host using the guidance below.
@@ -132,7 +159,10 @@ checks and an isolated completed-starter trial pass. See the
 [visitor review evidence](../evidence/README.md#visitor-journey-review--2026-10-21).
 Actual-user, hosted GitHub and assistive-technology outcomes remain unverified.
 The owner accepted the result and authorized the initial signed catalogue
-commit on 2026-10-21 under D043.
+commit on 2026-10-21 under D043; that signed commit was subsequently pushed.
+D044 adds the [distribution layout](design.md#distribution-layout-and-generated-indexes)
+without changing native file contents or accepted expert content. Its checks
+and current status are recorded in [current work](current-work.md).
 The [latest additions](../evidence/README.md#seven-philosophy-additions--2026-10-21)
 record the fifty-seven-expert sources, images, native files and local rendering;
 earlier decisions and evidence retain their historical scopes. Acceptance of
@@ -141,8 +171,10 @@ the rendering is separate from structural checks and observed runtime behavior.
 Automatic Codex directory discovery, Claude runtime validation, deployment and
 comparative role benefit remain later consumer or assessment work. They do not
 block committing this accepted catalogue. No new invocation or deployment is
-included. D043 supersedes the earlier no-commit restriction for this accepted
-tree. Push, publication, tags and releases require separate owner instructions.
+included. D045 authorizes committing D044's completed changes with the versioning
+setup and publishing `v1.0.0` after final checks. The
+[release contract](design.md#versioning-and-first-release) requires verifying the
+remote commit, successful hosted checks, annotated tag and GitHub release.
 
 Original sources, role instructions, tooling and name artwork use [MIT](../LICENSE).
 Photographs retain the terms and credits on their profiles; they are excluded
@@ -156,17 +188,48 @@ Follow the [photo policy](../CONTRIBUTING.md#photo-sources-and-licenses) and
 
 ## Versions and releases
 
-The role library has no released baseline yet. Its release history is independent
-of the starter and consuming integrations. Record meaningful changes under
-**Unreleased** in [CHANGELOG.md](../CHANGELOG.md).
+Current baseline: **[v1.0.0](https://github.com/shpoont/expert-roles/releases/tag/v1.0.0)**.
+One `MAJOR.MINOR.PATCH` version covers profiles, metadata, vocabulary, shared
+instructions, templates, tooling and both native formats. The consuming plugin
+and other integrations keep independent histories. Individual experts and export
+formats do not have separate versions.
 
-For an approved release, use `MAJOR.MINOR.PATCH`: major for incompatible changes,
-minor for compatible additions and patch for corrections that preserve the
-intended behavior and agreements. Review the intended scope and evidence,
-finalize the dated changelog entry and version references, and commit the exact
-contents before creating an annotated `vMAJOR.MINOR.PATCH` tag. Released tags
-remain fixed; a hosted release, when used, refers to the same tag. Committing
-catalogue changes does not create a release or tag.
+Choose the increment by its effect on users and consumers:
+
+| Increment | Use for |
+| --- | --- |
+| Major | Removed or renamed expert identifiers; incompatible metadata, native formats, documented commands or export paths; material changes to an existing role's intended scope or execution behavior. |
+| Minor | New experts, specialties or compatible capabilities that preserve existing consumption and intended role behavior. |
+| Patch | Documentation, attribution or implementation corrections that preserve intended behavior and agreements. |
+
+Maintenance alone need not produce a release. Record meaningful changes under
+**Unreleased** in [CHANGELOG.md](../CHANGELOG.md) until preparing the next version.
+The first stable baseline includes `dist/codex/expert-<slug>.toml` and
+`dist/claude/expert-<slug>.md`; classification changes do not move those files.
+A versioned export is not a broader host-compatibility or effectiveness claim.
+
+For each owner-authorized release:
+
+1. Review scope, compatibility impact and evidence. Regenerate and run the
+   [checks](../tests/README.md), including local links, native consistency and
+   applicable source/content preservation.
+2. Finalize the dated changelog entry and update the main README and this guide's
+   baseline references. Leave an **Unreleased** section for subsequent work.
+3. Commit the exact intended contents using the configured signing identity,
+   verify the signature, and push. Require the hosted **Checks** workflow to
+   succeed for that exact commit before publishing.
+4. Create an annotated `vMAJOR.MINOR.PATCH` tag on that commit, verify its target
+   and push the tag explicitly. Released tags stay fixed; corrections require
+   a new version. Consumers pin a released tag or full commit.
+5. Create the matching GitHub release from the existing tag, with a title naming
+   Expert Roles and its version, notes summarizing the baseline, validation and
+   limits, and a link to the fixed snapshot. Mark stable library releases Latest.
+   GitHub's tagged source archives include `src/`, `dist/` and the license
+   records. Additional host-specific archives are not part of the initial
+   release convention.
+6. Read back the remote commit, tag target, release metadata/notes and relevant
+   source files. Confirm the local tree is clean. Keep preparation evidence
+   distinct from successful publication; a commit alone does not make a release.
 
 ## Outcomes and learning
 

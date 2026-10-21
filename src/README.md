@@ -9,6 +9,16 @@ The full [catalogue](roles/README.md) is generated beside the profiles, with
 alphabetical and specialty views. The [main README](../README.md#role-catalogue)
 shows a fixed six-expert sample and the current total.
 
+Ready-to-use files live under [dist/](../dist/README.md), with one stable file
+per expert and host. The [Codex](../dist/codex/README.md) and
+[Claude Code](../dist/claude/README.md) indexes provide alphabetical and specialty
+navigation from this same metadata. Specialty assignments affect index links,
+not file paths; an expert may appear under several specialties without duplicate
+exports. Native files and all three distribution indexes are generated and
+committed alongside their sources.
+Both formats share the [whole-library version](../README.md#versions-and-releases).
+Consumers pin a released tag or full commit for reproducible imports.
+
 Specialties help people and AI choose experts for tasks. Their shared labels
 and groups currently live in [specialties.yaml](specialties.yaml); expert
 metadata references those entries instead of repeating their definitions.
@@ -43,8 +53,6 @@ src/
       README.md
       expert.yaml
       portrait.jpg OR placeholder.svg
-      codex/
-      claude/
   templates/
     invocation.md
     placeholder.svg
@@ -52,6 +60,14 @@ src/
       README.md
       expert.yaml
   generate.py
+dist/
+  README.md
+  codex/
+    README.md
+    expert-<slug>.toml
+  claude/
+    README.md
+    expert-<slug>.md
 ```
 
 ## Role metadata and descriptions
@@ -117,8 +133,10 @@ every profile's required image present, run from the repository root:
 The exporter reads [specialties.yaml](specialties.yaml), each expert's metadata
 and [the shared instruction](templates/invocation.md). It updates the full
 catalogue in `src/roles/README.md`, the summary and featured sections in the
-main README, and the native files. Authored text outside those marked sections
-is maintained separately.
+main README, the native files under `dist/codex/` and `dist/claude/`, and all
+three `dist` README indexes. Authored text outside the source catalogue and
+main README's marked sections is maintained separately; distribution indexes
+are generated in full.
 It does not install, launch or configure agents, and it does not access the
 network.
 The profile starter stays under `templates/`; only completed directories under
@@ -169,7 +187,16 @@ They also cover full-name creation and wrapping, mixed image types, invalid/ambi
 XML escaping and preserving native instructions when the visual changes.
 All inputs are validated before
 output files are written. Unexpected native files are reported for review; the
-exporter does not delete them automatically. Catalogue display text is escaped
+exporter does not delete them automatically. This includes obsolete exports,
+nested duplicate files and copies left in the former
+`src/roles/<slug>/codex/` or `claude/` locations. When removing or renaming an
+expert, review and remove their obsolete exports in the same change before
+regenerating. Check mode also reports missing or edited distribution indexes
+and native files without writing them. The
+[CI workflow](../.github/workflows/checks.yml) runs the suite and this read-only
+consistency check; it does not regenerate or commit changes. Include updated
+outputs with source changes, and keep temporary archives/build files out of Git.
+Catalogue display text is escaped
 for Markdown; names and specialty labels retain their original values in native
 files. Perspective whitespace is normalized as described above.
 

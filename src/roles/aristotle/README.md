@@ -10,8 +10,8 @@ human flourishing and practical wisdom; his logical works study the forms of
 reasoning. His historical theories provide philosophical perspectives whose
 present-day application requires interpretation.
 
-[Codex role file](codex/expert-aristotle.toml) ·
-[Claude Code role file](claude/expert-aristotle.md) ·
+[Codex role file](../../../dist/codex/expert-aristotle.toml) ·
+[Claude Code role file](../../../dist/claude/expert-aristotle.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

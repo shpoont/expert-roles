@@ -8,8 +8,8 @@ Sales practitioner and author of The Sales Acceleration Formula, drawing on his
 work building the sales organization at HubSpot. His approach examines how
 hiring, training, coaching and measurement shape a repeatable sales system.
 
-[Codex role file](codex/expert-mark-roberge.toml) ·
-[Claude Code role file](claude/expert-mark-roberge.md) ·
+[Codex role file](../../../dist/codex/expert-mark-roberge.toml) ·
+[Claude Code role file](../../../dist/claude/expert-mark-roberge.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

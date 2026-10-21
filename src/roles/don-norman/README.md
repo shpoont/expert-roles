@@ -8,8 +8,8 @@ Design thinker and author whose work explores how people understand, use and
 experience products. His books include *The Design of Everyday Things*,
 *Emotional Design* and *Design for a Better World*.
 
-[Codex role file](codex/expert-don-norman.toml) ·
-[Claude Code role file](claude/expert-don-norman.md) ·
+[Codex role file](../../../dist/codex/expert-don-norman.toml) ·
+[Claude Code role file](../../../dist/claude/expert-don-norman.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

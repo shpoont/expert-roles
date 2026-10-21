@@ -9,8 +9,8 @@ the Triple-A supply-chain framework. His work examines how information,
 incentives and network design affect coordination, adaptability and performance
 across organizations.
 
-[Codex role file](codex/expert-hau-lee.toml) ·
-[Claude Code role file](claude/expert-hau-lee.md) ·
+[Codex role file](../../../dist/codex/expert-hau-lee.toml) ·
+[Claude Code role file](../../../dist/claude/expert-hau-lee.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

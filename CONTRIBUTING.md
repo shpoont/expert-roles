@@ -59,6 +59,9 @@ describe the expert's emphasis; the assignment supplies the activities.
    then review the catalogue, profile and links. Replace every unfilled `{{...}}`
    field and include source changes and regenerated outputs in the pull request.
 
+Record meaningful changes under **Unreleased** in [CHANGELOG.md](CHANGELOG.md).
+Maintainers assign the release version using the [release guide](docs/delivery.md#versions-and-releases).
+
 ## Profile image
 
 Require exactly one square visual: a photo named `portrait.jpg`, or a
@@ -114,9 +117,10 @@ check the individual file's terms, not the article's text license.
 ## Profile sources
 
 `README.md` holds the profile and image note or photo credit; `expert.yaml`
-holds the name, specialty IDs and optional `perspective`. `codex/`, `claude/`
-and both README entry points' marked sections are generated. Edit sources and
-regenerate; both hosts
+holds the name, specialty IDs and optional `perspective`. Native files under
+`dist/codex/` and `dist/claude/`, all three distribution indexes and both catalogue
+entry points' marked sections are generated. Edit sources and regenerate;
+include source changes and updated outputs together. Both hosts
 use the same description and all experts use the shared execution instruction.
 
 Submit original contributions under [MIT](LICENSE), and only contribute material

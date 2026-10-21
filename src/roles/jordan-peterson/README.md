@@ -8,8 +8,8 @@ Psychologist and author known for research on personality and the Big Five,
 and for *Maps of Meaning* and *12 Rules for Life*. His public work connects
 personality differences with meaning, personal responsibility and pursuing goals.
 
-[Codex role file](codex/expert-jordan-peterson.toml) ·
-[Claude Code role file](claude/expert-jordan-peterson.md) ·
+[Codex role file](../../../dist/codex/expert-jordan-peterson.toml) ·
+[Claude Code role file](../../../dist/claude/expert-jordan-peterson.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

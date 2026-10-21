@@ -10,8 +10,8 @@ conversations attributed to him and his disciples. This profile emphasizes that
 early textual tradition; its compilation and interpretation should be
 distinguished from later doctrines associated with his name.
 
-[Codex role file](codex/expert-confucius.toml) ·
-[Claude Code role file](claude/expert-confucius.md) ·
+[Codex role file](../../../dist/codex/expert-confucius.toml) ·
+[Claude Code role file](../../../dist/claude/expert-confucius.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

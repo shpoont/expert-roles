@@ -7,7 +7,7 @@ and [implementation contract](../docs/design.md#implementation-contract).
 
 | Check | Observable pass condition |
 | --- | --- |
-| Source layout | Profiles, specialties and templates live under `src/`; generator paths, fixtures and links resolve there. |
+| Source layout | Profiles, specialties and templates live under `src/`; ready-to-use exports and generated indexes live under `dist/`. Generator paths, fixtures and links resolve in the adopted layout. |
 | Profile coverage | Each completed expert in the catalogue has a linked profile, valid photo or name visual and two portable native files. Accepted drafts outside the current addition step are accurately recorded. Missing photographs do not block a profile that uses standard name. |
 | Expert selection guidance | The main README defines an expert, and the linked contribution criteria cover established expertise, accessible work, useful task fit and a preference for public familiarity within the field. Fame alone is insufficient; formal credentials are optional, and living and historical people may qualify. Existing profile fields support editorial selection, without claims of model familiarity or effectiveness. |
 | Profile layout | Every completed profile and the starter show linked specialties once, a short introduction, early role-file/setup links and one independent-AI notice. Suggested uses and references precede a full visible photo credit or an Image note identifying the name placeholder and template; a collapsed Source files footer retains metadata and shared-instruction links. |
@@ -21,7 +21,7 @@ and [implementation contract](../docs/design.md#implementation-contract).
 | Catalogue growth and display text | The expert table has three columns and one row per expert; accepted punctuation renders as text without changing cells or links. |
 | README entry points | The main README has exactly six featured experts in two rows, a generated total and a full-catalogue link. The full alphabetical and specialty catalogue lives in src/roles/README.md. Adding an expert grows that catalogue and both counts without enlarging the sample. Authored text outside each marker pair survives; missing, duplicate, reversed, overlapping or nested boundaries fail before writes. Invalid curated sources also fail before writes. |
 | Native syntax | Codex files parse as TOML with the three required fields; Claude files have valid YAML frontmatter and a nonempty instruction body. |
-| Generated consistency | Exporter check mode reports no missing, changed or obsolete generated role files or catalogue content. |
+| Generated consistency | Exporter check mode reports no missing, changed or obsolete generated role files, distribution indexes or catalogue content. It rejects legacy and nested duplicate exports before writes and never deletes them automatically. |
 | Invalid input | An invalid profile sorted after a valid profile is rejected before outputs are written; malformed metadata is also rejected. |
 | Multiple specialties | Both host files retain Goldratt's identity and all four assigned specialty labels. |
 | Navigation | Relative Markdown file links, local HTML image references, heading anchors and explicit canonical specialty anchors resolve. Named specialty links land on the exact row; IDs remain stable across label/group changes. |
@@ -33,12 +33,53 @@ and [implementation contract](../docs/design.md#implementation-contract).
 | Handover | Current work, scope, decisions, contribution guidance and delivery accurately describe the initial catalogue and documented host limits. |
 | Direct use | A linked central section explains obtaining an export, tested Codex registration, untested host paths and the separate deployment responsibility. Explicit expert requests are optional; exact names are useful for targeted requests and invocation validation. |
 | Starter profile | The documented starter can be copied, completed with name and generated into a linked catalogue entry and valid native files without changing the real expert collection. Exact instructions also explain replacing name with a permitted photo and restoring name. |
-| Git boundary | Diff has no whitespace errors; no changes are staged or committed and no push, persistent deployment or release occurs. Temporary host-validation placement follows the separately authorized contract below. |
+| Git boundary | Diff has no whitespace errors. Commits, pushes, releases and persistent deployment require owner authorization. D045 authorizes the initial signed commit, push, annotated tag and public release; deployment remains separate. Temporary host validation follows its own contract below. |
 
 Run the exporter in check mode as described in [src](../src/README.md).
 Record actual results, baseline and limitations in
 [evidence](../evidence/README.md). Review the rendered catalogue and profiles
 before handover; source validity alone does not establish a good presentation.
+
+## Release checks (D045)
+
+Follow the [first-release contract](../docs/design.md#versioning-and-first-release).
+Confirm the README and delivery baseline, dated changelog and intended tag all
+identify `v1.0.0`. Preserve the accepted roster, source metadata, images, shared
+instruction, generated catalogue sections and all 114 native bytes while
+including D044's completed distribution changes.
+
+Run the full suite, read-only generation check, native equality, local links,
+UTF-8/public suitability, preservation and complete Git diff checks before the
+signed commit. After pushing, require hosted Checks to pass on that exact commit.
+Verify the local commit signature and annotated tag target, remote branch/tag,
+GitHub release version/title/body/Latest state, and clean local tree. Keep
+preparation results separate from publication readback. D045 explicitly
+authorizes the commit, push, tag and first public release; no host installation,
+invocation or consumer update is included.
+
+## Distribution layout (D044)
+
+Follow the [distribution contract](../docs/design.md#distribution-layout-and-generated-indexes).
+Each expert has exactly one native file per host, with no legacy per-profile
+copy or specialty subdirectories. Compare all 114 relocated files byte-for-byte
+against the committed baseline and confirm source metadata, visuals, templates,
+profile prose/credits and the generated catalogue sections are preserved.
+
+Regression checks cover all three generated distribution indexes, alphabetical
+sorting by display name, multiple specialties and groups pointing to one file,
+hidden unused specialties/groups and stable paths/anchors after classification
+changes. Check mode must detect missing or edited indexes and both native
+formats without writing; generation must reject unexpected legacy or nested
+exports before changing any file. Authored profile and starter download links
+must target `dist/`.
+
+Run the full suite and `src/generate.py --check`, native syntax/equality, complete
+local-link/anchor checks, UTF-8/public-suitability and Git diff checks. The
+[CI workflow](../.github/workflows/checks.yml) runs the suite and read-only
+consistency check on pull requests and main-branch pushes; it makes no commits
+and publishes no artifacts. Local verification does not establish a hosted CI
+result. Record observed results and limits in [evidence](../evidence/README.md).
+Leave this work unstaged and uncommitted; runtime tests and releases are separate.
 
 ## Four requested expert additions
 

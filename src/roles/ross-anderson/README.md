@@ -8,8 +8,8 @@ Security researcher and author of *Security Engineering*. His public work
 examines how adversaries, technical mechanisms, human behavior and economic
 incentives shape the security of real systems.
 
-[Codex role file](codex/expert-ross-anderson.toml) ·
-[Claude Code role file](claude/expert-ross-anderson.md) ·
+[Codex role file](../../../dist/codex/expert-ross-anderson.toml) ·
+[Claude Code role file](../../../dist/claude/expert-ross-anderson.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

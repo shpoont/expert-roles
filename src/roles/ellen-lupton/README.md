@@ -8,8 +8,8 @@ Graphic designer, educator and author known for *Thinking with Type*. Her
 books and public teaching connect typography, visual organization and
 communication with practical design decisions.
 
-[Codex role file](codex/expert-ellen-lupton.toml) ·
-[Claude Code role file](claude/expert-ellen-lupton.md) ·
+[Codex role file](../../../dist/codex/expert-ellen-lupton.toml) ·
+[Claude Code role file](../../../dist/claude/expert-ellen-lupton.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

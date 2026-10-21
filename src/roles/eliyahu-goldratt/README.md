@@ -7,8 +7,8 @@
 Physicist, management thinker and author who developed the Theory of
 Constraints. Known for *The Goal* and *Critical Chain*.
 
-[Codex role file](codex/expert-eliyahu-goldratt.toml) ·
-[Claude Code role file](claude/expert-eliyahu-goldratt.md) ·
+[Codex role file](../../../dist/codex/expert-eliyahu-goldratt.toml) ·
+[Claude Code role file](../../../dist/claude/expert-eliyahu-goldratt.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

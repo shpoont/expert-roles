@@ -8,8 +8,8 @@ Software author and practitioner who introduced Domain-Driven Design. His book
 and reference connect domain models, shared language and software boundaries
 to the complexity of business problems.
 
-[Codex role file](codex/expert-eric-evans.toml) ·
-[Claude Code role file](claude/expert-eric-evans.md) ·
+[Codex role file](../../../dist/codex/expert-eric-evans.toml) ·
+[Claude Code role file](../../../dist/claude/expert-eric-evans.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

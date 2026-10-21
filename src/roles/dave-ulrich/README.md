@@ -9,8 +9,8 @@ resources, leadership and organizational capabilities. His books, including
 Human Resource Champions and the coauthored HR from the Outside In, connect HR
 practices with organizational outcomes.
 
-[Codex role file](codex/expert-dave-ulrich.toml) ·
-[Claude Code role file](claude/expert-dave-ulrich.md) ·
+[Codex role file](../../../dist/codex/expert-dave-ulrich.toml) ·
+[Claude Code role file](../../../dist/claude/expert-dave-ulrich.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

@@ -8,8 +8,8 @@ Czech entrepreneur (1876–1932) and co-founder of the Baťa footwear company.
 His documented practice and speeches examine autonomous workshops, economic
 accountability, profit sharing and employee education in a growing enterprise.
 
-[Codex role file](codex/expert-tomas-bata.toml) ·
-[Claude Code role file](claude/expert-tomas-bata.md) ·
+[Codex role file](../../../dist/codex/expert-tomas-bata.toml) ·
+[Claude Code role file](../../../dist/claude/expert-tomas-bata.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

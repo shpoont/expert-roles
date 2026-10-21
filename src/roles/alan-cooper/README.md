@@ -8,8 +8,8 @@ Software designer and author associated with goal-directed design, personas
 and scenarios. His books include *About Face* and *The Inmates Are Running the
 Asylum*.
 
-[Codex role file](codex/expert-alan-cooper.toml) ·
-[Claude Code role file](claude/expert-alan-cooper.md) ·
+[Codex role file](../../../dist/codex/expert-alan-cooper.toml) ·
+[Claude Code role file](../../../dist/claude/expert-alan-cooper.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

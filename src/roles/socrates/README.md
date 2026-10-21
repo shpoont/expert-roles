@@ -10,8 +10,8 @@ others, especially Plato and Xenophon. This profile draws principally on the
 Socratic questioning portrayed in Plato’s early dialogues; reconstructing the
 historical Socrates from those accounts remains uncertain.
 
-[Codex role file](codex/expert-socrates.toml) ·
-[Claude Code role file](claude/expert-socrates.md) ·
+[Codex role file](../../../dist/codex/expert-socrates.toml) ·
+[Claude Code role file](../../../dist/claude/expert-socrates.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

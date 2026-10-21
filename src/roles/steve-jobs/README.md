@@ -9,8 +9,8 @@ product focus, simplicity and the integration of hardware, software and customer
 experience. Apple's documented design practice also shows the collaboration
 behind the products he helped bring to market.
 
-[Codex role file](codex/expert-steve-jobs.toml) ·
-[Claude Code role file](claude/expert-steve-jobs.md) ·
+[Codex role file](../../../dist/codex/expert-steve-jobs.toml) ·
+[Claude Code role file](../../../dist/claude/expert-steve-jobs.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

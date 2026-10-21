@@ -8,8 +8,8 @@ Marketing researcher and author known for *Managing Brand Equity* and the
 Aaker brand identity model. His public work explains how organizations build,
 differentiate and manage brands and brand portfolios.
 
-[Codex role file](codex/expert-david-aaker.toml) ·
-[Claude Code role file](claude/expert-david-aaker.md) ·
+[Codex role file](../../../dist/codex/expert-david-aaker.toml) ·
+[Claude Code role file](../../../dist/claude/expert-david-aaker.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

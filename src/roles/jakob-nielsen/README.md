@@ -8,8 +8,8 @@ Usability researcher and author who co-founded Nielsen Norman Group. Known for
 usability heuristics and books such as *Usability Engineering* and *Designing
 Web Usability*.
 
-[Codex role file](codex/expert-jakob-nielsen.toml) ·
-[Claude Code role file](claude/expert-jakob-nielsen.md) ·
+[Codex role file](../../../dist/codex/expert-jakob-nielsen.toml) ·
+[Claude Code role file](../../../dist/claude/expert-jakob-nielsen.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

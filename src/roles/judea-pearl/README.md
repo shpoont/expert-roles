@@ -8,8 +8,8 @@ Computer scientist known for foundational work on probabilistic and causal
 reasoning. His book *Causality* and public research explain how assumptions,
 observations and interventions support conclusions about cause and effect.
 
-[Codex role file](codex/expert-judea-pearl.toml) ·
-[Claude Code role file](claude/expert-judea-pearl.md) ·
+[Codex role file](../../../dist/codex/expert-judea-pearl.toml) ·
+[Claude Code role file](../../../dist/claude/expert-judea-pearl.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

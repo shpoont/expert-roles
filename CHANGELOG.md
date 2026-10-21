@@ -1,34 +1,47 @@
 # Changelog
 
 Record meaningful changes by version under the
-[release convention](docs/delivery.md#versions-and-releases). There are no released
-role-library versions yet.
+[release convention](docs/delivery.md#versions-and-releases).
 
 ## Unreleased
 
-### Current collection
+Record changes intended for the next release here.
 
-- 57 experts, 82 specialties in ten groups, 38 credited portraits and 19
-  full-name placeholders, with Codex and Claude Code files for every expert.
+## v1.0.0 — 2026-10-21
+
+First stable baseline of the complete Expert Roles library.
+
+### Added
+
+- 57 expert profiles, 82 specialties in ten groups, 38 credited portraits and
+  19 full-name placeholders, with Codex and Claude Code files for every expert.
 - A compact six-expert README sample, a full alphabetical and specialty
   catalogue, shared instructions and a copyable contributor starter.
-- Original material uses MIT; photographs and referenced vocabulary retain
-  their individually documented terms.
+- Original material under MIT, with photographs and referenced vocabulary
+  retaining their individually documented terms.
+- Whole-library `MAJOR.MINOR.PATCH` versioning, a dated changelog, fixed annotated
+  Git tags and matching GitHub releases, independent of consuming integrations.
 
 ### Changed
 
+- Consolidate native exports under `dist/codex/` and `dist/claude/`, preserving
+  their contents. Generate a host chooser and alphabetical/specialty indexes
+  from existing metadata; update profile, starter and download links.
+- Check missing or changed indexes, obsolete or duplicate exports and legacy
+  locations. Add a read-only CI workflow for the suite and generated consistency.
 - Explain independent AI interpretation near the introduction. Show existing
   perspective cues for comparison, add a browser Find hint and link specialty
   labels to stable, precise catalogue rows.
 - Clarify copying the whole starter once, preparing Python and choosing the
-  image before generation. Separate this current summary from historical notes.
+  image before generation. Separate release notes from historical development.
 
-### Validation
+### Validation and limits
 
-Three sampled Codex calls passed through explicit registration. Claude runtime,
-automatic Codex discovery and comparative role benefit remain unverified. No
-release or tag exists. The owner accepted the reviewed catalogue and authorized
-its initial commit; push and publication require separate instructions.
+25 local tests pass and all 119 generated files match their sources. All 114
+relocated exports retain their bytes; all 57 native pairs parse and agree.
+Three sampled Codex calls previously passed through explicit registration.
+Claude runtime, automatic Codex discovery and comparative role benefit remain
+unverified. A stable library version does not extend those observed results.
 
 ## Initial development history
 

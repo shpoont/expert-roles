@@ -8,8 +8,8 @@ Software developer and author known for Extreme Programming and test-driven
 development. His books and essays examine feedback, small design changes and
 sustainable ways for teams to develop software.
 
-[Codex role file](codex/expert-kent-beck.toml) ·
-[Claude Code role file](claude/expert-kent-beck.md) ·
+[Codex role file](../../../dist/codex/expert-kent-beck.toml) ·
+[Claude Code role file](../../../dist/claude/expert-kent-beck.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

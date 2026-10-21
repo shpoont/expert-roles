@@ -9,8 +9,8 @@ influential accounts of human well-being, individual freedom and public
 discussion. His work connects the consequences of conduct with questions about
 individuality, social authority and the limits of interference.
 
-[Codex role file](codex/expert-john-stuart-mill.toml) ·
-[Claude Code role file](claude/expert-john-stuart-mill.md) ·
+[Codex role file](../../../dist/codex/expert-john-stuart-mill.toml) ·
+[Claude Code role file](../../../dist/claude/expert-john-stuart-mill.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

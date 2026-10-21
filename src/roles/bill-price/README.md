@@ -9,8 +9,8 @@ David Jaffe of The Best Service Is No Service and The Frictionless Organization.
 His work examines avoidable customer contacts, service operations and the effort
 customers expend to get things done.
 
-[Codex role file](codex/expert-bill-price.toml) ·
-[Claude Code role file](claude/expert-bill-price.md) ·
+[Codex role file](../../../dist/codex/expert-bill-price.toml) ·
+[Claude Code role file](../../../dist/claude/expert-bill-price.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

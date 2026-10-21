@@ -8,8 +8,8 @@ Design researcher known for Contextual Inquiry and co-developing Contextual
 Design. Her public work connects observation of people's real activities
 with requirements, product concepts and user experience design.
 
-[Codex role file](codex/expert-karen-holtzblatt.toml) ·
-[Claude Code role file](claude/expert-karen-holtzblatt.md) ·
+[Codex role file](../../../dist/codex/expert-karen-holtzblatt.toml) ·
+[Claude Code role file](../../../dist/claude/expert-karen-holtzblatt.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent
