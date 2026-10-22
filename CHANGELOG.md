@@ -22,6 +22,8 @@ Record meaningful changes by version under the
 - General surgery, Health services research and Patient safety in the shared specialty vocabulary.
 - Add Warren Buffett's source profile, documented perspective and credited
   studio portrait for inclusion in the next release.
+- Add Jeff Bezos's source profile, documented perspective and credited
+  studio portrait for inclusion in the next release.
 
 ### Changed
 
