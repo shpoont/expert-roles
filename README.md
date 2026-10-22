@@ -1,11 +1,11 @@
 # Expert Roles
 
-Bring an expert's perspective to your AI tasks. Explore ideas and methods from
-recognized specialists to question assumptions, review proposals and approach
-problems through a relevant field of expertise.
+A public catalogue of expert roles for AI assistants, inspired by the ideas and
+methods of recognized specialists. Browse by name or specialty and bring their
+perspective to your tasks in Codex or Claude Code.
 
-Each role is an independent AI interpretation of publicly documented work.
-The experts do not participate in or endorse this project.
+Each role is an independent AI interpretation of the expert's publicly
+documented work.
 
 <!-- BEGIN GENERATED SUMMARY -->
 

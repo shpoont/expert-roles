@@ -20,6 +20,9 @@ with 68 experts, 96 specialties in 14 groups and completed
 The homepage now puts the gallery before setup, with recognizable experts,
 task cues and concise image disclosure. The correction/removal policy retains
 its earlier commitments in a separate linked document.
+Following owner review, the opening explicitly introduces roles for AI
+assistants and their independent interpretation of public work; affiliation
+details remain in the existing Disclaimer.
 
 All 55 tests pass, including the new invalid-cue/no-partial-writes and literal
 display check. Source validation and ordinary contribution ownership pass.
