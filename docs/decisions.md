@@ -1319,7 +1319,11 @@ validation remain separate from this addition.
 
 ## D064 — 2026-10-22: Release Expert Roles v1.3.0
 
-- **Status:** Release PR, checks, merge and publication authorized if all gates pass.
+- **Status:** Published as latest stable [v1.3.0](https://github.com/shpoont/expert-roles/releases/tag/v1.3.0)
+  after [PR #14](https://github.com/shpoont/expert-roles/pull/14) and resulting
+  main's [Checks](https://github.com/shpoont/expert-roles/actions/runs/39846714660)
+  and validation check completed successfully. Signed annotated tag targets
+  [`29e7636`](https://github.com/shpoont/expert-roles/commit/29e763631d953be8fc36d9b48b042e7f88da3179).
 - **Decision:** Deliver the accepted documentation/tooling work as compatible
   minor v1.3.0 under the [release contract](design.md#release-expert-roles-v130).
   Finalize VERSION, dated changelog, native provenance and host indexes while
@@ -1330,3 +1334,19 @@ validation remain separate from this addition.
   then remote annotated tag and release readback.
 - **Boundary:** Supersedes the no-release hold for v1.3.0 only. Keep previous
   tags fixed; no installation, plugin change or new role-runtime test.
+
+## D065 — 2026-10-22: Guard releases and simplify active instructions
+
+- **Status:** Implemented and locally verified with all 83 tests. The hosted
+  [ruleset](https://github.com/shpoont/expert-roles/rules/25674519) is active and
+  matches both its tracked definition and effective main rules. Source changes
+  are prepared for PR review; hosted CI and merge remain separate evidence.
+- **Decision:** Require PRs and current GitHub Actions validation on main, with
+  no bypass actors; add a preflighted explicit-destination release push helper.
+  Replace historical agent instructions with durable policy and linked records.
+  Follow the [focused contract](design.md#release-safeguards-and-concise-agent-guidance).
+- **Checks:** Disposable Git push regression, invalid preflight/ruleset drift
+  fixtures, live effective-rule readback, full suite and complete preview
+  references, instruction-preservation review and protected baseline hashes.
+- **Boundary:** Preserve the collection, native files, VERSION and published
+  tags. No new release, installation, plugin work or role-runtime evaluation.

@@ -9,6 +9,69 @@ Connect evidence to [current work](../docs/current-work.md),
 [decisions](../docs/decisions.md), [checks](../tests/README.md) and
 [delivery](../docs/delivery.md).
 
+## Release safeguards and active guidance — 2026-10-22
+
+D065's selected implementation passes all **83 tests**, including eleven new
+release-safety tests. A disposable bare Git repository reproduces the previous
+source-only push routing to main when push.default is upstream. The helper's
+fully qualified source/destination push instead updates only the release branch,
+sets its correct upstream and leaves main and annotated tags unchanged even
+with followTags enabled. Diverged remote work is rejected without force.
+
+Preflight tests reject dirty files, wrong branches or origins, development
+versions, existing tags, stale/missing main, unsigned heads, failed release
+checks, local/remote drift and invalid or ineffective protection. CLI checks
+default to no push and require explicit --push. API checks bind to github.com.
+The preview now includes public ruleset JSON; the existing preview test retains
+its complete-copy and source-preservation checks.
+
+The configured owner account applied [Protect main](https://github.com/shpoont/expert-roles/rules/25674519).
+API readback confirms active enforcement, only main in scope, no bypass actors,
+required PRs with zero approvals, current-base `validate` checks from GitHub
+Actions integration 15368, and blocked force pushes/deletion. Effective branch
+rules match the tracked definition; main remains at the published v1.3.0 commit.
+This proves hosted configuration. No push intended to fail was sent to live main;
+the push-destination regression ran only against disposable local repositories.
+
+AGENTS.md is reduced from **233 lines / 1,925 words** to **96 lines / 720 words**.
+It retains current content, image/license, source/release, signature, evidence
+and publication requirements through concise rules and canonical links. Existing
+decision and evidence bodies are retained; v1.3.0 gains its verified publication
+closeout. VERSION, dist, source profiles, visuals, metadata, specialties,
+templates and released tags are unchanged. Source/catalogue ownership, strict
+retained-output freshness and preview references pass. Hosted source delivery
+and any authorized merge are distinct from these local checks and live settings.
+No release, installation or role-runtime/effectiveness result is added.
+
+## v1.3.0 publication — 2026-10-22
+
+D064's publication is complete. [PR #14](https://github.com/shpoont/expert-roles/pull/14)
+was squash merged into
+[`29e7636`](https://github.com/shpoont/expert-roles/commit/29e763631d953be8fc36d9b48b042e7f88da3179),
+with the candidate tree preserved. Both the exact-head
+[PR workflow](https://github.com/shpoont/expert-roles/actions/runs/39846429359)
+and resulting [main workflow](https://github.com/shpoont/expert-roles/actions/runs/39846714660)
+and their separate `validate` checks completed successfully. Hosted logs confirm
+72 passing tests, 141 matching generated files, strict release consistency and
+162 documents with 2,409 local references and 142 image references passing.
+
+The release commit signature was verified by GitHub. The locally verified
+signed annotated `v1.3.0` tag object
+`f0f4a4fd7c9783382cd8d50b7c6129f40f0ffef5` targets the merged main commit.
+The remote tag, latest stable [release](https://github.com/shpoont/expert-roles/releases/tag/v1.3.0),
+published notes, tagged VERSION and both native formats were read back.
+Earlier tag objects were unchanged; the release branches were removed and
+local main was clean and synchronized. The release adds no role-runtime or
+comparative-effectiveness result. Earlier preparation results below retain
+their original scope and are completed by this publication record.
+
+During submission, a source-only push with push.default=upstream and an
+inherited origin/main upstream initially updated main. The owner explicitly
+authorized an exact-commit lease recovery; main was restored before PR #14
+was opened. The release branch was preserved, and the required PR/main gates
+then completed before tagging. D065 addresses this observed routing failure
+with explicit push destinations and enforced main rules.
+
 ## v1.3.0 release validation — 2026-10-22
 
 D064 authorizes a separate v1.3.0 release PR, required checks, squash merge and

@@ -43,6 +43,41 @@ tree; maintainers update dist and versions during release preparation.
 
 ## Implementation contract
 
+### Release safeguards and concise agent guidance
+
+D065 authorizes the two selected improvements: enforce the release process and
+simplify active agent instructions. Protect main with an active repository
+ruleset requiring pull requests and the GitHub Actions `validate` check against
+the latest base, with no bypass actors. Require zero review approvals so a sole
+maintainer can still merge through a PR. Block force pushes and branch deletion.
+Keep a reviewable ruleset definition in the repository and verify the effective
+hosted rules after applying it; do not test rejection by changing live main.
+Include public ruleset JSON in the curated preview so its documentation links
+remain valid, with regression coverage for that preview handoff.
+
+Add a small release-branch push helper. Its default mode checks without writes;
+an explicit push mode runs the same preflight and pushes only a fully qualified
+release-branch ref to the identical remote ref. Check a clean checkout, canonical
+origin, stable VERSION/matching branch, signed head, current remote main,
+new version/tag, active protection and strict existing release validation.
+Never infer the destination from an upstream or push.default; never force,
+push tags or main, merge, publish, regenerate files or install roles.
+
+Replace AGENTS.md's accumulated release history with durable rules and links
+to the existing authoritative guides. Preserve scope, licensing, image policy,
+source/release ownership, signed commits, exact-commit publication gates and
+the library/integration boundary. Close out v1.3.0 with its verified PR, commit,
+CI, tag and release evidence instead of retaining active preparation wording.
+Keep every earlier decision and evidence entry intact apart from its status.
+
+Verify rejected preflight states without network writes and use disposable bare
+Git repositories to reproduce the dangerous upstream configuration and prove
+the explicit push changes only the release branch. Check ruleset drift and
+default/check versus explicit push behavior, run the full suite and a complete
+preview reference check, and compare all expert content, VERSION, dist and prior
+tags with the published baseline. This is a source/process change, not a new
+release or a role-runtime/effectiveness evaluation.
+
 ### Release Expert Roles v1.3.0
 
 D064 authorizes preparing a separate v1.3.0 release PR, running the local and

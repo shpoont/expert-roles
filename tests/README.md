@@ -41,6 +41,29 @@ See the [release procedure](../docs/delivery.md#versions-and-releases).
 Historical baseline checks below retain their original scopes; current process
 ownership follows D056 with D063's source-catalogue correction.
 
+## Release safeguards (D065)
+
+`test_release.py` exercises the push helper in disposable local bare Git
+repositories. It recreates push.default=upstream with a release branch tracking
+origin/main, then proves the explicit push leaves remote main and tags unchanged
+and sets the correct release upstream. Enable followTags in the fixture to
+verify `--no-follow-tags`, and reject diverged remote release work without force.
+
+Preflight fixtures cover dirty/untracked files, a wrong branch or URL,
+development versions, an existing tag, missing/stale main, unsigned heads and
+failed release validation. Check local and remote drift before pushing. The
+default and `--check` modes cannot push; `--push` requires successful preflight.
+Ruleset fixtures reject disabled enforcement, bypass actors, wrong branch scope,
+missing PR requirements, the wrong check provider, non-strict CI and ineffective
+rules. The tracked policy requires the workflow's actual `validate` job from
+GitHub Actions, with zero review approvals and no bypass actors.
+
+Verify the live ruleset and `rules/branches/main` separately with the configured
+GitHub account. These readbacks establish active configuration; the disposable
+Git tests establish push-destination behavior. Do not claim a server rejection
+from a dry run or attempt to mutate live main to prove enforcement. Preserve
+the published VERSION, dist, expert sources and tags throughout this work.
+
 ## Preview references and role headers (D061)
 
 The portable `src/check_docs.py` checker parses Markdown (including reference

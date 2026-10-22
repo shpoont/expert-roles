@@ -67,6 +67,8 @@ src/
       expert.yaml
   generate.py
   check_docs.py
+  check_changes.py
+  release.py
 dist/
   README.md
   codex/
@@ -76,6 +78,10 @@ dist/
     README.md
     expert-<slug>.md
 ```
+
+Maintainers use the [release safeguard commands](../docs/delivery.md#release-safeguards)
+to check and push an authorized release branch. The helper does not generate
+files, merge PRs, tag or publish.
 
 ## Role metadata and descriptions
 

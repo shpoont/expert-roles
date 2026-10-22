@@ -478,6 +478,7 @@ def write_preview(root: Path, destination: Path, outputs: dict[Path, str]) -> No
                                      "CONTRIBUTING.md", "LICENSE", "requirements.txt")
              if (root / name).is_file()]
     files += [path for path in (root / ".github/workflows").glob("*.yml") if path.is_file()]
+    files += [path for path in (root / ".github/rulesets").glob("*.json") if path.is_file()]
     for directory in ("src", "docs", "tests", "evidence", "mocks"):
         files += [path for path in (root / directory).rglob("*")
                   if path.is_file() and path.suffix in {".md", ".yaml", ".yml", ".jpg", ".svg", ".py", ".txt"}
