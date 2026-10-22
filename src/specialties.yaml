@@ -271,6 +271,11 @@ philosophy-of-science:
   group: Philosophy
   reference: https://www.wikidata.org/wiki/Q59115
 
+physics:
+  name: Physics
+  group: Natural sciences
+  reference: http://data.europa.eu/esco/skill/692ace70-7f97-4214-92bd-88f7637d8a44
+
 political-philosophy:
   name: Political philosophy
   group: Philosophy
@@ -305,6 +310,11 @@ quality-management:
   name: Quality management
   group: Management
   reference: https://www.wikidata.org/wiki/Q757012
+
+quantum-electrodynamics:
+  name: Quantum electrodynamics
+  group: Natural sciences
+  reference: https://www.wikidata.org/wiki/Q234881
 
 sales-management:
   name: Sales management

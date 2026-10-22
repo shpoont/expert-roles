@@ -267,7 +267,8 @@ hierarchy needs a concrete use case.
 
 Selected ESCO labels and concept identifiers come from the European Commission's
 [ESCO knowledge vocabulary](https://esco.ec.europa.eu/en/classification/skill),
-consulted on 2026-10-19, 2026-10-20 and 2026-10-21, under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+consulted on 2026-10-19, 2026-10-20, 2026-10-21 and 2026-10-22,
+under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 as stated in its [copyright notice](https://esco.ec.europa.eu/en/copyright-notice-esco-skills-competences).
 We capitalize display labels and use the recognized Interaction design alias;
 grouping and expert assignments are this collection's editorial choices. No
