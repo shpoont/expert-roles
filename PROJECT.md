@@ -32,6 +32,14 @@ accepted additions are included. Portrait acceptance is an editorial decision;
 structural validity does not establish likeness. Future additions follow the
 same contribution process.
 
+D056 separates source contributions and release preparation. Ordinary PRs
+submit canonical sources, relevant authored documentation and Unreleased notes;
+they leave `VERSION`, `dist/` and generated README blocks at the previous release.
+Maintainers update those artifacts and release records in a separate release
+PR. Source validation and temporary previews support contribution review; strict
+generated freshness is a release gate. See the
+[process contract](docs/design.md#separate-contributions-from-release-preparation).
+
 Retain drawings, paintings, sculpture and similar depictions unchanged. The
 owner found the first photographic results too close to background removal,
 then adopted direct eye contact, an individual moderately muted background and
@@ -59,7 +67,11 @@ unchanged exports. Automatic directory discovery remains unresolved. Claude
 files have structural checks but no runtime validation. These observations do
 not establish broad selection reliability or comparative expert benefit.
 
-- **Current status and boundary:** D048 supplies the portrait rollout; D049 adds
+- **Current status and boundary:** D056 implements contribution/release
+  separation, with CI and documentation changes. The owner authorizes a signed
+  process commit and ordinary main push, followed by exact-commit hosted checks.
+  No new release, tag, installation or role invocation is included. The following records
+  describe the delivered v1.1.0 baseline. D048 supplies the portrait rollout; D049 adds
   a copyable credit block and repository/CI validation in the isolated worktree.
   The independent fresh-session contribution walkthrough completed one temporary
   Grace Hopper case in a disposable copy; broader reliability remains unverified.
@@ -79,7 +91,8 @@ not establish broad selection reliability or comparative expert benefit.
 - **Delivery acceptance:** the catalogue, profiles, contribution process, image
   policy, source schema and usage guidance agree with the initial collection
   and accurately state host-validation limits.
-- **Required checks:** the full existing suite, source and generated consistency,
+- **Required checks:** the full suite, source validation and isolated previews;
+  contribution ownership or strict release consistency as appropriate;
   native syntax and equality, local links, portrait credits and retained reuse
   conditions, public suitability, protected-content hashes and the complete
   proposed Git inventory and diff, including untracked files. Distribution checks

@@ -8,11 +8,17 @@ This reusable protocol is separate from the automated synthetic fixture and
 the catalogue owner's visual acceptance. One successful case supports a bounded
 usability observation, not universal agent reliability.
 
+D056 updates the reusable protocol below to review generated outputs in an
+external preview and retain release artifacts. The earlier completed run used
+the previous contribution process; this updated protocol has not had a fresh
+image-generation walkthrough.
+
 ## Setup
 
 Use a regular chat that can run an independent agent with the built-in image
 generation tool. Prepare a disposable copy of the reviewed working tree,
-including its untracked feature files; a clean clone of v1.0.0 omits this work.
+including its approved untracked feature files. Use the current reviewed
+process guidance; older released instructions may precede D056.
 Keep the original checkout, role configuration and existing portrait files
 untouched. Supply only the copy's location and the prompt below, without the
 implementation conversation or author coaching.
@@ -28,7 +34,9 @@ roster addition, commit, push, installation or release.
 > documentation to add Grace Hopper as a temporary expert profile. Use existing
 > specialty vocabulary where appropriate. Locate and verify permitted photographic
 > references, create a studio-v1 portrait with the built-in image tool, prepare
-> the image, complete its provenance and generate both native role files.
+> the image and complete its provenance. Validate sources and create a new
+> external unreleased preview containing both native formats and the catalogue.
+> Leave VERSION, dist/ and generated README sections in the copy unchanged.
 > Use only the documented workflow, shared prompt and credit template. Do not
 > edit existing experts, images, vocabulary or shared instructions. Keep exact
 > generation inputs, masters, corrections and decisions outside the copy.
@@ -49,8 +57,10 @@ roster addition, commit, push, installation or release.
 - The completed credit block identifies the output as generated, retains all
   reference attributions and applicable terms, and scopes the output terms.
 - The image is 512 × 512 RGB JPEG; the profile has one active visual. Both native
-  files and catalogue entries are generated; prior native files and expert
-  content remain unchanged. Normal checks and read-only check mode pass.
+  files and catalogue entries appear in the external `0.0.0-preview` tree;
+  committed native files, generated blocks, VERSION and existing expert content
+  remain unchanged. Source validation, the suite and contribution boundary pass
+  in a Git copy; strict release freshness is not required for a contribution.
 - Compare the full-resolution output and 160/240-pixel rendering with the source
   and, when available, a reference not used for generation. Record likeness,
   gaze and visual acceptance separately from structural results.

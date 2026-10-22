@@ -5,6 +5,17 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+### Changed
+
+- Separate source contributions from maintainer release preparation. Ordinary
+  PRs retain `VERSION`, committed distribution files and generated catalogue
+  sections; release PRs choose the final stable version and regenerate them.
+- Make source validation the generator's default, add isolated unreleased
+  previews and require explicit `--release` for committed output generation.
+  Keep `--check` as the strict, read-only release freshness check.
+- Add CI change-boundary checks, maintainer `release` label routing and temporary
+  review artifacts. Update contributor, portrait and release guidance.
+
 ## v1.1.0 — 2026-10-22
 
 Compatible portrait contribution tooling, broader studio-portrait coverage and

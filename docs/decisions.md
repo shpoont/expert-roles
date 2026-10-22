@@ -1179,3 +1179,20 @@ validation remain separate from this addition.
   v1.0.0 and verify remote delivery. This supersedes the earlier no-commit/push
   boundaries for this release; installation remains separate. Follow the
   [publication contract](design.md#publish-expert-roles-v110).
+
+## D056 — 2026-10-22: Separate source contributions and release artifacts
+
+- **Status:** Adopted by the owner; locally implemented and checked. The owner
+  authorizes a signed process commit and ordinary main push, with hosted
+  workflow and artifact verification separate from the local evidence.
+- **Decision:** Ordinary contributions contain canonical sources, relevant
+  authored documentation and an Unreleased changelog entry. Maintainers choose
+  versions and regenerate committed `dist/` files, indexes and catalogue blocks
+  in a separate release change. Keep `dist/` committed for released consumers.
+- **Checks:** Validate sources and isolated previews for contributions; reject
+  release-owned edits. Require an explicit maintainer `release` PR label,
+  changed final version, dated changelog and strict output freshness for release
+  changes. See the [contract](design.md#separate-contributions-from-release-preparation).
+- **Boundary:** Supersedes D044's requirement to commit sources and generated
+  outputs together for ordinary contributions. Preserve published versions,
+  roster, visuals and role behavior. No new release or installation is included.

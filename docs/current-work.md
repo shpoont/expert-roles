@@ -2,6 +2,30 @@
 
 ## Current focus and status
 
+D056 separates source contributions from release preparation. Ordinary PRs
+submit canonical sources, relevant authored documentation and Unreleased notes;
+they leave `VERSION`, `dist/` and generated README sections unchanged. Maintainer
+release PRs choose the final version, finalize release records and regenerate
+artifacts. CI distinguishes these paths and provides an isolated unreleased
+preview. See the [implementation contract](design.md#separate-contributions-from-release-preparation).
+
+Implementation passes 54 tests and local integration of the actual mixed
+contribution, its source-only equivalent and a prepared-release fixture. The
+workflow shell routes PR, main-push and manual checks as intended. The owner now
+authorizes a signed commit and ordinary main push of the process change. Check
+the exact commit's hosted workflow, validation result and preview artifact before
+reporting hosted enforcement; local results alone do not establish it. No new
+release, tag, role installation or invocation is included. The published v1.1.0
+baseline, roster, portraits, shared instruction and native artifacts are retained.
+Current outcomes will be recorded in the
+[process evidence](../evidence/README.md#contribution-and-release-separation--2026-10-22).
+
+## Historical v1.1.0 preparation records
+
+The following records describe earlier preparation checkpoints and their
+boundaries. D055's v1.1.0 release is now delivered; earlier development versions
+and no-publication statements below are historical, not current instructions.
+
 D055 finalizes the **v1.1.0** release baseline, combining the accepted portrait
 workflow, D053's expanded coverage and D054's export provenance. Canonical
 `VERSION` and all 114 native headers use `1.1.0`. The 57-expert catalogue has
@@ -239,11 +263,13 @@ These follow-ups are separate from the accepted catalogue and commit readiness.
 
 ## Next actions
 
-Maintain the accepted v1.1.0 baseline and record subsequent work under Unreleased.
-D055's publication contract requires exact-commit hosted validation and remote
-tag/release readback before reporting delivery. Refer to the linked hosted
-records for the release outcome; its authorization applies only to this version.
-Keep the v1.0.0 and v1.1.0 released tags fixed.
+Commit and push D056's reviewed process changes under the owner's authorization,
+verify exact-commit hosted checks and the preview artifact, then ask the active
+contributor to check the Lamport PR against the new CI. Keep the process change
+separate from expert proposals and from the next release. Refer to the hosted
+[Checks](https://github.com/shpoont/expert-roles/actions/workflows/checks.yml)
+for current delivery results. Record subsequent work
+under Unreleased and keep the v1.0.0 and v1.1.0 released tags fixed.
 
 The accepted portraits and bounded contribution walkthrough are retained; the
 temporary Grace Hopper fixture is not a roster addition.

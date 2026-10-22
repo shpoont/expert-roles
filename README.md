@@ -113,7 +113,9 @@ major for incompatible changes, minor for compatible additions, and patch for
 corrections that preserve intended behavior. Consuming integrations are versioned
 independently.
 
-Working exports use the version in [VERSION](VERSION). Each file records its
+Committed exports and generated catalogue sections reflect the last prepared
+release; source contributions appear there at the next release. Each export uses
+the version in [VERSION](VERSION) and records its
 source, library version and expert ID as [provenance comments](src/README.md#export-provenance).
 
 See the [changelog](CHANGELOG.md) and

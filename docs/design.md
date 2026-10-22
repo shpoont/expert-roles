@@ -36,7 +36,49 @@ specialty indexes there. File paths depend only on host and expert slug;
 classification changes affect index links. Integrations own their
 installation, model configuration and lifecycle.
 
+D056 separates canonical source contributions from release-owned generated
+artifacts. Contributions validate inputs and render a separate unreleased review
+tree; maintainers update committed outputs and versions during release preparation.
+
 ## Implementation contract
+
+### Separate contributions from release preparation
+
+D056 separates source contributions from published artifacts. Ordinary changes
+contain profiles, metadata, images and credits, necessary vocabulary or tooling
+changes, relevant authored documentation and an Unreleased changelog entry.
+They leave `VERSION`, `dist/` and generated README sections at the previous
+release. Routine expert additions do not need project-wide decision, status or
+release records. Maintainers own those records and the release process.
+
+The generator's default and `--validate` modes validate and render source inputs
+in memory without checking freshness of retained release artifacts. `--preview`
+creates a new, separate review tree with complete catalogue/native outputs and
+`0.0.0-preview` provenance; it never rewrites the checkout. Explicit `--release`
+updates committed artifacts from `VERSION`. `--check` remains the strict,
+read-only release freshness check, including obsolete and duplicate exports.
+
+CI always runs the contract suite and source validation, and produces an
+unreleased preview. A diff-aware boundary check rejects contribution changes
+to `VERSION`, `dist/` or generated README sections. A maintainer's `release` PR
+label selects release validation instead: changed valid final version, a dated
+matching changelog entry and complete generated freshness. Main pushes with a
+version change receive the same release check; manual runs select their mode
+and comparison base explicitly. No workflow publishes or installs anything.
+
+Checks must demonstrate source-only addition, correction and removal with
+retained artifacts; rejection of each release-owned change in contributions;
+authored README edits remaining possible; isolated preview generation; invalid
+sources failing before writes; strict release checks rejecting drift and
+accepting a complete prepared version. Exercise the existing mixed contribution
+in a disposable copy and then its source-only equivalent. Preserve v1.1.0's
+version, artifacts, generated sections, expert sources and fixed published tags.
+
+Update contributor, source, delivery and check guidance with tested commands.
+Record observed results separately from CI publication. The owner subsequently
+authorizes a signed process commit and ordinary main push, followed by hosted
+workflow/artifact verification and contributor handover. It does not authorize
+a new release, role installation or changing published tags.
 
 ### Versioning and first release
 

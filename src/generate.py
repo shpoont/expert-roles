@@ -1,4 +1,4 @@
-"""Create name placeholders or render catalogues and dist role files; never install them."""
+"""Validate sources, preview contributions or prepare release files; never install roles."""
 
 from __future__ import annotations
 
@@ -7,6 +7,7 @@ import html
 import json
 from pathlib import Path
 import re
+import shutil
 import sys
 import tomllib
 from urllib.parse import urlsplit
@@ -32,6 +33,7 @@ FEATURED_EXPERTS = (
 )
 PORTRAIT_SIZE = (512, 512)
 SOURCE_REPOSITORY = "https://github.com/shpoont/expert-roles"
+PREVIEW_VERSION = "0.0.0-preview"
 
 
 class UniqueLoader(yaml.SafeLoader):
@@ -180,7 +182,8 @@ def distribution_index(experts, specialties, groups, title: str, extension: str)
         "and permission notice with copies. Specialty labels retain their",
         "[source credits and terms](../../docs/elements/specialties.md#source-attribution).", "",
         "These files are generated. Edit the [sources](../../src/README.md#generate-the-catalogue-and-native-files)",
-        "and regenerate; include source changes and updated outputs together.", "",
+        "for contributions; maintainers update these files during",
+        "[release preparation](../../docs/delivery.md#versions-and-releases).", "",
     ]
     return "\n".join(lines)
 
@@ -274,9 +277,9 @@ def read_version(root: Path) -> str:
     return version
 
 
-def plan_outputs(root: Path) -> dict[Path, str]:
+def plan_outputs(root: Path, *, version: str | None = None) -> dict[Path, str]:
     """Validate every input and render in memory before any file is changed."""
-    version = read_version(root)
+    version = read_version(root) if version is None else version
     specialties = read_yaml(root / "src/specialties.yaml")
     if not isinstance(specialties, dict) or not specialties:
         raise ValueError("src/specialties.yaml must contain a nonempty mapping")
@@ -383,8 +386,9 @@ def plan_outputs(root: Path) -> dict[Path, str]:
         "[full catalogue](../src/roles/README.md). Follow the",
         "[setup guide](../docs/delivery.md#use-a-native-role) for registration and host-validation limits.", "",
         "## Sources and licensing", "",
-        "These role files and indexes are generated and committed. Follow the",
-        "[source guide](../src/README.md#generate-the-catalogue-and-native-files) to edit sources and regenerate them.",
+        "These role files and indexes are generated and committed during",
+        "[release preparation](../docs/delivery.md#versions-and-releases). Follow the",
+        "[source guide](../src/README.md#generate-the-catalogue-and-native-files) to validate and preview contributions.",
         "Role files use [MIT](../LICENSE); retain its copyright and permission notice",
         "with copies. Specialty labels retain their",
         "[source credits and terms](../docs/elements/specialties.md#source-attribution).", "",
@@ -450,23 +454,69 @@ def plan_outputs(root: Path) -> dict[Path, str]:
     return outputs
 
 
+def write_preview(root: Path, destination: Path, outputs: dict[Path, str]) -> None:
+    """Create a browsable review copy without copying Git, environments or caches."""
+    root, destination = root.resolve(), destination.resolve()
+    if destination.exists() or destination.is_relative_to(root) or root.is_relative_to(destination):
+        raise ValueError("Preview requires a new directory outside the source checkout")
+    files = [root / name for name in ("README.md", "AGENTS.md", "PROJECT.md", "CHANGELOG.md",
+                                     "CONTRIBUTING.md", "LICENSE", "requirements.txt")
+             if (root / name).is_file()]
+    files += [path for path in (root / ".github/workflows").glob("*.yml") if path.is_file()]
+    for directory in ("src", "docs", "tests", "evidence", "mocks"):
+        files += [path for path in (root / directory).rglob("*")
+                  if path.is_file() and path.suffix in {".md", ".yaml", ".yml", ".jpg", ".svg", ".py", ".txt"}
+                  and not any(part.startswith(".") or part == "__pycache__"
+                              for part in path.relative_to(root).parts)]
+    if any(path.is_symlink() for path in files):
+        raise ValueError("Preview inputs must be regular files, not symlinks")
+    destination.mkdir(parents=True)
+    for source in files:
+        target = destination / source.relative_to(root)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source, target)
+    for path, content in outputs.items():
+        target = destination / path
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(content, encoding="utf-8")
+    (destination / "VERSION").write_text(PREVIEW_VERSION + "\n", encoding="utf-8")
+    notice = "> Unreleased review preview; generated roles use `0.0.0-preview`. This is not a published release.\n\n"
+    for path in (Path("README.md"), Path("dist/README.md")):
+        target = destination / path
+        target.write_text(notice + target.read_text(encoding="utf-8"), encoding="utf-8")
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--check", action="store_true", help="Report drift without writing files")
+    parser.add_argument("--validate", action="store_true", help="Validate sources without writing files (default)")
+    parser.add_argument("--preview", type=Path, help="Create an unreleased review tree in a new external directory")
+    parser.add_argument("--release", action="store_true", help="Update committed release artifacts from VERSION")
+    parser.add_argument("--check", action="store_true", help="Require release artifacts to match VERSION and sources, without writes")
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--create-placeholder", metavar="EXPERT_SLUG", help="Create placeholder.svg from one expert's full name")
     args = parser.parse_args(argv)
     try:
+        if sum(bool(mode) for mode in (args.validate, args.preview, args.release, args.check, args.create_placeholder)) > 1:
+            raise ValueError("Choose only one of --validate, --preview, --release, --check or --create-placeholder")
         if args.create_placeholder:
-            if args.check:
-                raise ValueError("--create-placeholder cannot be combined with --check")
             destination = create_placeholder(args.root, args.create_placeholder)
-            print(f"Created {destination}; update the profile image and regenerate the catalogue.")
+            print(f"Created {destination}; update the profile image, validate sources and create a preview.")
             return 0
-        outputs = plan_outputs(args.root)
+        release_mode = args.release or args.check
+        outputs = plan_outputs(args.root, version=None if release_mode else PREVIEW_VERSION)
+        legacy = (set(args.root.glob("src/roles/*/codex/**/*.toml"))
+                  | set(args.root.glob("src/roles/*/claude/**/*.md")))
+        if legacy:
+            raise ValueError("Legacy per-profile exports require review: " + ", ".join(str(p.relative_to(args.root)) for p in sorted(legacy)))
+        if not release_mode:
+            if args.preview:
+                write_preview(args.root, args.preview, outputs)
+                print(f"Created unreleased preview at {args.preview}; source checkout unchanged.")
+            else:
+                print(f"Sources are valid; rendered {len(outputs)} preview outputs in memory. Retained release artifacts were not checked or changed.")
+            return 0
         existing = (set(args.root.glob("dist/**/*.toml")) | set(args.root.glob("dist/**/*.md"))
-                    | set(args.root.glob("src/roles/*/codex/**/*.toml"))
-                    | set(args.root.glob("src/roles/*/claude/**/*.md")))
+                    | legacy)
         obsolete = existing - {args.root / path for path in outputs}
         if obsolete:
             raise ValueError("Unexpected role or distribution files require review: " + ", ".join(str(p.relative_to(args.root)) for p in sorted(obsolete)))
