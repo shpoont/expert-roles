@@ -366,6 +366,16 @@ supply-chain-management:
   group: Management
   reference: http://data.europa.eu/esco/skill/f929c89e-c363-4132-a918-e021d57b307c
 
+system-dynamics:
+  name: System dynamics
+  group: Systems science
+  reference: https://www.wikidata.org/wiki/Q598451
+
+systems-thinking:
+  name: Systems thinking
+  group: Systems science
+  reference: https://www.wikidata.org/wiki/Q1340474
+
 technology-adoption-lifecycle:
   name: Technology adoption lifecycle
   group: Marketing

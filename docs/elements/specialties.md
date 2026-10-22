@@ -75,7 +75,7 @@ data is later copied into the repository.
 
 ## Current implementation
 
-[src/specialties.yaml](../../src/specialties.yaml) contains eighty-two mapped entries.
+[src/specialties.yaml](../../src/specialties.yaml) contains eighty-four mapped entries.
 Each has exactly three required fields:
 
 - `name`: the common display label, using a preferred source term or recognized alias.
@@ -97,11 +97,18 @@ The phrase contributes only to the generated description; generic activities
 remain part of the assignment and execution behavior stays in the shared instruction.
 
 Animal behavior, Computing, Design, Finance, Law, Management, Marketing,
-Philosophy, Psychology and Sales are the current navigation groups. Specialty
+Philosophy, Psychology, Sales and Systems science are the current navigation
+groups. Specialty
 rows are sorted by name within each group; unassigned terms and empty groups
 are not displayed. Profiles list their most useful specialties first.
 
 ### Mapping history
+
+System dynamics and Systems thinking use Wikidata's field concepts (Q598451
+and Q1340474) in the proposed Systems science navigation group. ESCO's Systems
+thinking entry is explicitly scoped to a logistic system; it is not substituted
+for the broader systems approach used here. System dynamics search results did
+not supply the intended field.
 
 The notes below retain the sequence of vocabulary additions, including the
 profiles that were pending at each earlier step. All accepted profiles are now

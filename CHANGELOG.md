@@ -5,6 +5,11 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+### Added
+
+- Proposed Donella Meadows source profile, metadata and full-name placeholder.
+- System dynamics and Systems thinking in the shared specialty vocabulary.
+
 ### Changed
 
 - Separate source contributions from maintainer release preparation. Ordinary
