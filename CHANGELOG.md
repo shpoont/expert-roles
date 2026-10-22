@@ -11,6 +11,8 @@ Record meaningful changes by version under the
   portrait, with public research references and an emphasis on precise
   specifications, safety, liveness and fairness.
 - Formal methods and Concurrent computing in the shared Computing vocabulary.
+- Proposed Donella Meadows source profile, metadata and full-name placeholder.
+- System dynamics and Systems thinking in the shared specialty vocabulary.
 
 ### Changed
 
