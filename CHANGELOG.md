@@ -5,6 +5,11 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+### Added
+
+- Proposed Atul Gawande source profile, metadata and credited studio portrait.
+- General surgery, Health services research and Patient safety in the shared specialty vocabulary.
+
 ### Changed
 
 - Separate source contributions from maintainer release preparation. Ordinary

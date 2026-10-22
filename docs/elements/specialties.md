@@ -75,7 +75,7 @@ data is later copied into the repository.
 
 ## Current implementation
 
-[src/specialties.yaml](../../src/specialties.yaml) contains eighty-two mapped entries.
+[src/specialties.yaml](../../src/specialties.yaml) contains eighty-five mapped entries.
 Each has exactly three required fields:
 
 - `name`: the common display label, using a preferred source term or recognized alias.
@@ -97,11 +97,18 @@ The phrase contributes only to the generated description; generic activities
 remain part of the assignment and execution behavior stays in the shared instruction.
 
 Animal behavior, Computing, Design, Finance, Law, Management, Marketing,
-Philosophy, Psychology and Sales are the current navigation groups. Specialty
+Medicine, Philosophy, Psychology and Sales are the current navigation groups.
+Specialty
 rows are sorted by name within each group; unassigned terms and empty groups
 are not displayed. Profiles list their most useful specialties first.
 
 ### Mapping history
+
+General surgery uses ESCO's medical specialty d62c361a-d772-4009-a6c3-cfc10e5a51f1.
+Health services research and Patient safety use Wikidata concepts Q2518253 and
+Q1475557; ESCO searches primarily returned activities or adjacent subjects.
+The proposed Medicine navigation group keeps the clinical and health-services
+scope explicit; these labels do not imply expertise in every operational domain.
 
 The notes below retain the sequence of vocabulary additions, including the
 profiles that were pending at each earlier step. All accepted profiles are now
