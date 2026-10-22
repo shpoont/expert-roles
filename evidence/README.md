@@ -9,6 +9,46 @@ Connect evidence to [current work](../docs/current-work.md),
 [decisions](../docs/decisions.md), [checks](../tests/README.md) and
 [delivery](../docs/delivery.md).
 
+## Contribution and release separation — 2026-10-22
+
+D056 separates canonical source contributions from release-owned versions and
+generated artifacts. **54 tests pass**, including nine new disposable-Git
+regressions for ownership, source-only additions/corrections/removals, isolated
+previews, invalid inputs and strict stable-release validation. Validation and
+preview checks compare before/after trees to establish that the checkout stays
+unchanged. Preview outputs carry `0.0.0-preview`; committed `VERSION` stays
+`1.1.0`.
+
+An integration exercise used the existing mixed contribution in a disposable
+clone with the proposed process implementation. The actual workflow shell step
+rejects its release-owned edits, including its development version, distribution
+files and generated catalogue blocks. A source-only equivalent passes source
+validation, the full 54-test suite and PR, main-push and manual workflow routing.
+Its isolated preview contains 58 experts and both new native files; the retained
+distribution still contains 57. A separate prepared stable-release fixture
+passes strict freshness for all 121 outputs, release-labeled PR routing,
+main-push routing and an explicit manual release run. A missing release label,
+unchanged/development version or source-mode release run is rejected as expected.
+These are local fixtures, not roster acceptance, project commits or publication.
+
+All 298 protected files retain their baseline hashes, including the 114 native
+exports, expert profiles/metadata/visuals, templates, vocabulary and `VERSION`.
+Generated README blocks are unchanged. UTF-8, public-tree review and whitespace
+checks pass, and local links resolve in both the checkout and isolated preview.
+The generator now renders updated index guidance in previews; the three retained
+distribution READMEs keep their release bytes until the next release, as required
+by the new ownership rule. Their expected strict-check drift is not a source
+validation failure.
+
+The workflow uses pinned actions and uploads a seven-day review artifact after
+successful validation. Local execution checks the routing shell; hosted Actions
+execution and artifact upload require separate exact-commit delivery readback.
+The owner subsequently authorizes a signed process commit and ordinary main
+push. Check its hosted workflow and artifact before reporting enforcement.
+The updated portrait walkthrough protocol has
+not been rerun with a fresh image-generation session. Existing likeness, rights
+review and host-runtime limits are unchanged.
+
 ## Project Structure adoption — 2026-10-18
 
 - Reference: Project Structure v1.0.0, commit

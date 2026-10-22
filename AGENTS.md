@@ -1,16 +1,29 @@
 # Expert Roles library guidance
 
-Current work is D055's [v1.1.0 publication](docs/design.md#publish-expert-roles-v110).
-The owner authorizes a signed release commit, an ordinary push of main, an
-annotated v1.1.0 tag and publication as the latest stable GitHub release. This
-supersedes the earlier no-commit/push boundaries for this release only. Require
-the exact-commit Checks workflow and validation check to conclude successfully
-before tagging. Preserve the published v1.0.0 tag, accepted image/profile bytes
-and parsed role instructions. No deployment or installation is included.
+Current work is D056's [contribution/release separation](docs/design.md#separate-contributions-from-release-preparation).
+Ordinary PRs contain canonical sources, relevant authored documentation and an
+Unreleased changelog note. Leave `VERSION`, `dist/` and generated README sections
+unchanged. Validate sources and review a separate `0.0.0-preview` tree. Routine
+expert additions do not need project-wide decision, status or release records;
+maintainers own those records. The source and contribution guides provide the
+tested commands. This current policy supersedes earlier instructions to include
+generated artifacts in each contribution, including text retained in old releases.
+
+Maintainers choose versions and regenerate committed artifacts in a separate
+PR labeled `release`. Require a new final stable version, a matching dated
+changelog and strict output freshness. CI always validates sources, tests and
+change ownership, and attaches an isolated preview. It publishes nothing.
+Preserve the delivered v1.1.0 baseline and fixed release tags. The owner now
+authorizes a signed commit and ordinary main push of these process changes,
+followed by exact-commit hosted checks. No new release, tag, installation or
+runtime test is included; this authority does not extend to subsequent work.
+D055's [v1.1.0 publication](docs/design.md#publish-expert-roles-v110) is complete;
+its authorization applies only to that release.
 Every current and future native export must carry generated source, version and
 expert ID comments under the [provenance convention](src/README.md#export-provenance).
-The root `VERSION` file supplies the whole-library version; v1.1.0 release
-exports use `1.1.0`. Keep Claude comments inside its YAML frontmatter and
+The root `VERSION` file supplies release exports' whole-library version;
+previews use `0.0.0-preview` without changing that file. v1.1.0 release exports
+use `1.1.0`. Keep Claude comments inside its YAML frontmatter and
 Codex comments outside its settings. D054 permits only these comment changes in
 the 114 native files; parsed names, descriptions and instructions must remain
 unchanged. Preserve the owner-accepted D053 portrait result: 40 generated
@@ -69,7 +82,7 @@ other candidates remain proposals. This review authorizes no roster changes.
 The owner accepted the compact main README and the updated full catalogue.
 Keep six featured experts in the main README and the
 [full catalogue](src/roles/README.md) beside the profiles. The
-[current work](docs/current-work.md#next-actions) records D055's release scope
+[current work](docs/current-work.md#next-actions) records D056's process scope
 and later follow-ups. Subsequent releases need their own owner authorization.
 The catalogue contains fifty-seven experts, with eighty-two
 specialties in ten groups. D050 accepted the earlier 29 generated portraits,
@@ -123,10 +136,13 @@ expanding this sample.
 Generate ready-to-use native files once under `dist/codex/` and `dist/claude/`,
 with a generated host chooser and alphabetical/specialty README indexes.
 Keep paths independent of specialties; use index links for overlapping fields.
-Edit sources and commit regenerated exports/indexes together when a commit is
-authorized. Check mode and CI must detect missing, changed, obsolete or duplicate
-exports, including copies in the former per-profile directories. The exporter
-never deletes unexpected files automatically. Consumers select `expert-*.toml`
+Keep contribution sources separate from release outputs. The generator defaults
+to source validation; `--preview` writes a new external review tree, `--release`
+updates committed outputs and `--check` requires strict release freshness.
+Contribution CI rejects changes to release-owned files/sections; release CI
+detects missing, changed, obsolete or duplicate exports, including copies in the
+former per-profile directories. The exporter never deletes unexpected files
+automatically. Consumers select `expert-*.toml`
 or `expert-*.md` files; the READMEs provide navigation.
 Require exactly one square visual for every expert: a credited 512 × 512 RGB
 JPEG named `portrait.jpg`, or `placeholder.svg` created from the
@@ -167,8 +183,10 @@ credited licenses. Referenced vocabulary labels retain their
 [source credits and terms](docs/elements/specialties.md#source-attribution).
 Public visibility does not authorize accepting third-party role text.
 
-Before implementing an approved piece of work, record its implementation
-contract and relevant checks in the design or linked element records. Keep
+Before implementing approved tooling or policy work, maintainers record its
+implementation contract and relevant checks in the design or linked element
+records. Routine expert contributors follow CONTRIBUTING without extending
+these project-wide records. Keep
 prepared checks, observed results, interpretations and pending outcomes distinct.
 Respect the owner's authorization and the current completion boundary. Do not
 turn structural validation into a claim that roles improve model performance.
@@ -178,7 +196,7 @@ in [CHANGELOG.md](CHANGELOG.md). Follow the
 [release convention](docs/delivery.md#versions-and-releases) when a release is
 authorized. Version guidance, dated changelog, commit, annotated tag and hosted
 release must identify the same baseline at publication. D055 authorizes these
-publication steps for v1.1.0 after completed hosted checks; its authority does
+publication steps only for the delivered v1.1.0 after completed hosted checks; its authority does
 not extend to later releases or installation. Keep
 records proportionate and link existing detail instead of copying
 it into competing sources.

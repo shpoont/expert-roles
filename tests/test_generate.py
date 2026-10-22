@@ -68,7 +68,7 @@ class GenerationContractTests(unittest.TestCase):
 
     def run_exporter(self, *args):
         with redirect_stdout(StringIO()), redirect_stderr(StringIO()):
-            return main(["--root", str(self.root), *args])
+            return main(["--root", str(self.root), *(args or ("--release",))])
 
     def test_unknown_specialty_does_not_write_partial_outputs(self):
         second = self.root / "src/roles/zz-invalid-expert"

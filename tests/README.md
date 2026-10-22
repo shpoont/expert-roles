@@ -3,6 +3,38 @@
 Checks follow the [project expectations](../PROJECT.md#scope-and-expectations)
 and [implementation contract](../docs/design.md#implementation-contract).
 
+## Contribution and release boundaries (D056)
+
+Use the [source commands](../src/README.md#generate-the-catalogue-and-native-files).
+For contributions, run the full suite, `src/generate.py --validate` and
+`src/check_changes.py --base origin/main` (or the specific ancestor commit).
+Inspect an external `--preview` tree and its links. Retained release artifacts
+may lag behind source changes; `--check` is not a contribution gate.
+
+Disposable Git fixtures exercise source-only additions, corrections and removals
+with retained exports; generated-region protection alongside authored README
+edits; untracked distribution files; fixed dated changelog history; isolated
+preview versions and assets; invalid inputs failing before writes; and stable
+release version/changelog/freshness requirements. Release checks retain obsolete
+and duplicate-file rejection. Preview creation excludes Git and environments and
+rejects existing/internal destinations. Compare the checkout before and after
+validation, preview and failed checks to establish that they do not rewrite it.
+
+The [Checks workflow](../.github/workflows/checks.yml) always runs the suite and
+source validation. Ordinary PRs reject release-owned edits; a maintainer's
+`release` label instead requires a greater final version, a dated changelog and
+strict output freshness. Main pushes with a version change use the release gate.
+Manual runs select their comparison base and mode explicitly. CI attaches the
+**expert-roles-preview** artifact and never commits, tags, publishes or installs.
+Check label addition/removal and PR, push and manual routing with the workflow's
+actual shell step; distinguish local simulation from completed hosted runs.
+
+For a prepared release, run `src/generate.py --release`, then `--check` and
+`src/check_changes.py --base origin/main --release`, the suite and release review.
+See the [release procedure](../docs/delivery.md#versions-and-releases).
+Historical baseline checks below retain their original scopes; current process
+ownership follows D056.
+
 ## Studio portrait refresh (D047, D048 and D049)
 
 D048's [studio-v1 rollout](../docs/design.md#reproducible-studio-portrait-method-and-catalogue-rollout)
@@ -12,8 +44,8 @@ palettes, pinned samples, changed input hashes, public-record boundaries, EXIF
 orientation, repeatable encoding and explicit replacement. Review direct eye
 contact and background distinctness visually; file tests cannot establish them.
 
-D049 adds a copyable credit block and provenance validation to both normal
-generation and read-only check mode, so the existing CI command enforces it.
+D049 adds a copyable credit block and provenance validation shared by source
+validation, preview generation and the strict release check, so CI enforces it.
 Tests reject missing/blank fields, inconsistent disclosures, malformed dates,
 unlinked terms and stable-recipe drift without partial exporter writes. Each
 Source entry needs its own terms; mixed-reference tests prevent a public-domain
@@ -50,13 +82,14 @@ requires matching source/version/ID comments in both formats, with Claude
 comments inside frontmatter. Regression checks change the whole-library version
 through development, release-candidate and stable values, confirm the parsed
 native fields and instructions stay identical, and require read-only drift
-detection. Missing or malformed versions must fail without writes. The existing
-CI suite and generated check enforce this for all exports.
+detection. Missing or malformed versions must fail without writes. The suite
+checks both formats; source validation renders preview provenance, and strict
+release validation checks committed export headers.
 
 | Check | Observable pass condition |
 | --- | --- |
 | Source layout | Profiles, specialties and templates live under `src/`; ready-to-use exports and generated indexes live under `dist/`. Generator paths, fixtures and links resolve in the adopted layout. |
-| Profile coverage | Each completed expert in the catalogue has a linked profile, valid photo or name visual and two portable native files. Accepted drafts outside the current addition step are accurately recorded. Missing photographs do not block a profile that uses standard name. |
+| Profile coverage | Each completed expert has a linked profile, valid photo or name visual and two portable native files in the preview and at release. Retained committed outputs may lag behind sources between releases. Missing photographs do not block a profile that uses a standard name. |
 | Expert selection guidance | The main README defines an expert, and the linked contribution criteria cover established expertise, accessible work, useful task fit and a preference for public familiarity within the field. Fame alone is insufficient; formal credentials are optional, and living and historical people may qualify. Existing profile fields support editorial selection, without claims of model familiarity or effectiveness. |
 | Profile layout | Every completed profile and the starter show linked specialties once, a short introduction, early role-file/setup links and one independent-AI notice. Suggested uses and references precede visible image provenance: a Photo credit for photographs or an Image section for generated images and placeholders. A collapsed Source files footer retains metadata and shared-instruction links. |
 | Metadata | Names and specialty lists are nonempty, identifiers are unique and all specialty references exist. An optional perspective is nonempty authored text; malformed values and unknown fields are rejected before generation or placeholder writes. Registry entries require name, group and an absolute HTTP(S) concept reference; duplicate names/concepts and invalid references are rejected before writes. |
@@ -70,7 +103,7 @@ CI suite and generated check enforce this for all exports.
 | README entry points | The main README has exactly six featured experts in two rows, a generated total and a full-catalogue link. The full alphabetical and specialty catalogue lives in src/roles/README.md. Adding an expert grows that catalogue and both counts without enlarging the sample. Authored text outside each marker pair survives; missing, duplicate, reversed, overlapping or nested boundaries fail before writes. Invalid curated sources also fail before writes. |
 | Native syntax | Codex files parse as TOML with the three required fields; Claude files have valid YAML frontmatter and a nonempty instruction body. |
 | Export provenance | Every native file has exactly one canonical source, validated whole-library version and correct expert ID comment. Both hosts agree; comments do not change parsed settings, descriptions or instruction bodies. VERSION changes require regeneration, and check mode detects stale headers without rewriting them. |
-| Generated consistency | Exporter check mode reports no missing, changed or obsolete generated role files, distribution indexes or catalogue content. It rejects legacy and nested duplicate exports before writes and never deletes them automatically. |
+| Generated consistency | At release, check mode reports no missing, changed or obsolete generated role files, indexes or catalogue content. It rejects legacy and nested duplicate exports before writes and never deletes them automatically. Contribution validation renders current sources without requiring retained release freshness. |
 | Invalid input | An invalid profile sorted after a valid profile is rejected before outputs are written; malformed metadata is also rejected. |
 | Multiple specialties | Both host files retain Goldratt's identity and all four assigned specialty labels. |
 | Navigation | Relative Markdown file links, local HTML image references, heading anchors and explicit canonical specialty anchors resolve. Named specialty links land on the exact row; IDs remain stable across label/group changes. |
@@ -84,7 +117,7 @@ CI suite and generated check enforce this for all exports.
 | Starter profile | The documented starter can be copied, completed with name and generated into a linked catalogue entry and valid native files without changing the real expert collection. Exact instructions also explain replacing name with a permitted photo and restoring name. |
 | Git boundary | Diff has no whitespace errors. D055 authorizes v1.1.0's signed release commit, main push, annotated tag and latest stable release after completed exact-commit hosted checks. Earlier local-only boundaries remain historical. Deployment and temporary host validation remain separate. |
 
-Run the exporter in check mode as described in [src](../src/README.md).
+Run the appropriate contribution or release commands described in [src](../src/README.md).
 Record actual results, baseline and limitations in
 [evidence](../evidence/README.md). Review the rendered catalogue and profiles
 before handover; source validity alone does not establish a good presentation.

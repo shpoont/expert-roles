@@ -14,8 +14,9 @@ per expert and host. The [Codex](../dist/codex/README.md) and
 [Claude Code](../dist/claude/README.md) indexes provide alphabetical and specialty
 navigation from this same metadata. Specialty assignments affect index links,
 not file paths; an expert may appear under several specialties without duplicate
-exports. Native files and all three distribution indexes are generated and
-committed alongside their sources.
+exports. Native files, all three distribution indexes and generated catalogue
+sections are committed during release preparation. Between releases they may
+lag behind canonical sources; review contributions in a separate preview.
 Both formats share the [whole-library version](../README.md#versions-and-releases).
 Consumers pin a released tag or full commit for reproducible imports.
 
@@ -133,12 +134,13 @@ body are unchanged. These are file provenance for people and consuming tools,
 not host configuration fields or additions to the description or instructions.
 The hosts do not automatically display or act on these comments.
 
-Keep `VERSION` as one Semantic Version without a `v` prefix. A `-dev` value
-marks unfinalized development exports; it does not identify an exact snapshot
-or prove publication. Consumers still pin a released tag or commit. During
-[release preparation](../docs/delivery.md#versions-and-releases), set the intended
-final version and regenerate. Missing or malformed versions fail before export writes;
-check mode detects stale or edited provenance. Do not add generation timestamps,
+Keep `VERSION` as one Semantic Version without a `v` prefix. Contributions leave
+it unchanged; temporary previews use `0.0.0-preview` without changing the checkout.
+A version comment does not identify an exact snapshot or prove publication.
+Consumers still pin a released tag or commit. Maintainers set the intended final
+stable version during [release preparation](../docs/delivery.md#versions-and-releases).
+Missing or malformed release versions fail before export writes; strict check
+mode detects stale or edited provenance. Do not add generation timestamps,
 machine paths or Git-dependent values: the same source files must generate the
 same exports in an ordinary checkout or a source archive.
 
@@ -152,19 +154,59 @@ python -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 ```
 
-Then [choose the profile image](#choose-the-profile-image). Generate the catalogue
-and role files after that required image is ready.
+Then [choose the profile image](#choose-the-profile-image). Validate and preview
+the contribution after that required image is ready.
 
 ## Generate the catalogue and native files
 
 With the [Python environment](#prepare-the-python-environment) prepared and
-every profile's required image present, run from the repository root:
+every profile's required image present, validate from the repository root:
 
 ```sh
-.venv/bin/python src/generate.py
+.venv/bin/python src/generate.py --validate
+.venv/bin/python -m unittest discover -s tests -v
+.venv/bin/python src/check_changes.py --base origin/main
 ```
 
-The exporter reads [VERSION](../VERSION), [specialties.yaml](specialties.yaml), each expert's metadata
+The boundary check compares your working tree with an ancestor Git ref. Use
+`origin/main` when it is an ancestor of your feature branch, or the specific
+common base commit. It includes untracked files. In a downloaded source archive,
+source validation and previews work without Git; run the boundary check in the
+Git checkout used for the PR. Running the generator without an action also
+validates only. Source validation renders everything in memory, checking all
+profiles, images, credits, vocabulary, shared templates and generated syntax.
+It does not require retained release artifacts to match current sources.
+
+Create a browsable review copy in a **new directory outside the checkout**:
+
+```sh
+.venv/bin/python src/generate.py --preview /tmp/expert-roles-review
+```
+
+The preview includes profiles, images, documentation, both native formats and
+their indexes. Start with its `README.md` or `src/roles/README.md`; relative links
+target the preview's outputs. Its native comments use `0.0.0-preview`, and its
+entry points identify it as unreleased. Git metadata, environments and caches
+are excluded. An existing destination is rejected; choose a new review directory
+for each run. The source checkout and its `VERSION` stay unchanged. CI attaches
+the same tree as the **expert-roles-preview** artifact for seven days.
+
+Submit canonical sources, relevant authored documentation and an **Unreleased**
+changelog note. Leave `VERSION`, `dist/`, the source catalogue's generated block
+and the main README's generated blocks untouched. New profile download links and
+specialty anchors resolve in the preview before the next release; they need not
+exist yet in the retained distribution. Routine expert additions do not need
+project-wide decision, status or release records.
+
+Maintainers prepare committed artifacts in a separate
+[release PR](../docs/delivery.md#versions-and-releases). After choosing `VERSION`:
+
+```sh
+.venv/bin/python src/generate.py --release
+.venv/bin/python src/generate.py --check
+```
+
+Release generation reads [VERSION](../VERSION), [specialties.yaml](specialties.yaml), each expert's metadata
 and [the shared instruction](templates/invocation.md). It updates the full
 catalogue in `src/roles/README.md`, the summary and featured sections in the
 main README, the native files under `dist/codex/` and `dist/claude/`, and all
@@ -207,15 +249,13 @@ The six `(expert slug, specialty ID)` pairs in `FEATURED_EXPERTS` within
 `src/generate.py` curate the main README sample for breadth of subjects and
 perspectives. Every selected expert must exist and have the displayed specialty
 assigned in canonical metadata. Names, visuals and labels are read from their
-sources. Adding an expert updates the full catalogue and total without enlarging
-the sample; changing the showcase is a separate editorial choice.
+sources. In previews and release outputs, adding an expert updates the full
+catalogue and total without enlarging the sample; changing the showcase is a
+separate editorial choice.
 
-Check generated content without changing it:
-
-```sh
-.venv/bin/python src/generate.py --check
-.venv/bin/python -m unittest discover -s tests -v
-```
+`--check` is the strict release freshness check. It may fail between releases
+because retained artifacts intentionally lag behind source changes. This does
+not replace source validation or the contribution boundary check above.
 
 The tests cover invalid source rejection, read-only drift detection, authored
 content preservation in both READMEs, marker validation, fixed-size
@@ -229,12 +269,14 @@ output files are written. Unexpected native files are reported for review; the
 exporter does not delete them automatically. This includes obsolete exports,
 nested duplicate files and copies left in the former
 `src/roles/<slug>/codex/` or `claude/` locations. When removing or renaming an
-expert, review and remove their obsolete exports in the same change before
-regenerating. Check mode also reports missing or edited distribution indexes
-and native files without writing them. The
-[CI workflow](../.github/workflows/checks.yml) runs the suite and this read-only
-consistency check; it does not regenerate or commit changes. Include updated
-outputs with source changes, and keep temporary archives/build files out of Git.
+expert, leave released exports in place in the contribution; maintainers review
+and remove obsolete exports in the release change before regenerating. Check
+mode also reports missing or edited distribution indexes and native files
+without writing them. The [CI workflow](../.github/workflows/checks.yml) always
+runs the suite, source validation, a change-boundary check and an isolated preview.
+A maintainer's `release` PR label selects strict release validation; ordinary
+PRs reject release-owned edits. No CI step commits, publishes or installs roles.
+Keep preview directories and temporary archives out of Git.
 Catalogue display text is escaped
 for Markdown; names and specialty labels retain their original values in native
 files. Perspective whitespace is normalized as described above.
@@ -266,8 +308,8 @@ metadata and profile, and [preparing Python](#prepare-the-python-environment):
 
    ```sh
    .venv/bin/python src/generate.py --create-placeholder your-expert
-   .venv/bin/python src/generate.py
-   .venv/bin/python src/generate.py --check
+   .venv/bin/python src/generate.py --validate
+   .venv/bin/python src/generate.py --preview /tmp/expert-roles-review
    .venv/bin/python -m unittest discover -s tests -v
    ```
 
@@ -275,7 +317,7 @@ The first command reads the name from `expert.yaml`, escapes it for XML and
 creates only that expert's `placeholder.svg` from the
 [shared template](templates/placeholder.svg). It does not overwrite an existing
 photo or SVG, generate role files or change other profiles. The following
-commands generate and check the catalogue and native files.
+commands validate sources and generate a separate catalogue/native-file preview.
 
 The command wraps the full name across centered lines and adjusts the type size
 to fit. Keep the template's size, colors, typography and accessible title.

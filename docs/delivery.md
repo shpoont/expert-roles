@@ -14,8 +14,10 @@ Review images and their provenance using the
 [portrait workflow](elements/portraits.md). Historical depictions remain unchanged;
 generation applies only to supported photographic subjects. The adopted style
 uses direct eye contact, a new studio sitting and an individual moderately muted
-background. The documented method, shared prompt and helper are locally checked:
-43 tests pass and all 119 generated files match. The owner accepted the final
+background. The published v1.1.0 baseline passed 45 tests and matched all 119
+generated files. D056's contribution/release process has its own
+[checks and evidence](../evidence/README.md#contribution-and-release-separation--2026-10-22).
+The owner accepted the final
 image selections; file checks do not verify likeness. D049 adds the copyable
 credit block and repository validation. The independent
 [fresh-session walkthrough](../tests/portrait-walkthrough.md) completed one
@@ -23,10 +25,10 @@ temporary Grace Hopper contribution in a disposable copy, with actual built-in
 generation and screenshot-backed profile/catalogue review. See the
 [bounded results](../evidence/README.md#independent-portrait-contribution-walkthrough--2026-10-21).
 This does not establish repeatability; owner acceptance is recorded separately.
-D052's signed local squash is retained. D055 authorizes finalizing D053's
-accepted portraits and D054's provenance standard into the v1.1.0 release,
-with a signed commit, ordinary main push, completed exact-commit hosted checks,
-annotated tag and latest stable GitHub release. Deployment remains separate.
+D052's signed local squash is retained. D055 delivered D053's accepted portraits
+and D054's provenance standard in v1.1.0, with a signed commit, completed
+exact-commit hosted checks, annotated tag and latest stable GitHub release.
+That authority applies only to the delivered release; deployment remains separate.
 
 The catalogue remains broad under D038 and uses D037's adopted criteria.
 D039 implements the owner's ten selected additions and Rybka removal; D040
@@ -64,9 +66,10 @@ the README files provide navigation. Retain [LICENSE](../LICENSE) and the
 material as applicable. The profiles hold the separate portrait credits.
 
 Native files and distribution indexes are generated and committed with their
-sources. Edit source metadata or shared templates, then
-[regenerate and check](../src/README.md#generate-the-catalogue-and-native-files).
-CI checks consistency without rewriting files. The exporter reports obsolete
+sources during release preparation. Source contributions use a
+[separate preview](../src/README.md#generate-the-catalogue-and-native-files)
+and leave these files unchanged. CI checks contribution ownership or release
+consistency without rewriting the checkout. The exporter reports obsolete
 or duplicate files for review rather than deleting them. Temporary release
 archives and build/cache files are excluded from Git.
 
@@ -223,8 +226,9 @@ and other integrations keep independent histories. Individual experts and export
 formats do not have separate versions.
 
 The root [VERSION](../VERSION) file is the machine-readable source for export
-provenance, finalized as `1.1.0` for this release. Use a development suffix for
-unfinalized future exports. A version header identifies a declared library version, not proof of publication or an
+provenance, finalized as `1.1.0` for this release. Contributions leave it unchanged;
+temporary previews use `0.0.0-preview` independently. A version header identifies
+a declared library version, not proof of publication or an
 exact content digest. Keep released tags fixed and use Git refs for snapshots.
 
 Choose the increment by its effect on users and consumers:
@@ -245,16 +249,56 @@ Preparation, local commits and publication follow the owner's current
 authorization. D055 authorizes v1.1.0 publication; future releases need their
 own owner instruction. Complete the applicable steps below:
 
-1. Review scope, compatibility impact and evidence; choose the intended version.
-2. Set `VERSION` to the final version, without `v` or a development suffix for a
+### Source contribution
+
+Submit canonical profile/metadata/image changes, necessary vocabulary or tooling
+changes, relevant authored documentation and an **Unreleased** changelog entry.
+Leave `VERSION`, `dist/` and all generated README sections unchanged. Routine
+expert additions do not require project-wide status, decision or release records.
+Validate sources, run the suite and inspect an isolated preview using the
+[source commands](../src/README.md#generate-the-catalogue-and-native-files).
+
+Ordinary PRs have no `release` label. CI rejects release-owned edits and attaches
+an unreleased **expert-roles-preview** artifact for review. Retained distribution
+and catalogue files intentionally reflect the last prepared release; new profile
+links and specialty anchors are reviewed in the preview. Merge approved sources
+under the owner's authorization; they become distributed additions at release.
+
+### Maintainer release PR
+
+1. Review accepted changes since the last release, compatibility impact and
+   evidence; choose the intended version. Create a separate release PR and apply
+   the maintainer-controlled `release` label (create that label when first used).
+   The label explicitly selects strict release validation; it does not publish.
+2. Set `VERSION` to the final stable version, without `v` or a development suffix, for a
    stable release. Finalize the dated changelog entry and update the main README
    and this guide's baseline references. Leave **Unreleased** for subsequent work.
-   Regenerate and run the [checks](../tests/README.md), including export headers,
+   Run `src/generate.py --release`, then the [checks](../tests/README.md), including export headers,
    local links, native consistency and applicable source/content preservation.
    `VERSION`, both formats' comments and the intended tag must agree.
-3. Commit the exact intended contents using the configured signing identity,
-   verify the signature, and push. Require the hosted **Checks** workflow to
-   succeed for that exact commit before publishing.
+   Review and remove obsolete exports explicitly if experts were removed or
+   renamed; the generator never deletes them. Check the full release locally:
+
+   ```sh
+   .venv/bin/python src/generate.py --check
+   .venv/bin/python src/check_changes.py --base origin/main --release
+   .venv/bin/python -m unittest discover -s tests -v
+   ```
+
+3. Commit with the configured signing identity, verify the signature and submit
+   the release PR under the owner's authorization. CI requires a greater final
+   stable version, exactly one matching dated changelog heading, an Unreleased
+   heading and complete output freshness. Require successful review and checks,
+   then merge under the owner's authorization. The resulting main push receives
+   the same release validation because `VERSION` changed. Both the exact-commit
+   **Checks** workflow and its **validate** check must conclude successfully
+   before tagging; passing logs or an in-progress check are insufficient.
+
+### Tag and publish
+
+With the release PR merged, owner publication authorization and the exact main
+commit's successful hosted checks established:
+
 4. Create an annotated `vMAJOR.MINOR.PATCH` tag on that commit, verify its target
    and push the tag explicitly. Released tags stay fixed; corrections require
    a new version. Consumers pin a released tag or full commit.
@@ -267,6 +311,12 @@ own owner instruction. Complete the applicable steps below:
 6. Read back the remote commit, tag target, release metadata/notes and relevant
    source files. Confirm the local tree is clean. Keep preparation evidence
    distinct from successful publication; a commit alone does not make a release.
+
+The workflow never tags or publishes automatically. For a manual **Checks** run,
+select an ancestor comparison `base` and enable `release` only for a prepared
+release. PR runs select that mode from the `release` label; main pushes select
+it when their diff changes `VERSION`. Adding or removing the label reruns checks.
+Source-only main pushes continue to pass while released artifacts lag behind.
 
 ### v1.1.0 release baseline
 

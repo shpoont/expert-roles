@@ -242,11 +242,12 @@ shared role instructions and native Codex and Claude bytes during portrait-only
 work. Check that all experts have an explicit generated-or-retained outcome.
 Report rejected or unsupported replacements separately from successful file checks.
 
-The normal generator and its read-only **--check** path validate the generated
+Source validation, previews and the strict release **--check** path validate the generated
 Image block, accessible hero label, style/variant/palette/flow, tool/date/model,
 method, changes and linked output/reference terms before any export writes.
 They reject stale generated credits on a placeholder and missing portrait credit
-sections. CI runs this same path. These checks inspect declared metadata, not
+sections. CI always runs source validation; contributions review a separate
+preview and leave committed release outputs unchanged. These checks inspect declared metadata, not
 the truth of a license claim or a visual likeness. Source permissions, completeness
 of supplied-reference credits and visual quality still need review.
 

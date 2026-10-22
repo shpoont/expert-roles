@@ -56,12 +56,15 @@ describe the expert's emphasis; the assignment supplies the activities.
    the [exact image instructions](src/README.md#choose-the-profile-image).
    Portraits need provenance, applicable terms, edits and **Source** links.
    Placeholders need an **Image** section identifying the placeholder.
-4. Run the [generator and checks](src/README.md#generate-the-catalogue-and-native-files),
-   then review the catalogue, profile and links. Replace every unfilled `{{...}}`
-   field and include source changes and regenerated outputs in the pull request.
+4. [Validate and create a separate preview](src/README.md#generate-the-catalogue-and-native-files),
+   then review its catalogue, profile, role files and links. Replace every
+   unfilled `{{...}}` field. Submit the profile sources, necessary specialty
+   changes and an **Unreleased** changelog note.
 
-Record meaningful changes under **Unreleased** in [CHANGELOG.md](CHANGELOG.md).
-Maintainers assign the release version using the [release guide](docs/delivery.md#versions-and-releases).
+Leave `VERSION`, `dist/` and generated README sections unchanged. Maintainers
+update them in a separate [release PR](docs/delivery.md#versions-and-releases).
+Routine expert additions do not need project-wide status, decision or release
+records. Add authored documentation only where the contribution needs it.
 
 ## Profile image
 
@@ -150,7 +153,8 @@ check the individual file's terms, not the article's text license.
 holds the name, specialty IDs and optional `perspective`. Native files under
 `dist/codex/` and `dist/claude/`, all three distribution indexes and both catalogue
 entry points' marked sections are generated. Edit sources and regenerate;
-include source changes and updated outputs together. Both hosts
+review new outputs in the separate preview, leaving committed outputs for release
+preparation. Both hosts
 use the same description and all experts use the shared execution instruction.
 
 Submit original contributions under [MIT](LICENSE), and only contribute material
