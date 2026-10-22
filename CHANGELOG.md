@@ -17,6 +17,7 @@ Record meaningful changes by version under the
 - System safety and Systems engineering in the shared specialty vocabulary.
 - Proposed Daniel Jackson source profile, metadata and credited studio portrait.
 - Formal methods in the shared specialty vocabulary.
+- Proposed David Parnas source profile, metadata and credited studio portrait.
 
 ### Changed
 
