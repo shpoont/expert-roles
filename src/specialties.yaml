@@ -366,6 +366,16 @@ supply-chain-management:
   group: Management
   reference: http://data.europa.eu/esco/skill/f929c89e-c363-4132-a918-e021d57b307c
 
+system-safety:
+  name: System safety
+  group: Engineering
+  reference: https://www.wikidata.org/wiki/Q7663745
+
+systems-engineering:
+  name: Systems engineering
+  group: Engineering
+  reference: https://www.wikidata.org/wiki/Q682496
+
 technology-adoption-lifecycle:
   name: Technology adoption lifecycle
   group: Marketing

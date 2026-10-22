@@ -5,6 +5,11 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+### Added
+
+- Proposed Nancy Leveson source profile, metadata and credited studio portrait.
+- System safety and Systems engineering in the shared specialty vocabulary.
+
 ### Changed
 
 - Separate source contributions from maintainer release preparation. Ordinary
