@@ -1,0 +1,8 @@
+name: Leslie Lamport
+specialties:
+  - formal-methods
+  - distributed-computing
+  - concurrent-computing
+perspective: >-
+  precise state-machine specifications, safety, liveness and fairness,
+  with explicit assumptions about concurrent and distributed behavior
