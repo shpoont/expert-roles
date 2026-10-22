@@ -18,7 +18,13 @@ roster changes.
 
 ## Scope and expectations
 
-The current catalogue contains fifty-seven experts, eighty-two specialties in
+D056 proposes [Leslie Lamport's contribution](docs/design.md#leslie-lamport-contribution)
+through one pull request. The working catalogue has 58 experts and 84 specialties
+in ten groups, with 41 generated portraits, five historical depictions and twelve
+full-name placeholders. The added profile and portrait await owner review.
+Working exports use `1.2.0-dev`; no new release or installation is included.
+
+The published v1.1.0 catalogue contains fifty-seven experts, eighty-two specialties in
 ten groups, forty generated portraits, five original historical depictions and
 twelve full-name placeholders in the working tree. The owner accepted D053's
 eleven additional portraits; the earlier 29 generated images remain unchanged
@@ -135,9 +141,10 @@ This repository follows [Project Structure v1.0.0](https://github.com/shpoont/pr
 commit `96fdd6bd7950778f5b6c6f8269ab2b82167cb99a`. Expert sources live under
 `src/`; the full catalogue is generated in `src/roles/README.md`, with a fixed
 six-expert showcase and generated count in the main README. Ready-to-use
-exports and their indexes live under `dist/`. The library version is `v1.1.0`,
+exports and their indexes live under `dist/`. The latest published library version is `v1.1.0`,
 independently versioned from the starter and consuming integrations. The
-canonical `VERSION` file and both hosts' provenance comments use `1.1.0`.
+canonical `VERSION` file and both hosts' working provenance comments use
+`1.2.0-dev` for D056's proposed addition; the fixed release uses `1.1.0`.
 The [release record](https://github.com/shpoont/expert-roles/releases/tag/v1.1.0)
 and annotated tag identify the hosted snapshot; the published v1.0.0 baseline
 remains fixed. See the

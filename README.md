@@ -9,7 +9,7 @@ The featured experts are not affiliated with or endorsing this project.
 
 <!-- BEGIN GENERATED SUMMARY -->
 
-**57 experts · Codex and Claude Code role files**
+**58 experts · Codex and Claude Code role files**
 
 <!-- END GENERATED SUMMARY -->
 
@@ -86,7 +86,7 @@ Corporate finance
 </tr>
 </table>
 
-**[Browse all 57 experts by name or specialty →](src/roles/README.md)**
+**[Browse all 58 experts by name or specialty →](src/roles/README.md)**
 
 <!-- END GENERATED FEATURED -->
 

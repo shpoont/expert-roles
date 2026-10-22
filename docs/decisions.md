@@ -1179,3 +1179,15 @@ validation remain separate from this addition.
   v1.0.0 and verify remote delivery. This supersedes the earlier no-commit/push
   boundaries for this release; installation remains separate. Follow the
   [publication contract](design.md#publish-expert-roles-v110).
+
+## D056 — 2026-10-22: Propose Leslie Lamport through a pull request
+
+- **Status:** Owner-authorized contribution; roster and portrait review pending.
+- **Decision:** Add Leslie Lamport as the first proposed extension beyond the
+  published catalogue, following CONTRIBUTING and the existing profile,
+  vocabulary, portrait and export conventions. His distributed and concurrent
+  systems research and formal specification work complement the collection.
+- **Boundary:** Prepare a signed commit and one reviewable pull request. Use
+  `1.2.0-dev` for working exports and preserve published releases and existing
+  role behavior. No merge, release, installation or further expert addition is
+  included. Follow the [contribution contract](design.md#leslie-lamport-contribution).

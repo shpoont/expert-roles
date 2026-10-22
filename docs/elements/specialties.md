@@ -75,7 +75,7 @@ data is later copied into the repository.
 
 ## Current implementation
 
-[src/specialties.yaml](../../src/specialties.yaml) contains eighty-two mapped entries.
+[src/specialties.yaml](../../src/specialties.yaml) contains eighty-four mapped entries.
 Each has exactly three required fields:
 
 - `name`: the common display label, using a preferred source term or recognized alias.
@@ -102,6 +102,14 @@ rows are sorted by name within each group; unassigned terms and empty groups
 are not displayed. Profiles list their most useful specialties first.
 
 ### Mapping history
+
+D056 adds Formal methods and Concurrent computing under Computing for the
+proposed Leslie Lamport profile. ESCO search returned activities such as
+Verify formal ICT specifications and Use concurrent programming; these are not
+substituted for the fields. Wikidata's precise Formal methods (Q1049183) and
+Concurrent computing (Q128392) concepts match the intended meanings. Lamport
+also reuses Distributed computing. Existing definitions, navigation groups and
+the three-field schema are unchanged; roster acceptance awaits PR review.
 
 The notes below retain the sequence of vocabulary additions, including the
 profiles that were pending at each earlier step. All accepted profiles are now

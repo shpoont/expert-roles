@@ -5,6 +5,20 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+### Added
+
+- Leslie Lamport's profile and generated Codex and Claude Code roles, with a
+  reference-based studio portrait, public research references and an emphasis
+  on precise specifications, safety, liveness and fairness.
+- Formal methods and Concurrent computing in the shared Computing vocabulary;
+  the proposed catalogue now contains 58 experts and 84 specialties in ten groups.
+
+### Changed
+
+- Mark working exports as `1.2.0-dev` for the compatible catalogue addition.
+  Existing role settings and instructions are preserved; published releases
+  remain fixed. The new profile and portrait await pull-request review.
+
 ## v1.1.0 — 2026-10-22
 
 Compatible portrait contribution tooling, broader studio-portrait coverage and

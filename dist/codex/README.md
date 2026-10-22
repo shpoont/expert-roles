@@ -5,7 +5,7 @@
 [Other formats](../README.md) · [Setup guide](../../docs/delivery.md#use-a-native-role) ·
 [Full catalogue](../../src/roles/README.md)
 
-**57 role files.** Each expert has one file in this directory.
+**58 role files.** Each expert has one file in this directory.
 An expert may appear under several specialties below.
 
 For programmatic imports, select `expert-*.toml` files.
@@ -54,6 +54,7 @@ Use your browser's Find (Cmd+F or Ctrl+F) to find a known expert.
 | [Kenneth A. Adams](../../src/roles/kenneth-adams/README.md) | [expert-kenneth-adams.toml](expert-kenneth-adams.toml) |
 | [Kent Beck](../../src/roles/kent-beck/README.md) | [expert-kent-beck.toml](expert-kent-beck.toml) |
 | [Lawrence Lessig](../../src/roles/lawrence-lessig/README.md) | [expert-lawrence-lessig.toml](expert-lawrence-lessig.toml) |
+| [Leslie Lamport](../../src/roles/leslie-lamport/README.md) | [expert-leslie-lamport.toml](expert-leslie-lamport.toml) |
 | [Léonie Watson](../../src/roles/leonie-watson/README.md) | [expert-leonie-watson.toml](expert-leonie-watson.toml) |
 | [Mark Roberge](../../src/roles/mark-roberge/README.md) | [expert-mark-roberge.toml](expert-mark-roberge.toml) |
 | [Martin Fowler](../../src/roles/martin-fowler/README.md) | [expert-martin-fowler.toml](expert-martin-fowler.toml) |
@@ -98,13 +99,15 @@ in [By name](#by-name) or compare experts in the [full catalogue](../../src/role
 | <a id="specialty-bayesian-networks"></a>Bayesian networks | [Judea Pearl](expert-judea-pearl.toml) |
 | <a id="specialty-causal-inference"></a>Causal inference | [Judea Pearl](expert-judea-pearl.toml) |
 | <a id="specialty-computational-neuroscience"></a>Computational neuroscience | [Jeff Hawkins](expert-jeff-hawkins.toml) |
+| <a id="specialty-concurrent-computing"></a>Concurrent computing | [Leslie Lamport](expert-leslie-lamport.toml) |
 | <a id="specialty-cyber-security"></a>Cyber security | [Ross Anderson](expert-ross-anderson.toml) |
 | <a id="specialty-deep-learning"></a>Deep learning | [Andrej Karpathy](expert-andrej-karpathy.toml), [Andrew Ng](expert-andrew-ng.toml) |
 | <a id="specialty-devops"></a>DevOps | [Nicole Forsgren](expert-nicole-forsgren.toml) |
-| <a id="specialty-distributed-computing"></a>Distributed computing | [Martin Kleppmann](expert-martin-kleppmann.toml) |
+| <a id="specialty-distributed-computing"></a>Distributed computing | [Leslie Lamport](expert-leslie-lamport.toml), [Martin Kleppmann](expert-martin-kleppmann.toml) |
 | <a id="specialty-domain-driven-design"></a>Domain-driven design | [Eric Evans](expert-eric-evans.toml) |
 | <a id="specialty-enterprise-architecture"></a>Enterprise architecture | [Jeanne Ross](expert-jeanne-ross.toml) |
 | <a id="specialty-extreme-programming"></a>Extreme programming | [Kent Beck](expert-kent-beck.toml) |
+| <a id="specialty-formal-methods"></a>Formal methods | [Leslie Lamport](expert-leslie-lamport.toml) |
 | <a id="specialty-large-language-models"></a>Large language models | [Andrej Karpathy](expert-andrej-karpathy.toml), [Chip Huyen](expert-chip-huyen.toml) |
 | <a id="specialty-machine-learning"></a>Machine learning | [Andrej Karpathy](expert-andrej-karpathy.toml), [Andrew Ng](expert-andrew-ng.toml), [Chip Huyen](expert-chip-huyen.toml) |
 | <a id="specialty-security-engineering"></a>Security engineering | [Ross Anderson](expert-ross-anderson.toml) |

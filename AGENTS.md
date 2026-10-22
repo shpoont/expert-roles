@@ -1,6 +1,13 @@
 # Expert Roles library guidance
 
-Current work is D055's [v1.1.0 publication](docs/design.md#publish-expert-roles-v110).
+Current work is D056's [Leslie Lamport contribution](docs/design.md#leslie-lamport-contribution).
+Prepare one reviewable pull request under CONTRIBUTING. The proposed working
+catalogue contains 58 experts and 84 specialties; its portrait and roster review
+remain pending. Working export provenance uses `1.2.0-dev`; existing role behavior
+and published releases stay fixed. No merge, release or installation is included.
+
+D055's delivered [v1.1.0 publication](docs/design.md#publish-expert-roles-v110)
+remains the published baseline.
 The owner authorizes a signed release commit, an ordinary push of main, an
 annotated v1.1.0 tag and publication as the latest stable GitHub release. This
 supersedes the earlier no-commit/push boundaries for this release only. Require
@@ -71,7 +78,7 @@ Keep six featured experts in the main README and the
 [full catalogue](src/roles/README.md) beside the profiles. The
 [current work](docs/current-work.md#next-actions) records D055's release scope
 and later follow-ups. Subsequent releases need their own owner authorization.
-The catalogue contains fifty-seven experts, with eighty-two
+The published v1.1.0 catalogue contains fifty-seven experts, with eighty-two
 specialties in ten groups. D050 accepted the earlier 29 generated portraits,
 five photographs, five historical depictions and eighteen placeholders. D053
 adds eleven further owner-accepted generated selections; all fifty-seven

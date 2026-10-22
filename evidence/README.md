@@ -2471,3 +2471,51 @@ readback before reporting publication. The
 provide hosted delivery evidence; the hosted release notes add the actual
 successful check and fixed-snapshot links after observation. Private command
 logs and hash baselines remain outside the public repository.
+
+## Leslie Lamport contribution — 2026-10-22
+
+D056 adds one proposed expert under the
+[contribution contract](../docs/design.md#leslie-lamport-contribution), starting
+from published v1.1.0 commit `f285dc2cface4e02e06895acaf12be0ecddb37c4`.
+The proposed catalogue has 58 experts and 84 specialties in ten groups.
+Formal methods and Concurrent computing are new referenced concepts; Lamport
+also reuses Distributed computing. His documented work on mathematical
+specifications, safety, liveness and fairness supplies a distinct selection
+cue beside Kleppmann's data-system trade-offs and Fowler's software evolution.
+The profile links his public technical work and Microsoft's account of his
+Turing Award. These establish expertise and an accessible approach, not the
+effectiveness or fidelity of an AI role.
+
+The new studio-v1 portrait uses one photographic reference with Lamport's
+documented unrestricted reuse grant on Commons. The profile retains its
+source attribution, custom permission terms, unknown capture date, tool and
+method, source-age limitation and generated-contribution rights statement.
+A separate 2006 photograph was held out for editorial comparison. One built-in
+generation, its exact shared-prompt recipe and arguments, archived reference,
+generated master, input/output hashes and JPEG preparation are retained outside
+the public repository. No correction or accepted-sample reuse was used.
+
+All **45 existing tests pass** and all **121 generated files match** in check
+mode. All **58 Codex/Claude pairs** parse with matching names, descriptions and
+instruction bodies. Removing only the version comment recovers each of the
+114 earlier native exports exactly; the working provenance is `1.2.0-dev`.
+All **171 existing profile, metadata and visual files** retain their base hashes.
+The 82 earlier specialty definitions, shared execution instruction, generation
+code, portrait helper, shared prompt and fixed six-expert showcase are unchanged.
+Local links and anchors resolve, with intentional unfilled starter references
+excluded. UTF-8, bounded public-content and complete Git whitespace checks pass.
+The new image is a 512 × 512 RGB JPEG.
+
+Safari inspection of the local Markdown preview confirms the 240 × 240 profile
+and 160 × 160 catalogue portrait, alphabetical placement, specialty labels,
+perspective, native-file links, synthetic-image disclosure and source credits.
+The muted green/lavender background remains distinct from the neighboring
+portraits. Full-resolution and display-size review found no obvious crossed
+gaze or glasses/beard artifacts; apparent age follows the supplied reference.
+These are editorial observations supported by local screenshots, not biometric
+verification, hosted GitHub rendering or owner acceptance.
+
+The contribution is prepared for a signed commit and pull request. The PR and
+its exact-commit checks provide hosted delivery readback after creation.
+Roster and portrait acceptance remain pending owner review. No merge, release,
+installation, new host-runtime test or comparative-effectiveness test is included.
