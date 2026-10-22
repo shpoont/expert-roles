@@ -5,6 +5,13 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+### Added
+
+- Proposed Leslie Lamport source profile, metadata and reference-based studio
+  portrait, with public research references and an emphasis on precise
+  specifications, safety, liveness and fairness.
+- Formal methods and Concurrent computing in the shared Computing vocabulary.
+
 ### Changed
 
 - Separate source contributions from maintainer release preparation. Ordinary
