@@ -13,7 +13,7 @@ Connect evidence to [current work](../docs/current-work.md),
 
 D058 prepares a compatible minor candidate separately from the
 [README source PR](https://github.com/shpoont/expert-roles/pull/12), using source
-commit `f1645778b550964fd4ffaac8588dd0f50a4db61e` as the release comparison base.
+commit `9a3ffc435636bf48af553c345bc6c241273b441f` as the release comparison base.
 The candidate includes the eleven merged experts and D057's presentation
 change, with 68 profiles, 96 specialties in 14 groups and 136 native files.
 
@@ -45,6 +45,9 @@ with 68 experts, 96 specialties in 14 groups and completed
 The homepage now puts the gallery before setup, with recognizable experts,
 task cues and concise image disclosure. The correction/removal policy retains
 its earlier commitments in a separate linked document.
+Following owner review, the opening explicitly introduces roles for AI
+assistants and their independent interpretation of public work; affiliation
+details remain in the existing Disclaimer.
 
 All 55 tests pass, including the new invalid-cue/no-partial-writes and literal
 display check. Source validation and ordinary contribution ownership pass.
