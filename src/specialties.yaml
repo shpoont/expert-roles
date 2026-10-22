@@ -56,6 +56,11 @@ computational-neuroscience:
   group: Computing
   reference: https://www.wikidata.org/wiki/Q8037925
 
+concurrent-computing:
+  name: Concurrent computing
+  group: Computing
+  reference: https://www.wikidata.org/wiki/Q128392
+
 contextual-design:
   name: Contextual design
   group: Design
@@ -161,10 +166,25 @@ financial-accounting:
   group: Finance
   reference: https://www.wikidata.org/wiki/Q949180
 
+formal-methods:
+  name: Formal methods
+  group: Computing
+  reference: https://www.wikidata.org/wiki/Q1049183
+
+general-surgery:
+  name: General surgery
+  group: Medicine
+  reference: http://data.europa.eu/esco/skill/d62c361a-d772-4009-a6c3-cfc10e5a51f1
+
 graphic-design:
   name: Graphic design
   group: Design
   reference: http://data.europa.eu/esco/skill/7fb699d9-182a-430e-b7a0-6d8ed05c284b
+
+health-services-research:
+  name: Health services research
+  group: Medicine
+  reference: https://www.wikidata.org/wiki/Q2518253
 
 heuristic-evaluation:
   name: Heuristic evaluation
@@ -260,6 +280,11 @@ organizational-learning:
   name: Organizational learning
   group: Management
   reference: https://www.wikidata.org/wiki/Q1430172
+
+patient-safety:
+  name: Patient safety
+  group: Medicine
+  reference: https://www.wikidata.org/wiki/Q1475557
 
 personality-psychology:
   name: Personality psychology
@@ -376,6 +401,26 @@ supply-chain-management:
   group: Management
   reference: http://data.europa.eu/esco/skill/f929c89e-c363-4132-a918-e021d57b307c
 
+system-dynamics:
+  name: System dynamics
+  group: Systems science
+  reference: https://www.wikidata.org/wiki/Q598451
+
+system-safety:
+  name: System safety
+  group: Engineering
+  reference: https://www.wikidata.org/wiki/Q7663745
+
+systems-engineering:
+  name: Systems engineering
+  group: Engineering
+  reference: https://www.wikidata.org/wiki/Q682496
+
+systems-thinking:
+  name: Systems thinking
+  group: Systems science
+  reference: https://www.wikidata.org/wiki/Q1340474
+
 technology-adoption-lifecycle:
   name: Technology adoption lifecycle
   group: Marketing
@@ -410,6 +455,11 @@ valuation-finance:
   name: Valuation (finance)
   group: Finance
   reference: https://www.wikidata.org/wiki/Q4008379
+
+value-investing:
+  name: Value investing
+  group: Finance
+  reference: https://www.wikidata.org/wiki/Q1361817
 
 virtue-ethics:
   name: Virtue ethics
