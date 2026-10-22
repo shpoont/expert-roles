@@ -7,6 +7,10 @@ Record meaningful changes by version under the
 
 ### Added
 
+- Proposed Leslie Lamport source profile, metadata and reference-based studio
+  portrait, with public research references and an emphasis on precise
+  specifications, safety, liveness and fairness.
+- Formal methods and Concurrent computing in the shared Computing vocabulary.
 - Proposed Donella Meadows source profile, metadata and full-name placeholder.
 - System dynamics and Systems thinking in the shared specialty vocabulary.
 

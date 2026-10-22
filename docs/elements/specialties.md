@@ -75,7 +75,7 @@ data is later copied into the repository.
 
 ## Current implementation
 
-[src/specialties.yaml](../../src/specialties.yaml) contains eighty-four mapped entries.
+[src/specialties.yaml](../../src/specialties.yaml) contains 86 mapped entries.
 Each has exactly three required fields:
 
 - `name`: the common display label, using a preferred source term or recognized alias.
@@ -104,8 +104,13 @@ are not displayed. Profiles list their most useful specialties first.
 
 ### Mapping history
 
+Formal methods and Concurrent computing use Wikidata's field concepts
+(Q1049183 and Q128392) under Computing. ESCO search returned activities such as
+Verify formal ICT specifications and Use concurrent programming; these do not
+describe the intended fields and are not substituted for them.
+
 System dynamics and Systems thinking use Wikidata's field concepts (Q598451
-and Q1340474) in the proposed Systems science navigation group. ESCO's Systems
+and Q1340474) in the Systems science navigation group. ESCO's Systems
 thinking entry is explicitly scoped to a logistic system; it is not substituted
 for the broader systems approach used here. System dynamics search results did
 not supply the intended field.
@@ -265,7 +270,7 @@ consistent concepts, not a particular filename or serialization format.
 | Repeat names and groups inside every profile | Simple for one expert, but shared concepts can acquire conflicting spellings, aliases and groups as the collection grows. |
 | Store only external concept IDs in profiles | Possible, but repeatable offline generation would need versioned reference data, plus a way to maintain this project's labels, groups and extensions. |
 
-D015 adopts this approach; all fifty-seven current experts follow these rules.
+D015 adopts this approach; all 59 current experts follow these rules.
 Keep the registry limited to used concepts and consult this record
 when proposing changes. Adding an entire taxonomy, extra fields or a deeper
 hierarchy needs a concrete use case.
@@ -274,7 +279,8 @@ hierarchy needs a concrete use case.
 
 Selected ESCO labels and concept identifiers come from the European Commission's
 [ESCO knowledge vocabulary](https://esco.ec.europa.eu/en/classification/skill),
-consulted on 2026-10-19, 2026-10-20 and 2026-10-21, under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+consulted on 2026-10-19, 2026-10-20, 2026-10-21 and 2026-10-22,
+under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 as stated in its [copyright notice](https://esco.ec.europa.eu/en/copyright-notice-esco-skills-competences).
 We capitalize display labels and use the recognized Interaction design alias;
 grouping and expert assignments are this collection's editorial choices. No
