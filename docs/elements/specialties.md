@@ -75,7 +75,7 @@ data is later copied into the repository.
 
 ## Current implementation
 
-[src/specialties.yaml](../../src/specialties.yaml) contains 94 mapped entries.
+[src/specialties.yaml](../../src/specialties.yaml) contains 96 mapped entries.
 Each has exactly three required fields:
 
 - `name`: the common display label, using a preferred source term or recognized alias.
@@ -282,7 +282,7 @@ consistent concepts, not a particular filename or serialization format.
 | Repeat names and groups inside every profile | Simple for one expert, but shared concepts can acquire conflicting spellings, aliases and groups as the collection grows. |
 | Store only external concept IDs in profiles | Possible, but repeatable offline generation would need versioned reference data, plus a way to maintain this project's labels, groups and extensions. |
 
-D015 adopts this approach; all 67 current experts follow these rules.
+D015 adopts this approach; all 68 current experts follow these rules.
 Keep the registry limited to used concepts and consult this record
 when proposing changes. Adding an entire taxonomy, extra fields or a deeper
 hierarchy needs a concrete use case.

@@ -41,6 +41,11 @@ causal-inference:
   group: Computing
   reference: https://www.wikidata.org/wiki/Q5054566
 
+chemistry:
+  name: Chemistry
+  group: Natural sciences
+  reference: http://data.europa.eu/esco/skill/cde9911c-f92e-4de1-811f-336e177ac4ce
+
 cognitive-psychology:
   name: Cognitive psychology
   group: Psychology
@@ -340,6 +345,11 @@ quantum-electrodynamics:
   name: Quantum electrodynamics
   group: Natural sciences
   reference: https://www.wikidata.org/wiki/Q234881
+
+radiochemistry:
+  name: Radiochemistry
+  group: Natural sciences
+  reference: http://data.europa.eu/esco/skill/e60ce8fd-89e7-4f9f-ab4b-7238e68f14ab
 
 sales-management:
   name: Sales management
