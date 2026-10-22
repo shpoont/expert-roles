@@ -38,7 +38,7 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Validate sources without changing retained release artifacts
         run: python src/generate.py --validate
-      - name: Check contribution or release ownership
+      - name: Check source catalogue freshness and release ownership
         env:
           EVENT_NAME: ${{ github.event_name }}
           PR_BASE: ${{ github.event.pull_request.base.sha }}

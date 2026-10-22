@@ -10,13 +10,9 @@ import subprocess
 import sys
 
 if __package__:
-    from .generate import main as generate, read_version, update_readme
+    from .generate import main as generate, read_version
 else:
-    from generate import main as generate, read_version, update_readme
-
-
-GENERATED_SECTIONS = {"README.md": ("SUMMARY", "FEATURED"),
-                      "src/roles/README.md": ("CATALOGUE",)}
+    from generate import main as generate, read_version
 
 
 def git(root: Path, *arguments: str) -> bytes:
@@ -29,15 +25,6 @@ def git(root: Path, *arguments: str) -> bytes:
 
 def baseline_file(root: Path, base: str, path: str) -> str:
     return git(root, "show", f"{base}:{path}").decode("utf-8")
-
-
-def generated_blocks(text: str, path: str) -> list[str]:
-    result = []
-    for section in GENERATED_SECTIONS[path]:
-        update_readme(text, "", section, path)  # Apply the generator's boundary validation.
-        start, end = f"<!-- BEGIN GENERATED {section} -->", f"<!-- END GENERATED {section} -->"
-        result.append(text[text.index(start):text.index(end) + len(end)])
-    return result
 
 
 def release_history(changelog: str) -> str:
@@ -79,16 +66,13 @@ def check_changes(root: Path, base_ref: str, *, release: bool = False) -> list[s
     for path in sorted(changed):
         if path == "VERSION" or path == "dist" or path.startswith("dist/"):
             errors.append(f"Release-owned file changed: {path}")
-        elif path in GENERATED_SECTIONS:
-            before = baseline_file(root, base, path)
-            after = (root / path).read_bytes().decode("utf-8")
-            if generated_blocks(before, path) != generated_blocks(after, path):
-                errors.append(f"Release-owned generated section changed: {path}")
         elif path == "CHANGELOG.md":
             before = baseline_file(root, base, path)
             after = (root / path).read_bytes().decode("utf-8")
             if after.splitlines().count("## Unreleased") != 1 or release_history(before) != release_history(after):
                 errors.append("Contributions add CHANGELOG.md notes under ## Unreleased; dated release history stays fixed.")
+    if not errors and generate(["--root", str(root), "--check-docs"]):
+        errors.append("Source catalogues must match their sources; run src/generate.py --docs.")
     return errors
 
 
@@ -104,7 +88,7 @@ def main(argv=None) -> int:
             print("Change checks failed:\n" + "\n".join(errors), file=sys.stderr)
             return 1
         print("Prepared release is consistent." if args.release else
-              "Contribution boundary passed; VERSION, dist and generated catalogue sections are unchanged.")
+              "Contribution boundary passed; source catalogues are current, VERSION and dist are unchanged.")
         return 0
     except (ValueError, OSError, UnicodeError) as error:
         print(f"Change checks failed: {error}", file=sys.stderr)

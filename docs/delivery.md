@@ -346,18 +346,20 @@ own owner instruction. Complete the applicable steps below:
 
 Submit canonical profile/metadata/image changes, necessary vocabulary or tooling
 changes, relevant authored documentation and an **Unreleased** changelog entry.
-Leave `VERSION`, `dist/` and all generated README sections unchanged. Routine
+Refresh and include the source catalogues with `src/generate.py --docs`.
+Leave `VERSION` and `dist/` unchanged. Routine
 expert additions do not require project-wide status, decision or release records.
 Validate sources, run the suite and inspect an isolated preview using the
 [source commands](../src/README.md#generate-the-catalogue-and-native-files).
 
-Ordinary PRs have no `release` label. CI rejects release-owned edits, builds an
+Ordinary PRs have no `release` label. CI requires fresh source catalogues,
+rejects release-owned edits, builds an
 isolated preview and checks its local links, readable images and anchors before
 attaching the unreleased **expert-roles-preview** artifact for review. External
-URLs are not fetched. Retained distribution
-and catalogue files intentionally reflect the last prepared release; new profile
-links and specialty anchors are reviewed in the preview. Merge approved sources
-under the owner's authorization; they become distributed additions at release.
+URLs are not fetched. The source catalogues track current main; distribution
+files reflect the last prepared release. Complete native outputs for unreleased
+additions are reviewed in the preview. Merge approved sources under the owner's
+authorization; their native exports become distributed additions at release.
 
 ### Maintainer release PR
 

@@ -9,6 +9,48 @@ Connect evidence to [current work](../docs/current-work.md),
 [decisions](../docs/decisions.md), [checks](../tests/README.md) and
 [delivery](../docs/delivery.md).
 
+## Source catalogue and release boundary correction — 2026-10-22
+
+D063 corrects the policy that left the public catalogue stale after D062's
+source delivery. Source README catalogues are now contribution outputs;
+VERSION and all dist files remain release-owned. `--docs` refreshes only the
+two source READMEs, and read-only `--check-docs` rejects stale or hand-edited
+generated content. Contribution CI uses this gate without requiring a version
+change or release label. Full release validation and publication remain separate.
+
+All **72 tests pass**. The updated fixtures cover isolated and idempotent
+docs-only writes, unchanged authored text and retained exports, additions,
+corrections, removals, stale/tampered output, combined-mode rejection and
+invalid sources failing before writes. Source validation, catalogue freshness
+and contribution ownership pass. The current public tree's local references,
+images and anchors pass the portable checker. All **351 protected files** and
+**136 native payloads** remain unchanged.
+
+The source catalogue has no visible per-image captions; all 68 image types
+remain in accessible text and detailed profile credits. The homepage now
+features Jordan Peterson in its accepted six-expert sample, and shared
+specialties show existing comparison cues. Generated output matches the same
+generator used in previews. Handover records now identify delivered work and
+current policy, with historical preparation detail kept in decisions/evidence.
+This is source and structural verification, not a new host-runtime or human
+user study. Exact-commit hosted checks and remote content readback verify
+delivery after the authorized signed commit and push. No release is authorized.
+
+## Accepted source delivery — 2026-10-22
+
+D062 delivered D060 and D061 in signed commit
+[`43023e2`](https://github.com/shpoont/expert-roles/commit/43023e2526bd7890c262ea65e419a94b155036f0).
+The configured local signature and GitHub verification both succeeded; remote
+main matched and the working tree was clean. Its
+[Checks workflow](https://github.com/shpoont/expert-roles/actions/runs/39819451865)
+and separate validation check concluded successfully, including all 70 tests,
+source/ownership checks and the fresh preview's references and artifact upload.
+The latest release remained v1.2.0; no tag or release was created.
+
+Earlier no-commit and pending-publication wording below describes the original
+checkpoint conditions. D062 completed source delivery; D063 supersedes only the
+policy that froze generated source READMEs between releases.
+
 ## Preview reference checks and role headers — 2026-10-22
 
 D061 adds a portable read-only checker and a CI step between isolated preview

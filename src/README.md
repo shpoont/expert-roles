@@ -14,9 +14,11 @@ per expert and host. The [Codex](../dist/codex/README.md) and
 [Claude Code](../dist/claude/README.md) indexes provide alphabetical and specialty
 navigation from this same metadata. Specialty assignments affect index links,
 not file paths; an expert may appear under several specialties without duplicate
-exports. Native files, all three distribution indexes and generated catalogue
-sections are committed during release preparation. Between releases they may
-lag behind canonical sources; review contributions in a separate preview.
+exports. Native files and all three distribution indexes are committed during
+release preparation. Between releases they may lag behind canonical sources;
+review complete contribution outputs in a separate preview. The main README
+and source catalogue are regenerated and committed with source changes, so
+their presentation and expert lists stay current without a release.
 Both formats share the [whole-library version](../README.md#versions-and-releases).
 Consumers pin a released tag or full commit for reproducible imports.
 
@@ -169,10 +171,11 @@ the contribution after that required image is ready.
 ## Generate the catalogue and native files
 
 With the [Python environment](#prepare-the-python-environment) prepared and
-every profile's required image present, validate from the repository root:
+every profile's required image present, refresh the source catalogues and check
+the contribution from the repository root:
 
 ```sh
-.venv/bin/python src/generate.py --validate
+.venv/bin/python src/generate.py --docs
 .venv/bin/python -m unittest discover -s tests -v
 .venv/bin/python src/check_changes.py --base origin/main
 ```
@@ -181,8 +184,12 @@ The boundary check compares your working tree with an ancestor Git ref. Use
 `origin/main` when it is an ancestor of your feature branch, or the specific
 common base commit. It includes untracked files. In a downloaded source archive,
 source validation and previews work without Git; run the boundary check in the
-Git checkout used for the PR. Running the generator without an action also
-validates only. Source validation renders everything in memory, checking all
+Git checkout used for the PR. It also runs the read-only `--check-docs` gate:
+both source catalogues must match the generator. Hand edits inside generated
+regions or stale output fail. `--docs` preserves authored prose outside those
+regions and never changes VERSION or dist. Running the generator without an
+action, or with `--validate`, validates only. Source validation renders
+everything in memory, checking all
 profiles, images, credits, vocabulary, shared templates and generated syntax.
 It does not require retained release artifacts to match current sources.
 
@@ -225,12 +232,12 @@ local Markdown renderer; keep any generated HTML outside the checkout. The
 describes what to inspect and how to record viewing limits. Opening Markdown as
 plain text does not establish visual verification.
 
-Submit canonical sources, relevant authored documentation and an **Unreleased**
-changelog note. Leave `VERSION`, `dist/`, the source catalogue's generated block
-and the main README's generated blocks untouched. New profile download links and
-specialty anchors resolve in the preview before the next release; they need not
-exist yet in the retained distribution. Routine expert additions do not need
-project-wide decision, status or release records.
+Submit canonical sources, the refreshed source catalogues, relevant authored
+documentation and an **Unreleased** changelog note. Leave `VERSION` and `dist/`
+untouched. Source catalogues describe current main; native files for unreleased
+additions are available in the preview until the next release. Use a released
+tag when you need its complete prepared distribution. Routine expert additions
+do not need project-wide decision, status or release records.
 
 Maintainers prepare committed artifacts in a separate
 [release PR](../docs/delivery.md#versions-and-releases). After choosing `VERSION`:
@@ -291,7 +298,8 @@ captions. In previews and release outputs, adding an expert updates the full
 catalogue and total without enlarging the sample; changing the showcase is a
 separate editorial choice.
 
-`--check` is the strict release freshness check. It may fail between releases
+`--check-docs` is the read-only source-catalogue freshness check used for
+contributions. `--check` is the strict release freshness check. It may fail between releases
 because retained artifacts intentionally lag behind source changes. This does
 not replace source validation or the contribution boundary check above.
 

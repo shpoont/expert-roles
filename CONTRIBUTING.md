@@ -62,17 +62,17 @@ Run commands from the checkout's root.
    the [exact image instructions](src/README.md#choose-the-profile-image).
    Portraits need provenance, applicable terms, edits and **Source** links.
    Placeholders need an **Image** section identifying the placeholder.
-4. [Validate and create a separate preview](src/README.md#generate-the-catalogue-and-native-files),
+4. [Refresh the catalogues and create a separate preview](src/README.md#generate-the-catalogue-and-native-files),
    then review its catalogue, profile, role files and links. Replace every
    unfilled `{{...}}` field. Submit the profile sources, necessary specialty
-   changes and an **Unreleased** changelog note.
+   changes, regenerated catalogues and an **Unreleased** changelog note.
 
 Open a pull request against this repository's `main`. Briefly explain the
 expert's fit and contribution, and include check results and a preview or
 screenshots for review.
 
-Leave `VERSION`, `dist/` and generated README sections unchanged. Maintainers
-update them in a separate [release PR](docs/delivery.md#versions-and-releases).
+Leave `VERSION` and `dist/` unchanged. Maintainers update the versioned exports
+in a separate [release PR](docs/delivery.md#versions-and-releases).
 Routine expert additions do not need project-wide status, decision or release
 records. Add authored documentation only where the contribution needs it.
 

@@ -36,11 +36,40 @@ specialty indexes there. File paths depend only on host and expert slug;
 classification changes affect index links. Integrations own their
 installation, model configuration and lifecycle.
 
-D056 separates canonical source contributions from release-owned generated
-artifacts. Contributions validate inputs and render a separate unreleased review
-tree; maintainers update committed outputs and versions during release preparation.
+D056 separates canonical source contributions from release-owned native exports.
+D063 keeps source catalogues current alongside contributions. Contributions
+validate inputs, refresh catalogues and render a separate unreleased review
+tree; maintainers update dist and versions during release preparation.
 
 ## Implementation contract
+
+### Keep source catalogues current between releases
+
+D063 separates human-facing source catalogues from versioned native exports.
+The owner requested a coherent correction and cleanup after the pushed source
+change left visible captions in the public catalogue. Add `--docs` to refresh
+only README.md's marked sections and src/roles/README.md's catalogue, plus a
+read-only `--check-docs` mode. Ordinary contributions include these fresh
+catalogues; CI checks their generated content rather than freezing it. Preserve
+authored prose outside the markers and reject stale or hand-edited generated
+regions. VERSION, all dist files and dated changelog history remain release-owned.
+The existing release label, final-version/freshness gates and publication
+authorization stay intact. This supersedes D056's catalogue freeze only.
+
+Refresh the public catalogues with the already accepted six-expert sample,
+caption-free images and specialty comparison cues. Retain accessible image
+descriptions and every profile credit. Explain that source catalogues track
+main while dist and released tags identify prepared native exports; unreleased
+additions' complete role files can be reviewed in an isolated preview.
+
+Cover source additions, corrections, removals, stale/tampered catalogues,
+idempotent docs-only writes, read-only failure cases and unchanged release
+outputs in fixtures. Run the full suite, source/catalogue and ownership checks,
+fresh preview and public-tree reference checks, and native/source preservation.
+Clean current handover records without erasing historical evidence. Commit with
+the configured signature, push normally and verify the remote content and
+exact-commit hosted checks. No version change, tag, release, role installation,
+host configuration change or runtime invocation is authorized.
 
 ### Commit and push the accepted source changes
 

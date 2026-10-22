@@ -1288,7 +1288,9 @@ validation remain separate from this addition.
 
 ## D062 — 2026-10-22: Deliver the accepted documentation and CI changes
 
-- **Status:** Owner accepted the result and authorized a signed commit and push.
+- **Status:** Delivered in verified signed commit
+  [`43023e2`](https://github.com/shpoont/expert-roles/commit/43023e2526bd7890c262ea65e419a94b155036f0),
+  with successful [hosted Checks](https://github.com/shpoont/expert-roles/actions/runs/39819451865).
 - **Decision:** Deliver D060 and D061 as one source change under the
   [contract](design.md#commit-and-push-the-accepted-source-changes).
 - **Checks:** Full suite, source and contribution validation, fresh preview
@@ -1297,3 +1299,19 @@ validation remain separate from this addition.
 - **Boundary:** Supersedes the earlier no-commit/no-push hold for the accepted
   changes only. Preserve VERSION, dist and generated README blocks. No tag,
   release, installation, role invocation or host configuration change.
+
+## D063 — 2026-10-22: Keep public catalogues current without a release
+
+- **Status:** Implementation, cleanup, signed commits and normal push authorized;
+  no version change or release.
+- **Decision:** Treat README.md and src/roles/README.md as generated source
+  documentation. Include their fresh output with contributions, using docs-only
+  generation and read-only CI freshness checks. Keep VERSION and all dist files
+  release-owned. See the [contract](design.md#keep-source-catalogues-current-between-releases).
+- **Checks:** Docs-only isolation/idempotence, stale and tampered catalogue
+  failures, retained native exports, full suite, source and ownership checks,
+  fresh preview and public references, protected hashes, signed delivery and
+  exact-commit hosted checks.
+- **Boundary:** Supersedes only D056's generated-source-README freeze. Preserve
+  release validation, published tags, expert content and all image credits.
+  No installation, role invocation or host configuration change.

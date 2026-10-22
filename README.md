@@ -38,9 +38,9 @@ Sharpen a product&#x27;s focus
 Examine an investment thesis
 </td>
 <td align="center" width="33%">
-<a href="src/roles/marie-curie/README.md"><img src="src/roles/marie-curie/portrait.jpg" alt="Marie Curie; AI-generated portrait; sources and terms on profile" width="160" height="160"></a><br>
-<a href="src/roles/marie-curie/README.md"><strong>Marie Curie</strong></a><br>
-Assess an experiment&#x27;s evidence
+<a href="src/roles/jordan-peterson/README.md"><img src="src/roles/jordan-peterson/portrait.jpg" alt="Jordan Peterson; AI-generated portrait; sources and terms on profile" width="160" height="160"></a><br>
+<a href="src/roles/jordan-peterson/README.md"><strong>Jordan Peterson</strong></a><br>
+Explore personality and motivation
 </td>
 </tr>
 <tr>
@@ -95,8 +95,9 @@ or follow the [contribution guide](CONTRIBUTING.md) to submit a change.
 ## Versions and releases
 
 [Released versions](https://github.com/shpoont/expert-roles/releases) and the
-[changelog](CHANGELOG.md) track the library. Generated catalogues and role files
-are updated during [release preparation](docs/delivery.md#versions-and-releases).
+[changelog](CHANGELOG.md) track the library. Catalogues follow current sources;
+versioned role files are updated during
+[release preparation](docs/delivery.md#versions-and-releases).
 
 ## Project documentation
 

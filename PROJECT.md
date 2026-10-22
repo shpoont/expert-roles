@@ -34,11 +34,12 @@ Portrait acceptance is an editorial decision;
 structural validity does not establish likeness. Future additions follow the
 same contribution process.
 
-D056 separates source contributions and release preparation. Ordinary PRs
-submit canonical sources, relevant authored documentation and Unreleased notes;
-they leave `VERSION`, `dist/` and generated README blocks at the previous release.
-Maintainers update those artifacts and release records in a separate release
-PR. Source validation and temporary previews support contribution review; strict
+D056 separates source contributions and release preparation; D063 corrects its
+catalogue boundary. Ordinary PRs submit canonical sources, fresh source
+catalogues, relevant authored documentation and Unreleased notes; they leave
+`VERSION` and `dist/` at the previous release. Maintainers update versioned
+exports and release records in a separate release PR. Source and catalogue
+validation and temporary previews support contribution review; strict
 generated freshness is a release gate. See the
 [process contract](docs/design.md#separate-contributions-from-release-preparation).
 
@@ -74,29 +75,15 @@ not establish broad selection reliability or comparative expert benefit.
   checks completed. D060 implements the seven accepted documentation findings;
   independent journey re-reviews and checks pass. D061 adds local link, image
   and anchor checks against the CI preview and simplifies native provenance
-  headers. The owner accepted these changes and authorizes a signed source
-  commit and main push under D062, without a release. Verify delivery through
-  Git and the exact-commit hosted Checks result. Keep
-  VERSION, dist and generated README blocks at the released baseline; review
-  source changes in an external preview. Preserve expert content and role
-  descriptions. Installation and role invocation remain separate. The following records
-  describe the delivered v1.1.0 baseline. D048 supplies the portrait rollout; D049 adds
-  a copyable credit block and repository/CI validation in the isolated worktree.
-  The independent fresh-session contribution walkthrough completed one temporary
-  Grace Hopper case in a disposable copy; broader reliability remains unverified.
-  D050 records earlier portrait-owner acceptance. D051's rebase and disposable
-  squash assessment passed; D052's signed local squash and v1.1.0 preparation
-  are complete. D053 adds eleven further owner-accepted portraits, especially
-  Goldratt. D054 adopts generated source/version/ID comments in every current
-  and future native export, using one root `VERSION` file. D055 authorizes the
-  signed commit, main push, annotated v1.1.0 tag and latest stable release after
-  completed exact-commit hosted checks. Installation remains separate.
-  Preserve biographies, expert metadata,
-  vocabulary, shared instructions
-  and all parsed native configuration and instructions. D054 changes only
-  provenance comments in the 114 native files. The delivered `v1.0.0` baseline
-  remains fixed.
-  No integration or runtime work is included.
+  headers. D062 delivered these source changes in verified signed commit
+  `43023e2` with successful hosted Checks. D063 corrects the catalogue freeze,
+  refreshes the public READMEs and cleans current records. The owner authorizes
+  signed commits and a normal push without a release. Keep VERSION and dist at
+  the released baseline; review complete native outputs in an external preview.
+  Preserve expert content, native descriptions and instruction bodies.
+  Installation, integration and role invocation remain separate. Earlier
+  portrait, provenance and release decisions and their observed results remain
+  in [decisions](docs/decisions.md) and [evidence](evidence/README.md).
 - **Delivery acceptance:** the catalogue, profiles, contribution process, image
   policy, source schema and usage guidance agree with the initial collection
   and accurately state host-validation limits.

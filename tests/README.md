@@ -6,15 +6,18 @@ and [implementation contract](../docs/design.md#implementation-contract).
 ## Contribution and release boundaries (D056)
 
 Use the [source commands](../src/README.md#generate-the-catalogue-and-native-files).
-For contributions, run the full suite, `src/generate.py --validate` and
+For contributions, run `src/generate.py --docs`, the full suite and
 `src/check_changes.py --base origin/main` (or the specific ancestor commit).
+Under D063, the boundary check includes read-only `--check-docs`: source
+catalogues must be fresh while VERSION and dist remain release-owned.
 Run `src/check_docs.py --root <preview-directory>` against an external
 `--preview` tree and inspect its rendering. Retained release artifacts
 may lag behind source changes; `--check` is not a contribution gate.
 
 Disposable Git fixtures exercise source-only additions, corrections and removals
-with retained exports; generated-region protection alongside authored README
-edits; untracked distribution files; fixed dated changelog history; isolated
+with retained exports; docs-only updates, idempotence, stale/tampered catalogue
+rejection and preserved authored README text; untracked distribution files;
+fixed dated changelog history; isolated
 preview versions and assets; invalid inputs failing before writes; and stable
 release version/changelog/freshness requirements. Release checks retain obsolete
 and duplicate-file rejection. Preview creation excludes Git and environments and
@@ -22,7 +25,8 @@ rejects existing/internal destinations. Compare the checkout before and after
 validation, preview and failed checks to establish that they do not rewrite it.
 
 The [Checks workflow](../.github/workflows/checks.yml) always runs the suite and
-source validation. Ordinary PRs reject release-owned edits; a maintainer's
+source validation. Ordinary PRs require current source catalogues and reject
+release-owned edits; a maintainer's
 `release` label instead requires a greater final version, a dated changelog and
 strict output freshness. Main pushes with a version change use the release gate.
 Manual runs select their comparison base and mode explicitly. CI checks the
@@ -35,7 +39,7 @@ For a prepared release, run `src/generate.py --release`, then `--check` and
 `src/check_changes.py --base origin/main --release`, the suite and release review.
 See the [release procedure](../docs/delivery.md#versions-and-releases).
 Historical baseline checks below retain their original scopes; current process
-ownership follows D056.
+ownership follows D056 with D063's source-catalogue correction.
 
 ## Preview references and role headers (D061)
 
@@ -74,8 +78,8 @@ The comparison regression check exercises shared and single-expert specialty
 rows, escaping of cue text and unchanged existing native outputs. Validate
 sources, run the full suite and contribution ownership check, then inspect an
 external preview. Check source and preview references/anchors, public content,
-UTF-8, whitespace and protected files. The committed generated blocks and dist
-must remain unchanged; strict release freshness is not a contribution gate.
+UTF-8, whitespace and protected files. D063 now requires current source
+catalogues while preserving dist; strict release freshness is not a contribution gate.
 Record actual visual checks and limits separately from source checks.
 
 ## README presentation (D057)
@@ -169,7 +173,7 @@ release validation checks committed export headers.
 | README entry points | The main README has exactly six featured experts in two rows, a generated total and a full-catalogue link. The full alphabetical and specialty catalogue lives in src/roles/README.md. Adding an expert grows that catalogue and both counts without enlarging the sample. Authored text outside each marker pair survives; missing, duplicate, reversed, overlapping or nested boundaries fail before writes. Invalid curated sources also fail before writes. |
 | Native syntax | Codex files parse as TOML with the three required fields; Claude files have valid YAML frontmatter and a nonempty instruction body. |
 | Export provenance | Every native file has exactly one canonical source, validated whole-library version and correct expert ID comment. Both hosts agree; comments do not change parsed settings, descriptions or instruction bodies. VERSION changes require regeneration, and check mode detects stale headers without rewriting them. |
-| Generated consistency | At release, check mode reports no missing, changed or obsolete generated role files, indexes or catalogue content. It rejects legacy and nested duplicate exports before writes and never deletes them automatically. Contribution validation renders current sources without requiring retained release freshness. |
+| Generated consistency | Contribution checks require current source catalogues without rewriting VERSION or dist. At release, check mode reports no missing, changed or obsolete generated role files, indexes or catalogue content. It rejects legacy and nested duplicate exports before writes and never deletes them automatically. |
 | Invalid input | An invalid profile sorted after a valid profile is rejected before outputs are written; malformed metadata is also rejected. |
 | Multiple specialties | Both host files retain Goldratt's identity and all four assigned specialty labels. |
 | Navigation | Relative Markdown file links, local HTML image references, heading anchors and explicit canonical specialty anchors resolve. Named specialty links land on the exact row; IDs remain stable across label/group changes. |

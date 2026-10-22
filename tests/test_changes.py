@@ -82,11 +82,46 @@ class ContributionReleaseTests(unittest.TestCase):
         before = self.snapshot()
         self.assertEqual(self.run_generator(), 0)
         self.assertEqual(self.run_generator("--validate"), 0)
-        self.assertEqual(check_changes(self.root, "HEAD"), [])
+        with redirect_stderr(StringIO()), redirect_stdout(StringIO()):
+            self.assertTrue(check_changes(self.root, "HEAD"))
         self.assertEqual(self.run_generator("--check"), 1)
         self.assertEqual(before, self.snapshot())
+        self.assertEqual(self.run_generator("--docs"), 0)
+        after_docs = self.snapshot()
+        catalogues = {Path("README.md"), Path("src/roles/README.md")}
+        self.assertEqual({p: text for p, text in before.items() if p not in catalogues},
+                         {p: text for p, text in after_docs.items() if p not in catalogues})
+        self.assertEqual(check_changes(self.root, "HEAD"), [])
+        self.assertEqual(after_docs, self.snapshot())
         self.assertTrue((self.root / "dist/codex/expert-other-expert.toml").exists())
         self.assertFalse((self.root / "dist/codex/expert-new-expert.toml").exists())
+
+    def test_docs_refresh_is_isolated_idempotent_and_freshness_checks_are_read_only(self):
+        self.add_expert("new-expert")
+        before = self.snapshot()
+        self.assertEqual(self.run_generator("--check-docs"), 1)
+        self.assertEqual(before, self.snapshot())
+        self.assertEqual(self.run_generator("--docs"), 0)
+        after = self.snapshot()
+        self.assertEqual({path for path in before if before[path] != after[path]},
+                         {Path("README.md"), Path("src/roles/README.md")})
+        self.assertIn("Authored introduction.", (self.root / "README.md").read_text())
+        self.assertIn("New Expert", (self.root / "src/roles/README.md").read_text())
+        self.assertNotIn("Unreleased review preview", (self.root / "README.md").read_text())
+        self.assertEqual(self.run_generator("--check-docs"), 0)
+        self.assertEqual(self.run_generator("--docs"), 0)
+        self.assertEqual(after, self.snapshot())
+        self.assertEqual(check_changes(self.root, "HEAD"), [])
+        self.assertEqual(self.run_generator("--check"), 1)  # Exports still belong to the earlier release.
+
+    def test_docs_commands_cannot_be_combined_with_writing_or_preview_modes(self):
+        for arguments in (("--docs", "--release"), ("--docs", "--check-docs"),
+                          ("--check-docs", "--preview", str(self.outer / "preview"))):
+            with self.subTest(arguments=arguments):
+                before = self.snapshot()
+                self.assertEqual(self.run_generator(*arguments), 1)
+                self.assertEqual(before, self.snapshot())
+                self.assertFalse((self.outer / "preview").exists())
 
     def test_preview_is_complete_unreleased_and_leaves_checkout_unchanged(self):
         self.add_expert("new-expert")
@@ -119,12 +154,15 @@ class ContributionReleaseTests(unittest.TestCase):
         self.add_expert("invalid-expert", {"name": "Invalid Expert", "specialties": ["unknown"]})
         before = self.snapshot()
         preview = self.outer / "invalid-preview"
-        self.assertEqual(self.run_generator("--validate"), 1)
+        for mode in ("--validate", "--docs", "--check-docs"):
+            with self.subTest(mode=mode):
+                self.assertEqual(self.run_generator(mode), 1)
+                self.assertEqual(before, self.snapshot())
         self.assertEqual(self.run_generator("--preview", str(preview)), 1)
         self.assertFalse(preview.exists())
         self.assertEqual(before, self.snapshot())
 
-    def test_contributions_reject_version_dist_catalogue_and_dated_changelog_changes(self):
+    def test_contributions_reject_release_edits_and_stale_catalogues(self):
         edits = {
             "VERSION": "1.2.0-dev\n",
             "dist/codex/expert-don-norman.toml": "# changed\n",
@@ -139,7 +177,11 @@ class ContributionReleaseTests(unittest.TestCase):
                 previous = path.read_bytes() if path.exists() else None
                 path.write_text(content)
                 before = self.snapshot()
-                self.assertTrue(check_changes(self.root, "HEAD"))
+                with redirect_stdout(StringIO()), redirect_stderr(StringIO()):
+                    errors = check_changes(self.root, "HEAD")
+                self.assertTrue(errors)
+                if name in {"README.md", "src/roles/README.md"}:
+                    self.assertIn("Source catalogues must match", " ".join(errors))
                 self.assertEqual(before, self.snapshot())
                 if previous is None:
                     path.unlink()

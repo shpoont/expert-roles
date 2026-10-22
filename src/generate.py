@@ -34,6 +34,7 @@ FEATURED_EXPERTS = (
 PORTRAIT_SIZE = (512, 512)
 SOURCE_REPOSITORY = "https://github.com/shpoont/expert-roles"
 PREVIEW_VERSION = "0.0.0-preview"
+CATALOGUE_PATHS = {Path("README.md"), Path("src/roles/README.md")}
 
 
 class UniqueLoader(yaml.SafeLoader):
@@ -503,6 +504,8 @@ def write_preview(root: Path, destination: Path, outputs: dict[Path, str]) -> No
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--validate", action="store_true", help="Validate sources without writing files (default)")
+    parser.add_argument("--docs", action="store_true", help="Refresh only source README catalogues; leave VERSION and dist unchanged")
+    parser.add_argument("--check-docs", action="store_true", help="Check source catalogue freshness without writes")
     parser.add_argument("--preview", type=Path, help="Create an unreleased review tree in a new external directory")
     parser.add_argument("--release", action="store_true", help="Update committed release artifacts from VERSION")
     parser.add_argument("--check", action="store_true", help="Require release artifacts to match VERSION and sources, without writes")
@@ -510,43 +513,51 @@ def main(argv=None) -> int:
     parser.add_argument("--create-placeholder", metavar="EXPERT_SLUG", help="Create placeholder.svg from one expert's full name")
     args = parser.parse_args(argv)
     try:
-        if sum(bool(mode) for mode in (args.validate, args.preview, args.release, args.check, args.create_placeholder)) > 1:
-            raise ValueError("Choose only one of --validate, --preview, --release, --check or --create-placeholder")
+        if sum(bool(mode) for mode in (args.validate, args.docs, args.check_docs, args.preview,
+                                       args.release, args.check, args.create_placeholder)) > 1:
+            raise ValueError("Choose only one of --validate, --docs, --check-docs, --preview, --release, --check or --create-placeholder")
         if args.create_placeholder:
             destination = create_placeholder(args.root, args.create_placeholder)
             print(f"Created {destination}; update the profile image, validate sources and create a preview.")
             return 0
         release_mode = args.release or args.check
+        docs_mode = args.docs or args.check_docs
         outputs = plan_outputs(args.root, version=None if release_mode else PREVIEW_VERSION)
         legacy = (set(args.root.glob("src/roles/*/codex/**/*.toml"))
                   | set(args.root.glob("src/roles/*/claude/**/*.md")))
         if legacy:
             raise ValueError("Legacy per-profile exports require review: " + ", ".join(str(p.relative_to(args.root)) for p in sorted(legacy)))
-        if not release_mode:
+        if docs_mode:
+            outputs = {path: text for path, text in outputs.items() if path in CATALOGUE_PATHS}
+        elif not release_mode:
             if args.preview:
                 write_preview(args.root, args.preview, outputs)
                 print(f"Created unreleased preview at {args.preview}; source checkout unchanged.")
             else:
                 print(f"Sources are valid; rendered {len(outputs)} preview outputs in memory. Retained release artifacts were not checked or changed.")
             return 0
-        existing = (set(args.root.glob("dist/**/*.toml")) | set(args.root.glob("dist/**/*.md"))
-                    | legacy)
-        obsolete = existing - {args.root / path for path in outputs}
-        if obsolete:
-            raise ValueError("Unexpected role or distribution files require review: " + ", ".join(str(p.relative_to(args.root)) for p in sorted(obsolete)))
+        if release_mode:
+            existing = (set(args.root.glob("dist/**/*.toml")) | set(args.root.glob("dist/**/*.md"))
+                        | legacy)
+            obsolete = existing - {args.root / path for path in outputs}
+            if obsolete:
+                raise ValueError("Unexpected role or distribution files require review: " + ", ".join(str(p.relative_to(args.root)) for p in sorted(obsolete)))
         changed = [path for path, text in outputs.items()
-                   if not (args.root / path).is_file() or (args.root / path).read_text(encoding="utf-8") != text]
-        if args.check:
+                   if not (args.root / path).is_file() or (args.root / path).read_bytes() != text.encode("utf-8")]
+        if args.check or args.check_docs:
             if changed:
-                print("Generated files need updating:\n" + "\n".join(str(path) for path in changed), file=sys.stderr)
+                label = "Source catalogues" if docs_mode else "Generated files"
+                print(label + " need updating:\n" + "\n".join(str(path) for path in changed), file=sys.stderr)
                 return 1
-            print(f"All {len(outputs)} generated files match their sources.")
+            label = "source catalogues" if docs_mode else "generated files"
+            print(f"All {len(outputs)} {label} match their sources.")
         else:
             for path in changed:
                 destination = args.root / path
                 destination.parent.mkdir(parents=True, exist_ok=True)
                 destination.write_text(outputs[path], encoding="utf-8")
-            print(f"Updated {len(changed)} generated files; nothing was installed.")
+            print(f"Updated {len(changed)} source catalogues; VERSION and dist were not changed."
+                  if docs_mode else f"Updated {len(changed)} generated files; nothing was installed.")
         return 0
     except (ValueError, OSError, yaml.YAMLError) as error:
         print(f"Generation failed: {error}", file=sys.stderr)

@@ -36,7 +36,7 @@ roster addition, commit, push, installation or release.
 > references, create a studio-v1 portrait with the built-in image tool, prepare
 > the image and complete its provenance. Validate sources and create a new
 > external unreleased preview containing both native formats and the catalogue.
-> Leave VERSION, dist/ and generated README sections in the copy unchanged.
+> Refresh the copy's source catalogues with --docs; leave VERSION and dist/ unchanged.
 > Use only the documented workflow, shared prompt and credit template. Do not
 > edit existing experts, images, vocabulary or shared instructions. Keep exact
 > generation inputs, masters, corrections and decisions outside the copy.
@@ -58,8 +58,8 @@ roster addition, commit, push, installation or release.
   reference attributions and applicable terms, and scopes the output terms.
 - The image is 512 × 512 RGB JPEG; the profile has one active visual. Both native
   files and catalogue entries appear in the external `0.0.0-preview` tree;
-  committed native files, generated blocks, VERSION and existing expert content
-  remain unchanged. Source validation, the suite and contribution boundary pass
+  source catalogues are fresh while committed native files, VERSION and existing
+  expert content remain unchanged. Source validation, the suite and contribution boundary pass
   in a Git copy; strict release freshness is not required for a contribution.
 - Compare the full-resolution output and 160/240-pixel rendering with the source
   and, when available, a reference not used for generation. Record likeness,

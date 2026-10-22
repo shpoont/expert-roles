@@ -13,6 +13,9 @@ Record meaningful changes by version under the
 
 ### Changed
 
+- Keep source catalogues current on main independently of native releases.
+  Add docs-only generation and freshness checks while preserving VERSION and
+  dist as release-owned outputs; publish the accepted catalogue presentation.
 - Simplify native role headers, align source/version/ID comment values and
   separate them from host settings, preserving all parsed role content.
 - Feature Jordan Peterson in place of Marie Curie on the homepage, with a task
@@ -23,7 +26,7 @@ Record meaningful changes by version under the
   external contribution and Markdown-preview handoffs, and use the project
   Python environment consistently in portrait commands.
 - Show existing perspective cues beside overlapping specialty matches in
-  generated previews, while preserving role descriptions and instructions.
+  the catalogues, while preserving role descriptions and instructions.
 - Align current project records with the published v1.2.0 baseline and correct
   the source-directory description. Retain released artifacts until a separate
   release change.

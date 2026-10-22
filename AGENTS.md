@@ -1,17 +1,16 @@
 # Expert Roles library guidance
 
-Current work is D062's [accepted source delivery](docs/design.md#commit-and-push-the-accepted-source-changes).
-The owner accepted D060's documentation and presentation improvements and
-D061's preview checker and cleaner role headers, and authorizes one signed
-commit and an ordinary main push. This supersedes their no-commit/no-push
-boundary for these changes only. Verify the configured signature, remote commit
-and exact-commit hosted Checks result. Do not tag, release, install roles or
-change host configuration. CI must check the complete generated preview before
-artifact upload; external URLs are not fetched. Preserve provenance keys,
-parsed role settings and instruction bodies.
+Current work is D063's [catalogue and release boundary correction](docs/design.md#keep-source-catalogues-current-between-releases).
+The owner authorizes the fix, cleanup, signed commits and an ordinary main push,
+without a release. Keep source catalogues current using `--docs`; check their
+freshness with `--check-docs`. VERSION and all dist files remain release-owned.
+Verify signatures, remote content and exact-commit hosted Checks. Do not tag,
+release, install roles or change host configuration. CI checks the complete
+generated preview before artifact upload; external URLs are not fetched.
+Preserve provenance keys, parsed role settings and instruction bodies.
 Preserve all expert profiles, visuals, metadata, vocabulary, shared instructions
-and native descriptions. Review generated comparison improvements in an external
-preview; leave VERSION, dist and committed generated README blocks unchanged.
+and native descriptions. Publish the accepted catalogue presentation changes;
+review complete native outputs in an external preview while retaining dist.
 
 D059's [v1.2.0 publication](docs/design.md#publish-expert-roles-v120) is complete.
 The [release](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0)
@@ -22,10 +21,11 @@ native provenance use `1.2.0`. Earlier publication authorizations below describe
 completed historical work and do not authorize a new release or commit.
 
 D056's [contribution/release separation](docs/design.md#separate-contributions-from-release-preparation)
-remains in force.
+remains in force, with D063 superseding its generated-README freeze.
 Ordinary PRs contain canonical sources, relevant authored documentation and an
-Unreleased changelog note. Leave `VERSION`, `dist/` and generated README sections
-unchanged. Validate sources and review a separate `0.0.0-preview` tree. Routine
+Unreleased changelog note. Regenerate and include the source catalogues; leave
+`VERSION` and `dist/` unchanged. Validate sources and review a separate
+`0.0.0-preview` tree. Routine
 expert additions do not need project-wide decision, status or release records;
 maintainers own those records. The source and contribution guides provide the
 tested commands. This current policy supersedes earlier instructions to include
@@ -33,8 +33,9 @@ generated artifacts in each contribution, including text retained in old release
 
 Maintainers choose versions and regenerate committed artifacts in a separate
 PR labeled `release`. Require a new final stable version, a matching dated
-changelog and strict output freshness. CI always validates sources, tests and
-change ownership, and attaches an isolated preview. It publishes nothing.
+changelog and strict output freshness. CI always validates sources, catalogue
+freshness, tests and change ownership, and attaches an isolated preview. It
+publishes nothing.
 Preserve delivered baselines and fixed release tags. The earlier authorization
 to commit and push these process changes was completed; it does not extend to
 subsequent work. No new release, tag, installation or runtime test is included.
@@ -158,9 +159,10 @@ Generate ready-to-use native files once under `dist/codex/` and `dist/claude/`,
 with a generated host chooser and alphabetical/specialty README indexes.
 Keep paths independent of specialties; use index links for overlapping fields.
 Keep contribution sources separate from release outputs. The generator defaults
-to source validation; `--preview` writes a new external review tree, `--release`
-updates committed outputs and `--check` requires strict release freshness.
-Contribution CI rejects changes to release-owned files/sections; release CI
+to source validation; `--docs` refreshes source catalogues and `--check-docs`
+requires them to match. `--preview` writes a new external review tree,
+`--release` updates all committed outputs and `--check` requires strict release
+freshness. Contribution CI rejects changes to VERSION and dist; release CI
 detects missing, changed, obsolete or duplicate exports, including copies in the
 former per-profile directories. The exporter never deletes unexpected files
 automatically. Consumers select `expert-*.toml`
