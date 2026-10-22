@@ -74,11 +74,11 @@ Corporate finance
    [Claude Code](dist/claude/README.md) role and follow the
    [setup guide](docs/delivery.md#use-a-native-role).
 2. Describe your task, relevant evidence and constraints. Let the assistant
-   select a suitable available role, or ask for an expert by name.
+   select a suitable available role, or request an expert role by name.
 
 For example, after setting up the role:
 
-> Use Steve Jobs's expert role to review this product proposal.
+> Use the AI role inspired by Steve Jobs to review this product proposal.
 > Where should it be simpler or more focused?
 
 ## Who is included?

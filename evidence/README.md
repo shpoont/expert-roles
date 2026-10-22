@@ -23,6 +23,9 @@ its earlier commitments in a separate linked document.
 Following owner review, the opening explicitly introduces roles for AI
 assistants and their independent interpretation of public work; affiliation
 details remain in the existing Disclaimer.
+The full catalogue and download indexes repeat the independent-AI framing for
+direct visitors. Usage wording requests an AI role inspired by the expert;
+native role descriptions and shared instructions remain unchanged.
 
 All 55 tests pass, including the new invalid-cue/no-partial-writes and literal
 display check. Source validation and ordinary contribution ownership pass.

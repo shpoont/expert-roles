@@ -1,5 +1,8 @@
 # Expert catalogue
 
+These roles are independent AI interpretations inspired by experts' publicly
+documented work.
+
 Browse experts by name or specialty. Open a profile for its public work,
 suggested uses and Codex or Claude Code role files.
 
