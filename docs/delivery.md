@@ -4,10 +4,10 @@
 
 Start at the [full catalogue](../src/roles/README.md), then open individual
 profiles and their Codex or Claude Code files. The fifty-seven completed profiles
-use one simplified layout and eighty-two shared specialties. D048's accepted
-studio-v1 refresh contains twenty-nine generated portraits, five retained
-photographs, five original historical depictions and eighteen full-name
-placeholders. All
+use one simplified layout and eighty-two shared specialties. The working tree
+contains forty generated portraits, five original historical depictions and
+twelve full-name placeholders. The owner accepted D053's eleven additions;
+the 29 generated images accepted under D050 are unchanged. All
 accepted experts remain included.
 
 Review images and their provenance using the
@@ -23,8 +23,10 @@ temporary Grace Hopper contribution in a disposable copy, with actual built-in
 generation and screenshot-backed profile/catalogue review. See the
 [bounded results](../evidence/README.md#independent-portrait-contribution-walkthrough--2026-10-21).
 This does not establish repeatability; owner acceptance is recorded separately.
-D052 authorizes a signed squash commit into local main and preparation of
-v1.1.0 after the final checks. Do not push, tag or publish the candidate.
+D052's signed local squash is retained. D055 authorizes finalizing D053's
+accepted portraits and D054's provenance standard into the v1.1.0 release,
+with a signed commit, ordinary main push, completed exact-commit hosted checks,
+annotated tag and latest stable GitHub release. Deployment remains separate.
 
 The catalogue remains broad under D038 and uses D037's adopted criteria.
 D039 implements the owner's ten selected additions and Rybka removal; D040
@@ -102,6 +104,8 @@ you can write `Use the expert-eliyahu-goldratt agent to review this delivery pla
 An `@` prefix is not required for this documented request pattern.
 
 Each Codex TOML contains `name`, `description` and `developer_instructions`.
+Both formats also carry [source, version and expert ID comments](../src/README.md#export-provenance)
+for people and consuming tools; these do not enter the execution instructions.
 Consumers register the file using its generated name and description plus the
 file path. The [configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference)
 defines `agents.<name>.description` and `agents.<name>.config_file`.
@@ -201,8 +205,10 @@ Original sources, role instructions, tooling and name artwork use [MIT](../LICEN
 Photographs and generated adaptations of licensed references retain the terms
 and credits on their profiles; they are excluded from MIT. Original generated
 contributions use MIT to the extent rights can be granted. Always preserve attribution, source, permission notices and edit
-history, and follow each image's conditions. Watson's CC BY-NC 2.0 portrait and
-Ross's CC BY-NC 4.0 video-derived adaptation retain their noncommercial conditions.
+history, and follow each image's conditions. Watson's new selection uses CC
+BY-SA 2.0 references; copies of her previous CC BY-NC 2.0 image retain those terms.
+Ross's CC BY-NC 4.0 adaptation and the other credited noncommercial sources
+retain their individual conditions.
 The collection does not promise uniform photo reuse rights. Vocabulary labels retain their
 [source credits and terms](elements/specialties.md#source-attribution).
 Follow the [photo policy](../CONTRIBUTING.md#photo-sources-and-licenses) and
@@ -210,12 +216,16 @@ Follow the [photo policy](../CONTRIBUTING.md#photo-sources-and-licenses) and
 
 ## Versions and releases
 
-Prepared version: **v1.1.0** (unpublished). Latest published version:
-**[v1.0.0](https://github.com/shpoont/expert-roles/releases/tag/v1.0.0)**.
+Library version: **[v1.1.0](https://github.com/shpoont/expert-roles/releases/tag/v1.1.0)**.
 One `MAJOR.MINOR.PATCH` version covers profiles, metadata, vocabulary, shared
 instructions, templates, tooling and both native formats. The consuming plugin
 and other integrations keep independent histories. Individual experts and export
 formats do not have separate versions.
+
+The root [VERSION](../VERSION) file is the machine-readable source for export
+provenance, finalized as `1.1.0` for this release. Use a development suffix for
+unfinalized future exports. A version header identifies a declared library version, not proof of publication or an
+exact content digest. Keep released tags fixed and use Git refs for snapshots.
 
 Choose the increment by its effect on users and consumers:
 
@@ -232,14 +242,16 @@ The first stable baseline includes `dist/codex/expert-<slug>.toml` and
 A versioned export is not a broader host-compatibility or effectiveness claim.
 
 Preparation, local commits and publication follow the owner's current
-authorization. D052 includes local preparation only. For an authorized
-publication, complete the applicable steps below:
+authorization. D055 authorizes v1.1.0 publication; future releases need their
+own owner instruction. Complete the applicable steps below:
 
-1. Review scope, compatibility impact and evidence. Regenerate and run the
-   [checks](../tests/README.md), including local links, native consistency and
-   applicable source/content preservation.
-2. Finalize the dated changelog entry and update the main README and this guide's
-   baseline references. Leave an **Unreleased** section for subsequent work.
+1. Review scope, compatibility impact and evidence; choose the intended version.
+2. Set `VERSION` to the final version, without `v` or a development suffix for a
+   stable release. Finalize the dated changelog entry and update the main README
+   and this guide's baseline references. Leave **Unreleased** for subsequent work.
+   Regenerate and run the [checks](../tests/README.md), including export headers,
+   local links, native consistency and applicable source/content preservation.
+   `VERSION`, both formats' comments and the intended tag must agree.
 3. Commit the exact intended contents using the configured signing identity,
    verify the signature, and push. Require the hosted **Checks** workflow to
    succeed for that exact commit before publishing.
@@ -256,55 +268,57 @@ publication, complete the applicable steps below:
    source files. Confirm the local tree is clean. Keep preparation evidence
    distinct from successful publication; a commit alone does not make a release.
 
-### v1.1.0 preparation and remaining delivery
+### v1.1.0 release baseline
 
-D052's [local preparation contract](design.md#local-squash-merge-and-v110-preparation)
-combines the accepted portrait work and release documentation in one signed
-squash commit on local main. Version v1.1.0 is a minor increment because the
-portrait workflow and validation are compatible additions. Expert identifiers,
-metadata, native formats, export paths and intended role scope remain compatible.
-The AI-identity and request-policy follow-up since v1.0.0 is included in these
-whole-library release notes.
+D055's [publication contract](design.md#publish-expert-roles-v110) includes
+D052's signed local squash, D053's accepted expansion to forty generated
+portraits and D054's native export provenance. Version v1.1.0 is a minor
+increment for compatible portrait tooling and provenance capabilities. Existing
+expert identifiers, source metadata, native settings, export paths and intended
+role scope remain compatible. The AI-identity and request-policy changes since
+v1.0.0 are included in this whole-library release.
 
-The local candidate has no version tag or hosted release. After separate owner
-authorization, finalize release wording for the intended v1.1.0 baseline without
-claiming publication in advance. Commit any final documentation edits with a
-signature and rerun local checks. Push the reviewed release commit and require
-successful hosted Checks for that exact commit. Then create and verify the
-annotated `v1.1.0` tag, push it explicitly, publish **Expert Roles v1.1.0** as
-Latest, and read back the remote commit, tag target, release and tagged source
-files. Record observed delivery only after that readback. Never move an existing
-released tag.
+The [release page](https://github.com/shpoont/expert-roles/releases/tag/v1.1.0)
+and [Checks workflow](https://github.com/shpoont/expert-roles/actions/workflows/checks.yml)
+record hosted delivery. Require both the release commit's workflow and its
+validation check to conclude successfully before creating the annotated tag.
+Read back remote main, tag object/target, release metadata, `VERSION` and both
+native formats before reporting publication. Version declarations alone do not
+prove delivery; never move an existing released tag.
 
-### Draft release notes for v1.1.0
+<a id="draft-release-notes-for-v110"></a>
 
-**Expert Roles v1.1.0** adds a reproducible studio-portrait contribution workflow
-and clearer image provenance across the 57-expert catalogue.
+### Release notes for v1.1.0
 
-- 29 owner-accepted generated portraits, five retained photographs, five
-  historical depictions and eighteen full-name placeholders. Visible and
-  accessible labels identify image types; individual profiles retain source
-  creators, licenses, permission notices, generation disclosures and edit history.
+**Expert Roles v1.1.0** adds a reproducible portrait contribution workflow,
+expanded studio-portrait coverage and portable export provenance across the
+57-expert catalogue.
+
+- 40 owner-accepted generated portraits, including Goldratt, with five unchanged
+  historical depictions and twelve full-name placeholders. Profiles retain
+  source creators, individual terms, generation disclosures and edit history;
+  both catalogues identify image types visibly and accessibly.
 - A versioned studio-v1 prompt, stable per-expert background recipes, reference
-  hashes and deterministic 512 × 512 RGB JPEG preparation. The generator and CI
-  check required credit fields, stable recipes and per-reference source/terms
-  declarations before writes.
-- Explicit AI-inspired identity in all 114 native roles and a private voluntary
-  correction/removal request process for featured experts and representatives.
-- Existing expert identifiers, metadata, specialties, Codex/Claude formats and
-  flat `dist/` export paths are preserved. Consumer integrations remain separate.
+  hashes, deterministic 512 × 512 RGB JPEG preparation, a copyable credit block
+  and per-reference validation in the generator and CI.
+- Source repository, version `1.1.0` and expert ID comments in all 114 Codex and
+  Claude Code exports, generated from one validated `VERSION` file. Existing
+  parsed settings and execution instructions are preserved by these comments.
+- Explicit AI-inspired identity and a private voluntary correction/removal
+  process for featured experts and representatives.
+- Stable expert identifiers, 82 specialties in ten groups and flat `dist/`
+  paths. Consuming integrations and installation remain separate.
 
-Local validation: 43 tests pass; all 119 generated files match; all 173 protected
-files, 57 selected visuals and 57 profile READMEs match the accepted rebased tree.
-One independent temporary contribution walkthrough passed. Identical image-model
-output, general contributor reliability, biometric identity, Claude runtime,
-automatic Codex discovery and comparative role benefit are not established.
-No new host-runtime testing was performed. Images retain individually credited
-terms, including existing noncommercial conditions where applicable.
-
-Publication must add the successful exact-commit hosted-check result and a link
-to the verified tagged snapshot. Until then, these are draft notes for an
-unpublished local candidate.
+Local validation: 45 tests pass and all 119 generated files match. All 57 native
+pairs parse and agree. The stable version changes only the version comment in
+each accepted development export; accepted images, individual profiles, expert
+metadata, vocabulary and shared templates retain their bytes. One independent
+temporary contribution walkthrough passed. No new host-runtime testing ran;
+Claude runtime, automatic Codex discovery, general contributor reliability,
+identity verification and comparative role benefit remain unestablished.
+Images retain their individually credited terms, including noncommercial
+conditions where applicable. Hosted release notes include the successful
+exact-commit check and fixed snapshot links after those results are observed.
 
 ## Outcomes and learning
 

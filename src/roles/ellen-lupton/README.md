@@ -1,6 +1,6 @@
 # Ellen Lupton
 
-<img src="portrait.jpg" alt="Portrait of Ellen Lupton" width="240" height="240">
+<img src="portrait.jpg" alt="Ellen Lupton — AI-generated portrait" width="240" height="240">
 
 [Typography](../README.md#specialty-typography) · [Graphic design](../README.md#specialty-graphic-design)
 
@@ -25,15 +25,37 @@ Ellen Lupton.
 
 - [AIGA: Thinking with Type, published work and design recognition](https://detroit.aiga.org/event/thinking-with-type-webinar/).
 
-## Photo credit
+## Image
 
-*Ellen Lupton and David Reinfurt at MICA Thesis Exhibition 2009*. Photo by **Kristian Bjornard**.
+**AI-generated portrait** — A synthetic likeness, not an authentic photograph or evidence of endorsement.
 
-- **Source:** [Wikimedia Commons image page](https://commons.wikimedia.org/wiki/File:Ellen_Lupton_and_David_Reinfurt_at_MICA_Thesis_Exhibition_2009.jpg), from the [original Kristian Bjornard Flickr photo](https://www.flickr.com/photos/bjornmeansbear/3438721689/).
-- **License:** [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
+**Style:** [studio-v1](../../../docs/elements/portraits.md), background variant **0**;
+direct eye contact and an individual moderately muted background.
+**Palette:** #ABAECE, #AFCECE, #D4CEC5.
+**Flow:** A broad off-center arc, with a slightly deeper outer corner and a soft center.
 
-Cropped to a square, resized to 512 × 512 pixels and re-encoded as RGB JPEG.
-This portrait retains the source's CC BY-SA 2.0 license.
+**Tool:** Built-in ImageGen
+**Created:** 2026-10-22
+**Model:** Not disclosed
+**Method:** One new reference-based generation from 2 photographic references using the shared studio-v1 prompt and source-specific identity notes. No correction or accepted-sample reuse.
+
+**Changes:** Replaced the previous catalogue photograph with a new studio sitting, camera-facing composition, neutral lighting and the individual background. Prepared from the retained generated master as a centered 512 × 512 RGB JPEG using Lanczos resizing, quality 95 and chroma subsampling disabled.
+
+**Generated adaptation license:** [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/). Retain the same share-alike terms for this adaptation. This portrait is excluded from the library’s MIT license. Applicable source conditions are retained under the [project image policy](../../../docs/elements/portraits.md#source-credits-and-ai-generation); this does not assert copyright in otherwise unrestricted generated portions.
+
+### Reference attribution
+
+Ellen Lupton and David Reinfurt at MICA Thesis Exhibition, 13 April 2009. Credited creator: **Kristian Bjornard**.
+
+- **Source:** [Original image and source record](https://commons.wikimedia.org/wiki/File:Ellen_Lupton_and_David_Reinfurt_at_MICA_Thesis_Exhibition_2009.jpg).
+- **License / permission:** [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
+- **Earlier changes:** The previous catalogue crop and this full original are one photograph; its source is the photographer’s Flickr image 3438721689.
+
+Tony Venne presenting to David Reinfurt and Ellen Lupton, 13 April 2009. Credited creator: **Kristian Bjornard**.
+
+- **Source:** [Original image and source record](https://commons.wikimedia.org/wiki/File:Tony_Venne_presenting_to_David_Reinfurt_and_Ellen_Lupton.jpg).
+- **License / permission:** [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
+- **Earlier changes:** A second photograph from the same event, originally posted by bjornmeansbear on Flickr as image 3438703087; no image changes before generation.
 
 <details>
 <summary>Source files</summary>

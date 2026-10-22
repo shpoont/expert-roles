@@ -45,6 +45,14 @@ are evidence of presentation, not identity verification or owner acceptance.
 
 ## Profile prototype checks
 
+D054's [provenance contract](../docs/design.md#standard-export-provenance)
+requires matching source/version/ID comments in both formats, with Claude
+comments inside frontmatter. Regression checks change the whole-library version
+through development, release-candidate and stable values, confirm the parsed
+native fields and instructions stay identical, and require read-only drift
+detection. Missing or malformed versions must fail without writes. The existing
+CI suite and generated check enforce this for all exports.
+
 | Check | Observable pass condition |
 | --- | --- |
 | Source layout | Profiles, specialties and templates live under `src/`; ready-to-use exports and generated indexes live under `dist/`. Generator paths, fixtures and links resolve in the adopted layout. |
@@ -61,6 +69,7 @@ are evidence of presentation, not identity verification or owner acceptance.
 | Catalogue growth and display text | The expert table has three columns and one row per expert; accepted punctuation renders as text without changing cells or links. |
 | README entry points | The main README has exactly six featured experts in two rows, a generated total and a full-catalogue link. The full alphabetical and specialty catalogue lives in src/roles/README.md. Adding an expert grows that catalogue and both counts without enlarging the sample. Authored text outside each marker pair survives; missing, duplicate, reversed, overlapping or nested boundaries fail before writes. Invalid curated sources also fail before writes. |
 | Native syntax | Codex files parse as TOML with the three required fields; Claude files have valid YAML frontmatter and a nonempty instruction body. |
+| Export provenance | Every native file has exactly one canonical source, validated whole-library version and correct expert ID comment. Both hosts agree; comments do not change parsed settings, descriptions or instruction bodies. VERSION changes require regeneration, and check mode detects stale headers without rewriting them. |
 | Generated consistency | Exporter check mode reports no missing, changed or obsolete generated role files, distribution indexes or catalogue content. It rejects legacy and nested duplicate exports before writes and never deletes them automatically. |
 | Invalid input | An invalid profile sorted after a valid profile is rejected before outputs are written; malformed metadata is also rejected. |
 | Multiple specialties | Both host files retain Goldratt's identity and all four assigned specialty labels. |
@@ -73,7 +82,7 @@ are evidence of presentation, not identity verification or owner acceptance.
 | Handover | Current work, scope, decisions, contribution guidance and delivery accurately describe the initial catalogue and documented host limits. |
 | Direct use | A linked central section explains obtaining an export, tested Codex registration, untested host paths and the separate deployment responsibility. Explicit expert requests are optional; exact names are useful for targeted requests and invocation validation. |
 | Starter profile | The documented starter can be copied, completed with name and generated into a linked catalogue entry and valid native files without changing the real expert collection. Exact instructions also explain replacing name with a permitted photo and restoring name. |
-| Git boundary | Diff has no whitespace errors. Follow the owner's current authorization. D052 authorizes one signed squash commit into local main and v1.1.0 preparation, with no push, tag or publication. Deployment remains separate. Temporary host validation follows its own contract below. |
+| Git boundary | Diff has no whitespace errors. D055 authorizes v1.1.0's signed release commit, main push, annotated tag and latest stable release after completed exact-commit hosted checks. Earlier local-only boundaries remain historical. Deployment and temporary host validation remain separate. |
 
 Run the exporter in check mode as described in [src](../src/README.md).
 Record actual results, baseline and limitations in
@@ -82,9 +91,19 @@ before handover; source validity alone does not establish a good presentation.
 
 ## Release checks
 
+D053's accepted [coverage follow-up](../docs/design.md#increase-photographic-portrait-coverage)
+adds eleven portraits after D052's signed candidate. D054 then adds provenance
+comments to the 114 native exports. Compare parsed native values and instructions
+with the pre-D054 baseline; removing only the three added comments must recover
+each previous native file exactly. Preserve all 57 visuals, expert source
+metadata, vocabulary, shared instruction and profile content. New image sources
+still need actual identity and primary permission checks, separate from the
+automated validator. Publication follows D055's explicit authority and gate below.
+
 Follow the [release procedure](../docs/delivery.md#versions-and-releases) and
 the current implementation contract. Version references in the README,
-delivery guide, dated changelog, intended tag and release title must agree.
+delivery guide, dated changelog, VERSION, native provenance comments, intended
+tag and release title must agree at publication.
 Distinguish a prepared candidate from the latest published version; retain
 Unreleased for future changes. Check compatibility and all changes since the
 previous released tag, including work already delivered on main.
@@ -102,8 +121,11 @@ before the signed commit. Verify its signature, single main parent and clean
 local tree. D052 includes no push, tag or publication, so hosted checks and
 release readback remain pending.
 
-When publication is authorized, require hosted Checks to pass on the exact
-release commit. Verify the annotated tag target, remote branch/tag, GitHub
+D055's [publication contract](../docs/design.md#publish-expert-roles-v110)
+authorizes the v1.1.0 release. Require both the exact release commit's hosted
+Checks workflow and validation check to conclude successfully before tagging;
+passing logs or an in-progress check do not satisfy the gate. Verify the
+annotated tag object and target, remote branch/tag, GitHub
 release version/title/body/Latest state, and clean local tree. No host
 installation, invocation or consumer update follows from library publication.
 The historical [D045 contract](../docs/design.md#versioning-and-first-release)

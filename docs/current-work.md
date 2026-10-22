@@ -2,6 +2,76 @@
 
 ## Current focus and status
 
+D055 finalizes the **v1.1.0** release baseline, combining the accepted portrait
+workflow, D053's expanded coverage and D054's export provenance. Canonical
+`VERSION` and all 114 native headers use `1.1.0`. The 57-expert catalogue has
+40 generated portraits, five historical depictions and twelve full-name
+placeholders. All accepted images, profiles and parsed role instructions are
+preserved; release preparation changes only each native version comment and
+the relevant version/release records.
+
+The owner authorizes a signed release commit, ordinary main push, completed
+exact-commit Checks workflow and validation check, an annotated v1.1.0 tag and
+publication as the latest stable release. D055 supersedes the earlier local-only
+boundaries for this release. Deployment and installation remain separate.
+The [GitHub release](https://github.com/shpoont/expert-roles/releases/tag/v1.1.0)
+and [Checks](https://github.com/shpoont/expert-roles/actions/workflows/checks.yml)
+record hosted delivery; checked-in version declarations alone do not prove it.
+See the [release contract](design.md#publish-expert-roles-v110) and
+[release evidence](../evidence/README.md#v110-release-validation--2026-10-22).
+
+### Provenance implementation baseline
+
+D054 implements [standard export provenance](design.md#standard-export-provenance)
+for every current and future Codex and Claude Code role file. All 114 exports
+carry canonical source, whole-library version and expert ID comments. One root
+`VERSION` file owns the value, currently `1.1.0-dev`; final release preparation
+must set the intended final version and regenerate. Comments stay outside the
+description and instruction payload, with Claude comments inside frontmatter.
+No timestamp, machine path or Git-dependent stamping is introduced.
+
+All 45 tests pass and all 119 generated files match. For all 114 native files,
+parsed fields and instruction bodies are identical to the pre-D054 baseline;
+removing only the three new comments recovers each previous file exactly.
+All 180 protected source files, including every expert visual and profile,
+retain their bytes. Local links, UTF-8, public suitability and whitespace
+checks pass. The signed local main commit is unchanged and the index is empty.
+No commit, installation, runtime test, push, tag or publication was performed.
+See the [provenance evidence](../evidence/README.md#standard-export-provenance--2026-10-22).
+
+### Accepted portrait coverage follow-up
+
+D053 reopens photographic coverage at the owner's request, especially for
+Goldratt. Eleven fresh reference-based candidates are now integrated in the
+working tree: Goldratt, Kaplan, Lupton, Watson, Zelený, Baťa, Forsgren,
+Holtzblatt, Roberge, Susskind and Ulrich. The working catalogue contains **40
+generated portraits, five unchanged historical depictions and twelve full-name
+placeholders**. The accepted 29 generated images and all role content remain
+unchanged. This follow-up stays uncommitted and unpublished.
+
+All 23 previously nongenerated photographic subjects were reassessed through
+Commons and Openverse leads, with primary source checks before using new images.
+Searching with the accented name found clearer Watson references; source-specific
+checks excluded namesakes, a Baťa drawing, deleted Rackham permissions and
+ND-only or territorially unresolved alternatives. The twelve remaining
+placeholders still lack a verified usable photographic reference in this pass.
+Goldratt and Kaplan use limited references; Holtzblatt's facial detail remains
+the least certain new selection. These source limits remain documented after
+the owner's acceptance of the rendered result before D054.
+
+Each new selection has an exact shared-prompt recipe, unchanged tool arguments,
+archived input bytes, retained generated master, a full run record and public
+source credits. The [coverage contract](design.md#increase-photographic-portrait-coverage)
+defines the boundary. See the [new evidence](../evidence/README.md#expanded-portrait-coverage--2026-10-22).
+
+Coverage checks pass: 43 tests, 119 matching generated files, 57 matching native
+pairs and 2,059 resolving local references. The preservation and provenance
+checks pass. Safari readback confirms all catalogue visuals at 160 pixels and
+the eleven before/after pairs at 160 and 240 pixels; actual screenshots include
+Goldratt and Zelený. The owner subsequently accepted the rendered result.
+
+### Previous portrait and integration baseline
+
 D052 authorizes squashing the accepted portrait work into local main and
 preparing **v1.1.0**, a compatible minor release. The signed local commit includes
 the portrait implementation and release documentation. No push, tag or
@@ -169,11 +239,11 @@ These follow-ups are separate from the accepted catalogue and commit readiness.
 
 ## Next actions
 
-Review the prepared v1.1.0 changelog and draft release notes. Publication needs
-its own owner instruction: push the signed main commit, require successful
-hosted Checks for that exact commit, then verify and push an annotated v1.1.0
-tag and publish the matching release. Read back the remote state before calling
-the version released. No publication step is part of this local preparation.
+Maintain the accepted v1.1.0 baseline and record subsequent work under Unreleased.
+D055's publication contract requires exact-commit hosted validation and remote
+tag/release readback before reporting delivery. Refer to the linked hosted
+records for the release outcome; its authorization applies only to this version.
+Keep the v1.0.0 and v1.1.0 released tags fixed.
 
 The accepted portraits and bounded contribution walkthrough are retained; the
 temporary Grace Hopper fixture is not a roster addition.

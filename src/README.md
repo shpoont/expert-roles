@@ -46,6 +46,7 @@ licensed references retain their separately credited terms; see the
 [license scope](../README.md#license).
 
 ```text
+VERSION
 src/
   README.md
   specialties.yaml
@@ -110,6 +111,37 @@ full catalogue to help readers compare overlapping experts. It is not added to
 execution instructions or automatically copied into profile prose. The catalogue
 keeps its name, specialty and image columns; all roles retain the shared instruction.
 
+## Export provenance
+
+Every current and future native export includes the same three generated
+provenance comments, alongside the existing generator notice:
+
+```text
+# expert_roles.source: https://github.com/shpoont/expert-roles
+# expert_roles.version: 1.1.0
+# expert_roles.id: eliyahu-goldratt
+```
+
+`source` identifies the canonical public repository, `version` comes from the
+root [VERSION](../VERSION) file, and `id` is the expert directory's stable slug.
+Both formats share the whole-library version; individual experts have no
+separate version. The example uses the v1.1.0 release version.
+
+Codex comments appear before the TOML settings. Claude comments appear inside
+the YAML frontmatter, after its opening `---`; the closing `---` and instruction
+body are unchanged. These are file provenance for people and consuming tools,
+not host configuration fields or additions to the description or instructions.
+The hosts do not automatically display or act on these comments.
+
+Keep `VERSION` as one Semantic Version without a `v` prefix. A `-dev` value
+marks unfinalized development exports; it does not identify an exact snapshot
+or prove publication. Consumers still pin a released tag or commit. During
+[release preparation](../docs/delivery.md#versions-and-releases), set the intended
+final version and regenerate. Missing or malformed versions fail before export writes;
+check mode detects stale or edited provenance. Do not add generation timestamps,
+machine paths or Git-dependent values: the same source files must generate the
+same exports in an ordinary checkout or a source archive.
+
 ## Prepare the Python environment
 
 After copying and filling the starter, prepare Python 3.11 or newer from the
@@ -132,7 +164,7 @@ every profile's required image present, run from the repository root:
 .venv/bin/python src/generate.py
 ```
 
-The exporter reads [specialties.yaml](specialties.yaml), each expert's metadata
+The exporter reads [VERSION](../VERSION), [specialties.yaml](specialties.yaml), each expert's metadata
 and [the shared instruction](templates/invocation.md). It updates the full
 catalogue in `src/roles/README.md`, the summary and featured sections in the
 main README, the native files under `dist/codex/` and `dist/claude/`, and all

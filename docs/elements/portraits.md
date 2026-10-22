@@ -14,6 +14,10 @@ tool does not expose a fixed seed or necessarily a model identifier.
 Use only photographic subjects supported by reliably attributed photographs
 whose reuse terms permit the planned use. Follow the
 [photo policy](../../CONTRIBUTING.md#photo-sources-and-licenses).
+Before retaining a placeholder for lack of references, try accented and
+unaccented names, aliases, Openverse and original event/photographer collections.
+Check identity and terms on the primary source; namesakes and licensed images
+of a related place, object or diagram do not establish a portrait reference.
 
 - Keep drawings, paintings, engravings, statues and similar depictions in their
   original form with existing credits. Do not generate replacements for them.

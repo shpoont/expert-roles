@@ -2325,3 +2325,149 @@ integration. Existing portrait-owner acceptance and the bounded independent
 walkthrough remain the applicable evidence. No push, hosted workflow execution,
 version tag, release publication, installation or consumer change is authorized
 or performed; exact-commit hosted CI and release readback remain pending.
+
+## Expanded portrait coverage — 2026-10-22
+
+D053 reopens the five retained photographs and eighteen placeholders, with
+Goldratt as the priority. The working tree now has eleven additional studio-v1
+selections: Goldratt, Kaplan, Lupton, Watson and Zelený replace photographs;
+Baťa, Forsgren, Holtzblatt, Roberge, Susskind and Ulrich replace placeholders.
+All 29 previously accepted generated portraits and five historical depictions
+are preserved. New owner acceptance remains pending.
+
+Source research covered all 23 subjects through Commons and Openverse, with
+additional name variants and direct primary-source checks. Three Commons
+queries were rate-limited; Openverse supplied independent leads and primary
+Flickr pages established the actual licenses used. Aggregator hits were not
+treated as permission or reliable identity by themselves.
+
+- **Goldratt:** one fresh attempt uses the credited face crop and full original
+  of the same Dugres photograph, explicitly identifying the man on the right.
+  The candidate has direct gaze and retains the reference's broad proportions
+  and mature appearance; fine detail remains interpretive. Keep CC BY-SA 4.0,
+  Dugres's credit, R8cocin8's exposure edit and the prior crop history.
+- **Lupton:** two distinct Kristian Bjornard photographs provide profile and
+  three-quarter views. A previous crop and its full original count as one
+  photograph. Both references and CC BY-SA 2.0 terms are credited.
+- **Zelený and Kaplan:** fresh generations succeeded from their existing
+  permitted originals. Preserve Tomas79rek's CC BY 3.0 and Davidpmcmillan's
+  CC BY-SA 4.0 terms. Zelený's held glasses are not worn in the result; Kaplan's
+  source remains small, so fine facial detail is an editorial interpretation.
+- **Watson:** the accented-name search found clearer, separately licensed
+  [MGM14](https://www.flickr.com/photos/12383598@N00/14212207421) and
+  [TCUK13](https://www.flickr.com/photos/29050965@N08/11016395174) photographs
+  by mia! and kmardahl under CC BY-SA 2.0. The old Gifford photograph was not
+  supplied to generation. Its earlier credit and noncommercial conditions
+  remain documented separately, without asserting they apply to new inputs.
+- **Former placeholders:** primary Flickr pages confirm the used Ulrich images
+  under CC BY 2.0; Holtzblatt, Roberge and Susskind references under CC BY-NC-SA
+  2.0; and Forsgren references under CC BY-NC 2.0. Relevant share-alike and
+  noncommercial terms remain on the new profiles. The Baťa input is the actual
+  [postcard photograph](https://commons.wikimedia.org/wiki/File:Tomas_Bata.jpg),
+  credited to bata shoe company with its recorded CC BY-SA 3.0 terms; the
+  separately found drawing was excluded. His generated subject stays monochrome.
+
+Twelve placeholders remain. Commons only establishes Japanese public-domain
+status for the checked Ohno photograph, and the Toyota Flickr alternative is
+ND-licensed. The former Rackham Commons files were deleted for missing
+permission. Other leads were unlicensed, ND-only, non-photographic or did not
+reliably identify the catalogue expert: these included a younger Ulrich
+namesake, Ron Gomes Casseres, musicians with similar names, and the Leerburg
+facility rather than an identified portrait of Frawley. No name-only
+generation, artwork replacement or tool-refusal bypass was used.
+
+The built-in ImageGen tool completed eleven calls, one per candidate, without
+corrections or reused generated samples. Each 1254 × 1254 master is retained
+with the exact shared-prompt recipe, unchanged call arguments, reference hashes,
+archived input bytes, selection notes and the minimum run record. Preparation
+uses the existing deterministic 512 × 512 RGB JPEG helper. Profiles disclose
+the synthetic images and record every supplied photograph's source and terms.
+Holtzblatt's source has the least facial detail and needs particular owner
+attention; visual comparison is separate from file validation and identity
+verification. The source-search and generation artifacts stay outside the
+public repository.
+
+Local verification passes: all 43 tests, all 119 generated files, and parsing
+and equality of all 57 Codex/Claude pairs. The preservation check finds no
+changes to the 173 protected source/export files, the 46 retained visuals or
+the non-image prose of the eleven changed profiles. It validates every new
+recipe, exact call, archived input hash, master and prepared JPEG. All 2,059
+local references resolve; UTF-8, bounded public-suitability and whitespace
+checks pass. Each expert has exactly one active visual: 40 generated portraits,
+five historical depictions and twelve placeholders.
+
+The fresh working-tree preview renders 196 navigable pages. Safari confirms
+all 57 catalogue images load at 160 × 160, and all 22 before/after comparison
+images load at both 160 × 160 and 240 × 240 without horizontal overflow in
+the observed 1712 × 1016 viewport. Actual Safari screenshots show the Goldratt
+and Zelený comparisons at both sizes and the catalogue at its declared size.
+The preview's table CSS was corrected locally after an initial rendering
+shrunk its image column; that preview-only adjustment does not change the
+repository. Source/reference and generated-master review covers all eleven
+new candidates. These are local editorial/rendering checks, not owner
+acceptance, independent identity verification or hosted GitHub rendering.
+
+No commit, push, version tag, release, installation or consumer change is part
+of this follow-up. D052's signed candidate remains fixed; new changes are under
+Unreleased pending review and release allocation.
+
+## Standard export provenance — 2026-10-22
+
+D054 adopts source repository, whole-library version and expert ID comments
+as the standard for every current and future native export. The owner accepted
+D053's expanded portrait result before adopting this follow-up. The root
+`VERSION` file supplies `1.1.0-dev` for the current working exports; it does not
+claim a published release or exact snapshot identity. The existing generator
+notice is retained. Claude comments stay inside YAML frontmatter; Codex comments
+precede its TOML fields. Neither format adds host settings or prompt text.
+
+Normal generation updated exactly 114 native files. All **45 tests pass**, and
+all **119 generated files match** their sources. Two new regression checks cover
+version propagation through development, release-candidate/build and stable
+versions, native-value preservation, read-only drift detection, and rejection of
+missing or malformed version input before writes. Existing CI uses the same
+suite and generated check.
+
+A separate read-only comparison of all 114 exports confirms that removing only
+the three provenance comments recovers every pre-D054 file exactly. Parsed
+Codex fields, Claude frontmatter and instruction bodies remain identical; all
+57 native pairs agree. All **180 protected source files**, including the 57
+expert visuals, profile READMEs, expert metadata, vocabulary and shared
+templates, retain their hashes. Local references, UTF-8, bounded public
+suitability and tracked/untracked whitespace checks pass. This is structural
+payload-preservation evidence; no new host-runtime or effectiveness test ran.
+The accepted D053 visual evidence is reused because no image or profile changed.
+
+Source guidance, durable repository instructions and release steps now require
+the convention. Release preparation must set `VERSION`, regenerate, and verify
+headers against the intended final version and tag. D052's signed local commit
+remains unchanged, the Git index is empty, and all new work remains uncommitted.
+No deployment, push, tag or publication occurred. Private baseline/hash records
+remain outside the public repository.
+
+## v1.1.0 release validation — 2026-10-22
+
+D055 authorizes publication of the complete accepted v1.1.0 scope. Canonical
+`VERSION` and all 114 provenance headers are finalized as `1.1.0`; the dated
+changelog and release notes include forty generated portraits, five unchanged
+historical depictions, twelve placeholders and the export provenance standard.
+The published v1.0.0 baseline and existing signed local squash remain fixed.
+
+Fresh release checks pass: all **45 tests** and all **119 generated files**.
+The pre-release comparison confirms all 57 Codex/Claude pairs parse and agree;
+each native export changes only its version comment from `1.1.0-dev` to `1.1.0`.
+All accepted images, individual profiles, expert metadata, shared templates,
+vocabulary and implementation files retain their pre-release bytes. Local
+references, UTF-8, public suitability and complete Git diff checks pass.
+The accepted D053 rendering and bounded contribution walkthrough are reused;
+no fresh likeness, runtime or comparative-effectiveness claim is made.
+
+This entry records local release validation. D055 separately requires a verified
+signed commit, concluded success of both the exact-commit Checks workflow and
+validation check, an annotated tag, and remote branch/tag/release/content
+readback before reporting publication. The
+[release page](https://github.com/shpoont/expert-roles/releases/tag/v1.1.0) and
+[Checks records](https://github.com/shpoont/expert-roles/actions/workflows/checks.yml)
+provide hosted delivery evidence; the hosted release notes add the actual
+successful check and fixed-snapshot links after observation. Private command
+logs and hash baselines remain outside the public repository.

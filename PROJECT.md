@@ -19,10 +19,11 @@ roster changes.
 ## Scope and expectations
 
 The current catalogue contains fifty-seven experts, eighty-two specialties in
-ten groups, twenty-nine generated portraits, five retained photographs, five
-original historical depictions and eighteen full-name placeholders. D048's
-[studio-v1 rollout](docs/design.md#reproducible-studio-portrait-method-and-catalogue-rollout)
-is applied, locally checked and accepted by the owner under D050. Every profile
+ten groups, forty generated portraits, five original historical depictions and
+twelve full-name placeholders in the working tree. The owner accepted D053's
+eleven additional portraits; the earlier 29 generated images remain unchanged
+and accepted under D050. The adopted
+[studio-v1 method](docs/elements/portraits.md) is retained. Every profile
 has canonical metadata, a short human-readable
 README, one square visual and generated Codex and Claude Code files under
 `dist/codex/` and `dist/claude/`. Generated distribution indexes provide
@@ -62,12 +63,18 @@ not establish broad selection reliability or comparative expert benefit.
   a copyable credit block and repository/CI validation in the isolated worktree.
   The independent fresh-session contribution walkthrough completed one temporary
   Grace Hopper case in a disposable copy; broader reliability remains unverified.
-  D050 records portrait-owner acceptance. D051's rebase and disposable squash
-  assessment passed. D052 authorizes a signed squash commit into local main and
-  preparation of v1.1.0. Do not push, tag or publish the candidate.
+  D050 records earlier portrait-owner acceptance. D051's rebase and disposable
+  squash assessment passed; D052's signed local squash and v1.1.0 preparation
+  are complete. D053 adds eleven further owner-accepted portraits, especially
+  Goldratt. D054 adopts generated source/version/ID comments in every current
+  and future native export, using one root `VERSION` file. D055 authorizes the
+  signed commit, main push, annotated v1.1.0 tag and latest stable release after
+  completed exact-commit hosted checks. Installation remains separate.
   Preserve biographies, expert metadata,
   vocabulary, shared instructions
-  and all 114 native file bytes. The delivered `v1.0.0` baseline remains fixed.
+  and all parsed native configuration and instructions. D054 changes only
+  provenance comments in the 114 native files. The delivered `v1.0.0` baseline
+  remains fixed.
   No integration or runtime work is included.
 - **Delivery acceptance:** the catalogue, profiles, contribution process, image
   policy, source schema and usage guidance agree with the initial collection
@@ -115,8 +122,10 @@ contributions follow MIT to the extent rights can be granted;
 always preserve attribution, source, permission and edit history. The
 [photo policy](CONTRIBUTING.md#photo-sources-and-licenses) accepts any verified
 free reuse grant compatible with the actual use and required image preparation.
-Watson's CC BY-NC 2.0 portrait and Ross's CC BY-NC 4.0 video-derived portrait
-retain their noncommercial conditions. Referenced
+The new Watson selection uses separate CC BY-SA 2.0 photographs; previous
+copies of her former CC BY-NC 2.0 portrait retain their terms. Ross's CC BY-NC
+4.0 portrait and the newly credited noncommercial sources retain their
+individual conditions. Referenced
 vocabulary labels retain their
 [source credits and terms](docs/elements/specialties.md#source-attribution).
 
@@ -126,11 +135,12 @@ This repository follows [Project Structure v1.0.0](https://github.com/shpoont/pr
 commit `96fdd6bd7950778f5b6c6f8269ab2b82167cb99a`. Expert sources live under
 `src/`; the full catalogue is generated in `src/roles/README.md`, with a fixed
 six-expert showcase and generated count in the main README. Ready-to-use
-exports and their indexes live under `dist/`. The prepared library version is
-`v1.1.0` (unpublished), independently versioned from the starter and consuming
-integrations. The latest published baseline remains `v1.0.0`.
-The [release record](https://github.com/shpoont/expert-roles/releases/tag/v1.0.0)
-and annotated tag identify the delivered snapshot; see the
+exports and their indexes live under `dist/`. The library version is `v1.1.0`,
+independently versioned from the starter and consuming integrations. The
+canonical `VERSION` file and both hosts' provenance comments use `1.1.0`.
+The [release record](https://github.com/shpoont/expert-roles/releases/tag/v1.1.0)
+and annotated tag identify the hosted snapshot; the published v1.0.0 baseline
+remains fixed. See the
 [release procedure](docs/delivery.md#versions-and-releases).
 
 Continue through [design](docs/design.md), [current work](docs/current-work.md),

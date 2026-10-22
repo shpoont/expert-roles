@@ -69,7 +69,7 @@ Human-centered design
 </tr>
 <tr>
 <td align="center" width="33%">
-<a href="src/roles/eliyahu-goldratt/README.md"><img src="src/roles/eliyahu-goldratt/portrait.jpg" alt="Eliyahu Goldratt; photo credits on profile" width="160" height="160"></a><br><sub>Photograph</sub><br>
+<a href="src/roles/eliyahu-goldratt/README.md"><img src="src/roles/eliyahu-goldratt/portrait.jpg" alt="Eliyahu Goldratt; AI-generated portrait; sources and terms on profile" width="160" height="160"></a><br><sub>AI-generated portrait</sub><br>
 <a href="src/roles/eliyahu-goldratt/README.md"><strong>Eliyahu Goldratt</strong></a><br>
 Theory of Constraints
 </td>
@@ -107,12 +107,14 @@ Follow the [contribution guide](CONTRIBUTING.md) to submit changes.
 
 ## Versions and releases
 
-Prepared version: **v1.1.0** (unpublished). Latest published version:
-**[v1.0.0](https://github.com/shpoont/expert-roles/releases/tag/v1.0.0)**.
+Library version: **[v1.1.0](https://github.com/shpoont/expert-roles/releases/tag/v1.1.0)**.
 One `MAJOR.MINOR.PATCH` version covers the whole library and both export formats:
 major for incompatible changes, minor for compatible additions, and patch for
 corrections that preserve intended behavior. Consuming integrations are versioned
 independently.
+
+Working exports use the version in [VERSION](VERSION). Each file records its
+source, library version and expert ID as [provenance comments](src/README.md#export-provenance).
 
 See the [changelog](CHANGELOG.md) and
 [release guide](docs/delivery.md#versions-and-releases). Released tags stay fixed;

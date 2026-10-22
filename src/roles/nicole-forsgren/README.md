@@ -1,6 +1,6 @@
 # Nicole Forsgren
 
-<img src="placeholder.svg" alt="Nicole Forsgren — name placeholder" width="240" height="240">
+<img src="portrait.jpg" alt="Nicole Forsgren — AI-generated portrait" width="240" height="240">
 
 [Software engineering](../README.md#specialty-software-engineering) · [DevOps](../README.md#specialty-devops)
 
@@ -30,9 +30,35 @@ Nicole Forsgren.
 
 ## Image
 
-Full-name placeholder, created from the
-[shared SVG template](../../templates/placeholder.svg). Original project artwork
-under [MIT](../../../LICENSE).
+**AI-generated portrait** — A synthetic likeness, not an authentic photograph or evidence of endorsement.
+
+**Style:** [studio-v1](../../../docs/elements/portraits.md), background variant **0**;
+direct eye contact and an individual moderately muted background.
+**Palette:** #C6D2B0, #D2C9B8, #C0BFCE.
+**Flow:** A broad diagonal sweep, with the secondary hue pooling in the opposite corner.
+
+**Tool:** Built-in ImageGen
+**Created:** 2026-10-22
+**Model:** Not disclosed
+**Method:** One new reference-based generation from 2 photographic references using the shared studio-v1 prompt and source-specific identity notes. No correction or accepted-sample reuse.
+
+**Changes:** Replaced the previous full-name placeholder with a new studio sitting, camera-facing composition, neutral lighting and the individual background. Prepared from the retained generated master as a centered 512 × 512 RGB JPEG using Lanczos resizing, quality 95 and chroma subsampling disabled.
+
+**Generated adaptation license:** [CC BY-NC 2.0](https://creativecommons.org/licenses/by-nc/2.0/). Reuse is limited to noncommercial purposes. This portrait is excluded from the library’s MIT license. Applicable source conditions are retained under the [project image policy](../../../docs/elements/portraits.md#source-credits-and-ai-generation); this does not assert copyright in otherwise unrestricted generated portions.
+
+### Reference attribution
+
+Oreilly Velocity Dev-Ops. Credited creator: **Orminternal**.
+
+- **Source:** [Original image and source record](https://www.flickr.com/photos/145819839@N03/28669706331).
+- **License / permission:** [CC BY-NC 2.0](https://creativecommons.org/licenses/by-nc/2.0/).
+- **Earlier changes:** Downloaded the available photographic original or published full-size image; no AI enhancement.
+
+Oreilly Velocity Dev-Ops. Credited creator: **Orminternal**.
+
+- **Source:** [Original image and source record](https://www.flickr.com/photos/145819839@N03/28669719761).
+- **License / permission:** [CC BY-NC 2.0](https://creativecommons.org/licenses/by-nc/2.0/).
+- **Earlier changes:** Downloaded the available photographic original or published full-size image; no AI enhancement.
 
 <details>
 <summary>Source files</summary>

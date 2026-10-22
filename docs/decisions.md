@@ -1142,3 +1142,40 @@ validation remain separate from this addition.
   Preserve the accepted portrait tree outside release documentation. Provide
   a dated changelog, draft notes, signed commit and local evidence. Hosted CI,
   annotated tagging, publication and remote readback await separate authority.
+
+## D053 — 2026-10-22: Increase generated portrait coverage
+
+- **Status:** Owner-authorized reference research and local image work.
+- **Decision:** Try harder to cover remaining photographic subjects with
+  generated portraits, especially Eliyahu Goldratt. Reassess the retained photos
+  and name placeholders using the adopted method and verified source terms.
+- **Boundary:** Preserve historical artwork, accepted generated images and all
+  role content. Keep new candidates and results local and uncommitted; no push,
+  version tag, release publication or consumer change is included. Follow the
+  [coverage contract](design.md#increase-photographic-portrait-coverage).
+
+## D054 — 2026-10-22: Standardize native export provenance
+
+- **Status:** Adopted; local implementation authorized.
+- **Decision:** Every Codex and Claude Code export carries generated source,
+  whole-library version and expert ID comments. One root `VERSION` file owns
+  the version; use `1.1.0-dev` for the current development exports. Keep comments
+  outside execution instructions and ordinary host settings.
+- **Boundary:** The owner accepted D053's expanded portrait result before this
+  decision. Preserve all visuals and role behavior. D054 permits provenance-only
+  native byte changes and relevant generator, checks and documentation updates.
+  It authorizes no commit, deployment or publication. Follow the
+  [provenance contract](design.md#standard-export-provenance).
+
+## D055 — 2026-10-22: Publish Expert Roles v1.1.0
+
+- **Status:** Owner-authorized release.
+- **Decision:** Release the accepted portrait expansion and export provenance
+  standard together with the previously prepared v1.1.0 work. Set `VERSION` and
+  both export formats to `1.1.0`; finalize the changelog and release notes.
+- **Boundary:** A signed release commit, ordinary main push, annotated v1.1.0
+  tag and latest stable GitHub release are authorized. Require completed
+  exact-commit workflow and validation-check success before tagging, preserve
+  v1.0.0 and verify remote delivery. This supersedes the earlier no-commit/push
+  boundaries for this release; installation remains separate. Follow the
+  [publication contract](design.md#publish-expert-roles-v110).

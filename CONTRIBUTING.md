@@ -114,6 +114,9 @@ experts, also try the [Smithsonian's portrait collection](https://npg.si.edu/por
 [Library of Congress](https://www.loc.gov/free-to-use/) and
 [NYPL Digital Collections](https://digitalcollections.nypl.org/), using their
 Open Access or public-domain filters. Verify terms on the original file page.
+Search accented and unaccented names, known name variants and original event or
+photographer collections. Aggregator matches are leads: verify both the actual
+person and current source terms before using a reference.
 
 **Accept any photo with verified free reuse permission, with or without an
 attribution requirement. Always include attribution.** Public-domain / CC0,

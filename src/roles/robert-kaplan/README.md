@@ -1,6 +1,6 @@
 # Robert S. Kaplan
 
-<img src="portrait.jpg" alt="Portrait of Robert S. Kaplan" width="240" height="240">
+<img src="portrait.jpg" alt="Robert S. Kaplan — AI-generated portrait" width="240" height="240">
 
 [Management accounting](../README.md#specialty-management-accounting) · [Activity-based costing](../README.md#specialty-activity-based-costing) · [Strategic management](../README.md#specialty-strategic-management)
 
@@ -25,15 +25,31 @@ Robert S. Kaplan.
 
 - [Accounting Hall of Fame: contributions and published work](https://aaahq.org/Accounting-Hall-of-Fame/Members/2006/Robert-Samuel-Kaplan).
 
-## Photo credit
+## Image
 
-*Robert S. Kaplan*. Photo by **Davidpmcmillan**.
+**AI-generated portrait** — A synthetic likeness, not an authentic photograph or evidence of endorsement.
 
-- **Source:** [Wikimedia Commons image page](https://commons.wikimedia.org/wiki/File:Robert_S._Kaplan.jpg).
-- **License:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+**Style:** [studio-v1](../../../docs/elements/portraits.md), background variant **0**;
+direct eye contact and an individual moderately muted background.
+**Palette:** #A6CEA5, #CBC7AF, #D1C9D5.
+**Flow:** Asymmetrical sideways curves, with a quiet accent along one edge.
 
-Cropped to a square, resized to 512 × 512 pixels and re-encoded as RGB JPEG.
-This portrait retains the source's CC BY-SA 4.0 license.
+**Tool:** Built-in ImageGen
+**Created:** 2026-10-22
+**Model:** Not disclosed
+**Method:** One new reference-based generation from 1 photographic reference using the shared studio-v1 prompt and source-specific identity notes. No correction or accepted-sample reuse.
+
+**Changes:** Replaced the previous catalogue photograph with a new studio sitting, camera-facing composition, neutral lighting and the individual background. Prepared from the retained generated master as a centered 512 × 512 RGB JPEG using Lanczos resizing, quality 95 and chroma subsampling disabled.
+
+**Generated adaptation license:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Retain the same share-alike terms for this adaptation. This portrait is excluded from the library’s MIT license. Applicable source conditions are retained under the [project image policy](../../../docs/elements/portraits.md#source-credits-and-ai-generation); this does not assert copyright in otherwise unrestricted generated portions.
+
+### Reference attribution
+
+Robert S. Kaplan speaking at the Palladium Positive Impact Summit, 21 March 2017. Credited creator: **Davidpmcmillan**.
+
+- **Source:** [Original image and source record](https://commons.wikimedia.org/wiki/File:Robert_S._Kaplan.jpg).
+- **License / permission:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- **Earlier changes:** No reference preparation before generation.
 
 <details>
 <summary>Source files</summary>

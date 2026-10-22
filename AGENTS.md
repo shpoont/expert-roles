@@ -1,12 +1,24 @@
 # Expert Roles library guidance
 
-Current work is D052's [local squash merge and v1.1.0 preparation](docs/design.md#local-squash-merge-and-v110-preparation).
-The owner authorizes one signed squash commit on local main, including the
-accepted portrait work and minor-release preparation. Do not push, tag or
-publish a release. The latest published version remains v1.0.0; v1.1.0 is an
-unpublished candidate. Preserve the accepted images, profile bodies, shared
-instruction and native role bytes. Use the linked evidence and current work
-for completed checks and remaining publication steps.
+Current work is D055's [v1.1.0 publication](docs/design.md#publish-expert-roles-v110).
+The owner authorizes a signed release commit, an ordinary push of main, an
+annotated v1.1.0 tag and publication as the latest stable GitHub release. This
+supersedes the earlier no-commit/push boundaries for this release only. Require
+the exact-commit Checks workflow and validation check to conclude successfully
+before tagging. Preserve the published v1.0.0 tag, accepted image/profile bytes
+and parsed role instructions. No deployment or installation is included.
+Every current and future native export must carry generated source, version and
+expert ID comments under the [provenance convention](src/README.md#export-provenance).
+The root `VERSION` file supplies the whole-library version; v1.1.0 release
+exports use `1.1.0`. Keep Claude comments inside its YAML frontmatter and
+Codex comments outside its settings. D054 permits only these comment changes in
+the 114 native files; parsed names, descriptions and instructions must remain
+unchanged. Preserve the owner-accepted D053 portrait result: 40 generated
+portraits, five historical depictions and twelve name placeholders. D052's
+signed local squash remains intact; D055 includes its accepted follow-ups in the
+final v1.1.0 baseline. The linked GitHub release and Checks records establish
+hosted status; version declarations alone do not prove publication.
+Use linked evidence and current work for checks and remaining review.
 Require direct eye contact and a distinct moderately muted background per expert.
 Use the [shared prompt and local helper](docs/elements/portraits.md#create-a-reproducible-recipe)
 and [copyable Image credit block](src/templates/portrait-credit/README.md). The normal
@@ -57,13 +69,13 @@ other candidates remain proposals. This review authorizes no roster changes.
 The owner accepted the compact main README and the updated full catalogue.
 Keep six featured experts in the main README and the
 [full catalogue](src/roles/README.md) beside the profiles. The
-[current work](docs/current-work.md#next-actions) records D052's preparation scope
+[current work](docs/current-work.md#next-actions) records D055's release scope
 and later follow-ups. Subsequent releases need their own owner authorization.
 The catalogue contains fifty-seven experts, with eighty-two
-specialties in ten groups. D048 selects twenty-nine generated portraits, retains
-five photographs and five original historical depictions, and preserves eighteen
-full-name placeholders. All fifty-seven experts have an explicit outcome; the
-owner accepted the image selections under D050. See the
+specialties in ten groups. D050 accepted the earlier 29 generated portraits,
+five photographs, five historical depictions and eighteen placeholders. D053
+adds eleven further owner-accepted generated selections; all fifty-seven
+experts retain an explicit outcome. See the
 [implementation contract](docs/design.md#implementation-contract). Keep expert
 instructions short and shared; the profiles are for human browsing. The owner
 adopted the simplified profile layout in D013 and the central specialty registry
@@ -165,8 +177,9 @@ Update [current work](docs/current-work.md) before handover and meaningful chang
 in [CHANGELOG.md](CHANGELOG.md). Follow the
 [release convention](docs/delivery.md#versions-and-releases) when a release is
 authorized. Version guidance, dated changelog, commit, annotated tag and hosted
-release must identify the same baseline at publication. D052 authorizes local
-preparation only; it does not authorize those publication steps. Keep
+release must identify the same baseline at publication. D055 authorizes these
+publication steps for v1.1.0 after completed hosted checks; its authority does
+not extend to later releases or installation. Keep
 records proportionate and link existing detail instead of copying
 it into competing sources.
 

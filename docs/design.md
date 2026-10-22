@@ -1225,3 +1225,86 @@ content. Reuse the existing portrait-owner acceptance and bounded walkthrough
 evidence rather than infer new visual or runtime results. Verify the final
 signature, single-parent squash commit and clean local tree; report publication
 as pending.
+
+## Increase photographic portrait coverage
+
+D053 authorizes a more persistent reference search and new built-in ImageGen
+attempts for the remaining photographic subjects, prioritizing Eliyahu Goldratt.
+Reassess the five retained photographs and eighteen name placeholders. Preserve
+the five historical depictions and all already accepted generated portraits.
+Keep the 57-expert roster, biographies, metadata, vocabulary, shared instruction
+and native bytes unchanged. No commit, push, tag or publication is included.
+
+Use the existing studio-v1 prompt, stable per-expert background recipes and
+permitted photographic references. Record new searches, source-specific reuse
+terms, exact inputs, prompts, attempts, selection reasons and preparation outside
+the public tree. A previous weak candidate does not preclude a better attempt;
+retain a photograph or placeholder when evidence or output remains inadequate.
+Do not substitute name-only generation or bypass tool refusals. Review actual
+likeness and direct gaze separately from photographic polish, and keep uncertain
+candidates available for owner review.
+
+For selected replacements, update the image and its complete public provenance,
+regenerate catalogue labels, record changed counts and refresh the local rendered
+preview. Check the full suite, generated consistency, image dimensions and
+credits, native equality, protected content, local links and public suitability.
+Keep the release candidate unpublished and record this new work under Unreleased
+until its release scope is agreed.
+
+## Standard export provenance
+
+D054 adopts provenance comments as the standard for every current and future
+Codex and Claude Code export. Generate `expert_roles.source` with the canonical
+public repository URL, `expert_roles.version` from the root `VERSION` file and
+`expert_roles.id` from the profile directory's stable slug. Preserve the existing
+generator notice. Codex comments precede its fields; Claude comments stay inside
+the opening YAML frontmatter, outside the instruction body. Do not introduce
+unsupported host fields, per-expert versions, machine paths or generation dates.
+
+Use one validated Semantic Version without a `v` prefix. The current working
+value is `1.1.0-dev`; it identifies unfinalized development exports, not a
+published release or an exact content digest. Release preparation must set the
+intended final version, regenerate both formats and check consistency with the
+changelog and intended tag. Git refs remain the exact snapshot identity.
+Keep generation deterministic, independent of Git state and the clock, and fail
+on missing or malformed version input before any output writes.
+
+Verify identical provenance values and placement across both hosts, unchanged
+parsed names, descriptions and instruction bodies, version-drift detection in
+read-only check mode, and atomic rejection of invalid version input. Run the
+full suite, generated check, local links, whitespace and public-suitability
+checks; preserve the accepted portrait follow-up, expert source metadata,
+vocabulary and shared instruction. Only the provenance comments may change in
+the 114 native exports. Keep the work uncommitted, without installation, runtime
+tests, push, tags or publication.
+
+## Publish Expert Roles v1.1.0
+
+D055 authorizes finishing the accepted D053 portrait coverage and D054 export
+provenance work, committing it with the configured signature, pushing local
+main, creating an annotated `v1.1.0` tag and publishing **Expert Roles v1.1.0**
+as the latest stable GitHub release. This supersedes D052–D054's no-publication
+boundaries for this release only. Keep the published v1.0.0 tag fixed and retain
+the existing signed local squash commit; use an ordinary additional release
+commit without rewriting history. No deployment or role installation is included.
+
+Set the canonical `VERSION` to `1.1.0`, regenerate all 114 provenance headers,
+combine the accepted follow-ups into the dated v1.1.0 changelog and finalize
+current entry points and release notes around 40 generated portraits, five
+historical depictions and twelve name placeholders across 57 experts. Keep
+Unreleased available for later work. Preserve every accepted image, individual
+profile and source permission; parsed native fields and instructions must remain
+identical to the accepted pre-release baseline. Release edits may change only
+the version line in each native file, version declarations and release records.
+
+Before committing, run all 45 tests, check all 119 generated outputs, verify
+native syntax/equality and provenance values, compare accepted source/image
+hashes, and check local links, UTF-8, public suitability and the complete staged
+diff. Verify the resulting commit signature. After pushing, require both the
+exact-commit Checks workflow and its validation check to conclude successfully;
+passing logs or an in-progress check alone do not satisfy the gate. Only then
+create and push the annotated tag and publish from that existing verified tag.
+Read back the remote branch, commit signature, tag object and target, release
+metadata/notes, tagged VERSION and native files. Confirm the local tree is clean
+and report the actual hosted result; until those reads succeed, publication is
+unconfirmed. Keep private command logs and baseline records outside the repo.
