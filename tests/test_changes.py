@@ -125,6 +125,9 @@ class ContributionReleaseTests(unittest.TestCase):
 
     def test_preview_is_complete_unreleased_and_leaves_checkout_unchanged(self):
         self.add_expert("new-expert")
+        policy = self.root / ".github/rulesets/main.json"
+        policy.parent.mkdir(parents=True)
+        policy.write_text('{"name": "Public fixture rules"}\n')
         (self.root / ".venv").mkdir()
         (self.root / ".venv/do-not-copy").write_text("fixture")
         before = self.snapshot()
@@ -135,6 +138,7 @@ class ContributionReleaseTests(unittest.TestCase):
         self.assertIn("Unreleased review preview", (preview / "README.md").read_text())
         self.assertIn("New Expert", (preview / "src/roles/README.md").read_text())
         self.assertTrue((preview / "src/roles/new-expert/portrait.jpg").exists())
+        self.assertEqual((preview / ".github/rulesets/main.json").read_bytes(), policy.read_bytes())
         self.assertTrue((preview / "dist/claude/expert-new-expert.md").exists())
         current = (self.root / "dist/codex/expert-don-norman.toml").read_text()
         rendered = (preview / "dist/codex/expert-don-norman.toml").read_text()

@@ -2,89 +2,68 @@
 
 ## Current focus and status
 
-D064 authorizes the v1.3.0 release PR, local and hosted checks, squash merge,
-annotated tag and publication if every gate passes. This supersedes the earlier
-no-release hold for v1.3.0 only. See the
-[release contract](design.md#release-expert-roles-v130).
+D065 covers the owner's two selected improvements: release safeguards and
+concise active agent guidance. Follow the
+[contract](design.md#release-safeguards-and-concise-agent-guidance).
 
-- `--docs` refreshes only the main README and source catalogue's generated regions.
-- `--check-docs` checks their freshness without writes. Contribution CI requires
-  this result and rejects edits to VERSION, dist and dated release history.
-- Source catalogues follow current main. This release sets VERSION and all
-  native headers to `1.3.0` and regenerates dist; future source contributions
-  leave those versioned outputs alone until their release preparation.
-- The accepted presentation removes visible per-image catalogue captions,
-  retains accessible descriptions and profile credits, shows existing comparison
-  cues, and features Jordan Peterson in place of Marie Curie on the homepage.
+- Require PRs and the current GitHub Actions `validate` check on main, with no
+  bypass actors, no force pushes and no deletion. Zero required approvals keep
+  a sole-maintainer PR workflow usable.
+- Track the ruleset in `.github/rulesets/main.json`; verify both its hosted
+  settings and effective main-branch rules.
+- Add a release preflight/push helper that uses an explicit identical source and
+  destination ref. It must ignore dangerous upstream/push.default configuration
+  and leave main, tags and publication untouched.
+- Keep AGENTS.md focused on durable policy and links, with completed release
+  evidence here and in the existing historical records.
 
-All 68 individual profiles, images, expert metadata, specialty vocabulary and
-shared templates remain unchanged. Native files change only their comments;
-all 136 parsed role payloads remain unchanged.
-No role installation, host configuration change or runtime invocation is included.
+Implementation and local verification are complete. The hosted
+[Protect main ruleset](https://github.com/shpoont/expert-roles/rules/25674519)
+is active; its settings and effective rules match the tracked policy.
+All 83 tests pass, including disposable Git regressions, and source/release
+ownership and retained-output freshness pass. Source changes are prepared for
+PR review; their hosted CI and merge are separate delivery evidence.
+Preserve all experts, metadata,
+visuals, specialties, templates, source catalogue blocks, VERSION, dist and
+published tags. This is a source/process improvement, not a new release.
+No installation, integration change or role-runtime evaluation is included.
 
-## Delivered source baseline
+## Published baseline
 
-D062 delivered D060's documentation improvements and D061's preview checker
-and cleaner role-header generator in signed commit
-[`43023e2`](https://github.com/shpoont/expert-roles/commit/43023e2526bd7890c262ea65e419a94b155036f0).
-Its [hosted Checks](https://github.com/shpoont/expert-roles/actions/runs/39819451865)
-and validation check completed successfully. Local and remote main matched,
-the commit signature was verified locally and by GitHub, and the tree was clean.
+**v1.3.0 is published as the latest stable release.**
+[PR #14](https://github.com/shpoont/expert-roles/pull/14) was squash merged into
+[`29e7636`](https://github.com/shpoont/expert-roles/commit/29e763631d953be8fc36d9b48b042e7f88da3179)
+after completed successful [PR checks](https://github.com/shpoont/expert-roles/actions/runs/39846429359).
+The resulting main's [workflow](https://github.com/shpoont/expert-roles/actions/runs/39846714660)
+and separate validation check also completed successfully, including all
+72 tests and strict freshness of 141 generated files.
 
-The seven documentation findings and independent discovery, host-setup and
-contribution re-reviews are complete. They include source-based and local
-rendered walkthroughs, not representative human research. D061's 70 tests and
-fresh-preview reference checks passed before delivery. Earlier no-commit or
-pending-publication statements describe their original historical checkpoints;
-D062 superseded the source-delivery hold and D063 corrects the catalogue policy.
-See the [evidence](../evidence/README.md) for observed results and limits.
+The locally verified signed annotated `v1.3.0` tag targets that main commit.
+Remote tag, latest stable [release](https://github.com/shpoont/expert-roles/releases/tag/v1.3.0),
+notes, VERSION and both native headers were read back. Earlier release tags
+were unchanged; release branches were removed and main was clean and synced.
+See the [publication evidence](../evidence/README.md#v130-publication--2026-10-22).
 
-## Delivered catalogue correction
-
-D063's verified signed commit
-[`4a162b6`](https://github.com/shpoont/expert-roles/commit/4a162b6a3ab970ba9d0c3ade26a32e1250273811)
-delivered the catalogue/release boundary correction. Its
-[hosted Checks](https://github.com/shpoont/expert-roles/actions/runs/39842759977)
-and validation check completed successfully with all 72 tests. GitHub-rendered
-HTML confirmed 68 catalogue images without visible captions and the accepted
-Jordan Peterson homepage card; accessible image descriptions remain present.
-
-## Versioned release baseline
-
-VERSION and native provenance use `1.3.0`. The
-[v1.3.0 release record](https://github.com/shpoont/expert-roles/releases/tag/v1.3.0)
-and fixed annotated tag establish publication only after D064's required checks.
-The previous v1.2.0 tag remains at
-`c493c44bd14c7a54adce74f10bb6ea3c5bfd7359`, with its
-[successful checks](https://github.com/shpoont/expert-roles/actions/runs/39789914230).
-
-The collection contains **68 experts, 96 specialties in 14 groups**, with
-50 generated portraits, five historical depictions, 13 placeholders and
-136 native files. Prior release tags stay fixed. Current source presentation
-can change independently of that native release baseline.
+The baseline contains **68 experts, 96 specialties in 14 groups**, 50 generated
+portraits, five historical depictions, 13 placeholders and 136 native role files.
+Source catalogues track current main independently of versioned native releases.
 
 ## Verification and handover
 
-Use the [check expectations](../tests/README.md),
-[source commands](../src/README.md#generate-the-catalogue-and-native-files) and
-[delivery procedure](delivery.md#versions-and-releases). Confirm source and
-catalogue validity, contribution ownership, the full suite, preview/public
-references, native/source preservation and the complete diff. For authorized
-source delivery, verify the signature, remote content and the exact pushed
-commit's hosted workflow and validation check. Local success is not hosted CI.
-
-Record observed results in [evidence](../evidence/README.md). Historical
-portrait, integration and release details remain in that record and the
-[decision log](decisions.md); they are not unfinished current work.
+Use [tests](../tests/README.md#release-safeguards-d065) and
+[delivery](delivery.md#release-safeguards) for the current checks. Reproduce the
+push hazard only in disposable bare repositories. Hosted ruleset readback proves
+configuration; do not risk changing live main to demonstrate a rejected push.
+Record implemented changes, actual checks and remaining limits separately.
 
 ## Next actions
 
-D064's publication gates apply only to v1.3.0. Any subsequent release requires a
-new owner instruction and release PR. Only that process updates dist, native
-version comments and published tags. Source catalogues continue to track main.
+Review the source PR and its exact-head hosted checks before an authorized merge.
+Future release PRs still require their own owner instruction; VERSION, dist and
+published tags remain unchanged in this source contribution.
 
-A separate plugin owns role deployment and lifecycle. Existing Codex runtime
-coverage is limited to three explicitly registered one-off samples; automatic
-directory discovery and Claude runtime remain unverified. Broader comparative
-benefit and contributor outcomes require separate evaluation. Accepted name
-placeholders remain valid where a usable photographic reference is unavailable.
+A separate plugin owns role deployment and lifecycle. Recorded library runtime
+coverage remains three explicitly registered Codex samples; automatic directory
+discovery and Claude runtime remain unverified. Broader selection reliability
+and comparative benefit require separate evaluation. Quality-evaluation work
+was not selected for this step.

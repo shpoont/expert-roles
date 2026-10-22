@@ -5,6 +5,15 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+### Changed
+
+- Guard main with required pull requests and GitHub Actions validation, without
+  bypass actors. Add a read-only release preflight and an explicit-destination
+  release-branch push command, with disposable Git regression coverage.
+  Include public ruleset JSON in the generated review preview.
+- Keep active agent instructions focused on durable policy and linked guides;
+  close out v1.3.0 with verified publication evidence.
+
 ## v1.3.0 — 2026-10-22
 
 Current source catalogues, clearer setup and contribution guidance, stronger

@@ -69,13 +69,12 @@ unchanged exports. Automatic directory discovery remains unresolved. Claude
 files have structural checks but no runtime validation. These observations do
 not establish broad selection reliability or comparative expert benefit.
 
-- **Current status and boundary:** D064 authorizes the v1.3.0 release PR,
-  required local and exact-commit hosted checks, squash merge, annotated tag and
-  latest stable release. D060–D063's source work is delivered and accepted.
-  VERSION and all 136 native headers use `1.3.0`; catalogue and host indexes
-  include the accepted presentation and comparison cues. Existing release tags
-  stay fixed. Publication requires the explicit verification in the
-  [release contract](docs/design.md#release-expert-roles-v130).
+- **Current status and boundary:** v1.3.0 is published after completed PR and
+  main checks; its signed annotated tag targets `29e7636`. D065 now covers the
+  selected release safeguards and concise agent guidance under its
+  [contract](docs/design.md#release-safeguards-and-concise-agent-guidance).
+  VERSION, all 136 native files and existing release tags stay unchanged in
+  this source/process improvement. No new release is authorized.
   Preserve expert content, native descriptions and instruction bodies.
   Installation, integration and role invocation remain separate. Earlier
   portrait, provenance and release decisions and their observed results remain

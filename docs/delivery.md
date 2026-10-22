@@ -362,11 +362,58 @@ files reflect the last prepared release. Complete native outputs for unreleased
 additions are reviewed in the preview. Merge approved sources under the owner's
 authorization; their native exports become distributed additions at release.
 
+### Release safeguards
+
+Main is governed by the tracked [Protect main ruleset](../.github/rulesets/main.json):
+all changes require a PR and the GitHub Actions `validate` check tested against
+current main. No bypass actors are configured, including the owner. Required
+review approvals are zero so one maintainer can merge through a PR. Force pushes
+and deleting main are blocked. Repository administrators can still edit rules;
+do not weaken them to deliver a change. The definition is not self-applying:
+maintainers apply an authorized ruleset change through GitHub and read back its
+settings and effective main rules.
+
+Use the existing Git and GitHub CLI sessions. Check the
+[official ruleset documentation](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets)
+when changing the policy. GitHub Actions' integration ID is `15368`; the required
+context is the workflow job `validate`, rather than its display title `Checks`.
+
+For a fully prepared, signed and committed release, run:
+
+```sh
+.venv/bin/python src/release.py --check
+.venv/bin/python src/release.py --push
+```
+
+The default is the read-only check. The explicit `--push` repeats preflight and
+pushes only `refs/heads/release/vVERSION:refs/heads/release/vVERSION`, without
+following tags or forcing. It sets that branch's upstream and reads back the
+remote result. The destination never comes from push.default or the old upstream.
+It checks the clean checkout, canonical origin, stable version/matching branch,
+signed head, current remote main ancestor, absent release tag, strict release
+consistency and active hosted rules. Fetch origin and update the branch if main
+has changed; the helper does not fetch, regenerate, commit, rebase or repair state.
+Only use `--push` with current authorization to submit that release branch.
+
+Create a release branch without inheriting main's upstream:
+
+```sh
+git fetch --prune origin
+git switch --no-track -c release/vMAJOR.MINOR.PATCH origin/main
+```
+
+Substitute the chosen version before running the branch command. For ordinary
+source branches, also specify both full refs when pushing, for example
+`git push --no-follow-tags --set-upstream origin refs/heads/my-change:refs/heads/my-change`.
+Do not rely on a source-only push. The helper does not merge, tag, publish,
+install or replace the full checks and owner authorization below. Never bypass
+an unsuccessful preflight or hosted gate.
+
 ### Maintainer release PR
 
 1. Review accepted changes since the last release, compatibility impact and
-   evidence; choose the intended version. Create a separate release PR and apply
-   the maintainer-controlled `release` label (create that label when first used).
+   evidence; choose the intended version and create the release branch as above.
+   Use a separate release PR with the maintainer-controlled `release` label.
    The label explicitly selects strict release validation; it does not publish.
 2. Set `VERSION` to the final stable version, without `v` or a development suffix, for a
    stable release. Finalize the dated changelog entry and update the main README
@@ -384,7 +431,8 @@ authorization; their native exports become distributed additions at release.
    ```
 
 3. Commit with the configured signing identity, verify the signature and submit
-   the release PR under the owner's authorization. CI requires a greater final
+   the branch with `src/release.py --check`, then the authorized `--push`.
+   Open the release PR and apply the `release` label. CI requires a greater final
    stable version, exactly one matching dated changelog heading, an Unreleased
    heading and complete output freshness. Require successful review and checks,
    then merge under the owner's authorization. The resulting main push receives
@@ -414,11 +462,17 @@ The workflow never tags or publishes automatically. For a manual **Checks** run,
 select an ancestor comparison `base` and enable `release` only for a prepared
 release. PR runs select that mode from the `release` label; main pushes select
 it when their diff changes `VERSION`. Adding or removing the label reruns checks.
-Source-only main pushes continue to pass while released artifacts lag behind.
+Source-only PR merges continue to pass while released artifacts lag behind.
 
 ### v1.3.0 release baseline
 
-D064's [release contract](design.md#release-expert-roles-v130) covers the
+D064's [release contract](design.md#release-expert-roles-v130) is complete:
+[PR #14](https://github.com/shpoont/expert-roles/pull/14) was squash merged into
+[`29e7636`](https://github.com/shpoont/expert-roles/commit/29e763631d953be8fc36d9b48b042e7f88da3179).
+Its PR and resulting main workflow and validation checks completed successfully
+before the signed annotated tag and latest stable release were published.
+See the [publication evidence](../evidence/README.md#v130-publication--2026-10-22).
+The release covers the
 accepted documentation and tooling changes since v1.2.0. Source catalogues stay
 current independently of native releases; new commands update and check them
 without changing VERSION or dist. CI checks fresh-preview links, images and
