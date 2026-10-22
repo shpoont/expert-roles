@@ -1,16 +1,19 @@
 # Expert Roles library guidance
 
-Current work is D063's [catalogue and release boundary correction](docs/design.md#keep-source-catalogues-current-between-releases).
-The owner authorizes the fix, cleanup, signed commits and an ordinary main push,
-without a release. Keep source catalogues current using `--docs`; check their
-freshness with `--check-docs`. VERSION and all dist files remain release-owned.
-Verify signatures, remote content and exact-commit hosted Checks. Do not tag,
-release, install roles or change host configuration. CI checks the complete
-generated preview before artifact upload; external URLs are not fetched.
+Current work is D064's [v1.3.0 release](docs/design.md#release-expert-roles-v130).
+The owner authorizes a signed release PR, local/hosted checks, squash merge and
+publication only after every gate passes. Require completed success of both
+the exact PR head and resulting main commit's workflow and validation check
+before tagging. Verify the annotated tag, remote commit and latest stable
+release readback. Earlier no-release statements are historical; this authority
+applies only to v1.3.0. Preserve earlier release tags. Do not install roles or
+change host configuration. CI checks the complete generated preview before
+artifact upload; external URLs are not fetched.
 Preserve provenance keys, parsed role settings and instruction bodies.
 Preserve all expert profiles, visuals, metadata, vocabulary, shared instructions
-and native descriptions. Publish the accepted catalogue presentation changes;
-review complete native outputs in an external preview while retaining dist.
+and native descriptions. VERSION and all 136 native headers use `1.3.0` for
+this baseline. Regenerate dist in the release PR; source catalogues stay current
+under D063's `--docs` and `--check-docs` workflow.
 
 D059's [v1.2.0 publication](docs/design.md#publish-expert-roles-v120) is complete.
 The [release](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0)

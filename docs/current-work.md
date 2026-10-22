@@ -2,23 +2,24 @@
 
 ## Current focus and status
 
-D063 keeps source catalogues current between releases. The owner authorized
-correcting the boundary, refreshing the public READMEs, cleaning the handover
-records, and signed commits with a normal main push. No release is authorized.
-See the [focused contract](design.md#keep-source-catalogues-current-between-releases).
+D064 authorizes the v1.3.0 release PR, local and hosted checks, squash merge,
+annotated tag and publication if every gate passes. This supersedes the earlier
+no-release hold for v1.3.0 only. See the
+[release contract](design.md#release-expert-roles-v130).
 
 - `--docs` refreshes only the main README and source catalogue's generated regions.
 - `--check-docs` checks their freshness without writes. Contribution CI requires
   this result and rejects edits to VERSION, dist and dated release history.
-- Source catalogues follow current main. Native exports and distribution indexes
-  remain at the last prepared release; complete new outputs are reviewed in an
-  isolated `0.0.0-preview` tree until release preparation.
+- Source catalogues follow current main. This release sets VERSION and all
+  native headers to `1.3.0` and regenerates dist; future source contributions
+  leave those versioned outputs alone until their release preparation.
 - The accepted presentation removes visible per-image catalogue captions,
   retains accessible descriptions and profile credits, shows existing comparison
   cues, and features Jordan Peterson in place of Marie Curie on the homepage.
 
-All 68 individual profiles, images, expert metadata, specialty vocabulary,
-shared templates and released native files remain outside this change's scope.
+All 68 individual profiles, images, expert metadata, specialty vocabulary and
+shared templates remain unchanged. Native files change only their comments;
+all 136 parsed role payloads remain unchanged.
 No role installation, host configuration change or runtime invocation is included.
 
 ## Delivered source baseline
@@ -38,14 +39,24 @@ pending-publication statements describe their original historical checkpoints;
 D062 superseded the source-delivery hold and D063 corrects the catalogue policy.
 See the [evidence](../evidence/README.md) for observed results and limits.
 
-## Published baseline
+## Delivered catalogue correction
 
-The latest released version is
-[v1.2.0](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0), published
-on 2026-10-22. Its annotated tag identifies
-`c493c44bd14c7a54adce74f10bb6ea3c5bfd7359` after
-[successful exact-commit checks](https://github.com/shpoont/expert-roles/actions/runs/39789914230).
-VERSION and released native provenance use `1.2.0`.
+D063's verified signed commit
+[`4a162b6`](https://github.com/shpoont/expert-roles/commit/4a162b6a3ab970ba9d0c3ade26a32e1250273811)
+delivered the catalogue/release boundary correction. Its
+[hosted Checks](https://github.com/shpoont/expert-roles/actions/runs/39842759977)
+and validation check completed successfully with all 72 tests. GitHub-rendered
+HTML confirmed 68 catalogue images without visible captions and the accepted
+Jordan Peterson homepage card; accessible image descriptions remain present.
+
+## Versioned release baseline
+
+VERSION and native provenance use `1.3.0`. The
+[v1.3.0 release record](https://github.com/shpoont/expert-roles/releases/tag/v1.3.0)
+and fixed annotated tag establish publication only after D064's required checks.
+The previous v1.2.0 tag remains at
+`c493c44bd14c7a54adce74f10bb6ea3c5bfd7359`, with its
+[successful checks](https://github.com/shpoont/expert-roles/actions/runs/39789914230).
 
 The collection contains **68 experts, 96 specialties in 14 groups**, with
 50 generated portraits, five historical depictions, 13 placeholders and
@@ -68,10 +79,9 @@ portrait, integration and release details remain in that record and the
 
 ## Next actions
 
-A new release requires a separate owner instruction, version choice and release
-PR. Only that process updates dist, native version comments and published tags.
-The cleaner role-header formatting is present in the generator and previews;
-retained v1.2.0 exports keep their original comments until release preparation.
+D064's publication gates apply only to v1.3.0. Any subsequent release requires a
+new owner instruction and release PR. Only that process updates dist, native
+version comments and published tags. Source catalogues continue to track main.
 
 A separate plugin owns role deployment and lifecycle. Existing Codex runtime
 coverage is limited to three explicitly registered one-off samples; automatic

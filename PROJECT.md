@@ -25,10 +25,9 @@ canonical metadata, a short human-readable README and one square visual.
 The adopted [studio-v1 method](docs/elements/portraits.md) is retained.
 Previews generate a Codex and Claude Code file for every source profile, with
 alphabetical and specialty indexes that link to stable, unduplicated paths.
-The published v1.2.0 `dist/` files and generated catalogue sections cover all
-68 experts. D059's release is complete; v1.1.0 is the previous release with
-57 experts. The
-[release record](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0)
+Version v1.3.0's `dist/` files and source catalogues cover all 68 experts, as
+did the previous v1.2.0 release. The
+[release record](https://github.com/shpoont/expert-roles/releases/tag/v1.3.0)
 establishes hosted publication separately from the version declaration.
 Portrait acceptance is an editorial decision;
 structural validity does not establish likeness. Future additions follow the
@@ -70,16 +69,13 @@ unchanged exports. Automatic directory discovery remains unresolved. Claude
 files have structural checks but no runtime validation. These observations do
 not establish broad selection reliability or comparative expert benefit.
 
-- **Current status and boundary:** v1.2.0 is published after D057's source
-  PR #12 and D058's release PR #13 were squash merged and exact-commit hosted
-  checks completed. D060 implements the seven accepted documentation findings;
-  independent journey re-reviews and checks pass. D061 adds local link, image
-  and anchor checks against the CI preview and simplifies native provenance
-  headers. D062 delivered these source changes in verified signed commit
-  `43023e2` with successful hosted Checks. D063 corrects the catalogue freeze,
-  refreshes the public READMEs and cleans current records. The owner authorizes
-  signed commits and a normal push without a release. Keep VERSION and dist at
-  the released baseline; review complete native outputs in an external preview.
+- **Current status and boundary:** D064 authorizes the v1.3.0 release PR,
+  required local and exact-commit hosted checks, squash merge, annotated tag and
+  latest stable release. D060–D063's source work is delivered and accepted.
+  VERSION and all 136 native headers use `1.3.0`; catalogue and host indexes
+  include the accepted presentation and comparison cues. Existing release tags
+  stay fixed. Publication requires the explicit verification in the
+  [release contract](docs/design.md#release-expert-roles-v130).
   Preserve expert content, native descriptions and instruction bodies.
   Installation, integration and role invocation remain separate. Earlier
   portrait, provenance and release decisions and their observed results remain
@@ -144,12 +140,13 @@ This repository follows [Project Structure v1.0.0](https://github.com/shpoont/pr
 commit `96fdd6bd7950778f5b6c6f8269ab2b82167cb99a`. Expert sources live under
 `src/`; the full catalogue is generated in `src/roles/README.md`, with a fixed
 six-expert showcase and generated count in the main README. Ready-to-use
-exports and their indexes live under `dist/`. The released library version is
-`1.2.0`, independently versioned from the starter and consuming integrations.
-The canonical `VERSION` file and both hosts' provenance comments use `1.2.0`.
-The latest stable [release record](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0)
-and annotated tag identify `c493c44bd14c7a54adce74f10bb6ea3c5bfd7359`, published
-on 2026-10-22. Earlier released tags remain fixed. See the
+exports and their indexes live under `dist/`. Library version `1.3.0` is
+independent of the starter and consuming integrations. The canonical `VERSION`
+file and both hosts' provenance comments use `1.3.0`.
+The [versioned release record](https://github.com/shpoont/expert-roles/releases/tag/v1.3.0)
+and annotated tag establish publication separately from those declarations.
+The previous v1.2.0 tag remains fixed at
+`c493c44bd14c7a54adce74f10bb6ea3c5bfd7359`. See the
 [release procedure](docs/delivery.md#versions-and-releases).
 
 Continue through [design](docs/design.md), [current work](docs/current-work.md),

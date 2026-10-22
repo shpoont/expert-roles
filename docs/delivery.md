@@ -311,7 +311,7 @@ Follow the [photo policy](../CONTRIBUTING.md#photo-sources-and-licenses) and
 
 ## Versions and releases
 
-Current library baseline: **[v1.2.0](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0)**.
+Library version: **[v1.3.0](https://github.com/shpoont/expert-roles/releases/tag/v1.3.0)**.
 The linked GitHub release records publication separately from the version declaration.
 One `MAJOR.MINOR.PATCH` version covers profiles, metadata, vocabulary, shared
 instructions, templates, tooling and both native formats. The consuming plugin
@@ -319,7 +319,7 @@ and other integrations keep independent histories. Individual experts and export
 formats do not have separate versions.
 
 The root [VERSION](../VERSION) file is the machine-readable source for export
-provenance, set to `1.2.0` for this baseline. Contributions leave it unchanged;
+provenance, set to `1.3.0` for this baseline. Contributions leave it unchanged;
 temporary previews use `0.0.0-preview` independently. A version header identifies
 a declared library version, not proof of publication or an
 exact content digest. Keep released tags fixed and use Git refs for snapshots.
@@ -339,7 +339,8 @@ The first stable baseline includes `dist/codex/expert-<slug>.toml` and
 A versioned export is not a broader host-compatibility or effectiveness claim.
 
 Preparation, local commits and publication follow the owner's current
-authorization. D055 authorizes v1.1.0 publication; future releases need their
+authorization. D064 authorizes v1.3.0 publication after the required gates;
+future releases need their
 own owner instruction. Complete the applicable steps below:
 
 ### Source contribution
@@ -414,6 +415,22 @@ select an ancestor comparison `base` and enable `release` only for a prepared
 release. PR runs select that mode from the `release` label; main pushes select
 it when their diff changes `VERSION`. Adding or removing the label reruns checks.
 Source-only main pushes continue to pass while released artifacts lag behind.
+
+### v1.3.0 release baseline
+
+D064's [release contract](design.md#release-expert-roles-v130) covers the
+accepted documentation and tooling changes since v1.2.0. Source catalogues stay
+current independently of native releases; new commands update and check them
+without changing VERSION or dist. CI checks fresh-preview links, images and
+anchors. Setup and contribution guidance is complete, and both source and host
+catalogues include the accepted comparison cues.
+
+Version 1.3.0 is a compatible minor increment for these capabilities. All 136
+native exports gain the cleaner aligned provenance header and `1.3.0` version;
+their parsed fields and instructions, and all expert profiles and visuals,
+remain unchanged. The [release page](https://github.com/shpoont/expert-roles/releases/tag/v1.3.0)
+and exact-commit Checks establish publication, separately from these declarations.
+Prior release records below remain historical baselines.
 
 ### Prepared v1.2.0 candidate
 

@@ -5,6 +5,13 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+## v1.3.0 — 2026-10-22
+
+Current source catalogues, clearer setup and contribution guidance, stronger
+preview checks and cleaner native provenance headers. The collection retains
+68 experts, 96 specialties in 14 groups and 136 native role files; expert
+profiles, visuals, selection descriptions and execution instructions are unchanged.
+
 ### Added
 
 - Check local links, readable raster/SVG images and heading or explicit anchors
@@ -27,9 +34,20 @@ Record meaningful changes by version under the
   Python environment consistently in portrait commands.
 - Show existing perspective cues beside overlapping specialty matches in
   the catalogues, while preserving role descriptions and instructions.
-- Align current project records with the published v1.2.0 baseline and correct
-  the source-directory description. Retain released artifacts until a separate
-  release change.
+- Correct the source-directory description and simplify current project records,
+  preserving historical decisions and evidence.
+- Regenerate all native files with `1.3.0` provenance and refresh both host
+  indexes with comparison cues, preserving parsed metadata and instructions.
+
+### Validation and limits
+
+All 72 tests and strict release checks pass. All 141 generated outputs match
+their sources; both native formats agree for every expert, and all 136 parsed
+payloads remain identical to v1.2.0. Expert source files, images, vocabulary,
+shared templates and credited terms are unchanged. This release adds no new
+host-runtime or comparative-effectiveness result. Exact-commit hosted Checks
+and the [release record](https://github.com/shpoont/expert-roles/releases/tag/v1.3.0)
+establish delivery separately from the declared version.
 
 ## v1.2.0 — 2026-10-22
 

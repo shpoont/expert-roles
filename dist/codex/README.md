@@ -95,6 +95,7 @@ Use your browser's Find (Cmd+F or Ctrl+F) to find a known expert.
 ## By specialty
 
 Names in these tables link directly to the Codex role files.
+Shared specialties include existing perspective cues for comparison.
 For introductions, perspective cues and suggested uses, follow the profiles
 in [By name](#by-name) or compare experts in the [full catalogue](../../src/roles/README.md).
 
@@ -102,167 +103,167 @@ in [By name](#by-name) or compare experts in the [full catalogue](../../src/role
 
 | Specialty | Role files |
 | --- | --- |
-| <a id="specialty-dog-training"></a>Dog training | [Ed Frawley](expert-ed-frawley.toml) |
+| Dog training | <a id="specialty-dog-training"></a>[Ed Frawley](expert-ed-frawley.toml) |
 
 ### Computing
 
 | Specialty | Role files |
 | --- | --- |
-| <a id="specialty-artificial-intelligence"></a>Artificial intelligence | [Andrew Ng](expert-andrew-ng.toml), [Jeff Hawkins](expert-jeff-hawkins.toml), [Judea Pearl](expert-judea-pearl.toml) |
-| <a id="specialty-bayesian-networks"></a>Bayesian networks | [Judea Pearl](expert-judea-pearl.toml) |
-| <a id="specialty-causal-inference"></a>Causal inference | [Judea Pearl](expert-judea-pearl.toml) |
-| <a id="specialty-computational-neuroscience"></a>Computational neuroscience | [Jeff Hawkins](expert-jeff-hawkins.toml) |
-| <a id="specialty-concurrent-computing"></a>Concurrent computing | [Leslie Lamport](expert-leslie-lamport.toml) |
-| <a id="specialty-cyber-security"></a>Cyber security | [Ross Anderson](expert-ross-anderson.toml) |
-| <a id="specialty-deep-learning"></a>Deep learning | [Andrej Karpathy](expert-andrej-karpathy.toml), [Andrew Ng](expert-andrew-ng.toml) |
-| <a id="specialty-devops"></a>DevOps | [Nicole Forsgren](expert-nicole-forsgren.toml) |
-| <a id="specialty-distributed-computing"></a>Distributed computing | [Leslie Lamport](expert-leslie-lamport.toml), [Martin Kleppmann](expert-martin-kleppmann.toml) |
-| <a id="specialty-domain-driven-design"></a>Domain-driven design | [Eric Evans](expert-eric-evans.toml) |
-| <a id="specialty-enterprise-architecture"></a>Enterprise architecture | [Jeanne Ross](expert-jeanne-ross.toml) |
-| <a id="specialty-extreme-programming"></a>Extreme programming | [Kent Beck](expert-kent-beck.toml) |
-| <a id="specialty-formal-methods"></a>Formal methods | [Daniel Jackson](expert-daniel-jackson.toml), [Leslie Lamport](expert-leslie-lamport.toml) |
-| <a id="specialty-large-language-models"></a>Large language models | [Andrej Karpathy](expert-andrej-karpathy.toml), [Chip Huyen](expert-chip-huyen.toml) |
-| <a id="specialty-machine-learning"></a>Machine learning | [Andrej Karpathy](expert-andrej-karpathy.toml), [Andrew Ng](expert-andrew-ng.toml), [Chip Huyen](expert-chip-huyen.toml) |
-| <a id="specialty-security-engineering"></a>Security engineering | [Ross Anderson](expert-ross-anderson.toml) |
-| <a id="specialty-software-architecture"></a>Software architecture | [David Parnas](expert-david-parnas.toml), [Eric Evans](expert-eric-evans.toml), [Martin Fowler](expert-martin-fowler.toml), [Martin Kleppmann](expert-martin-kleppmann.toml) |
-| <a id="specialty-software-engineering"></a>Software engineering | [Bill Gates](expert-bill-gates.toml), [Daniel Jackson](expert-daniel-jackson.toml), [David Parnas](expert-david-parnas.toml), [Kent Beck](expert-kent-beck.toml), [Martin Fowler](expert-martin-fowler.toml), [Nancy Leveson](expert-nancy-leveson.toml), [Nicole Forsgren](expert-nicole-forsgren.toml) |
-| <a id="specialty-software-refactoring"></a>Software refactoring | [Martin Fowler](expert-martin-fowler.toml) |
-| <a id="specialty-test-driven-development"></a>Test-driven development | [Kent Beck](expert-kent-beck.toml) |
+| Artificial intelligence | <a id="specialty-artificial-intelligence"></a>[Andrew Ng](expert-andrew-ng.toml) — applied AI feasibility, project priorities and the relationship between model errors, data needs and learning goals.<br><br>[Jeff Hawkins](expert-jeff-hawkins.toml) — sensorimotor intelligence, cortical reference frames and the Thousand Brains theory.<br><br>[Judea Pearl](expert-judea-pearl.toml) — causal assumptions, interventions and counterfactuals, using causal diagrams to distinguish causation from prediction. |
+| Bayesian networks | <a id="specialty-bayesian-networks"></a>[Judea Pearl](expert-judea-pearl.toml) |
+| Causal inference | <a id="specialty-causal-inference"></a>[Judea Pearl](expert-judea-pearl.toml) |
+| Computational neuroscience | <a id="specialty-computational-neuroscience"></a>[Jeff Hawkins](expert-jeff-hawkins.toml) |
+| Concurrent computing | <a id="specialty-concurrent-computing"></a>[Leslie Lamport](expert-leslie-lamport.toml) |
+| Cyber security | <a id="specialty-cyber-security"></a>[Ross Anderson](expert-ross-anderson.toml) |
+| Deep learning | <a id="specialty-deep-learning"></a>[Andrej Karpathy](expert-andrej-karpathy.toml) — neural-network and language-model behavior through model architecture, data, training and implementation fundamentals.<br><br>[Andrew Ng](expert-andrew-ng.toml) — applied AI feasibility, project priorities and the relationship between model errors, data needs and learning goals. |
+| DevOps | <a id="specialty-devops"></a>[Nicole Forsgren](expert-nicole-forsgren.toml) |
+| Distributed computing | <a id="specialty-distributed-computing"></a>[Leslie Lamport](expert-leslie-lamport.toml) — precise state-machine specifications, safety, liveness and fairness, with explicit assumptions about concurrent and distributed behavior.<br><br>[Martin Kleppmann](expert-martin-kleppmann.toml) — data-system reliability, consistency, replication and failure, including the tradeoffs of distributed architectures. |
+| Domain-driven design | <a id="specialty-domain-driven-design"></a>[Eric Evans](expert-eric-evans.toml) |
+| Enterprise architecture | <a id="specialty-enterprise-architecture"></a>[Jeanne Ross](expert-jeanne-ross.toml) |
+| Extreme programming | <a id="specialty-extreme-programming"></a>[Kent Beck](expert-kent-beck.toml) |
+| Formal methods | <a id="specialty-formal-methods"></a>[Daniel Jackson](expert-daniel-jackson.toml) — lightweight relational models and counterexamples, alongside software concepts with explicit purposes and behavior.<br><br>[Leslie Lamport](expert-leslie-lamport.toml) — precise state-machine specifications, safety, liveness and fairness, with explicit assumptions about concurrent and distributed behavior. |
+| Large language models | <a id="specialty-large-language-models"></a>[Andrej Karpathy](expert-andrej-karpathy.toml) — neural-network and language-model behavior through model architecture, data, training and implementation fundamentals.<br><br>[Chip Huyen](expert-chip-huyen.toml) — ML and LLM application design, evaluation and production operation, including quality, latency and cost tradeoffs. |
+| Machine learning | <a id="specialty-machine-learning"></a>[Andrej Karpathy](expert-andrej-karpathy.toml) — neural-network and language-model behavior through model architecture, data, training and implementation fundamentals.<br><br>[Andrew Ng](expert-andrew-ng.toml) — applied AI feasibility, project priorities and the relationship between model errors, data needs and learning goals.<br><br>[Chip Huyen](expert-chip-huyen.toml) — ML and LLM application design, evaluation and production operation, including quality, latency and cost tradeoffs. |
+| Security engineering | <a id="specialty-security-engineering"></a>[Ross Anderson](expert-ross-anderson.toml) |
+| Software architecture | <a id="specialty-software-architecture"></a>[David Parnas](expert-david-parnas.toml) — information hiding and module boundaries around design decisions likely to change, supported by precise interfaces and documentation.<br><br>[Eric Evans](expert-eric-evans.toml) — domain models, shared language and bounded contexts that align software boundaries with the business.<br><br>[Martin Fowler](expert-martin-fowler.toml) — evolving software structure through behavior-preserving refactoring and patterns suited to business systems.<br><br>[Martin Kleppmann](expert-martin-kleppmann.toml) — data-system reliability, consistency, replication and failure, including the tradeoffs of distributed architectures. |
+| Software engineering | <a id="specialty-software-engineering"></a>[Bill Gates](expert-bill-gates.toml) — software platforms, developer ecosystems and the technical and business choices involved in responding to major technology shifts.<br><br>[Daniel Jackson](expert-daniel-jackson.toml) — lightweight relational models and counterexamples, alongside software concepts with explicit purposes and behavior.<br><br>[David Parnas](expert-david-parnas.toml) — information hiding and module boundaries around design decisions likely to change, supported by precise interfaces and documentation.<br><br>[Kent Beck](expert-kent-beck.toml) — feedback, test-driven design and small software changes, with attention to collaboration and sustainable delivery.<br><br>[Martin Fowler](expert-martin-fowler.toml) — evolving software structure through behavior-preserving refactoring and patterns suited to business systems.<br><br>[Nancy Leveson](expert-nancy-leveson.toml) — system safety as a control problem, including unsafe interactions, feedback and organizational constraints.<br><br>[Nicole Forsgren](expert-nicole-forsgren.toml) — evidence about software delivery performance, developer productivity and well-being, using multiple measures rather than activity counts alone. |
+| Software refactoring | <a id="specialty-software-refactoring"></a>[Martin Fowler](expert-martin-fowler.toml) |
+| Test-driven development | <a id="specialty-test-driven-development"></a>[Kent Beck](expert-kent-beck.toml) |
 
 ### Design
 
 | Specialty | Role files |
 | --- | --- |
-| <a id="specialty-contextual-design"></a>Contextual design | [Karen Holtzblatt](expert-karen-holtzblatt.toml) |
-| <a id="specialty-graphic-design"></a>Graphic design | [Ellen Lupton](expert-ellen-lupton.toml) |
-| <a id="specialty-heuristic-evaluation"></a>Heuristic evaluation | [Jakob Nielsen](expert-jakob-nielsen.toml) |
-| <a id="specialty-human-centered-design"></a>Human-centered design | [Don Norman](expert-don-norman.toml), [Karen Holtzblatt](expert-karen-holtzblatt.toml) |
-| <a id="specialty-human-computer-interaction"></a>Human-computer interaction | [Alan Cooper](expert-alan-cooper.toml), [Don Norman](expert-don-norman.toml), [Jakob Nielsen](expert-jakob-nielsen.toml), [Karen Holtzblatt](expert-karen-holtzblatt.toml), [Léonie Watson](expert-leonie-watson.toml) |
-| <a id="specialty-interaction-design"></a>Interaction design | [Alan Cooper](expert-alan-cooper.toml) |
-| <a id="specialty-product-design"></a>Product design | [Marty Cagan](expert-marty-cagan.toml), [Steve Jobs](expert-steve-jobs.toml) |
-| <a id="specialty-typography"></a>Typography | [Ellen Lupton](expert-ellen-lupton.toml) |
-| <a id="specialty-usability-engineering"></a>Usability engineering | [Jakob Nielsen](expert-jakob-nielsen.toml) |
-| <a id="specialty-web-accessibility"></a>Web accessibility | [Léonie Watson](expert-leonie-watson.toml) |
+| Contextual design | <a id="specialty-contextual-design"></a>[Karen Holtzblatt](expert-karen-holtzblatt.toml) |
+| Graphic design | <a id="specialty-graphic-design"></a>[Ellen Lupton](expert-ellen-lupton.toml) |
+| Heuristic evaluation | <a id="specialty-heuristic-evaluation"></a>[Jakob Nielsen](expert-jakob-nielsen.toml) |
+| Human-centered design | <a id="specialty-human-centered-design"></a>[Don Norman](expert-don-norman.toml) — the relationship between people's expectations and a product's conceptual models, discoverability, feedback and errors.<br><br>[Karen Holtzblatt](expert-karen-holtzblatt.toml) — people's real work and wider activities as the basis for contextual research, product requirements and design. |
+| Human-computer interaction | <a id="specialty-human-computer-interaction"></a>[Alan Cooper](expert-alan-cooper.toml) — user goals, personas and scenarios as foundations for coherent product behavior and interaction workflows.<br><br>[Don Norman](expert-don-norman.toml) — the relationship between people's expectations and a product's conceptual models, discoverability, feedback and errors.<br><br>[Jakob Nielsen](expert-jakob-nielsen.toml) — usability problems in interfaces, heuristic evaluation and evidence from user testing.<br><br>[Karen Holtzblatt](expert-karen-holtzblatt.toml) — people's real work and wider activities as the basis for contextual research, product requirements and design.<br><br>[Léonie Watson](expert-leonie-watson.toml) — inclusive interaction and the practical experience of keyboard and assistive-technology users. |
+| Interaction design | <a id="specialty-interaction-design"></a>[Alan Cooper](expert-alan-cooper.toml) |
+| Product design | <a id="specialty-product-design"></a>[Marty Cagan](expert-marty-cagan.toml) — product discovery, empowered product teams and the leadership practices that connect customer problems with viable technology products.<br><br>[Steve Jobs](expert-steve-jobs.toml) — product focus, simplicity and coherence across the complete hardware, software and customer experience. |
+| Typography | <a id="specialty-typography"></a>[Ellen Lupton](expert-ellen-lupton.toml) |
+| Usability engineering | <a id="specialty-usability-engineering"></a>[Jakob Nielsen](expert-jakob-nielsen.toml) |
+| Web accessibility | <a id="specialty-web-accessibility"></a>[Léonie Watson](expert-leonie-watson.toml) |
 
 ### Engineering
 
 | Specialty | Role files |
 | --- | --- |
-| <a id="specialty-system-safety"></a>System safety | [Nancy Leveson](expert-nancy-leveson.toml) |
-| <a id="specialty-systems-engineering"></a>Systems engineering | [Nancy Leveson](expert-nancy-leveson.toml) |
+| System safety | <a id="specialty-system-safety"></a>[Nancy Leveson](expert-nancy-leveson.toml) |
+| Systems engineering | <a id="specialty-systems-engineering"></a>[Nancy Leveson](expert-nancy-leveson.toml) |
 
 ### Finance
 
 | Specialty | Role files |
 | --- | --- |
-| <a id="specialty-activity-based-costing"></a>Activity-based costing | [Robert S. Kaplan](expert-robert-kaplan.toml) |
-| <a id="specialty-corporate-finance"></a>Corporate finance | [Aswath Damodaran](expert-aswath-damodaran.toml), [Warren Buffett](expert-warren-buffett.toml) |
-| <a id="specialty-earnings-quality"></a>Earnings quality | [Patricia Dechow](expert-patricia-dechow.toml) |
-| <a id="specialty-financial-accounting"></a>Financial accounting | [Patricia Dechow](expert-patricia-dechow.toml) |
-| <a id="specialty-management-accounting"></a>Management accounting | [Robert S. Kaplan](expert-robert-kaplan.toml) |
-| <a id="specialty-valuation-finance"></a>Valuation (finance) | [Aswath Damodaran](expert-aswath-damodaran.toml), [Warren Buffett](expert-warren-buffett.toml) |
-| <a id="specialty-value-investing"></a>Value investing | [Warren Buffett](expert-warren-buffett.toml) |
+| Activity-based costing | <a id="specialty-activity-based-costing"></a>[Robert S. Kaplan](expert-robert-kaplan.toml) |
+| Corporate finance | <a id="specialty-corporate-finance"></a>[Aswath Damodaran](expert-aswath-damodaran.toml)<br><br>[Warren Buffett](expert-warren-buffett.toml) — long-term business ownership, durable competitive advantages, a margin of safety and disciplined capital allocation within a circle of competence. |
+| Earnings quality | <a id="specialty-earnings-quality"></a>[Patricia Dechow](expert-patricia-dechow.toml) |
+| Financial accounting | <a id="specialty-financial-accounting"></a>[Patricia Dechow](expert-patricia-dechow.toml) |
+| Management accounting | <a id="specialty-management-accounting"></a>[Robert S. Kaplan](expert-robert-kaplan.toml) |
+| Valuation (finance) | <a id="specialty-valuation-finance"></a>[Aswath Damodaran](expert-aswath-damodaran.toml)<br><br>[Warren Buffett](expert-warren-buffett.toml) — long-term business ownership, durable competitive advantages, a margin of safety and disciplined capital allocation within a circle of competence. |
+| Value investing | <a id="specialty-value-investing"></a>[Warren Buffett](expert-warren-buffett.toml) |
 
 ### Law
 
 | Specialty | Role files |
 | --- | --- |
-| <a id="specialty-access-to-justice"></a>Access to justice | [Richard Susskind](expert-richard-susskind.toml) |
-| <a id="specialty-contract-law"></a>Contract law | [Kenneth A. Adams](expert-kenneth-adams.toml) |
-| <a id="specialty-copyright-legislation"></a>Copyright legislation | [Lawrence Lessig](expert-lawrence-lessig.toml) |
-| <a id="specialty-information-technology-law"></a>Information technology law | [Lawrence Lessig](expert-lawrence-lessig.toml) |
-| <a id="specialty-legal-informatics"></a>Legal informatics | [Richard Susskind](expert-richard-susskind.toml) |
+| Access to justice | <a id="specialty-access-to-justice"></a>[Richard Susskind](expert-richard-susskind.toml) |
+| Contract law | <a id="specialty-contract-law"></a>[Kenneth A. Adams](expert-kenneth-adams.toml) |
+| Copyright legislation | <a id="specialty-copyright-legislation"></a>[Lawrence Lessig](expert-lawrence-lessig.toml) |
+| Information technology law | <a id="specialty-information-technology-law"></a>[Lawrence Lessig](expert-lawrence-lessig.toml) |
+| Legal informatics | <a id="specialty-legal-informatics"></a>[Richard Susskind](expert-richard-susskind.toml) |
 
 ### Management
 
 | Specialty | Role files |
 | --- | --- |
-| <a id="specialty-business-process-reengineering"></a>Business process reengineering | [Michael Hammer](expert-michael-hammer.toml) |
-| <a id="specialty-critical-chain-project-management"></a>Critical Chain project management | [Eliyahu Goldratt](expert-eliyahu-goldratt.toml) |
-| <a id="specialty-customer-development"></a>Customer development | [Steve Blank](expert-steve-blank.toml) |
-| <a id="specialty-customer-service"></a>Customer service | [Bill Price](expert-bill-price.toml) |
-| <a id="specialty-effectuation"></a>Effectuation | [Saras Sarasvathy](expert-saras-sarasvathy.toml) |
-| <a id="specialty-entrepreneurship"></a>Entrepreneurship | [Bill Gates](expert-bill-gates.toml), [Jeff Bezos](expert-jeff-bezos.toml), [Pieter Levels](expert-pieter-levels.toml), [Saras Sarasvathy](expert-saras-sarasvathy.toml), [Steve Blank](expert-steve-blank.toml), [Steve Jobs](expert-steve-jobs.toml), [Tomáš Baťa](expert-tomas-bata.toml) |
-| <a id="specialty-human-resource-management"></a>Human resource management | [Dave Ulrich](expert-dave-ulrich.toml) |
-| <a id="specialty-lean-manufacturing"></a>Lean manufacturing | [Taiichi Ohno](expert-taiichi-ohno.toml) |
-| <a id="specialty-logistics"></a>Logistics | [Hau Lee](expert-hau-lee.toml) |
-| <a id="specialty-multiple-criteria-decision-analysis"></a>Multiple-criteria decision analysis | [Milan Zelený](expert-milan-zeleny.toml) |
-| <a id="specialty-negotiation"></a>Negotiation | [Roger Fisher](expert-roger-fisher.toml) |
-| <a id="specialty-operations-management"></a>Operations management | [Andy Grove](expert-andy-grove.toml), [Eliyahu Goldratt](expert-eliyahu-goldratt.toml), [Hau Lee](expert-hau-lee.toml), [Jeff Bezos](expert-jeff-bezos.toml), [Michael Hammer](expert-michael-hammer.toml), [Milan Zelený](expert-milan-zeleny.toml), [Taiichi Ohno](expert-taiichi-ohno.toml), [Tomáš Baťa](expert-tomas-bata.toml), [W. Edwards Deming](expert-w-edwards-deming.toml) |
-| <a id="specialty-organizational-learning"></a>Organizational learning | [Amy Edmondson](expert-amy-edmondson.toml) |
-| <a id="specialty-principled-negotiation"></a>Principled negotiation | [Roger Fisher](expert-roger-fisher.toml) |
-| <a id="specialty-product-management"></a>Product management | [Marty Cagan](expert-marty-cagan.toml) |
-| <a id="specialty-project-management"></a>Project management | [Eliyahu Goldratt](expert-eliyahu-goldratt.toml) |
-| <a id="specialty-quality-management"></a>Quality management | [W. Edwards Deming](expert-w-edwards-deming.toml) |
-| <a id="specialty-statistical-process-control"></a>Statistical process control | [W. Edwards Deming](expert-w-edwards-deming.toml) |
-| <a id="specialty-strategic-alliances"></a>Strategic alliances | [Benjamin Gomes-Casseres](expert-benjamin-gomes-casseres.toml) |
-| <a id="specialty-strategic-management"></a>Strategic management | [Andy Grove](expert-andy-grove.toml), [Benjamin Gomes-Casseres](expert-benjamin-gomes-casseres.toml), [Bill Gates](expert-bill-gates.toml), [Dave Ulrich](expert-dave-ulrich.toml), [Geoffrey Moore](expert-geoffrey-moore.toml), [Jeff Bezos](expert-jeff-bezos.toml), [Philip Kotler](expert-philip-kotler.toml), [Robert S. Kaplan](expert-robert-kaplan.toml), [Steve Jobs](expert-steve-jobs.toml) |
-| <a id="specialty-supply-chain-management"></a>Supply chain management | [Hau Lee](expert-hau-lee.toml) |
-| <a id="specialty-theory-of-constraints"></a>Theory of Constraints | [Eliyahu Goldratt](expert-eliyahu-goldratt.toml) |
-| <a id="specialty-toyota-production-system"></a>Toyota Production System | [Taiichi Ohno](expert-taiichi-ohno.toml) |
+| Business process reengineering | <a id="specialty-business-process-reengineering"></a>[Michael Hammer](expert-michael-hammer.toml) |
+| Critical Chain project management | <a id="specialty-critical-chain-project-management"></a>[Eliyahu Goldratt](expert-eliyahu-goldratt.toml) |
+| Customer development | <a id="specialty-customer-development"></a>[Steve Blank](expert-steve-blank.toml) |
+| Customer service | <a id="specialty-customer-service"></a>[Bill Price](expert-bill-price.toml) |
+| Effectuation | <a id="specialty-effectuation"></a>[Saras Sarasvathy](expert-saras-sarasvathy.toml) |
+| Entrepreneurship | <a id="specialty-entrepreneurship"></a>[Bill Gates](expert-bill-gates.toml) — software platforms, developer ecosystems and the technical and business choices involved in responding to major technology shifts.<br><br>[Jeff Bezos](expert-jeff-bezos.toml) — customer-focused invention, long-term investment and organizational mechanisms that distinguish reversible decisions from consequential commitments.<br><br>[Pieter Levels](expert-pieter-levels.toml) — bootstrapped internet businesses, rapid product launches, low operating costs and automation by small teams or solo founders.<br><br>[Saras Sarasvathy](expert-saras-sarasvathy.toml) — venture creation under uncertainty through available means, affordable loss and stakeholder commitments.<br><br>[Steve Blank](expert-steve-blank.toml) — customer and business-model assumptions, evidence from customer discovery and the search for a repeatable business model.<br><br>[Steve Jobs](expert-steve-jobs.toml) — product focus, simplicity and coherence across the complete hardware, software and customer experience.<br><br>[Tomáš Baťa](expert-tomas-bata.toml) — autonomous workshops, economic accountability, profit sharing and employee development as foundations for enterprise growth. |
+| Human resource management | <a id="specialty-human-resource-management"></a>[Dave Ulrich](expert-dave-ulrich.toml) |
+| Lean manufacturing | <a id="specialty-lean-manufacturing"></a>[Taiichi Ohno](expert-taiichi-ohno.toml) |
+| Logistics | <a id="specialty-logistics"></a>[Hau Lee](expert-hau-lee.toml) |
+| Multiple-criteria decision analysis | <a id="specialty-multiple-criteria-decision-analysis"></a>[Milan Zelený](expert-milan-zeleny.toml) |
+| Negotiation | <a id="specialty-negotiation"></a>[Roger Fisher](expert-roger-fisher.toml) |
+| Operations management | <a id="specialty-operations-management"></a>[Andy Grove](expert-andy-grove.toml) — managerial leverage, team output and operating practices, including strategic responses to changes in the business environment.<br><br>[Eliyahu Goldratt](expert-eliyahu-goldratt.toml) — system constraints and overall throughput, including dependencies and shared-resource contention in project delivery.<br><br>[Hau Lee](expert-hau-lee.toml) — supply-chain coordination and information sharing, including agility, adaptability and incentive alignment across organizations.<br><br>[Jeff Bezos](expert-jeff-bezos.toml) — customer-focused invention, long-term investment and organizational mechanisms that distinguish reversible decisions from consequential commitments.<br><br>[Michael Hammer](expert-michael-hammer.toml) — end-to-end business processes, customer outcomes and ownership across organizational boundaries.<br><br>[Milan Zelený](expert-milan-zeleny.toml) — decisions with conflicting objectives and the integration of knowledge, people and production in management systems.<br><br>[Taiichi Ohno](expert-taiichi-ohno.toml) — production flow, demand-driven work, built-in quality and the elimination of waste.<br><br>[Tomáš Baťa](expert-tomas-bata.toml) — autonomous workshops, economic accountability, profit sharing and employee development as foundations for enterprise growth.<br><br>[W. Edwards Deming](expert-w-edwards-deming.toml) — process variation, quality and management choices that shape the performance of the whole system. |
+| Organizational learning | <a id="specialty-organizational-learning"></a>[Amy Edmondson](expert-amy-edmondson.toml) |
+| Principled negotiation | <a id="specialty-principled-negotiation"></a>[Roger Fisher](expert-roger-fisher.toml) |
+| Product management | <a id="specialty-product-management"></a>[Marty Cagan](expert-marty-cagan.toml) |
+| Project management | <a id="specialty-project-management"></a>[Eliyahu Goldratt](expert-eliyahu-goldratt.toml) |
+| Quality management | <a id="specialty-quality-management"></a>[W. Edwards Deming](expert-w-edwards-deming.toml) |
+| Statistical process control | <a id="specialty-statistical-process-control"></a>[W. Edwards Deming](expert-w-edwards-deming.toml) |
+| Strategic alliances | <a id="specialty-strategic-alliances"></a>[Benjamin Gomes-Casseres](expert-benjamin-gomes-casseres.toml) |
+| Strategic management | <a id="specialty-strategic-management"></a>[Andy Grove](expert-andy-grove.toml) — managerial leverage, team output and operating practices, including strategic responses to changes in the business environment.<br><br>[Benjamin Gomes-Casseres](expert-benjamin-gomes-casseres.toml) — joint value creation, governance and value sharing in partnerships, alliances and business combinations.<br><br>[Bill Gates](expert-bill-gates.toml) — software platforms, developer ecosystems and the technical and business choices involved in responding to major technology shifts.<br><br>[Dave Ulrich](expert-dave-ulrich.toml) — HR operating models, organizational capabilities and the contribution of people practices to stakeholder value.<br><br>[Geoffrey Moore](expert-geoffrey-moore.toml) — technology adoption barriers, focused initial markets and the transition from early adopters to mainstream customers.<br><br>[Jeff Bezos](expert-jeff-bezos.toml) — customer-focused invention, long-term investment and organizational mechanisms that distinguish reversible decisions from consequential commitments.<br><br>[Philip Kotler](expert-philip-kotler.toml) — customer needs, segmentation and positioning as foundations for coherent product, pricing, distribution and communication choices.<br><br>[Robert S. Kaplan](expert-robert-kaplan.toml) — cost information and performance measures that connect resource use with strategic objectives and execution.<br><br>[Steve Jobs](expert-steve-jobs.toml) — product focus, simplicity and coherence across the complete hardware, software and customer experience. |
+| Supply chain management | <a id="specialty-supply-chain-management"></a>[Hau Lee](expert-hau-lee.toml) |
+| Theory of Constraints | <a id="specialty-theory-of-constraints"></a>[Eliyahu Goldratt](expert-eliyahu-goldratt.toml) |
+| Toyota Production System | <a id="specialty-toyota-production-system"></a>[Taiichi Ohno](expert-taiichi-ohno.toml) |
 
 ### Marketing
 
 | Specialty | Role files |
 | --- | --- |
-| <a id="specialty-brand-equity"></a>Brand equity | [David Aaker](expert-david-aaker.toml) |
-| <a id="specialty-brand-management"></a>Brand management | [David Aaker](expert-david-aaker.toml) |
-| <a id="specialty-marketing-management"></a>Marketing management | [David Aaker](expert-david-aaker.toml), [Geoffrey Moore](expert-geoffrey-moore.toml), [Philip Kotler](expert-philip-kotler.toml) |
-| <a id="specialty-technology-adoption-lifecycle"></a>Technology adoption lifecycle | [Geoffrey Moore](expert-geoffrey-moore.toml) |
+| Brand equity | <a id="specialty-brand-equity"></a>[David Aaker](expert-david-aaker.toml) |
+| Brand management | <a id="specialty-brand-management"></a>[David Aaker](expert-david-aaker.toml) |
+| Marketing management | <a id="specialty-marketing-management"></a>[David Aaker](expert-david-aaker.toml) — brand identity, brand equity and the relationships among brands in a portfolio.<br><br>[Geoffrey Moore](expert-geoffrey-moore.toml) — technology adoption barriers, focused initial markets and the transition from early adopters to mainstream customers.<br><br>[Philip Kotler](expert-philip-kotler.toml) — customer needs, segmentation and positioning as foundations for coherent product, pricing, distribution and communication choices. |
+| Technology adoption lifecycle | <a id="specialty-technology-adoption-lifecycle"></a>[Geoffrey Moore](expert-geoffrey-moore.toml) |
 
 ### Medicine
 
 | Specialty | Role files |
 | --- | --- |
-| <a id="specialty-general-surgery"></a>General surgery | [Atul Gawande](expert-atul-gawande.toml) |
-| <a id="specialty-health-services-research"></a>Health services research | [Atul Gawande](expert-atul-gawande.toml) |
-| <a id="specialty-patient-safety"></a>Patient safety | [Atul Gawande](expert-atul-gawande.toml) |
+| General surgery | <a id="specialty-general-surgery"></a>[Atul Gawande](expert-atul-gawande.toml) |
+| Health services research | <a id="specialty-health-services-research"></a>[Atul Gawande](expert-atul-gawande.toml) |
+| Patient safety | <a id="specialty-patient-safety"></a>[Atul Gawande](expert-atul-gawande.toml) |
 
 ### Natural sciences
 
 | Specialty | Role files |
 | --- | --- |
-| <a id="specialty-chemistry"></a>Chemistry | [Marie Curie](expert-marie-curie.toml) |
-| <a id="specialty-physics"></a>Physics | [Marie Curie](expert-marie-curie.toml), [Richard Feynman](expert-richard-feynman.toml) |
-| <a id="specialty-quantum-electrodynamics"></a>Quantum electrodynamics | [Richard Feynman](expert-richard-feynman.toml) |
-| <a id="specialty-radiochemistry"></a>Radiochemistry | [Marie Curie](expert-marie-curie.toml) |
+| Chemistry | <a id="specialty-chemistry"></a>[Marie Curie](expert-marie-curie.toml) |
+| Physics | <a id="specialty-physics"></a>[Marie Curie](expert-marie-curie.toml) — experimental investigation of radioactivity, quantitative measurement and chemical separation, with conclusions grounded in reproducible observations.<br><br>[Richard Feynman](expert-richard-feynman.toml) — physical intuition connected to mathematical models, explicit assumptions, quantitative checks and intellectual honesty in scientific reasoning. |
+| Quantum electrodynamics | <a id="specialty-quantum-electrodynamics"></a>[Richard Feynman](expert-richard-feynman.toml) |
+| Radiochemistry | <a id="specialty-radiochemistry"></a>[Marie Curie](expert-marie-curie.toml) |
 
 ### Philosophy
 
 | Specialty | Role files |
 | --- | --- |
-| <a id="specialty-epistemology"></a>Epistemology | [Immanuel Kant](expert-immanuel-kant.toml), [Karl Popper](expert-karl-popper.toml) |
-| <a id="specialty-ethics"></a>Ethics | [Aristotle](expert-aristotle.toml), [Confucius](expert-confucius.toml), [Epictetus](expert-epictetus.toml), [Immanuel Kant](expert-immanuel-kant.toml), [John Stuart Mill](expert-john-stuart-mill.toml), [Socrates](expert-socrates.toml) |
-| <a id="specialty-logic"></a>Logic | [Aristotle](expert-aristotle.toml) |
-| <a id="specialty-philosophy-of-science"></a>Philosophy of science | [Karl Popper](expert-karl-popper.toml) |
-| <a id="specialty-political-philosophy"></a>Political philosophy | [Confucius](expert-confucius.toml), [John Stuart Mill](expert-john-stuart-mill.toml) |
-| <a id="specialty-socratic-method"></a>Socratic method | [Socrates](expert-socrates.toml) |
-| <a id="specialty-stoicism"></a>Stoicism | [Epictetus](expert-epictetus.toml) |
-| <a id="specialty-virtue-ethics"></a>Virtue ethics | [Aristotle](expert-aristotle.toml) |
+| Epistemology | <a id="specialty-epistemology"></a>[Immanuel Kant](expert-immanuel-kant.toml) — moral duty, autonomy and respect for persons, and the conditions and limits of human knowledge.<br><br>[Karl Popper](expert-karl-popper.toml) — fallible knowledge, criticism and testable explanations, including the distinction between falsifiability and actual falsification. |
+| Ethics | <a id="specialty-ethics"></a>[Aristotle](expert-aristotle.toml) — practical wisdom, character and human flourishing, together with the structure of arguments.<br><br>[Confucius](expert-confucius.toml) — moral cultivation, learning, relationships and responsibilities, including the influence of ritual and leadership by example.<br><br>[Epictetus](expert-epictetus.toml) — the distinction between what depends on us and external circumstances, and the disciplined examination of judgments and responsibilities.<br><br>[Immanuel Kant](expert-immanuel-kant.toml) — moral duty, autonomy and respect for persons, and the conditions and limits of human knowledge.<br><br>[John Stuart Mill](expert-john-stuart-mill.toml) — human well-being, individuality and freedom of discussion, including the justification for limiting liberty to prevent harm to others.<br><br>[Socrates](expert-socrates.toml) — the examination of definitions, beliefs and ethical judgments through questioning, counterexamples and tests of consistency. |
+| Logic | <a id="specialty-logic"></a>[Aristotle](expert-aristotle.toml) |
+| Philosophy of science | <a id="specialty-philosophy-of-science"></a>[Karl Popper](expert-karl-popper.toml) |
+| Political philosophy | <a id="specialty-political-philosophy"></a>[Confucius](expert-confucius.toml) — moral cultivation, learning, relationships and responsibilities, including the influence of ritual and leadership by example.<br><br>[John Stuart Mill](expert-john-stuart-mill.toml) — human well-being, individuality and freedom of discussion, including the justification for limiting liberty to prevent harm to others. |
+| Socratic method | <a id="specialty-socratic-method"></a>[Socrates](expert-socrates.toml) |
+| Stoicism | <a id="specialty-stoicism"></a>[Epictetus](expert-epictetus.toml) |
+| Virtue ethics | <a id="specialty-virtue-ethics"></a>[Aristotle](expert-aristotle.toml) |
 
 ### Psychology
 
 | Specialty | Role files |
 | --- | --- |
-| <a id="specialty-cognitive-psychology"></a>Cognitive psychology | [David Premack](expert-david-premack.toml), [Don Norman](expert-don-norman.toml) |
-| <a id="specialty-comparative-psychology"></a>Comparative psychology | [David Premack](expert-david-premack.toml) |
-| <a id="specialty-operant-conditioning"></a>Operant conditioning | [David Premack](expert-david-premack.toml) |
-| <a id="specialty-personality-psychology"></a>Personality psychology | [Jordan Peterson](expert-jordan-peterson.toml) |
-| <a id="specialty-psychological-safety"></a>Psychological safety | [Amy Edmondson](expert-amy-edmondson.toml) |
+| Cognitive psychology | <a id="specialty-cognitive-psychology"></a>[David Premack](expert-david-premack.toml) — reinforcement through relative behavioral preferences and comparative studies of cognition and theory of mind.<br><br>[Don Norman](expert-don-norman.toml) — the relationship between people's expectations and a product's conceptual models, discoverability, feedback and errors. |
+| Comparative psychology | <a id="specialty-comparative-psychology"></a>[David Premack](expert-david-premack.toml) |
+| Operant conditioning | <a id="specialty-operant-conditioning"></a>[David Premack](expert-david-premack.toml) |
+| Personality psychology | <a id="specialty-personality-psychology"></a>[Jordan Peterson](expert-jordan-peterson.toml) |
+| Psychological safety | <a id="specialty-psychological-safety"></a>[Amy Edmondson](expert-amy-edmondson.toml) |
 
 ### Sales
 
 | Specialty | Role files |
 | --- | --- |
-| <a id="specialty-sales-management"></a>Sales management | [Mark Roberge](expert-mark-roberge.toml) |
-| <a id="specialty-spin-selling"></a>SPIN Selling | [Neil Rackham](expert-neil-rackham.toml) |
+| Sales management | <a id="specialty-sales-management"></a>[Mark Roberge](expert-mark-roberge.toml) |
+| SPIN Selling | <a id="specialty-spin-selling"></a>[Neil Rackham](expert-neil-rackham.toml) |
 
 ### Systems science
 
 | Specialty | Role files |
 | --- | --- |
-| <a id="specialty-system-dynamics"></a>System dynamics | [Donella Meadows](expert-donella-meadows.toml) |
-| <a id="specialty-systems-thinking"></a>Systems thinking | [Donella Meadows](expert-donella-meadows.toml) |
+| System dynamics | <a id="specialty-system-dynamics"></a>[Donella Meadows](expert-donella-meadows.toml) |
+| Systems thinking | <a id="specialty-systems-thinking"></a>[Donella Meadows](expert-donella-meadows.toml) |
 
 ## Use and licensing
 
