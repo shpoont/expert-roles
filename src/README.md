@@ -245,11 +245,14 @@ convention. Regeneration replaces only the content inside those boundaries;
 missing, duplicate, reversed, overlapping or nested markers fail before writes.
 Specialties are grouped and sorted by name; only assigned entries appear.
 
-The six `(expert slug, specialty ID)` pairs in `FEATURED_EXPERTS` within
-`src/generate.py` curate the main README sample for breadth of subjects and
-perspectives. Every selected expert must exist and have the displayed specialty
-assigned in canonical metadata. Names, visuals and labels are read from their
-sources. In previews and release outputs, adding an expert updates the full
+The six `(expert slug, specialty ID, task cue)` entries in `FEATURED_EXPERTS`
+within `src/generate.py` curate the main README sample for recognition and
+breadth. Every selected expert must exist and have the supporting specialty
+assigned in canonical metadata. Task cues are short, single-line suggestions
+grounded in the profile's public work; they do not enter role instructions.
+Names and visuals are read from their sources. The homepage retains image types
+in accessible descriptions and one nearby note; the full catalogue keeps
+visible per-image labels. In previews and release outputs, adding an expert updates the full
 catalogue and total without enlarging the sample; changing the showcase is a
 separate editorial choice.
 

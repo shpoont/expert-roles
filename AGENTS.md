@@ -1,6 +1,17 @@
 # Expert Roles library guidance
 
-Current work is D056's [contribution/release separation](docs/design.md#separate-contributions-from-release-preparation).
+Current work is D057's [README presentation refresh](docs/design.md#readme-presentation-refresh),
+followed by separate release preparation. The owner requests the agreed README
+improvements and a rendered review. Keep this source change separate from the
+release PR; do not tag, publish, install or invoke roles. Preserve all 68 source
+profiles, their visuals and credits, the specialty registry and shared instruction.
+The source collection has 96 specialties in 14 groups, 50 generated portraits,
+five historical depictions and 13 placeholders. The retained v1.1.0 artifacts
+still describe 57 experts. Earlier scopes and publication authorizations below
+describe historical work and do not authorize a new release.
+
+D056's [contribution/release separation](docs/design.md#separate-contributions-from-release-preparation)
+remains in force.
 Ordinary PRs contain canonical sources, relevant authored documentation and an
 Unreleased changelog note. Leave `VERSION`, `dist/` and generated README sections
 unchanged. Validate sources and review a separate `0.0.0-preview` tree. Routine
@@ -84,7 +95,7 @@ Keep six featured experts in the main README and the
 [full catalogue](src/roles/README.md) beside the profiles. The
 [current work](docs/current-work.md#next-actions) records D056's process scope
 and later follow-ups. Subsequent releases need their own owner authorization.
-The catalogue contains fifty-seven experts, with eighty-two
+The released v1.1.0 catalogue contains fifty-seven experts, with eighty-two
 specialties in ten groups. D050 accepted the earlier 29 generated portraits,
 five photographs, five historical depictions and eighteen placeholders. D053
 adds eleven further owner-accepted generated selections; all fifty-seven

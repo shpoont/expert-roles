@@ -33,6 +33,10 @@ Record meaningful changes by version under the
 
 ### Changed
 
+- Put a recognizable six-expert sample before setup in the main README, with
+  task cues and concise image disclosure. Simplify navigation and project
+  information while retaining detailed profile credits and the linked
+  correction/removal policy.
 - Separate source contributions from maintainer release preparation. Ordinary
   PRs retain `VERSION`, committed distribution files and generated catalogue
   sections; release PRs choose the final stable version and regenerate them.

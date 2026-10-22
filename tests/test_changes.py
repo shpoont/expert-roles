@@ -37,7 +37,7 @@ class ContributionReleaseTests(unittest.TestCase):
         )
         shutil.copytree(self.source / "src/templates", self.root / "src/templates")
         shutil.copyfile(self.source / "src/specialties.yaml", self.root / "src/specialties.yaml")
-        for slug, _ in FEATURED_EXPERTS:
+        for slug, _, _ in FEATURED_EXPERTS:
             self.add_expert(slug, yaml.safe_load((self.source / "src/roles" / slug / "expert.yaml").read_text()))
         self.add_expert("other-expert")
         self.assertEqual(self.run_generator("--release"), 0)
