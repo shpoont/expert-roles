@@ -1,0 +1,7 @@
+name: David Parnas
+specialties:
+  - software-engineering
+  - software-architecture
+perspective: >-
+  information hiding and module boundaries around design decisions likely
+  to change, supported by precise interfaces and documentation

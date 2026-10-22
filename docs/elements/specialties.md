@@ -75,7 +75,7 @@ data is later copied into the repository.
 
 ## Current implementation
 
-[src/specialties.yaml](../../src/specialties.yaml) contains eighty-five mapped entries.
+[src/specialties.yaml](../../src/specialties.yaml) contains 91 mapped entries.
 Each has exactly three required fields:
 
 - `name`: the common display label, using a preferred source term or recognized alias.
@@ -96,18 +96,35 @@ See the [metadata guide](../../src/README.md#role-metadata-and-descriptions).
 The phrase contributes only to the generated description; generic activities
 remain part of the assignment and execution behavior stays in the shared instruction.
 
-Animal behavior, Computing, Design, Finance, Law, Management, Marketing,
-Medicine, Philosophy, Psychology and Sales are the current navigation groups.
-Specialty
+Animal behavior, Computing, Design, Engineering, Finance, Law, Management,
+Marketing, Medicine, Philosophy, Psychology, Sales and Systems science are the
+current navigation groups. Specialty
 rows are sorted by name within each group; unassigned terms and empty groups
 are not displayed. Profiles list their most useful specialties first.
 
 ### Mapping history
 
+Formal methods and Concurrent computing use Wikidata's field concepts
+(Q1049183 and Q128392) under Computing. ESCO search returned activities such as
+Verify formal ICT specifications and Use concurrent programming; these do not
+describe the intended fields and are not substituted for them.
+
+System dynamics and Systems thinking use Wikidata's field concepts (Q598451
+and Q1340474) in the Systems science navigation group. ESCO's Systems
+thinking entry is explicitly scoped to a logistic system; it is not substituted
+for the broader systems approach used here. System dynamics search results did
+not supply the intended field.
+
+System safety and Systems engineering use Wikidata concepts Q7663745 and
+Q682496 in the Engineering navigation group. The former concerns
+systems-based hazard identification and control; ESCO's broader Safety
+engineering entry emphasizes standards and laws and is not substituted for it.
+Systems engineering search results did not supply the intended lifecycle field.
+
 General surgery uses ESCO's medical specialty d62c361a-d772-4009-a6c3-cfc10e5a51f1.
 Health services research and Patient safety use Wikidata concepts Q2518253 and
 Q1475557; ESCO searches primarily returned activities or adjacent subjects.
-The proposed Medicine navigation group keeps the clinical and health-services
+The Medicine navigation group keeps the clinical and health-services
 scope explicit; these labels do not imply expertise in every operational domain.
 
 The notes below retain the sequence of vocabulary additions, including the
@@ -265,7 +282,7 @@ consistent concepts, not a particular filename or serialization format.
 | Repeat names and groups inside every profile | Simple for one expert, but shared concepts can acquire conflicting spellings, aliases and groups as the collection grows. |
 | Store only external concept IDs in profiles | Possible, but repeatable offline generation would need versioned reference data, plus a way to maintain this project's labels, groups and extensions. |
 
-D015 adopts this approach; all fifty-seven current experts follow these rules.
+D015 adopts this approach; all 63 current experts follow these rules.
 Keep the registry limited to used concepts and consult this record
 when proposing changes. Adding an entire taxonomy, extra fields or a deeper
 hierarchy needs a concrete use case.
@@ -274,7 +291,8 @@ hierarchy needs a concrete use case.
 
 Selected ESCO labels and concept identifiers come from the European Commission's
 [ESCO knowledge vocabulary](https://esco.ec.europa.eu/en/classification/skill),
-consulted on 2026-10-19, 2026-10-20 and 2026-10-21, under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+consulted on 2026-10-19, 2026-10-20, 2026-10-21 and 2026-10-22,
+under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 as stated in its [copyright notice](https://esco.ec.europa.eu/en/copyright-notice-esco-skills-competences).
 We capitalize display labels and use the recognized Interaction design alias;
 grouping and expert assignments are this collection's editorial choices. No
