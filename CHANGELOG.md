@@ -5,6 +5,11 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+### Added
+
+- Proposed Daniel Jackson source profile, metadata and credited studio portrait.
+- Formal methods in the shared specialty vocabulary.
+
 ### Changed
 
 - Separate source contributions from maintainer release preparation. Ordinary

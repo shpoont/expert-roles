@@ -75,7 +75,7 @@ data is later copied into the repository.
 
 ## Current implementation
 
-[src/specialties.yaml](../../src/specialties.yaml) contains eighty-two mapped entries.
+[src/specialties.yaml](../../src/specialties.yaml) contains eighty-three mapped entries.
 Each has exactly three required fields:
 
 - `name`: the common display label, using a preferred source term or recognized alias.
@@ -102,6 +102,10 @@ rows are sorted by name within each group; unassigned terms and empty groups
 are not displayed. Profiles list their most useful specialties first.
 
 ### Mapping history
+
+Formal methods uses Wikidata's field concept Q1049183 under Computing.
+ESCO's Verify formal ICT specifications describes an activity rather than
+the field; it is not substituted for the field concept.
 
 The notes below retain the sequence of vocabulary additions, including the
 profiles that were pending at each earlier step. All accepted profiles are now
