@@ -24,6 +24,8 @@ Record meaningful changes by version under the
   studio portrait for inclusion in the next release.
 - Add Jeff Bezos's source profile, documented perspective and credited
   studio portrait for inclusion in the next release.
+- Add Bill Gates's source profile, documented perspective and credited
+  studio portrait for inclusion in the next release.
 
 ### Changed
 
