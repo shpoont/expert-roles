@@ -15,6 +15,8 @@ Record meaningful changes by version under the
 - System dynamics and Systems thinking in the shared specialty vocabulary.
 - Proposed Nancy Leveson source profile, metadata and credited studio portrait.
 - System safety and Systems engineering in the shared specialty vocabulary.
+- Proposed Daniel Jackson source profile, metadata and credited studio portrait.
+- Formal methods in the shared specialty vocabulary.
 
 ### Changed
 
