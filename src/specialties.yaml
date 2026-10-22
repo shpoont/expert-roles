@@ -401,6 +401,11 @@ valuation-finance:
   group: Finance
   reference: https://www.wikidata.org/wiki/Q4008379
 
+value-investing:
+  name: Value investing
+  group: Finance
+  reference: https://www.wikidata.org/wiki/Q1361817
+
 virtue-ethics:
   name: Virtue ethics
   group: Philosophy

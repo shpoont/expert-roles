@@ -5,6 +5,11 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+### Added
+
+- Add Warren Buffett's source profile, documented perspective and credited
+  studio portrait for inclusion in the next release.
+
 ### Changed
 
 - Separate source contributions from maintainer release preparation. Ordinary
