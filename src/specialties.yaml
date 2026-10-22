@@ -41,6 +41,11 @@ causal-inference:
   group: Computing
   reference: https://www.wikidata.org/wiki/Q5054566
 
+chemistry:
+  name: Chemistry
+  group: Natural sciences
+  reference: http://data.europa.eu/esco/skill/cde9911c-f92e-4de1-811f-336e177ac4ce
+
 cognitive-psychology:
   name: Cognitive psychology
   group: Psychology
@@ -271,6 +276,11 @@ philosophy-of-science:
   group: Philosophy
   reference: https://www.wikidata.org/wiki/Q59115
 
+physics:
+  name: Physics
+  group: Natural sciences
+  reference: http://data.europa.eu/esco/skill/692ace70-7f97-4214-92bd-88f7637d8a44
+
 political-philosophy:
   name: Political philosophy
   group: Philosophy
@@ -305,6 +315,11 @@ quality-management:
   name: Quality management
   group: Management
   reference: https://www.wikidata.org/wiki/Q757012
+
+radiochemistry:
+  name: Radiochemistry
+  group: Natural sciences
+  reference: http://data.europa.eu/esco/skill/e60ce8fd-89e7-4f9f-ab4b-7238e68f14ab
 
 sales-management:
   name: Sales management
