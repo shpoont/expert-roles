@@ -5,6 +5,10 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+### Added
+
+- Proposed David Parnas source profile, metadata and credited studio portrait.
+
 ### Changed
 
 - Separate source contributions from maintainer release preparation. Ordinary
