@@ -75,7 +75,7 @@ data is later copied into the repository.
 
 ## Current implementation
 
-[src/specialties.yaml](../../src/specialties.yaml) contains 86 mapped entries.
+[src/specialties.yaml](../../src/specialties.yaml) contains 88 mapped entries.
 Each has exactly three required fields:
 
 - `name`: the common display label, using a preferred source term or recognized alias.
@@ -96,9 +96,9 @@ See the [metadata guide](../../src/README.md#role-metadata-and-descriptions).
 The phrase contributes only to the generated description; generic activities
 remain part of the assignment and execution behavior stays in the shared instruction.
 
-Animal behavior, Computing, Design, Finance, Law, Management, Marketing,
-Philosophy, Psychology, Sales and Systems science are the current navigation
-groups. Specialty
+Animal behavior, Computing, Design, Engineering, Finance, Law, Management,
+Marketing, Philosophy, Psychology, Sales and Systems science are the current
+navigation groups. Specialty
 rows are sorted by name within each group; unassigned terms and empty groups
 are not displayed. Profiles list their most useful specialties first.
 
@@ -114,6 +114,12 @@ and Q1340474) in the Systems science navigation group. ESCO's Systems
 thinking entry is explicitly scoped to a logistic system; it is not substituted
 for the broader systems approach used here. System dynamics search results did
 not supply the intended field.
+
+System safety and Systems engineering use Wikidata concepts Q7663745 and
+Q682496 in the Engineering navigation group. The former concerns
+systems-based hazard identification and control; ESCO's broader Safety
+engineering entry emphasizes standards and laws and is not substituted for it.
+Systems engineering search results did not supply the intended lifecycle field.
 
 The notes below retain the sequence of vocabulary additions, including the
 profiles that were pending at each earlier step. All accepted profiles are now
@@ -270,7 +276,7 @@ consistent concepts, not a particular filename or serialization format.
 | Repeat names and groups inside every profile | Simple for one expert, but shared concepts can acquire conflicting spellings, aliases and groups as the collection grows. |
 | Store only external concept IDs in profiles | Possible, but repeatable offline generation would need versioned reference data, plus a way to maintain this project's labels, groups and extensions. |
 
-D015 adopts this approach; all 59 current experts follow these rules.
+D015 adopts this approach; all 60 current experts follow these rules.
 Keep the registry limited to used concepts and consult this record
 when proposing changes. Adding an entire taxonomy, extra fields or a deeper
 hierarchy needs a concrete use case.

@@ -381,6 +381,16 @@ system-dynamics:
   group: Systems science
   reference: https://www.wikidata.org/wiki/Q598451
 
+system-safety:
+  name: System safety
+  group: Engineering
+  reference: https://www.wikidata.org/wiki/Q7663745
+
+systems-engineering:
+  name: Systems engineering
+  group: Engineering
+  reference: https://www.wikidata.org/wiki/Q682496
+
 systems-thinking:
   name: Systems thinking
   group: Systems science
