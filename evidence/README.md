@@ -13,7 +13,7 @@ Connect evidence to [current work](../docs/current-work.md),
 
 D058 prepares a compatible minor candidate separately from the
 [README source PR](https://github.com/shpoont/expert-roles/pull/12), using source
-commit `9a3ffc435636bf48af553c345bc6c241273b441f` as the release comparison base.
+commit `f8bcb088d625f8a925cf50965e54e35d0018457e` as the release comparison base.
 The candidate includes the eleven merged experts and D057's presentation
 change, with 68 profiles, 96 specialties in 14 groups and 136 native files.
 
@@ -48,6 +48,9 @@ its earlier commitments in a separate linked document.
 Following owner review, the opening explicitly introduces roles for AI
 assistants and their independent interpretation of public work; affiliation
 details remain in the existing Disclaimer.
+The full catalogue and download indexes repeat the independent-AI framing for
+direct visitors. Usage wording requests an AI role inspired by the expert;
+native role descriptions and shared instructions remain unchanged.
 
 All 55 tests pass, including the new invalid-cue/no-partial-writes and literal
 display check. Source validation and ordinary contribution ownership pass.
