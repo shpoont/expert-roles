@@ -26,8 +26,10 @@ The adopted [studio-v1 method](docs/elements/portraits.md) is retained.
 Previews generate a Codex and Claude Code file for every source profile, with
 alphabetical and specialty indexes that link to stable, unduplicated paths.
 The separately prepared v1.2.0 `dist/` files and generated catalogue sections
-cover all 68 experts. This is an unpublished candidate; v1.1.0 remains the latest
-published release with 57 experts.
+cover all 68 experts. D059 authorizes merging and publishing this baseline after
+the release gates; v1.1.0 is the previous release with 57 experts. The
+[release record](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0)
+establishes hosted publication separately from the version declaration.
 Portrait acceptance is an editorial decision;
 structural validity does not establish likeness. Future additions follow the
 same contribution process.
@@ -67,12 +69,15 @@ unchanged exports. Automatic directory discovery remains unresolved. Claude
 files have structural checks but no runtime validation. These observations do
 not establish broad selection reliability or comparative expert benefit.
 
-- **Current status and boundary:** D058 prepares v1.2.0 separately from D057's
-  README source PR. The candidate includes the eleven merged experts and the
-  agreed presentation improvements, with source credits and role payloads retained.
+- **Current status and boundary:** D059 authorizes v1.2.0 publication after
+  D057's accepted README source PR is squash merged and D058's separate release
+  PR is updated against main. The baseline includes the eleven merged experts
+  and agreed presentation improvements, with source credits and role payloads retained.
   Contribution/release separation is delivered and the eleven new expert PRs
-  are merged. Source changes and release preparation remain separate. No new
-  release, tag, installation or role invocation is included. The following records
+  are merged. Source changes and release preparation remain separate. Require
+  completed hosted checks on the release PR and resulting main before the fixed
+  annotated tag and latest stable release. Installation and role invocation
+  remain separate. The following records
   describe the delivered v1.1.0 baseline. D048 supplies the portrait rollout; D049 adds
   a copyable credit block and repository/CI validation in the isolated worktree.
   The independent fresh-session contribution walkthrough completed one temporary

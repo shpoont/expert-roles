@@ -42,6 +42,29 @@ tree; maintainers update committed outputs and versions during release preparati
 
 ## Implementation contract
 
+### Publish Expert Roles v1.2.0
+
+D059 records the owner's acceptance of the rendered README and authorization
+to squash merge its source PR, update the separate release PR against main,
+merge it and publish the new minor version. This supersedes D058's publication
+hold for v1.2.0 only. Keep source contributions and release artifacts separate.
+
+Use the README squash commit on main as the release comparison base. Preserve
+all accepted source profiles, images, credits, vocabulary and role descriptions
+and instructions. Require 55 tests, source validation, all 141 generated outputs,
+release ownership, native parity and preservation, local links, public-content
+and whitespace checks. Retarget the release PR to main and retain its `release`
+label; require its exact-head hosted workflow and validate check to finish
+successfully before merging.
+
+Require the resulting main commit's workflow and validate check to succeed
+before creating and explicitly pushing an annotated v1.2.0 tag on that commit.
+Publish Expert Roles v1.2.0 as the latest stable GitHub release with the accepted
+scope, validation, limits and fixed snapshot links. Read back remote main,
+signature, tag object and peeled target, release metadata, VERSION and native
+headers. Existing released tags stay fixed. Installation, invocation and plugin
+changes remain outside this authorization.
+
 ### Prepare v1.2.0 without publication
 
 D058 prepares a compatible minor candidate after the eleven expert additions

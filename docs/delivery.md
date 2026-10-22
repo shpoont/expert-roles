@@ -3,12 +3,11 @@
 ## Review the catalogue
 
 Start at the [full catalogue](../src/roles/README.md), then open individual
-profiles and their Codex or Claude Code files. The fifty-seven completed profiles
-use one simplified layout and eighty-two shared specialties. The working tree
-contains forty generated portraits, five original historical depictions and
-twelve full-name placeholders. The owner accepted D053's eleven additions;
-the 29 generated images accepted under D050 are unchanged. All
-accepted experts remain included.
+profiles and their Codex or Claude Code files. The v1.2.0 baseline contains
+68 profiles, 96 shared specialties in 14 groups and 136 native role files.
+It has 50 generated portraits, five original historical depictions and thirteen
+full-name placeholders. The eleven expert additions reviewed after v1.1.0
+are included; all previously accepted experts remain in the collection.
 
 Review images and their provenance using the
 [portrait workflow](elements/portraits.md). Historical depictions remain unchanged;
@@ -219,15 +218,15 @@ Follow the [photo policy](../CONTRIBUTING.md#photo-sources-and-licenses) and
 
 ## Versions and releases
 
-Prepared library candidate: **1.2.0**, not yet published. Latest published version:
-**[v1.1.0](https://github.com/shpoont/expert-roles/releases/tag/v1.1.0)**.
+Current library baseline: **[v1.2.0](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0)**.
+The linked GitHub release records publication separately from the version declaration.
 One `MAJOR.MINOR.PATCH` version covers profiles, metadata, vocabulary, shared
 instructions, templates, tooling and both native formats. The consuming plugin
 and other integrations keep independent histories. Individual experts and export
 formats do not have separate versions.
 
 The root [VERSION](../VERSION) file is the machine-readable source for export
-provenance, set to `1.2.0` in this preparation PR. Contributions leave it unchanged;
+provenance, set to `1.2.0` for this baseline. Contributions leave it unchanged;
 temporary previews use `0.0.0-preview` independently. A version header identifies
 a declared library version, not proof of publication or an
 exact content digest. Keep released tags fixed and use Git refs for snapshots.
@@ -332,6 +331,45 @@ and repeat strict release ownership and exact-head CI before final approval.
 The `release` label selects validation; it does not authorize publication.
 No v1.2.0 tag or GitHub release has been created. See the
 [candidate evidence](../evidence/README.md#v120-preparation--2026-10-22).
+
+### v1.2.0 release baseline
+
+D059's [publication contract](design.md#publish-expert-roles-v120) follows the
+owner's acceptance of the README rendering. Source PR #12 is squash merged;
+the separate release PR #13 is updated against that main commit and rechecked.
+Version 1.2.0 is a compatible minor increment for eleven new expert perspectives,
+broader specialty coverage, clearer presentation and the contribution/release
+separation process.
+
+The [release page](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0)
+and [Checks workflow](https://github.com/shpoont/expert-roles/actions/workflows/checks.yml)
+record hosted delivery. Require completed exact-commit checks on the release
+PR and resulting main before tagging, then verify the annotated tag's target,
+latest stable release, VERSION and both native formats. Prior released tags
+stay fixed; deployment and installation remain separate.
+
+### Release notes for v1.2.0
+
+**Expert Roles v1.2.0** expands the collection to 68 experts, 96 specialties in
+14 groups and 136 Codex and Claude Code files.
+
+- Add Leslie Lamport, Donella Meadows, Nancy Leveson, Daniel Jackson, David
+  Parnas, Atul Gawande, Warren Buffett, Jeff Bezos, Bill Gates, Richard Feynman
+  and Marie Curie, with public-work references and credited visuals.
+- Introduce fourteen specialty concepts while keeping expert identifiers and
+  the flat distribution paths stable.
+- Lead the README with recognizable experts and task cues, explain independent
+  AI interpretation at direct entry points and simplify setup and project
+  information. Preserve native descriptions and shared instructions.
+- Separate source contributions from maintainer release preparation, with
+  isolated previews, explicit generation and CI ownership checks.
+
+Validation requires 55 passing tests, all 141 generated outputs, 68 matching
+native pairs, preserved source content and role payloads, and resolving local
+references. The 114 previously released exports change only their version
+comment. Hosted notes link the successful exact-main check and fixed snapshot
+after those results are observed. No new runtime or comparative-effectiveness
+assessment is included. Preserve each image's individually credited terms.
 
 ### v1.1.0 release baseline
 

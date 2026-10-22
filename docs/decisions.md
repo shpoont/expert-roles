@@ -1199,8 +1199,8 @@ validation remain separate from this addition.
 
 ## D057 — 2026-10-22: Make the README a concise catalogue introduction
 
-- **Status:** Direction adopted by the owner; implemented and locally checked.
-  The rendered result remains subject to owner review.
+- **Status:** Implemented and checked; the owner accepted the rendered result
+  and authorized its squash merge, completed in source PR #12.
 - **Decision:** Put a recognizable six-expert sample before setup, use concrete
   task cues, and keep image disclosure concise on the homepage while retaining
   accessible labels and complete profile credits. Simplify usage and project
@@ -1232,3 +1232,21 @@ validation remain separate from this addition.
   against main and repeat release ownership after that source change merges.
   v1.1.0 remains the latest published version. No tag, publication, installation,
   role invocation or consuming-plugin update is authorized here.
+
+## D059 — 2026-10-22: Publish Expert Roles v1.2.0
+
+- **Status:** The owner accepted the rendered result and explicitly authorizes
+  the README squash merge, updating the release PR against main, its merge and
+  publication of the new version. D057's source PR is squash merged as
+  `6a301fec01e9ebb96c5a813cb20bcc74cf00fdfe`.
+- **Decision:** Finalize the separate v1.2.0 release PR against updated main,
+  retain its `release` label and publish the compatible minor baseline after
+  the required local and hosted gates. See the
+  [publication contract](design.md#publish-expert-roles-v120).
+- **Checks:** Recheck release ownership against main, all 55 tests, 141 generated
+  outputs, 68 native pairs, preserved source and role payloads, links and public
+  content. Require completed exact-head hosted checks on the PR and resulting
+  main, then verify the annotated tag and latest stable release readback.
+- **Boundary:** Supersedes D058's no-publication hold for v1.2.0 only. Keep prior
+  release tags fixed, preserve native descriptions and instructions, and leave
+  installation, role invocation and consuming-plugin updates separate.

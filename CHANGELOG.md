@@ -7,7 +7,7 @@ Record meaningful changes by version under the
 
 ## v1.2.0 — 2026-10-22
 
-Eleven new expert perspectives and a clearer catalogue introduction. The prepared
+Eleven new expert perspectives and a clearer catalogue introduction. The
 collection has 68 experts, 96 specialties in 14 groups and 136 native role files.
 
 ### Added
@@ -36,12 +36,11 @@ collection has 68 experts, 96 specialties in 14 groups and 136 native role files
 - Add CI ownership checks, maintainer `release` label routing and temporary
   review artifacts; update contributor, portrait and delivery guidance.
 - Refresh the complete catalogue, generated summary, specialty indexes and all
-  native version comments for the candidate while preserving existing settings,
+  native version comments for v1.2.0 while preserving existing settings,
   descriptions, shared instructions, source profiles, visuals and image terms.
 
-This is a prepared candidate. Validation and publication status are recorded in
-[release evidence](evidence/README.md#v120-preparation--2026-10-22); a version
-entry does not establish publication.
+See the [release record](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0)
+and [validation evidence](evidence/README.md#v120-publication--2026-10-22).
 
 ## v1.1.0 — 2026-10-22
 

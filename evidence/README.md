@@ -9,6 +9,34 @@ Connect evidence to [current work](../docs/current-work.md),
 [decisions](../docs/decisions.md), [checks](../tests/README.md) and
 [delivery](../docs/delivery.md).
 
+## v1.2.0 publication — 2026-10-22
+
+D059 records owner acceptance of the final rendered README and authorization
+to merge the source and release PRs in order, then tag and publish v1.2.0 after
+the required gates. Source PR #12 is squash merged as
+[`6a301fe`](https://github.com/shpoont/expert-roles/commit/6a301fec01e9ebb96c5a813cb20bcc74cf00fdfe).
+Its tree matches the accepted source PR head. The release branch is updated
+against that main commit and uses it for strict release ownership. Overlapping
+project records from the squash retain the release candidate's already-reviewed
+source content and release additions.
+
+Revalidation against that main baseline passes all 55 tests, source validation,
+all 141 generated outputs and whitespace checks. All 68 native pairs parse and
+agree; all 136 payloads match the accepted source preview apart from the version
+comment, and the 114 v1.1.0 exports retain every byte outside that line. Accepted
+expert sources, images, credits, vocabulary and shared instructions are unchanged.
+All 2,421 local references resolve, with no public-content or UTF-8 findings.
+
+The [release PR](https://github.com/shpoont/expert-roles/pull/13),
+[Checks workflow](https://github.com/shpoont/expert-roles/actions/workflows/checks.yml)
+and [GitHub release](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0)
+provide the hosted execution records. Before publication, require completed
+success on both the PR head and resulting main workflow and validate check;
+afterward verify the remote annotated tag's exact target, release metadata,
+VERSION, native headers and clean checkout. These gates distinguish authorized
+preparation from observed publication. No new runtime or effectiveness check
+is included.
+
 ## v1.2.0 preparation — 2026-10-22
 
 D058 prepares a compatible minor candidate separately from the

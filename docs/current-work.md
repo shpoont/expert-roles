@@ -2,15 +2,17 @@
 
 ## Current focus and status
 
-D058 prepares an unpublished **v1.2.0** candidate in a separate maintainer release
-PR, based on [D057's README source PR](https://github.com/shpoont/expert-roles/pull/12).
-The eleven expert source contributions are already merged. This candidate
+D059 finalizes the accepted **v1.2.0** baseline for publication through the
+separate [release PR](https://github.com/shpoont/expert-roles/pull/13).
+[D057's README source PR](https://github.com/shpoont/expert-roles/pull/12) is squash
+merged as `6a301fec01e9ebb96c5a813cb20bcc74cf00fdfe`; the release branch is updated
+against that main commit. The eleven expert contributions are merged. The baseline
 contains **68 experts, 96 specialties in 14 groups**, 50 generated portraits,
 five historical depictions, 13 placeholders and 136 native files. VERSION and
-native provenance use `1.2.0`; v1.1.0 remains the latest published release.
+native provenance use `1.2.0`; v1.1.0 is the previous release.
 
 D057's source change passes 55 tests and completed
-[hosted source checks](https://github.com/shpoont/expert-roles/actions/runs/39779441348).
+[hosted source checks](https://github.com/shpoont/expert-roles/actions/runs/39786737629).
 Its recognizable gallery, task cues, shorter guidance and quiet image disclosure
 were checked in an actual local browser rendering. The candidate regenerates
 that presentation and the complete catalogue without changing role payloads,
@@ -19,13 +21,17 @@ source profiles, images, vocabulary or shared instructions.
 The [preparation contract](design.md#prepare-v120-without-publication) requires
 strict generated freshness, release ownership, native parity, protected-content
 comparisons and link/public-content checks. All 55 tests and release checks pass;
-all 141 generated files match, all 136 native payloads are preserved, and 2,418
+all 141 generated files match, all 136 native payloads are preserved, and 2,421
 local references resolve. See the
-[release evidence](../evidence/README.md#v120-preparation--2026-10-22).
-After the source PR merges, update this branch against main, retarget its release
-PR and repeat release ownership and exact-head hosted checks. Publication is on
-hold: no tag, GitHub release, installation, role invocation or plugin change is
-included.
+[release evidence](../evidence/README.md#v120-publication--2026-10-22).
+The owner authorizes retargeting the release PR to main, merging after repeated
+release ownership and completed exact-head hosted checks, then publishing an
+annotated v1.2.0 tag and latest stable GitHub release after the resulting main
+workflow and validate check both succeed. The
+[publication contract](design.md#publish-expert-roles-v120) and
+[release record](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0)
+separate that execution from prepared version declarations. Installation, role
+invocation and consuming-plugin changes remain outside this release.
 
 ## Historical v1.1.0 preparation records
 
@@ -270,11 +276,11 @@ These follow-ups are separate from the accepted catalogue and commit readiness.
 
 ## Next actions
 
-Review D057's source PR and this separate release candidate. After the source PR
-merges, update and retarget the candidate against main and repeat strict release
-validation and hosted checks. Await explicit publication authorization before
-merging a final release baseline, tagging or publishing. Keep the delivered
-v1.0.0 and v1.1.0 tags fixed. Consumer deployment and management remain separate.
+Complete D059's authorized release after strict local and exact-commit hosted
+checks. Verify the remote main commit, annotated tag target, latest stable
+GitHub release and versioned native files before reporting publication. Keep
+v1.0.0 and v1.1.0 tags fixed. After publication, consumer deployment, role runtime
+validation and comparative benefit assessments remain separate work.
 
 ## Findings and handover
 
