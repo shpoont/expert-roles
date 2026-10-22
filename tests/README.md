@@ -194,6 +194,14 @@ before handover; source validity alone does not establish a good presentation.
 
 ## Release checks
 
+D064's [v1.3.0 contract](../docs/design.md#release-expert-roles-v130) requires
+all 72 tests, source and catalogue validation, strict freshness of 141 generated
+outputs and release ownership against current main. Preserve all expert source
+bytes and all 136 parsed native payloads against v1.2.0; verify `1.3.0` comments,
+local/preview references, public content and the complete diff. Both the exact
+PR head and resulting main workflow and validation check must conclude
+successfully before tagging. Earlier release checks below retain their scopes.
+
 D053's accepted [coverage follow-up](../docs/design.md#increase-photographic-portrait-coverage)
 adds eleven portraits after D052's signed candidate. D054 then adds provenance
 comments to the 114 native exports. Compare parsed native values and instructions

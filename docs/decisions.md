@@ -1302,8 +1302,9 @@ validation remain separate from this addition.
 
 ## D063 — 2026-10-22: Keep public catalogues current without a release
 
-- **Status:** Implementation, cleanup, signed commits and normal push authorized;
-  no version change or release.
+- **Status:** Delivered in verified signed commit
+  [`4a162b6`](https://github.com/shpoont/expert-roles/commit/4a162b6a3ab970ba9d0c3ade26a32e1250273811),
+  with successful [hosted Checks](https://github.com/shpoont/expert-roles/actions/runs/39842759977).
 - **Decision:** Treat README.md and src/roles/README.md as generated source
   documentation. Include their fresh output with contributions, using docs-only
   generation and read-only CI freshness checks. Keep VERSION and all dist files
@@ -1315,3 +1316,17 @@ validation remain separate from this addition.
 - **Boundary:** Supersedes only D056's generated-source-README freeze. Preserve
   release validation, published tags, expert content and all image credits.
   No installation, role invocation or host configuration change.
+
+## D064 — 2026-10-22: Release Expert Roles v1.3.0
+
+- **Status:** Release PR, checks, merge and publication authorized if all gates pass.
+- **Decision:** Deliver the accepted documentation/tooling work as compatible
+  minor v1.3.0 under the [release contract](design.md#release-expert-roles-v130).
+  Finalize VERSION, dated changelog, native provenance and host indexes while
+  retaining the expert collection and native execution behavior.
+- **Checks:** Full suite, source/catalogue and strict release checks, preserved
+  source hashes and 136 parsed payloads, references and public content, signed
+  commit, successful exact-head PR and resulting-main workflow/validation check,
+  then remote annotated tag and release readback.
+- **Boundary:** Supersedes the no-release hold for v1.3.0 only. Keep previous
+  tags fixed; no installation, plugin change or new role-runtime test.

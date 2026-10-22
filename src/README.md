@@ -119,14 +119,14 @@ keeps its name, specialty and image columns; all roles retain the shared instruc
 
 ## Export provenance
 
-Every native export carries the same three provenance keys. New previews and
-the next release use a short title, aligned values and a blank line before the
+Every native export carries the same three provenance keys. Exports use a short
+title, aligned values and a blank line before the
 host settings:
 
 ```text
 # Expert Roles
 # expert_roles.source:  https://github.com/shpoont/expert-roles
-# expert_roles.version: 0.0.0-preview
+# expert_roles.version: 1.3.0
 # expert_roles.id:      eliyahu-goldratt
 
 ```
@@ -134,8 +134,8 @@ host settings:
 `source` identifies the canonical public repository, `version` comes from the
 root [VERSION](../VERSION) file, and `id` is the expert directory's stable slug.
 Both formats share the whole-library version; individual experts have no
-separate version. The example uses the temporary preview version; retained
-release files keep their previous formatting until release preparation.
+separate version. The example uses v1.3.0; isolated previews use
+`0.0.0-preview`. Historical release tags retain their original formatting.
 
 Codex comments appear before the TOML settings. Claude comments appear inside
 the YAML frontmatter, after its opening `---`; the closing `---` and instruction

@@ -43,6 +43,36 @@ tree; maintainers update dist and versions during release preparation.
 
 ## Implementation contract
 
+### Release Expert Roles v1.3.0
+
+D064 authorizes preparing a separate v1.3.0 release PR, running the local and
+hosted checks, squash merging it and publishing the release only if every gate
+passes. This supersedes D063's no-release boundary for this version only.
+Use current main as the release comparison base; preserve all existing tags.
+
+Finalize VERSION as `1.3.0`, date the changelog for 2026-10-22 and retain
+Unreleased. Update release records and regenerate dist using the accepted
+source generator. All 136 native exports receive the cleaner source/version/ID
+header; both host indexes gain the accepted comparison cues. Keep all expert
+profiles, visuals, metadata, specialty vocabulary, shared templates, parsed
+native fields and instruction bodies unchanged. The source catalogues remain
+current under D063. This compatible minor version adds generation/validation
+commands and documentation capabilities without changing role behavior.
+
+Require all 72 tests, source/catalogue validation, strict generated freshness,
+release ownership, complete local and preview references, UTF-8/public checks,
+native parity, protected-source hashes and the full diff. Create a signed
+commit and a PR labeled release. Require both its exact-head workflow and
+validation check to conclude successfully before squash merging. Repeat local
+release validation and require the resulting exact main commit's hosted
+workflow and validation check to conclude successfully before tagging.
+
+Create and verify an annotated v1.3.0 tag on that main commit, push it explicitly
+and publish Expert Roles v1.3.0 as the latest stable release. Read back the
+remote commit, tag object/target, release metadata/notes, VERSION and native
+headers, then remove the merged release branch and confirm a clean local main.
+No installation, consuming-plugin changes or new host-runtime tests are included.
+
 ### Keep source catalogues current between releases
 
 D063 separates human-facing source catalogues from versioned native exports.

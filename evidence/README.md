@@ -9,6 +9,33 @@ Connect evidence to [current work](../docs/current-work.md),
 [decisions](../docs/decisions.md), [checks](../tests/README.md) and
 [delivery](../docs/delivery.md).
 
+## v1.3.0 release validation — 2026-10-22
+
+D064 authorizes a separate v1.3.0 release PR, required checks, squash merge and
+publication only after every gate succeeds. VERSION and all native provenance
+comments use `1.3.0`; the dated changelog retains Unreleased. This compatible
+minor release packages the accepted documentation, source-catalogue workflow,
+preview validation and native-header improvements since v1.2.0.
+
+Local checks pass: all **72 tests**, source/catalogue validation, strict
+freshness of **141 generated outputs** and release ownership against current
+main. Regeneration changes exactly 138 dist files: 136 native headers and both
+host indexes. All **136 parsed native payloads** remain identical to v1.2.0;
+the two hosts agree on every expert's name, description and instruction body.
+The accepted source-catalogue blocks, all **211 protected expert source files**,
+shared vocabulary/templates, image credits and the three prior tag objects
+remain unchanged. Complete local references, UTF-8/public suitability and the
+full diff pass. No new host-runtime or comparative-effectiveness result is added.
+
+These are local preparation results. D064 separately requires a signed PR
+commit, completed successful workflow and validation check for the exact PR
+head and resulting main commit, then an annotated tag and remote release
+readback. The [release page](https://github.com/shpoont/expert-roles/releases/tag/v1.3.0)
+and [Checks records](https://github.com/shpoont/expert-roles/actions/workflows/checks.yml)
+establish hosted delivery; version declarations alone do not. Private logs and
+hash records remain outside the public tree. Future releases require their own
+authorization; installation and consuming integrations remain separate.
+
 ## Source catalogue and release boundary correction — 2026-10-22
 
 D063 corrects the policy that left the public catalogue stale after D062's
