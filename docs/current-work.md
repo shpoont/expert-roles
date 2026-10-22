@@ -2,26 +2,36 @@
 
 ## Current focus and status
 
-D057 improves the main README after the eleven expert source PRs were reviewed
-and squash merged. The canonical source collection has **68 experts, 96
-specialties in 14 groups**, 50 generated portraits, five historical depictions
-and 13 placeholders. The [merged baseline](https://github.com/shpoont/expert-roles/commit/ddb2041ae65a62c947a46251d4bead049f2efc9f)
-passes all 54 tests and completed [hosted checks](https://github.com/shpoont/expert-roles/actions/runs/39776106912).
+D059 finalizes the accepted **v1.2.0** baseline for publication through the
+separate [release PR](https://github.com/shpoont/expert-roles/pull/13).
+[D057's README source PR](https://github.com/shpoont/expert-roles/pull/12) is squash
+merged as `6a301fec01e9ebb96c5a813cb20bcc74cf00fdfe`; the release branch is updated
+against that main commit. The eleven expert contributions are merged. The baseline
+contains **68 experts, 96 specialties in 14 groups**, 50 generated portraits,
+five historical depictions, 13 placeholders and 136 native files. VERSION and
+native provenance use `1.2.0`; v1.1.0 is the previous release.
 
-The README change puts a recognizable six-expert sample before setup, adds
-concrete task cues and uses one quiet image note while preserving accessible
-types and full profile credits. Detailed correction/removal commitments remain
-in the linked [request policy](requests.md). See the
-[implementation contract](design.md#readme-presentation-refresh).
+D057's source change passes 55 tests and completed
+[hosted source checks](https://github.com/shpoont/expert-roles/actions/runs/39786737629).
+Its recognizable gallery, task cues, shorter guidance and quiet image disclosure
+were checked in an actual local browser rendering. The candidate regenerates
+that presentation and the complete catalogue without changing role payloads,
+source profiles, images, vocabulary or shared instructions.
 
-D056's contribution/release separation is delivered. This source change leaves
-`VERSION`, `dist/` and generated README sections at the 57-expert v1.1.0 baseline;
-review the new presentation in an isolated `0.0.0-preview` tree. Subsequent release
-preparation belongs in a separate maintainer release PR. No tag, publication,
-installation or invocation is included. All 55 tests, source validation and
-contribution ownership pass. The actual rendered preview and its 2,417 local
-references are checked, and all 136 native preview files retain their bytes.
-See the [presentation evidence](../evidence/README.md#readme-presentation-refresh--2026-10-22).
+The [preparation contract](design.md#prepare-v120-without-publication) requires
+strict generated freshness, release ownership, native parity, protected-content
+comparisons and link/public-content checks. All 55 tests and release checks pass;
+all 141 generated files match, all 136 native payloads are preserved, and 2,421
+local references resolve. See the
+[release evidence](../evidence/README.md#v120-publication--2026-10-22).
+The owner authorizes retargeting the release PR to main, merging after repeated
+release ownership and completed exact-head hosted checks, then publishing an
+annotated v1.2.0 tag and latest stable GitHub release after the resulting main
+workflow and validate check both succeed. The
+[publication contract](design.md#publish-expert-roles-v120) and
+[release record](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0)
+separate that execution from prepared version declarations. Installation, role
+invocation and consuming-plugin changes remain outside this release.
 
 ## Historical v1.1.0 preparation records
 
@@ -266,19 +276,11 @@ These follow-ups are separate from the accepted catalogue and commit readiness.
 
 ## Next actions
 
-Submit D057's locally checked source change for owner review separately from
-release artifacts. Prepare the next compatible minor
-version in a separate maintainer release PR, refreshing catalogues, indexes and
-native provenance only there. Publication remains on hold; preserve the fixed
-v1.0.0 and v1.1.0 released tags. Consumer deployment and management follow as
-separate integration work.
-
-The accepted portraits and bounded contribution walkthrough are retained; the
-temporary Grace Hopper fixture is not a roster addition.
-
-Further experts follow the existing [contribution process](../CONTRIBUTING.md).
-Runtime or effectiveness work needs its own scope; deployment and role management
-remain external.
+Complete D059's authorized release after strict local and exact-commit hosted
+checks. Verify the remote main commit, annotated tag target, latest stable
+GitHub release and versioned native files before reporting publication. Keep
+v1.0.0 and v1.1.0 tags fixed. After publication, consumer deployment, role runtime
+validation and comparative benefit assessments remain separate work.
 
 ## Findings and handover
 

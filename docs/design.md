@@ -42,6 +42,53 @@ tree; maintainers update committed outputs and versions during release preparati
 
 ## Implementation contract
 
+### Publish Expert Roles v1.2.0
+
+D059 records the owner's acceptance of the rendered README and authorization
+to squash merge its source PR, update the separate release PR against main,
+merge it and publish the new minor version. This supersedes D058's publication
+hold for v1.2.0 only. Keep source contributions and release artifacts separate.
+
+Use the README squash commit on main as the release comparison base. Preserve
+all accepted source profiles, images, credits, vocabulary and role descriptions
+and instructions. Require 55 tests, source validation, all 141 generated outputs,
+release ownership, native parity and preservation, local links, public-content
+and whitespace checks. Retarget the release PR to main and retain its `release`
+label; require its exact-head hosted workflow and validate check to finish
+successfully before merging.
+
+Require the resulting main commit's workflow and validate check to succeed
+before creating and explicitly pushing an annotated v1.2.0 tag on that commit.
+Publish Expert Roles v1.2.0 as the latest stable GitHub release with the accepted
+scope, validation, limits and fixed snapshot links. Read back remote main,
+signature, tag object and peeled target, release metadata, VERSION and native
+headers. Existing released tags stay fixed. Installation, invocation and plugin
+changes remain outside this authorization.
+
+### Prepare v1.2.0 without publication
+
+D058 prepares a compatible minor candidate after the eleven expert additions
+and D057's README source change. Keep this change in a separate maintainer
+release PR, initially based on the README source branch. VERSION is `1.2.0`;
+finalize its dated changelog entry while retaining Unreleased for future work.
+Generate the 68-profile catalogue, 136 native files, indexes and source/version/ID
+comments. Preserve fixed export paths and the published v1.0.0 and v1.1.0 tags.
+
+Preserve every source profile, visual, credit, specialty meaning and shared
+instruction. Existing native parsed settings and instructions remain unchanged;
+the 114 previously released files change only their version comment. All 136
+native files must match the D057 preview apart from the preview-version comment.
+Update current documentation to distinguish this prepared candidate from the
+latest published v1.1.0 release.
+
+Require the complete suite, source validation, strict generated freshness,
+release ownership against the README source commit, native parity, local links,
+public suitability, protected content and whitespace checks. Apply the `release`
+label and require exact-head hosted checks. After the source PR merges, update
+the release branch against main and rerun release ownership before retargeting
+and final approval. This preparation creates no tag or GitHub release and
+includes no installation, role invocation or plugin changes.
+
 ### README presentation refresh
 
 D057 applies the accepted visitor-review direction after the eleven expert

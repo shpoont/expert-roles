@@ -44,6 +44,19 @@ descriptions and one nearby note; full catalogue rows retain visible image-type
 labels and profiles keep complete credits. Review the actual two-row rendering,
 setup and catalogue links, and the correction/removal policy's preserved scope.
 
+## v1.2.0 release validation (D058 and D059)
+
+Use the README squash commit on updated main as the release comparison base.
+Require all 55 tests, source validation, strict freshness and release ownership.
+Check 141 generated files, 68 matching host pairs and `1.2.0` provenance. Preserve
+all expert source bytes and the 114 previously released native payloads; compare
+all 136 files with the D057 preview after removing only its version comment.
+Repeat the release boundary and exact-head hosted checks after updating and
+retargeting the release PR to main. D059 authorizes publication only after the
+PR and resulting main workflow and validate check conclude successfully.
+Read back the fixed annotated tag target, stable release, VERSION and native
+headers; publication adds no runtime or effectiveness evidence.
+
 ## Studio portrait refresh (D047, D048 and D049)
 
 D048's [studio-v1 rollout](../docs/design.md#reproducible-studio-portrait-method-and-catalogue-rollout)
