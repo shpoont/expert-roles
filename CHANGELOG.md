@@ -5,46 +5,43 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+## v1.2.0 — 2026-10-22
+
+Eleven new expert perspectives and a clearer catalogue introduction. The prepared
+collection has 68 experts, 96 specialties in 14 groups and 136 native role files.
+
 ### Added
 
-- Proposed Leslie Lamport source profile, metadata and reference-based studio
-  portrait, with public research references and an emphasis on precise
-  specifications, safety, liveness and fairness.
-- Formal methods and Concurrent computing in the shared Computing vocabulary.
-- Proposed Donella Meadows source profile, metadata and full-name placeholder.
-- System dynamics and Systems thinking in the shared specialty vocabulary.
-- Proposed Nancy Leveson source profile, metadata and credited studio portrait.
-- System safety and Systems engineering in the shared specialty vocabulary.
-- Proposed Daniel Jackson source profile, metadata and credited studio portrait.
-- Formal methods in the shared specialty vocabulary.
-- Proposed David Parnas source profile, metadata and credited studio portrait.
-- Proposed Atul Gawande source profile, metadata and credited studio portrait.
-- General surgery, Health services research and Patient safety in the shared specialty vocabulary.
-- Add Warren Buffett's source profile, documented perspective and credited
-  studio portrait for inclusion in the next release.
-- Add Jeff Bezos's source profile, documented perspective and credited
-  studio portrait for inclusion in the next release.
-- Add Bill Gates's source profile, documented perspective and credited
-  studio portrait for inclusion in the next release.
-- Add Richard Feynman's source profile, documented perspective and credited
-  studio portrait for inclusion in the next release.
-- Add Marie Curie's source profile, documented perspective and credited
-  studio portrait for inclusion in the next release.
+- Leslie Lamport, Donella Meadows, Nancy Leveson, Daniel Jackson, David Parnas
+  and Atul Gawande, with source-backed profiles and credited visuals.
+- Warren Buffett, Jeff Bezos, Bill Gates, Richard Feynman and Marie Curie, with
+  documented perspectives, public references and reference-based studio portraits.
+- Fourteen specialty concepts, including formal methods, systems thinking,
+  system safety, patient safety, value investing, physics and radiochemistry.
+- Twenty-two native files for the new experts, using the existing flat Codex
+  and Claude Code paths and whole-library source/version/ID provenance.
 
 ### Changed
 
-- Put a recognizable six-expert sample before setup in the main README, with
-  task cues and concise image disclosure. Simplify navigation and project
-  information while retaining detailed profile credits and the linked
-  correction/removal policy.
+- Lead the main README with a recognizable six-expert sample and task cues,
+  then concise setup guidance. Keep one homepage image note, accessible image
+  types and detailed profile credits. Retain correction/removal commitments in
+  a linked policy and simplify project information.
 - Separate source contributions from maintainer release preparation. Ordinary
-  PRs retain `VERSION`, committed distribution files and generated catalogue
+  PRs retain VERSION, committed distribution files and generated catalogue
   sections; release PRs choose the final stable version and regenerate them.
-- Make source validation the generator's default, add isolated unreleased
-  previews and require explicit `--release` for committed output generation.
-  Keep `--check` as the strict, read-only release freshness check.
-- Add CI change-boundary checks, maintainer `release` label routing and temporary
-  review artifacts. Update contributor, portrait and release guidance.
+- Make source validation the generator default, provide isolated unreleased
+  previews and require explicit `--release` for committed generation. Keep
+  `--check` as strict, read-only release freshness validation.
+- Add CI ownership checks, maintainer `release` label routing and temporary
+  review artifacts; update contributor, portrait and delivery guidance.
+- Refresh the complete catalogue, generated summary, specialty indexes and all
+  native version comments for the candidate while preserving existing settings,
+  descriptions, shared instructions, source profiles, visuals and image terms.
+
+This is a prepared candidate. Validation and publication status are recorded in
+[release evidence](evidence/README.md#v120-preparation--2026-10-22); a version
+entry does not establish publication.
 
 ## v1.1.0 — 2026-10-22
 

@@ -44,6 +44,16 @@ descriptions and one nearby note; full catalogue rows retain visible image-type
 labels and profiles keep complete credits. Review the actual two-row rendering,
 setup and catalogue links, and the correction/removal policy's preserved scope.
 
+## Prepared v1.2.0 candidate (D058)
+
+Use the README source commit as this stacked candidate's comparison base.
+Require all 55 tests, source validation, strict freshness and release ownership.
+Check 141 generated files, 68 matching host pairs and `1.2.0` provenance. Preserve
+all expert source bytes and the 114 previously released native payloads; compare
+all 136 files with the D057 preview after removing only its version comment.
+Once the source PR merges, update against main and repeat the release boundary
+and exact-head hosted checks. This preparation includes no tag or publication.
+
 ## Studio portrait refresh (D047, D048 and D049)
 
 D048's [studio-v1 rollout](../docs/design.md#reproducible-studio-portrait-method-and-catalogue-rollout)

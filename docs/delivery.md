@@ -219,14 +219,15 @@ Follow the [photo policy](../CONTRIBUTING.md#photo-sources-and-licenses) and
 
 ## Versions and releases
 
-Library version: **[v1.1.0](https://github.com/shpoont/expert-roles/releases/tag/v1.1.0)**.
+Prepared library candidate: **1.2.0**, not yet published. Latest published version:
+**[v1.1.0](https://github.com/shpoont/expert-roles/releases/tag/v1.1.0)**.
 One `MAJOR.MINOR.PATCH` version covers profiles, metadata, vocabulary, shared
 instructions, templates, tooling and both native formats. The consuming plugin
 and other integrations keep independent histories. Individual experts and export
 formats do not have separate versions.
 
 The root [VERSION](../VERSION) file is the machine-readable source for export
-provenance, finalized as `1.1.0` for this release. Contributions leave it unchanged;
+provenance, set to `1.2.0` in this preparation PR. Contributions leave it unchanged;
 temporary previews use `0.0.0-preview` independently. A version header identifies
 a declared library version, not proof of publication or an
 exact content digest. Keep released tags fixed and use Git refs for snapshots.
@@ -317,6 +318,20 @@ select an ancestor comparison `base` and enable `release` only for a prepared
 release. PR runs select that mode from the `release` label; main pushes select
 it when their diff changes `VERSION`. Adding or removing the label reruns checks.
 Source-only main pushes continue to pass while released artifacts lag behind.
+
+### Prepared v1.2.0 candidate
+
+This separate release candidate includes 68 experts, 96 specialties in 14 groups
+and 136 native files. Eleven new experts and the README presentation update are
+compatible additions; stable paths, existing role settings and shared
+instructions are preserved. Existing native exports change only version comments.
+
+The candidate depends on [the README source PR](https://github.com/shpoont/expert-roles/pull/12).
+After that PR merges, update this branch against main, retarget its release PR
+and repeat strict release ownership and exact-head CI before final approval.
+The `release` label selects validation; it does not authorize publication.
+No v1.2.0 tag or GitHub release has been created. See the
+[candidate evidence](../evidence/README.md#v120-preparation--2026-10-22).
 
 ### v1.1.0 release baseline
 

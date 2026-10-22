@@ -42,6 +42,30 @@ tree; maintainers update committed outputs and versions during release preparati
 
 ## Implementation contract
 
+### Prepare v1.2.0 without publication
+
+D058 prepares a compatible minor candidate after the eleven expert additions
+and D057's README source change. Keep this change in a separate maintainer
+release PR, initially based on the README source branch. VERSION is `1.2.0`;
+finalize its dated changelog entry while retaining Unreleased for future work.
+Generate the 68-profile catalogue, 136 native files, indexes and source/version/ID
+comments. Preserve fixed export paths and the published v1.0.0 and v1.1.0 tags.
+
+Preserve every source profile, visual, credit, specialty meaning and shared
+instruction. Existing native parsed settings and instructions remain unchanged;
+the 114 previously released files change only their version comment. All 136
+native files must match the D057 preview apart from the preview-version comment.
+Update current documentation to distinguish this prepared candidate from the
+latest published v1.1.0 release.
+
+Require the complete suite, source validation, strict generated freshness,
+release ownership against the README source commit, native parity, local links,
+public suitability, protected content and whitespace checks. Apply the `release`
+label and require exact-head hosted checks. After the source PR merges, update
+the release branch against main and rerun release ownership before retargeting
+and final approval. This preparation creates no tag or GitHub release and
+includes no installation, role invocation or plugin changes.
+
 ### README presentation refresh
 
 D057 applies the accepted visitor-review direction after the eleven expert

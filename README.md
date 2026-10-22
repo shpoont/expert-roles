@@ -9,7 +9,7 @@ The experts do not participate in or endorse this project.
 
 <!-- BEGIN GENERATED SUMMARY -->
 
-**57 experts · Codex and Claude Code role files**
+**68 experts · Codex and Claude Code role files**
 
 <!-- END GENERATED SUMMARY -->
 
@@ -28,41 +28,41 @@ public references and role files.
 <table>
 <tr>
 <td align="center" width="33%">
-<a href="src/roles/chip-huyen/README.md"><img src="src/roles/chip-huyen/portrait.jpg" alt="Chip Huyen; AI-generated portrait; sources and terms on profile" width="160" height="160"></a><br><sub>AI-generated portrait</sub><br>
-<a href="src/roles/chip-huyen/README.md"><strong>Chip Huyen</strong></a><br>
-Machine learning
+<a href="src/roles/steve-jobs/README.md"><img src="src/roles/steve-jobs/portrait.jpg" alt="Steve Jobs; AI-generated portrait; sources and terms on profile" width="160" height="160"></a><br>
+<a href="src/roles/steve-jobs/README.md"><strong>Steve Jobs</strong></a><br>
+Sharpen a product&#x27;s focus
 </td>
 <td align="center" width="33%">
-<a href="src/roles/martin-fowler/README.md"><img src="src/roles/martin-fowler/portrait.jpg" alt="Martin Fowler; AI-generated portrait; sources and terms on profile" width="160" height="160"></a><br><sub>AI-generated portrait</sub><br>
-<a href="src/roles/martin-fowler/README.md"><strong>Martin Fowler</strong></a><br>
-Software architecture
+<a href="src/roles/warren-buffett/README.md"><img src="src/roles/warren-buffett/portrait.jpg" alt="Warren Buffett; AI-generated portrait; sources and terms on profile" width="160" height="160"></a><br>
+<a href="src/roles/warren-buffett/README.md"><strong>Warren Buffett</strong></a><br>
+Examine an investment thesis
 </td>
 <td align="center" width="33%">
-<a href="src/roles/don-norman/README.md"><img src="src/roles/don-norman/portrait.jpg" alt="Don Norman; AI-generated portrait; sources and terms on profile" width="160" height="160"></a><br><sub>AI-generated portrait</sub><br>
-<a href="src/roles/don-norman/README.md"><strong>Don Norman</strong></a><br>
-Human-centered design
+<a href="src/roles/marie-curie/README.md"><img src="src/roles/marie-curie/portrait.jpg" alt="Marie Curie; AI-generated portrait; sources and terms on profile" width="160" height="160"></a><br>
+<a href="src/roles/marie-curie/README.md"><strong>Marie Curie</strong></a><br>
+Assess an experiment&#x27;s evidence
 </td>
 </tr>
 <tr>
 <td align="center" width="33%">
-<a href="src/roles/eliyahu-goldratt/README.md"><img src="src/roles/eliyahu-goldratt/portrait.jpg" alt="Eliyahu Goldratt; AI-generated portrait; sources and terms on profile" width="160" height="160"></a><br><sub>AI-generated portrait</sub><br>
+<a href="src/roles/don-norman/README.md"><img src="src/roles/don-norman/portrait.jpg" alt="Don Norman; AI-generated portrait; sources and terms on profile" width="160" height="160"></a><br>
+<a href="src/roles/don-norman/README.md"><strong>Don Norman</strong></a><br>
+Find what makes a design confusing
+</td>
+<td align="center" width="33%">
+<a href="src/roles/eliyahu-goldratt/README.md"><img src="src/roles/eliyahu-goldratt/portrait.jpg" alt="Eliyahu Goldratt; AI-generated portrait; sources and terms on profile" width="160" height="160"></a><br>
 <a href="src/roles/eliyahu-goldratt/README.md"><strong>Eliyahu Goldratt</strong></a><br>
-Theory of Constraints
+Identify a process&#x27;s main constraint
 </td>
 <td align="center" width="33%">
-<a href="src/roles/philip-kotler/README.md"><img src="src/roles/philip-kotler/portrait.jpg" alt="Philip Kotler; AI-generated portrait; sources and terms on profile" width="160" height="160"></a><br><sub>AI-generated portrait</sub><br>
-<a href="src/roles/philip-kotler/README.md"><strong>Philip Kotler</strong></a><br>
-Marketing management
-</td>
-<td align="center" width="33%">
-<a href="src/roles/aswath-damodaran/README.md"><img src="src/roles/aswath-damodaran/portrait.jpg" alt="Aswath Damodaran; AI-generated portrait; sources and terms on profile" width="160" height="160"></a><br><sub>AI-generated portrait</sub><br>
-<a href="src/roles/aswath-damodaran/README.md"><strong>Aswath Damodaran</strong></a><br>
-Corporate finance
+<a href="src/roles/socrates/README.md"><img src="src/roles/socrates/portrait.jpg" alt="Socrates; Historical depiction; sources and terms on profile" width="160" height="160"></a><br>
+<a href="src/roles/socrates/README.md"><strong>Socrates</strong></a><br>
+Question assumptions in an argument
 </td>
 </tr>
 </table>
 
-**[Browse all 57 experts by name or specialty →](src/roles/README.md)**
+**[Browse all 68 experts by name or specialty →](src/roles/README.md)**
 
 <!-- END GENERATED FEATURED -->
 

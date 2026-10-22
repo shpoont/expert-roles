@@ -1,13 +1,14 @@
 # Expert Roles library guidance
 
-Current work is D057's [README presentation refresh](docs/design.md#readme-presentation-refresh),
-followed by separate release preparation. The owner requests the agreed README
-improvements and a rendered review. Keep this source change separate from the
-release PR; do not tag, publish, install or invoke roles. Preserve all 68 source
+Current work is D058's [v1.2.0 preparation](docs/design.md#prepare-v120-without-publication)
+in a separate maintainer release PR, dependent on D057's README source PR.
+The candidate VERSION and all 136 native files use `1.2.0`; strict generated
+freshness and release ownership are required. The latest published version is
+still v1.1.0. Do not tag, publish, install or invoke roles. Preserve all 68 source
 profiles, their visuals and credits, the specialty registry and shared instruction.
 The source collection has 96 specialties in 14 groups, 50 generated portraits,
-five historical depictions and 13 placeholders. The retained v1.1.0 artifacts
-still describe 57 experts. Earlier scopes and publication authorizations below
+five historical depictions and 13 placeholders. The candidate artifacts cover
+68 experts; the published v1.1.0 artifacts cover 57. Earlier publication authorizations below
 describe historical work and do not authorize a new release.
 
 D056's [contribution/release separation](docs/design.md#separate-contributions-from-release-preparation)

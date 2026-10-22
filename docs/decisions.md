@@ -1214,3 +1214,21 @@ validation remain separate from this addition.
   profiles. v1.1.0 remains the published baseline with 57 distributed experts.
   The owner requests the README improvement and separate release preparation;
   publication and installation remain outside this work.
+
+## D058 — 2026-10-22: Prepare a separate v1.2.0 candidate
+
+- **Status:** Preparation authorized; locally implemented and checked. The
+  separate release candidate remains subject to PR review and hosted checks.
+- **Decision:** Use a compatible minor increment for eleven new experts and the
+  source/process/presentation improvements. Set the candidate to `1.2.0` and
+  refresh committed catalogues, distribution indexes and native provenance in
+  a separate maintainer release PR. See the
+  [contract](design.md#prepare-v120-without-publication).
+- **Checks:** Full suite, source validation, strict freshness, release ownership,
+  native parity and payload preservation, complete local links, public content,
+  whitespace and exact-head hosted checks. Preserve all source profiles and
+  fixed published tags.
+- **Boundary:** The candidate depends on D057's separate source PR. Update it
+  against main and repeat release ownership after that source change merges.
+  v1.1.0 remains the latest published version. No tag, publication, installation,
+  role invocation or consuming-plugin update is authorized here.

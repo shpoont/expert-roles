@@ -25,8 +25,9 @@ canonical metadata, a short human-readable README and one square visual.
 The adopted [studio-v1 method](docs/elements/portraits.md) is retained.
 Previews generate a Codex and Claude Code file for every source profile, with
 alphabetical and specialty indexes that link to stable, unduplicated paths.
-Committed `dist/` and generated catalogue sections retain the v1.1.0 release's
-57 experts until a separate release PR prepares the new source collection.
+The separately prepared v1.2.0 `dist/` files and generated catalogue sections
+cover all 68 experts. This is an unpublished candidate; v1.1.0 remains the latest
+published release with 57 experts.
 Portrait acceptance is an editorial decision;
 structural validity does not establish likeness. Future additions follow the
 same contribution process.
@@ -66,9 +67,9 @@ unchanged exports. Automatic directory discovery remains unresolved. Claude
 files have structural checks but no runtime validation. These observations do
 not establish broad selection reliability or comparative expert benefit.
 
-- **Current status and boundary:** D057 applies the agreed README presentation
-  improvements: recognizable experts, task cues, concise setup and quieter
-  image disclosure, with detailed credits and the request policy retained.
+- **Current status and boundary:** D058 prepares v1.2.0 separately from D057's
+  README source PR. The candidate includes the eleven merged experts and the
+  agreed presentation improvements, with source credits and role payloads retained.
   Contribution/release separation is delivered and the eleven new expert PRs
   are merged. Source changes and release preparation remain separate. No new
   release, tag, installation or role invocation is included. The following records
@@ -149,9 +150,10 @@ This repository follows [Project Structure v1.0.0](https://github.com/shpoont/pr
 commit `96fdd6bd7950778f5b6c6f8269ab2b82167cb99a`. Expert sources live under
 `src/`; the full catalogue is generated in `src/roles/README.md`, with a fixed
 six-expert showcase and generated count in the main README. Ready-to-use
-exports and their indexes live under `dist/`. The library version is `v1.1.0`,
-independently versioned from the starter and consuming integrations. The
-canonical `VERSION` file and both hosts' provenance comments use `1.1.0`.
+exports and their indexes live under `dist/`. The prepared library version is
+`1.2.0`, independently versioned from the starter and consuming integrations.
+The canonical `VERSION` file and both hosts' provenance comments use `1.2.0`.
+It is not yet published; v1.1.0 remains the latest released baseline.
 The [release record](https://github.com/shpoont/expert-roles/releases/tag/v1.1.0)
 and annotated tag identify the hosted snapshot; the published v1.0.0 baseline
 remains fixed. See the

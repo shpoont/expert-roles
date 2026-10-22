@@ -9,6 +9,31 @@ Connect evidence to [current work](../docs/current-work.md),
 [decisions](../docs/decisions.md), [checks](../tests/README.md) and
 [delivery](../docs/delivery.md).
 
+## v1.2.0 preparation — 2026-10-22
+
+D058 prepares a compatible minor candidate separately from the
+[README source PR](https://github.com/shpoont/expert-roles/pull/12), using source
+commit `f1645778b550964fd4ffaac8588dd0f50a4db61e` as the release comparison base.
+The candidate includes the eleven merged experts and D057's presentation
+change, with 68 profiles, 96 specialties in 14 groups and 136 native files.
+
+VERSION is `1.2.0`; generated catalogues, distribution indexes and native
+provenance are refreshed only in this release change. All 55 tests, source
+validation, strict freshness and release ownership pass. All 141 generated
+files match. The 68 host pairs parse and agree, with exactly one `1.2.0` version
+comment per native file. All 136 files match the D057 source preview apart from
+that version comment; the 114 previously released files also retain every byte
+outside the changed version line.
+
+All profile metadata, visual bytes, image credits, vocabulary, shared templates,
+generator code and test code match the source PR. The complete candidate has
+2,418 resolving local references and no UTF-8, public-content or whitespace
+findings. D057's captured rendering establishes the unchanged homepage
+presentation; these release checks add no new runtime or effectiveness evidence.
+The release label and exact-head hosted checks remain a separate delivery
+readback. v1.1.0 remains the latest published release; this preparation creates
+no tag or hosted release.
+
 ## README presentation refresh — 2026-10-22
 
 D057 applies the agreed visitor-review direction after the eleven source

@@ -2,26 +2,30 @@
 
 ## Current focus and status
 
-D057 improves the main README after the eleven expert source PRs were reviewed
-and squash merged. The canonical source collection has **68 experts, 96
-specialties in 14 groups**, 50 generated portraits, five historical depictions
-and 13 placeholders. The [merged baseline](https://github.com/shpoont/expert-roles/commit/ddb2041ae65a62c947a46251d4bead049f2efc9f)
-passes all 54 tests and completed [hosted checks](https://github.com/shpoont/expert-roles/actions/runs/39776106912).
+D058 prepares an unpublished **v1.2.0** candidate in a separate maintainer release
+PR, based on [D057's README source PR](https://github.com/shpoont/expert-roles/pull/12).
+The eleven expert source contributions are already merged. This candidate
+contains **68 experts, 96 specialties in 14 groups**, 50 generated portraits,
+five historical depictions, 13 placeholders and 136 native files. VERSION and
+native provenance use `1.2.0`; v1.1.0 remains the latest published release.
 
-The README change puts a recognizable six-expert sample before setup, adds
-concrete task cues and uses one quiet image note while preserving accessible
-types and full profile credits. Detailed correction/removal commitments remain
-in the linked [request policy](requests.md). See the
-[implementation contract](design.md#readme-presentation-refresh).
+D057's source change passes 55 tests and completed
+[hosted source checks](https://github.com/shpoont/expert-roles/actions/runs/39779441348).
+Its recognizable gallery, task cues, shorter guidance and quiet image disclosure
+were checked in an actual local browser rendering. The candidate regenerates
+that presentation and the complete catalogue without changing role payloads,
+source profiles, images, vocabulary or shared instructions.
 
-D056's contribution/release separation is delivered. This source change leaves
-`VERSION`, `dist/` and generated README sections at the 57-expert v1.1.0 baseline;
-review the new presentation in an isolated `0.0.0-preview` tree. Subsequent release
-preparation belongs in a separate maintainer release PR. No tag, publication,
-installation or invocation is included. All 55 tests, source validation and
-contribution ownership pass. The actual rendered preview and its 2,417 local
-references are checked, and all 136 native preview files retain their bytes.
-See the [presentation evidence](../evidence/README.md#readme-presentation-refresh--2026-10-22).
+The [preparation contract](design.md#prepare-v120-without-publication) requires
+strict generated freshness, release ownership, native parity, protected-content
+comparisons and link/public-content checks. All 55 tests and release checks pass;
+all 141 generated files match, all 136 native payloads are preserved, and 2,418
+local references resolve. See the
+[release evidence](../evidence/README.md#v120-preparation--2026-10-22).
+After the source PR merges, update this branch against main, retarget its release
+PR and repeat release ownership and exact-head hosted checks. Publication is on
+hold: no tag, GitHub release, installation, role invocation or plugin change is
+included.
 
 ## Historical v1.1.0 preparation records
 
@@ -266,19 +270,11 @@ These follow-ups are separate from the accepted catalogue and commit readiness.
 
 ## Next actions
 
-Submit D057's locally checked source change for owner review separately from
-release artifacts. Prepare the next compatible minor
-version in a separate maintainer release PR, refreshing catalogues, indexes and
-native provenance only there. Publication remains on hold; preserve the fixed
-v1.0.0 and v1.1.0 released tags. Consumer deployment and management follow as
-separate integration work.
-
-The accepted portraits and bounded contribution walkthrough are retained; the
-temporary Grace Hopper fixture is not a roster addition.
-
-Further experts follow the existing [contribution process](../CONTRIBUTING.md).
-Runtime or effectiveness work needs its own scope; deployment and role management
-remain external.
+Review D057's source PR and this separate release candidate. After the source PR
+merges, update and retarget the candidate against main and repeat strict release
+validation and hosted checks. Await explicit publication authorization before
+merging a final release baseline, tagging or publishing. Keep the delivered
+v1.0.0 and v1.1.0 tags fixed. Consumer deployment and management remain separate.
 
 ## Findings and handover
 
