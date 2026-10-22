@@ -18,17 +18,16 @@ roster changes.
 
 ## Scope and expectations
 
-The current catalogue contains fifty-seven experts, eighty-two specialties in
-ten groups, forty generated portraits, five original historical depictions and
-twelve full-name placeholders in the working tree. The owner accepted D053's
-eleven additional portraits; the earlier 29 generated images remain unchanged
-and accepted under D050. The adopted
-[studio-v1 method](docs/elements/portraits.md) is retained. Every profile
-has canonical metadata, a short human-readable
-README, one square visual and generated Codex and Claude Code files under
-`dist/codex/` and `dist/claude/`. Generated distribution indexes provide
-alphabetical and specialty navigation without duplicating exports. All
-accepted additions are included. Portrait acceptance is an editorial decision;
+Canonical sources contain 68 experts, 96 specialties in 14 groups, 50 generated
+portraits, five original historical depictions and 13 full-name placeholders.
+The eleven reviewed expert contributions are merged. Every source profile has
+canonical metadata, a short human-readable README and one square visual.
+The adopted [studio-v1 method](docs/elements/portraits.md) is retained.
+Previews generate a Codex and Claude Code file for every source profile, with
+alphabetical and specialty indexes that link to stable, unduplicated paths.
+Committed `dist/` and generated catalogue sections retain the v1.1.0 release's
+57 experts until a separate release PR prepares the new source collection.
+Portrait acceptance is an editorial decision;
 structural validity does not establish likeness. Future additions follow the
 same contribution process.
 
@@ -67,10 +66,12 @@ unchanged exports. Automatic directory discovery remains unresolved. Claude
 files have structural checks but no runtime validation. These observations do
 not establish broad selection reliability or comparative expert benefit.
 
-- **Current status and boundary:** D056 implements contribution/release
-  separation, with CI and documentation changes. The owner authorizes a signed
-  process commit and ordinary main push, followed by exact-commit hosted checks.
-  No new release, tag, installation or role invocation is included. The following records
+- **Current status and boundary:** D057 applies the agreed README presentation
+  improvements: recognizable experts, task cues, concise setup and quieter
+  image disclosure, with detailed credits and the request policy retained.
+  Contribution/release separation is delivered and the eleven new expert PRs
+  are merged. Source changes and release preparation remain separate. No new
+  release, tag, installation or role invocation is included. The following records
   describe the delivered v1.1.0 baseline. D048 supplies the portrait rollout; D049 adds
   a copyable credit block and repository/CI validation in the isolated worktree.
   The independent fresh-session contribution walkthrough completed one temporary

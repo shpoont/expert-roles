@@ -2,23 +2,26 @@
 
 ## Current focus and status
 
-D056 separates source contributions from release preparation. Ordinary PRs
-submit canonical sources, relevant authored documentation and Unreleased notes;
-they leave `VERSION`, `dist/` and generated README sections unchanged. Maintainer
-release PRs choose the final version, finalize release records and regenerate
-artifacts. CI distinguishes these paths and provides an isolated unreleased
-preview. See the [implementation contract](design.md#separate-contributions-from-release-preparation).
+D057 improves the main README after the eleven expert source PRs were reviewed
+and squash merged. The canonical source collection has **68 experts, 96
+specialties in 14 groups**, 50 generated portraits, five historical depictions
+and 13 placeholders. The [merged baseline](https://github.com/shpoont/expert-roles/commit/ddb2041ae65a62c947a46251d4bead049f2efc9f)
+passes all 54 tests and completed [hosted checks](https://github.com/shpoont/expert-roles/actions/runs/39776106912).
 
-Implementation passes 54 tests and local integration of the actual mixed
-contribution, its source-only equivalent and a prepared-release fixture. The
-workflow shell routes PR, main-push and manual checks as intended. The owner now
-authorizes a signed commit and ordinary main push of the process change. Check
-the exact commit's hosted workflow, validation result and preview artifact before
-reporting hosted enforcement; local results alone do not establish it. No new
-release, tag, role installation or invocation is included. The published v1.1.0
-baseline, roster, portraits, shared instruction and native artifacts are retained.
-Current outcomes will be recorded in the
-[process evidence](../evidence/README.md#contribution-and-release-separation--2026-10-22).
+The README change puts a recognizable six-expert sample before setup, adds
+concrete task cues and uses one quiet image note while preserving accessible
+types and full profile credits. Detailed correction/removal commitments remain
+in the linked [request policy](requests.md). See the
+[implementation contract](design.md#readme-presentation-refresh).
+
+D056's contribution/release separation is delivered. This source change leaves
+`VERSION`, `dist/` and generated README sections at the 57-expert v1.1.0 baseline;
+review the new presentation in an isolated `0.0.0-preview` tree. Subsequent release
+preparation belongs in a separate maintainer release PR. No tag, publication,
+installation or invocation is included. All 55 tests, source validation and
+contribution ownership pass. The actual rendered preview and its 2,417 local
+references are checked, and all 136 native preview files retain their bytes.
+See the [presentation evidence](../evidence/README.md#readme-presentation-refresh--2026-10-22).
 
 ## Historical v1.1.0 preparation records
 
@@ -263,13 +266,12 @@ These follow-ups are separate from the accepted catalogue and commit readiness.
 
 ## Next actions
 
-Commit and push D056's reviewed process changes under the owner's authorization,
-verify exact-commit hosted checks and the preview artifact, then ask the active
-contributor to check the Lamport PR against the new CI. Keep the process change
-separate from expert proposals and from the next release. Refer to the hosted
-[Checks](https://github.com/shpoont/expert-roles/actions/workflows/checks.yml)
-for current delivery results. Record subsequent work
-under Unreleased and keep the v1.0.0 and v1.1.0 released tags fixed.
+Submit D057's locally checked source change for owner review separately from
+release artifacts. Prepare the next compatible minor
+version in a separate maintainer release PR, refreshing catalogues, indexes and
+native provenance only there. Publication remains on hold; preserve the fixed
+v1.0.0 and v1.1.0 released tags. Consumer deployment and management follow as
+separate integration work.
 
 The accepted portraits and bounded contribution walkthrough are retained; the
 temporary Grace Hopper fixture is not a roster addition.

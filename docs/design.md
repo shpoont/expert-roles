@@ -42,6 +42,36 @@ tree; maintainers update committed outputs and versions during release preparati
 
 ## Implementation contract
 
+### README presentation refresh
+
+D057 applies the accepted visitor-review direction after the eleven expert
+contributions were merged. Lead with a short explanation of independent AI
+perspectives and put the six-card gallery before setup. Feature Steve Jobs,
+Warren Buffett, Marie Curie, Don Norman, Eliyahu Goldratt and Socrates, with a
+short task cue supported by each person's assigned specialty and public work.
+Keep the complete catalogue separate and make expert requests optional.
+
+Generate the curated task cues with the showcase. Validate nonempty, single-line
+cues and existing profile/specialty assignments before writes; escape display
+text. Keep image-type information in accessible descriptions and visible full
+catalogue labels. The homepage uses one nearby image note instead of repeating
+the label under every card. Preserve all profile credits and image terms.
+
+Shorten setup and project/release information, with details in linked guides.
+Retain an early AI-independence statement and an easy-to-find correction/removal
+contact; move the detailed request policy into its own linked document without
+changing its commitments. Keep License before Disclaimer, consistent with the
+other public projects and the earlier README follow-up.
+
+This is a source contribution: preserve VERSION, dist and generated README
+blocks. Review the new generated presentation in an external preview. Check the
+suite, source validation, contribution ownership, native-payload preservation,
+relative links, public suitability, whitespace and the actual rendered README.
+Update current records to distinguish the 68-profile source collection from
+the retained 57-profile v1.1.0 release. Prepare subsequent release artifacts in
+a separate release PR; no tag, publication, role invocation or installation is
+included.
+
 ### Separate contributions from release preparation
 
 D056 separates source contributions from published artifacts. Ordinary changes

@@ -9,6 +9,40 @@ Connect evidence to [current work](../docs/current-work.md),
 [decisions](../docs/decisions.md), [checks](../tests/README.md) and
 [delivery](../docs/delivery.md).
 
+## README presentation refresh — 2026-10-22
+
+D057 applies the agreed visitor-review direction after the eleven source
+additions were merged. Its starting source baseline is
+[`ddb2041`](https://github.com/shpoont/expert-roles/commit/ddb2041ae65a62c947a46251d4bead049f2efc9f),
+with 68 experts, 96 specialties in 14 groups and completed
+[hosted validation](https://github.com/shpoont/expert-roles/actions/runs/39776106912).
+
+The homepage now puts the gallery before setup, with recognizable experts,
+task cues and concise image disclosure. The correction/removal policy retains
+its earlier commitments in a separate linked document.
+Following owner review, the opening explicitly introduces roles for AI
+assistants and their independent interpretation of public work; affiliation
+details remain in the existing Disclaimer.
+The full catalogue and download indexes repeat the independent-AI framing for
+direct visitors. Usage wording requests an AI role inspired by the expert;
+native role descriptions and shared instructions remain unchanged.
+
+All 55 tests pass, including the new invalid-cue/no-partial-writes and literal
+display check. Source validation and ordinary contribution ownership pass.
+The isolated preview has 68 matching native pairs and 2,417 resolving local
+references, with no UTF-8 or public-content findings. All 136 preview native
+files are byte-identical to the pre-D057 source preview. Expert profiles,
+metadata, visuals, vocabulary, shared templates, VERSION, dist and retained
+generated blocks are unchanged.
+
+A fresh browser rendering confirms the two-row gallery, all six images, readable
+task captions, the nearby image note and the gallery's position before setup.
+The preserved contact and linked policy remain visible below concise project
+information; License remains before Disclaimer. The local Markdown rendering
+approximates GitHub styling; this is not a captured hosted GitHub rendering or
+owner acceptance. Retained v1.1.0 artifacts are not regenerated in this source
+contribution. Publication and integration remain separate.
+
 ## Contribution and release separation — 2026-10-22
 
 D056 separates canonical source contributions from release-owned versions and

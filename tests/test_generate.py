@@ -9,6 +9,7 @@ import shutil
 import tempfile
 import tomllib
 import unittest
+from unittest.mock import patch
 import xml.etree.ElementTree as ET
 
 import yaml
@@ -54,7 +55,7 @@ class GenerationContractTests(unittest.TestCase):
             "<!-- BEGIN GENERATED CATALOGUE -->\nOld catalogue.\n"
             "<!-- END GENERATED CATALOGUE -->\n\nKeep this catalogue footer.\n"
         )
-        for slug, _ in FEATURED_EXPERTS:
+        for slug, _, _ in FEATURED_EXPERTS:
             profile = self.root / "src/roles" / slug
             profile.mkdir()
             shutil.copyfile(source / "src/roles" / slug / "expert.yaml", profile / "expert.yaml")
@@ -102,7 +103,7 @@ class GenerationContractTests(unittest.TestCase):
                 self.assertEqual(before, {p: p.read_bytes() for p in self.root.rglob("*") if p.is_file()})
                 self.assertEqual(self.run_exporter(), 0)
                 self.assertEqual(self.run_exporter("--check"), 0)
-                for slug, _ in FEATURED_EXPERTS:
+                for slug, _, _ in FEATURED_EXPERTS:
                     codex_path = Path(f"dist/codex/expert-{slug}.toml")
                     claude_path = Path(f"dist/claude/expert-{slug}.md")
                     codex = (self.root / codex_path).read_text()
@@ -277,6 +278,23 @@ class GenerationContractTests(unittest.TestCase):
         self.assertEqual(self.run_exporter(), 1)
         self.assertEqual(before, {p: p.read_bytes() for p in self.root.rglob("*") if p.is_file()})
 
+    def test_featured_task_cues_are_literal_and_invalid_cues_never_write(self):
+        slug, tag, _ = FEATURED_EXPERTS[0]
+        before = {p: p.read_bytes() for p in self.root.rglob("*") if p.is_file()}
+        for cue in ("", "  ", "First line\nSecond line", None):
+            with self.subTest(cue=cue), patch("src.generate.FEATURED_EXPERTS",
+                    ((slug, tag, cue), *FEATURED_EXPERTS[1:])):
+                self.assertEqual(self.run_exporter(), 1)
+                self.assertEqual(before, {p: p.read_bytes() for p in self.root.rglob("*") if p.is_file()})
+        native_before = {p: value for p, value in plan_outputs(self.root).items()
+                         if p.name.startswith("expert-")}
+        with patch("src.generate.FEATURED_EXPERTS",
+                   ((slug, tag, "Compare A&B <options>"), *FEATURED_EXPERTS[1:])):
+            after = plan_outputs(self.root)
+        self.assertIn("Compare A&amp;B &lt;options&gt;", after[Path("README.md")])
+        self.assertEqual(native_before, {p: value for p, value in after.items()
+                                         if p.name.startswith("expert-")})
+
     def test_placeholder_command_and_mixed_image_catalogue_preserve_native_instructions(self):
         expected = plan_outputs(self.root)
         (self.profile / "portrait.jpg").unlink()
@@ -314,7 +332,8 @@ class GenerationContractTests(unittest.TestCase):
                 for path in (Path("README.md"), Path("src/roles/README.md")):
                     self.assertIn(f"Don Norman; {label}; sources and terms on profile",
                                   after[path])
-                    self.assertIn(f"<sub>{label}</sub>", after[path])
+                self.assertNotIn(f"<sub>{label}</sub>", after[Path("README.md")])
+                self.assertIn(f"<sub>{label}</sub>", after[Path("src/roles/README.md")])
                 self.assertEqual(native, {p: data for p, data in after.items()
                                           if p.name.startswith("expert-")
                                           and p.suffix in {".toml", ".md"}})
@@ -448,12 +467,12 @@ class GenerationContractTests(unittest.TestCase):
         for host, extension in (("codex", "toml"), ("claude", "md")):
             directory = self.root / "dist" / host
             index = (directory / "README.md").read_text()
-            expected = {f"expert-{slug}.{extension}" for slug, _ in FEATURED_EXPERTS}
+            expected = {f"expert-{slug}.{extension}" for slug, _, _ in FEATURED_EXPERTS}
             self.assertEqual({path.name for path in directory.iterdir()}, expected | {"README.md"})
             names = index.split("## By name\n", 1)[1].split("## By specialty\n", 1)[0]
             profiles = re.findall(r'\]\(\.\./\.\./src/roles/([^/]+)/README\.md\)', names)
             self.assertEqual(len(profiles), len(FEATURED_EXPERTS))
-            for slug, _ in FEATURED_EXPERTS:
+            for slug, _, _ in FEATURED_EXPERTS:
                 self.assertIn(f"(expert-{slug}.{extension})", names)
                 self.assertIn(slug, profiles)
             for tag in ("human-centered-design", "cognitive-psychology", "human-computer-interaction"):
@@ -473,7 +492,7 @@ class GenerationContractTests(unittest.TestCase):
         for host in ("codex", "claude"):
             index = outputs[Path(f"dist/{host}/README.md")]
             names = index.split("## By name\n", 1)[1].split("## By specialty\n", 1)[0]
-            self.assertLess(names.index("[Aaron Example]"), names.index("[Chip Huyen]"))
+            self.assertLess(names.index("[Aaron Example]"), names.index("[Don Norman]"))
             row = next(line for line in index.splitlines() if 'id="specialty-human-centered-design"' in line)
             self.assertLess(row.index("[Aaron Example]"), row.index("[Don Norman]"))
 

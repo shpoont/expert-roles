@@ -1,11 +1,11 @@
 # Expert Roles
 
-A public catalogue of expert roles for AI assistants, based on the publicly
-documented work of recognized specialists. Browse experts by name or specialty
-and bring their perspective to your task.
+A public catalogue of expert roles for AI assistants, inspired by the ideas and
+methods of recognized specialists. Browse by name or specialty and bring their
+perspective to your tasks in Codex or Claude Code.
 
-Each role offers an independent AI interpretation of an expert's public work.
-The featured experts are not affiliated with or endorsing this project.
+Each role is an independent AI interpretation of the expert's publicly
+documented work.
 
 <!-- BEGIN GENERATED SUMMARY -->
 
@@ -13,38 +13,14 @@ The featured experts are not affiliated with or endorsing this project.
 
 <!-- END GENERATED SUMMARY -->
 
-[Use a role](#use-a-role) ·
 [Browse experts](src/roles/README.md#meet-the-experts) ·
 [Browse by specialty](src/roles/README.md#browse-by-specialty) ·
-[Contribute](#contribute)
-
-## Use a role
-
-1. Choose roles from the [catalogue](src/roles/README.md) whose expertise
-   suits your work.
-2. Download the [Codex](dist/codex/README.md) or
-   [Claude Code](dist/claude/README.md) role files and follow the
-   [setup guide](docs/delivery.md#use-a-native-role).
-3. Describe your task, relevant evidence and constraints. The assistant can
-   select a suitable expert role when useful. You can also request a specific
-   expert by name.
-
-To request a specific expert after setting up their role:
-
-> Use Eliyahu Goldratt's expert role to review this delivery plan.
-> Identify the main constraint and explain what limits overall throughput.
-
-**Validation:** Three Codex samples passed with explicit registration.
-Claude Code runtime use is untested. See the
-[setup guide](docs/delivery.md#use-a-native-role) for requirements and limits.
+[Use a role](#use-a-role) · [Contribute](#contribute)
 
 ## Role catalogue
 
-A sample of the perspectives in the collection. Each profile includes an
-introduction, suggested uses, public references and role files.
-
-Profile images may be photographs, AI-generated portraits, historical depictions
-or name placeholders. Each profile identifies its image type and sources.
+A few starting points from the collection. Open a profile for suggested uses,
+public references and role files.
 
 <!-- BEGIN GENERATED FEATURED -->
 
@@ -90,61 +66,50 @@ Corporate finance
 
 <!-- END GENERATED FEATURED -->
 
+<sub>Portraits may be AI-generated. Each profile identifies its image type and links to its sources and terms.</sub>
+
+## Use a role
+
+1. Choose a [Codex](dist/codex/README.md) or
+   [Claude Code](dist/claude/README.md) role and follow the
+   [setup guide](docs/delivery.md#use-a-native-role).
+2. Describe your task, relevant evidence and constraints. Let the assistant
+   select a suitable available role, or request an expert role by name.
+
+For example, after setting up the role:
+
+> Use the AI role inspired by Steve Jobs to review this product proposal.
+> Where should it be simpler or more focused?
+
 ## Who is included?
 
-The catalogue features real people recognized for substantial contributions
-or demonstrated mastery in a field. Their publicly documented ideas,
-methods or practice must offer a useful perspective on relevant tasks.
-
-See the [selection criteria](CONTRIBUTING.md#expert-selection) to propose
-an expert.
+Real people recognized for substantial contributions or demonstrated mastery in
+an area, with publicly documented ideas, methods or practice useful for relevant
+tasks. See the [selection criteria](CONTRIBUTING.md#expert-selection).
 
 ## Contribute
 
-Suggest experts and improvements through
-[issues](https://github.com/shpoont/expert-roles/issues).
-Follow the [contribution guide](CONTRIBUTING.md) to submit changes.
+[Suggest an expert or improvement](https://github.com/shpoont/expert-roles/issues),
+or follow the [contribution guide](CONTRIBUTING.md) to submit a change.
 
 ## Versions and releases
 
-Library version: **[v1.1.0](https://github.com/shpoont/expert-roles/releases/tag/v1.1.0)**.
-One `MAJOR.MINOR.PATCH` version covers the whole library and both export formats:
-major for incompatible changes, minor for compatible additions, and patch for
-corrections that preserve intended behavior. Consuming integrations are versioned
-independently.
-
-Committed exports and generated catalogue sections reflect the last prepared
-release; source contributions appear there at the next release. Each export uses
-the version in [VERSION](VERSION) and records its
-source, library version and expert ID as [provenance comments](src/README.md#export-provenance).
-
-See the [changelog](CHANGELOG.md) and
-[release guide](docs/delivery.md#versions-and-releases). Released tags stay fixed;
-pin a released tag or commit when consuming the library.
+[Released versions](https://github.com/shpoont/expert-roles/releases) and the
+[changelog](CHANGELOG.md) track the library. Generated catalogues and role files
+are updated during [release preparation](docs/delivery.md#versions-and-releases).
 
 ## Project documentation
 
-- [Project scope and responsibilities](PROJECT.md)
-- [Design, decisions and current work](docs/README.md)
-- [Sources and generation](src/README.md)
-- [Checks](tests/README.md) and [evidence](evidence/README.md)
-- [Changelog](CHANGELOG.md)
+[Project scope](PROJECT.md) · [Design and current work](docs/README.md) ·
+[Sources and generation](src/README.md) · [Checks](tests/README.md)
 
 Maintained by Leon.id Komarovsky.
 
 ## Requests from featured experts
 
-If you are featured in this catalogue, or represent someone who is, you may
-request corrections or removal by emailing
-[leonid@komarovsky.info](mailto:leonid@komarovsky.info). You do not need to submit
-a legal complaint or explain why you prefer removal.
-
-I aim to acknowledge requests within three business days and complete
-straightforward removals within seven business days. I may request minimal
-confirmation of identity or authority.
-
-Removal covers the maintained catalogue and future releases. Historical
-versions, existing downloads and third-party copies may remain available.
+Featured experts and their representatives can request corrections or removal at
+[leonid@komarovsky.info](mailto:leonid@komarovsky.info).
+See the [request policy](docs/requests.md) for response times and scope.
 
 ## License
 

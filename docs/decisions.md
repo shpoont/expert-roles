@@ -1196,3 +1196,21 @@ validation remain separate from this addition.
 - **Boundary:** Supersedes D044's requirement to commit sources and generated
   outputs together for ordinary contributions. Preserve published versions,
   roster, visuals and role behavior. No new release or installation is included.
+
+## D057 — 2026-10-22: Make the README a concise catalogue introduction
+
+- **Status:** Direction adopted by the owner; implemented and locally checked.
+  The rendered result remains subject to owner review.
+- **Decision:** Put a recognizable six-expert sample before setup, use concrete
+  task cues, and keep image disclosure concise on the homepage while retaining
+  accessible labels and complete profile credits. Simplify usage and project
+  information, preserve optional expert requests and the correction/removal
+  policy, and link to detailed guides. See the
+  [contract](design.md#readme-presentation-refresh).
+- **Checks:** Source and ownership validation, the contract suite, unchanged
+  native payloads and protected profiles, resolving preview links and actual
+  rendered review. Preserve the contribution/release separation.
+- **Boundary:** All eleven reviewed expert PRs are merged, giving 68 source
+  profiles. v1.1.0 remains the published baseline with 57 distributed experts.
+  The owner requests the README improvement and separate release preparation;
+  publication and installation remain outside this work.

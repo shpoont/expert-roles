@@ -35,6 +35,15 @@ See the [release procedure](../docs/delivery.md#versions-and-releases).
 Historical baseline checks below retain their original scopes; current process
 ownership follows D056.
 
+## README presentation (D057)
+
+The six featured task cues require existing profiles and assigned specialties;
+invalid or multiline cues must fail before writes. Render task text literally
+and preserve native role payloads. The homepage keeps image types in accessible
+descriptions and one nearby note; full catalogue rows retain visible image-type
+labels and profiles keep complete credits. Review the actual two-row rendering,
+setup and catalogue links, and the correction/removal policy's preserved scope.
+
 ## Studio portrait refresh (D047, D048 and D049)
 
 D048's [studio-v1 rollout](../docs/design.md#reproducible-studio-portrait-method-and-catalogue-rollout)
