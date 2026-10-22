@@ -103,13 +103,10 @@ are not displayed. Profiles list their most useful specialties first.
 
 ### Mapping history
 
-D056 adds Formal methods and Concurrent computing under Computing for the
-proposed Leslie Lamport profile. ESCO search returned activities such as
-Verify formal ICT specifications and Use concurrent programming; these are not
-substituted for the fields. Wikidata's precise Formal methods (Q1049183) and
-Concurrent computing (Q128392) concepts match the intended meanings. Lamport
-also reuses Distributed computing. Existing definitions, navigation groups and
-the three-field schema are unchanged; roster acceptance awaits PR review.
+Formal methods and Concurrent computing use Wikidata's field concepts
+(Q1049183 and Q128392) under Computing. ESCO search returned activities such as
+Verify formal ICT specifications and Use concurrent programming; these do not
+describe the intended fields and are not substituted for them.
 
 The notes below retain the sequence of vocabulary additions, including the
 profiles that were pending at each earlier step. All accepted profiles are now

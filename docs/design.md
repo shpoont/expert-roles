@@ -38,38 +38,6 @@ installation, model configuration and lifecycle.
 
 ## Implementation contract
 
-### Leslie Lamport contribution
-
-Under D056, prepare one pull request adding Leslie Lamport through the existing
-contribution process. Copy the complete profile starter, support the concise
-profile and selection cue with his public work and independent recognition,
-and compare his contribution with the existing distributed-systems experts.
-Reuse Distributed computing and add precise shared concepts for Formal methods
-and Concurrent computing after checking ESCO and Wikidata meanings.
-
-Use the adopted studio-v1 method with a permitted photographic reference,
-complete source attribution and explicit synthetic-image disclosure. Keep
-reference bytes, recipes, generated masters and preview artifacts outside the
-public tree. Portrait likeness and the proposed addition await owner review
-through the pull request; structural checks do not establish either acceptance
-or role effectiveness.
-
-Set the working library version to `1.2.0-dev` for this compatible addition;
-the published v1.1.0 tag and release remain fixed. Generate both native files,
-the catalogue, the six-expert showcase count and the distribution indexes.
-Existing exports may change only their version comments: preserve their parsed
-fields and instructions, every existing profile and visual, the shared template
-and all earlier specialty definitions. Retain the fixed featured selection.
-
-Required checks are the full existing test suite, read-only generated
-consistency, native syntax and cross-format equality, export provenance,
-preservation against the base commit, local links and anchors, image source
-terms and credits, rendered profile/catalogue inspection, UTF-8, public
-suitability and the complete proposed diff. Record observed results separately
-from planned checks. Create one signed contribution commit and open a pull
-request for review. Merging, release publication, installation and additions of
-other experts are outside this contribution.
-
 ### Versioning and first release
 
 Under D045, finish whole-library versioning using the existing peer convention:

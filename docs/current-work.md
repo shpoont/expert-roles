@@ -2,32 +2,6 @@
 
 ## Current focus and status
 
-### Leslie Lamport contribution
-
-D056 prepares one pull request adding Leslie Lamport under the
-[contribution contract](design.md#leslie-lamport-contribution). The proposed
-working catalogue contains 58 experts and 84 specialties in ten groups.
-Formal methods and Concurrent computing join the existing Computing group;
-Lamport also reuses Distributed computing. His optional selection cue emphasizes
-precise specifications, safety, liveness, fairness and explicit assumptions.
-
-The profile has one new studio-v1 portrait based on the personal photograph and
-unrestricted reuse permission recorded on Commons. It is explicitly disclosed
-as synthetic, with source credits and apparent-age limits. The working tree has
-41 generated portraits, five historical depictions and twelve placeholders.
-Roster and portrait acceptance remain pending in the pull request.
-
-Working exports use `1.2.0-dev`, with published v1.1.0 fixed. Existing role
-settings, instructions, profiles, visuals and specialty meanings are preserved;
-the earlier native files change only their version comments. All 45 tests pass,
-all 121 generated outputs match, and native, preservation, link, public-content
-and local rendered-review checks pass. See the
-[contribution evidence](../evidence/README.md#leslie-lamport-contribution--2026-10-22).
-The signed contribution and hosted pull request are the delivery steps; no
-installation, merge or new release is included.
-
-### Published v1.1.0 baseline
-
 D055 finalizes the **v1.1.0** release baseline, combining the accepted portrait
 workflow, D053's expanded coverage and D054's export provenance. Canonical
 `VERSION` and all 114 native headers use `1.1.0`. The 57-expert catalogue has
