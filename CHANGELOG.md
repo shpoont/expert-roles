@@ -20,6 +20,8 @@ Record meaningful changes by version under the
 - Proposed David Parnas source profile, metadata and credited studio portrait.
 - Proposed Atul Gawande source profile, metadata and credited studio portrait.
 - General surgery, Health services research and Patient safety in the shared specialty vocabulary.
+- Add Warren Buffett's source profile, documented perspective and credited
+  studio portrait for inclusion in the next release.
 
 ### Changed
 
