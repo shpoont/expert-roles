@@ -5,6 +5,29 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+### Added
+
+- Check local links, readable raster/SVG images and heading or explicit anchors
+  against the generated review preview in CI, with portable diagnostics and
+  regression coverage for valid and broken references.
+
+### Changed
+
+- Simplify native role headers, align source/version/ID comment values and
+  separate them from host settings, preserving all parsed role content.
+- Feature Jordan Peterson in place of Marie Curie on the homepage, with a task
+  cue about personality and motivation.
+- Remove the per-image type captions from the full catalogue, retaining
+  accessible image descriptions and complete profile provenance.
+- Complete manual host setup and invocation-verification guidance, clarify the
+  external contribution and Markdown-preview handoffs, and use the project
+  Python environment consistently in portrait commands.
+- Show existing perspective cues beside overlapping specialty matches in
+  generated previews, while preserving role descriptions and instructions.
+- Align current project records with the published v1.2.0 baseline and correct
+  the source-directory description. Retain released artifacts until a separate
+  release change.
+
 ## v1.2.0 — 2026-10-22
 
 Eleven new expert perspectives and a clearer catalogue introduction. The

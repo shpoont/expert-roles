@@ -40,13 +40,13 @@ of a related place, object or diagram do not establish a portrait reference.
 The versioned [shared prompt](../../src/templates/portrait.txt) is the single
 source for the studio brief. The local [helper](../../src/portraits.py) creates
 its per-expert recipe; it does not contact a model, download references or install
-roles. Use the project's [Python dependencies](../../src/README.md#generate-the-catalogue-and-native-files).
+roles. First [prepare the Python environment](../../src/README.md#prepare-the-python-environment).
 
 Download permitted references into a review folder outside the public repository,
 then run from the repository root, replacing the example paths:
 
 ```sh
-python src/portraits.py recipe martin-fowler \
+.venv/bin/python src/portraits.py recipe martin-fowler \
   --reference ../portrait-review/references/fowler-front.jpg \
   --reference ../portrait-review/references/fowler-side.jpg \
   --output ../portrait-review/martin-fowler/recipe.json
@@ -111,7 +111,7 @@ Back up the previous image and credit before replacement. Keep the original
 resolution generated master, then prepare the selected output deterministically:
 
 ```sh
-python src/portraits.py prepare ../portrait-review/martin-fowler/master.png \
+.venv/bin/python src/portraits.py prepare ../portrait-review/martin-fowler/master.png \
   --output src/roles/martin-fowler/portrait.jpg --replace
 ```
 
@@ -217,6 +217,9 @@ in `decisions.md` under the review folder, and link it from the run report. It
 may live alongside `run.json` or at the review folder's root.
 
 ## Review a rendered preview
+
+Create the [separate review copy](../../src/README.md#generate-the-catalogue-and-native-files)
+and follow its [viewing instructions](../../src/README.md#view-the-review-copy).
 
 Use an available Markdown previewer or local renderer that supports the raw
 HTML used by profiles and catalogue tables. Preview-tool choice is permitted;

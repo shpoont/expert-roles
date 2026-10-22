@@ -1217,8 +1217,8 @@ validation remain separate from this addition.
 
 ## D058 — 2026-10-22: Prepare a separate v1.2.0 candidate
 
-- **Status:** Preparation authorized; locally implemented and checked. The
-  separate release candidate remains subject to PR review and hosted checks.
+- **Status:** Completed and subsequently published under D059. The following
+  records the original preparation scope and its historical no-publication boundary.
 - **Decision:** Use a compatible minor increment for eleven new experts and the
   source/process/presentation improvements. Set the candidate to `1.2.0` and
   refresh committed catalogues, distribution indexes and native provenance in
@@ -1235,7 +1235,10 @@ validation remain separate from this addition.
 
 ## D059 — 2026-10-22: Publish Expert Roles v1.2.0
 
-- **Status:** The owner accepted the rendered result and explicitly authorizes
+- **Status:** Completed: source PR #12 and release PR #13 are merged, and
+  [v1.2.0 is published](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0)
+  at `c493c44bd14c7a54adce74f10bb6ea3c5bfd7359`. The following records its original scope.
+  The owner accepted the rendered result and explicitly authorized
   the README squash merge, updating the release PR against main, its merge and
   publication of the new version. D057's source PR is squash merged as
   `6a301fec01e9ebb96c5a813cb20bcc74cf00fdfe`.
@@ -1250,3 +1253,47 @@ validation remain separate from this addition.
 - **Boundary:** Supersedes D058's no-publication hold for v1.2.0 only. Keep prior
   release tags fixed, preserve native descriptions and instructions, and leave
   installation, role invocation and consuming-plugin updates separate.
+
+## D060 — 2026-10-22: Improve the documentation journeys
+
+- **Status:** Implemented and checked; independent discovery, setup and
+  contribution re-reviews pass. Accepted for source delivery under D062.
+- **Decision:** Apply all seven confirmed documentation findings using the
+  [focused contract](design.md#documentation-journey-improvements). Keep setup
+  instructions practical, existing validation limits explicit and comparison
+  cues near overlapping matches. Correct current release status and the small
+  contribution, preview, interpreter and source-layout gaps.
+  The owner's presentation follow-up removes catalogue image-type captions,
+  retaining accessible descriptions and complete profile provenance.
+- **Checks:** Full suite, source and contribution ownership, isolated preview,
+  native-payload preservation, local references, public content, rendered review
+  and independent journey re-review. Record results separately from intentions.
+- **Boundary:** Preserve the expert collection, shared instructions, native
+  descriptions and released artifacts. No commit, push, publication, host
+  configuration change or runtime invocation is included.
+
+## D061 — 2026-10-22: Check preview references and simplify role headers
+
+- **Status:** Implemented and locally verified; accepted for source delivery
+  under D062, which requires hosted CI verification against the pushed commit.
+- **Decision:** Add portable link, image and anchor validation to CI against
+  the generated preview, and clean up native provenance comment spacing and
+  wording. See the [contract](design.md#preview-reference-checks-and-role-headers).
+- **Checks:** Isolated positive and failure fixtures, the complete generated
+  preview, the full suite, source and contribution ownership, unchanged native
+  payloads and protected content, public suitability and the full diff.
+- **Boundary:** Preserve the established comment keys, instruction bodies,
+  expert collection, earlier local changes and retained release outputs.
+  No commit, publication, role installation or host configuration change.
+
+## D062 — 2026-10-22: Deliver the accepted documentation and CI changes
+
+- **Status:** Owner accepted the result and authorized a signed commit and push.
+- **Decision:** Deliver D060 and D061 as one source change under the
+  [contract](design.md#commit-and-push-the-accepted-source-changes).
+- **Checks:** Full suite, source and contribution validation, fresh preview
+  references, native/source preservation, complete diff, commit signature,
+  remote main readback and successful exact-commit hosted Checks.
+- **Boundary:** Supersedes the earlier no-commit/no-push hold for the accepted
+  changes only. Preserve VERSION, dist and generated README blocks. No tag,
+  release, installation, role invocation or host configuration change.

@@ -78,6 +78,12 @@ Role files contain the expert's name, selection cues and shared instruction.
 Profiles and references support browsing; include any source material the task
 needs in the assignment.
 
+Choose a setup route before downloading: Codex supports a one-off CLI trial
+and manual persistent registration below; Claude Code uses project or personal
+agent files. The recorded Codex result covers only explicit one-off registration.
+Persistent Codex setup follows official configuration guidance, automatic
+directory discovery remains unresolved, and Claude runtime is untested.
+
 1. Open an expert in the [catalogue](../src/roles/README.md) and choose the
    **Codex** or **Claude Code** file, or use the [distribution indexes](../dist/README.md).
    From a checkout, use the generated file under `dist/codex/` or `dist/claude/`.
@@ -94,41 +100,102 @@ needs in the assignment.
    Identify the main constraint and explain what limits overall throughput.
    ```
 
-When checking that a particular export is invoked, verify the actual delegated call's
-`expert-` name. This is an invocation check, not a requirement to name an expert
-in every task. An answer from a pre-existing alias does not validate that export.
+For an initial invocation check, explicitly request the export's `expert-` name
+and inspect the named delegation as described below. A plausible answer or a
+pre-existing alias does not establish that this export ran. Once setup is
+verified, naming an expert in every task is optional. In current local Codex,
+delegation follows a direct request or applicable project or skill instructions;
+see the [subagent guide](https://learn.chatgpt.com/docs/agent-configuration/subagents#orchestration-and-thread-controls).
 
 ### Codex: explicit registration
-
-[Codex's examples](https://learn.chatgpt.com/docs/agent-configuration/subagents#example-custom-agents)
-request agents by their registered names in natural language. After registration,
-you can write `Use the expert-eliyahu-goldratt agent to review this delivery plan.`
-An `@` prefix is not required for this documented request pattern.
 
 Each Codex TOML contains `name`, `description` and `developer_instructions`.
 Both formats also carry [source, version and expert ID comments](../src/README.md#export-provenance)
 for people and consuming tools; these do not enter the execution instructions.
-Consumers register the file using its generated name and description plus the
-file path. The [configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference)
+The [configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference)
 defines `agents.<name>.description` and `agents.<name>.config_file`.
 
+#### Keep a role available in future chats
+
+This manual route follows the official configuration reference; it has not
+received a separate catalogue runtime test. Use your configured Codex client.
+
+1. Keep the downloaded TOML and LICENSE at a stable location of your choice.
+2. Add a role table to your personal `~/.codex/config.toml`, or to a trusted
+   project's `.codex/config.toml` for that project. Merge it with an existing
+   table of the same name instead of creating a duplicate. Replace the example
+   path with the file's absolute path. For another expert, use its exact `name`
+   and `description` from the downloaded file.
+
+   ```toml
+   [agents.expert-eliyahu-goldratt]
+   description = """\
+   Consider Eliyahu Goldratt's perspective, especially on system constraints \
+   and overall throughput, including dependencies and shared-resource contention \
+   in project delivery. Relevant specialties include Operations management, \
+   Project management, Theory of Constraints and Critical Chain project management.\
+   """
+   config_file = "/absolute/path/to/expert-eliyahu-goldratt.toml"
+   ```
+
+   The backslashes join the wrapped description without adding line breaks.
+   Relative `config_file` paths resolve from the configuration file that declares
+   the role. Personal and trusted project configuration are described in
+   [Config basics](https://learn.chatgpt.com/docs/config-file/config-basic).
+3. Start a new Codex chat in that project, explicitly request
+   `expert-eliyahu-goldratt` as a subagent, and verify the invocation below.
+
+#### Try a role for one CLI invocation
+
 The successful [Codex CLI 0.163.0 check](../evidence/README.md#codex-exec-retry--2026-10-20)
-passed these registrations as `codex exec -c` overrides for each invocation,
-without a persistent registry. Run this manual example from a Git project using
-your configured Codex CLI, replacing the absolute path with the downloaded
-export's location:
+used `codex exec -c` overrides without a persistent registry. This example uses
+that registration mechanism. Run it from a Git project with your configured
+CLI; replace the absolute path. It applies only to this invocation. Shell line
+continuations wrap the description inside its quoted argument.
 
 ```sh
 codex exec --sandbox read-only \
-  -c "agents.expert-eliyahu-goldratt.description=\"Consider Eliyahu Goldratt's perspective, especially on system constraints and overall throughput, including dependencies and shared-resource contention in project delivery. Relevant specialties include Operations management, Project management, Theory of Constraints and Critical Chain project management.\"" \
+  -c "agents.expert-eliyahu-goldratt.description='''\
+Consider Eliyahu Goldratt's perspective, especially on system constraints \
+and overall throughput, including dependencies and shared-resource contention \
+in project delivery. Relevant specialties include Operations management, \
+Project management, Theory of Constraints and Critical Chain project management.\
+'''" \
   -c 'agents.expert-eliyahu-goldratt.config_file="/absolute/path/to/expert-eliyahu-goldratt.toml"' \
-  'Use the expert-eliyahu-goldratt agent to review this plan: preparation 12 units/hour, assembly 4, packing 10, demand 8. Explain the constraint and the effect of doubling packing.'
+  'Use the expert-eliyahu-goldratt subagent to review this plan:
+preparation 12 units/hour, assembly 4, packing 10, demand 8.
+Explain the constraint and the effect of doubling packing.'
 ```
 
-The description argument copies the generated file's description. When using
-another expert, take its exact `name` and `description` and point `config_file`
-to that expert's file. Consumers own model and permission configuration as well
-as registration and lifecycle; this library provides no installer.
+For another expert, copy its exact name and description, taking care with shell
+quoting, and use its file path. Consumers own model and permission configuration,
+registration and lifecycle; this library provides no installer.
+
+#### Confirm that the Codex export ran
+
+Request a subagent explicitly, for example:
+
+```text
+Use the expert-eliyahu-goldratt subagent to review this delivery plan.
+Identify the main constraint and explain what limits overall throughput.
+```
+
+An `@` prefix is not required for this documented natural-language request.
+
+- In the app, open the subagent activity in the main chat and inspect the
+  delegated thread. In the interactive CLI, use `/subagents` to inspect it.
+  Check that the requested role is `expert-eliyahu-goldratt` and that the child
+  received the assignment. See [Managing subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents#managing-subagents).
+- For `codex exec`, inspect its delegation output for the requested agent type
+  and a completed child response. A successful sample names the
+  `expert-eliyahu-goldratt` delegation and contains that child's result; the
+  parent merely saying it used Goldratt is insufficient. The recorded check
+  above illustrates the evidence boundary.
+- If the role is unavailable or no child runs, check the exact registered name,
+  description, file path and active configuration scope. Project configuration
+  requires a trusted project. Check whether subagents are disabled, then start
+  a new chat and repeat the explicit request. If it still fails, report setup
+  as unresolved rather than treating the parent answer as a role result.
 
 [Codex also documents](https://learn.chatgpt.com/docs/agent-configuration/subagents#custom-agents)
 `.codex/agents/` and `~/.codex/agents/` for project and personal files. Automatic
@@ -141,15 +208,41 @@ separate discovery issue.
 
 The Markdown exports contain YAML `name` and `description` frontmatter followed
 by the shared instruction. Syntax and generated consistency are checked; no
-Claude runtime test has run. The [official subagent guide](https://code.claude.com/docs/en/sub-agents)
-documents project `.claude/agents/` and personal `~/.claude/agents/` locations.
-For a natural-language request, name the registered agent; Claude decides whether
-to delegate. To explicitly select a subagent, type `@` and choose it from the
-suggestions. For this local role, the manual mention is
-`@agent-expert-eliyahu-goldratt`. See
-[explicit invocation](https://code.claude.com/docs/en/sub-agents#invoke-subagents-explicitly).
-These are documented host features, not additional catalogue runtime results;
-verify an actual invocation before treating an export as runtime-validated.
+Claude runtime test has run. The following sequence follows the
+[official subagent guide](https://code.claude.com/docs/en/sub-agents).
+
+1. Choose scope: `.claude/agents/` in your project makes the role available in
+   that project; `~/.claude/agents/` makes it available across your projects.
+   Use one location to avoid competing definitions of the same name.
+2. Create that directory if needed and copy the downloaded file into it,
+   keeping the filename and frontmatter unchanged. For example, from the
+   project root, replace the download path:
+
+   ```sh
+   mkdir -p .claude/agents
+   cp /absolute/path/to/expert-eliyahu-goldratt.md .claude/agents/
+   ```
+
+   Keep LICENSE with your copies. For personal scope, use `~/.claude/agents/`
+   in both commands instead.
+3. Start Claude Code in the project. If you created the `agents` directory
+   during an existing session, restart Claude Code; its watcher only covers
+   directories that existed when that session started. Existing watched
+   directories normally pick up new or edited files without a restart.
+4. For this first check, ask Claude to use the `expert-eliyahu-goldratt`
+   subagent. You can also type `@` and choose it from suggestions; the manual
+   mention is `@agent-expert-eliyahu-goldratt`. See
+   [explicit invocation](https://code.claude.com/docs/en/sub-agents#invoke-subagents-explicitly).
+5. Inspect the delegation tool row in the transcript. It should show the
+   subagent's name and task, for example
+   `expert-eliyahu-goldratt(Review the delivery plan)`, followed by its result.
+   If the name is unavailable or no delegation appears, check scope, filename,
+   YAML name and duplicate definitions, restart if needed and retry explicitly.
+   A parent-only answer does not validate the export.
+
+These are documented host features, not additional catalogue runtime results.
+After verification, you can let Claude select a suitable available expert from
+the task or name one when useful.
 
 ### Scope and selection
 
@@ -258,8 +351,10 @@ expert additions do not require project-wide status, decision or release records
 Validate sources, run the suite and inspect an isolated preview using the
 [source commands](../src/README.md#generate-the-catalogue-and-native-files).
 
-Ordinary PRs have no `release` label. CI rejects release-owned edits and attaches
-an unreleased **expert-roles-preview** artifact for review. Retained distribution
+Ordinary PRs have no `release` label. CI rejects release-owned edits, builds an
+isolated preview and checks its local links, readable images and anchors before
+attaching the unreleased **expert-roles-preview** artifact for review. External
+URLs are not fetched. Retained distribution
 and catalogue files intentionally reflect the last prepared release; new profile
 links and specialty anchors are reviewed in the preview. Merge approved sources
 under the owner's authorization; they become distributed additions at release.
@@ -320,23 +415,28 @@ Source-only main pushes continue to pass while released artifacts lag behind.
 
 ### Prepared v1.2.0 candidate
 
-This separate release candidate includes 68 experts, 96 specialties in 14 groups
+Historical preparation checkpoint, completed by D059's
+[published v1.2.0 baseline](#v120-release-baseline). The original candidate
+included 68 experts, 96 specialties in 14 groups
 and 136 native files. Eleven new experts and the README presentation update are
 compatible additions; stable paths, existing role settings and shared
 instructions are preserved. Existing native exports change only version comments.
 
-The candidate depends on [the README source PR](https://github.com/shpoont/expert-roles/pull/12).
-After that PR merges, update this branch against main, retarget its release PR
-and repeat strict release ownership and exact-head CI before final approval.
-The `release` label selects validation; it does not authorize publication.
-No v1.2.0 tag or GitHub release has been created. See the
+The candidate originally depended on [the README source PR](https://github.com/shpoont/expert-roles/pull/12).
+That PR and the updated release PR are now merged; the annotated tag and
+GitHub release were published after the required checks. The `release` label
+selects validation and does not itself authorize publication. See the historical
 [candidate evidence](../evidence/README.md#v120-preparation--2026-10-22).
 
 ### v1.2.0 release baseline
 
-D059's [publication contract](design.md#publish-expert-roles-v120) follows the
-owner's acceptance of the README rendering. Source PR #12 is squash merged;
-the separate release PR #13 is updated against that main commit and rechecked.
+D059's [publication contract](design.md#publish-expert-roles-v120) is complete.
+Source PR #12 and the separate release PR #13 are squash merged. The annotated
+`v1.2.0` tag targets
+[`c493c44`](https://github.com/shpoont/expert-roles/commit/c493c44bd14c7a54adce74f10bb6ea3c5bfd7359),
+after its [Checks run](https://github.com/shpoont/expert-roles/actions/runs/39789914230)
+and validation check completed successfully. The stable GitHub release was
+published on 2026-10-22. See the [publication evidence](../evidence/README.md#v120-publication--2026-10-22).
 Version 1.2.0 is a compatible minor increment for eleven new expert perspectives,
 broader specialty coverage, clearer presentation and the contribution/release
 separation process.

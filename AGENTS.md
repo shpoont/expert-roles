@@ -1,18 +1,25 @@
 # Expert Roles library guidance
 
-Current work is D059's [v1.2.0 publication](docs/design.md#publish-expert-roles-v120).
-The owner accepted the rendered README and authorizes its squash merge, updating
-the separate release PR against main, merging it and publishing v1.2.0 after
-successful exact-commit hosted checks. The README source PR is squash merged.
-VERSION and all 136 native files use `1.2.0`; strict generated freshness and
-release ownership against updated main are required. Verify both the release
-PR head and resulting main workflow/check before tagging and publishing.
-Installation and role invocation remain separate. Preserve all 68 source
-profiles, their visuals and credits, the specialty registry and shared instruction.
-The source collection has 96 specialties in 14 groups, 50 generated portraits,
-five historical depictions and 13 placeholders. The candidate artifacts cover
-68 experts; the previous v1.1.0 artifacts cover 57. Earlier publication authorizations below
-describe historical work and do not authorize a new release.
+Current work is D062's [accepted source delivery](docs/design.md#commit-and-push-the-accepted-source-changes).
+The owner accepted D060's documentation and presentation improvements and
+D061's preview checker and cleaner role headers, and authorizes one signed
+commit and an ordinary main push. This supersedes their no-commit/no-push
+boundary for these changes only. Verify the configured signature, remote commit
+and exact-commit hosted Checks result. Do not tag, release, install roles or
+change host configuration. CI must check the complete generated preview before
+artifact upload; external URLs are not fetched. Preserve provenance keys,
+parsed role settings and instruction bodies.
+Preserve all expert profiles, visuals, metadata, vocabulary, shared instructions
+and native descriptions. Review generated comparison improvements in an external
+preview; leave VERSION, dist and committed generated README blocks unchanged.
+
+D059's [v1.2.0 publication](docs/design.md#publish-expert-roles-v120) is complete.
+The [release](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0)
+targets `c493c44bd14c7a54adce74f10bb6ea3c5bfd7359` after completed hosted checks.
+It contains 68 experts, 96 specialties in 14 groups, 50 generated portraits,
+five historical depictions, 13 placeholders and 136 native files. VERSION and
+native provenance use `1.2.0`. Earlier publication authorizations below describe
+completed historical work and do not authorize a new release or commit.
 
 D056's [contribution/release separation](docs/design.md#separate-contributions-from-release-preparation)
 remains in force.
@@ -28,10 +35,9 @@ Maintainers choose versions and regenerate committed artifacts in a separate
 PR labeled `release`. Require a new final stable version, a matching dated
 changelog and strict output freshness. CI always validates sources, tests and
 change ownership, and attaches an isolated preview. It publishes nothing.
-Preserve the delivered v1.1.0 baseline and fixed release tags. The owner now
-authorizes a signed commit and ordinary main push of these process changes,
-followed by exact-commit hosted checks. No new release, tag, installation or
-runtime test is included; this authority does not extend to subsequent work.
+Preserve delivered baselines and fixed release tags. The earlier authorization
+to commit and push these process changes was completed; it does not extend to
+subsequent work. No new release, tag, installation or runtime test is included.
 D055's [v1.1.0 publication](docs/design.md#publish-expert-roles-v110) is complete;
 its authorization applies only to that release.
 Every current and future native export must carry generated source, version and

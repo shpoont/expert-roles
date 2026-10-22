@@ -8,7 +8,8 @@ and [implementation contract](../docs/design.md#implementation-contract).
 Use the [source commands](../src/README.md#generate-the-catalogue-and-native-files).
 For contributions, run the full suite, `src/generate.py --validate` and
 `src/check_changes.py --base origin/main` (or the specific ancestor commit).
-Inspect an external `--preview` tree and its links. Retained release artifacts
+Run `src/check_docs.py --root <preview-directory>` against an external
+`--preview` tree and inspect its rendering. Retained release artifacts
 may lag behind source changes; `--check` is not a contribution gate.
 
 Disposable Git fixtures exercise source-only additions, corrections and removals
@@ -24,7 +25,8 @@ The [Checks workflow](../.github/workflows/checks.yml) always runs the suite and
 source validation. Ordinary PRs reject release-owned edits; a maintainer's
 `release` label instead requires a greater final version, a dated changelog and
 strict output freshness. Main pushes with a version change use the release gate.
-Manual runs select their comparison base and mode explicitly. CI attaches the
+Manual runs select their comparison base and mode explicitly. CI checks the
+fresh preview's links, images and anchors before attaching the
 **expert-roles-preview** artifact and never commits, tags, publishes or installs.
 Check label addition/removal and PR, push and manual routing with the workflow's
 actual shell step; distinguish local simulation from completed hosted runs.
@@ -35,13 +37,55 @@ See the [release procedure](../docs/delivery.md#versions-and-releases).
 Historical baseline checks below retain their original scopes; current process
 ownership follows D056.
 
+## Preview references and role headers (D061)
+
+The portable `src/check_docs.py` checker parses Markdown (including reference
+links and tables) and embedded HTML. Fixture tests cover existing and missing
+files, raster/SVG readability including truncated JPEGs, heading changes,
+duplicate heading suffixes, formatted and Unicode headings, encoded paths,
+explicit HTML/SVG anchors, directory links and root-relative paths. Code and
+comments do not contribute links or anchors; Claude YAML frontmatter is also
+excluded from Markdown headings. Hidden public documentation remains in scope.
+Local and symlink escapes fail before reading outside the preview.
+
+Only unfilled starter targets under `src/templates/` and the absent profile
+starter image have explicit exceptions. Tests require ordinary template links,
+present starter images and completed profiles to pass normal validation.
+External URLs are skipped without network requests. Unsupported fragment target
+formats produce a diagnostic rather than a verification claim. CLI checks must
+report file/line failures, return nonzero and leave the tree unchanged.
+
+Run the checker against a complete fresh preview after the suite and source
+validation. Confirm deliberate missing-file, image and anchor failures in a
+disposable copy. CI uses the same command before artifact upload; local command
+success does not establish a hosted workflow result. Native-header regression
+checks preserve the source/version/ID keys, aligned values, spacing before host
+settings, parsed Codex/Claude fields and unchanged instruction bodies.
+
+## Documentation journeys (D060)
+
+Review the [focused changes](../docs/design.md#documentation-journey-improvements)
+through independent discovery, host setup and contribution walkthroughs. Check
+the published baseline, exact manual configuration examples, invocation-success
+criteria, contribution submission and preview viewing. Keep official host
+guidance separate from the catalogue's recorded runtime coverage.
+
+The comparison regression check exercises shared and single-expert specialty
+rows, escaping of cue text and unchanged existing native outputs. Validate
+sources, run the full suite and contribution ownership check, then inspect an
+external preview. Check source and preview references/anchors, public content,
+UTF-8, whitespace and protected files. The committed generated blocks and dist
+must remain unchanged; strict release freshness is not a contribution gate.
+Record actual visual checks and limits separately from source checks.
+
 ## README presentation (D057)
 
 The six featured task cues require existing profiles and assigned specialties;
 invalid or multiline cues must fail before writes. Render task text literally
 and preserve native role payloads. The homepage keeps image types in accessible
-descriptions and one nearby note; full catalogue rows retain visible image-type
-labels and profiles keep complete credits. Review the actual two-row rendering,
+descriptions and one nearby note. D060's presentation follow-up removes visible
+per-image captions from the full catalogue while keeping accessible image types
+and complete profile credits. Review the actual two-row rendering,
 setup and catalogue links, and the correction/removal policy's preserved scope.
 
 ## v1.2.0 release validation (D058 and D059)
@@ -83,7 +127,7 @@ does not establish repeatability or owner acceptance.
 
 Follow the [portrait contract](../docs/design.md#studio-portrait-refresh-for-owner-review)
 and [workflow](../docs/elements/portraits.md). Check one valid active visual per
-expert, visible and accessible image-type labels, complete supplied-reference
+expert, visible profile disclosures and accessible catalogue image types, complete supplied-reference
 credits and applicable adaptation terms. Compare candidates with the source at
 profile and catalogue sizes, retaining photographs or placeholders when uncertain.
 Historical depictions retain their original image bytes and credits; do not

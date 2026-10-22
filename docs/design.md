@@ -42,7 +42,94 @@ tree; maintainers update committed outputs and versions during release preparati
 
 ## Implementation contract
 
+### Commit and push the accepted source changes
+
+D062 records the owner's acceptance of D060's documentation/presentation work
+and D061's CI reference checks and role-header formatting. Create one signed
+commit on main and push it normally. This supersedes only those changes'
+earlier no-commit/no-push boundary; do not choose a version, regenerate retained
+release artifacts, create or push a tag, or publish a release.
+
+Review the complete proposed diff, including new files. Require the full suite,
+source validation, contribution ownership and a fresh preview reference check.
+Preserve all expert content, 136 native payloads, VERSION, dist and generated
+README blocks. Verify the configured signature, expected parent, clean working
+tree, matching remote main and successful hosted workflow/validation check for
+the exact pushed commit. Read back the latest release to confirm v1.2.0 remains
+the published baseline. No installation, role invocation or host changes.
+
+### Preview reference checks and role headers
+
+D061 adds a versioned, read-only documentation checker and runs it in CI after
+the isolated preview is generated and before the review artifact is attached.
+Parse rendered Markdown links and images, reference-style links and embedded
+HTML instead of matching Markdown with a regular expression. Check local files,
+image readability, GitHub-style heading fragments and explicit HTML/SVG anchors.
+Keep resolution inside the supplied preview root. External URLs are not fetched.
+Ignore code examples and HTML comments; handle the starter's unfilled targets
+and not-yet-created placeholder explicitly without exempting completed profiles.
+
+Use actionable file/line diagnostics and deterministic results. Cover valid
+and broken paths, image corruption, heading changes and duplicates, Unicode and
+encoded paths, explicit anchors, code examples and the narrow template handling
+in isolated fixtures. Run the checker on a complete generated preview so
+source-only additions are checked against their new exports and catalogue.
+
+Replace native files' generator-path notice with a short Expert Roles header,
+align the three existing provenance comment values and separate them from the
+settings with a blank line. Preserve source/version/ID keys, all parsed Codex
+and Claude metadata and instruction bodies, with Claude comments remaining in
+frontmatter. Apply the format in the generator and external preview; leave
+VERSION, dist and committed generated README blocks at the released baseline.
+
+Verify the full suite, source validation, contribution ownership, real preview
+references, malformed-reference failure cases, native parity and payload
+preservation, public content and the complete diff. Preserve all previous local
+changes and expert sources. No commit, push, release, installation or host
+execution is included; local CI-step checks do not establish a hosted CI result.
+
+### Documentation journey improvements
+
+D060 applies the seven accepted documentation-review findings: align current
+release status, complete host setup and invocation verification, use the
+documented Python environment in portrait examples, finish the external
+contributor and preview-viewing handoffs, improve overlapping-expert comparison
+and correct the source-directory description. Preserve the concise README,
+expert roster, profiles, visuals, metadata, specialty meanings, native
+descriptions and shared instructions.
+
+Use current official host guidance for manual setup examples; distinguish it
+from the bounded Codex runtime result and untested Claude runtime. Document
+configuration without modifying or installing anything on the reader's behalf.
+Show existing optional perspective cues beside overlapping specialty matches
+in generated previews, with literal display-text escaping and stable paths.
+Leave VERSION, dist and committed generated blocks at the released v1.2.0
+baseline. Add meaningful regression coverage for comparison rendering and
+preserved native outputs.
+
+Repeat the discovery, setup and contribution journeys with independent agents.
+Run the full suite, source validation, contribution ownership, preview and local
+link/anchor checks, UTF-8, public-tree, protected-content and diff checks.
+Inspect the changed rendering where available and report any visual limits.
+Keep this work uncommitted, without push, release or host execution.
+
+The owner's presentation follow-up removes the per-image type captions from
+the full catalogue, including generated-portrait, photograph, historical and
+placeholder labels. Keep image types in accessible image text and preserve all
+profile disclosures, source links and credits. Update the existing rendering
+contract check and inspect a fresh external preview; released generated blocks
+remain unchanged until separate release preparation.
+
+The owner also replaces featured Marie Curie with Jordan Peterson in the
+homepage's six-expert sample. Use his existing Personality psychology specialty
+and a task cue about personality and motivation. Keep Marie Curie in the full
+catalogue and preserve both profiles, visuals and native role payloads.
+
 ### Publish Expert Roles v1.2.0
+
+Completed under D059; see the [published release](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0)
+and [publication evidence](../evidence/README.md#v120-publication--2026-10-22).
+The following contract records that completed release, not new authorization.
 
 D059 records the owner's acceptance of the rendered README and authorization
 to squash merge its source PR, update the separate release PR against main,
@@ -66,6 +153,9 @@ headers. Existing released tags stay fixed. Installation, invocation and plugin
 changes remain outside this authorization.
 
 ### Prepare v1.2.0 without publication
+
+Historical preparation contract, completed and published under D059. The
+following retains the candidate's original scope and approval boundary.
 
 D058 prepares a compatible minor candidate after the eleven expert additions
 and D057's README source change. Keep this change in a separate maintainer
@@ -103,6 +193,8 @@ cues and existing profile/specialty assignments before writes; escape display
 text. Keep image-type information in accessible descriptions and visible full
 catalogue labels. The homepage uses one nearby image note instead of repeating
 the label under every card. Preserve all profile credits and image terms.
+The later D060 presentation follow-up removes per-image captions from the full
+catalogue while retaining accessible image types and profile disclosures.
 
 Shorten setup and project/release information, with details in linked guides.
 Retain an early AI-independence statement and an easy-to-find correction/removal

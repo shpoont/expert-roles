@@ -64,6 +64,7 @@ src/
       README.md
       expert.yaml
   generate.py
+  check_docs.py
 dist/
   README.md
   codex/
@@ -108,31 +109,39 @@ non-text and unfilled template values are rejected before outputs are written,
 including when creating a placeholder.
 
 The phrase appears in selection metadata and beneath specialty labels in the
-full catalogue to help readers compare overlapping experts. It is not added to
+full catalogue to help readers compare overlapping experts. Specialty tables
+also show existing perspective cues when several experts share a specialty;
+single-expert rows stay compact. It is not added to
 execution instructions or automatically copied into profile prose. The catalogue
 keeps its name, specialty and image columns; all roles retain the shared instruction.
 
 ## Export provenance
 
-Every current and future native export includes the same three generated
-provenance comments, alongside the existing generator notice:
+Every native export carries the same three provenance keys. New previews and
+the next release use a short title, aligned values and a blank line before the
+host settings:
 
 ```text
-# expert_roles.source: https://github.com/shpoont/expert-roles
-# expert_roles.version: 1.1.0
-# expert_roles.id: eliyahu-goldratt
+# Expert Roles
+# expert_roles.source:  https://github.com/shpoont/expert-roles
+# expert_roles.version: 0.0.0-preview
+# expert_roles.id:      eliyahu-goldratt
+
 ```
 
 `source` identifies the canonical public repository, `version` comes from the
 root [VERSION](../VERSION) file, and `id` is the expert directory's stable slug.
 Both formats share the whole-library version; individual experts have no
-separate version. The example uses the v1.1.0 release version.
+separate version. The example uses the temporary preview version; retained
+release files keep their previous formatting until release preparation.
 
 Codex comments appear before the TOML settings. Claude comments appear inside
 the YAML frontmatter, after its opening `---`; the closing `---` and instruction
 body are unchanged. These are file provenance for people and consuming tools,
 not host configuration fields or additions to the description or instructions.
 The hosts do not automatically display or act on these comments.
+Consumers reading the comments should accept whitespace after each colon;
+the key names and their meanings remain unchanged.
 
 Keep `VERSION` as one Semantic Version without a `v` prefix. Contributions leave
 it unchanged; temporary previews use `0.0.0-preview` without changing the checkout.
@@ -181,6 +190,7 @@ Create a browsable review copy in a **new directory outside the checkout**:
 
 ```sh
 .venv/bin/python src/generate.py --preview /tmp/expert-roles-review
+.venv/bin/python src/check_docs.py --root /tmp/expert-roles-review
 ```
 
 The preview includes profiles, images, documentation, both native formats and
@@ -188,8 +198,32 @@ their indexes. Start with its `README.md` or `src/roles/README.md`; relative lin
 target the preview's outputs. Its native comments use `0.0.0-preview`, and its
 entry points identify it as unreleased. Git metadata, environments and caches
 are excluded. An existing destination is rejected; choose a new review directory
-for each run. The source checkout and its `VERSION` stay unchanged. CI attaches
-the same tree as the **expert-roles-preview** artifact for seven days.
+for each run. The source checkout and its `VERSION` stay unchanged.
+
+The read-only documentation checker parses Markdown links and images,
+reference-style links and embedded HTML. It checks local files, readable raster
+and SVG images, heading fragments and explicit anchors inside the preview.
+External URLs are not fetched; code examples and HTML comments are ignored.
+Only unfilled `{{...}}` targets under `src/templates/` and the profile starter's
+not-yet-created `placeholder.svg` are exempt. Completed profiles get no such
+exception. Fragments in unsupported file types fail with an explicit diagnostic.
+CI runs this check against fresh outputs before attaching the same tree as the
+**expert-roles-preview** artifact for seven days. This avoids checking new
+contributions against retained files from the previous release.
+
+### View the review copy
+
+The preview is a linked Markdown tree, not a generated HTML website. Open its
+folder in a Markdown previewer that supports raw HTML and tables, then preview
+`README.md` and follow its links to the catalogue and changed profiles. For
+example, in VS Code use **Markdown: Open Preview to the Side**. Check that the
+portraits and tables render, and that links stay inside this review copy.
+
+If your previewer cannot render the HTML tables or images, use a compatible
+local Markdown renderer; keep any generated HTML outside the checkout. The
+[rendered-review guidance](../docs/elements/portraits.md#review-a-rendered-preview)
+describes what to inspect and how to record viewing limits. Opening Markdown as
+plain text does not establish visual verification.
 
 Submit canonical sources, relevant authored documentation and an **Unreleased**
 changelog note. Leave `VERSION`, `dist/`, the source catalogue's generated block
@@ -251,8 +285,9 @@ breadth. Every selected expert must exist and have the supporting specialty
 assigned in canonical metadata. Task cues are short, single-line suggestions
 grounded in the profile's public work; they do not enter role instructions.
 Names and visuals are read from their sources. The homepage retains image types
-in accessible descriptions and one nearby note; the full catalogue keeps
-visible per-image labels. In previews and release outputs, adding an expert updates the full
+in accessible descriptions and one nearby note; the full catalogue retains
+accessible image descriptions and links to profile credits without per-image
+captions. In previews and release outputs, adding an expert updates the full
 catalogue and total without enlarging the sample; changing the showcase is a
 separate editorial choice.
 

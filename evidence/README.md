@@ -9,6 +9,93 @@ Connect evidence to [current work](../docs/current-work.md),
 [decisions](../docs/decisions.md), [checks](../tests/README.md) and
 [delivery](../docs/delivery.md).
 
+## Preview reference checks and role headers — 2026-10-22
+
+D061 adds a portable read-only checker and a CI step between isolated preview
+generation and artifact upload. Markdown links/images, reference links, embedded
+HTML, heading fragments and explicit HTML/SVG anchors are parsed against fresh
+outputs. Local targets stay inside the preview. Raster checks verify and decode
+pixels, including truncated JPEG failures; SVG checks parse the document and
+require an SVG root. External URLs are skipped without network requests.
+
+All **70 tests pass**, including fourteen new checker cases and the expanded
+native-header regression. Fixtures cover encoded/Unicode targets, duplicate
+headings, custom anchors, comments/code, frontmatter, starter boundaries,
+symlink escapes/loops, empty roots, diagnostics and read-only CLI behavior.
+The complete generated preview passes. In a disposable copy, a missing page,
+corrupt Goldratt image and renamed linked heading each produce a nonzero exit
+with actionable origin/target diagnostics; restoring the copy returns it to a
+passing result. Hashes confirm the checker does not write preview files.
+
+All **136 native files** preserve parsed settings and instruction bodies against
+the retained v1.2.0 exports; both hosts' metadata and instructions agree. New
+headers keep source/version/ID keys, align their values, remove the generator
+path notice and separate comments from host settings. Claude comments remain
+inside frontmatter. All **351 protected files**, including profiles, visuals,
+metadata, vocabulary, templates, VERSION and dist, are byte-identical. Earlier
+local documentation and presentation work is preserved.
+
+Source validation, contribution ownership, UTF-8, bounded public-content and
+whitespace checks pass. CI uses the checked commands, but no hosted run or new
+host-runtime check is claimed. Released artifacts and generated README blocks
+remain at v1.2.0; the new output formatting is available in the separate
+unreleased preview. The Git index and HEAD remain unchanged. No commit, push,
+publication, installation or host configuration change was performed.
+
+## Documentation journey improvements — 2026-10-22
+
+D060 implements all seven accepted review findings: current publication status,
+complete manual host setup and verification, consistent portrait interpreter
+commands, contributor submission and Markdown viewing handoffs, nearby
+comparison cues and an accurate source-directory description.
+
+The full suite passes **56 tests**. Source validation renders all 141 outputs
+successfully in memory; contribution ownership confirms that VERSION, dist and
+committed generated blocks remain unchanged. The new regression check covers
+escaped cues, compact single-expert rows, comparison-anchor placement and
+unchanged existing native outputs. All source and preview local references
+resolve, with no UTF-8, bounded public-content or whitespace findings. All
+**351 protected files**, including individual expert profiles, visuals, metadata,
+shared templates, vocabulary, VERSION and native files, retain their bytes.
+All **136 native payloads** match the preview apart from preview-version comments.
+
+Both Codex examples parse as TOML and preserve the exact exported Goldratt
+description. Shell syntax and a local argument-recorder check verify the CLI
+quoting and settings without launching Codex. These checks do not establish
+new persistent-registration, discovery or Claude runtime results.
+
+Independent discovery, host-setup and contribution reviewers confirm their
+original findings resolved and report no new concrete issue in the bounded
+re-review. Six saved desktop captures of fresh local Markdown rendering show
+readable persistent and one-off Codex examples, the full Claude sequence,
+specialty comparison, contribution submission and preview-viewing guidance.
+Rendered review exposed a tall-row anchor landing midway through the candidates;
+moving the stable specialty anchor to the first candidate fixes arrival from
+the profile link. All five HCI candidates and cues are visible together in the
+final capture. Screenshots, exact commands and private run records stay outside
+the public tree.
+
+These are expert walkthroughs and local desktop rendering, not representative
+human research, fresh hosted GitHub rendering, mobile or assistive-technology
+validation. The accepted compact README, expert selection, profiles, role
+descriptions and execution instructions are preserved. All work remains
+uncommitted; no push, release, installation or host configuration change occurred.
+
+The later catalogue-presentation follow-up removes visible per-image captions
+for all 68 experts. Accessible image types and complete profile provenance
+remain unchanged. The 56-test suite, source validation, contribution ownership,
+local references and protected-content checks pass again. A fresh, reloaded
+desktop capture confirms the caption-free catalogue; all 68 rendered images
+retain accessible descriptions. Released generated sections remain unchanged.
+
+The homepage follow-up replaces Marie Curie with Jordan Peterson in the six
+featured cards, using his existing Personality psychology specialty and the
+cue “Explore personality and motivation”. Both experts remain in the complete
+catalogue. All 56 tests, source and ownership checks pass; profiles, images and
+all native payloads remain unchanged. A fresh local homepage capture confirms
+the updated two-row gallery. The source change stays uncommitted, with the
+committed generated homepage retained for separate release preparation.
+
 ## v1.2.0 publication — 2026-10-22
 
 D059 records owner acceptance of the final rendered README and authorization
@@ -27,15 +114,16 @@ comment, and the 114 v1.1.0 exports retain every byte outside that line. Accepte
 expert sources, images, credits, vocabulary and shared instructions are unchanged.
 All 2,421 local references resolve, with no public-content or UTF-8 findings.
 
-The [release PR](https://github.com/shpoont/expert-roles/pull/13),
-[Checks workflow](https://github.com/shpoont/expert-roles/actions/workflows/checks.yml)
-and [GitHub release](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0)
-provide the hosted execution records. Before publication, require completed
-success on both the PR head and resulting main workflow and validate check;
-afterward verify the remote annotated tag's exact target, release metadata,
-VERSION, native headers and clean checkout. These gates distinguish authorized
-preparation from observed publication. No new runtime or effectiveness check
-is included.
+Publication is complete. The [release PR](https://github.com/shpoont/expert-roles/pull/13)
+is squash merged as
+[`c493c44`](https://github.com/shpoont/expert-roles/commit/c493c44bd14c7a54adce74f10bb6ea3c5bfd7359).
+Its [exact-main Checks run](https://github.com/shpoont/expert-roles/actions/runs/39789914230)
+and validation check completed successfully. The annotated `v1.2.0` tag targets
+that commit, and the [stable GitHub release](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0)
+was published at 2026-10-22 13:49:48 UTC. D060's readback confirms the published,
+non-draft, non-prerelease record and unchanged local release tag. These results
+complete the preparation/publication distinction; no new runtime or
+effectiveness check is included.
 
 ## v1.2.0 preparation — 2026-10-22
 

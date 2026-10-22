@@ -2,36 +2,73 @@
 
 ## Current focus and status
 
-D059 finalizes the accepted **v1.2.0** baseline for publication through the
-separate [release PR](https://github.com/shpoont/expert-roles/pull/13).
-[D057's README source PR](https://github.com/shpoont/expert-roles/pull/12) is squash
-merged as `6a301fec01e9ebb96c5a813cb20bcc74cf00fdfe`; the release branch is updated
-against that main commit. The eleven expert contributions are merged. The baseline
-contains **68 experts, 96 specialties in 14 groups**, 50 generated portraits,
-five historical depictions, 13 placeholders and 136 native files. VERSION and
-native provenance use `1.2.0`; v1.1.0 is the previous release.
+D062 records owner acceptance of D060 and D061 and authorizes a signed source
+commit and ordinary main push under the
+[delivery contract](design.md#commit-and-push-the-accepted-source-changes).
+Verify the signature, remote commit and exact-commit hosted Checks result.
+No tag or release is authorized. VERSION, dist and generated README blocks
+retain the released v1.2.0 baseline until separate release preparation.
 
-D057's source change passes 55 tests and completed
-[hosted source checks](https://github.com/shpoont/expert-roles/actions/runs/39786737629).
-Its recognizable gallery, task cues, shorter guidance and quiet image disclosure
-were checked in an actual local browser rendering. The candidate regenerates
-that presentation and the complete catalogue without changing role payloads,
-source profiles, images, vocabulary or shared instructions.
+D061's [preview reference checks and role headers](design.md#preview-reference-checks-and-role-headers)
+are implemented and locally verified. CI checks the fresh preview's local links,
+readable raster/SVG images and heading or explicit anchors before artifact
+upload. The checker skips external URLs without fetching them and reports
+file/line failures. Narrow starter exceptions leave completed profiles subject
+to normal validation. Native comments retain their three provenance keys with
+aligned values, a short title and a blank line before host settings.
 
-The [preparation contract](design.md#prepare-v120-without-publication) requires
-strict generated freshness, release ownership, native parity, protected-content
-comparisons and link/public-content checks. All 55 tests and release checks pass;
-all 141 generated files match, all 136 native payloads are preserved, and 2,421
-local references resolve. See the
-[release evidence](../evidence/README.md#v120-publication--2026-10-22).
-The owner authorizes retargeting the release PR to main, merging after repeated
-release ownership and completed exact-head hosted checks, then publishing an
-annotated v1.2.0 tag and latest stable GitHub release after the resulting main
-workflow and validate check both succeed. The
-[publication contract](design.md#publish-expert-roles-v120) and
-[release record](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0)
-separate that execution from prepared version declarations. Installation, role
-invocation and consuming-plugin changes remain outside this release.
+All **70 tests pass**. The complete preview passes its documentation check;
+deliberate missing-link, corrupt-image and stale-anchor cases fail in a
+disposable copy. Source validation and contribution ownership pass. All
+**351 protected files** and **136 native payloads** are unchanged. UTF-8,
+bounded public-content and diff checks pass. The new CI step is locally checked;
+hosted execution is part of D062's delivery verification. See the
+[D061 evidence](../evidence/README.md#preview-reference-checks-and-role-headers--2026-10-22).
+
+### Retained documentation and presentation work
+
+D060 applies the seven accepted documentation-review findings under the
+[focused contract](design.md#documentation-journey-improvements). The owner
+originally requested independent re-review and relevant checks without a commit;
+D062 supersedes that delivery hold after acceptance.
+Manual host setup and invocation verification, contribution and preview
+handoffs, portrait interpreter examples, overlapping-specialty comparison and
+current release records are updated. Generated changes are reviewed in
+an external preview; VERSION, dist and committed generated blocks remain fixed.
+The presentation follow-up removes visible per-image catalogue captions while
+retaining accessible image types and every profile disclosure and credit.
+The homepage sample now features Jordan Peterson in place of Marie Curie,
+using his existing Personality psychology specialty. Both remain in the full
+catalogue with unchanged profiles, visuals and role files.
+Preserve all expert profiles, visuals, metadata, vocabulary, native descriptions
+and shared instructions. No host configuration, installation or runtime test is
+included.
+
+All three independent journey re-reviews pass. Six fresh local-rendering captures
+confirm readable setup, contributor and preview guidance and comparison cues.
+The full suite passes **56 tests**; source validation, contribution ownership,
+local references, UTF-8, public-tree and whitespace checks pass. Both Codex
+examples parse and preserve the exact exported description; no host was invoked.
+All 351 protected files and 136 native payloads are preserved. See the
+[documentation evidence](../evidence/README.md#documentation-journey-improvements--2026-10-22).
+
+## Published baseline
+
+D059 is complete. [Source PR #12](https://github.com/shpoont/expert-roles/pull/12)
+and [release PR #13](https://github.com/shpoont/expert-roles/pull/13) are squash
+merged. The annotated v1.2.0 tag and
+[stable GitHub release](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0)
+identify `c493c44bd14c7a54adce74f10bb6ea3c5bfd7359`, published on 2026-10-22 after
+its [Checks workflow](https://github.com/shpoont/expert-roles/actions/runs/39789914230)
+and validation check completed successfully. See the
+[publication evidence](../evidence/README.md#v120-publication--2026-10-22).
+
+The released baseline contains **68 experts, 96 specialties in 14 groups**,
+50 generated portraits, five historical depictions, 13 placeholders and
+136 native files. VERSION and native provenance use `1.2.0`; v1.1.0 is the
+previous release. Publication does not establish deployment, host discovery or
+comparative benefit. Earlier preparation scopes below are historical and do
+not authorize another release.
 
 ## Historical v1.1.0 preparation records
 
@@ -276,11 +313,11 @@ These follow-ups are separate from the accepted catalogue and commit readiness.
 
 ## Next actions
 
-Complete D059's authorized release after strict local and exact-commit hosted
-checks. Verify the remote main commit, annotated tag target, latest stable
-GitHub release and versioned native files before reporting publication. Keep
-v1.0.0 and v1.1.0 tags fixed. After publication, consumer deployment, role runtime
-validation and comparative benefit assessments remain separate work.
+Complete D062's authorized signed source commit and ordinary main push, then
+read back the remote commit and exact-commit hosted Checks result. The owner
+accepted the local preview and checks. Retain published tags and exports;
+a later release requires separate authorization.
+Consumer deployment, runtime validation and comparative benefit remain separate.
 
 ## Findings and handover
 

@@ -38,6 +38,12 @@ describe the expert's emphasis; the assignment supplies the activities.
 
 ## Adding an expert
 
+Fork this repository, clone your fork and create a branch from current `main`
+before following the steps below. If you already have write access, use a
+branch in the existing repository. See GitHub's
+[fork and pull request guide](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project).
+Run commands from the checkout's root.
+
 1. Copy the entire [starter folder](src/templates/profile/), including
    `README.md` and `expert.yaml`, using a unique lowercase, hyphenated name.
 
@@ -60,6 +66,10 @@ describe the expert's emphasis; the assignment supplies the activities.
    then review its catalogue, profile, role files and links. Replace every
    unfilled `{{...}}` field. Submit the profile sources, necessary specialty
    changes and an **Unreleased** changelog note.
+
+Open a pull request against this repository's `main`. Briefly explain the
+expert's fit and contribution, and include check results and a preview or
+screenshots for review.
 
 Leave `VERSION`, `dist/` and generated README sections unchanged. Maintainers
 update them in a separate [release PR](docs/delivery.md#versions-and-releases).

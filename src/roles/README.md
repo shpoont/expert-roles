@@ -273,7 +273,8 @@ To compare overlapping experts, see their perspective cues in
 ## Contributing profiles
 
 Each expert directory contains a profile, canonical `expert.yaml` metadata,
-one square photo or full-name placeholder and portable Codex / Claude Code files.
+and one square portrait or full-name placeholder. Each profile links to its
+portable Codex and Claude Code files under `dist/`.
 Photos require [verified reuse permission](../../CONTRIBUTING.md#photo-sources-and-licenses);
 when unavailable, use the [standard SVG placeholder template](../templates/placeholder.svg)
 and [exact image instructions](../README.md#choose-the-profile-image).

@@ -25,9 +25,9 @@ canonical metadata, a short human-readable README and one square visual.
 The adopted [studio-v1 method](docs/elements/portraits.md) is retained.
 Previews generate a Codex and Claude Code file for every source profile, with
 alphabetical and specialty indexes that link to stable, unduplicated paths.
-The separately prepared v1.2.0 `dist/` files and generated catalogue sections
-cover all 68 experts. D059 authorizes merging and publishing this baseline after
-the release gates; v1.1.0 is the previous release with 57 experts. The
+The published v1.2.0 `dist/` files and generated catalogue sections cover all
+68 experts. D059's release is complete; v1.1.0 is the previous release with
+57 experts. The
 [release record](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0)
 establishes hosted publication separately from the version declaration.
 Portrait acceptance is an editorial decision;
@@ -69,15 +69,17 @@ unchanged exports. Automatic directory discovery remains unresolved. Claude
 files have structural checks but no runtime validation. These observations do
 not establish broad selection reliability or comparative expert benefit.
 
-- **Current status and boundary:** D059 authorizes v1.2.0 publication after
-  D057's accepted README source PR is squash merged and D058's separate release
-  PR is updated against main. The baseline includes the eleven merged experts
-  and agreed presentation improvements, with source credits and role payloads retained.
-  Contribution/release separation is delivered and the eleven new expert PRs
-  are merged. Source changes and release preparation remain separate. Require
-  completed hosted checks on the release PR and resulting main before the fixed
-  annotated tag and latest stable release. Installation and role invocation
-  remain separate. The following records
+- **Current status and boundary:** v1.2.0 is published after D057's source
+  PR #12 and D058's release PR #13 were squash merged and exact-commit hosted
+  checks completed. D060 implements the seven accepted documentation findings;
+  independent journey re-reviews and checks pass. D061 adds local link, image
+  and anchor checks against the CI preview and simplifies native provenance
+  headers. The owner accepted these changes and authorizes a signed source
+  commit and main push under D062, without a release. Verify delivery through
+  Git and the exact-commit hosted Checks result. Keep
+  VERSION, dist and generated README blocks at the released baseline; review
+  source changes in an external preview. Preserve expert content and role
+  descriptions. Installation and role invocation remain separate. The following records
   describe the delivered v1.1.0 baseline. D048 supplies the portrait rollout; D049 adds
   a copyable credit block and repository/CI validation in the isolated worktree.
   The independent fresh-session contribution walkthrough completed one temporary
@@ -155,13 +157,12 @@ This repository follows [Project Structure v1.0.0](https://github.com/shpoont/pr
 commit `96fdd6bd7950778f5b6c6f8269ab2b82167cb99a`. Expert sources live under
 `src/`; the full catalogue is generated in `src/roles/README.md`, with a fixed
 six-expert showcase and generated count in the main README. Ready-to-use
-exports and their indexes live under `dist/`. The prepared library version is
+exports and their indexes live under `dist/`. The released library version is
 `1.2.0`, independently versioned from the starter and consuming integrations.
 The canonical `VERSION` file and both hosts' provenance comments use `1.2.0`.
-It is not yet published; v1.1.0 remains the latest released baseline.
-The [release record](https://github.com/shpoont/expert-roles/releases/tag/v1.1.0)
-and annotated tag identify the hosted snapshot; the published v1.0.0 baseline
-remains fixed. See the
+The latest stable [release record](https://github.com/shpoont/expert-roles/releases/tag/v1.2.0)
+and annotated tag identify `c493c44bd14c7a54adce74f10bb6ea3c5bfd7359`, published
+on 2026-10-22. Earlier released tags remain fixed. See the
 [release procedure](docs/delivery.md#versions-and-releases).
 
 Continue through [design](docs/design.md), [current work](docs/current-work.md),
