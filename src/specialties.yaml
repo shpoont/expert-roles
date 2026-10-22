@@ -56,6 +56,11 @@ computational-neuroscience:
   group: Computing
   reference: https://www.wikidata.org/wiki/Q8037925
 
+concurrent-computing:
+  name: Concurrent computing
+  group: Computing
+  reference: https://www.wikidata.org/wiki/Q128392
+
 contextual-design:
   name: Contextual design
   group: Design
@@ -160,6 +165,11 @@ financial-accounting:
   name: Financial accounting
   group: Finance
   reference: https://www.wikidata.org/wiki/Q949180
+
+formal-methods:
+  name: Formal methods
+  group: Computing
+  reference: https://www.wikidata.org/wiki/Q1049183
 
 graphic-design:
   name: Graphic design
@@ -365,6 +375,26 @@ supply-chain-management:
   name: Supply chain management
   group: Management
   reference: http://data.europa.eu/esco/skill/f929c89e-c363-4132-a918-e021d57b307c
+
+system-dynamics:
+  name: System dynamics
+  group: Systems science
+  reference: https://www.wikidata.org/wiki/Q598451
+
+system-safety:
+  name: System safety
+  group: Engineering
+  reference: https://www.wikidata.org/wiki/Q7663745
+
+systems-engineering:
+  name: Systems engineering
+  group: Engineering
+  reference: https://www.wikidata.org/wiki/Q682496
+
+systems-thinking:
+  name: Systems thinking
+  group: Systems science
+  reference: https://www.wikidata.org/wiki/Q1340474
 
 technology-adoption-lifecycle:
   name: Technology adoption lifecycle
