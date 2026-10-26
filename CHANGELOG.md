@@ -15,6 +15,8 @@ Record meaningful changes by version under the
 
 ### Changed
 
+- Identify project-summary counts as the published v1.3.0 baseline and link
+  the current source catalogue for unreleased additions.
 - Guard main with required pull requests and GitHub Actions validation, without
   bypass actors. Add a read-only release preflight and an explicit-destination
   release-branch push command, with disposable Git regression coverage.
