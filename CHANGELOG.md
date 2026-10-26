@@ -11,6 +11,7 @@ Record meaningful changes by version under the
   distinct perspectives on design research, qualitative interviewing, surveys
   and customer discovery. Add shared User research, Qualitative research and
   Survey methodology specialties and the Research methods navigation group.
+  Include credited studio-v1 portraits for all four experts.
 
 ### Changed
 
