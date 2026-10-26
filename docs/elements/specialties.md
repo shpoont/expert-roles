@@ -75,7 +75,7 @@ data is later copied into the repository.
 
 ## Current implementation
 
-[src/specialties.yaml](../../src/specialties.yaml) contains 96 mapped entries.
+[src/specialties.yaml](../../src/specialties.yaml) contains 99 mapped entries.
 Each has exactly three required fields:
 
 - `name`: the common display label, using a preferred source term or recognized alias.
@@ -97,12 +97,21 @@ The phrase contributes only to the generated description; generic activities
 remain part of the assignment and execution behavior stays in the shared instruction.
 
 Animal behavior, Computing, Design, Engineering, Finance, Law, Management,
-Marketing, Medicine, Natural sciences, Philosophy, Psychology, Sales and
-Systems science are the current navigation groups. Specialty
+Marketing, Medicine, Natural sciences, Philosophy, Psychology, Research methods,
+Sales and Systems science are the current navigation groups. Specialty
 rows are sorted by name within each group; unassigned terms and empty groups
 are not displayed. Profiles list their most useful specialties first.
 
 ### Mapping history
+
+User research uses Wikidata Q17118423 under Design. Qualitative research and
+Survey methodology use Q839486 and Q814232 under Research methods, a shared
+group for methods that apply across fields. These distinguish research planning,
+qualitative interviewing and survey design from broader design specialties.
+ESCO searches returned activities such as executing user research and conducting
+qualitative research, or adjacent geographical surveying concepts; the precise
+field concepts are used instead. Assignments remain grounded in each profile's
+public work and do not establish the effectiveness of its AI role.
 
 Formal methods and Concurrent computing use Wikidata's field concepts
 (Q1049183 and Q128392) under Computing. ESCO search returned activities such as

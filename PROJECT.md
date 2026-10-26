@@ -18,14 +18,17 @@ roster changes.
 
 ## Scope and expectations
 
-Canonical sources contain 68 experts, 96 specialties in 14 groups, 50 generated
-portraits, five original historical depictions and 13 full-name placeholders.
-The eleven reviewed expert contributions are merged. Every source profile has
+The published v1.3.0 baseline contains 68 experts, 96 specialties in 14 groups,
+50 generated portraits, five original historical depictions and 13 full-name
+placeholders. That baseline includes eleven reviewed expert additions.
+Current sources can include unreleased additions; see the
+[source catalogue](src/roles/README.md) for the current collection.
+Every source profile has
 canonical metadata, a short human-readable README and one square visual.
 The adopted [studio-v1 method](docs/elements/portraits.md) is retained.
 Previews generate a Codex and Claude Code file for every source profile, with
 alphabetical and specialty indexes that link to stable, unduplicated paths.
-Version v1.3.0's `dist/` files and source catalogues cover all 68 experts, as
+Version v1.3.0's `dist/` files and tagged source catalogues cover all 68 experts, as
 did the previous v1.2.0 release. The
 [release record](https://github.com/shpoont/expert-roles/releases/tag/v1.3.0)
 establishes hosted publication separately from the version declaration.

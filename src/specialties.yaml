@@ -336,6 +336,11 @@ psychological-safety:
   group: Psychology
   reference: https://www.wikidata.org/wiki/Q17150189
 
+qualitative-research:
+  name: Qualitative research
+  group: Research methods
+  reference: https://www.wikidata.org/wiki/Q839486
+
 quality-management:
   name: Quality management
   group: Management
@@ -411,6 +416,11 @@ supply-chain-management:
   group: Management
   reference: http://data.europa.eu/esco/skill/f929c89e-c363-4132-a918-e021d57b307c
 
+survey-methodology:
+  name: Survey methodology
+  group: Research methods
+  reference: https://www.wikidata.org/wiki/Q814232
+
 system-dynamics:
   name: System dynamics
   group: Systems science
@@ -460,6 +470,11 @@ usability-engineering:
   name: Usability engineering
   group: Design
   reference: http://data.europa.eu/esco/skill/95ee5e38-5c1e-4cd2-a21d-6921390025a9
+
+user-research:
+  name: User research
+  group: Design
+  reference: https://www.wikidata.org/wiki/Q17118423
 
 valuation-finance:
   name: Valuation (finance)
