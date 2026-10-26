@@ -5,6 +5,13 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+### Added
+
+- Add Erika Hall, Steve Portigal, Caroline Jarrett and Rob Fitzpatrick, with
+  distinct perspectives on design research, qualitative interviewing, surveys
+  and customer discovery. Add shared User research, Qualitative research and
+  Survey methodology specialties and the Research methods navigation group.
+
 ### Changed
 
 - Guard main with required pull requests and GitHub Actions validation, without
