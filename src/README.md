@@ -90,7 +90,7 @@ Use it when overlapping specialties leave a useful distinction unclear, and
 review neighboring experts together. Keep it a short phrase about a distinctive
 emphasis supported by the profile's public references. It should read naturally
 after “especially on”. Generic activities such as analysis or feedback belong
-in the assignment; execution rules belong in the shared instruction.
+in the assignment; execution rules belong in the [shared instruction](templates/invocation.md).
 
 For example:
 
@@ -163,22 +163,32 @@ same exports in an ordinary checkout or a source archive.
 
 ## Prepare the Python environment
 
-After copying and filling the starter, prepare Python 3.11 or newer from the
-repository root:
+Use Python 3.11 or newer from the repository root. Prepare an environment if
+a suitable one is not already available:
 
 ```sh
 python -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 ```
 
-Then [choose the profile image](#choose-the-profile-image). Validate and preview
-the contribution after that required image is ready.
+All examples below use `.venv/bin/python`. If you reuse an environment elsewhere,
+substitute its Python executable throughout and ensure it has Python 3.11 or
+newer and the dependencies from `requirements.txt`.
+
+For a new expert, finish the starter and [choose the profile image](#choose-the-profile-image)
+before validation. For changes to existing profiles or shared behavior, retain
+the valid existing images and continue to the contribution checks below. Image
+authoring is needed only when adding or changing an image; validation still
+checks every completed profile.
 
 ## Generate the catalogue and native files
 
+### Contribution checks
+
 With the [Python environment](#prepare-the-python-environment) prepared and
-every profile's required image present, refresh the source catalogues and check
-the contribution from the repository root:
+every profile's required image present, refresh the main README's generated
+sections and the full source catalogue, then check the contribution from the
+repository root:
 
 ```sh
 .venv/bin/python src/generate.py --docs
@@ -191,13 +201,16 @@ The boundary check compares your working tree with an ancestor Git ref. Use
 common base commit. It includes untracked files. In a downloaded source archive,
 source validation and previews work without Git; run the boundary check in the
 Git checkout used for the PR. It also runs the read-only `--check-docs` gate:
-both source catalogues must match the generator. Hand edits inside generated
+Both generated source views—the marked sections of the main `README.md` and
+`src/roles/README.md`—must match the generator. Hand edits inside generated
 regions or stale output fail. `--docs` preserves authored prose outside those
 regions and never changes VERSION or dist. Running the generator without an
 action, or with `--validate`, validates only. Source validation renders
 everything in memory, checking all
 profiles, images, credits, vocabulary, shared templates and generated syntax.
 It does not require retained release artifacts to match current sources.
+
+### Create the review copy
 
 Create a browsable review copy in a **new directory outside the checkout**:
 
@@ -238,12 +251,16 @@ local Markdown renderer; keep any generated HTML outside the checkout. The
 describes what to inspect and how to record viewing limits. Opening Markdown as
 plain text does not establish visual verification.
 
-Submit canonical sources, the refreshed source catalogues, relevant authored
+### Submit a source contribution
+
+Submit canonical sources, the refreshed generated source views, relevant authored
 documentation and an **Unreleased** changelog note. Leave `VERSION` and `dist/`
-untouched. Source catalogues describe current main; native files for unreleased
+untouched. These views describe current sources; native files for unreleased
 additions are available in the preview until the next release. Use a released
 tag when you need its complete prepared distribution. Routine expert additions
 do not need project-wide decision, status or release records.
+
+### Release preparation
 
 Maintainers prepare committed artifacts in a separate
 [release PR](../docs/delivery.md#versions-and-releases). After choosing `VERSION`:
@@ -265,11 +282,40 @@ network.
 The profile starter stays under `templates/`; only completed directories under
 `roles/` are included in the catalogue and native exports.
 
-The shared instruction requires professional scope and independent judgment:
-decline work outside documented expertise, clarify uncertain fit or essential
-context, and challenge forced conclusions or suppression of relevant expertise.
-Specialty labels are nonexhaustive guidance. All experts use this one template;
-profile prose is not added to their operational instructions.
+### Shared instruction behavior
+
+To change behavior shared by every expert, edit
+[templates/invocation.md](templates/invocation.md), then use the contribution
+checks and review preview above. Retained native files update in a separate
+release.
+
+The [shared instruction](templates/invocation.md) accepts clear prose or structured
+briefs. It requires professional scope and independent judgment: decline unrelated
+work, withhold conclusions that need missing essential information, complete
+independent requested parts and challenge forced conclusions. Consequential
+assessments must state their scope, evidence and material limits. Keep the user's
+objective separate from a proposed solution or the caller's interpretation. For
+proposal reviews, briefly state the intended outcome and material distinctions,
+including supplied examples; check what the proposal represents, omits or defers.
+Explain claimed equivalence and put consequential gaps in the conclusion. An
+explicit user-authorized pilot may narrow the assessment; earlier reviews or
+a draft cannot authorize that change themselves.
+Simplifications must preserve requested distinctions or name concrete losses;
+references to earlier positions must follow the available record. Specialty labels
+are nonexhaustive guidance. All experts use this one template; profile prose is
+not added to their operational instructions. An early scope check applies to
+each requested contribution, including mixed requests and follow-ups; unrelated
+work stays outside the role while independent in-scope work continues. The
+[consultation candidate](../docs/design.md#concise-expert-consultation-instruction)
+has structural checks and a limited [Harbor comparison](../tests/harbor/README.md).
+Current integration checks exercise the combined instruction; they do not
+compare it with the 382-word working draft.
+See the [current repair record](../evidence/README.md#goal-coverage-repair-and-application--2026-10-29)
+and [earlier findings and limits](../evidence/README.md#shared-instruction-comparison--2026-10-28)
+before drawing conclusions about behavioral benefit. Retained release files
+update only during a separate release.
+
+### Image requirements
 
 Each profile requires exactly one image: a decodable 512 × 512 RGB JPEG named
 `portrait.jpg`, or a 512 × 512 `placeholder.svg` matching the shared template and
@@ -284,6 +330,8 @@ not establish likeness or authentic historical appearance.
 Photograph and supplied-reference reuse permission requires manual verification under the
 [photo policy](../CONTRIBUTING.md#photo-sources-and-licenses); image-format
 validation does not establish it. Do not add photos with unclear permission.
+
+### Catalogue generation rules
 
 Keep one ordered `BEGIN GENERATED CATALOGUE` / `END GENERATED CATALOGUE`
 HTML-comment pair in `src/roles/README.md`. The main README has separate ordered
@@ -303,6 +351,8 @@ accessible image descriptions and links to profile credits without per-image
 captions. In previews and release outputs, adding an expert updates the full
 catalogue and total without enlarging the sample; changing the showcase is a
 separate editorial choice.
+
+### Validation coverage
 
 `--check-docs` is the read-only source-catalogue freshness check used for
 contributions. `--check` is the strict release freshness check. It may fail between releases
@@ -361,7 +411,7 @@ metadata and profile, and [preparing Python](#prepare-the-python-environment):
    ```sh
    .venv/bin/python src/generate.py --create-placeholder your-expert
    .venv/bin/python src/generate.py --validate
-   .venv/bin/python src/generate.py --preview /tmp/expert-roles-review
+   .venv/bin/python src/generate.py --preview /tmp/expert-roles-profile-preview
    .venv/bin/python -m unittest discover -s tests -v
    ```
 

@@ -77,6 +77,10 @@ archives and build/cache files are excluded from Git.
 Role files contain the expert's name, selection cues and shared instruction.
 Profiles and references support browsing; include any source material the task
 needs in the assignment.
+For proposal reviews, include the intended outcome and distinctions that matter,
+with relevant examples. State any narrower pilot scope explicitly. The role
+should identify material coverage gaps while giving useful advice within that
+scope; a supplied proposal or earlier endorsement does not establish the goal.
 
 Choose a setup route before downloading: Codex supports a one-off CLI trial
 and manual persistent registration below; Claude Code uses project or personal
@@ -252,6 +256,13 @@ expert's documented work defines professional scope. The shared instruction
 requires declining out-of-expertise work, bounded handling of mixed requests,
 clarification where needed, independent challenge and transparent attribution.
 See the [metadata guide](../src/README.md#role-metadata-and-descriptions).
+The current [consultation candidate](current-work.md) also makes evidence
+requirements and assessment limits explicit. Review it in an isolated source
+preview; committed native files retain the last release until release preparation.
+The [Harbor suite](../tests/harbor/README.md) compares previous and candidate
+instructions in direct Codex sessions with explicit campaign settings. Local
+harness checks do not establish improved judgment, native role discovery or
+Claude runtime behavior.
 
 Consuming integrations own parent-level selection guidance: consider expert
 judgment when useful, handle routine work directly and choose a small set with
