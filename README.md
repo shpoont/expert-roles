@@ -94,7 +94,7 @@ or follow the [contribution guide](CONTRIBUTING.md) to submit a change.
 
 ## Versions and releases
 
-Library version: **1.3.0**.
+Library version: **1.4.0**.
 
 [Released versions](https://github.com/shpoont/expert-roles/releases) and the
 [changelog](CHANGELOG.md) track the library. Catalogues follow current sources;

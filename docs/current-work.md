@@ -2,8 +2,10 @@
 
 ## Current focus and status
 
-D075 applies the tested goal-coverage paragraph to the existing shared
-consultation draft. The increment preserves every previous instruction
+D077 prepares the v1.4.0 release from the accepted main source. It distributes
+the four research and discovery additions and the shared consultation repairs.
+D075 applied the tested goal-coverage paragraph to the existing shared
+consultation draft. That increment preserves every previous instruction
 paragraph and adds the tested 57 words verbatim. The combined source differs
 from the isolated instruction and has passed its own four fresh checks.
 
@@ -35,8 +37,9 @@ reproduce the source consultation issue and does not establish its repair.
 The earlier broad screening and grading remain archived; none replaces the
 current literal before/after comparison.
 
-Keep profiles, selection metadata, images, vocabulary, VERSION, committed dist,
-installations and published tags unchanged.
+Keep profiles, selection metadata, images, vocabulary, the accepted shared
+instruction, installations and existing published tags unchanged. D077 updates
+VERSION and committed dist through a separate release PR.
 
 ## Source PR closeout (D076)
 
@@ -50,28 +53,26 @@ the pinned adapter's environment metadata separately. The four saved D075
 conversations pass the stricter check with unchanged answers; no inference was
 rerun. All 103 offline tests, source/catalogue and ownership checks pass. The
 complete preview's local references pass, and all 72 native pairs match the
-reviewed instruction. Local branch review is complete; publication uses a signed
-topic-branch commit and source PR, with hosted checks verified against its head.
+reviewed instruction. [PR #17](https://github.com/shpoont/expert-roles/pull/17)
+was squash merged as `58963f5`; its exact-head workflow and validate check passed,
+as did the [resulting main checks](https://github.com/shpoont/expert-roles/actions/runs/41053842183).
 
-## Published baseline
+## Release baseline
 
-**v1.3.0 is published as the latest stable release.**
-[PR #14](https://github.com/shpoont/expert-roles/pull/14) was squash merged into
-[`29e7636`](https://github.com/shpoont/expert-roles/commit/29e763631d953be8fc36d9b48b042e7f88da3179)
-after completed successful [PR checks](https://github.com/shpoont/expert-roles/actions/runs/39846429359).
-The resulting main's [workflow](https://github.com/shpoont/expert-roles/actions/runs/39846714660)
-and separate validation check also completed successfully, including all
-72 tests and strict freshness of 141 generated files.
+**v1.4.0 contains 72 experts, 99 specialties in 15 groups and 144 native role files.**
+There are 54 generated portraits, five historical depictions and 13 placeholders.
+Existing expert identifiers, selection descriptions, formats and paths remain
+stable. The stricter shared instruction reinforces the existing expert contract;
+plain-language assignments remain valid.
 
-The locally verified signed annotated `v1.3.0` tag targets that main commit.
-Remote tag, latest stable [release](https://github.com/shpoont/expert-roles/releases/tag/v1.3.0),
-notes, VERSION and both native headers were read back. Earlier release tags
-were unchanged; release branches were removed and main was clean and synced.
-See the [publication evidence](../evidence/README.md#v130-publication--2026-10-22).
-
-The baseline contains **68 experts, 96 specialties in 14 groups**, 50 generated
-portraits, five historical depictions, 13 placeholders and 136 native role files.
-Source catalogues track current main independently of versioned native releases.
+The [release contract](design.md#release-expert-roles-v140) requires the full suite,
+strict generated freshness, native equality, preservation and preview checks.
+The release PR and resulting main workflow and validate check must all finish
+successfully before tagging. The matching
+[GitHub release](https://github.com/shpoont/expert-roles/releases/tag/v1.4.0)
+and annotated tag establish publication separately from this declared baseline.
+The earlier v1.3.0 publication remains in
+[evidence](../evidence/README.md#v130-publication--2026-10-22).
 
 ## Verification and handover
 
@@ -81,16 +82,19 @@ formats, fresh source catalogues, contribution ownership, the complete external
 preview's local references, UTF-8, public suitability and protected-content
 hashes. Review the entire proposed diff and inventory, including untracked files.
 
-## Next actions
+<a id="next-actions"></a>
 
-Owner review of the source PR and its exact-commit checks is the next checkpoint.
-Nonblocking
-follow-ups are a case that preserves the requested distinction under a different
+## Delivery and follow-ups
+
+D077 authorizes the release PR, merge and publication through the
+[release procedure](delivery.md#versions-and-releases). Hosted checks and the
+matching release record identify the actual remote state.
+Nonblocking follow-ups are a case that preserves the requested distinction under a different
 representation, and more explicit native-payload inspection guidance. The
 current source guide supplies the file locations and formats; automated parity
 was checked separately. Neither follow-up is a demonstrated prompt failure or
 part of the completed case set.
-Merging, release preparation, publication and installation remain separate.
+Installation remains separate from library publication.
 A separate plugin owns deployment and lifecycle. The behavioral checks use
 explicitly supplied Codex instructions; they do not validate Claude runtime,
 parent selection, installation or automatic directory discovery.
