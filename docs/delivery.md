@@ -3,11 +3,11 @@
 ## Review the catalogue
 
 Start at the [full catalogue](../src/roles/README.md), then open individual
-profiles and their Codex or Claude Code files. The v1.2.0 baseline contains
-68 profiles, 96 shared specialties in 14 groups and 136 native role files.
-It has 50 generated portraits, five original historical depictions and thirteen
-full-name placeholders. The eleven expert additions reviewed after v1.1.0
-are included; all previously accepted experts remain in the collection.
+profiles and their Codex or Claude Code files. The v1.4.0 baseline contains
+72 profiles, 99 shared specialties in 15 groups and 144 native role files.
+It has 54 generated portraits, five original historical depictions and thirteen
+full-name placeholders. Four research and customer-discovery experts join the
+previous v1.3.0 collection; all previously accepted experts remain included.
 
 Review images and their provenance using the
 [portrait workflow](elements/portraits.md). Historical depictions remain unchanged;
@@ -256,10 +256,10 @@ expert's documented work defines professional scope. The shared instruction
 requires declining out-of-expertise work, bounded handling of mixed requests,
 clarification where needed, independent challenge and transparent attribution.
 See the [metadata guide](../src/README.md#role-metadata-and-descriptions).
-The current [consultation candidate](current-work.md) also makes evidence
-requirements and assessment limits explicit. Review it in an isolated source
-preview; committed native files retain the last release until release preparation.
-The [Harbor suite](../tests/harbor/README.md) compares previous and candidate
+The accepted [consultation instruction](current-work.md) also makes evidence
+requirements and assessment limits explicit. Version 1.4.0 exports include it;
+later source contributions use isolated previews until their release preparation.
+The historical [Harbor suite](../tests/harbor/README.md) compares previous and candidate
 instructions in direct Codex sessions with explicit campaign settings. Local
 harness checks do not establish improved judgment, native role discovery or
 Claude runtime behavior.
@@ -322,7 +322,7 @@ Follow the [photo policy](../CONTRIBUTING.md#photo-sources-and-licenses) and
 
 ## Versions and releases
 
-Library version: **[v1.3.0](https://github.com/shpoont/expert-roles/releases/tag/v1.3.0)**.
+Library version: **[v1.4.0](https://github.com/shpoont/expert-roles/releases/tag/v1.4.0)**.
 The linked GitHub release records publication separately from the version declaration.
 One `MAJOR.MINOR.PATCH` version covers profiles, metadata, vocabulary, shared
 instructions, templates, tooling and both native formats. The consuming plugin
@@ -330,7 +330,7 @@ and other integrations keep independent histories. Individual experts and export
 formats do not have separate versions.
 
 The root [VERSION](../VERSION) file is the machine-readable source for export
-provenance, set to `1.3.0` for this baseline. Contributions leave it unchanged;
+provenance, set to `1.4.0` for this baseline. Contributions leave it unchanged;
 temporary previews use `0.0.0-preview` independently. A version header identifies
 a declared library version, not proof of publication or an
 exact content digest. Keep released tags fixed and use Git refs for snapshots.
@@ -350,7 +350,7 @@ The first stable baseline includes `dist/codex/expert-<slug>.toml` and
 A versioned export is not a broader host-compatibility or effectiveness claim.
 
 Preparation, local commits and publication follow the owner's current
-authorization. D064 authorizes v1.3.0 publication after the required gates;
+authorization. D077 authorizes v1.4.0 publication after the required gates;
 future releases need their
 own owner instruction. Complete the applicable steps below:
 
@@ -474,6 +474,25 @@ select an ancestor comparison `base` and enable `release` only for a prepared
 release. PR runs select that mode from the `release` label; main pushes select
 it when their diff changes `VERSION`. Adding or removing the label reruns checks.
 Source-only PR merges continue to pass while released artifacts lag behind.
+
+### v1.4.0 release baseline
+
+D077's [release contract](design.md#release-expert-roles-v140) covers the accepted
+main source after PR #17. The release adds Erika Hall, Steve Portigal, Caroline
+Jarrett and Rob Fitzpatrick, three specialties and the Research methods group.
+All 72 native pairs include the shared professional-scope and goal-coverage
+repairs, with `1.4.0` provenance. Names, selection descriptions, formats and paths
+remain stable; no mandatory brief schema is introduced. Ordinary source PRs
+remain separate from release preparation.
+
+The 1.4.0 minor increment treats these as compatible additions and corrections to
+the existing role contract. Behavioral evidence remains bounded to the recorded
+cases and models, including a reconstructed incident; it does not establish
+general expert reliability, Claude runtime behavior or installation success.
+The full offline suite, strict generated/native checks, source preservation,
+preview references and exact-head PR/main hosted checks are publication gates.
+Use the matching [release record](https://github.com/shpoont/expert-roles/releases/tag/v1.4.0)
+and tag to verify actual publication; a version declaration alone is insufficient.
 
 ### v1.3.0 release baseline
 

@@ -5,6 +5,15 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+## v1.4.0 — 2026-10-30
+
+Four new experts and stronger handling of professional scope, missing evidence
+and proposal coverage. The collection now has 72 experts, 99 specialties in
+15 groups and 144 native role files. Existing names, selection descriptions,
+formats and paths are preserved; all role instructions gain the accepted shared
+repairs. These reinforce the existing expert contract and accept ordinary prose
+or structured briefs without a mandatory input schema.
+
 ### Added
 
 - Add the historical 24-case Harbor comparison fixtures across four experts,
@@ -59,6 +68,16 @@ Record meaningful changes by version under the
   Include public ruleset JSON in the generated review preview.
 - Keep active agent instructions focused on durable policy and linked guides;
   close out v1.3.0 with verified publication evidence.
+
+### Validation and limits
+
+All 103 offline tests and strict freshness of 149 generated outputs pass.
+Both hosts match the accepted shared instruction for all 72 experts; names,
+selection descriptions and settings for the 68 previously released experts are
+unchanged. Canonical expert content, visuals, vocabulary and instruction source
+are preserved from accepted main. Behavioral evidence covers the recorded
+scope and reconstructed goal-coverage cases; it does not establish general
+reliability, Claude runtime behavior or consumer installation success.
 
 ## v1.3.0 — 2026-10-22
 

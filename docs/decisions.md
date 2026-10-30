@@ -1599,3 +1599,23 @@ validation remain separate from this addition.
 - **Boundary:** No new participant or judge campaign, regrading, role change,
   release-owned edit, installation or tag change. Merging and releasing require
   separate decisions. See the [closeout contract](design.md#source-pull-request-closeout).
+
+## D077 — 2026-10-30: Publish the compatible v1.4.0 baseline
+
+- **Status:** Owner-authorized release preparation, PR merge and publication,
+  subject to the existing local and exact-commit hosted gates.
+- **Decision:** Release the accepted main source as v1.4.0 through a separate
+  signed release PR. Include four new experts, the shared consultation repairs,
+  retained historical evaluation fixtures and release safeguards since v1.3.0.
+- **Rationale:** The owner prefers a 1.x release. Existing expert scope, independent
+  judgment, identifiers, native formats and consumption paths remain the contract;
+  the changes reinforce that behavior and add compatible expert perspectives.
+  Release notes must make the stricter request handling and bounded evidence clear.
+- **Acceptance:** Preserve accepted canonical content and existing selection
+  metadata; regenerate all 72 native pairs with matching version provenance; run
+  the full suite, strict release/native/preview checks and staged public-content
+  review. Require successful exact-head PR and main workflow/validate checks,
+  then verify the signed annotated tag and latest stable GitHub release.
+- **Boundary:** No new behavioral campaign, installation, integration update or
+  modification of existing release tags. Follow the
+  [release contract](design.md#release-expert-roles-v140).

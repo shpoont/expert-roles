@@ -8,14 +8,14 @@ documented work.
 [Other formats](../README.md) · [Setup guide](../../docs/delivery.md#use-a-native-role) ·
 [Full catalogue](../../src/roles/README.md)
 
-**68 role files.** Each expert has one file in this directory.
+**72 role files.** Each expert has one file in this directory.
 An expert may appear under several specialties below.
 
 For programmatic imports, select `expert-*.md` files.
 
 [By name](#by-name) · [By specialty](#by-specialty)
 
-Jump to a specialty group: [Animal behavior](#animal-behavior) · [Computing](#computing) · [Design](#design) · [Engineering](#engineering) · [Finance](#finance) · [Law](#law) · [Management](#management) · [Marketing](#marketing) · [Medicine](#medicine) · [Natural sciences](#natural-sciences) · [Philosophy](#philosophy) · [Psychology](#psychology) · [Sales](#sales) · [Systems science](#systems-science)
+Jump to a specialty group: [Animal behavior](#animal-behavior) · [Computing](#computing) · [Design](#design) · [Engineering](#engineering) · [Finance](#finance) · [Law](#law) · [Management](#management) · [Marketing](#marketing) · [Medicine](#medicine) · [Natural sciences](#natural-sciences) · [Philosophy](#philosophy) · [Psychology](#psychology) · [Research methods](#research-methods) · [Sales](#sales) · [Systems science](#systems-science)
 
 ## By name
 
@@ -34,6 +34,7 @@ Use your browser's Find (Cmd+F or Ctrl+F) to find a known expert.
 | [Benjamin Gomes-Casseres](../../src/roles/benjamin-gomes-casseres/README.md) | [expert-benjamin-gomes-casseres.md](expert-benjamin-gomes-casseres.md) |
 | [Bill Gates](../../src/roles/bill-gates/README.md) | [expert-bill-gates.md](expert-bill-gates.md) |
 | [Bill Price](../../src/roles/bill-price/README.md) | [expert-bill-price.md](expert-bill-price.md) |
+| [Caroline Jarrett](../../src/roles/caroline-jarrett/README.md) | [expert-caroline-jarrett.md](expert-caroline-jarrett.md) |
 | [Chip Huyen](../../src/roles/chip-huyen/README.md) | [expert-chip-huyen.md](expert-chip-huyen.md) |
 | [Confucius](../../src/roles/confucius/README.md) | [expert-confucius.md](expert-confucius.md) |
 | [Daniel Jackson](../../src/roles/daniel-jackson/README.md) | [expert-daniel-jackson.md](expert-daniel-jackson.md) |
@@ -48,6 +49,7 @@ Use your browser's Find (Cmd+F or Ctrl+F) to find a known expert.
 | [Ellen Lupton](../../src/roles/ellen-lupton/README.md) | [expert-ellen-lupton.md](expert-ellen-lupton.md) |
 | [Epictetus](../../src/roles/epictetus/README.md) | [expert-epictetus.md](expert-epictetus.md) |
 | [Eric Evans](../../src/roles/eric-evans/README.md) | [expert-eric-evans.md](expert-eric-evans.md) |
+| [Erika Hall](../../src/roles/erika-hall/README.md) | [expert-erika-hall.md](expert-erika-hall.md) |
 | [Geoffrey Moore](../../src/roles/geoffrey-moore/README.md) | [expert-geoffrey-moore.md](expert-geoffrey-moore.md) |
 | [Hau Lee](../../src/roles/hau-lee/README.md) | [expert-hau-lee.md](expert-hau-lee.md) |
 | [Immanuel Kant](../../src/roles/immanuel-kant/README.md) | [expert-immanuel-kant.md](expert-immanuel-kant.md) |
@@ -80,6 +82,7 @@ Use your browser's Find (Cmd+F or Ctrl+F) to find a known expert.
 | [Pieter Levels](../../src/roles/pieter-levels/README.md) | [expert-pieter-levels.md](expert-pieter-levels.md) |
 | [Richard Feynman](../../src/roles/richard-feynman/README.md) | [expert-richard-feynman.md](expert-richard-feynman.md) |
 | [Richard Susskind](../../src/roles/richard-susskind/README.md) | [expert-richard-susskind.md](expert-richard-susskind.md) |
+| [Rob Fitzpatrick](../../src/roles/rob-fitzpatrick/README.md) | [expert-rob-fitzpatrick.md](expert-rob-fitzpatrick.md) |
 | [Robert S. Kaplan](../../src/roles/robert-kaplan/README.md) | [expert-robert-kaplan.md](expert-robert-kaplan.md) |
 | [Roger Fisher](../../src/roles/roger-fisher/README.md) | [expert-roger-fisher.md](expert-roger-fisher.md) |
 | [Ross Anderson](../../src/roles/ross-anderson/README.md) | [expert-ross-anderson.md](expert-ross-anderson.md) |
@@ -87,6 +90,7 @@ Use your browser's Find (Cmd+F or Ctrl+F) to find a known expert.
 | [Socrates](../../src/roles/socrates/README.md) | [expert-socrates.md](expert-socrates.md) |
 | [Steve Blank](../../src/roles/steve-blank/README.md) | [expert-steve-blank.md](expert-steve-blank.md) |
 | [Steve Jobs](../../src/roles/steve-jobs/README.md) | [expert-steve-jobs.md](expert-steve-jobs.md) |
+| [Steve Portigal](../../src/roles/steve-portigal/README.md) | [expert-steve-portigal.md](expert-steve-portigal.md) |
 | [Taiichi Ohno](../../src/roles/taiichi-ohno/README.md) | [expert-taiichi-ohno.md](expert-taiichi-ohno.md) |
 | [Tomáš Baťa](../../src/roles/tomas-bata/README.md) | [expert-tomas-bata.md](expert-tomas-bata.md) |
 | [W. Edwards Deming](../../src/roles/w-edwards-deming/README.md) | [expert-w-edwards-deming.md](expert-w-edwards-deming.md) |
@@ -137,12 +141,13 @@ in [By name](#by-name) or compare experts in the [full catalogue](../../src/role
 | Contextual design | <a id="specialty-contextual-design"></a>[Karen Holtzblatt](expert-karen-holtzblatt.md) |
 | Graphic design | <a id="specialty-graphic-design"></a>[Ellen Lupton](expert-ellen-lupton.md) |
 | Heuristic evaluation | <a id="specialty-heuristic-evaluation"></a>[Jakob Nielsen](expert-jakob-nielsen.md) |
-| Human-centered design | <a id="specialty-human-centered-design"></a>[Don Norman](expert-don-norman.md) — the relationship between people's expectations and a product's conceptual models, discoverability, feedback and errors.<br><br>[Karen Holtzblatt](expert-karen-holtzblatt.md) — people's real work and wider activities as the basis for contextual research, product requirements and design. |
-| Human-computer interaction | <a id="specialty-human-computer-interaction"></a>[Alan Cooper](expert-alan-cooper.md) — user goals, personas and scenarios as foundations for coherent product behavior and interaction workflows.<br><br>[Don Norman](expert-don-norman.md) — the relationship between people's expectations and a product's conceptual models, discoverability, feedback and errors.<br><br>[Jakob Nielsen](expert-jakob-nielsen.md) — usability problems in interfaces, heuristic evaluation and evidence from user testing.<br><br>[Karen Holtzblatt](expert-karen-holtzblatt.md) — people's real work and wider activities as the basis for contextual research, product requirements and design.<br><br>[Léonie Watson](expert-leonie-watson.md) — inclusive interaction and the practical experience of keyboard and assistive-technology users. |
+| Human-centered design | <a id="specialty-human-centered-design"></a>[Don Norman](expert-don-norman.md) — the relationship between people's expectations and a product's conceptual models, discoverability, feedback and errors.<br><br>[Erika Hall](expert-erika-hall.md) — research questions, method choice and assumptions that connect evidence about people to design decisions.<br><br>[Karen Holtzblatt](expert-karen-holtzblatt.md) — people's real work and wider activities as the basis for contextual research, product requirements and design. |
+| Human-computer interaction | <a id="specialty-human-computer-interaction"></a>[Alan Cooper](expert-alan-cooper.md) — user goals, personas and scenarios as foundations for coherent product behavior and interaction workflows.<br><br>[Caroline Jarrett](expert-caroline-jarrett.md) — how people interpret and answer questions, including survey error, questionnaire design and usable forms.<br><br>[Don Norman](expert-don-norman.md) — the relationship between people's expectations and a product's conceptual models, discoverability, feedback and errors.<br><br>[Jakob Nielsen](expert-jakob-nielsen.md) — usability problems in interfaces, heuristic evaluation and evidence from user testing.<br><br>[Karen Holtzblatt](expert-karen-holtzblatt.md) — people's real work and wider activities as the basis for contextual research, product requirements and design.<br><br>[Léonie Watson](expert-leonie-watson.md) — inclusive interaction and the practical experience of keyboard and assistive-technology users. |
 | Interaction design | <a id="specialty-interaction-design"></a>[Alan Cooper](expert-alan-cooper.md) |
 | Product design | <a id="specialty-product-design"></a>[Marty Cagan](expert-marty-cagan.md) — product discovery, empowered product teams and the leadership practices that connect customer problems with viable technology products.<br><br>[Steve Jobs](expert-steve-jobs.md) — product focus, simplicity and coherence across the complete hardware, software and customer experience. |
 | Typography | <a id="specialty-typography"></a>[Ellen Lupton](expert-ellen-lupton.md) |
 | Usability engineering | <a id="specialty-usability-engineering"></a>[Jakob Nielsen](expert-jakob-nielsen.md) |
+| User research | <a id="specialty-user-research"></a>[Erika Hall](expert-erika-hall.md) — research questions, method choice and assumptions that connect evidence about people to design decisions.<br><br>[Steve Portigal](expert-steve-portigal.md) — qualitative interviews, fieldwork and synthesis that reveal people's experiences and make research findings useful. |
 | Web accessibility | <a id="specialty-web-accessibility"></a>[Léonie Watson](expert-leonie-watson.md) |
 
 ### Engineering
@@ -180,10 +185,10 @@ in [By name](#by-name) or compare experts in the [full catalogue](../../src/role
 | --- | --- |
 | Business process reengineering | <a id="specialty-business-process-reengineering"></a>[Michael Hammer](expert-michael-hammer.md) |
 | Critical Chain project management | <a id="specialty-critical-chain-project-management"></a>[Eliyahu Goldratt](expert-eliyahu-goldratt.md) |
-| Customer development | <a id="specialty-customer-development"></a>[Steve Blank](expert-steve-blank.md) |
+| Customer development | <a id="specialty-customer-development"></a>[Rob Fitzpatrick](expert-rob-fitzpatrick.md) — specific past customer behavior, questions that reduce bias and evidence of commitment rather than compliments about a proposed product.<br><br>[Steve Blank](expert-steve-blank.md) — customer and business-model assumptions, evidence from customer discovery and the search for a repeatable business model. |
 | Customer service | <a id="specialty-customer-service"></a>[Bill Price](expert-bill-price.md) |
 | Effectuation | <a id="specialty-effectuation"></a>[Saras Sarasvathy](expert-saras-sarasvathy.md) |
-| Entrepreneurship | <a id="specialty-entrepreneurship"></a>[Bill Gates](expert-bill-gates.md) — software platforms, developer ecosystems and the technical and business choices involved in responding to major technology shifts.<br><br>[Jeff Bezos](expert-jeff-bezos.md) — customer-focused invention, long-term investment and organizational mechanisms that distinguish reversible decisions from consequential commitments.<br><br>[Pieter Levels](expert-pieter-levels.md) — bootstrapped internet businesses, rapid product launches, low operating costs and automation by small teams or solo founders.<br><br>[Saras Sarasvathy](expert-saras-sarasvathy.md) — venture creation under uncertainty through available means, affordable loss and stakeholder commitments.<br><br>[Steve Blank](expert-steve-blank.md) — customer and business-model assumptions, evidence from customer discovery and the search for a repeatable business model.<br><br>[Steve Jobs](expert-steve-jobs.md) — product focus, simplicity and coherence across the complete hardware, software and customer experience.<br><br>[Tomáš Baťa](expert-tomas-bata.md) — autonomous workshops, economic accountability, profit sharing and employee development as foundations for enterprise growth. |
+| Entrepreneurship | <a id="specialty-entrepreneurship"></a>[Bill Gates](expert-bill-gates.md) — software platforms, developer ecosystems and the technical and business choices involved in responding to major technology shifts.<br><br>[Jeff Bezos](expert-jeff-bezos.md) — customer-focused invention, long-term investment and organizational mechanisms that distinguish reversible decisions from consequential commitments.<br><br>[Pieter Levels](expert-pieter-levels.md) — bootstrapped internet businesses, rapid product launches, low operating costs and automation by small teams or solo founders.<br><br>[Rob Fitzpatrick](expert-rob-fitzpatrick.md) — specific past customer behavior, questions that reduce bias and evidence of commitment rather than compliments about a proposed product.<br><br>[Saras Sarasvathy](expert-saras-sarasvathy.md) — venture creation under uncertainty through available means, affordable loss and stakeholder commitments.<br><br>[Steve Blank](expert-steve-blank.md) — customer and business-model assumptions, evidence from customer discovery and the search for a repeatable business model.<br><br>[Steve Jobs](expert-steve-jobs.md) — product focus, simplicity and coherence across the complete hardware, software and customer experience.<br><br>[Tomáš Baťa](expert-tomas-bata.md) — autonomous workshops, economic accountability, profit sharing and employee development as foundations for enterprise growth. |
 | Human resource management | <a id="specialty-human-resource-management"></a>[Dave Ulrich](expert-dave-ulrich.md) |
 | Lean manufacturing | <a id="specialty-lean-manufacturing"></a>[Taiichi Ohno](expert-taiichi-ohno.md) |
 | Logistics | <a id="specialty-logistics"></a>[Hau Lee](expert-hau-lee.md) |
@@ -250,6 +255,13 @@ in [By name](#by-name) or compare experts in the [full catalogue](../../src/role
 | Operant conditioning | <a id="specialty-operant-conditioning"></a>[David Premack](expert-david-premack.md) |
 | Personality psychology | <a id="specialty-personality-psychology"></a>[Jordan Peterson](expert-jordan-peterson.md) |
 | Psychological safety | <a id="specialty-psychological-safety"></a>[Amy Edmondson](expert-amy-edmondson.md) |
+
+### Research methods
+
+| Specialty | Role files |
+| --- | --- |
+| Qualitative research | <a id="specialty-qualitative-research"></a>[Steve Portigal](expert-steve-portigal.md) |
+| Survey methodology | <a id="specialty-survey-methodology"></a>[Caroline Jarrett](expert-caroline-jarrett.md) |
 
 ### Sales
 

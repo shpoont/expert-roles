@@ -43,6 +43,45 @@ tree; maintainers update dist and versions during release preparation.
 
 ## Implementation contract
 
+### Release Expert Roles v1.4.0
+
+D077 authorizes a separate release PR, its merge after successful exact-head
+checks, and publication after successful checks on the resulting main commit.
+Prepare v1.4.0 from the accepted source at `58963f5`, including the four research
+and discovery experts, the consultation repairs, historical evaluation fixtures
+and release safeguards delivered since v1.3.0.
+
+Use a minor increment: the four experts are compatible additions and the shared
+instruction reinforces the existing professional-scope and independent-judgment
+contract. It introduces no mandatory input schema, renamed expert, changed native
+format or moved export path. Explain the stricter handling of requests in release
+notes rather than implying unchanged generated instructions or general reliability.
+The owner prefers this release to remain in the 1.x series.
+
+Set VERSION to `1.4.0`, finalize the dated changelog while preserving Unreleased
+and all earlier dated entries, and refresh current version/status references.
+Generate all 144 native role files and their indexes with `--release`. Preserve
+every profile, image, metadata record, specialty, shared instruction, generator,
+test implementation and license from the accepted source. Every native body must
+match that source, and the 68 previously released experts must retain their names,
+selection descriptions, settings and stable paths. Eight new files distribute the
+four accepted additions. The resulting baseline has 72 experts, 99 specialties
+in 15 groups, 54 generated portraits, five historical depictions and 13 placeholders.
+
+Run all 103 offline tests, source and catalogue validation, strict freshness of
+149 generated outputs, release ownership against main, native parsing/parity,
+complete-preview references, UTF-8/public suitability and the complete staged diff.
+Retain the reconstructed-case limits and existing behavioral results; no new
+participant or judge runs, installations or consumer updates are included.
+
+Create a signed commit on `release/v1.4.0`, use the release preflight/push helper,
+and submit a PR labeled `release`. Require the completed successful workflow and
+validate check for its exact head and for the resulting main commit. Only then
+create and verify the signed annotated `v1.4.0` tag, push that tag explicitly, and
+publish the matching stable GitHub release as Latest. Read back the remote tag,
+release notes, VERSION and representative native files; preserve all prior tags
+and remove the merged release branch. GitHub source archives are the artifacts.
+
 ### Expertise boundary repair
 
 D072 applies the focused repair cycle to a retained, unambiguous scope failure:

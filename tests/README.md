@@ -334,7 +334,18 @@ before handover; source validity alone does not establish a good presentation.
 
 ## Release checks
 
-D064's [v1.3.0 contract](../docs/design.md#release-expert-roles-v130) requires
+D077's [v1.4.0 contract](../docs/design.md#release-expert-roles-v140) requires
+all 103 offline tests, source/catalogue validation, strict freshness of 149
+generated outputs and release ownership against current main. Preserve all
+accepted canonical expert content, images, metadata, vocabulary, the shared
+instruction and tooling. Every one of the 72 native pairs must match the source;
+the 68 previously released experts retain their names, descriptions, settings
+and stable paths. Their instruction changes are intentional. Check 1.4.0
+provenance, preview references, public suitability and the complete staged diff.
+Require completed successful exact-commit workflow and validate checks on the
+release PR and resulting main before tagging. No new model calls are required.
+
+The previous D064 [v1.3.0 contract](../docs/design.md#release-expert-roles-v130) required
 all 72 tests, source and catalogue validation, strict freshness of 141 generated
 outputs and release ownership against current main. Preserve all expert source
 bytes and all 136 parsed native payloads against v1.2.0; verify `1.3.0` comments,

@@ -9,6 +9,34 @@ Connect evidence to [current work](../docs/current-work.md),
 [decisions](../docs/decisions.md), [checks](../tests/README.md) and
 [delivery](../docs/delivery.md).
 
+## v1.4.0 release preparation — 2026-10-30
+
+D077 prepares the accepted `58963f5` source as v1.4.0 through a separate release
+PR. Four accepted additions bring the collection to 72 experts, 99 specialties
+in 15 groups, 54 generated portraits, five historical depictions and 13 name
+placeholders. All 144 native files now carry `1.4.0` provenance and the accepted
+shared instruction; the distribution indexes include all 72 experts.
+
+All 103 offline tests pass. Source validation and release ownership pass, with
+all 149 generated outputs matching their sources. Independent parsing confirms
+72 matching Codex/Claude instruction pairs. The 68 previously released experts
+retain their names, descriptions, settings and paths; their shared instruction
+updates are intentional. All 268 protected files outside the declared release
+outputs and current documentation retain their bytes. Earlier dated changelog
+entries are unchanged. The initial preview check found three historical links
+to the renamed current-work heading; its existing `next-actions` anchor is
+retained. Complete final-preview references remain a publication gate.
+
+No participant conversations, model judges, portrait generation or installations
+were run during release preparation. The earlier
+[behavioral evidence](#goal-coverage-repair-and-application--2026-10-29) retains
+its reconstruction, sample and model limits; offline checks do not expand it.
+The [release procedure](../docs/delivery.md#versions-and-releases) requires a
+signed commit, completed successful exact-head PR and main workflow/validate
+checks, and verification of the signed annotated tag and matching
+[GitHub release](https://github.com/shpoont/expert-roles/releases/tag/v1.4.0).
+Those remote records establish publication separately from these local results.
+
 ## Source PR review and collection checks — 2026-10-30
 
 D076 reviews the complete branch, including the historical Harbor fixtures and

@@ -18,19 +18,18 @@ roster changes.
 
 ## Scope and expectations
 
-The published v1.3.0 baseline contains 68 experts, 96 specialties in 14 groups,
-50 generated portraits, five original historical depictions and 13 full-name
-placeholders. That baseline includes eleven reviewed expert additions.
-Current sources can include unreleased additions; see the
-[source catalogue](src/roles/README.md) for the current collection.
+The v1.4.0 release baseline contains 72 experts, 99 specialties in 15 groups,
+54 generated portraits, five original historical depictions and 13 full-name
+placeholders. It includes four research and customer-discovery experts added
+since v1.3.0. See the [source catalogue](src/roles/README.md) for the collection.
 Every source profile has
 canonical metadata, a short human-readable README and one square visual.
 The adopted [studio-v1 method](docs/elements/portraits.md) is retained.
 Previews generate a Codex and Claude Code file for every source profile, with
 alphabetical and specialty indexes that link to stable, unduplicated paths.
-Version v1.3.0's `dist/` files and tagged source catalogues cover all 68 experts, as
-did the previous v1.2.0 release. The
-[release record](https://github.com/shpoont/expert-roles/releases/tag/v1.3.0)
+Version v1.4.0's `dist/` files and source catalogues cover all 72 experts; the
+previous v1.3.0 release covered 68. The
+[release record](https://github.com/shpoont/expert-roles/releases/tag/v1.4.0)
 establishes hosted publication separately from the version declaration.
 Portrait acceptance is an editorial decision;
 structural validity does not establish likeness. Future additions follow the
@@ -60,7 +59,7 @@ closeout; earlier additions and their checks remain in the
 
 Names, specialties and optional perspective cues guide role selection. One
 shared instruction defines professional scope, clarification, independent
-judgment and attribution. D066 proposes a source candidate to withhold unsupported
+judgment and attribution. D066 introduced a source candidate to withhold unsupported
 conclusions, complete independent requested parts and state assessment limits.
 D070 ties further refinement to source-backed incident reproduction rather than
 treating the broad screening as evidence that the original failures were fixed.
@@ -75,7 +74,8 @@ unchanged exports. Automatic directory discovery remains unresolved. Claude
 files have structural checks but no runtime validation. These observations do
 not establish broad selection reliability or comparative expert benefit.
 
-- **Current status and boundary:** v1.3.0 remains the published baseline.
+- **Current status and boundary:** D077 prepares v1.4.0 from the accepted main
+  source after PR #17 was squash merged with successful exact-commit hosted checks.
   D075 applies the tested proposal-goal coverage paragraph to the existing
   consultation draft while preserving its safeguards. The isolated repair
   passed two source-case repetitions and two follow-up checks; the combined
@@ -89,10 +89,10 @@ not establish broad selection reliability or comparative expert benefit.
   See the [contract](docs/design.md#goal-coverage-in-proposal-reviews) and
   [bounded evidence](evidence/README.md#goal-coverage-repair-and-application--2026-10-29).
   D071–D074 retain their historical results; the software/dinner scope example
-  does not reproduce the source consultation issue. Preserve VERSION,
-  committed dist, profiles, selection metadata, vocabulary, images and
-  installations. D076 authorizes final branch review, a signed source commit,
-  topic-branch push and a PR. Merging, releasing and deployment remain separate.
+  does not reproduce the source consultation issue. D077 authorizes versioned
+  export regeneration, a separate release PR, its merge and publication after
+  the required gates. Preserve all accepted canonical sources and existing
+  selection metadata. Installation and deployment remain separate.
 - **Delivery acceptance:** the catalogue, profiles, contribution process, image
   policy, source schema and usage guidance agree with the initial collection
   and accurately state host-validation limits.
@@ -160,10 +160,10 @@ This repository follows [Project Structure v1.0.0](https://github.com/shpoont/pr
 commit `96fdd6bd7950778f5b6c6f8269ab2b82167cb99a`. Expert sources live under
 `src/`; the full catalogue is generated in `src/roles/README.md`, with a fixed
 six-expert showcase and generated count in the main README. Ready-to-use
-exports and their indexes live under `dist/`. Library version `1.3.0` is
+exports and their indexes live under `dist/`. Library version `1.4.0` is
 independent of the starter and consuming integrations. The canonical `VERSION`
-file and both hosts' provenance comments use `1.3.0`.
-The [versioned release record](https://github.com/shpoont/expert-roles/releases/tag/v1.3.0)
+file and both hosts' provenance comments use `1.4.0`.
+The [versioned release record](https://github.com/shpoont/expert-roles/releases/tag/v1.4.0)
 and annotated tag establish publication separately from those declarations.
 The previous v1.2.0 tag remains fixed at
 `c493c44bd14c7a54adce74f10bb6ea3c5bfd7359`. See the

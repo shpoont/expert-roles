@@ -5,7 +5,7 @@
 These roles are independent AI interpretations inspired by experts' publicly
 documented work.
 
-**68 experts · two native formats**
+**72 experts · two native formats**
 
 Choose a host to browse role files alphabetically or by specialty:
 
