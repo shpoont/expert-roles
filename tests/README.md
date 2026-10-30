@@ -3,6 +3,123 @@
 Checks follow the [project expectations](../PROJECT.md#scope-and-expectations)
 and [implementation contract](../docs/design.md#implementation-contract).
 
+## Goal-coverage application (D075)
+
+The [current contract](../docs/design.md#goal-coverage-in-proposal-reviews) adds
+the exact tested proposal-review paragraph to the existing shared instruction.
+Preserve all previous paragraphs and the ordinary prose/structured-brief input
+contract. Confirm that both native formats render the combined source exactly,
+with unchanged selection metadata and provenance fields.
+
+Do not inherit the isolated repair's result as integration proof. Run two fresh
+conversations on the unchanged approved reconstructed source case, then the
+explicitly narrowed pilot and a new survey-review analogy, using the actual
+shared source. Keep GPT-6.1 Sol max, the existing Codex login and local Harbor
+Docker, one conversation at a time, with no retry or model judge. Review actual
+answers against the frozen rules; stop on a failure or execution error.
+
+A valid repair names material lost coverage while retaining useful expert
+assessment. It may support a smaller first proposal with explicit limits. The
+pilot control must respect the user's narrower assignment. The survey case must
+distinguish buyers from people who actually abandon checkout, without treating
+prior agreement as evidence of coverage. These checks are bounded examples,
+not a general reliability estimate or a Claude runtime qualification.
+The source-based materials and raw trajectories are private and remain outside
+Git. This section specifies the assessment, not a public replay dataset.
+
+Run the full offline suite, source validation, read-only catalogue freshness,
+contribution ownership, native syntax/equality and the complete external
+preview's link/image/anchor checks. Review UTF-8, public suitability, protected
+files, complete diff and untracked inventory. Preserve VERSION and dist.
+See the [results and limits](../evidence/README.md#goal-coverage-repair-and-application--2026-10-29).
+
+## Expertise boundary repair (D072)
+
+This historical [repair contract](../docs/design.md#expertise-boundary-repair) keeps
+the two requests from a recorded software-role failure unchanged. Verify that
+the original answers useful software work but supplies a dinner menu when
+pressed; the repaired role must keep the useful software review and decline
+unrelated work through the follow-up. Blanket refusal is not a passing fix.
+Preserve the released original, one-guard repair and current-draft integration
+as separate conditions with their actual native inputs and all outcomes.
+The approved eight-conversation cap and reproduction gates apply; no model
+judge or generic quality score substitutes for the literal behavioral evidence.
+
+D074 retains those before results and tests one consolidated early scope check
+in up to four new Luna-low conversations. Prompts and requirements are unchanged;
+review every literal answer before opening the next batch. Stop on failure and
+integrate only after all four pass, then verify exact native export parity and
+the normal repository checks. A later refusal does not erase an initial menu.
+
+## Focused incident repair (D071)
+
+The earlier workflow followed the
+[repair contract](../docs/design.md#focused-incident-repair-cycle).
+Choose one observed failure and freeze its input and pass/fail rule. Run the
+current instruction first; edit it only after that failure reproduces. Compare
+fresh before/after answers on unchanged cases. Include a genuine user-authorized
+constraint and a transfer check so opposition or a memorized phrase cannot
+masquerade as a repair. Stop an unreproduced cycle without manufacturing failure.
+
+Review the literal answers against the frozen rule and show the evidence.
+Technical file-integrity rewards, model-review agreement and generic quality
+scores do not establish a repair. Keep the private source material and raw
+trajectories outside the repository. Reuse the existing Harbor builder and
+collector, with explicit model/effort/authentication and attempt bounds before
+inference; no separately invoked model judge is used for the first cycle.
+After an instruction change, run the normal source/export and regression checks.
+
+The D066–D070 sections below describe the historical preparation and screening.
+Their broad campaign is no longer the active process.
+
+## Consultation instruction candidate (D066)
+
+For the [concise candidate](../docs/design.md#concise-expert-consultation-instruction),
+run the existing full suite, source/catalogue validation, contribution ownership
+and external preview reference checks. Confirm that every Codex and Claude pair
+contains the same rendered instruction and unchanged selection metadata. Preserve
+VERSION, committed dist, expert profiles, images, vocabulary and existing tags.
+These checks do not test whether a model follows the instruction.
+
+The [Harbor comparison suite](harbor/README.md) (D067) freezes the previous
+instruction and creates 24 cases across Fowler, Jarrett, Goldratt and Huyen.
+It covers valid explanations and reviews, independent mixed-request parts,
+evidence gaps, out-of-expertise work, forced conclusions, legitimate constraints
+and goal changes, unavailable resources, context loss, clarification and
+cancellation. Eight boundary probes add misleading handoffs, embedded document
+instructions, escalating pressure, coercive formats, adjacent scope mismatches,
+inadequate briefs, hypotheticals and excluded partial work. Prompts retain
+necessary facts and constraints without announcing the correct response.
+It prepares identical-input comparisons, calibrated blinded model
+judging and audit samples. Measure wrong acceptance, wrong refusal, substantive
+answer quality, continuity and critical errors separately. Missing or failed
+trials stay unscored. D068's authorized live campaign uses Sol low, Sol medium
+and Luna high with Astra high judging. Keep its current results and limits in
+[evidence](../evidence/README.md), separately from the offline harness checks.
+D069 permits the two failed-judge retries and a uniform grading-only correction
+for the mixed-scope software case. Preserve recorded participant behavior and
+historical grades; validate new judge receipts and keep the correction's
+calibration, audit checks and score changes explicit.
+D070's source-case comparison subsequently uses owner-selected Sol high for
+complete regrading of both versions, with unchanged participant answers. See
+the [regrading record](../evidence/README.md#source-case-regrading-with-gpt-61-sol--2026-10-28)
+for coverage, repeat disagreements and limits; the earlier campaign remains
+an Astra-judged historical result.
+
+`test_harbor.py` runs offline in the normal suite without Harbor, Docker or model
+calls. It checks pairing, frozen inputs, protected-log extraction, file arrival,
+grading contracts, calibration gates, error handling and audit disagreements,
+plus five-turn resumed history, the actual injected-document fixture and
+non-root UID handling for writable resumed logs. File-backed calibration
+packets must preserve the same supplied documents as participant packets and
+any recorded tool evidence needed to support a known-good answer's action
+claims; an offline regression checks that evidence transfer explicitly.
+Collection also rejects changed internal prompt whitespace and undeclared task
+messages. The pinned adapter's environment metadata is validated separately,
+preserved through resumed history and included in paired-setting checks.
+Optional Harbor lint, dry runs and scripted oracle/nop Docker smoke checks
+validate installed interfaces and artifact paths; they do not test expert behavior.
+
 ## Contribution and release boundaries (D056)
 
 Use the [source commands](../src/README.md#generate-the-catalogue-and-native-files).

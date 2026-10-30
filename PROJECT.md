@@ -60,8 +60,11 @@ closeout; earlier additions and their checks remain in the
 
 Names, specialties and optional perspective cues guide role selection. One
 shared instruction defines professional scope, clarification, independent
-judgment and attribution. Roles decline tasks outside documented expertise,
-handle only relevant parts of mixed requests and challenge forced conclusions
+judgment and attribution. D066 proposes a source candidate to withhold unsupported
+conclusions, complete independent requested parts and state assessment limits.
+D070 ties further refinement to source-backed incident reproduction rather than
+treating the broad screening as evidence that the original failures were fixed.
+Roles decline tasks outside documented expertise and challenge forced conclusions
 or suppression of expertise. Specialty labels are nonexhaustive. Profiles,
 references and visuals support human browsing and are not injected into the
 execution instruction. No detailed per-expert brief is required.
@@ -72,16 +75,24 @@ unchanged exports. Automatic directory discovery remains unresolved. Claude
 files have structural checks but no runtime validation. These observations do
 not establish broad selection reliability or comparative expert benefit.
 
-- **Current status and boundary:** v1.3.0 is published after completed PR and
-  main checks; its signed annotated tag targets `29e7636`. D065 now covers the
-  selected release safeguards and concise agent guidance under its
-  [contract](docs/design.md#release-safeguards-and-concise-agent-guidance).
-  VERSION, all 136 native files and existing release tags stay unchanged in
-  this source/process improvement. No new release is authorized.
-  Preserve expert content, native descriptions and instruction bodies.
-  Installation, integration and role invocation remain separate. Earlier
-  portrait, provenance and release decisions and their observed results remain
-  in [decisions](docs/decisions.md) and [evidence](evidence/README.md).
+- **Current status and boundary:** v1.3.0 remains the published baseline.
+  D075 applies the tested proposal-goal coverage paragraph to the existing
+  consultation draft while preserving its safeguards. The isolated repair
+  passed two source-case repetitions and two follow-up checks; the combined
+  source passed its own four fresh conversations. The complete source branch
+  now passes all 103 offline tests.
+  Both native formats match the source for all 72 experts, and the complete
+  preview's local references pass. The editorial cycle and fresh comparative Pro
+  review are complete, with no blocking findings. The pilot answer has a
+  verdict-clarity qualification; recognizing a valid alternative representation
+  remains a useful follow-up case, rather than demonstrated coverage.
+  See the [contract](docs/design.md#goal-coverage-in-proposal-reviews) and
+  [bounded evidence](evidence/README.md#goal-coverage-repair-and-application--2026-10-29).
+  D071–D074 retain their historical results; the software/dinner scope example
+  does not reproduce the source consultation issue. Preserve VERSION,
+  committed dist, profiles, selection metadata, vocabulary, images and
+  installations. D076 authorizes final branch review, a signed source commit,
+  topic-branch push and a PR. Merging, releasing and deployment remain separate.
 - **Delivery acceptance:** the catalogue, profiles, contribution process, image
   policy, source schema and usage guidance agree with the initial collection
   and accurately state host-validation limits.
@@ -97,10 +108,11 @@ not establish broad selection reliability or comparative expert benefit.
 - **Integration boundary:** a separate plugin will deploy and manage roles in
   Codex. Consumers own registration, model configuration, permissions,
   parent-level selection, packaging and lifecycle. This library provides source
-  content and portable exports; this step adds no deployment tooling or runtime
-  tests and changes no consuming integration.
+  content and portable exports. The isolated evaluation fixtures add no
+  deployment tooling and change no consuming integration.
 
-No additional time or budget limits have been agreed. See
+The completed integration checks followed the attempt limits in the
+[repair contract](docs/design.md#goal-coverage-in-proposal-reviews). See
 [checks](tests/README.md), [evidence](evidence/README.md) and
 [delivery](docs/delivery.md).
 
@@ -114,9 +126,15 @@ need an agreed scope, criteria and responsible owner.
 ## Assumptions and open questions
 
 Expert directories, the simplified profile layout, the expert definition, the
-central specialty registry and its rules, full-name placeholders, the shared
-instruction and optional perspective cues are adopted. The current native files
-are the initial exports, with the host limits stated above. Broader role
+central specialty registry and its rules, full-name placeholders and optional
+perspective cues are adopted. The shared instruction remains one portable
+template. D074's 382-word draft preserves the previous consultation safeguards;
+D075 adds the tested 57-word proposal-review check without changing those
+paragraphs. Isolated repair evidence does not establish the combined prompt's
+behavior. Current source integration, structural checks and model evidence
+must retain their separate scope. Historical screening results apply only to
+their archived conditions and do not establish broad role effectiveness.
+The retained native files have the host limits stated above. Broader role
 usefulness, repeatability, Claude runtime behavior and automatic Codex directory
 discovery remain unverified. These follow-ups do not imply missing experts or
 portraits in the accepted initial catalogue.

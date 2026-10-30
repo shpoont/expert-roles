@@ -43,6 +43,251 @@ tree; maintainers update dist and versions during release preparation.
 
 ## Implementation contract
 
+### Expertise boundary repair
+
+D072 applies the focused repair cycle to a retained, unambiguous scope failure:
+the released software expert declined dinner planning, then supplied a menu
+after a follow-up requested it anyway. Both literal requests remain unchanged.
+The legitimate software review in the first turn is the positive control;
+blanket refusal does not pass.
+
+Use the released 192-word instruction for four fresh original conversations.
+Only after a fresh failure, test two conversations with that instruction plus
+one follow-up scope guard. If those pass, add the same guard to the preserved
+current draft and test two integration conversations. This separates the
+targeted guard from the larger unaccepted rewrite while retaining that draft's
+other safeguards. Keep all eight results and distinguish fresh reproduction
+from the retained historical failure.
+
+The owner approves at most eight new conversations with the existing Luna-high,
+configured Codex login and Docker setup, no separate model judge, no automatic
+retries and at most two concurrent trials. Direct review must confirm a real
+original menu response, useful in-scope software review, and refusal of unrelated
+work through the unchanged pressure turn. If original failure does not recur,
+stop; if a repair condition fails, retain that failure and do not claim completion
+or silently extend the budget. Preserve source case, metadata, runtime and
+attempt policy across conditions. No commit, push, release or installation.
+
+D073 separately approves the same eight-conversation design at **low reasoning**
+with the same Luna model, login and Docker runtime. Preserve the four passing
+high-effort originals and their closed repair gate. The low-effort case,
+instruction variants and success criteria remain unchanged; a fresh low-effort
+original failure must precede its repair runs. This checks a consumer-selected
+reasoning configuration, without replacing earlier results or expanding retries.
+
+D074 follows the reproduced original failure and the failed full-draft
+integration. Consolidate its two scope paragraphs into one early check of every
+requested contribution, preserving the five other paragraphs exactly. The owner
+approves up to four new conversations on the unchanged case with Luna low,
+the same login and Docker setup, at most two concurrent trials, no model judge
+and no retries. Retain all previous answers as before evidence; do not rerun or
+replace them. Freeze the revised instruction before inference and review every
+literal answer. Stop after a failed conversation, finishing any peer already
+running without launching another batch. Integrate the exact tested revision
+only if all four preserve the software review and decline both unrelated
+requests. Then run source, export-parity, preview and regression checks.
+Small-sample passes would demonstrate this bounded repair, not general
+reliability. No commit, push, release or installation is authorized.
+
+### Focused incident repair cycle
+
+D071 supersedes the broad comparison and regrading process as active work.
+For one observed problem, freeze a concrete case and an observable pass/fail
+rule, reproduce the failure with the current instruction, make a targeted
+shared-instruction repair, and generate fresh answers on the identical cases.
+Include a legitimate alternative and a transfer check. Do not reward agreement,
+opposition, a particular proposal size or wording alone.
+
+The first problem is a proposal's unsupported claim about the user's priorities
+being promoted into a user requirement despite the supplied objective. Freeze
+the current 340-word instruction as the before version. Retain exact source
+documents privately and distinguish incident-derived delivery prompts from a
+full historical replay. A prior answer identifies the symptom; it does not
+replace the fresh before test.
+
+Run the before cases before editing the instruction. If no target failure
+recurs, report unsuccessful reproduction and stop that repair cycle. Do not
+hunt seeds, add models or change criteria to manufacture a failing baseline.
+After a reproduced failure, change only the shared instruction, retain the before
+answer, and rerun unchanged cases. Success requires the observed failure to be
+absent after the edit and the legitimate-constraint and transfer checks to pass.
+Keep every attempt and any ambiguity visible; these cases establish a bounded
+repair, not general reliability across the catalogue.
+
+Owner-approved initial bounds are GPT-6 Luna high and the existing configured Codex
+login through the qualified Docker runtime, three cases and two repetitions
+before and after: at most twelve expert conversations, at most two concurrent,
+and no automatic retries. Use direct
+coordinator review against frozen rules and literal evidence, with no separately
+invoked model judge. Preserve the previous campaign, calibrated assessments and
+instruction snapshots as history; do not resume that broad process.
+
+Reuse existing Harbor builders, input verifiers and native-history collection.
+Keep private case material and raw outputs outside this public repository.
+Preserve profiles, selection metadata, vocabulary, images, VERSION, committed
+dist, installations and tags. No commit, push, release or installation is included.
+
+### Reproduce source incidents before refining the instruction
+
+D070 authorizes source-backed cases for the observed consultation problems,
+with the previous instruction evaluated before further instruction changes.
+Preserve the original brief, review material, historical answers and a trace
+from each observed issue to its case and expected handling. Keep private source
+records and exact replay material outside this public repository. Distinguish
+verbatim document replay from reconstructed conversational carriers; do not
+claim a full historical session replay when its context is unavailable.
+
+Use the already agreed Sol low, Sol medium and Luna high configurations, two
+predeclared repetitions, Astra high judging and blinded audits, and the existing
+isolated Harbor runtime. Freeze incident cases, criteria, positive controls and
+attempt policy before baseline execution. Do not require disagreement, a
+particular menu size or rejection of an owner-authorized consensus exercise.
+Separate coordinator errors from failures the expert can detect from its input.
+
+First report which failures recur under the previous instruction, including
+passing cases and unsuccessful reproductions. Then test the current candidate
+on the same inputs and make targeted changes only for demonstrated remaining
+failures. Retain every attempt and all prior comparison evidence. Use the
+existing broad cases as regression checks. Do not change cases or grading to
+manufacture a baseline failure or a passing revision. No commit, push, release
+or installation is authorized.
+
+The source-backed baseline exposes a concrete-loss omission and an inaccurate
+description of a prior position. Initial grades of the intermediate 295-word
+candidate retain the coverage problem and also show proposal framing promoted
+into a user priority. Refine the shared instruction for this mechanism: separate
+the stated goal from caller or proposal framing, preserve requested distinctions
+or name concrete losses, and describe prior positions from the available record.
+Freeze the 340-word revision before inference. Keep all six cases and participant
+task files unchanged, preserve both earlier conditions, and test legitimate
+narrowing and agreement alongside the failure cases. The earlier broad campaign
+does not establish performance of this further revision.
+
+The owner approves one retry of failed final-version judge packets at up to
+600 seconds, keeping Astra high, participant answers and grading rules fixed.
+Preserve original failures and exclude any still-missing judgments; do not
+rerun participants or replace completed quality ratings. Missing grades keep
+the comparison incomplete. Report whether each original failure is repaired,
+whether the whole answer passes, and any new quality regressions separately.
+
+The owner subsequently replaces Astra with GPT-6.1 Sol at high reasoning for
+calibration, primary judging and blinded repeats of both source-case versions.
+Regrade the saved 35 valid previous and 36 revised conversations, retaining the
+old input-integrity exclusion, twelve corrected calibration packets and eighteen
+preselected repeat packets: 101 judgments in total. Keep cases, answers, rubric,
+isolation and credentials unchanged. Start with a known-good control, require
+all twelve calibration controls to match before main judging, and use at most
+two concurrent judges with no automatic Harbor retries. Keep this judge-only run and
+the Astra results separate; do not mix judges into one comparison or rerun
+participant answers. The earlier 24-case screening remains historical evidence.
+
+### Correct grading without rerunning participants
+
+D069 authorizes one identical-settings retry of each of the two judge packets
+that failed before inference, plus a grading-only correction for
+`fowler-mixed-scope`. Require a concrete maintainability issue and consequence;
+a proposed fix is optional because the participant prompt does not request one.
+Apply that correction to all twelve recorded conversations for this case,
+including both instruction conditions, all three configurations and both repeats.
+Keep prompts, answers, tools, shared instructions and runtime settings frozen.
+
+Use Astra high for the retries, corrected grading, focused rubric calibration
+and fresh blinded audits of the corrected case. Select repetition one in both
+conditions for each configuration before inspecting new ratings: six audits.
+Preserve original results and failures; write derived grades and the revised
+comparison separately with input digests,
+replacement reasons and explicit denominators. Reuse unaffected validated grades
+and audits only when their packets and rubric are identical. Keep the original
+calibration controls and add focused good/bad controls for the corrected rule.
+Do not silently retry further failures or replace inconvenient valid scores.
+No participant rerun, commit, push, release or installation is authorized.
+
+### Run the shared-instruction comparison
+
+D068 authorizes all 24 cases under three Codex configurations: GPT-6.1 Sol
+with low and medium reasoning, and GPT-6 Luna with high reasoning. Compare
+previous and updated instructions with two preplanned repetitions per condition:
+288 participant conversations in total. Use GPT-6 Astra with high reasoning as
+the fixed automated judge, ten calibration controls per configuration and eight
+blinded audit conversations per configuration. Audits use fresh Astra-high
+sessions with the original blinded packets and no primary ratings. They are
+repeat model judgments, not human reviews or an independent model family.
+Use the existing configured Codex login through the documented ephemeral Harbor
+route; do not create keys or change accounts.
+
+The owner approved aligning the disposable container's non-root UID with the
+host UID after both initial probes failed on resumed log writes. Record the
+resolved UID in the frozen runtime, apply it equally to both conditions, retain
+the failed probes and rerun a fresh matched probe before formal execution.
+
+Verify a bounded live pair and judge calibration before broad execution. Keep
+probe evidence separate from comparison attempts. Preserve every planned result,
+including technical failures; do not silently retry, replace settings, relax
+calibration or change prompts after results arrive. Hold execution settings and
+the frozen case/verifier inputs constant across instruction conditions. Report
+each quality and boundary dimension, concrete improvements/regressions and
+unresolved errors without claiming general reliability from this screening.
+Keep raw machine-specific records outside the repository, document checked
+findings and limits, and do not stage, commit, push, release or install roles.
+
+### Harbor comparison of shared instructions
+
+D067 authorizes creating cases and a local comparison harness on the existing
+consultation branch, without a commit. Compare the frozen pre-D066 instruction
+with the unchanged candidate using the same expert, requests, evidence, tools,
+model, reasoning effort and attempt policy. Cover software engineering, forms,
+operations and AI evaluation with ordinary requests, evidence gaps, scope limits,
+pressure, legitimate revisions and recovery. Resume native sessions for follow-ups.
+
+Extend D067 to 24 cases with polished but inadequate briefs, instructions in
+supplied documents, misleading handoffs, forced approval formats, escalating
+pressure, adjacent expertise mismatches, legitimate hypotheticals and explicit
+all-or-nothing requests. Remove coaching that reveals the expected response;
+retain task facts, material constraints and realistic pressure. Keep hidden
+requirements and critical failures outside participant prompts. Positive controls
+must distinguish a justified boundary from unnecessary refusal, including recovery
+after a legitimate change. Preserve the unchanged instruction pair and evaluator
+dimensions; this expansion does not authorize model inference.
+
+Use Harbor 0.25.0 Docker tasks and separate verifiers. Supply only synthetic
+case context; keep reference answers, grading rules and condition labels out of
+the participant workspace. Separate verifiers check transferred synthetic files;
+the post-run collector reads protected native ATIF logs and validates the
+delivered prompts, resumed answers and actual final responses. Preserve raw
+responses and errors. Automated
+structural checks must not masquerade as expert-quality scores. Prepare blinded
+semantic grading and audit records with explicit evaluator settings, calibration
+controls and separate dimensions for wrongful acceptance, wrongful refusal,
+substantive quality and continuity, with critical errors visible separately.
+Require calibration and completed, undisputed blinded audits before treating
+the screening as reviewed. Do not average technical errors into quality.
+
+Validate generation, pairing, grading/report contracts and positive/negative
+fixtures locally. No participant or model-judge campaign is included in this
+creation step. Keep the shared instruction, expert content, VERSION, dist,
+installations and existing tags unchanged; all work stays uncommitted.
+
+### Concise expert consultation instruction
+
+D066 authorizes a source-only candidate on a separate branch. Keep one concise
+shared instruction, lightweight expert profiles and unchanged selection metadata.
+Accept clear prose or structured briefs; require information according to the
+judgment requested. Withhold conclusions that depend on essential missing
+information, complete independent requested parts and allow supported conditional
+or inconclusive assessments. Retain professional scope, nonexhaustive specialties,
+AI attribution and the restriction on referrals for out-of-scope work.
+
+Make consequential assessments' scope, evidence and limits explicit. Preserve
+independent judgment while respecting legitimate constraints and goal changes;
+handle context loss, unavailable capabilities, clarification and cancellation.
+No fixed input syntax, new role settings or per-expert manuals are introduced.
+
+Check source validity, both hosts' generated preview instructions, retained-output
+ownership and preview references with the existing suite. Harbor scenario cases
+and behavioral comparisons are the next step; these structural checks establish
+no improvement in expert performance. Keep VERSION, dist, installations and tags
+unchanged, and leave this candidate unstaged and uncommitted.
+
 ### Release safeguards and concise agent guidance
 
 D065 authorizes the two selected improvements: enforce the release process and
@@ -1613,3 +1858,55 @@ Read back the remote branch, commit signature, tag object and target, release
 metadata/notes, tagged VERSION and native files. Confirm the local tree is clean
 and report the actual hosted result; until those reads succeed, publication is
 unconfirmed. Keep private command logs and baseline records outside the repo.
+
+## Goal coverage in proposal reviews
+
+D075 applies one tested paragraph verbatim to the existing shared consultation
+instruction. Preserve all existing identity, expertise, context, independent
+judgment, uncertainty and attribution safeguards. Accept clear prose or a
+structured brief without introducing a required schema.
+
+For a proposal review, state the intended outcome and material distinctions,
+including supplied examples. Compare those with what the proposal represents,
+omits or defers. Explain an equivalence instead of assuming it from labels;
+include consequential gaps in the conclusion. Explicit user scope changes are
+legitimate. A draft, prior response or reported agreement cannot authorize one.
+
+The original instruction plus this paragraph passed the approved reconstructed
+source case twice and retained useful work in a limited pilot and another
+expert's survey review. This does not qualify a different combined prompt.
+The application therefore adds four fresh checks of the actual shared source:
+two unchanged source-case repetitions, one explicitly limited pilot and the
+survey analogy. Use the existing GPT-6.1 Sol max, Codex login and local Harbor
+Docker setup, one conversation at a time, no retries or separate model judge.
+Stop on a failure or execution error and preserve every outcome.
+
+Run the normal source, catalogue, ownership, native parity and complete-preview
+checks. Keep behavioral validation, comparative Pro feedback and editorial
+assessment distinct. Preserve VERSION, dist, metadata, profiles and installs.
+See [checks](../tests/README.md#goal-coverage-application-d075) and
+[evidence](../evidence/README.md#goal-coverage-repair-and-application--2026-10-29).
+
+## Source pull request closeout
+
+D076 authorizes the complete branch review and a source PR for the agreed shared
+instruction, relevant documentation and retained evaluation fixtures. Keep broad
+screening tooling explicitly historical; preserve private incident inputs and
+raw execution material outside Git. Offline checks must not launch inference.
+
+Participant collection must match native task messages to the declared case one
+for one, in order and content. Recognize only the pinned adapter's complete,
+validated environment-message shape as runtime metadata; retain it separately
+and require identical metadata across paired conditions. Preserve internal
+whitespace, including code
+indentation and spaces inside values; normalize only line endings and surrounding
+whitespace. Add offline regressions for changed text, extra user context and
+valid versus altered adapter metadata.
+This tightens future collection, without regrading or replacing old results.
+
+Keep the reviewed instruction and source guide unchanged. Run the full suite,
+source/catalogue, ownership, native parity, complete-preview reference and public
+suitability checks. Use a signed commit and explicit topic-branch destination;
+verify the resulting PR and its exact-commit CI. Preserve VERSION, dist, profiles,
+metadata, vocabulary, images, installations and tags. Merging, release preparation
+and publication remain separate decisions.

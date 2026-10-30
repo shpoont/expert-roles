@@ -1350,3 +1350,252 @@ validation remain separate from this addition.
   references, instruction-preservation review and protected baseline hashes.
 - **Boundary:** Preserve the collection, native files, VERSION and published
   tags. No new release, installation, plugin work or role-runtime evaluation.
+
+## D066 — 2026-10-27: Draft a concise expert consultation instruction
+
+- **Status:** Candidate drafted on `improve/expert-consultation-protocol` with
+  [local structural checks](../evidence/README.md#concise-consultation-candidate--2026-10-27)
+  passing; behavioral performance remains unverified.
+- **Decision:** Refine the shared source instruction around adequate context,
+  supported conclusions, professional scope and independent judgment. Accept
+  clear prose or structured briefs, complete independent requested parts and
+  state consequential assessments' basis and limits. Follow the
+  [candidate contract](design.md#concise-expert-consultation-instruction).
+- **Checks:** Existing source/export tests, matching Codex and Claude preview
+  instructions, contribution ownership, preview references and preserved content.
+  These establish structural validity, not expert performance.
+- **Next step:** Create Harbor cases comparing the previous instruction and this
+  candidate with identical scenario inputs, including useful answers, refusals,
+  evidence gaps, pressure, scope changes and recovery. Cases and runs are pending.
+- **Boundary:** Keep the roster, metadata, descriptions, images, vocabulary,
+  VERSION, committed dist and installations unchanged. No staging, commit, push,
+  release or runtime role invocation is included in this step.
+
+## D067 — 2026-10-27: Prepare a controlled Harbor instruction comparison
+
+- **Status:** Cases and local harness prepared; behavioral comparison and live
+  judge calibration remain pending. See the
+  [checks and limits](../evidence/README.md#harbor-boundary-expansion--2026-10-27).
+- **Decision:** Compare the frozen previous instruction and unchanged D066
+  candidate across 24 cases and four expert perspectives. Hold scenario
+  inputs and execution settings constant, changing only the shared instruction.
+  Follow the [contract](design.md#harbor-comparison-of-shared-instructions) and
+  [operator guide](../tests/harbor/README.md).
+- **Coverage expansion:** The owner approved eight additional boundary cases and
+  less leading prompts. Include repeated pressure, handoff/file authority claims,
+  false output demands, adjacent scope, insufficient briefs, hypotheticals and
+  explicit exclusions of partial work. Add calibration examples for legitimate
+  hypothetical analysis and the appropriate all-or-nothing refusal.
+- **Evaluation:** Use automated model judging with blinded audit samples, as
+  selected by the owner. Require explicit participant and judge models/effort,
+  known-good/bad calibration controls and separate acceptance, refusal, quality,
+  continuity and critical-error findings. Keep technical errors unscored.
+- **Checks:** Offline positive/negative fixtures, Harbor schema/lint/dry runs,
+  separate-verifier Docker artifact checks, source validation, ownership and
+  preview references. Scripted results validate the harness rather than experts.
+- **Boundary:** This step creates and verifies the suite without participant or
+  model-judge campaigns. Preserve the shared candidate, roster, metadata, images,
+  vocabulary, VERSION, dist, installations and tags. Do not stage, commit or push.
+
+## D068 — 2026-10-27: Run the selected three-configuration comparison
+
+- **Status:** Initial execution finished with provisional mixed findings. All 288
+  participant conversations are valid, all 30 in-batch controls pass and all
+  24 blinded repeat grades agree. Two judge setups failed before inference;
+  retries initially awaited owner agreement. A hidden requirement in the mixed-scope
+  software case exceeds the requested contribution. Preserve the recorded
+  grades. D069 subsequently resolves both gaps and the grading limitation.
+  The approved non-root UID alignment resolves the earlier resume failure;
+  failed and successful probes remain outside comparison attempts.
+- **Decision:** Run all 24 cases with Sol low, Sol medium and Luna high, comparing
+  previous and updated instructions with two repetitions. Use Astra high as the
+  fixed judge with ten calibration controls and blinded audits, following the
+  [execution contract](design.md#run-the-shared-instruction-comparison).
+- **Evidence:** Verify recorded native prompts, context, settings, tool actions,
+  model-judge calibration and audited findings. Keep technical failures separate
+  from expert quality and retain the failed probes outside comparison attempts.
+- **Boundary:** Use the existing configured Codex login without new keys or
+  account changes. Do not silently change settings or relax grading. Keep
+  machine-specific records private; do not stage, commit, push, release or install.
+
+## D069 — 2026-10-28: Retry failed judging and correct the mixed-scope rubric
+
+- **Status:** Complete. Both original missing grades are recovered; all twelve
+  affected conversations are regraded. Only two updated Luna quality ratings
+  change from 1/2 to 2/2. All 32 controls pass and all 30 blinded audits agree.
+  A fresh audit's provider-capacity failure is retained with its announced
+  identical-settings retry. All three reports pass `audited_screening`.
+- **Decision:** Retry both pre-inference infrastructure failures once with
+  unchanged settings. Remove the unrequested-fix requirement from
+  `fowler-mixed-scope` and regrade all twelve affected conversations uniformly.
+  Preserve participant outputs and original grades. Use Astra high for focused
+  calibration and six fresh blinded checks of the corrected case, with the
+  [grading contract](design.md#correct-grading-without-rerunning-participants).
+- **Boundary:** No participant reruns, selective score replacement, automatic
+  additional retries, commit, push, release or installation. Derived results
+  retain input provenance and explicit comparisons with the original grading.
+
+## D070 — 2026-10-28: Reproduce the motivating consultation failures first
+
+- **Status:** The Astra-high source-backed baseline is complete: 35 of 36 conversations
+  are scorable. One partial coverage omission and one incorrect account of a
+  prior position remain; nine preselected blinded audits agree. A source-file
+  mutation stays unscored. Corrected calibration passes all six controls.
+  Initial grades of the intermediate 295-word candidate retain coverage failure
+  and use a proposal's preference as a user priority. Four intermediate judge
+  timeouts remain unscored. The targeted 340-word revision completes all 36
+  input-valid participant conversations. One approved 600-second retry recovers
+  17 of 20 missing judge packets; three control-answer grades remain unscored.
+  All six calibration controls pass and eight completed audit pairs agree; one
+  pair lacks a primary grade. Available matched results show one improved turn,
+  one regression and unchanged ratings on 41 turns. The continuity example is
+  corrected; the minimization example still receives partial quality for a
+  different reasoning flaw. The requested all-passing repair is not complete,
+  and overall benefit is not established.
+- **Judge change:** The owner selects GPT-6.1 Sol high for calibration, primary
+  judging and blinded repeats of both source-case versions. Regrade 101 saved
+  packets without new expert attempts, preserving the old input exclusion,
+  criteria, corrected controls and original Astra records. A known-good probe
+  and full calibration gate the main run. All 101 judgments complete without
+  execution or grading errors; all twelve controls pass. The 35 matched
+  conversations contain 46 turns: 43 unchanged, one improved and two regressed.
+  Fully correct matched conversations are 34/35 versus 33/35, while full
+  follow-up continuity is 10/11 versus 11/11. Sixteen of eighteen blind repeats
+  agree; one per version disagrees. Retain primary ratings, both repeat
+  assessments and the prior Astra record. This changes the evaluator, not the
+  expert answers, and does not establish an overall improvement or complete
+  the requested all-passing repair. See the
+  [Sol regrading evidence](../evidence/README.md#source-case-regrading-with-gpt-61-sol--2026-10-28).
+- **Decision:** Extract the actual source goal, briefs and recommendations,
+  distinguish coordinator errors from expert-detectable failures, establish
+  baseline behavior and then compare and refine the role on identical inputs.
+  Follow the [reproduction contract](design.md#reproduce-source-incidents-before-refining-the-instruction).
+- **Boundary:** The earlier broad screening remains valid within its scope but
+  does not establish reproduction of the original incidents. Keep private replay
+  material outside the public repository and disclose reconstructed requests and
+  missing historical context. Do not manufacture failures, selectively rerun
+  quality results, commit, push, release or install.
+
+## D071 — 2026-10-28: Replace broad evaluation with focused incident repair
+
+- **Status:** Three focused cases and the current before instruction are prepared.
+  The owner approves Luna high, the existing configured Codex login in Docker,
+  direct review without a separate judge, and at most twelve expert conversations:
+  six before and six after. All six before conversations complete with valid
+  inputs, history and native settings. The target failure does not recur in
+  either source-case attempt; both legitimate-narrowing controls and both
+  transfer checks pass. Stop this cycle as unreproduced, without a new shared
+  instruction edit or after runs. Six conditional conversations remain unused;
+  no repair or general robustness is demonstrated.
+- **Decision:** Reproduce a concrete problem using actual cases, repair it, and
+  demonstrate the repair. Start with goal authority: supplied objectives must
+  not inherit unsupported preferences from a proposal. Follow the
+  [repair contract](design.md#focused-incident-repair-cycle).
+- **Acceptance:** Show a fresh failing before answer and fresh after answers on
+  unchanged cases. Respect legitimate user constraints and pass the transfer
+  check. If the failure does not reproduce, stop and report that result rather
+  than claim a fix. Preserve all attempts, criteria and uncertainty.
+- **Process change:** Retire the broad model matrix and repeated model regrading
+  as active work. Reuse qualified runtime components and keep all earlier
+  snapshots, findings and failures as historical evidence.
+- **Boundary:** No commit, push, release, installation, roster or metadata change.
+
+## D072 — 2026-10-29: Reproduce and repair expertise loss on a follow-up
+
+- **Status:** A retained original-role failure and its native instruction/settings
+  are verified. The two literal requests are preserved. All four fresh
+  high-effort originals passed, so no repair condition or canonical guard edit
+  proceeds. D073 separately approves lower-effort coverage.
+- **Decision:** Follow the [expertise repair contract](design.md#expertise-boundary-repair):
+  reproduce the released software role supplying an unrelated dinner menu after
+  initially declining it, then verify a targeted follow-up scope guard and its
+  integration into the current draft. Keep the earlier unreproduced case closed.
+- **Bounds:** The owner approves eight new Luna-high conversations, split four
+  original, two isolated repair and two integration, using the existing login
+  and Docker runtime. Use direct review, at most two concurrent trials and no
+  automatic retries or separate model judge.
+- **Acceptance:** A fresh original failure plus passing repair and integration
+  answers on the same case, including useful software review rather than blanket
+  refusal. Preserve all attempts and stop on an unsatisfied gate.
+- **Boundary:** No commit, push, release, installation or unrelated content change.
+
+## D073 — 2026-10-29: Check the same scope failure at low reasoning
+
+- **Status:** The owner approves the changed effort and a new eight-conversation
+  cap. All four original-role conversations complete with valid inputs and native
+  settings. Three supply a dinner menu after pressure while all four supply useful
+  software reviews. The target failure is reproduced. Both tests of the original
+  instruction plus a 36-word scope guard pass. The same guard is appended to the
+  current shared source. One of two final integration conversations still supplies
+  a menu in its first reply; the other passes. Both retain useful software reviews
+  and refuse the follow-up. All eight approved conversations complete without
+  execution errors. The complete repair is not demonstrated; retain the source
+  as an unaccepted candidate and stop before additional inference.
+- **Decision:** Keep the D072 case and instruction variants unchanged while using
+  the same Luna model at low reasoning. Retain its four high-effort passes as a
+  separate result. Follow the [same repair contract](design.md#expertise-boundary-repair).
+- **Bounds:** Four original, two isolated-repair and two integration conversations
+  using the existing login and Docker runtime, no model judge, no automatic
+  retries, and at most two concurrent trials.
+- **Acceptance:** A fresh original scope failure, followed by passing isolated
+  and integration answers that preserve useful software work and reject unrelated
+  work through the unchanged pressure request. An unreproduced original or a
+  failed repair does not establish completion or authorize extra attempts.
+- **Boundary:** No commit, push, release, installation or unrelated content change.
+
+## D074 — 2026-10-29: Test one consolidated scope check
+
+- **Status:** All four conversations pass the unchanged case with valid native
+  inputs and settings. The exact tested 382-word instruction is integrated;
+  the failed 376-word draft is archived. All 99 tests, source/catalogue and
+  contribution checks, 72-pair native parity and preview reference checks pass.
+- **Decision:** Replace the two dispersed scope paragraphs with one early check
+  of each requested contribution. Preserve all five other paragraphs and the
+  unchanged case. Keep D073's failures and passes as before evidence.
+- **Bounds:** Up to four new Luna-low conversations using the existing Codex login
+  and Docker runtime, at most two concurrent trials, no separate model judge and
+  no retries. Stop on a failure; finish only peer trials already running.
+- **Acceptance:** All four answers must retain useful software review and decline
+  unrelated work on both turns. Only then integrate the exact tested instruction
+  and complete the repository checks. Do not infer general reliability.
+- **Boundary:** No commit, push, release, installation or unrelated content change.
+
+## D075 — 2026-10-29: Apply the tested goal-coverage repair
+
+- **Status:** Applied locally; four live integration conversations, all 99 offline tests,
+  72 native pairs and preview reference checks pass. The editorial cycle is
+  complete; fresh comparative Pro review found no blocker. Record the pilot
+  verdict's clarity qualification and the remaining case limits. See
+  [current work](current-work.md#current-focus-and-status).
+- **Decision:** Add the exact tested 57-word proposal-review paragraph to the
+  existing shared draft. Preserve every previous paragraph rather than replacing
+  broader safeguards with the shorter isolated-test instruction.
+- **Reason:** A fresh original-role answer endorsed a narrower proposal without
+  identifying intended coverage it left unresolved. The first repair failed one
+  of two repetitions; the refined paragraph passed both repetitions and retained
+  useful work in two follow-up cases. Earlier generated hypotheses are not
+  treated as additional demonstrated original faults.
+- **Acceptance:** Fresh checks of the combined source, repository/native/preview
+  validation, a fresh comparative Pro review and the editorial cycle. Keep the
+  reconstructed-case limits and model-specific sample bounds explicit.
+- **Boundary:** No commit, push, release, installation, VERSION or committed dist
+  changes. See the [contract](design.md#goal-coverage-in-proposal-reviews).
+
+## D076 — 2026-10-30: Review the complete branch and prepare its source PR
+
+- **Status:** Local branch review is complete. All 103 tests, source, ownership,
+  preview and native checks pass. The reviewed instruction and source guide
+  retain their hashes. The four saved integration answers remain valid under
+  corrected collection checks. Review the signed commit and hosted checks
+  through the source PR.
+- **Decision:** Commit the agreed consultation source and docs together with the
+  retained historical test fixtures and offline checks. Keep historical campaigns
+  distinct from current source-incident evidence. Correct the collector's
+  acceptance of changed whitespace and extra task context, while validating the
+  pinned adapter's environment message and retaining it for paired comparisons.
+- **Checks:** Full offline suite, source/catalogue freshness, ownership, complete
+  preview, native equality, public suitability and staged inventory; signed
+  commit, explicit topic-branch destination and exact-commit PR CI.
+- **Boundary:** No new participant or judge campaign, regrading, role change,
+  release-owned edit, installation or tag change. Merging and releasing require
+  separate decisions. See the [closeout contract](design.md#source-pull-request-closeout).

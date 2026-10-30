@@ -7,6 +7,14 @@ Record meaningful changes by version under the
 
 ### Added
 
+- Add the historical 24-case Harbor comparison fixtures across four experts,
+  frozen instruction
+  conditions, separate file verifiers, native response collection, blinded model
+  judging, calibration controls and audit/report tooling. Offline harness checks
+  require no model calls; live screening findings and limits are recorded in
+  [evidence](evidence/README.md#shared-instruction-comparison--2026-10-28). Include eight
+  targeted boundary probes, less leading prompts and valid hypothetical and
+  all-or-nothing calibration examples.
 - Add Erika Hall, Steve Portigal, Caroline Jarrett and Rob Fitzpatrick, with
   distinct perspectives on design research, qualitative interviewing, surveys
   and customer discovery. Add shared User research, Qualitative research and
@@ -15,6 +23,34 @@ Record meaningful changes by version under the
 
 ### Changed
 
+- Preserve internal prompt whitespace and reject extra task messages during
+  native-history collection. Validate the pinned runtime's environment metadata
+  separately and require matching context across paired conditions.
+- Make proposal reviews state the user's intended outcome, compare important
+  distinctions with actual coverage, and put material gaps in the conclusion.
+  Preserve the existing consultation safeguards and explicit user scope changes;
+  validate the combined source separately from the isolated repair.
+- Consolidate scope rules into an early check of every requested contribution,
+  preserving independent in-scope work. The revised instruction passes four
+  fresh conversations on the previously failing mixed-request and follow-up
+  case. Preserve the failed intermediate draft and all earlier outcomes; see
+  the [bounded repair evidence](evidence/README.md#consolidated-scope-repair--2026-10-29).
+- Replace broad screening as the active workflow with focused incident
+  reproduction, targeted shared-instruction repair and fresh unchanged-case
+  tests. Preserve historical evidence and reuse the qualified runtime.
+- Preserve supplied documents and recorded known-good tool evidence in judge
+  calibration packets, with an offline regression for the evidence-transfer path.
+- Refine the shared consultation instruction: require support for conclusions,
+  preserve independent in-scope work, state assessment limits and handle context
+  changes without a mandatory input format. Distinguish stated goals from
+  proposal framing, identify concrete losses when simplifying and ground prior
+  positions in the available record. Keep the archived screening separate from
+  the later source-backed comparisons. Complete Sol-high regrading does not
+  establish overall benefit. Recover the earlier screening's two missing grades
+  and correct its mixed-scope rubric uniformly, preserving the original evidence.
+- Match the Harbor agent's non-root UID to host log ownership so native session
+  resumption retains writable logs. Record the resolved UID in each experiment
+  and reject a root UID before building tasks.
 - Identify project-summary counts as the published v1.3.0 baseline and link
   the current source catalogue for unreleased additions.
 - Guard main with required pull requests and GitHub Actions validation, without
