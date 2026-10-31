@@ -82,6 +82,9 @@ reporting publication. Version declarations and passing logs alone are not proof
 
 ## Evidence and handover
 
+Use [.project-structure.yaml](.project-structure.yaml) for the adopted starter
+baseline and source; keep it separate from the library's own release version.
+
 Every tracked file must be public and self-contained. Exclude credentials,
 private repository identities, chat IDs, author-machine paths and private logs.
 Keep adopted decisions separate from proposals in [decisions](docs/decisions.md),

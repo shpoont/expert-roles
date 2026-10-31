@@ -474,7 +474,8 @@ def write_preview(root: Path, destination: Path, outputs: dict[Path, str]) -> No
     root, destination = root.resolve(), destination.resolve()
     if destination.exists() or destination.is_relative_to(root) or root.is_relative_to(destination):
         raise ValueError("Preview requires a new directory outside the source checkout")
-    files = [root / name for name in ("README.md", "AGENTS.md", "PROJECT.md", "CHANGELOG.md",
+    files = [root / name for name in (".project-structure.yaml", "README.md", "AGENTS.md",
+                                     "PROJECT.md", "CHANGELOG.md",
                                      "CONTRIBUTING.md", "LICENSE", "requirements.txt")
              if (root / name).is_file()]
     files += [path for path in (root / ".github/workflows").glob("*.yml") if path.is_file()]

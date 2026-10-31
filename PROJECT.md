@@ -156,9 +156,12 @@ vocabulary labels retain their
 
 ## Connected work and baseline
 
-This repository follows [Project Structure v1.0.0](https://github.com/shpoont/project-structure/releases/tag/v1.0.0),
-commit `96fdd6bd7950778f5b6c6f8269ab2b82167cb99a`. Expert sources live under
-`src/`; the full catalogue is generated in `src/roles/README.md`, with a fixed
+The adopted Project Structure baseline and upstream source are recorded in
+[.project-structure.yaml](.project-structure.yaml). Project-specific adaptations
+are retained; the metadata records provenance without introducing conformance
+requirements. [D078](docs/decisions.md#d078--2026-10-31-adopt-project-structure-v101-provenance)
+records this update; D003 retains the original v1.0.0 adoption. Expert sources
+live under `src/`; the full catalogue is generated in `src/roles/README.md`, with a fixed
 six-expert showcase and generated count in the main README. Ready-to-use
 exports and their indexes live under `dist/`. Library version `1.4.0` is
 independent of the starter and consuming integrations. The canonical `VERSION`

@@ -1,5 +1,14 @@
 # Design and approach
 
+## Starter provenance
+
+D078 adopts [.project-structure.yaml](../.project-structure.yaml) as the source
+for the Project Structure baseline and upstream repository. Keep its two fields,
+`version` and `source`, separate from Expert Roles' own `VERSION` and retain
+project-specific adaptations. Copy the metadata into isolated review previews
+so the linked provenance remains available there. Historical adoption records
+remain unchanged; this metadata adds no conformance requirement or role behavior.
+
 ## Approach and important parts
 
 Follow the [project agreement](../PROJECT.md). Each expert has one directory

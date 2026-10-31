@@ -5,6 +5,13 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+### Changed
+
+- Adopt Project Structure v1.0.1 provenance in `.project-structure.yaml` and
+  point project and contributor guidance to it. Retain project-specific
+  adaptations and keep the starter baseline separate from the library version.
+  Include the metadata in isolated review previews.
+
 ## v1.4.0 — 2026-10-30
 
 Four new experts and stronger handling of professional scope, missing evidence

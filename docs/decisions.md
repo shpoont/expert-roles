@@ -1619,3 +1619,19 @@ validation remain separate from this addition.
 - **Boundary:** No new behavioral campaign, installation, integration update or
   modification of existing release tags. Follow the
   [release contract](design.md#release-expert-roles-v140).
+
+## D078 — 2026-10-31: Adopt Project Structure v1.0.1 provenance
+
+- **Status:** Owner-accepted adoption; signed commit, push, PR and squash merge
+  authorized, with merging conditional on successful hosted CI.
+- **Decision:** Record the starter baseline and source in
+  [.project-structure.yaml](../.project-structure.yaml), and use it from current
+  project and contributor guidance. Include it in isolated review previews.
+- **Rationale:** Keep starter provenance discoverable without duplicating it in
+  active prose or confusing it with the library's own release version.
+- **Source:** [Project Structure v1.0.1](https://github.com/shpoont/project-structure/releases/tag/v1.0.1),
+  commit `1c40b6565817ca7e58d1bf0033d89ed84a175ac3`.
+- **Boundary:** Preserve project-specific adaptations, D003 and other historical
+  v1.0.0 records. No new conformance requirements, role behavior, product version,
+  release artifacts, installation or deployment changes. See the
+  [provenance design](design.md#starter-provenance).

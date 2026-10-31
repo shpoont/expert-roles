@@ -2,6 +2,11 @@
 
 Suggest experts or changes through [issues](https://github.com/shpoont/expert-roles/issues).
 
+The adopted project starter baseline and source are recorded in
+[.project-structure.yaml](.project-structure.yaml), separately from the library
+version. Preserve this hidden file when copying the project; ordinary expert
+contributions do not change the adopted baseline.
+
 ## Expert selection
 
 This is a broad expert catalogue.
