@@ -9,6 +9,35 @@ Connect evidence to [current work](../docs/current-work.md),
 [decisions](../docs/decisions.md), [checks](../tests/README.md) and
 [delivery](../docs/delivery.md).
 
+## Project Structure v1.0.1 provenance — 2026-10-31
+
+D078 adopts the metadata from the published
+[Project Structure v1.0.1 release](https://github.com/shpoont/project-structure/releases/tag/v1.0.1),
+commit `1c40b6565817ca7e58d1bf0033d89ed84a175ac3`. The upstream release and
+exact-commit file were read back. The root
+[metadata](../.project-structure.yaml) records the adopted starter version and
+source separately from Expert Roles v1.4.0. Current project and contributor
+guidance link to it; the preview copier retains the hidden file. Historical
+v1.0.0 records and project-specific adaptations are preserved.
+
+All 103 offline tests pass. The two-field YAML exactly matches the released
+upstream file and is copied byte-for-byte into the external preview. Current
+provenance links resolve, and old version references remain only in historical
+adoption or release records. Contribution ownership and source catalogue
+freshness pass; all 149 generated outputs remain current. The complete preview
+passes 176 documents, 2,584 local references and 150 image references, with no
+errors; 614 external URLs and six unfilled starter targets are excluded.
+All 417 tracked files outside this nine-file update retain their bytes; the
+metadata is the only new file. Earlier decisions, evidence and dated changelog
+history are unchanged. UTF-8, bounded public-content and Git whitespace checks
+pass; HEAD and the index remain unchanged.
+
+These observations cover local validation before committing. The owner
+subsequently accepted the update and authorized signed delivery through a PR,
+with merging conditional on successful hosted CI. Git history and the PR record
+establish the actual hosted result. No role invocation, model or judge call,
+installation or product release is part of this update.
+
 ## v1.4.0 release preparation — 2026-10-30
 
 D077 prepares the accepted `58963f5` source as v1.4.0 through a separate release

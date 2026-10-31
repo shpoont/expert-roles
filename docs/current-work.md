@@ -2,6 +2,20 @@
 
 ## Current focus and status
 
+The current maintenance change adopts Project Structure v1.0.1 provenance via
+[.project-structure.yaml](../.project-structure.yaml). Project and contributor
+guidance use that file as the baseline source; review previews retain it.
+Project-specific adaptations, Expert Roles v1.4.0 and its native exports remain
+unchanged. [D078](decisions.md#d078--2026-10-31-adopt-project-structure-v101-provenance)
+records the adoption; focused results are retained in
+[evidence](../evidence/README.md#project-structure-v101-provenance--2026-10-31).
+The owner accepted the update and authorized a signed commit, push and PR,
+followed by squash merge if hosted CI passes. Git history and the PR record
+establish the actual delivery state. No release, installation or runtime test
+is part of this update.
+
+## Retained release and repair context
+
 D077 prepares the v1.4.0 release from the accepted main source. It distributes
 the four research and discovery additions and the shared consultation repairs.
 D075 applied the tested goal-coverage paragraph to the existing shared
