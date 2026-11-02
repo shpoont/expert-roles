@@ -1,5 +1,29 @@
 # Design and approach
 
+## Release Expert Roles v1.4.1
+
+D080 authorizes a separate release PR after the D079 source PR is merged.
+Prepare v1.4.1 as a patch correction to Codex instance naming, without changing
+expert scope, execution instructions, selection descriptions, IDs or paths.
+Include D078's already-merged Project Structure provenance maintenance. Keep
+the roster, specialties, portraits, templates and personal installations fixed.
+
+Set VERSION and both hosts' provenance comments to 1.4.1, finalize the dated
+changelog and refresh the generated distribution and current baseline guidance.
+All 72 Codex exports gain the canonical-name nickname candidate; Claude role
+metadata and instruction bodies stay unchanged apart from version comments.
+Preserve every existing tag. Record the bounded CLI 0.166.0 naming result and
+the unverified desktop, older-host and Claude-runtime limits accurately.
+
+Run strict distribution freshness, release ownership, the full offline suite,
+complete-preview reference checks and protected-content/public suitability
+checks. Use the release push helper and a separate PR labeled release. Require
+both the exact-commit Checks workflow and validate check to complete successfully
+on that PR and resulting main before creating the signed annotated v1.4.1 tag.
+Verify its remote target, published release, VERSION and native files before
+reporting publication. The owner authorized this delivery and publication;
+installation, integration updates and further live expert tests remain separate.
+
 ## Expert names for Codex instances
 
 D079 defines [issue #20](https://github.com/shpoont/expert-roles/issues/20).

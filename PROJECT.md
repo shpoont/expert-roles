@@ -18,18 +18,19 @@ roster changes.
 
 ## Scope and expectations
 
-The v1.4.0 release baseline contains 72 experts, 99 specialties in 15 groups,
+The v1.4.1 release baseline contains 72 experts, 99 specialties in 15 groups,
 54 generated portraits, five original historical depictions and 13 full-name
-placeholders. It includes four research and customer-discovery experts added
-since v1.3.0. See the [source catalogue](src/roles/README.md) for the collection.
+placeholders. The roster, vocabulary and images are unchanged from v1.4.0;
+v1.4.1 corrects Codex instance naming. See the
+[source catalogue](src/roles/README.md) for the collection.
 Every source profile has
 canonical metadata, a short human-readable README and one square visual.
 The adopted [studio-v1 method](docs/elements/portraits.md) is retained.
 Previews generate a Codex and Claude Code file for every source profile, with
 alphabetical and specialty indexes that link to stable, unduplicated paths.
-Version v1.4.0's `dist/` files and source catalogues cover all 72 experts; the
+Version v1.4.1's `dist/` files and source catalogues cover all 72 experts; the
 previous v1.3.0 release covered 68. The
-[release record](https://github.com/shpoont/expert-roles/releases/tag/v1.4.0)
+[release record](https://github.com/shpoont/expert-roles/releases/tag/v1.4.1)
 establishes hosted publication separately from the version declaration.
 Portrait acceptance is an editorial decision;
 structural validity does not establish likeness. Future additions follow the
@@ -78,10 +79,12 @@ checks but no runtime validation. These observations do not establish broad
 selection reliability or comparative expert benefit; see the
 [current results](evidence/README.md#codex-configuration-trace-and-corrected-host-validation--2026-11-02).
 
-- **Current status and boundary:** D079's naming correction passes 105 offline
-  tests and the bounded CLI check. The owner authorized source delivery followed
-  by a separate v1.4.1 release PR and publication after the required hosted
-  checks. VERSION and retained exports remain v1.4.0 during source delivery.
+- **Current status and boundary:** D079's naming correction passed 105 offline
+  tests and the bounded CLI check. Source PR #21 was squash merged with successful
+  exact-commit PR and main checks. D080 defines v1.4.1 through a separate release
+  PR; the owner authorized its merge and publication after the required hosted
+  checks. VERSION and generated provenance declare 1.4.1; the annotated tag and
+  remote release establish actual publication separately.
   D075 applies the tested proposal-goal coverage paragraph to the existing
   consultation draft while preserving its safeguards. The isolated repair
   passed two source-case repetitions and two follow-up checks; the combined
@@ -95,9 +98,9 @@ selection reliability or comparative expert benefit; see the
   See the [contract](docs/design.md#goal-coverage-in-proposal-reviews) and
   [bounded evidence](evidence/README.md#goal-coverage-repair-and-application--2026-10-29).
   D071–D074 retain their historical results; the software/dinner scope example
-  does not reproduce the source consultation issue. D077 authorizes versioned
-  export regeneration, a separate release PR, its merge and publication after
-  the required gates. Preserve all accepted canonical sources and existing
+  does not reproduce the source consultation issue. D080 authorizes versioned
+  export regeneration and v1.4.1 publication through the required gates.
+  Preserve all accepted canonical sources and existing
   selection metadata. Installation and deployment remain separate.
 - **Delivery acceptance:** the catalogue, profiles, contribution process, image
   policy, source schema and usage guidance agree with the initial collection
@@ -169,10 +172,10 @@ requirements. [D078](docs/decisions.md#d078--2026-10-31-adopt-project-structure-
 records this update; D003 retains the original v1.0.0 adoption. Expert sources
 live under `src/`; the full catalogue is generated in `src/roles/README.md`, with a fixed
 six-expert showcase and generated count in the main README. Ready-to-use
-exports and their indexes live under `dist/`. Library version `1.4.0` is
+exports and their indexes live under `dist/`. Library version `1.4.1` is
 independent of the starter and consuming integrations. The canonical `VERSION`
-file and both hosts' provenance comments use `1.4.0`.
-The [versioned release record](https://github.com/shpoont/expert-roles/releases/tag/v1.4.0)
+file and both hosts' provenance comments use `1.4.1`.
+The [versioned release record](https://github.com/shpoont/expert-roles/releases/tag/v1.4.1)
 and annotated tag establish publication separately from those declarations.
 The previous v1.2.0 tag remains fixed at
 `c493c44bd14c7a54adce74f10bb6ea3c5bfd7359`. See the

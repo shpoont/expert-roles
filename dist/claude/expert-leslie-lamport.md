@@ -1,7 +1,7 @@
 ---
 # Expert Roles
 # expert_roles.source:  https://github.com/shpoont/expert-roles
-# expert_roles.version: 1.4.0
+# expert_roles.version: 1.4.1
 # expert_roles.id:      leslie-lamport
 
 name: expert-leslie-lamport

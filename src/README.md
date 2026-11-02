@@ -125,17 +125,17 @@ keeps its name, specialty and image columns; all roles retain the shared instruc
 
 ## Codex instance-name candidate
 
-Unreleased Codex previews add `nickname_candidates` using the existing canonical
-expert name, without changing the stable role identifier:
+From v1.4.1, Codex exports include `nickname_candidates` using the existing
+canonical expert name, without changing the stable role identifier:
 
 ```toml
 name = "expert-martin-fowler"
 nickname_candidates = ["Martin Fowler"]
 ```
 
-This is host metadata, not an instruction or a new profile field. Claude exports
-retain their existing metadata and bytes. Updating an export does not rename
-existing conversations.
+This is host metadata, not an instruction or a new profile field. Claude role
+metadata and execution instructions are unchanged; release provenance advances
+with the library version. Updating an export does not rename existing conversations.
 
 Codex CLI 0.166.0 loaded the standalone export from a trusted project's agent
 directory and stored Martin Fowler for a fresh instance. Two concurrent
@@ -144,8 +144,7 @@ attempt had used an untrusted project whose definition was excluded; the
 corrected check proved which definition was selected before inference.
 See [results and limits](../evidence/README.md#codex-configuration-trace-and-corrected-host-validation--2026-11-02).
 Desktop labels remain visually unverified, and older-host compatibility is
-untested. Committed v1.4.0 exports remain unchanged; the setting is currently
-available in unreleased previews only.
+untested. The v1.4.1 distribution includes this setting in all 72 Codex exports.
 
 ## Export provenance
 
@@ -156,7 +155,7 @@ host settings:
 ```text
 # Expert Roles
 # expert_roles.source:  https://github.com/shpoont/expert-roles
-# expert_roles.version: 1.4.0
+# expert_roles.version: 1.4.1
 # expert_roles.id:      eliyahu-goldratt
 
 ```
@@ -164,7 +163,7 @@ host settings:
 `source` identifies the canonical public repository, `version` comes from the
 root [VERSION](../VERSION) file, and `id` is the expert directory's stable slug.
 Both formats share the whole-library version; individual experts have no
-separate version. The example uses v1.4.0; isolated previews use
+separate version. The example uses v1.4.1; isolated previews use
 `0.0.0-preview`. Historical release tags retain their original formatting.
 
 Codex comments appear before the TOML settings. Claude comments appear inside
@@ -493,8 +492,8 @@ project records rather than presenting a placeholder as a photograph.
 ## Native formats
 
 - [Codex custom agents](https://learn.chatgpt.com/docs/agent-configuration/subagents#custom-agents):
-  TOML with `name`, `description`, `developer_instructions` and, in unreleased
-  previews, the [nickname candidate](#codex-instance-name-candidate).
+  TOML with `name`, `description`, `developer_instructions` and the
+  [nickname candidate](#codex-instance-name-candidate).
 - [Claude Code subagents](https://code.claude.com/docs/en/sub-agents#write-subagent-files):
   Markdown with YAML `name` / `description` frontmatter and the instruction body.
 
