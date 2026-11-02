@@ -3,6 +3,52 @@
 Checks follow the [project expectations](../PROJECT.md#scope-and-expectations)
 and [implementation contract](../docs/design.md#implementation-contract).
 
+## Codex instance names (D079)
+
+The [prepared contract](../docs/design.md#expert-names-for-codex-instances) and
+[issue #20](https://github.com/shpoont/expert-roles/issues/20) define this check.
+The source candidate is implemented and all 105 offline tests pass. The first
+host attempt stopped, then an authorized investigation found that its untrusted
+project definition had been excluded. The corrected four-instance CLI check
+passes, including concurrent naming. See
+[results and limits](../evidence/README.md#codex-configuration-trace-and-corrected-host-validation--2026-11-02).
+
+For the source change, verify every preview Codex role has one candidate equal
+to the canonical expert name, including Unicode and TOML escaping. Removing
+only that field must recover the previous parsed Codex payload; Claude files
+must remain byte-for-byte unchanged. Compare generated before/after outputs at
+the same export version. Update the existing Codex metadata-key assertion
+without relaxing Claude's. Keep identifiers, descriptions, shared
+instructions, paths, source profiles, VERSION and committed dist unchanged.
+Run the full offline suite, source/catalogue, ownership and complete-preview
+checks after implementation; keep the Unreleased note accurate about failed
+or pending host acceptance.
+
+The bounded host check uses one unchanged baseline instance, one configured
+instance and two configured concurrent instances of Martin Fowler, with the
+same short in-scope prompt retained in the issue. Use at most four instances,
+no retries or model judge, in a disposable scope that preserves personal
+installations. Record the host, model, effort, invocation route and file hashes.
+The corrected run used Codex CLI 0.166.0, GPT-6.1 Sol/xhigh and the existing
+ChatGPT login. It preserved the first stopped attempt separately.
+
+Exercise standalone export discovery; a root role-table override alone does
+not qualify it. Before each live run, inspect normal configuration loading and
+prove which definition wins over any personal role with the same name. The
+corrected check used an ignored directory within an already trusted checkout,
+without changing trust settings. An offline registry marker identified the
+project role; restore its exact frozen bytes before inference. A CLI trust
+override had not enabled discovery in the original untrusted temporary project.
+
+Verify role IDs, stored nicknames and actual displayed labels separately. Both
+concurrent instances must start with distinct IDs and expert-identifying names;
+confirm their execution overlaps, rather than relying on two sequential passes.
+Host-added disambiguators are acceptable. Stop and retain any failure rather
+than renaming instances or silently expanding the candidate list. Do not claim
+desktop success from parser results or a CLI-only check. Further live work
+after a stop gate requires authority; the completed rerun grants no installation
+or delivery permission.
+
 ## Goal-coverage application (D075)
 
 The [current contract](../docs/design.md#goal-coverage-in-proposal-reviews) adds

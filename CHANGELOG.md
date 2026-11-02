@@ -7,6 +7,13 @@ Record meaningful changes by version under the
 
 ### Changed
 
+- Generate an unreleased Codex instance-name candidate from each expert's
+  canonical name, preserving all other payload fields and Claude exports.
+  Add Unicode/escaping checks and verify standalone project-role discovery,
+  a named instance and two concurrent instances in Codex CLI 0.166.0. Explain
+  project trust and configuration-source checks after diagnosing an excluded
+  test definition. Desktop labels remain visually unverified. VERSION and
+  committed exports remain unchanged.
 - Adopt Project Structure v1.0.1 provenance in `.project-structure.yaml` and
   point project and contributor guidance to it. Retain project-specific
   adaptations and keep the starter baseline separate from the library version.

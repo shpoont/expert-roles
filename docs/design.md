@@ -1,5 +1,30 @@
 # Design and approach
 
+## Expert names for Codex instances
+
+D079 defines [issue #20](https://github.com/shpoont/expert-roles/issues/20).
+Derive one `nickname_candidates` entry from each expert's existing canonical
+name when generating Codex TOML. Keep the `expert-<slug>` identifier, selection
+description, shared instruction, provenance and path unchanged. Keep this
+Codex-only metadata out of the shared Codex/Claude metadata dictionary;
+Claude exports must retain their bytes. No new profile field is needed.
+
+The [bounded host checks](../tests/README.md#codex-instance-names-d079) verify
+standalone project discovery, one configured nickname and two concurrent
+instances in Codex CLI 0.166.0. Verify the active definition before inference:
+an untrusted project can be excluded while a personal role with the same name
+remains available. A matching instruction does not prove the metadata's source.
+Use normal configuration loading in an already trusted disposable scope;
+restore exact export bytes after any offline discovery marker. Do not infer
+desktop labels or the oldest compatible version from CLI records. Preserve the
+[research limits](../evidence/README.md#codex-instance-name-research--2026-11-02).
+Source implementation updates relevant exporter checks and usage guidance;
+committed native files change only in a separately authorized release. Claude
+plugins, hooks, dispatch enforcement and shared-instruction changes are outside
+this work. Retain the initial stopped attempt and its diagnosed trust error
+alongside the corrected results. Do not broaden the candidate pool or rename
+instances to force a passing result. Desktop visual acceptance remains open.
+
 ## Starter provenance
 
 D078 adopts [.project-structure.yaml](../.project-structure.yaml) as the source

@@ -70,17 +70,23 @@ execution instruction. No detailed per-expert brief is required.
 
 Codex TOML and Claude Code Markdown are the initial export formats. The bounded
 Codex check passed three cases using explicit invocation-only registrations of
-unchanged exports. Automatic directory discovery remains unresolved. Claude
-files have structural checks but no runtime validation. These observations do
-not establish broad selection reliability or comparative expert benefit.
+unchanged exports. D079 subsequently verifies standalone project-directory
+discovery and instance nicknames for Martin Fowler in Codex CLI 0.166.0 after
+checking project trust and active configuration selection. Desktop labels and
+broader discovery reliability remain unverified. Claude files have structural
+checks but no runtime validation. These observations do not establish broad
+selection reliability or comparative expert benefit; see the
+[current results](evidence/README.md#codex-configuration-trace-and-corrected-host-validation--2026-11-02).
 
-- **Current status and boundary:** D077 prepares v1.4.0 from the accepted main
-  source after PR #17 was squash merged with successful exact-commit hosted checks.
+- **Current status and boundary:** D079's naming correction passes 105 offline
+  tests and the bounded CLI check. The owner authorized source delivery followed
+  by a separate v1.4.1 release PR and publication after the required hosted
+  checks. VERSION and retained exports remain v1.4.0 during source delivery.
   D075 applies the tested proposal-goal coverage paragraph to the existing
   consultation draft while preserving its safeguards. The isolated repair
   passed two source-case repetitions and two follow-up checks; the combined
   source passed its own four fresh conversations. The complete source branch
-  now passes all 103 offline tests.
+  passed all 103 offline tests at the v1.4.0 baseline.
   Both native formats match the source for all 72 experts, and the complete
   preview's local references pass. The editorial cycle and fresh comparative Pro
   review are complete, with no blocking findings. The pilot answer has a
@@ -135,9 +141,9 @@ behavior. Current source integration, structural checks and model evidence
 must retain their separate scope. Historical screening results apply only to
 their archived conditions and do not establish broad role effectiveness.
 The retained native files have the host limits stated above. Broader role
-usefulness, repeatability, Claude runtime behavior and automatic Codex directory
-discovery remain unverified. These follow-ups do not imply missing experts or
-portraits in the accepted initial catalogue.
+usefulness, repeatability, Claude runtime behavior and broader Codex discovery
+reliability remain unverified beyond D079's bounded CLI check. These follow-ups
+do not imply missing experts or portraits in the accepted initial catalogue.
 
 Original profiles, instructions, metadata, documentation, tooling and placeholder
 artwork use [MIT](LICENSE). Original contributions use the same license.

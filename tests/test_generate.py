@@ -92,6 +92,42 @@ class GenerationContractTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "unique strings"):
             plan_outputs(self.root)
 
+    def test_codex_nickname_candidates_follow_canonical_expert_names(self):
+        outputs = plan_outputs(self.root)
+        for profile in (self.root / "src/roles").iterdir():
+            if not profile.is_dir():
+                continue
+            with self.subTest(expert=profile.name):
+                canonical = yaml.safe_load((profile / "expert.yaml").read_text())["name"]
+                codex = tomllib.loads(outputs[Path(f"dist/codex/expert-{profile.name}.toml")])
+                self.assertEqual(codex["nickname_candidates"], [canonical])
+                self.assertEqual(codex["name"], f"expert-{profile.name}")
+                claude_text = outputs[Path(f"dist/claude/expert-{profile.name}.md")]
+                _, frontmatter, instruction = claude_text.split("---\n", 2)
+                claude = yaml.safe_load(frontmatter)
+                self.assertEqual(set(claude), {"name", "description"})
+                self.assertEqual(claude["name"], codex["name"])
+                self.assertEqual(claude["description"], codex["description"])
+                self.assertEqual(instruction.lstrip("\n"), codex["developer_instructions"])
+
+    def test_codex_nickname_candidates_round_trip_unicode_quotes_and_backslashes(self):
+        source = self.profile / "expert.yaml"
+        entry = yaml.safe_load(source.read_text())
+        canonical = 'Zoë "Quoted" Back\\Slash'
+        source.write_text(yaml.safe_dump({**entry, "name": canonical}, allow_unicode=True),
+                          encoding="utf-8")
+        outputs = plan_outputs(self.root)
+        codex_text = outputs[Path("dist/codex/expert-don-norman.toml")]
+        codex = tomllib.loads(codex_text)
+        self.assertEqual(codex["nickname_candidates"], [canonical])
+        self.assertEqual(codex["name"], "expert-don-norman")
+        self.assertIn("Zoë", codex_text)
+        claude_text = outputs[Path("dist/claude/expert-don-norman.md")]
+        _, frontmatter, instruction = claude_text.split("---\n", 2)
+        self.assertEqual(set(yaml.safe_load(frontmatter)), {"name", "description"})
+        self.assertNotIn("nickname_candidates", claude_text)
+        self.assertEqual(instruction.lstrip("\n"), codex["developer_instructions"])
+
     def test_versioned_provenance_preserves_native_values_and_check_mode_is_read_only(self):
         self.assertEqual(self.run_exporter(), 0)
         original = plan_outputs(self.root)
@@ -585,7 +621,8 @@ class GenerationContractTests(unittest.TestCase):
             self.assertEqual(codex["developer_instructions"],
                              tomllib.loads(baseline[codex_path])["developer_instructions"])
             self.assertNotIn(phrase, codex["developer_instructions"])
-            self.assertEqual(set(codex), {"name", "description", "developer_instructions"})
+            self.assertEqual(set(codex), {"name", "description", "nickname_candidates",
+                                         "developer_instructions"})
             self.assertEqual(set(claude), {"name", "description"})
 
     def test_folded_perspective_is_one_description_paragraph(self):

@@ -373,6 +373,7 @@ def plan_outputs(root: Path, *, version: str | None = None) -> dict[Path, str]:
         ) + "\n"
         toml = provenance
         toml += "\n".join(f"{key} = {json.dumps(value, ensure_ascii=False)}" for key, value in metadata.items())
+        toml += "\nnickname_candidates = " + json.dumps([name], ensure_ascii=False)
         toml += '\n\ndeveloper_instructions = """\n' + escaped + '"""\n'
         if tomllib.loads(toml)["developer_instructions"] != instruction:
             raise ValueError(f"Generated TOML changed the instruction: {slug}")

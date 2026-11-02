@@ -9,6 +9,160 @@ Connect evidence to [current work](../docs/current-work.md),
 [decisions](../docs/decisions.md), [checks](../tests/README.md) and
 [delivery](../docs/delivery.md).
 
+## Codex configuration trace and corrected host validation — 2026-11-02
+
+The owner authorized investigation of the stopped naming check, a `codex exec`
+test and a bounded rerun. Codex's resolved configuration layers reported the
+temporary project's layer disabled because the project was untrusted. An
+offline rendered tool registry contained the existing personal Fowler definition
+but neither a marked project definition nor a unique project probe. Adding a
+project config file and using a CLI trust override did not enable that layer.
+This explains why the earlier file-presence and instruction checks did not
+establish which nickname metadata was active. The stopped results below remain
+part of the record; they do not show that Codex ignores the candidate field.
+
+The corrected fixture used an ignored disposable directory within an already
+trusted checkout, with normal user/project configuration loading. No personal
+configuration, trust setting or installed role was changed. Before each live
+case, an offline marker in the project's role description appeared in the
+rendered registry. The marker was then removed and the exact frozen export
+bytes restored and hashed. Actual model calls used the standalone file without
+role-table nickname overrides, marker text or instance-renaming instructions.
+
+The four fresh expert instances used Codex CLI 0.166.0, GPT-6.1 Sol/xhigh and
+the existing ChatGPT login in a read-only sandbox. Each coordinator requested
+the same short refactoring question from the frozen protocol. Native handoff
+text is encrypted, so literal forwarding equality is not asserted. Stored
+native records confirm the expected role, complete expert instruction and
+model/effort for each child. All coordinators and experts completed.
+
+| Case | Stored nickname | Result |
+| --- | --- | --- |
+| Unchanged baseline export | Archimedes | Unrelated nickname reproduced |
+| Configured standalone export | Martin Fowler | Expected name stored |
+| First concurrent configured instance | Martin Fowler | Expected name stored |
+| Second concurrent configured instance | Martin Fowler the 2nd | Host disambiguator preserves the expert name |
+
+All four retain `expert-martin-fowler` as their role. The concurrent children
+have distinct native IDs and their recorded execution overlaps by 6.537
+seconds. Both started before either completed. No model retries, separate
+judges, nickname overrides or extra candidate names were used. The baseline
+collector encountered a local output-directory collision after its successful
+model run; the saved result was recovered without another inference call.
+This is separate from the first attempt's guarded-query recovery below.
+
+The frozen preview file hashes are
+`6d33151560494edc8a37838cb439dbf8bde96fa3edb8f43a7269688b07e9f6ed`
+without the candidate and
+`c6ffe9eeddc06e23f8aca127074b172e615cdf7a246399c542828f97a1725f5c`
+with it. Offline comparison verifies that the candidate field is their only
+parsed payload difference. Raw configurations, prompts, histories and machine
+paths remain outside tracked content.
+
+This passes the bounded standalone-discovery, stored-name and concurrency
+checks for one expert on this CLI. Computer Use forbids access to the Codex
+app, leaving desktop labels visually unconfirmed. No older-version, Claude
+runtime, personal-directory or broader discovery-reliability result is claimed.
+The 105-test suite and whole-catalogue preservation checks remain applicable;
+no executable code changed after those checks. VERSION, committed dist and
+personal installations remain unchanged. No commit or push was performed.
+
+Final source/catalogue and contribution-boundary checks pass. The refreshed
+external preview passes 176 documents, 2,599 local references and 150 image
+references; 625 external URLs and six unfilled starter targets are excluded.
+All 416 tracked files outside the eleven scoped changes and all 72 personal
+agent/configuration files retain their pre-run hashes and inventory. UTF-8,
+bounded public-content review, dated changelog preservation and whitespace
+checks pass. HEAD and the empty index remain unchanged. The completed fixture
+is archived outside the checkout with the private evidence.
+
+## Codex instance-name implementation and stopped host check — 2026-11-02
+
+D079's source candidate adds one canonical-name `nickname_candidates` entry to
+Codex TOML only. The two new offline checks first failed on the missing field,
+then passed after the exporter change. All 105 offline tests pass. Comparing
+generated before/after outputs at the same preview version confirms that all
+72 Codex payloads differ only by the new field; all 72 Claude roles and the five
+other generated outputs retain their bytes. Unicode, quotes and backslashes
+round-trip correctly. VERSION and committed distribution files remain fixed.
+
+The owner authorized the planned host check. It used the existing ChatGPT
+login, Codex CLI 0.166.0 and GPT-6.1 Sol/xhigh, with a read-only sandbox and no
+role-table nickname overrides. A disposable project's standalone role file was
+replaced between the baseline and configured cases. Both coordinators requested
+the same specified short refactoring question. Native histories confirm the
+expected expert instruction and model/effort; names below come from stored
+native records rather than coordinator claims.
+
+| Case | Expected role | Stored nickname | Result |
+| --- | --- | --- | --- |
+| Baseline without candidate metadata | expert-martin-fowler | Darwin | Unrelated nickname reproduced |
+| File containing the Martin Fowler candidate | expert-martin-fowler | Raman | Naming acceptance failed |
+| Two configured concurrent instances | expert-martin-fowler | Not run | Stopped after the single-instance failure |
+
+Only two expert instances ran, without model retries or judges. The first
+baseline collection query failed because some thread-source values are plain
+text; a guarded query recovered the existing records without rerunning the
+agent. The failed collector did not retain the original coordinator exit code,
+but its saved native stream records a completed turn. The configured
+coordinator returned exit zero; its stored nickname still failed the check.
+
+At that point the configured project file and its candidate value were verified,
+but the active nickname metadata's configuration source was not established.
+Matching instruction text alone could not distinguish that file from an
+existing personal definition with the same instruction. Configuration discovery
+and backend metadata handling were unresolved causes at that stage. The
+[subsequent trace and corrected check](#codex-configuration-trace-and-corrected-host-validation--2026-11-02)
+identify the excluded project layer and separately verify the source change.
+Computer Use forbids access to the Codex app, so this attempt provides no
+desktop visual evidence. Raw prompts, histories and installation hashes stay
+outside the repository. [Issue #20](https://github.com/shpoont/expert-roles/issues/20)
+remains open; this stopped attempt alone did not demonstrate a repair.
+
+Final local checks pass: source validation, source catalogue freshness,
+contribution ownership and an external preview covering 176 documents,
+2,595 local references and 150 image references. All 417 protected tracked files
+and 72 personal agent/configuration files retain their pre-run hashes.
+UTF-8, bounded public-content, dated changelog preservation and whitespace
+checks pass. HEAD and the index remain unchanged. These file checks do not
+override the failed host gate.
+
+## Codex instance-name research — 2026-11-02
+
+D079 prepares [issue #20](https://github.com/shpoont/expert-roles/issues/20).
+Existing local Codex records distinguish expert role IDs from unrelated
+instance nicknames. The exported role names are intact; the observed issue is
+instance presentation. Raw local records remain outside the public repository.
+
+OpenAI's [configuration schema](https://learn.chatgpt.com/docs/config-schema.json#/definitions/AgentRoleToml/properties/nickname_candidates)
+defines `nickname_candidates` as an array of candidate names for spawned roles.
+The installed Codex CLI 0.166.0 accepted a per-role list and rejected a scalar
+during strict startup configuration parsing. Its standalone-role loader also
+contains diagnostics for this metadata field. These support a candidate export
+change; they do not establish the desktop result or the oldest compatible host.
+Standalone-file startup probes returned success for both valid and invalid
+candidate values and were inconclusive, so they are not counted as validation
+of standalone discovery or application. No expert was invoked during research.
+
+The owner accepted a role-file-only Codex approach. Claude's
+[documented naming controls](https://code.claude.com/docs/en/sub-agents#subagent-names)
+operate at dispatch; no corresponding role-file field was found in its current
+frontmatter reference. Claude exports remain unchanged, and integrations are
+outside this preparation. Single-instance and concurrent-instance behavior,
+visible labels and compatibility remain pending under the
+[prepared checks](../tests/README.md#codex-instance-names-d079).
+
+Preparation checks pass: source catalogue freshness, contribution ownership,
+all 149 retained generated outputs, UTF-8, bounded public-content review and
+Git whitespace. The external preview passes 176 documents, 2,591 local
+references and 150 image references. All 421 tracked files outside the six
+preparation records retain their bytes, including implementation, executable
+tests, profiles and release artifacts. The earlier 103-test
+[baseline CI result](https://github.com/shpoont/expert-roles/actions/runs/41220395599)
+remains applicable to unchanged executable code; the full suite was not rerun
+for this documentation-only preparation. No naming runtime check, installation
+or code change is part of these results.
+
 ## Project Structure v1.0.1 provenance — 2026-10-31
 
 D078 adopts the metadata from the published
