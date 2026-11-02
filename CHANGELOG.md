@@ -5,15 +5,22 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+## v1.4.1 — 2026-11-02
+
+Correct Codex instance naming across the existing 72 experts. Stable role IDs,
+selection descriptions, execution instructions and file paths remain unchanged.
+Both formats' provenance comments advance to 1.4.1; Claude role metadata and
+instruction bodies are preserved.
+
 ### Changed
 
-- Generate an unreleased Codex instance-name candidate from each expert's
-  canonical name, preserving all other payload fields and Claude exports.
-  Add Unicode/escaping checks and verify standalone project-role discovery,
-  a named instance and two concurrent instances in Codex CLI 0.166.0. Explain
-  project trust and configuration-source checks after diagnosing an excluded
-  test definition. Desktop labels remain visually unverified. VERSION and
-  committed exports remain unchanged.
+- Set `nickname_candidates` from each expert's canonical name in all 72 Codex
+  exports. The bounded Codex CLI 0.166.0 check verified standalone project-role
+  discovery, a named instance and two concurrent instances with expert-identifying
+  names. Existing conversations are not renamed. Desktop labels remain visually
+  unverified, and older-host compatibility is untested.
+- Add canonical-name and Unicode/escaping checks. Clarify project trust and
+  active configuration selection after diagnosing an excluded test definition.
 - Adopt Project Structure v1.0.1 provenance in `.project-structure.yaml` and
   point project and contributor guidance to it. Retain project-specific
   adaptations and keep the starter baseline separate from the library version.

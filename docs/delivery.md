@@ -114,12 +114,12 @@ see the [subagent guide](https://learn.chatgpt.com/docs/agent-configuration/suba
 ### Codex: role files and registration
 
 Each Codex TOML contains `name`, `description` and `developer_instructions`.
-Unreleased previews also include the
+From v1.4.1, Codex exports also include the
 [instance-name candidate](../src/README.md#codex-instance-name-candidate).
 The bounded CLI check confirms expert-identifying names for new instances,
 including a concurrent pair. Updating a file does not rename existing agents.
-The committed v1.4.0 exports remain unchanged. Claude files provide a role
-identifier, without a separate instance-nickname setting.
+Claude files provide a role identifier, without a separate instance-nickname
+setting. Both formats retain the same execution instructions.
 Both formats also carry [source, version and expert ID comments](../src/README.md#export-provenance)
 for people and consuming tools; these do not enter the execution instructions.
 The [configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference)
@@ -345,7 +345,7 @@ Follow the [photo policy](../CONTRIBUTING.md#photo-sources-and-licenses) and
 
 ## Versions and releases
 
-Library version: **[v1.4.0](https://github.com/shpoont/expert-roles/releases/tag/v1.4.0)**.
+Library version: **[v1.4.1](https://github.com/shpoont/expert-roles/releases/tag/v1.4.1)**.
 The linked GitHub release records publication separately from the version declaration.
 One `MAJOR.MINOR.PATCH` version covers profiles, metadata, vocabulary, shared
 instructions, templates, tooling and both native formats. The consuming plugin
@@ -353,7 +353,7 @@ and other integrations keep independent histories. Individual experts and export
 formats do not have separate versions.
 
 The root [VERSION](../VERSION) file is the machine-readable source for export
-provenance, set to `1.4.0` for this baseline. Contributions leave it unchanged;
+provenance, set to `1.4.1` for this baseline. Contributions leave it unchanged;
 temporary previews use `0.0.0-preview` independently. A version header identifies
 a declared library version, not proof of publication or an
 exact content digest. Keep released tags fixed and use Git refs for snapshots.
@@ -373,9 +373,9 @@ The first stable baseline includes `dist/codex/expert-<slug>.toml` and
 A versioned export is not a broader host-compatibility or effectiveness claim.
 
 Preparation, local commits and publication follow the owner's current
-authorization. D077 authorizes v1.4.0 publication after the required gates;
-future releases need their
-own owner instruction. Complete the applicable steps below:
+authorization. D080 authorizes v1.4.1 publication after the required gates;
+future releases need their own owner instruction. Complete the applicable
+steps below:
 
 ### Source contribution
 
@@ -497,6 +497,25 @@ select an ancestor comparison `base` and enable `release` only for a prepared
 release. PR runs select that mode from the `release` label; main pushes select
 it when their diff changes `VERSION`. Adding or removing the label reruns checks.
 Source-only PR merges continue to pass while released artifacts lag behind.
+
+### v1.4.1 release baseline
+
+D080's [release contract](design.md#release-expert-roles-v141) distributes
+D079's naming correction after [source PR #21](https://github.com/shpoont/expert-roles/pull/21).
+All 72 Codex exports gain one canonical-name nickname candidate. Both hosts'
+provenance comments advance to `1.4.1`; role identifiers, descriptions,
+execution instructions, paths and Claude metadata remain unchanged. The roster,
+vocabulary and images are the same as v1.4.0. Include D078's already-merged
+Project Structure provenance maintenance.
+
+The patch corrects instance presentation while preserving intended expert
+behavior. The bounded CLI 0.166.0 check passed standalone project discovery,
+stored names and a concurrent pair; desktop labels remain visually unverified.
+Older-host compatibility, Claude runtime and broader discovery reliability are
+untested. Strict release checks, the full suite, preview references and successful
+exact-commit PR/main workflow and validation checks precede publication.
+Use the matching [release record](https://github.com/shpoont/expert-roles/releases/tag/v1.4.1)
+and annotated tag to establish publication. No installation is part of release.
 
 ### v1.4.0 release baseline
 

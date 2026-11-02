@@ -9,6 +9,37 @@ Connect evidence to [current work](../docs/current-work.md),
 [decisions](../docs/decisions.md), [checks](../tests/README.md) and
 [delivery](../docs/delivery.md).
 
+## v1.4.1 release preparation — 2026-11-02
+
+D080's [release contract](../docs/design.md#release-expert-roles-v141) distributes
+the D079 naming correction and D078 provenance maintenance. Source
+[PR #21](https://github.com/shpoont/expert-roles/pull/21) was squash merged as
+`569714d` after its [exact-head checks](https://github.com/shpoont/expert-roles/actions/runs/41405179106)
+passed; the [resulting main checks](https://github.com/shpoont/expert-roles/actions/runs/41405493200)
+also completed successfully. GitHub reports that merge commit's signature as
+verified. The separate release branch advances VERSION and all native provenance
+comments to 1.4.1 without changing execution instructions.
+
+All 105 offline tests pass in the release checkout. Strict freshness confirms
+all 149 generated outputs; release ownership and complete-preview local link,
+image and anchor checks pass. For all 72 Codex exports, removing only the
+canonical-name candidate and restoring the prior version comment recovers the
+previous file exactly. All 72 Claude files differ only in their version comment.
+The three distribution indexes, 270 protected source/tooling files, fixed
+homepage sample and dated v1.4.0 changelog history retain their bytes. All 72
+personal agent/configuration files and their inventory remain unchanged. UTF-8,
+bounded public-content and whitespace checks pass; raw records stay outside Git.
+
+No new live expert test or installation is part of preparation. The
+[recorded CLI result](#codex-configuration-trace-and-corrected-host-validation--2026-11-02)
+remains bounded to one expert on CLI 0.166.0. Desktop labels, older-host
+compatibility, Claude runtime and broader discovery reliability remain unverified.
+The owner authorized the separate release PR, merge and publication. Its
+exact-head and resulting-main workflow and validate checks must complete
+successfully before tagging; the annotated tag and
+[remote release](https://github.com/shpoont/expert-roles/releases/tag/v1.4.1)
+establish publication separately from these local preparation results.
+
 ## Codex configuration trace and corrected host validation — 2026-11-02
 
 The owner authorized investigation of the stopped naming check, a `codex exec`

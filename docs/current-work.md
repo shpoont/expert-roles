@@ -2,6 +2,17 @@
 
 ## Current focus and status
 
+D080 defines the v1.4.1 baseline from the merged D079 source correction and the already
+accepted D078 provenance maintenance. The owner authorized a separate release
+PR, its merge and publication after completed exact-commit workflow and
+validation checks on the PR and resulting main. VERSION and generated exports
+declare 1.4.1; verify publication from the matching remote release and tag. Follow
+the [release contract](design.md#release-expert-roles-v141) and
+[release procedure](delivery.md#versions-and-releases). No installation,
+integration update or additional live expert test is part of this release.
+
+## Completed Codex naming correction
+
 The [issue #20](https://github.com/shpoont/expert-roles/issues/20) source candidate
 implements [D079's contract](design.md#expert-names-for-codex-instances): derive
 `nickname_candidates` from the existing expert name without changing other
@@ -25,11 +36,10 @@ See [corrected host results and limits](../evidence/README.md#codex-configuratio
 Source implementation and the bounded CLI check are complete. Computer Use
 blocks access to the Codex app, so desktop labels remain visually unconfirmed;
 older-version compatibility and broader discovery reliability are untested.
-Profiles, VERSION, committed dist and personal installations remain unchanged.
-The owner has now authorized a signed source commit, push, source PR and squash
-merge after successful CI, followed by a separate v1.4.1 release PR and
-publication after the required release and resulting-main checks. VERSION and
-dist stay release-owned. Installation and deployment remain outside this work.
+Source [PR #21](https://github.com/shpoont/expert-roles/pull/21) was squash merged
+as `569714d`; its exact-head PR and resulting-main workflow and validation
+checks passed. The source PR preserved VERSION and dist. The separate D080
+release updates those artifacts; profiles and personal installations stay fixed.
 
 ## Completed Project Structure update
 
@@ -46,7 +56,7 @@ release, installation or runtime test was part of that update.
 
 ## Retained release and repair context
 
-D077 prepares the v1.4.0 release from the accepted main source. It distributes
+D077 prepared the v1.4.0 release from the accepted main source. It distributed
 the four research and discovery additions and the shared consultation repairs.
 D075 applied the tested goal-coverage paragraph to the existing shared
 consultation draft. That increment preserves every previous instruction
@@ -103,17 +113,17 @@ as did the [resulting main checks](https://github.com/shpoont/expert-roles/actio
 
 ## Release baseline
 
-**v1.4.0 contains 72 experts, 99 specialties in 15 groups and 144 native role files.**
+**v1.4.1 contains 72 experts, 99 specialties in 15 groups and 144 native role files.**
 There are 54 generated portraits, five historical depictions and 13 placeholders.
 Existing expert identifiers, selection descriptions, formats and paths remain
-stable. The stricter shared instruction reinforces the existing expert contract;
-plain-language assignments remain valid.
+stable. Codex files add the canonical-name nickname candidate; both hosts'
+version comments advance. The shared instruction is unchanged from v1.4.0.
 
-The [release contract](design.md#release-expert-roles-v140) requires the full suite,
+The [release contract](design.md#release-expert-roles-v141) requires the full suite,
 strict generated freshness, native equality, preservation and preview checks.
 The release PR and resulting main workflow and validate check must all finish
 successfully before tagging. The matching
-[GitHub release](https://github.com/shpoont/expert-roles/releases/tag/v1.4.0)
+[GitHub release](https://github.com/shpoont/expert-roles/releases/tag/v1.4.1)
 and annotated tag establish publication separately from this declared baseline.
 The earlier v1.3.0 publication remains in
 [evidence](../evidence/README.md#v130-publication--2026-10-22).
@@ -130,7 +140,7 @@ hashes. Review the entire proposed diff and inventory, including untracked files
 
 ## Delivery and follow-ups
 
-D077 authorizes the release PR, merge and publication through the
+D080 authorizes the release PR, merge and publication through the
 [release procedure](delivery.md#versions-and-releases). Hosted checks and the
 matching release record identify the actual remote state.
 Nonblocking follow-ups are a case that preserves the requested distinction under a different

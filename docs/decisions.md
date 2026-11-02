@@ -1659,3 +1659,22 @@ validation remain separate from this addition.
   desktop labels, older-version compatibility and broader discovery reliability
   remain unverified. Claude integration changes are outside this role library's
   scope. See the [results](../evidence/README.md#codex-configuration-trace-and-corrected-host-validation--2026-11-02).
+
+## D080 — 2026-11-02: Release the Codex naming correction as v1.4.1
+
+- **Status:** Owner-authorized release preparation, PR merge and publication,
+  conditional on the required local and exact-commit hosted checks.
+- **Decision:** Release the merged D079 correction and D078 provenance maintenance
+  as v1.4.1 through a separate signed release PR. Regenerate all native files
+  with matching version comments and canonical-name candidates in Codex only.
+- **Rationale:** Correct instance presentation while preserving intended expert
+  behavior, scope, roster, selection descriptions, stable IDs and paths. A patch
+  increment fits this correction; it introduces no new expert or instruction.
+- **Acceptance:** Run strict release/native consistency, ownership, the full suite,
+  complete-preview references and protected-content/public suitability checks.
+  Require successful completed PR and resulting-main workflow and validate checks
+  before tagging. Read back the signed annotated tag, remote release and exports.
+- **Boundary:** Preserve existing tags and accepted canonical content. No personal
+  installation, consumer integration update or new live expert test. Retain the
+  CLI-only evidence limits, including unverified desktop labels and older-host
+  compatibility. See the [release contract](design.md#release-expert-roles-v141).
