@@ -1,5 +1,40 @@
 # Design and approach
 
+## Host-valid Codex nicknames
+
+D081 corrects the character-set gap in D079 and v1.4.1. CLI 0.166.0 reports
+that nickname candidates may contain only ASCII letters, digits, spaces,
+hyphens and underscores. The primary installed-host record rejects the Deming
+export; six catalogue values fall outside that grammar. TOML parsing and the
+previous ASCII Fowler case did not establish acceptance of those values.
+
+Derive the Codex-only candidate from the canonical name: apply Unicode NFKD
+decomposition, discard combining accent marks, remove ASCII punctuation other
+than hyphens and underscores, and collapse spaces. Preserve case and initials.
+Reject a name containing other unmappable characters or producing no ASCII
+letters/digits; do not silently discard name letters or substitute a generic
+nickname. No per-profile override or canonical-name change is introduced.
+
+Verify all catalogue candidates against the host grammar. Regress the six
+reported values, preserve Unicode and escaping in the other fields, and reject
+unrepresentable names before any writes. At the same version, only six Codex
+candidate values may change; every other payload, all Claude bytes and the
+catalogue/profile/template inputs remain unchanged. Keep VERSION and committed
+dist fixed in the source PR; a separate patch release distributes the correction.
+
+Run two finite offline CLI loader/registry cases in disposable data within an
+already trusted checkout: unchanged v1.4.1 exports, then corrected exports.
+Test-only description markers must prove which project definitions are selected
+despite personal collisions; a zero process exit alone is insufficient. The
+offline command emits no loader diagnostics. Use the actual runtime diagnostic
+for the grammar and registry selection for availability, keeping those sources
+separate. Retain the first render's failed diagnostic assertion. Stop on an
+unexpected selection or preservation result, with no automatic retry, model call
+or personal-file change.
+These checks establish loader acceptance; the plugin owns its separately
+authorized single-child integration check. Retain the earlier Deming runtime
+rejection and Fowler inference evidence at their actual, different scopes.
+
 ## Release Expert Roles v1.4.1
 
 D080 authorizes a separate release PR after the D079 source PR is merged.

@@ -2,6 +2,24 @@
 
 ## Current focus and status
 
+D081 corrects a newly observed v1.4.1 loader regression: six Codex nickname
+values violate CLI 0.166.0's ASCII character restriction. The owner authorized
+the narrowly scoped library fix and normal protected source/release pipeline;
+the intended patch is v1.4.2. Canonical names, profiles, IDs, descriptions,
+instructions, Claude semantics and personal installations remain fixed.
+
+All 108 offline tests pass. The two planned offline renders selected 66 of 72
+unchanged fixture definitions, then all 72 corrected definitions. Neither emitted
+diagnostics, so the original diagnostic assertion failed and is retained. The
+actual hash-verified Deming runtime error establishes the restriction; source
+markers establish corrected loader acceptance. The evidence composition was
+clarified within the original bounded scope. No model runs or retries occurred.
+All other Codex fields, all Claude bytes and canonical inputs are preserved at
+the same version. The source PR leaves VERSION and dist unchanged. See the [contract](design.md#host-valid-codex-nicknames) and
+[bounded record](../evidence/README.md#codex-nickname-character-correction--2026-11-02).
+
+## Released v1.4.1 context
+
 D080 defines the v1.4.1 baseline from the merged D079 source correction and the already
 accepted D078 provenance maintenance. The owner authorized a separate release
 PR, its merge and publication after completed exact-commit workflow and

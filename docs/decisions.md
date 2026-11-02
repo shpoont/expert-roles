@@ -1678,3 +1678,25 @@ validation remain separate from this addition.
   installation, consumer integration update or new live expert test. Retain the
   CLI-only evidence limits, including unverified desktop labels and older-host
   compatibility. See the [release contract](design.md#release-expert-roles-v141).
+
+## D081 — 2026-11-02: Enforce the Codex nickname character contract
+
+- **Status:** Narrow source correction prepared; all 108 offline tests pass.
+  The corrected offline registry selects all 72 fixtures. The original failed
+  diagnostic assertion remains recorded separately.
+- **Decision:** Derive host-valid ASCII candidates from canonical names using
+  NFKD accent decomposition and ASCII punctuation removal, preserving `-`, `_`,
+  case and initials. Reject unmappable letters or identity-free results before
+  writes. Add whole-catalogue and six-name regressions without editing profiles.
+- **Rationale:** The v1.4.1 TOML and Fowler checks missed the host restriction.
+  CLI 0.166.0 actually rejected Deming; six values fall outside the reported
+  grammar. An offline render selected 66 unchanged project definitions and
+  omitted those six, but did not emit the planned fixture-path diagnostics.
+  The same approved two-render scope then verified all 72 corrected definitions;
+  the actual runtime diagnostic and registry evidence remain separate.
+- **Authority and boundary:** The owner authorized the canonical fix and corrected
+  publication through separate source and release PRs. No personal-file change,
+  broader role-content change, model campaign or client/access change. Limit
+  native validation to the coordinated finite plan without automatic retries;
+  preserve the original failed check and separate actual, static and loader
+  evidence. See the [contract](design.md#host-valid-codex-nicknames).

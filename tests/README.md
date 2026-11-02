@@ -3,6 +3,31 @@
 Checks follow the [project expectations](../PROJECT.md#scope-and-expectations)
 and [implementation contract](../docs/design.md#implementation-contract).
 
+## Codex nickname character correction (D081)
+
+The [host-valid nickname contract](../docs/design.md#host-valid-codex-nicknames)
+corrects the v1.4.1 regression. Verify all generated candidates against
+`[A-Za-z0-9 _-]+`, regress the six affected names and preserve canonical Unicode,
+quotes and backslashes in descriptions and instructions. Unmappable names must
+fail before any output is written. Ordinary valid ASCII names stay unchanged.
+At one export version, only six candidate values may differ; all other Codex
+payload fields, all Claude bytes, source catalogues and canonical inputs must
+retain their previous values. VERSION and dist remain release-owned.
+
+The bounded native plan uses two offline CLI 0.166.0 registry renders, with no
+model calls or automatic retries. In an already trusted disposable project,
+description markers distinguish fixture definitions from personal collisions.
+Record selected definitions independently of process exit and fixture presence;
+record actual diagnostics without assuming the offline command emits them.
+The first render selected 66 of 72 unchanged exports and omitted all six invalid
+ones, but emitted no diagnostics. Its planned diagnostic assertion failed and
+remains recorded. The one remaining planned render selected all 72 corrected
+fixtures and also emitted no diagnostics. The independently hash-verified actual
+Deming runtime error establishes the reported grammar. The evidence composition
+was clarified within the original two-render scope, without another attempt or
+claiming that the failed assertion passed. Retain loader, static and inference evidence separately;
+the consuming integration owns its separately authorized single-child check.
+
 ## Codex instance names (D079)
 
 The [prepared contract](../docs/design.md#expert-names-for-codex-instances) and
@@ -13,8 +38,9 @@ project definition had been excluded. The corrected four-instance CLI check
 passes, including concurrent naming. See
 [results and limits](../evidence/README.md#codex-configuration-trace-and-corrected-host-validation--2026-11-02).
 
-For the source change, verify every preview Codex role has one candidate equal
-to the canonical expert name, including Unicode and TOML escaping. Removing
+For the original source change, verify every preview Codex role had one candidate
+equal to the canonical expert name, including Unicode and TOML escaping. D081
+supersedes that literal equality with host-valid name derivation. Removing
 only that field must recover the previous parsed Codex payload; Claude files
 must remain byte-for-byte unchanged. Compare generated before/after outputs at
 the same export version. Update the existing Codex metadata-key assertion

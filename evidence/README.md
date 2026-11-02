@@ -9,6 +9,55 @@ Connect evidence to [current work](../docs/current-work.md),
 [decisions](../docs/decisions.md), [checks](../tests/README.md) and
 [delivery](../docs/delivery.md).
 
+## Codex nickname character correction — 2026-11-02
+
+D081 addresses the v1.4.1 host-validity gap. A hash-verified primary CLI 0.166.0
+record contains two actual diagnostics rejecting the Deming role file:
+`nickname_candidates may only contain ASCII letters, digits, spaces, hyphens, and underscores`.
+The private trace remains outside this public repository. The
+[official custom-agent guide](https://learn.chatgpt.com/docs/agent-configuration/subagents#custom-agents)
+describes standalone loading but did not establish this character restriction;
+the native diagnostic is the source for the grammar below.
+
+| Role | v1.4.1 candidate | Source correction |
+| --- | --- | --- |
+| expert-kenneth-adams | Kenneth A. Adams | Kenneth A Adams |
+| expert-leonie-watson | Léonie Watson | Leonie Watson |
+| expert-milan-zeleny | Milan Zelený | Milan Zeleny |
+| expert-robert-kaplan | Robert S. Kaplan | Robert S Kaplan |
+| expert-tomas-bata | Tomáš Baťa | Tomas Bata |
+| expert-w-edwards-deming | W. Edwards Deming | W Edwards Deming |
+
+Static audit finds exactly these six values outside `[A-Za-z0-9 _-]+`. The
+actual runtime rejection covers Deming; it is not six runtime results. The
+earlier Unicode/escaping test proved TOML round-tripping, and the Fowler case
+used an ASCII name. Neither established host validity for the other candidates.
+
+The first of two planned offline registry renders used all 72 unchanged exports
+in a disposable project within an already trusted checkout. Test-only description
+markers distinguished fixture definitions from personal collisions. The native
+registry selected exactly 66 marked fixtures and omitted the six listed above.
+The command returned zero and emitted no diagnostics; the planned fixture-path
+diagnostic assertion therefore failed and is retained. The evidence composition
+was clarified within the existing two-render scope: the actual runtime error
+establishes the grammar and the registry establishes fixture availability.
+
+The one remaining planned render selected all 72 corrected marked definitions
+and emitted no diagnostics. It passes corrected loader acceptance; it does not
+retroactively pass the first diagnostic assertion or establish six inference
+results. Both renders preserved all 72 personal agent/configuration files,
+their inventory, hashes and modes. The disposable fixture is archived outside
+the checkout. Exactly two offline renders ran, with zero model calls or retries.
+
+Four focused regression tests initially failed 17 subcases, then passed after
+the source change. They cover all six corrections, valid ASCII preservation,
+the entire catalogue's character grammar, canonical Unicode/escaping elsewhere
+and rejection of unmappable names before writes. All 108 offline tests pass.
+Comparing all exports at version 1.4.1 confirms exactly six candidate-value
+changes and preservation of all other Codex payload fields, all 72 Claude files
+and all three distribution indexes. VERSION, committed dist and canonical
+inputs are unchanged; release preparation remains a separate phase.
+
 ## v1.4.1 release preparation — 2026-11-02
 
 D080's [release contract](../docs/design.md#release-expert-roles-v141) distributes

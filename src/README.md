@@ -125,8 +125,9 @@ keeps its name, specialty and image columns; all roles retain the shared instruc
 
 ## Codex instance-name candidate
 
-From v1.4.1, Codex exports include `nickname_candidates` using the existing
-canonical expert name, without changing the stable role identifier:
+Codex nickname candidates use a restricted host character set: ASCII letters,
+digits, spaces, hyphens and underscores. D081's source correction derives that
+display value from the canonical name without changing the stable identifier:
 
 ```toml
 name = "expert-martin-fowler"
@@ -137,6 +138,18 @@ This is host metadata, not an instruction or a new profile field. Claude role
 metadata and execution instructions are unchanged; release provenance advances
 with the library version. Updating an export does not rename existing conversations.
 
+Generation applies Unicode NFKD decomposition, removes combining accents and
+ASCII punctuation other than `-` and `_`, and collapses spaces. For example,
+Tomáš Baťa becomes `Tomas Bata` and W. Edwards Deming becomes `W Edwards Deming`
+only in `nickname_candidates`. Canonical names retain their spelling in profiles,
+descriptions and instructions. Unmappable characters or a result without ASCII
+letters/digits stop generation before writes; letters are never silently dropped
+to produce an incomplete identity.
+
+The published v1.4.1 files contain six candidates outside the host grammar.
+The source correction is available in previews pending a separate patch release.
+See [the correction and evidence limits](../evidence/README.md#codex-nickname-character-correction--2026-11-02).
+
 Codex CLI 0.166.0 loaded the standalone export from a trusted project's agent
 directory and stored Martin Fowler for a fresh instance. Two concurrent
 instances received Martin Fowler and Martin Fowler the 2nd. The earlier failed
@@ -144,7 +157,8 @@ attempt had used an untrusted project whose definition was excluded; the
 corrected check proved which definition was selected before inference.
 See [results and limits](../evidence/README.md#codex-configuration-trace-and-corrected-host-validation--2026-11-02).
 Desktop labels remain visually unverified, and older-host compatibility is
-untested. The v1.4.1 distribution includes this setting in all 72 Codex exports.
+untested. That Fowler check did not cover accented or punctuated candidates;
+the later D081 checks address loader acceptance separately from invocation.
 
 ## Export provenance
 

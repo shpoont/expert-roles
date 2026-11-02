@@ -79,7 +79,13 @@ checks but no runtime validation. These observations do not establish broad
 selection reliability or comparative expert benefit; see the
 [current results](evidence/README.md#codex-configuration-trace-and-corrected-host-validation--2026-11-02).
 
-- **Current status and boundary:** D079's naming correction passed 105 offline
+- **Current status and boundary:** D081 corrects six v1.4.1 nickname values that
+  violate CLI 0.166.0's host grammar. The owner authorized source delivery and a
+  separate v1.4.2 patch release through the protected process. Preserve canonical
+  names, instructions, roster, images, Claude semantics and personal state.
+  Native loader verification is bounded and separate from model invocation;
+  see [current work](docs/current-work.md#current-focus-and-status).
+  D079's naming correction passed 105 offline
   tests and the bounded CLI check. Source PR #21 was squash merged with successful
   exact-commit PR and main checks. D080 defines v1.4.1 through a separate release
   PR; the owner authorized its merge and publication after the required hosted
