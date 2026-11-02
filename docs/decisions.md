@@ -1635,3 +1635,27 @@ validation remain separate from this addition.
   v1.0.0 records. No new conformance requirements, role behavior, product version,
   release artifacts, installation or deployment changes. See the
   [provenance design](design.md#starter-provenance).
+
+## D079 — 2026-11-02: Prepare expert-based Codex instance names
+
+- **Status:** Implemented locally; 105 offline tests and the corrected bounded
+  CLI host check pass. Desktop labels remain visually unconfirmed.
+- **Decision:** Prepare [issue #20](https://github.com/shpoont/expert-roles/issues/20)
+  and its [contract](design.md#expert-names-for-codex-instances). Derive Codex's
+  `nickname_candidates` from the existing expert name while retaining stable
+  role identifiers and all shared content. Keep Claude exports unchanged.
+- **Rationale:** Help people identify the selected expert when Codex displays
+  an instance nickname, without adding per-expert instructions or duplicating
+  canonical names in source metadata.
+- **Authority:** The owner authorized implementation and host validation, then
+  investigation and a `codex exec` rerun after the first attempt stopped. Its
+  project definition had been excluded as untrusted. Four fresh instances
+  verified the baseline, configured single and concurrent pair after offline
+  source-selection checks. No inference retries or judges were used.
+- **Boundary:** Source preparation leaves VERSION, committed dist and personal
+  installations unchanged. The owner subsequently authorized source delivery
+  and a separate v1.4.1 release through the protected PR process. CLI records
+  establish stored nicknames and concurrent execution;
+  desktop labels, older-version compatibility and broader discovery reliability
+  remain unverified. Claude integration changes are outside this role library's
+  scope. See the [results](../evidence/README.md#codex-configuration-trace-and-corrected-host-validation--2026-11-02).

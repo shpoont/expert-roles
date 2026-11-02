@@ -2,17 +2,47 @@
 
 ## Current focus and status
 
-The current maintenance change adopts Project Structure v1.0.1 provenance via
+The [issue #20](https://github.com/shpoont/expert-roles/issues/20) source candidate
+implements [D079's contract](design.md#expert-names-for-codex-instances): derive
+`nickname_candidates` from the existing expert name without changing other
+Codex payload fields or Claude exports. All 105 offline tests pass. The owner
+also authorized the planned host validation, using Codex CLI 0.166.0 and the
+existing ChatGPT login with GPT-6.1 Sol/xhigh.
+
+The first host attempt stopped after an unrelated configured nickname. The
+subsequently authorized investigation established that the temporary project
+was untrusted: Codex excluded its definition and exposed the existing personal
+role instead. The CLI trust override had not activated the project layer.
+
+A fresh `codex exec` cohort used normal configuration loading in a disposable
+directory within an already trusted checkout. An offline marker check proved
+the project definition was selected before each run; the exact export bytes
+were restored before inference. The baseline received Archimedes, the configured
+instance Martin Fowler, and the concurrent pair Martin Fowler and Martin
+Fowler the 2nd. Distinct native IDs and overlapping execution were confirmed.
+See [corrected host results and limits](../evidence/README.md#codex-configuration-trace-and-corrected-host-validation--2026-11-02).
+
+Source implementation and the bounded CLI check are complete. Computer Use
+blocks access to the Codex app, so desktop labels remain visually unconfirmed;
+older-version compatibility and broader discovery reliability are untested.
+Profiles, VERSION, committed dist and personal installations remain unchanged.
+The owner has now authorized a signed source commit, push, source PR and squash
+merge after successful CI, followed by a separate v1.4.1 release PR and
+publication after the required release and resulting-main checks. VERSION and
+dist stay release-owned. Installation and deployment remain outside this work.
+
+## Completed Project Structure update
+
+D078 adopted Project Structure v1.0.1 provenance via
 [.project-structure.yaml](../.project-structure.yaml). Project and contributor
 guidance use that file as the baseline source; review previews retain it.
 Project-specific adaptations, Expert Roles v1.4.0 and its native exports remain
 unchanged. [D078](decisions.md#d078--2026-10-31-adopt-project-structure-v101-provenance)
 records the adoption; focused results are retained in
 [evidence](../evidence/README.md#project-structure-v101-provenance--2026-10-31).
-The owner accepted the update and authorized a signed commit, push and PR,
-followed by squash merge if hosted CI passes. Git history and the PR record
-establish the actual delivery state. No release, installation or runtime test
-is part of this update.
+[PR #19](https://github.com/shpoont/expert-roles/pull/19) was squash merged as
+`48de2ce`; the exact-head PR and resulting main checks passed. No product
+release, installation or runtime test was part of that update.
 
 ## Retained release and repair context
 

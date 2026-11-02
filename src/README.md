@@ -123,6 +123,30 @@ single-expert rows stay compact. It is not added to
 execution instructions or automatically copied into profile prose. The catalogue
 keeps its name, specialty and image columns; all roles retain the shared instruction.
 
+## Codex instance-name candidate
+
+Unreleased Codex previews add `nickname_candidates` using the existing canonical
+expert name, without changing the stable role identifier:
+
+```toml
+name = "expert-martin-fowler"
+nickname_candidates = ["Martin Fowler"]
+```
+
+This is host metadata, not an instruction or a new profile field. Claude exports
+retain their existing metadata and bytes. Updating an export does not rename
+existing conversations.
+
+Codex CLI 0.166.0 loaded the standalone export from a trusted project's agent
+directory and stored Martin Fowler for a fresh instance. Two concurrent
+instances received Martin Fowler and Martin Fowler the 2nd. The earlier failed
+attempt had used an untrusted project whose definition was excluded; the
+corrected check proved which definition was selected before inference.
+See [results and limits](../evidence/README.md#codex-configuration-trace-and-corrected-host-validation--2026-11-02).
+Desktop labels remain visually unverified, and older-host compatibility is
+untested. Committed v1.4.0 exports remain unchanged; the setting is currently
+available in unreleased previews only.
+
 ## Export provenance
 
 Every native export carries the same three provenance keys. Exports use a short
@@ -469,13 +493,16 @@ project records rather than presenting a placeholder as a photograph.
 ## Native formats
 
 - [Codex custom agents](https://learn.chatgpt.com/docs/agent-configuration/subagents#custom-agents):
-  TOML with `name`, `description` and `developer_instructions`.
+  TOML with `name`, `description`, `developer_instructions` and, in unreleased
+  previews, the [nickname candidate](#codex-instance-name-candidate).
 - [Claude Code subagents](https://code.claude.com/docs/en/sub-agents#write-subagent-files):
   Markdown with YAML `name` / `description` frontmatter and the instruction body.
 
 Both contain the exact same rendered instruction. No host model or capability
 overrides are added. These are the initial export formats. Three Codex samples
-passed using explicit invocation-only registration; automatic directory
-discovery remains unresolved. Claude exports are structurally checked and
-runtime-untested. Follow the [usage guidance](../docs/delivery.md#use-a-native-role)
+passed using explicit invocation-only registration. A later bounded CLI check
+also verified trusted project-directory discovery and instance naming for
+Martin Fowler; desktop labels and broader discovery reliability remain
+unverified. Claude exports are structurally checked and runtime-untested.
+Follow the [usage guidance](../docs/delivery.md#use-a-native-role)
 and [checks](../tests/README.md) for the observed method and its limits.

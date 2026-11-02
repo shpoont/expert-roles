@@ -82,11 +82,11 @@ with relevant examples. State any narrower pilot scope explicitly. The role
 should identify material coverage gaps while giving useful advice within that
 scope; a supplied proposal or earlier endorsement does not establish the goal.
 
-Choose a setup route before downloading: Codex supports a one-off CLI trial
-and manual persistent registration below; Claude Code uses project or personal
-agent files. The recorded Codex result covers only explicit one-off registration.
-Persistent Codex setup follows official configuration guidance, automatic
-directory discovery remains unresolved, and Claude runtime is untested.
+Choose a setup route before downloading: Codex supports standalone agent files,
+a one-off CLI trial and manual registration below; Claude Code uses project or
+personal agent files. Recorded Codex results cover explicit one-off registration
+and a bounded trusted project-directory check. Desktop labels, broader discovery
+reliability and Claude runtime remain unverified.
 
 1. Open an expert in the [catalogue](../src/roles/README.md) and choose the
    **Codex** or **Claude Code** file, or use the [distribution indexes](../dist/README.md).
@@ -111,13 +111,36 @@ verified, naming an expert in every task is optional. In current local Codex,
 delegation follows a direct request or applicable project or skill instructions;
 see the [subagent guide](https://learn.chatgpt.com/docs/agent-configuration/subagents#orchestration-and-thread-controls).
 
-### Codex: explicit registration
+### Codex: role files and registration
 
 Each Codex TOML contains `name`, `description` and `developer_instructions`.
+Unreleased previews also include the
+[instance-name candidate](../src/README.md#codex-instance-name-candidate).
+The bounded CLI check confirms expert-identifying names for new instances,
+including a concurrent pair. Updating a file does not rename existing agents.
+The committed v1.4.0 exports remain unchanged. Claude files provide a role
+identifier, without a separate instance-nickname setting.
 Both formats also carry [source, version and expert ID comments](../src/README.md#export-provenance)
 for people and consuming tools; these do not enter the execution instructions.
 The [configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference)
 defines `agents.<name>.description` and `agents.<name>.config_file`.
+
+#### Use a standalone role file
+
+Current [Codex guidance](https://learn.chatgpt.com/docs/agent-configuration/subagents#custom-agents)
+supports project files under `.codex/agents/` and personal files under
+`~/.codex/agents/`. Keep the downloaded TOML's filename and contents intact and
+retain LICENSE with your copies. Enable subagents in the intended client and
+start a fresh chat to check the requested role.
+
+Project files require a trusted project; see
+[Config basics](https://learn.chatgpt.com/docs/config-file/config-basic).
+If a personal role has the same name, verify that the intended project
+definition is selected. A file's presence or matching instruction text is not
+enough. The corrected Codex CLI 0.166.0 check verified the project route and
+nickname metadata without a role-table override. The personal route has not
+received a separate runtime test for this change, and desktop labels remain
+visually unconfirmed. See the [results](../evidence/README.md#codex-configuration-trace-and-corrected-host-validation--2026-11-02).
 
 #### Keep a role available in future chats
 
@@ -201,12 +224,12 @@ An `@` prefix is not required for this documented natural-language request.
   a new chat and repeat the explicit request. If it still fails, report setup
   as unresolved rather than treating the parent answer as a role result.
 
-[Codex also documents](https://learn.chatgpt.com/docs/agent-configuration/subagents#custom-agents)
-`.codex/agents/` and `~/.codex/agents/` for project and personal files. Automatic
-discovery from a temporary project did not work in the recorded attempt.
-Copying a file into those directories alone is therefore not a verified setup
-path for this catalogue. The explicit-registration result does not resolve that
-separate discovery issue.
+For standalone files, check project trust and which configuration scope owns
+the selected definition. The initial naming test's temporary project was
+untrusted, so Codex exposed the existing personal role instead. A subsequent
+trusted project-directory check passed. These are separate results from the
+older explicit-registration check; neither establishes desktop presentation
+or discovery reliability across every client.
 
 ### Claude Code: runtime untested
 
