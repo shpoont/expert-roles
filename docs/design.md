@@ -1,5 +1,33 @@
 # Design and approach
 
+## Release Expert Roles v1.4.2
+
+D082 distributes D081's host-character correction after the source PR is
+merged. Use a separate patch release PR with the release label; source
+contributions retain their existing VERSION and dist boundary. Keep the
+roster, canonical names, specialties, images, descriptions, execution
+instructions, IDs, paths, shared templates and personal installations fixed.
+
+Set VERSION and all 144 native version comments to 1.4.2 and finalize the
+dated changelog and current baseline guidance. Exactly six Codex nickname
+values change from v1.4.1; all other Codex fields and all Claude semantics
+remain unchanged. Preserve the other 66 Codex candidates and every old tag.
+
+Run the full suite, strict freshness/release ownership, all-72 candidate
+grammar and preservation checks, complete-preview references and public
+suitability review. Use the release push helper. Both exact-commit workflow
+and validate checks on the PR and resulting main must complete successfully
+before creating the signed annotated v1.4.2 tag and publishing Latest.
+Verify the remote tag, release, VERSION and all native blobs before reporting
+publication. No further upstream host/model runs, personal-role changes,
+client writes or integration updates are part of this release.
+
+Use the actual CLI 0.166.0 Deming diagnostic for the grammar and the two
+non-model registry renders for 66-to-72 fixture availability. Keep the
+original failed diagnostic assertion and the offline command's lack of
+diagnostic output explicit. Do not turn loader evidence into six runtime
+claims. The consuming integration owns its separately authorized acceptance.
+
 ## Host-valid Codex nicknames
 
 D081 corrects the character-set gap in D079 and v1.4.1. CLI 0.166.0 reports

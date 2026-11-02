@@ -5,11 +5,17 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+## v1.4.2 — 2026-11-02
+
+Correct six host-invalid Codex nickname candidates while preserving canonical
+names, IDs, descriptions, execution instructions and paths. Both hosts' version
+comments advance to 1.4.2; Claude metadata and instruction bodies are unchanged.
+
 ### Fixed
 
 - Derive host-valid ASCII Codex nickname candidates for six expert names with
   accents or periods. Preserve canonical names, profiles, stable IDs, selection
-  descriptions, execution instructions and Claude exports. Validate the entire
+  descriptions, execution instructions and Claude semantics. Validate the entire
   catalogue against the CLI 0.166.0 character restriction and reject unmappable
   names before writing outputs.
 

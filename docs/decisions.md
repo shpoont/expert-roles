@@ -1681,7 +1681,7 @@ validation remain separate from this addition.
 
 ## D081 — 2026-11-02: Enforce the Codex nickname character contract
 
-- **Status:** Narrow source correction prepared; all 108 offline tests pass.
+- **Status:** Source correction merged through PR #23; all 108 offline tests pass.
   The corrected offline registry selects all 72 fixtures. The original failed
   diagnostic assertion remains recorded separately.
 - **Decision:** Derive host-valid ASCII candidates from canonical names using
@@ -1700,3 +1700,23 @@ validation remain separate from this addition.
   native validation to the coordinated finite plan without automatic retries;
   preserve the original failed check and separate actual, static and loader
   evidence. See the [contract](design.md#host-valid-codex-nicknames).
+
+## D082 — 2026-11-02: Publish the host-character correction as v1.4.2
+
+- **Status:** Owner-authorized release preparation, PR merge and publication,
+  conditional on the existing local and exact-commit hosted gates.
+- **Decision:** Release the merged D081 correction in a separate signed release
+  PR. Set VERSION and all native version comments to 1.4.2, normalize exactly six
+  Codex candidate values, and finalize the changelog and current baseline guides.
+- **Rationale:** Repair the delivered host-compatibility regression without
+  changing canonical identities, expert scope, execution content or consumption
+  paths. The roster, vocabulary, portraits and shared templates stay fixed.
+- **Acceptance:** Run the full suite, strict generated/native and release-boundary
+  checks, all-72 grammar/preservation comparison, preview references and public
+  suitability review. Require completed successful PR and resulting-main workflow
+  and validate checks before the signed annotated tag and Latest publication.
+  Read back exact tag/release identities, VERSION and all 144 native blobs.
+- **Boundary:** Preserve all old tags, personal roles/configuration and consumer
+  state. No additional upstream native/model test. Retain the actual Deming
+  diagnostic, offline 66-to-72 result and original failed diagnostic assertion at
+  their distinct scopes. See the [release contract](design.md#release-expert-roles-v142).

@@ -2,6 +2,17 @@
 
 ## Current focus and status
 
+D082 defines the v1.4.2 patch baseline from source PR #23. The owner authorized
+the separate release PR, merge and publication through the protected process.
+VERSION and all native version comments declare 1.4.2; exactly six Codex
+candidates are normalized. Verify actual publication from the matching signed
+annotated tag and remote release. Follow the
+[release contract](design.md#release-expert-roles-v142) and
+[procedure](delivery.md#versions-and-releases). No personal-role update, client
+write, additional upstream native render or model run is part of this phase.
+
+## Completed host-character correction
+
 D081 corrects a newly observed v1.4.1 loader regression: six Codex nickname
 values violate CLI 0.166.0's ASCII character restriction. The owner authorized
 the narrowly scoped library fix and normal protected source/release pipeline;
@@ -15,7 +26,10 @@ actual hash-verified Deming runtime error establishes the restriction; source
 markers establish corrected loader acceptance. The evidence composition was
 clarified within the original bounded scope. No model runs or retries occurred.
 All other Codex fields, all Claude bytes and canonical inputs are preserved at
-the same version. The source PR leaves VERSION and dist unchanged. See the [contract](design.md#host-valid-codex-nicknames) and
+the same version. Source [PR #23](https://github.com/shpoont/expert-roles/pull/23)
+was squash merged as `8416579` after its required PR checks. It left VERSION
+and dist unchanged; the separate D082 release updates those artifacts.
+See the [contract](design.md#host-valid-codex-nicknames) and
 [bounded record](../evidence/README.md#codex-nickname-character-correction--2026-11-02).
 
 ## Released v1.4.1 context
@@ -131,17 +145,17 @@ as did the [resulting main checks](https://github.com/shpoont/expert-roles/actio
 
 ## Release baseline
 
-**v1.4.1 contains 72 experts, 99 specialties in 15 groups and 144 native role files.**
+**v1.4.2 contains 72 experts, 99 specialties in 15 groups and 144 native role files.**
 There are 54 generated portraits, five historical depictions and 13 placeholders.
 Existing expert identifiers, selection descriptions, formats and paths remain
-stable. Codex files add the canonical-name nickname candidate; both hosts'
-version comments advance. The shared instruction is unchanged from v1.4.0.
+stable. Six Codex candidates are normalized for the host grammar and both hosts'
+version comments advance. The shared instruction is unchanged from v1.4.1.
 
-The [release contract](design.md#release-expert-roles-v141) requires the full suite,
+The [release contract](design.md#release-expert-roles-v142) requires the full suite,
 strict generated freshness, native equality, preservation and preview checks.
 The release PR and resulting main workflow and validate check must all finish
 successfully before tagging. The matching
-[GitHub release](https://github.com/shpoont/expert-roles/releases/tag/v1.4.1)
+[GitHub release](https://github.com/shpoont/expert-roles/releases/tag/v1.4.2)
 and annotated tag establish publication separately from this declared baseline.
 The earlier v1.3.0 publication remains in
 [evidence](../evidence/README.md#v130-publication--2026-10-22).
@@ -158,7 +172,7 @@ hashes. Review the entire proposed diff and inventory, including untracked files
 
 ## Delivery and follow-ups
 
-D080 authorizes the release PR, merge and publication through the
+D082 authorizes the release PR, merge and publication through the
 [release procedure](delivery.md#versions-and-releases). Hosted checks and the
 matching release record identify the actual remote state.
 Nonblocking follow-ups are a case that preserves the requested distinction under a different
