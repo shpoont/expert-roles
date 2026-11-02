@@ -18,19 +18,19 @@ roster changes.
 
 ## Scope and expectations
 
-The v1.4.1 release baseline contains 72 experts, 99 specialties in 15 groups,
+The v1.4.2 release baseline contains 72 experts, 99 specialties in 15 groups,
 54 generated portraits, five original historical depictions and 13 full-name
 placeholders. The roster, vocabulary and images are unchanged from v1.4.0;
-v1.4.1 corrects Codex instance naming. See the
+v1.4.2 corrects six host-invalid Codex nickname candidates. See the
 [source catalogue](src/roles/README.md) for the collection.
 Every source profile has
 canonical metadata, a short human-readable README and one square visual.
 The adopted [studio-v1 method](docs/elements/portraits.md) is retained.
 Previews generate a Codex and Claude Code file for every source profile, with
 alphabetical and specialty indexes that link to stable, unduplicated paths.
-Version v1.4.1's `dist/` files and source catalogues cover all 72 experts; the
+Version v1.4.2's `dist/` files and source catalogues cover all 72 experts; the
 previous v1.3.0 release covered 68. The
-[release record](https://github.com/shpoont/expert-roles/releases/tag/v1.4.1)
+[release record](https://github.com/shpoont/expert-roles/releases/tag/v1.4.2)
 establishes hosted publication separately from the version declaration.
 Portrait acceptance is an editorial decision;
 structural validity does not establish likeness. Future additions follow the
@@ -79,18 +79,15 @@ checks but no runtime validation. These observations do not establish broad
 selection reliability or comparative expert benefit; see the
 [current results](evidence/README.md#codex-configuration-trace-and-corrected-host-validation--2026-11-02).
 
-- **Current status and boundary:** D081 corrects six v1.4.1 nickname values that
-  violate CLI 0.166.0's host grammar. The owner authorized source delivery and a
-  separate v1.4.2 patch release through the protected process. Preserve canonical
-  names, instructions, roster, images, Claude semantics and personal state.
+- **Current status and boundary:** D081's host-character correction passed 108
+  offline tests and the corrected registry selected all 72 source definitions.
+  Source PR #23 was squash merged after successful exact-commit PR checks.
+  D082 defines the separate v1.4.2 release and publication after the required
+  hosted gates. VERSION and generated provenance declare 1.4.2; the annotated
+  tag and remote release establish publication separately. Canonical names,
+  instructions, roster, images, Claude semantics and personal state stay fixed.
   Native loader verification is bounded and separate from model invocation;
   see [current work](docs/current-work.md#current-focus-and-status).
-  D079's naming correction passed 105 offline
-  tests and the bounded CLI check. Source PR #21 was squash merged with successful
-  exact-commit PR and main checks. D080 defines v1.4.1 through a separate release
-  PR; the owner authorized its merge and publication after the required hosted
-  checks. VERSION and generated provenance declare 1.4.1; the annotated tag and
-  remote release establish actual publication separately.
   D075 applies the tested proposal-goal coverage paragraph to the existing
   consultation draft while preserving its safeguards. The isolated repair
   passed two source-case repetitions and two follow-up checks; the combined
@@ -104,8 +101,8 @@ selection reliability or comparative expert benefit; see the
   See the [contract](docs/design.md#goal-coverage-in-proposal-reviews) and
   [bounded evidence](evidence/README.md#goal-coverage-repair-and-application--2026-10-29).
   D071–D074 retain their historical results; the software/dinner scope example
-  does not reproduce the source consultation issue. D080 authorizes versioned
-  export regeneration and v1.4.1 publication through the required gates.
+  does not reproduce the source consultation issue. D082 authorizes versioned
+  export regeneration and v1.4.2 publication through the required gates.
   Preserve all accepted canonical sources and existing
   selection metadata. Installation and deployment remain separate.
 - **Delivery acceptance:** the catalogue, profiles, contribution process, image
@@ -178,10 +175,10 @@ requirements. [D078](docs/decisions.md#d078--2026-10-31-adopt-project-structure-
 records this update; D003 retains the original v1.0.0 adoption. Expert sources
 live under `src/`; the full catalogue is generated in `src/roles/README.md`, with a fixed
 six-expert showcase and generated count in the main README. Ready-to-use
-exports and their indexes live under `dist/`. Library version `1.4.1` is
+exports and their indexes live under `dist/`. Library version `1.4.2` is
 independent of the starter and consuming integrations. The canonical `VERSION`
-file and both hosts' provenance comments use `1.4.1`.
-The [versioned release record](https://github.com/shpoont/expert-roles/releases/tag/v1.4.1)
+file and both hosts' provenance comments use `1.4.2`.
+The [versioned release record](https://github.com/shpoont/expert-roles/releases/tag/v1.4.2)
 and annotated tag establish publication separately from those declarations.
 The previous v1.2.0 tag remains fixed at
 `c493c44bd14c7a54adce74f10bb6ea3c5bfd7359`. See the

@@ -9,6 +9,37 @@ Connect evidence to [current work](../docs/current-work.md),
 [decisions](../docs/decisions.md), [checks](../tests/README.md) and
 [delivery](../docs/delivery.md).
 
+## v1.4.2 release preparation — 2026-11-02
+
+D082's [release contract](../docs/design.md#release-expert-roles-v142) distributes
+D081 through a separate patch release. Source
+[PR #23](https://github.com/shpoont/expert-roles/pull/23) was squash merged as
+`8416579` after its [exact-head workflow and validate check](https://github.com/shpoont/expert-roles/actions/runs/41471539969)
+passed. The [resulting-main checks](https://github.com/shpoont/expert-roles/actions/runs/41472257714)
+also completed successfully. VERSION and all native version comments advance
+to 1.4.2; the six corrected candidate values are listed below.
+
+All 108 offline tests pass in the release checkout, and all 149 generated
+outputs match. Strict release ownership, complete-preview references, UTF-8,
+bounded public-content and whitespace checks pass. Comparing all native files
+with v1.4.1 verifies exactly six candidate-value changes and preservation of
+every other Codex payload field. All 72 Claude files differ only in the version
+comment. The three distribution indexes, 270 protected source/tooling files,
+fixed homepage sample and prior dated changelog history retain their bytes.
+
+The two completed non-model renders remain the only upstream native checks.
+They preserved all 72 personal files, inventory and modes within the coordinated
+window. No personal-file edit, client change, extra model invocation or retry is
+part of release preparation. The actual Deming diagnostic, offline 66-to-72
+availability and retained failed diagnostic assertion remain separate evidence;
+none establishes six inference outcomes, desktop presentation or older-host
+compatibility. The consuming integration owns its separately authorized check.
+
+Both exact-commit workflow and validate checks on the release PR and resulting
+main must complete successfully before tagging. The signed annotated tag and
+[remote release](https://github.com/shpoont/expert-roles/releases/tag/v1.4.2)
+establish publication separately from these local preparation results.
+
 ## Codex nickname character correction — 2026-11-02
 
 D081 addresses the v1.4.1 host-validity gap. A hash-verified primary CLI 0.166.0

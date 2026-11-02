@@ -126,7 +126,7 @@ keeps its name, specialty and image columns; all roles retain the shared instruc
 ## Codex instance-name candidate
 
 Codex nickname candidates use a restricted host character set: ASCII letters,
-digits, spaces, hyphens and underscores. D081's source correction derives that
+digits, spaces, hyphens and underscores. D081's correction derives that
 display value from the canonical name without changing the stable identifier:
 
 ```toml
@@ -146,8 +146,9 @@ descriptions and instructions. Unmappable characters or a result without ASCII
 letters/digits stop generation before writes; letters are never silently dropped
 to produce an incomplete identity.
 
-The published v1.4.1 files contain six candidates outside the host grammar.
-The source correction is available in previews pending a separate patch release.
+The v1.4.1 files contain six candidates outside the host grammar. Version 1.4.2
+provides the corrected candidates; all 72 source definitions passed the bounded
+offline registry check on CLI 0.166.0.
 See [the correction and evidence limits](../evidence/README.md#codex-nickname-character-correction--2026-11-02).
 
 Codex CLI 0.166.0 loaded the standalone export from a trusted project's agent
@@ -169,7 +170,7 @@ host settings:
 ```text
 # Expert Roles
 # expert_roles.source:  https://github.com/shpoont/expert-roles
-# expert_roles.version: 1.4.1
+# expert_roles.version: 1.4.2
 # expert_roles.id:      eliyahu-goldratt
 
 ```
@@ -177,7 +178,7 @@ host settings:
 `source` identifies the canonical public repository, `version` comes from the
 root [VERSION](../VERSION) file, and `id` is the expert directory's stable slug.
 Both formats share the whole-library version; individual experts have no
-separate version. The example uses v1.4.1; isolated previews use
+separate version. The example uses v1.4.2; isolated previews use
 `0.0.0-preview`. Historical release tags retain their original formatting.
 
 Codex comments appear before the TOML settings. Claude comments appear inside

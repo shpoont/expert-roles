@@ -121,10 +121,9 @@ including a concurrent pair. Updating a file does not rename existing agents.
 Claude files provide a role identifier, without a separate instance-nickname
 setting. Both formats retain the same execution instructions.
 
-Known v1.4.1 regression: six published nickname candidates contain characters
-outside CLI 0.166.0's ASCII grammar, and an actual Deming file rejection was
-observed. Source previews apply the [D081 correction](design.md#host-valid-codex-nicknames)
-pending a separate patch release. The correction changes only the candidate;
+Version 1.4.2 corrects six v1.4.1 nickname candidates outside CLI 0.166.0's
+ASCII grammar, following an actual Deming file rejection. The
+[D081 correction](design.md#host-valid-codex-nicknames) changes only the candidate;
 canonical names in descriptions and instructions retain their spelling.
 
 Both formats also carry [source, version and expert ID comments](../src/README.md#export-provenance)
@@ -352,7 +351,7 @@ Follow the [photo policy](../CONTRIBUTING.md#photo-sources-and-licenses) and
 
 ## Versions and releases
 
-Library version: **[v1.4.1](https://github.com/shpoont/expert-roles/releases/tag/v1.4.1)**.
+Library version: **[v1.4.2](https://github.com/shpoont/expert-roles/releases/tag/v1.4.2)**.
 The linked GitHub release records publication separately from the version declaration.
 One `MAJOR.MINOR.PATCH` version covers profiles, metadata, vocabulary, shared
 instructions, templates, tooling and both native formats. The consuming plugin
@@ -360,7 +359,7 @@ and other integrations keep independent histories. Individual experts and export
 formats do not have separate versions.
 
 The root [VERSION](../VERSION) file is the machine-readable source for export
-provenance, set to `1.4.1` for this baseline. Contributions leave it unchanged;
+provenance, set to `1.4.2` for this baseline. Contributions leave it unchanged;
 temporary previews use `0.0.0-preview` independently. A version header identifies
 a declared library version, not proof of publication or an
 exact content digest. Keep released tags fixed and use Git refs for snapshots.
@@ -380,7 +379,7 @@ The first stable baseline includes `dist/codex/expert-<slug>.toml` and
 A versioned export is not a broader host-compatibility or effectiveness claim.
 
 Preparation, local commits and publication follow the owner's current
-authorization. D080 authorizes v1.4.1 publication after the required gates;
+authorization. D082 authorizes v1.4.2 publication after the required gates;
 future releases need their own owner instruction. Complete the applicable
 steps below:
 
@@ -504,6 +503,25 @@ select an ancestor comparison `base` and enable `release` only for a prepared
 release. PR runs select that mode from the `release` label; main pushes select
 it when their diff changes `VERSION`. Adding or removing the label reruns checks.
 Source-only PR merges continue to pass while released artifacts lag behind.
+
+### v1.4.2 release baseline
+
+D082's [release contract](design.md#release-expert-roles-v142) distributes the
+host-character correction from [source PR #23](https://github.com/shpoont/expert-roles/pull/23).
+Exactly six Codex candidate values change, and all 144 native version comments
+advance to `1.4.2`. Canonical names, profiles, role IDs, descriptions,
+execution instructions, paths and Claude semantics stay unchanged.
+
+The patch uses the actual CLI 0.166.0 Deming diagnostic for the character rule
+and two offline registry renders for 66-to-72 fixture availability. The original
+diagnostic assertion remains recorded as failed because neither render emits
+diagnostics. No new model call or retry was performed; loader acceptance is
+separate from invocation and desktop presentation. The full suite, strict
+release/native checks, preview references and completed successful exact-commit
+PR/main workflow and validate checks precede tagging. The
+[release record](https://github.com/shpoont/expert-roles/releases/tag/v1.4.2) and
+annotated tag establish publication separately from these version declarations.
+Personal installation and integration acceptance remain separate.
 
 ### v1.4.1 release baseline
 
