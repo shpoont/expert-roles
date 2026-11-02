@@ -8,8 +8,10 @@ import json
 from pathlib import Path
 import re
 import shutil
+import string
 import sys
 import tomllib
+import unicodedata
 from urllib.parse import urlsplit
 import xml.etree.ElementTree as ET
 
@@ -35,6 +37,25 @@ PORTRAIT_SIZE = (512, 512)
 SOURCE_REPOSITORY = "https://github.com/shpoont/expert-roles"
 PREVIEW_VERSION = "0.0.0-preview"
 CATALOGUE_PATHS = {Path("README.md"), Path("src/roles/README.md")}
+CODEX_NICKNAME_CHARACTERS = frozenset(string.ascii_letters + string.digits + " _-")
+
+
+def codex_nickname(name: str) -> str:
+    """Normalize accents/punctuation without silently discarding name letters."""
+    characters = []
+    for character in unicodedata.normalize("NFKD", name):
+        if unicodedata.combining(character):
+            continue
+        if character in CODEX_NICKNAME_CHARACTERS:
+            characters.append(character)
+        elif character not in string.punctuation:
+            raise ValueError(f"Cannot derive a Codex nickname from {name!r}: "
+                             f"unmappable character {character!r}")
+    nickname = " ".join("".join(characters).split())
+    if not any(character.isalnum() for character in nickname):
+        raise ValueError(f"Cannot derive a Codex nickname from {name!r}: "
+                         "at least one ASCII letter or digit is required")
+    return nickname
 
 
 class UniqueLoader(yaml.SafeLoader):
@@ -373,7 +394,7 @@ def plan_outputs(root: Path, *, version: str | None = None) -> dict[Path, str]:
         ) + "\n"
         toml = provenance
         toml += "\n".join(f"{key} = {json.dumps(value, ensure_ascii=False)}" for key, value in metadata.items())
-        toml += "\nnickname_candidates = " + json.dumps([name], ensure_ascii=False)
+        toml += "\nnickname_candidates = " + json.dumps([codex_nickname(name)], ensure_ascii=False)
         toml += '\n\ndeveloper_instructions = """\n' + escaped + '"""\n'
         if tomllib.loads(toml)["developer_instructions"] != instruction:
             raise ValueError(f"Generated TOML changed the instruction: {slug}")

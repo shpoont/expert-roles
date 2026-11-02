@@ -5,6 +5,14 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+### Fixed
+
+- Derive host-valid ASCII Codex nickname candidates for six expert names with
+  accents or periods. Preserve canonical names, profiles, stable IDs, selection
+  descriptions, execution instructions and Claude exports. Validate the entire
+  catalogue against the CLI 0.166.0 character restriction and reject unmappable
+  names before writing outputs.
+
 ## v1.4.1 — 2026-11-02
 
 Correct Codex instance naming across the existing 72 experts. Stable role IDs,

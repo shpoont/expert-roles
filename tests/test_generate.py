@@ -110,7 +110,7 @@ class GenerationContractTests(unittest.TestCase):
                 self.assertEqual(claude["description"], codex["description"])
                 self.assertEqual(instruction.lstrip("\n"), codex["developer_instructions"])
 
-    def test_codex_nickname_candidates_round_trip_unicode_quotes_and_backslashes(self):
+    def test_codex_nickname_normalization_preserves_unicode_and_escaping_elsewhere(self):
         source = self.profile / "expert.yaml"
         entry = yaml.safe_load(source.read_text())
         canonical = 'Zoë "Quoted" Back\\Slash'
@@ -119,14 +119,64 @@ class GenerationContractTests(unittest.TestCase):
         outputs = plan_outputs(self.root)
         codex_text = outputs[Path("dist/codex/expert-don-norman.toml")]
         codex = tomllib.loads(codex_text)
-        self.assertEqual(codex["nickname_candidates"], [canonical])
+        self.assertEqual(codex["nickname_candidates"], ["Zoe Quoted BackSlash"])
         self.assertEqual(codex["name"], "expert-don-norman")
         self.assertIn("Zoë", codex_text)
+        self.assertIn(canonical, codex["description"])
+        self.assertIn(canonical, codex["developer_instructions"])
         claude_text = outputs[Path("dist/claude/expert-don-norman.md")]
         _, frontmatter, instruction = claude_text.split("---\n", 2)
         self.assertEqual(set(yaml.safe_load(frontmatter)), {"name", "description"})
         self.assertNotIn("nickname_candidates", claude_text)
         self.assertEqual(instruction.lstrip("\n"), codex["developer_instructions"])
+
+    def test_codex_nickname_candidates_cover_reported_loader_rejections(self):
+        source = self.profile / "expert.yaml"
+        entry = yaml.safe_load(source.read_text())
+        cases = {
+            "Milan Zelený": "Milan Zeleny",
+            "Robert S. Kaplan": "Robert S Kaplan",
+            "Léonie Watson": "Leonie Watson",
+            "Kenneth A. Adams": "Kenneth A Adams",
+            "W. Edwards Deming": "W Edwards Deming",
+            "Tomáš Baťa": "Tomas Bata",
+            "ASCII Tester_2-Jane": "ASCII Tester_2-Jane",
+        }
+        for canonical, expected in cases.items():
+            with self.subTest(canonical=canonical):
+                source.write_text(yaml.safe_dump({**entry, "name": canonical}, allow_unicode=True),
+                                  encoding="utf-8")
+                outputs = plan_outputs(self.root)
+                codex = tomllib.loads(outputs[Path("dist/codex/expert-don-norman.toml")])
+                self.assertEqual(codex["nickname_candidates"], [expected])
+                self.assertIn(canonical, codex["description"])
+                self.assertIn(canonical, codex["developer_instructions"])
+                self.assertEqual(yaml.safe_load(source.read_text())["name"], canonical)
+
+    def test_all_catalogue_nicknames_satisfy_the_host_character_restriction(self):
+        root = Path(__file__).resolve().parents[1]
+        outputs = plan_outputs(root)
+        roles = [text for path, text in outputs.items()
+                 if path.parent == Path("dist/codex") and path.name.startswith("expert-")]
+        self.assertTrue(roles)
+        for text in roles:
+            codex = tomllib.loads(text)
+            with self.subTest(role=codex["name"]):
+                self.assertEqual(len(codex["nickname_candidates"]), 1)
+                self.assertRegex(codex["nickname_candidates"][0], r"\A[A-Za-z0-9 _-]+\Z")
+
+    def test_unrepresentable_codex_nickname_fails_before_writes(self):
+        source = self.profile / "expert.yaml"
+        entry = yaml.safe_load(source.read_text())
+        for canonical in ("李", "Ana 李", "Łukasz", "..."):
+            with self.subTest(canonical=canonical):
+                source.write_text(yaml.safe_dump({**entry, "name": canonical}, allow_unicode=True),
+                                  encoding="utf-8")
+                with self.assertRaisesRegex(ValueError, "Cannot derive a Codex nickname"):
+                    plan_outputs(self.root)
+                before = {p: p.read_bytes() for p in self.root.rglob("*") if p.is_file()}
+                self.assertEqual(self.run_exporter("--docs"), 1)
+                self.assertEqual(before, {p: p.read_bytes() for p in self.root.rglob("*") if p.is_file()})
 
     def test_versioned_provenance_preserves_native_values_and_check_mode_is_read_only(self):
         self.assertEqual(self.run_exporter(), 0)

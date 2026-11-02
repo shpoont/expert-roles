@@ -120,6 +120,13 @@ The bounded CLI check confirms expert-identifying names for new instances,
 including a concurrent pair. Updating a file does not rename existing agents.
 Claude files provide a role identifier, without a separate instance-nickname
 setting. Both formats retain the same execution instructions.
+
+Known v1.4.1 regression: six published nickname candidates contain characters
+outside CLI 0.166.0's ASCII grammar, and an actual Deming file rejection was
+observed. Source previews apply the [D081 correction](design.md#host-valid-codex-nicknames)
+pending a separate patch release. The correction changes only the candidate;
+canonical names in descriptions and instructions retain their spelling.
+
 Both formats also carry [source, version and expert ID comments](../src/README.md#export-provenance)
 for people and consuming tools; these do not enter the execution instructions.
 The [configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference)
