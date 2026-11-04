@@ -2,6 +2,19 @@
 
 ## Current focus and status
 
+D083 defines the v1.5.0 minor release from source PR #25. The owner authorized
+both requested expert additions and publication through the protected process.
+The baseline has 74 experts, 101 specialties and 148 native files. Preserve all
+accepted profile and image sources, shared instructions and earlier native
+payloads; only their version comments advance. Follow the
+[release contract](design.md#release-expert-roles-v150) and
+[procedure](delivery.md#versions-and-releases). Verify publication from the
+matching signed annotated tag and remote release. Consumer deployment and the
+two selected installations are separately owned; this library phase runs no
+new live expert test or personal-file change.
+
+## Released v1.4.2 context
+
 D082 defines the v1.4.2 patch baseline from source PR #23. The owner authorized
 the separate release PR, merge and publication through the protected process.
 VERSION and all native version comments declare 1.4.2; exactly six Codex
@@ -145,17 +158,18 @@ as did the [resulting main checks](https://github.com/shpoont/expert-roles/actio
 
 ## Release baseline
 
-**v1.4.2 contains 72 experts, 99 specialties in 15 groups and 144 native role files.**
-There are 54 generated portraits, five historical depictions and 13 placeholders.
+**v1.5.0 contains 74 experts, 101 specialties in 15 groups and 148 native role files.**
+There are 54 generated portraits, five historical depictions and 15 placeholders.
 Existing expert identifiers, selection descriptions, formats and paths remain
-stable. Six Codex candidates are normalized for the host grammar and both hosts'
-version comments advance. The shared instruction is unchanged from v1.4.1.
+stable. The two new selection cues distinguish precise vector construction
+from realistic vector rendering; both hosts' version comments advance. The
+shared instruction and all prior native payloads are unchanged from v1.4.2.
 
-The [release contract](design.md#release-expert-roles-v142) requires the full suite,
+The [release contract](design.md#release-expert-roles-v150) requires the full suite,
 strict generated freshness, native equality, preservation and preview checks.
 The release PR and resulting main workflow and validate check must all finish
 successfully before tagging. The matching
-[GitHub release](https://github.com/shpoont/expert-roles/releases/tag/v1.4.2)
+[GitHub release](https://github.com/shpoont/expert-roles/releases/tag/v1.5.0)
 and annotated tag establish publication separately from this declared baseline.
 The earlier v1.3.0 publication remains in
 [evidence](../evidence/README.md#v130-publication--2026-10-22).
@@ -172,7 +186,7 @@ hashes. Review the entire proposed diff and inventory, including untracked files
 
 ## Delivery and follow-ups
 
-D082 authorizes the release PR, merge and publication through the
+D083 authorizes the release PR, merge and publication through the
 [release procedure](delivery.md#versions-and-releases). Hosted checks and the
 matching release record identify the actual remote state.
 Nonblocking follow-ups are a case that preserves the requested distinction under a different

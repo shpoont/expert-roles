@@ -351,7 +351,7 @@ Follow the [photo policy](../CONTRIBUTING.md#photo-sources-and-licenses) and
 
 ## Versions and releases
 
-Library version: **[v1.4.2](https://github.com/shpoont/expert-roles/releases/tag/v1.4.2)**.
+Library version: **[v1.5.0](https://github.com/shpoont/expert-roles/releases/tag/v1.5.0)**.
 The linked GitHub release records publication separately from the version declaration.
 One `MAJOR.MINOR.PATCH` version covers profiles, metadata, vocabulary, shared
 instructions, templates, tooling and both native formats. The consuming plugin
@@ -359,7 +359,7 @@ and other integrations keep independent histories. Individual experts and export
 formats do not have separate versions.
 
 The root [VERSION](../VERSION) file is the machine-readable source for export
-provenance, set to `1.4.2` for this baseline. Contributions leave it unchanged;
+provenance, set to `1.5.0` for this baseline. Contributions leave it unchanged;
 temporary previews use `0.0.0-preview` independently. A version header identifies
 a declared library version, not proof of publication or an
 exact content digest. Keep released tags fixed and use Git refs for snapshots.
@@ -379,7 +379,7 @@ The first stable baseline includes `dist/codex/expert-<slug>.toml` and
 A versioned export is not a broader host-compatibility or effectiveness claim.
 
 Preparation, local commits and publication follow the owner's current
-authorization. D082 authorizes v1.4.2 publication after the required gates;
+authorization. D083 authorizes v1.5.0 publication after the required gates;
 future releases need their own owner instruction. Complete the applicable
 steps below:
 
@@ -503,6 +503,24 @@ select an ancestor comparison `base` and enable `release` only for a prepared
 release. PR runs select that mode from the `release` label; main pushes select
 it when their diff changes `VERSION`. Adding or removing the label reruns checks.
 Source-only PR merges continue to pass while released artifacts lag behind.
+
+### v1.5.0 release baseline
+
+D083's [release contract](design.md#release-expert-roles-v150) distributes the
+two additions from [source PR #25](https://github.com/shpoont/expert-roles/pull/25).
+The collection has 74 experts, 101 specialties in 15 groups and 148 native files.
+Von Glitschka covers systematic vector construction and detailing; Yukio
+Miyamoto covers realistic vector rendering and material appearance. Both use
+full-name placeholders under the existing image policy.
+
+The previous 72 native pairs retain their payloads and paths; only their version
+comments advance. All accepted canonical sources, visuals, shared instructions,
+tooling and old tags stay fixed. Run all 108 tests, strict freshness of 153
+generated outputs, release ownership, native/preservation and complete-preview
+checks. Require completed successful PR and resulting-main workflow and validate
+checks before the signed tag and
+[verified publication](https://github.com/shpoont/expert-roles/releases/tag/v1.5.0).
+The library release performs no new runtime test or personal installation.
 
 ### v1.4.2 release baseline
 

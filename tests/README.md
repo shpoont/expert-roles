@@ -406,6 +406,16 @@ before handover; source validity alone does not establish a good presentation.
 
 ## Release checks
 
+D083's [v1.5.0 contract](../docs/design.md#release-expert-roles-v150) requires
+all 108 offline tests, strict freshness of 153 generated outputs and release
+ownership against current main. Verify all 74 native pairs against source;
+the earlier 72 pairs differ from v1.4.2 only in version comments. Preserve every
+accepted profile, visual, specialty assignment, shared template and tool.
+Check the complete preview, public suitability and protected-content hashes,
+then require completed successful exact-commit PR/main workflow and validate
+checks before the signed tag and verified release. Runtime acceptance and
+consumer installation remain separate.
+
 D077's [v1.4.0 contract](../docs/design.md#release-expert-roles-v140) requires
 all 103 offline tests, source/catalogue validation, strict freshness of 149
 generated outputs and release ownership against current main. Preserve all

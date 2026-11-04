@@ -9,6 +9,39 @@ Connect evidence to [current work](../docs/current-work.md),
 [decisions](../docs/decisions.md), [checks](../tests/README.md) and
 [delivery](../docs/delivery.md).
 
+## Vector illustration and v1.5.0 preparation — 2026-11-04
+
+[Source PR #25](https://github.com/shpoont/expert-roles/pull/25) adds Von Glitschka
+and Yukio Miyamoto with source-backed, complementary selection cues. Their
+profiles link published methods and publisher corroboration. The two new
+specialties use precise Wikidata concepts. Both visuals are original full-name
+placeholders; no checked portrait source established a suitable reuse grant.
+All 72 earlier expert directories and shared instructions are preserved.
+
+Source validation passed 108 tests and a complete preview with 180 documents,
+2,674 local references and 154 images. Safari screenshots verified both profiles
+at 240 pixels and the catalogue images at 160 pixels. A temporary renderer's
+image-column sizing was corrected outside the source; no public layout or image
+change was required. Local rendering does not establish hosted GitHub behavior.
+The [exact source-PR gates](https://github.com/shpoont/expert-roles/actions/runs/41861217489)
+and [resulting-main gates](https://github.com/shpoont/expert-roles/actions/runs/41861508257)
+completed successfully before release preparation.
+
+D083's [release contract](../docs/design.md#release-expert-roles-v150) covers
+74 experts, 101 specialties and 148 native files. All 108 tests pass in the
+release checkout and all 153 generated outputs match. The previous 144 native
+files differ only in version comments; the four additions match the reviewed
+preview at one version. Accepted source profiles, visuals, templates, tooling,
+license and prior dated history retain their bytes. Complete-preview,
+release-ownership and public-suitability checks accompany the release PR.
+
+Completed successful exact-commit release-PR and resulting-main workflow and
+validate checks must precede the signed annotated tag. The
+[release record](https://github.com/shpoont/expert-roles/releases/tag/v1.5.0)
+establishes publication separately from VERSION and generated provenance.
+This phase performs no new runtime/model test or personal installation; those
+belong to consuming integrations and do not establish expert-role benefit.
+
 ## v1.4.2 release preparation — 2026-11-02
 
 D082's [release contract](../docs/design.md#release-expert-roles-v142) distributes

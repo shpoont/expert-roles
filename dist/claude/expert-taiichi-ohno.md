@@ -1,7 +1,7 @@
 ---
 # Expert Roles
 # expert_roles.source:  https://github.com/shpoont/expert-roles
-# expert_roles.version: 1.4.2
+# expert_roles.version: 1.5.0
 # expert_roles.id:      taiichi-ohno
 
 name: expert-taiichi-ohno
