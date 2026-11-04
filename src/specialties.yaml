@@ -116,6 +116,11 @@ devops:
   group: Computing
   reference: http://data.europa.eu/esco/skill/f0de4973-0a70-4644-8fd4-3a97080476f4
 
+digital-illustration:
+  name: Digital illustration
+  group: Design
+  reference: https://www.wikidata.org/wiki/Q2890556
+
 distributed-computing:
   name: Distributed computing
   group: Computing
@@ -485,6 +490,11 @@ value-investing:
   name: Value investing
   group: Finance
   reference: https://www.wikidata.org/wiki/Q1361817
+
+vector-graphics:
+  name: Vector graphics
+  group: Design
+  reference: https://www.wikidata.org/wiki/Q170130
 
 virtue-ethics:
   name: Virtue ethics

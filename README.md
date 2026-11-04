@@ -9,7 +9,7 @@ documented work.
 
 <!-- BEGIN GENERATED SUMMARY -->
 
-**72 experts · Codex and Claude Code role files**
+**74 experts · Codex and Claude Code role files**
 
 <!-- END GENERATED SUMMARY -->
 
@@ -62,7 +62,7 @@ Question assumptions in an argument
 </tr>
 </table>
 
-**[Browse all 72 experts by name or specialty →](src/roles/README.md)**
+**[Browse all 74 experts by name or specialty →](src/roles/README.md)**
 
 <!-- END GENERATED FEATURED -->
 
