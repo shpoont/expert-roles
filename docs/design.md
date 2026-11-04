@@ -1,5 +1,33 @@
 # Design and approach
 
+## Release Expert Roles v1.5.0
+
+D083 distributes the two vector-illustration additions from source PR #25 in a
+separate minor release. The owner authorized their addition and publication.
+The baseline has 74 experts, 101 specialties in 15 groups and 148 native files.
+Von Glitschka and Yukio Miyamoto use the standard full-name placeholders;
+their selection cues distinguish construction and detailing from realistic
+vector rendering and material appearance.
+
+Set VERSION and all native provenance comments to 1.5.0, date the changelog
+and refresh distribution indexes and current baseline guidance. Preserve all
+74 accepted profiles and visuals, the shared instruction, existing specialty
+meanings, tooling and tests. At one version, the previous 72 native pairs must
+retain every byte; only their release-version comments change in distribution.
+Keep every existing identifier, path and release tag fixed.
+
+Run all 108 tests, strict freshness for 153 generated outputs, release ownership,
+native parity and preservation, complete-preview references, UTF-8 and public
+suitability checks. Use the signed release branch and push helper. Completed
+successful exact-commit workflow and validate checks on the release PR and
+resulting main precede the signed annotated tag and Latest publication. Read
+back the tag target, release, VERSION and all 148 native blobs.
+
+The library phase performs no personal installation or new runtime/model test.
+Consumers own the separately authorized integration release and selected-role
+installation. Profile evidence and rendering do not establish expert benefit,
+new-role runtime behavior or a photographic likeness.
+
 ## Release Expert Roles v1.4.2
 
 D082 distributes D081's host-character correction after the source PR is

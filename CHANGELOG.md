@@ -5,6 +5,13 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+## v1.5.0 — 2026-11-04
+
+Add two complementary vector-illustration perspectives. The collection now has
+74 experts, 101 specialties in 15 groups and 148 native role files. Existing
+expert identifiers, selection metadata, instructions and paths are preserved;
+both formats' version comments advance to 1.5.0.
+
 ### Added
 
 - Add Von Glitschka for systematic vector construction and illustration craft,

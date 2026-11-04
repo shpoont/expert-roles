@@ -1720,3 +1720,23 @@ validation remain separate from this addition.
   state. No additional upstream native/model test. Retain the actual Deming
   diagnostic, offline 66-to-72 result and original failed diagnostic assertion at
   their distinct scopes. See the [release contract](design.md#release-expert-roles-v142).
+
+## D083 — 2026-11-04: Release the vector-illustration additions as v1.5.0
+
+- **Status:** Adopted release scope; publication requires the protected gates.
+- **Decision:** Distribute source PR #25 in a separate signed minor release PR.
+  Add the Von Glitschka and Yukio Miyamoto exports and the two shared Design
+  specialties; set VERSION and all native comments to 1.5.0 and refresh indexes.
+- **Rationale:** These complementary perspectives add practical vector
+  construction, detailing and realistic material rendering without changing
+  existing role behavior or consumption paths. The owner requested the
+  additions, library publication and separate downstream adoption.
+- **Acceptance:** Run the 108-test suite, strict freshness of 153 outputs,
+  release ownership, native parity, preservation and complete-preview checks.
+  Require successful completed exact-commit PR/main workflow and validate
+  checks before the signed tag; verify publication and all 148 native blobs.
+- **Boundary:** Preserve all 74 accepted profiles and visuals, earlier native
+  payloads, templates, tools and old tags. This library phase performs no
+  personal installation or new model/native invocation. Consumers own their
+  separately authorized release and selected installations. See the
+  [release contract](design.md#release-expert-roles-v150).

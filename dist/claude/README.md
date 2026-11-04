@@ -8,7 +8,7 @@ documented work.
 [Other formats](../README.md) · [Setup guide](../../docs/delivery.md#use-a-native-role) ·
 [Full catalogue](../../src/roles/README.md)
 
-**72 role files.** Each expert has one file in this directory.
+**74 role files.** Each expert has one file in this directory.
 An expert may appear under several specialties below.
 
 For programmatic imports, select `expert-*.md` files.
@@ -93,8 +93,10 @@ Use your browser's Find (Cmd+F or Ctrl+F) to find a known expert.
 | [Steve Portigal](../../src/roles/steve-portigal/README.md) | [expert-steve-portigal.md](expert-steve-portigal.md) |
 | [Taiichi Ohno](../../src/roles/taiichi-ohno/README.md) | [expert-taiichi-ohno.md](expert-taiichi-ohno.md) |
 | [Tomáš Baťa](../../src/roles/tomas-bata/README.md) | [expert-tomas-bata.md](expert-tomas-bata.md) |
+| [Von Glitschka](../../src/roles/von-glitschka/README.md) | [expert-von-glitschka.md](expert-von-glitschka.md) |
 | [W. Edwards Deming](../../src/roles/w-edwards-deming/README.md) | [expert-w-edwards-deming.md](expert-w-edwards-deming.md) |
 | [Warren Buffett](../../src/roles/warren-buffett/README.md) | [expert-warren-buffett.md](expert-warren-buffett.md) |
+| [Yukio Miyamoto](../../src/roles/yukio-miyamoto/README.md) | [expert-yukio-miyamoto.md](expert-yukio-miyamoto.md) |
 
 ## By specialty
 
@@ -139,7 +141,8 @@ in [By name](#by-name) or compare experts in the [full catalogue](../../src/role
 | Specialty | Role files |
 | --- | --- |
 | Contextual design | <a id="specialty-contextual-design"></a>[Karen Holtzblatt](expert-karen-holtzblatt.md) |
-| Graphic design | <a id="specialty-graphic-design"></a>[Ellen Lupton](expert-ellen-lupton.md) |
+| Digital illustration | <a id="specialty-digital-illustration"></a>[Von Glitschka](expert-von-glitschka.md) — systematic sketch-to-vector construction, precise curves and anchor placement, and consistent color, shading and detail across illustrations and icons.<br><br>[Yukio Miyamoto](expert-yukio-miyamoto.md) — realistic vector illustration through close observation, controlled gradients, selective gradient meshes and detailed treatment of reflections, textures and materials. |
+| Graphic design | <a id="specialty-graphic-design"></a>[Ellen Lupton](expert-ellen-lupton.md)<br><br>[Von Glitschka](expert-von-glitschka.md) — systematic sketch-to-vector construction, precise curves and anchor placement, and consistent color, shading and detail across illustrations and icons. |
 | Heuristic evaluation | <a id="specialty-heuristic-evaluation"></a>[Jakob Nielsen](expert-jakob-nielsen.md) |
 | Human-centered design | <a id="specialty-human-centered-design"></a>[Don Norman](expert-don-norman.md) — the relationship between people's expectations and a product's conceptual models, discoverability, feedback and errors.<br><br>[Erika Hall](expert-erika-hall.md) — research questions, method choice and assumptions that connect evidence about people to design decisions.<br><br>[Karen Holtzblatt](expert-karen-holtzblatt.md) — people's real work and wider activities as the basis for contextual research, product requirements and design. |
 | Human-computer interaction | <a id="specialty-human-computer-interaction"></a>[Alan Cooper](expert-alan-cooper.md) — user goals, personas and scenarios as foundations for coherent product behavior and interaction workflows.<br><br>[Caroline Jarrett](expert-caroline-jarrett.md) — how people interpret and answer questions, including survey error, questionnaire design and usable forms.<br><br>[Don Norman](expert-don-norman.md) — the relationship between people's expectations and a product's conceptual models, discoverability, feedback and errors.<br><br>[Jakob Nielsen](expert-jakob-nielsen.md) — usability problems in interfaces, heuristic evaluation and evidence from user testing.<br><br>[Karen Holtzblatt](expert-karen-holtzblatt.md) — people's real work and wider activities as the basis for contextual research, product requirements and design.<br><br>[Léonie Watson](expert-leonie-watson.md) — inclusive interaction and the practical experience of keyboard and assistive-technology users. |
@@ -148,6 +151,7 @@ in [By name](#by-name) or compare experts in the [full catalogue](../../src/role
 | Typography | <a id="specialty-typography"></a>[Ellen Lupton](expert-ellen-lupton.md) |
 | Usability engineering | <a id="specialty-usability-engineering"></a>[Jakob Nielsen](expert-jakob-nielsen.md) |
 | User research | <a id="specialty-user-research"></a>[Erika Hall](expert-erika-hall.md) — research questions, method choice and assumptions that connect evidence about people to design decisions.<br><br>[Steve Portigal](expert-steve-portigal.md) — qualitative interviews, fieldwork and synthesis that reveal people's experiences and make research findings useful. |
+| Vector graphics | <a id="specialty-vector-graphics"></a>[Von Glitschka](expert-von-glitschka.md) — systematic sketch-to-vector construction, precise curves and anchor placement, and consistent color, shading and detail across illustrations and icons.<br><br>[Yukio Miyamoto](expert-yukio-miyamoto.md) — realistic vector illustration through close observation, controlled gradients, selective gradient meshes and detailed treatment of reflections, textures and materials. |
 | Web accessibility | <a id="specialty-web-accessibility"></a>[Léonie Watson](expert-leonie-watson.md) |
 
 ### Engineering
