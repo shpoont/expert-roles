@@ -5,6 +5,14 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+### Added
+
+- Add Von Glitschka for systematic vector construction and illustration craft,
+  and Yukio Miyamoto for realistic vector rendering and material appearance.
+  Add the shared Digital illustration and Vector graphics specialties. Both
+  profiles use the standard full-name placeholder; existing expert content and
+  shared instructions are unchanged.
+
 ## v1.4.2 — 2026-11-02
 
 Correct six host-invalid Codex nickname candidates while preserving canonical
