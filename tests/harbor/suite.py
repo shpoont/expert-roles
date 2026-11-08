@@ -25,9 +25,9 @@ def digest(content: bytes):
     return hashlib.sha256(content).hexdigest()
 
 
-def load_cases(root: Path = ROOT):
+def load_cases(root: Path = ROOT, *, directory: Path | None = None):
     cases = []
-    for path in sorted((root / "tests/harbor/cases").glob("*.yaml")):
+    for path in sorted((directory or root / "tests/harbor/cases").glob("*.yaml")):
         group = yaml.safe_load(path.read_text(encoding="utf-8"))
         if set(group) != {"expert", "cases"} or not isinstance(group["cases"], list):
             raise ValueError(f"Invalid case group: {path.name}")
@@ -285,6 +285,13 @@ def configure(output: Path, *, model: str, effort: str, repeats=2, seed=43):
 
 
 def main():
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] in {"prepare", "collect", "review", "inventory", "-h", "--help"}:
+        import subscription
+        return subscription.main()
+    if "--historical" not in sys.argv:
+        raise SystemExit("Use prepare/collect/review/inventory for active recipe tests; --historical is required for archived build/configure mechanics.")
+    sys.argv.remove("--historical")
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
     build_parser = sub.add_parser("build", help="Freeze cases and both instructions; no model calls")

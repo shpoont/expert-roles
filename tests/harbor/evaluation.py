@@ -17,6 +17,8 @@ CODEX_ENVIRONMENT = re.compile(re.escape('''<environment_context>
   <timezone>Etc/UTC</timezone>
   <filesystem><workspace_roots><root>/app</root></workspace_roots><permission_profile type="disabled"><file_system type="unrestricted" /></permission_profile></filesystem>
 </environment_context>''').replace('__DATE__', r'(?P<date>\d{4}-\d{2}-\d{2})'))
+CODEX_ENVIRONMENT_BASH = re.compile(CODEX_ENVIRONMENT.pattern.replace(
+    re.escape('<shell>sh</shell>'), re.escape('<shell>bash</shell>')))
 
 
 def _object(pairs):
@@ -62,8 +64,8 @@ def normalized_prompt(value):
 
 
 def native_environment(value):
-    """Recognize only the qualified Codex 0.164.0 Docker runtime message."""
-    match = CODEX_ENVIRONMENT.fullmatch(value)
+    """Recognize the exact qualified sh/0.164 and bash/0.167 Docker contexts."""
+    match = CODEX_ENVIRONMENT.fullmatch(value) or CODEX_ENVIRONMENT_BASH.fullmatch(value)
     if match is None:
         return False
     try:

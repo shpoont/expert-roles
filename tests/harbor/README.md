@@ -1,18 +1,31 @@
 # Harbor runtime and historical comparison suite
 
-The active workflow, adopted in D071 and continued through D075, is
-[focused incident repair](../../docs/design.md#focused-incident-repair-cycle):
-reproduce one failure, make a targeted instruction change, and demonstrate the
-repair on unchanged cases with legitimate controls. Reuse this suite's task
-builder, separate input verifier and native-history collector. The broad
-comparison and automated grading workflow below remains historical tooling;
-it is not a requirement to restart that campaign or invoke another model judge.
+The active entrypoint is `suite.py prepare/collect/review/inventory`, using the
+[subscription recipe](subscription.md). The shared qualified runner owns Docker,
+ChatGPT authentication, native sessions, artifact transfer, lifecycle and usage.
+This project owns canonical cases, input admission and answer-quality criteria.
 
-The current [goal-coverage repair](../../docs/current-work.md) uses private
-incident-derived material outside this suite's public cases. A new build freezes
-the current shared instruction; use recorded hashes and snapshots when
-interpreting earlier results. New inference requires its own explicit scope and
-execution settings.
+The active workflow is [focused incident repair](../../docs/design.md#focused-incident-repair-cycle):
+freeze a realistic failing case and original instruction, reproduce the failure,
+then compare the repair on the same case with legitimate controls. Private
+incident YAML and complete rendered original/repaired instructions are accepted
+from external paths; none is copied into Git. Prior results remain valid only
+for their frozen cases, instructions and execution settings.
+
+The 24 public cases remain supported fixed-turn inputs, covering all four expert
+families, one through five turns, initial documents and later file arrival.
+Run representative affected modes rather than restarting an unrelated research
+campaign. A runtime reward checks input fidelity; every actual answer still needs
+review against the unchanged requirements and critical failures.
+
+## Historical broad comparison (D067–D070)
+
+The following commands and results describe the archived paired/judge studies.
+They are not the normal execution route. Legacy `suite.py build/configure`
+requires `--historical`; functions and frozen fixtures remain for reproduction
+and offline regressions. Old participant/review/accounting code is not used by
+the active recipe path. Restoring a historical model campaign needs its own scope
+and model choices; this migration invokes no automated judge.
 
 This suite compares the frozen previous shared instruction with the current
 consultation candidate. It tests whether an expert gives useful, supported
@@ -144,8 +157,8 @@ Run from the repository root. Replace the angle-bracket values with explicit
 choices; both output directories must be new and outside the repository.
 
 ```sh
-.venv/bin/python tests/harbor/suite.py build --output <experiment-directory>
-.venv/bin/python tests/harbor/suite.py configure \
+.venv/bin/python tests/harbor/suite.py --historical build --output <experiment-directory>
+.venv/bin/python tests/harbor/suite.py --historical configure \
   --output <experiment-directory> \
   --model openai/<participant-model> --effort <participant-effort> --repeats 2
 harbor lint <experiment-directory>/tasks/*

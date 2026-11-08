@@ -1,5 +1,43 @@
 # Evidence and supporting records
 
+## Harbor migration code review — 2026-11-08
+
+Final review reproduced task mutation before execution, rewritten prior answers
+on resume and an empty-packet quality pass. Negative regressions now reject each;
+new preparation snapshots are mandatory rather than reconstructed after a run.
+All 115 offline tests pass. A fresh two-turn `huyen-unavailable-evidence` run on
+the unchanged Sol / High subscription recipe passed the corrected snapshot,
+continuity, developer delivery, separate-verifier and cleanup checks. Direct
+review of the answers and tools confirmed the missing-file response followed by
+an actual 8/10 (80%) calculation. No judge or shared-runtime change was used.
+This run used 73,058 cumulative input, 69,632 cached and 722 output tokens.
+The original eight-turn qualification records below remain unchanged.
+
+## Active Harbor subscription cutover — 2026-11-08
+
+The [recipe record](../tests/harbor/subscription.md#complete-active-cutover)
+separates reused pilot evidence from three fresh sequential conversations on
+Harbor 0.25.0, guest Codex 0.167.0, Linux ARM64 Docker and GPT-6.1 Sol / High,
+using existing ChatGPT sign-in. The shared runner was used without edits.
+
+Two file-arrival turns, five pressure/recovery turns and one external-case turn
+passed strict input collection and direct answer review under unchanged case
+criteria. External preparation also delivered an original rendered instruction
+with exact CRLF bytes at native developer priority. Separate verifier credential
+checks and owned cleanup passed. The eight new turns used cumulative totals of
+146,052 input, 131,840 cached and 1,806 output tokens. Runtime input rewards and
+substantive review remain separate; no model judge was invoked.
+
+Offline preparation covers all 24 public cases; good/bad/error collector and
+review controls preserve the admission and grading boundaries. Earlier pilot
+controls and repeats retain their original records, including the rejected Bash
+context. A source comparison limits the released runner delta to byte-preserving
+instruction loading; the new external run exercises that changed boundary.
+
+Private incident material and raw histories remain outside Git. No new real
+incident repair, historical judge campaign, Claude qualification, role install
+or catalogue effectiveness claim is established by this infrastructure migration.
+
 Retain selected results or references that support project findings and
 completion claims. Include the relevant expectation, conditions, source or
 revision, date, observed result and limitations. Keep observations separate from

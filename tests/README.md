@@ -3,6 +3,16 @@
 Checks follow the [project expectations](../PROJECT.md#scope-and-expectations)
 and [implementation contract](../docs/design.md#implementation-contract).
 
+## Active Harbor execution
+
+Use [the subscription recipe](harbor/subscription.md) through
+`tests/harbor/suite.py prepare`, `collect`, `review` and `inventory`.
+It preserves canonical fixed-turn cases and private incident inputs, supplies the
+complete expert instruction at native developer priority, and delegates execution
+to the qualified Harbor package. Quality review is separate from input-fidelity
+rewards. Historical model settings and attempt limits below describe their dated
+campaigns; they do not override a newly authorized migration profile.
+
 ## Codex nickname character correction (D081)
 
 The [host-valid nickname contract](../docs/design.md#host-valid-codex-nicknames)
