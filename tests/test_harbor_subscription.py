@@ -39,7 +39,8 @@ class RecipeAdapterTests(unittest.TestCase):
                 {'prompt':'Next','requirements':['next'],'critical_failures':['bad'],'reference':'Answer'}]}
             suite.write_json(prepared/'case.json',case)
             manifest={'case_sha256':suite.digest((prepared/'case.json').read_bytes()),
-                'recipe_runner_sha256':'runner','developer_instruction_sha256':suite.digest(b'complete expert instruction')}
+                'recipe_runner_sha256':'runner','developer_instruction_sha256':suite.digest(b'complete expert instruction'),
+                'task_files':{}}
             suite.write_json(prepared/'manifest.json',manifest)
             summary={'disposition':'passed','workflow_complete':True,'collection_ok':True,'cleanup_passed':True,
                 'usage':{},'usage_basis':'unknown','agent_info':{'version':'0.167.0'},'separate_verifier':True,
@@ -60,6 +61,19 @@ class RecipeAdapterTests(unittest.TestCase):
                 (agent/'sessions/session.jsonl').write_text(json.dumps({'type':'response_item','payload':{
                     'role':'developer','content':[{'text':'complete expert instruction'}]}})+'\n')
             subscription.collect(prepared,run,root/'valid.json')
+            with self.subTest('task changed before execution'):
+                changed=prepared/'task/task.toml';changed.write_text('changed verifier configuration')
+                altered={**inputs,'task_files':{'task.toml':suite.digest(changed.read_bytes())}}
+                suite.write_json(run/'inputs.json',altered)
+                with self.assertRaises(ValueError):subscription.collect(prepared,run,root/'changed-task.json')
+            changed.unlink();suite.write_json(run/'inputs.json',inputs)
+            trajectory=trial/'steps/turn-02/agent/trajectory.json'
+            original=suite.read_json(trajectory)
+            altered=suite.read_json(trajectory);altered['steps'][1]['message']='rewritten earlier answer'
+            suite.write_json(trajectory,altered)
+            with self.subTest('earlier answer changed on resume'):
+                with self.assertRaises(ValueError):subscription.collect(prepared,run,root/'changed-history.json')
+            suite.write_json(trajectory,original)
             for field,value in [('cleanup_passed',False),('collection_ok',False),('workflow_complete',False),('disposition','error')]:
                 altered={**summary,field:value};suite.write_json(run/'summary.json',altered)
                 with self.assertRaises(ValueError):subscription.collect(prepared,run,root/'invalid.json')
@@ -98,8 +112,9 @@ class RecipeAdapterTests(unittest.TestCase):
     def test_quality_review_is_bound_to_packet_and_actual_answer(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp); packet=root/'packet.json'; grade=root/'grade.json'
-            suite.write_json(packet, {'case':{'id':'case'}, 'answers':[{'answer':'A preserves observable behavior.'}],
-                'input_fidelity':'passed', 'usage':{}, 'usage_basis':'unknown'})
+            suite.write_json(packet, {'case':{'id':'case','turns':[{'prompt':'Explain'}]},
+                'answers':[{'case_id':'case','turn':1,'answer':'A preserves observable behavior.'}],
+                'input_fidelity':'passed','cleanup_passed':True, 'usage':{}, 'usage_basis':'unknown'})
             rating={'turn':1,'wrong_acceptance':False,'wrong_refusal':False,'critical_error':False,
                 'quality':2,'continuity':None,'reason':'Names preservation of observable behavior.',
                 'evidence':['preserves observable behavior']}
@@ -114,6 +129,17 @@ class RecipeAdapterTests(unittest.TestCase):
             with self.assertRaises(ValueError): subscription.review(packet,grade,root/'invalid.json')
             payload['packet_sha256']='tampered'; suite.write_json(grade,payload)
             with self.assertRaises(ValueError): subscription.review(packet,grade,root/'mismatch.json')
+
+    def test_quality_review_rejects_empty_or_incomplete_packets(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);packet=root/'packet.json';grade=root/'grade.json'
+            for turns in ([],[{'prompt':'Expected answer'}]):
+                with self.subTest(turns=turns):
+                    suite.write_json(packet,{'case':{'id':'case','turns':turns},'answers':[],
+                        'input_fidelity':'passed','cleanup_passed':True,'usage':{},'usage_basis':'unknown'})
+                    suite.write_json(grade,{'packet_sha256':suite.digest(packet.read_bytes()),
+                        'grade':{'sample_id':'case','turns':[]}})
+                    with self.assertRaises(ValueError):subscription.review(packet,grade,root/f'report-{len(turns)}.json')
 
 sys.path.insert(0, str(Path(__file__).parent / 'harbor'))
 import evaluation

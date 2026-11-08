@@ -13,6 +13,8 @@ Record meaningful changes by version under the
   strict rejection of changed prompts and extra user turns. Support private
   incident cases and frozen original/repair instructions; require explicit
   historical selection for the retired build/configure CLI.
+- Freeze task-file hashes at preparation, reject rewritten earlier answers on
+  resume, and refuse empty or incomplete quality-review packets.
 
 ## v1.5.0 — 2026-11-04
 

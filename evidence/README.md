@@ -1,5 +1,18 @@
 # Evidence and supporting records
 
+## Harbor migration code review — 2026-11-08
+
+Final review reproduced task mutation before execution, rewritten prior answers
+on resume and an empty-packet quality pass. Negative regressions now reject each;
+new preparation snapshots are mandatory rather than reconstructed after a run.
+All 115 offline tests pass. A fresh two-turn `huyen-unavailable-evidence` run on
+the unchanged Sol / High subscription recipe passed the corrected snapshot,
+continuity, developer delivery, separate-verifier and cleanup checks. Direct
+review of the answers and tools confirmed the missing-file response followed by
+an actual 8/10 (80%) calculation. No judge or shared-runtime change was used.
+This run used 73,058 cumulative input, 69,632 cached and 722 output tokens.
+The original eight-turn qualification records below remain unchanged.
+
 ## Active Harbor subscription cutover — 2026-11-08
 
 The [recipe record](../tests/harbor/subscription.md#complete-active-cutover)

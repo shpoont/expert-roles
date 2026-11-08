@@ -17,6 +17,11 @@ All eight new participant turns passed input checks and direct answer review.
 These are execution-mode checks, not a new repair study or catalogue-wide quality
 claim. See [qualification and limits](../tests/harbor/subscription.md#complete-active-cutover).
 
+Final code review reproduced and corrected task-snapshot, resumed-answer and
+empty-quality-packet admission gaps. Negative regressions preserve those failures;
+a fresh continued file-arrival run checks the tightened collector. Original pilot
+records remain unchanged. Review corrections are included in the same open PR.
+
 ## Current focus and status
 
 D083 defines the v1.5.0 minor release from source PR #25. The owner authorized

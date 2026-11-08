@@ -16,6 +16,17 @@ import suite
 from evaluation import extract_response, validate_grade
 
 
+def task_files(task):
+    """Snapshot regular task files before execution; reject redirected inputs."""
+    files = {}
+    for path in sorted(task.rglob('*')):
+        if path.is_symlink():
+            raise ValueError('Frozen tasks must not contain symlinks')
+        if path.is_file():
+            files[str(path.relative_to(task))] = suite.digest(path.read_bytes())
+    return files
+
+
 def prepare(case_id, output, recipes, *, cases_directory=None, instruction_file=None):
     cases = {case['id']: case for case in suite.load_cases(directory=cases_directory)}
     if case_id not in cases:
@@ -101,6 +112,7 @@ clean = not any(Path(p).exists() for p in ('/tmp/codex-secrets', '/installed-age
     (task / 'task.toml').write_text(config)
     suite.write_json(output / 'case.json', case)
     suite.write_json(output / 'manifest.json', {'case_id': case_id, 'images': images,
+        'task_files': task_files(task),
         'case_sha256': suite.digest((output/"case.json").read_bytes()),
         'developer_instruction_sha256': hashlib.sha256(instruction.encode()).hexdigest(),
         'grading_scope': 'input fidelity only; review response quality separately',
@@ -122,10 +134,9 @@ def collect(prepared, run, output):
         raise ValueError("Frozen case or grading criteria changed")
     summary = suite.read_json(run / 'summary.json')
     inputs = suite.read_json(run / 'inputs.json')
-    actual = {str(p.relative_to(prepared/'task')): suite.digest(p.read_bytes())
-              for p in sorted((prepared/'task').rglob('*')) if p.is_file()}
-    if actual != inputs['task_files']:
-        raise ValueError('Prepared task differs from the executed task')
+    actual = task_files(prepared/'task')
+    if actual != manifest.get('task_files') or actual != inputs['task_files']:
+        raise ValueError('Prepared or executed task differs from the preparation snapshot')
     if inputs["runner_sha256"] != manifest["recipe_runner_sha256"]:
         raise ValueError("Executed runner differs from the prepared recipe")
     if inputs.get("harbor") != "0.25.0" or not inputs.get("resume_trajectory") or inputs.get("agent") != "codex":
@@ -154,13 +165,16 @@ def collect(prepared, run, output):
     answers, sessions = [], []
     for index, turn in enumerate(case['turns'], 1):
         agent = trial/'steps'/f'turn-{index:02d}'/'agent'
-        answers.append(extract_response(suite.read_json(agent/'trajectory.json'), {
+        answer = extract_response(suite.read_json(agent/'trajectory.json'), {
             'case_id': case['id'], 'turn': index,
-            'prompts': [t['prompt'].strip() for t in case['turns'][:index]]}))
+            'prompts': [t['prompt'].strip() for t in case['turns'][:index]]})
+        if answer['history_answers'] != [prior['answer'] for prior in answers]:
+            raise ValueError('Recorded resumed answers differ from earlier turns')
+        answers.append(answer)
         events = [json.loads(line) for line in (agent/'codex.txt').read_text().splitlines()
                   if line.startswith('{')]
         ids = [e.get('thread_id') for e in events if e.get('type') == 'thread.started']
-        if len(ids) != 1: raise ValueError('Expected one native session per step')
+        if len(ids) != 1 or not ids[0]: raise ValueError('Expected one native session per step')
         sessions.append(ids[0])
         native = list((agent/'sessions').rglob('*.jsonl'))
         if len(native) != 1: raise ValueError('Expected one retained native history')
@@ -184,6 +198,16 @@ def review(packet_path, grade_path, output):
     """Validate a human quality review without turning input fidelity into quality."""
     packet = suite.read_json(packet_path)
     supplied = suite.read_json(grade_path)
+    turns = packet.get('case', {}).get('turns')
+    answers = packet.get('answers')
+    if (packet.get('input_fidelity') != 'passed' or packet.get('cleanup_passed') is not True
+            or not isinstance(turns, list) or not turns
+            or not isinstance(answers, list) or len(answers) != len(turns)
+            or any(not isinstance(a, dict) or a.get('case_id') != packet['case']['id']
+                   or type(a.get('turn')) is not int or a['turn'] != i
+                   or not isinstance(a.get('answer'), str) or not a['answer'].strip()
+                   for i, a in enumerate(answers, 1))):
+        raise ValueError('Quality review requires a complete, valid collected conversation')
     if supplied.get("packet_sha256") != suite.digest(packet_path.read_bytes()):
         raise ValueError("Review must identify the exact collected packet")
     grading_packet = {"sample_id": packet["case"]["id"], "turns": packet["answers"]}

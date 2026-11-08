@@ -63,7 +63,8 @@ from a label. References remain in verifier/solution material, not agent inputs.
 
 The collector binds the case and developer instruction to their preparation
 hashes, verifies executed task/runner pins and the approved subscription profile,
-checks every exact user message and retained developer message, and requires
+checks every exact user message, unchanged earlier answers and retained developer
+messages, and requires
 continued session identity, successful transfer, input verification and cleanup.
 Unknown/extra messages and missing evidence are collection errors, not poor
 expert answers. Keep the original failed records when correcting a harness error.
@@ -85,7 +86,9 @@ short quotes actually present in the answer. See [the rating guide](grader-instr
 
 A complete-quality pass requires quality 2, follow-up continuity 2 and no wrong
 acceptance, wrong refusal or critical error. All valid failures remain failures;
-input-fidelity success never fills in a missing quality review. This command
+input-fidelity success never fills in a missing quality review. Empty or
+incomplete answer packets, invalid input status and failed cleanup are rejected
+before quality grading. This command
 validates a direct review; it calls no model and does not establish reviewer
 accuracy. Usage retains the shared runner’s cumulative-session accounting and
 its stated completeness limits. Preserve individual reports and raw rewards;
@@ -152,3 +155,17 @@ No real private incident was rerun, no historical judge campaign was restarted,
 and no comparative instruction-improvement claim follows. The remaining public
 cases have generator/collector coverage, not new live answer-quality results.
 Raw evidence, reviews and case pins remain outside the public repository.
+
+### Final code-review corrections
+
+Review reproduced three admission defects before correcting them: a task could
+be changed before execution and still match the run; resumed history could
+rewrite a previously collected answer; an empty answer packet could receive a
+quality pass. Preparation now snapshots all regular task files, collection checks
+that snapshot against both disk and executed inputs and compares all prior
+answers, and review requires a complete ordered conversation with valid inputs
+and cleanup. Symlinked task entries are rejected.
+
+Preparation snapshots are required for new collection. Older manifests are not
+silently upgraded from post-run files; earlier qualification records remain
+historical evidence under their original collector and limits.
