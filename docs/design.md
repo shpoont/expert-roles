@@ -1,5 +1,33 @@
 # Design and approach
 
+## Harbor subscription recipe migration
+
+The owner authorized I14's sequential real-project migrations using Sol / High
+and the existing ChatGPT subscription. The
+[project adapter](../tests/harbor/subscription.md) keeps canonical cases,
+fixtures, expert instructions and input-grading semantics. Shared recipes own
+execution mechanics; this repository owns case preparation and strict response
+collection. Native developer delivery, separate input and quality judgments,
+non-root Docker execution, the existing inference-host policy and immutable
+run evidence are required. Add and repeat a case without shared-runner edits;
+review each observed result. Do not restart the historical judge campaign,
+change accepted expert material, install roles, or infer release authority.
+
+The collector admits only the exact existing sh and qualified Bash environment
+contexts. Runtime context is not an exemption for arbitrary extra user turns.
+The complete active cutover routes `suite.py prepare/collect/review/inventory`
+through the project adapter and qualified recipes. It accepts private canonical
+YAML groups and complete frozen original/repaired developer instruction files.
+All public case schemas, ordered prompts, fixtures, references and grading
+criteria remain unchanged. The old build/configure CLI requires an explicit
+historical selection; its functions and fixtures remain for reproducibility.
+The direct review path binds grades to collected packet bytes and validates
+actual answer quotations under the existing grading contract. Infrastructure
+and collection errors remain separate from substantive passes and failures.
+Representative live checks qualify changed modes, not every public/private
+case or the historical judge campaign. Do not use this migration to claim a
+new behavioral repair or broad effectiveness.
+
 ## Release Expert Roles v1.5.0
 
 D083 distributes the two vector-illustration additions from source PR #25 in a

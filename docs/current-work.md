@@ -1,5 +1,22 @@
 # Current work
 
+## Harbor subscription migration — 8 November 2026
+
+The active [subscription recipe](../tests/harbor/subscription.md) now supports
+public and private fixed-turn cases, complete frozen original/repair developer
+instructions, strict native collection and separate direct quality reports.
+The normal suite entrypoint delegates execution to the qualified Harbor package;
+the broad build/configure campaign requires explicit historical selection.
+Canonical cases, grading, expert content, VERSION, dist and installations remain
+unchanged. Source delivery is authorized as a working PR only: no merge or release.
+
+The pilot’s one-turn and continued missing-context cases and frozen repeat are
+retained with their original hashes. Fresh checks cover file arrival, five-turn
+pressure/recovery, and an external case with the original CRLF developer input.
+All eight new participant turns passed input checks and direct answer review.
+These are execution-mode checks, not a new repair study or catalogue-wide quality
+claim. See [qualification and limits](../tests/harbor/subscription.md#complete-active-cutover).
+
 ## Current focus and status
 
 D083 defines the v1.5.0 minor release from source PR #25. The owner authorized

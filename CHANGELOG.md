@@ -5,6 +5,15 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+- Migrate active Harbor case preparation, collection and direct quality review using
+  the validated Docker, Codex and ChatGPT subscription recipe. Preserve expert
+  developer-instruction delivery and input grading; collect native histories
+  for separate quality
+  review. Recognize the exact qualified Bash runtime context while retaining
+  strict rejection of changed prompts and extra user turns. Support private
+  incident cases and frozen original/repair instructions; require explicit
+  historical selection for the retired build/configure CLI.
+
 ## v1.5.0 — 2026-11-04
 
 Add two complementary vector-illustration perspectives. The collection now has
