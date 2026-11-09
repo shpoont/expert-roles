@@ -5,23 +5,31 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
-- Move native role exports and generated indexes from `dist/` to `deliverables/`.
-  This changes consumer paths and requires v2.0.0; expert payloads are preserved.
+## v2.0.0 — 2026-11-09
 
-- Adopt Project Structure v1.1.0 with optional deliverables guidance and links.
-  Include deliverables documentation in review previews; starter provenance
-  remains separate from the library release.
+### Breaking change
 
-- Migrate active Harbor case preparation, collection and direct quality review using
-  the validated Docker, Codex and ChatGPT subscription recipe. Preserve expert
-  developer-instruction delivery and input grading; collect native histories
-  for separate quality
-  review. Recognize the exact qualified Bash runtime context while retaining
-  strict rejection of changed prompts and extra user turns. Support private
-  incident cases and frozen original/repair instructions; require explicit
-  historical selection for the retired build/configure CLI.
-- Freeze task-file hashes at preparation, reject rewritten earlier answers on
-  resume, and refuse empty or incomplete quality-review packets.
+- Move all native exports and generated indexes from `dist/` to `deliverables/`.
+  Consumers must read `deliverables/codex/expert-<slug>.toml` or
+  `deliverables/claude/expert-<slug>.md`; the new release has no `dist/` alias.
+  Existing v1.x tags retain their original layout.
+- Preserve all 74 experts, 101 specialties and 148 native payloads. Only
+  native version comments change; role IDs, descriptions, nickname candidates
+  and execution instructions are unchanged.
+
+### Maintenance
+
+- Adopt Project Structure v1.1.0 provenance and handover guidance. Reserve the
+  generated host scopes for releases, reject obsolete old exports and regenerate
+  preview host files instead of copying stale retained artifacts.
+- Migrate active Harbor testing to qualified Docker/Codex/ChatGPT subscription
+  recipes, retaining canonical cases and grading. Support private cases and
+  frozen original/repair developer instructions. Keep quality review separate
+  from input-fidelity rewards and require explicit historical selection for the
+  old paired campaign.
+- Freeze task files before execution, reject rewritten earlier answers on
+  resume, and refuse empty or incomplete review packets. These are test-harness
+  corrections, not changes to the expert instructions or effectiveness claims.
 
 ## v1.5.0 — 2026-11-04
 

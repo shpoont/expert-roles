@@ -1,14 +1,15 @@
 # Current work
 
+<a id="current-focus-and-status"></a>
+
 ## Deliverables migration and v2.0.0 — 9 November 2026
 
-The owner authorized moving native exports from `dist/` to `deliverables/`,
-publishing a major release and coordinating consumer adoption. The source PR
-updates the generator, current links, ownership guards and tests, retaining the
-previous release artifacts until the separate release PR. That PR removes the
-old tree and publishes all 148 byte-preserved payloads with updated version
-comments. Existing tags and personal installations remain untouched. Follow
-[D085](decisions.md#d085--2026-11-09-move-native-exports-to-deliverables-and-release-v200).
+D085 defines the authorized v2.0.0 major release from source PR #28. The source
+PR passed exact-head CI and is squash merged as `057271b`. The release PR
+replaces `dist/` with `deliverables/`, updates version provenance and preserves
+all expert content. Verify publication through the matching signed tag, release
+and exact-commit PR/main gates. Consumer adoption is coordinated separately;
+no personal installation or live role test is part of this phase.
 
 ## Project Structure v1.1.0 adoption — 9 November 2026
 
@@ -29,7 +30,8 @@ instructions, strict native collection and separate direct quality reports.
 The normal suite entrypoint delegates execution to the qualified Harbor package;
 the broad build/configure campaign requires explicit historical selection.
 Canonical cases, grading, expert content, VERSION, dist and installations remain
-unchanged. Source delivery is authorized as a working PR only: no merge or release.
+unchanged in that increment. PR #27 was squash merged as `afd2f19` after
+its checks; D085 includes those tooling changes in the next library release.
 
 The pilot’s one-turn and continued missing-context cases and frozen repeat are
 retained with their original hashes. Fresh checks cover file arrival, five-turn
@@ -41,9 +43,9 @@ claim. See [qualification and limits](../tests/harbor/subscription.md#complete-a
 Final code review reproduced and corrected task-snapshot, resumed-answer and
 empty-quality-packet admission gaps. Negative regressions preserve those failures;
 a fresh continued file-arrival run checks the tightened collector. Original pilot
-records remain unchanged. Review corrections are included in the same open PR.
+records remain unchanged. Review corrections were included in the merged PR.
 
-## Current focus and status
+## Released v1.5.0 context
 
 D083 defines the v1.5.0 minor release from source PR #25. The owner authorized
 both requested expert additions and publication through the protected process.
@@ -201,18 +203,18 @@ as did the [resulting main checks](https://github.com/shpoont/expert-roles/actio
 
 ## Release baseline
 
-**v1.5.0 contains 74 experts, 101 specialties in 15 groups and 148 native role files.**
+**v2.0.0 contains 74 experts, 101 specialties in 15 groups and 148 native role files.**
 There are 54 generated portraits, five historical depictions and 15 placeholders.
 Existing expert identifiers, selection descriptions, formats and paths remain
-stable. The two new selection cues distinguish precise vector construction
-from realistic vector rendering; both hosts' version comments advance. The
-shared instruction and all prior native payloads are unchanged from v1.4.2.
+stable. Native files and indexes now live under `deliverables/`. Role IDs, selection
+descriptions, nickname values and instructions are unchanged from v1.5.0; only
+version comments advance.
 
-The [release contract](design.md#release-expert-roles-v150) requires the full suite,
+The [migration contract](design.md#native-exports-under-deliverables) requires the full suite,
 strict generated freshness, native equality, preservation and preview checks.
 The release PR and resulting main workflow and validate check must all finish
 successfully before tagging. The matching
-[GitHub release](https://github.com/shpoont/expert-roles/releases/tag/v1.5.0)
+[GitHub release](https://github.com/shpoont/expert-roles/releases/tag/v2.0.0)
 and annotated tag establish publication separately from this declared baseline.
 The earlier v1.3.0 publication remains in
 [evidence](../evidence/README.md#v130-publication--2026-10-22).
@@ -229,7 +231,7 @@ hashes. Review the entire proposed diff and inventory, including untracked files
 
 ## Delivery and follow-ups
 
-D083 authorizes the release PR, merge and publication through the
+D085 authorizes the release PR, merge and publication through the
 [release procedure](delivery.md#versions-and-releases). Hosted checks and the
 matching release record identify the actual remote state.
 Nonblocking follow-ups are a case that preserves the requested distinction under a different

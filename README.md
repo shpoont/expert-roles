@@ -94,11 +94,12 @@ or follow the [contribution guide](CONTRIBUTING.md) to submit a change.
 
 ## Versions and releases
 
-Library version: **1.5.0**.
+Library version: **2.0.0**.
 
 [Released versions](https://github.com/shpoont/expert-roles/releases) and the
 [changelog](CHANGELOG.md) track the library. Catalogues follow current sources;
-versioned role files are updated during
+From v2.0.0, native files live under `deliverables/` (v1.x used `dist/`).
+Versioned role files are updated during
 [release preparation](docs/delivery.md#versions-and-releases).
 
 ## Project documentation
