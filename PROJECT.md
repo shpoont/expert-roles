@@ -18,18 +18,18 @@ roster changes.
 
 ## Scope and expectations
 
-The v1.5.0 release baseline contains 74 experts, 101 specialties in 15 groups,
+The v2.0.0 release baseline contains 74 experts, 101 specialties in 15 groups,
 54 generated portraits, five original historical depictions and 15 full-name
-placeholders. It adds Von Glitschka and Yukio Miyamoto, plus Digital illustration
-and Vector graphics. All earlier expert content and visuals are preserved. See the
+placeholders. It moves native exports from `dist/` to `deliverables/` while preserving all
+expert content, vocabulary, visuals and role payloads. Version comments advance. See the
 [source catalogue](src/roles/README.md) for the collection.
 Every source profile has
 canonical metadata, a short human-readable README and one square visual.
 The adopted [studio-v1 method](docs/elements/portraits.md) is retained.
 Previews generate a Codex and Claude Code file for every source profile, with
 alphabetical and specialty indexes that link to stable, unduplicated paths.
-Version v1.5.0's `dist/` files and source catalogues cover all 74 experts; the
-previous v1.3.0 release covered 68. The
+Version v2.0.0's `deliverables/` exports and source catalogues cover all 74 experts;
+v1.5.0 used `dist/` with the same roster. The
 [release record](https://github.com/shpoont/expert-roles/releases/tag/v1.5.0)
 establishes hosted publication separately from the version declaration.
 Portrait acceptance is an editorial decision;
@@ -79,14 +79,12 @@ checks but no runtime validation. These observations do not establish broad
 selection reliability or comparative expert benefit; see the
 [current results](evidence/README.md#codex-configuration-trace-and-corrected-host-validation--2026-11-02).
 
-- **Current status and boundary:** D083 defines the separate v1.5.0 release
-  after source PR #25 added two vector-illustration experts. It preserves all
-  accepted profiles, visuals, shared instructions and previous native payloads;
-  VERSION and generated provenance declare 1.5.0. The annotated tag and remote
-  release establish publication separately from those declarations. D081's
-  earlier host-character correction and D082's v1.4.2 scope remain historical.
-  Native loader verification is bounded and separate from model invocation;
-  see [current work](docs/current-work.md#current-focus-and-status).
+- **Current status and boundary:** D085 defines the v2.0.0 major release from
+  source PR #28. Exports and indexes move to `deliverables/`; all role payloads
+  and expert sources are preserved. VERSION and native comments declare 2.0.0.
+  The signed tag and remote release establish publication separately. Integration
+  source-path updates are coordinated independently; no personal role writes
+  are part of this library release.
   D075 applies the tested proposal-goal coverage paragraph to the existing
   consultation draft while preserving its safeguards. The isolated repair
   passed two source-case repetitions and two follow-up checks; the combined
@@ -175,10 +173,10 @@ records the v1.1.0 adoption. [D085](docs/decisions.md#d085--2026-11-09-move-nati
 adopts [deliverables/](deliverables/README.md) for native exports in v2.0.0. D078 and D003 retain the earlier adoptions. Expert sources
 live under `src/`; the full catalogue is generated in `src/roles/README.md`, with a fixed
 six-expert showcase and generated count in the main README. Ready-to-use
-exports and their indexes move to `deliverables/` in v2.0.0. Library version `1.5.0` is
+exports and their indexes move to `deliverables/` in v2.0.0. Library version `2.0.0` is
 independent of the starter and consuming integrations. The canonical `VERSION`
-file and both hosts' provenance comments use `1.5.0`.
-The [versioned release record](https://github.com/shpoont/expert-roles/releases/tag/v1.5.0)
+file and both hosts' provenance comments use `2.0.0`.
+The [versioned release record](https://github.com/shpoont/expert-roles/releases/tag/v2.0.0)
 and annotated tag establish publication separately from those declarations.
 The previous v1.2.0 tag remains fixed at
 `c493c44bd14c7a54adce74f10bb6ea3c5bfd7359`. See the

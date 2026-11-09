@@ -356,7 +356,7 @@ Follow the [photo policy](../CONTRIBUTING.md#photo-sources-and-licenses) and
 
 ## Versions and releases
 
-Library version: **[v1.5.0](https://github.com/shpoont/expert-roles/releases/tag/v1.5.0)**.
+Library version: **[v2.0.0](https://github.com/shpoont/expert-roles/releases/tag/v2.0.0)**.
 The linked GitHub release records publication separately from the version declaration.
 One `MAJOR.MINOR.PATCH` version covers profiles, metadata, vocabulary, shared
 instructions, templates, tooling and both native formats. The consuming plugin
@@ -364,7 +364,7 @@ and other integrations keep independent histories. Individual experts and export
 formats do not have separate versions.
 
 The root [VERSION](../VERSION) file is the machine-readable source for export
-provenance, set to `1.5.0` for this baseline. Contributions leave it unchanged;
+provenance, set to `2.0.0` for this baseline. Contributions leave it unchanged;
 temporary previews use `0.0.0-preview` independently. A version header identifies
 a declared library version, not proof of publication or an
 exact content digest. Keep released tags fixed and use Git refs for snapshots.
@@ -386,7 +386,7 @@ Classification changes still do not move individual files.
 A versioned export is not a broader host-compatibility or effectiveness claim.
 
 Preparation, local commits and publication follow the owner's current
-authorization. D083 authorizes v1.5.0 publication after the required gates;
+authorization. D085 authorizes v2.0.0 publication after the required gates;
 future releases need their own owner instruction. Complete the applicable
 steps below:
 
