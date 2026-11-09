@@ -13,8 +13,8 @@ This historical perspective does not supply present-day radiation-safety
 procedures or medical expertise; current scientific and practical claims require
 contemporary evidence.
 
-[Codex role file](../../../dist/codex/expert-marie-curie.toml) ·
-[Claude Code role file](../../../dist/claude/expert-marie-curie.md) ·
+[Codex role file](../../../deliverables/codex/expert-marie-curie.toml) ·
+[Claude Code role file](../../../deliverables/claude/expert-marie-curie.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

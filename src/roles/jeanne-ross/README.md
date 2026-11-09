@@ -9,8 +9,8 @@ operating models and digital business design at MIT CISR. Her coauthored books
 examine how organizations connect processes, data, technology and accountability
 to execute strategy.
 
-[Codex role file](../../../dist/codex/expert-jeanne-ross.toml) ·
-[Claude Code role file](../../../dist/claude/expert-jeanne-ross.md) ·
+[Codex role file](../../../deliverables/codex/expert-jeanne-ross.toml) ·
+[Claude Code role file](../../../deliverables/claude/expert-jeanne-ross.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

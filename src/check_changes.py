@@ -64,7 +64,9 @@ def check_changes(root: Path, base_ref: str, *, release: bool = False) -> list[s
         return errors
 
     for path in sorted(changed):
-        if path == "VERSION" or path == "dist" or path.startswith("dist/"):
+        if (path == "VERSION" or path == "dist" or path.startswith("dist/")
+                or path in {"deliverables/README.md", "deliverables/codex", "deliverables/claude"}
+                or path.startswith(("deliverables/codex/", "deliverables/claude/"))):
             errors.append(f"Release-owned file changed: {path}")
         elif path == "CHANGELOG.md":
             before = baseline_file(root, base, path)
@@ -88,7 +90,7 @@ def main(argv=None) -> int:
             print("Change checks failed:\n" + "\n".join(errors), file=sys.stderr)
             return 1
         print("Prepared release is consistent." if args.release else
-              "Contribution boundary passed; source catalogues are current, VERSION and dist are unchanged.")
+              "Contribution boundary passed; source catalogues are current, VERSION and release-owned exports are unchanged.")
         return 0
     except (ValueError, OSError, UnicodeError) as error:
         print(f"Change checks failed: {error}", file=sys.stderr)

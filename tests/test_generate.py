@@ -99,10 +99,10 @@ class GenerationContractTests(unittest.TestCase):
                 continue
             with self.subTest(expert=profile.name):
                 canonical = yaml.safe_load((profile / "expert.yaml").read_text())["name"]
-                codex = tomllib.loads(outputs[Path(f"dist/codex/expert-{profile.name}.toml")])
+                codex = tomllib.loads(outputs[Path(f"deliverables/codex/expert-{profile.name}.toml")])
                 self.assertEqual(codex["nickname_candidates"], [canonical])
                 self.assertEqual(codex["name"], f"expert-{profile.name}")
-                claude_text = outputs[Path(f"dist/claude/expert-{profile.name}.md")]
+                claude_text = outputs[Path(f"deliverables/claude/expert-{profile.name}.md")]
                 _, frontmatter, instruction = claude_text.split("---\n", 2)
                 claude = yaml.safe_load(frontmatter)
                 self.assertEqual(set(claude), {"name", "description"})
@@ -117,14 +117,14 @@ class GenerationContractTests(unittest.TestCase):
         source.write_text(yaml.safe_dump({**entry, "name": canonical}, allow_unicode=True),
                           encoding="utf-8")
         outputs = plan_outputs(self.root)
-        codex_text = outputs[Path("dist/codex/expert-don-norman.toml")]
+        codex_text = outputs[Path("deliverables/codex/expert-don-norman.toml")]
         codex = tomllib.loads(codex_text)
         self.assertEqual(codex["nickname_candidates"], ["Zoe Quoted BackSlash"])
         self.assertEqual(codex["name"], "expert-don-norman")
         self.assertIn("Zoë", codex_text)
         self.assertIn(canonical, codex["description"])
         self.assertIn(canonical, codex["developer_instructions"])
-        claude_text = outputs[Path("dist/claude/expert-don-norman.md")]
+        claude_text = outputs[Path("deliverables/claude/expert-don-norman.md")]
         _, frontmatter, instruction = claude_text.split("---\n", 2)
         self.assertEqual(set(yaml.safe_load(frontmatter)), {"name", "description"})
         self.assertNotIn("nickname_candidates", claude_text)
@@ -147,7 +147,7 @@ class GenerationContractTests(unittest.TestCase):
                 source.write_text(yaml.safe_dump({**entry, "name": canonical}, allow_unicode=True),
                                   encoding="utf-8")
                 outputs = plan_outputs(self.root)
-                codex = tomllib.loads(outputs[Path("dist/codex/expert-don-norman.toml")])
+                codex = tomllib.loads(outputs[Path("deliverables/codex/expert-don-norman.toml")])
                 self.assertEqual(codex["nickname_candidates"], [expected])
                 self.assertIn(canonical, codex["description"])
                 self.assertIn(canonical, codex["developer_instructions"])
@@ -157,7 +157,7 @@ class GenerationContractTests(unittest.TestCase):
         root = Path(__file__).resolve().parents[1]
         outputs = plan_outputs(root)
         roles = [text for path, text in outputs.items()
-                 if path.parent == Path("dist/codex") and path.name.startswith("expert-")]
+                 if path.parent == Path("deliverables/codex") and path.name.startswith("expert-")]
         self.assertTrue(roles)
         for text in roles:
             codex = tomllib.loads(text)
@@ -190,8 +190,8 @@ class GenerationContractTests(unittest.TestCase):
                 self.assertEqual(self.run_exporter(), 0)
                 self.assertEqual(self.run_exporter("--check"), 0)
                 for slug, _, _ in FEATURED_EXPERTS:
-                    codex_path = Path(f"dist/codex/expert-{slug}.toml")
-                    claude_path = Path(f"dist/claude/expert-{slug}.md")
+                    codex_path = Path(f"deliverables/codex/expert-{slug}.toml")
+                    claude_path = Path(f"deliverables/claude/expert-{slug}.md")
                     codex = (self.root / codex_path).read_text()
                     claude = (self.root / claude_path).read_text()
                     expected = {
@@ -275,8 +275,8 @@ class GenerationContractTests(unittest.TestCase):
                                     "reference": "https://example.org/concepts/unused"}
         registry.write_text(yaml.safe_dump(data))
         self.assertEqual(self.run_exporter(), 0)
-        for path in (self.catalogue, self.root / "dist/codex/README.md",
-                     self.root / "dist/claude/README.md"):
+        for path in (self.catalogue, self.root / "deliverables/codex/README.md",
+                     self.root / "deliverables/claude/README.md"):
             catalogue = path.read_text()
             shared = next(line for line in catalogue.splitlines()
                           if 'id="specialty-human-centered-design"' in line)
@@ -287,7 +287,7 @@ class GenerationContractTests(unittest.TestCase):
             design = catalogue.split("### Design", 1)[1].split("###", 1)[0]
             self.assertLess(design.index("Human-centered design"), design.index("Human-computer interaction"))
         for slug in ("don-norman", "another-designer"):
-            role = self.root / f"dist/codex/expert-{slug}.toml"
+            role = self.root / f"deliverables/codex/expert-{slug}.toml"
             metadata = tomllib.loads(role.read_text())
             self.assertIn("Human-centered design", metadata["description"])
             self.assertNotIn("wikidata.org", metadata["developer_instructions"])
@@ -303,8 +303,8 @@ class GenerationContractTests(unittest.TestCase):
             "perspective: comparing options | constraints <before> decisions\n"
         )
         after = plan_outputs(self.root)
-        for path in (Path("src/roles/README.md"), Path("dist/codex/README.md"),
-                     Path("dist/claude/README.md")):
+        for path in (Path("src/roles/README.md"), Path("deliverables/codex/README.md"),
+                     Path("deliverables/claude/README.md")):
             shared = next(line for line in after[path].splitlines()
                           if 'id="specialty-human-centered-design"' in line)
             self.assertIn("[Another designer]", shared)
@@ -564,8 +564,8 @@ class GenerationContractTests(unittest.TestCase):
         registry.write_text(yaml.safe_dump(data))
         after_outputs = plan_outputs(self.root)
         self.assertEqual(set(before_outputs), set(after_outputs))
-        for path in (Path("src/roles/README.md"), Path("dist/codex/README.md"),
-                     Path("dist/claude/README.md")):
+        for path in (Path("src/roles/README.md"), Path("deliverables/codex/README.md"),
+                     Path("deliverables/claude/README.md")):
             for content in (before_outputs, after_outputs):
                 catalogue = content[path]
                 self.assertEqual(catalogue.count('id="specialty-human-centered-design"'), 1)
@@ -579,11 +579,11 @@ class GenerationContractTests(unittest.TestCase):
 
     def test_distribution_indexes_link_multiple_specialties_to_one_file_per_host(self):
         self.assertEqual(self.run_exporter(), 0)
-        chooser = (self.root / "dist/README.md").read_text()
+        chooser = (self.root / "deliverables/README.md").read_text()
         self.assertIn("(codex/README.md)", chooser)
         self.assertIn("(claude/README.md)", chooser)
         for host, extension in (("codex", "toml"), ("claude", "md")):
-            directory = self.root / "dist" / host
+            directory = self.root / "deliverables" / host
             index = (directory / "README.md").read_text()
             expected = {f"expert-{slug}.{extension}" for slug, _, _ in FEATURED_EXPERTS}
             self.assertEqual({path.name for path in directory.iterdir()}, expected | {"README.md"})
@@ -608,7 +608,7 @@ class GenerationContractTests(unittest.TestCase):
             "name: Aaron Example\nspecialties: [human-centered-design]\n")
         outputs = plan_outputs(self.root)
         for host in ("codex", "claude"):
-            index = outputs[Path(f"dist/{host}/README.md")]
+            index = outputs[Path(f"deliverables/{host}/README.md")]
             names = index.split("## By name\n", 1)[1].split("## By specialty\n", 1)[0]
             self.assertLess(names.index("[Aaron Example]"), names.index("[Don Norman]"))
             row = next(line for line in index.splitlines() if 'id="specialty-human-centered-design"' in line)
@@ -617,8 +617,9 @@ class GenerationContractTests(unittest.TestCase):
     def test_unexpected_distribution_or_legacy_files_are_rejected_without_changes(self):
         self.assertEqual(self.run_exporter(), 0)
         for relative in (
-            "dist/codex/expert-removed.toml", "dist/claude/expert-removed.md",
-            "dist/codex/nested/expert-don-norman.toml", "dist/claude/nested/expert-don-norman.md",
+            "dist/codex/expert-don-norman.toml", "dist/README.md",
+            "deliverables/codex/expert-removed.toml", "deliverables/claude/expert-removed.md",
+            "deliverables/codex/nested/expert-don-norman.toml", "deliverables/claude/nested/expert-don-norman.md",
             "src/roles/don-norman/codex/expert-don-norman.toml",
             "src/roles/don-norman/claude/expert-don-norman.md",
         ):
@@ -632,6 +633,14 @@ class GenerationContractTests(unittest.TestCase):
                     self.assertEqual(before, {p: p.read_bytes() for p in self.root.rglob("*") if p.is_file()})
                 path.unlink()
 
+    def test_authored_handover_document_is_not_a_generated_export(self):
+        note = self.root / "deliverables/handover.md"
+        note.parent.mkdir(exist_ok=True)
+        note.write_text("# Separately authored handover\n")
+        self.assertEqual(self.run_exporter(), 0)
+        self.assertEqual(self.run_exporter("--check"), 0)
+        self.assertEqual(note.read_text(), "# Separately authored handover\n")
+
     def test_profile_and_starter_download_links_use_distribution_paths(self):
         source = Path(__file__).resolve().parents[1]
         profiles = list((source / "src/roles").glob("*/README.md"))
@@ -641,7 +650,7 @@ class GenerationContractTests(unittest.TestCase):
             text = profile.read_text()
             for host, extension in (("codex", "toml"), ("claude", "md")):
                 with self.subTest(profile=profile.parent.name, host=host):
-                    self.assertIn(f"](../../../dist/{host}/expert-{slug}.{extension})", text)
+                    self.assertIn(f"](../../../deliverables/{host}/expert-{slug}.{extension})", text)
                     self.assertNotIn(f"]({host}/expert-", text)
 
     def test_optional_perspective_changes_catalogue_and_matching_host_descriptions(self):
@@ -658,8 +667,8 @@ class GenerationContractTests(unittest.TestCase):
         row = next(line for line in outputs[Path("src/roles/README.md")].splitlines()
                    if line.startswith("| [Don Norman]"))
         self.assertIn("Perspective: " + phrase, row)
-        codex_path = Path("dist/codex/expert-don-norman.toml")
-        claude_path = Path("dist/claude/expert-don-norman.md")
+        codex_path = Path("deliverables/codex/expert-don-norman.toml")
+        claude_path = Path("deliverables/claude/expert-don-norman.md")
         for content, expected in ((baseline, False), (outputs, True)):
             codex = tomllib.loads(content[codex_path])
             _, frontmatter, instruction = content[claude_path].split("---\n", 2)
@@ -682,7 +691,7 @@ class GenerationContractTests(unittest.TestCase):
         source.write_text(yaml.safe_dump(entry) +
                           "perspective: >\n  conceptual models,\n  feedback and error.\n")
         outputs = plan_outputs(self.root)
-        codex = tomllib.loads(outputs[Path("dist/codex/expert-don-norman.toml")])
+        codex = tomllib.loads(outputs[Path("deliverables/codex/expert-don-norman.toml")])
         self.assertIn("especially on conceptual models, feedback and error.", codex["description"])
         self.assertNotIn("\n", codex["description"])
         self.assertNotIn("error..", codex["description"])
@@ -704,8 +713,8 @@ class GenerationContractTests(unittest.TestCase):
     def test_check_detects_drift_without_rewriting_it(self):
         self.assertEqual(self.run_exporter(), 0)
         self.assertEqual(self.run_exporter("--check"), 0)
-        for relative in ("dist/README.md", "dist/codex/README.md", "dist/claude/README.md",
-                         "dist/codex/expert-don-norman.toml", "dist/claude/expert-don-norman.md"):
+        for relative in ("deliverables/README.md", "deliverables/codex/README.md", "deliverables/claude/README.md",
+                         "deliverables/codex/expert-don-norman.toml", "deliverables/claude/expert-don-norman.md"):
             path = self.root / relative
             original = path.read_text()
             for missing in (False, True):
@@ -734,8 +743,8 @@ class GenerationContractTests(unittest.TestCase):
         )
         self.assertEqual(self.run_exporter(), 0)
         self.assertIn("[Eliyahu Goldratt](eliyahu-goldratt/README.md)", self.catalogue.read_text())
-        codex = tomllib.loads((self.root / "dist/codex/expert-eliyahu-goldratt.toml").read_text())
-        _, frontmatter, body = (self.root / "dist/claude/expert-eliyahu-goldratt.md").read_text().split("---\n", 2)
+        codex = tomllib.loads((self.root / "deliverables/codex/expert-eliyahu-goldratt.toml").read_text())
+        _, frontmatter, body = (self.root / "deliverables/claude/expert-eliyahu-goldratt.md").read_text().split("---\n", 2)
         claude = yaml.safe_load(frontmatter)
         for metadata, instruction in ((codex, codex["developer_instructions"]), (claude, body)):
             with self.subTest(host="Codex" if metadata is codex else "Claude Code"):
@@ -766,7 +775,7 @@ class GenerationContractTests(unittest.TestCase):
 
     def test_new_profile_from_starter_uses_method_without_changing_existing_roles(self):
         self.assertEqual(self.run_exporter(), 0)
-        native_before = {p: p.read_bytes() for p in (self.root / "dist").rglob("expert-*")}
+        native_before = {p: p.read_bytes() for p in (self.root / "deliverables").rglob("expert-*")}
         source = Path(__file__).resolve().parents[1]
         slug, name = "future-expert", "Future Expert"
         profile = self.root / "src/roles" / slug
@@ -806,8 +815,8 @@ class GenerationContractTests(unittest.TestCase):
         self.assertEqual(self.run_exporter("--check"), 0)
         self.assertIn("A synthetic contributor fixture.", text)
         self.assertIn('future-expert/portrait.jpg" alt="Future Expert; AI-generated portrait;', self.catalogue.read_text())
-        self.assertTrue((self.root / "dist/codex/expert-future-expert.toml").exists())
-        self.assertTrue((self.root / "dist/claude/expert-future-expert.md").exists())
+        self.assertTrue((self.root / "deliverables/codex/expert-future-expert.toml").exists())
+        self.assertTrue((self.root / "deliverables/claude/expert-future-expert.md").exists())
         for path, expected in native_before.items():
             self.assertEqual(path.read_bytes(), expected)
 

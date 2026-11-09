@@ -93,8 +93,8 @@ class ContributionReleaseTests(unittest.TestCase):
                          {p: text for p, text in after_docs.items() if p not in catalogues})
         self.assertEqual(check_changes(self.root, "HEAD"), [])
         self.assertEqual(after_docs, self.snapshot())
-        self.assertTrue((self.root / "dist/codex/expert-other-expert.toml").exists())
-        self.assertFalse((self.root / "dist/codex/expert-new-expert.toml").exists())
+        self.assertTrue((self.root / "deliverables/codex/expert-other-expert.toml").exists())
+        self.assertFalse((self.root / "deliverables/codex/expert-new-expert.toml").exists())
 
     def test_docs_refresh_is_isolated_idempotent_and_freshness_checks_are_read_only(self):
         self.add_expert("new-expert")
@@ -130,6 +130,11 @@ class ContributionReleaseTests(unittest.TestCase):
         policy.write_text('{"name": "Public fixture rules"}\n')
         (self.root / ".venv").mkdir()
         (self.root / ".venv/do-not-copy").write_text("fixture")
+        handover = self.root / "deliverables/notes.md"
+        handover.parent.mkdir(exist_ok=True)
+        handover.write_text("# Additional public handover files\n")
+        stale_export = self.root / "deliverables/claude/expert-obsolete.md"
+        stale_export.write_text("# Retained obsolete release fixture\n")
         before = self.snapshot()
         preview = self.outer / "preview"
         self.assertEqual(self.run_generator("--preview", str(preview)), 0)
@@ -139,9 +144,11 @@ class ContributionReleaseTests(unittest.TestCase):
         self.assertIn("New Expert", (preview / "src/roles/README.md").read_text())
         self.assertTrue((preview / "src/roles/new-expert/portrait.jpg").exists())
         self.assertEqual((preview / ".github/rulesets/main.json").read_bytes(), policy.read_bytes())
-        self.assertTrue((preview / "dist/claude/expert-new-expert.md").exists())
-        current = (self.root / "dist/codex/expert-don-norman.toml").read_text()
-        rendered = (preview / "dist/codex/expert-don-norman.toml").read_text()
+        self.assertEqual((preview / "deliverables/notes.md").read_bytes(), handover.read_bytes())
+        self.assertFalse((preview / "deliverables/claude/expert-obsolete.md").exists())
+        self.assertTrue((preview / "deliverables/claude/expert-new-expert.md").exists())
+        current = (self.root / "deliverables/codex/expert-don-norman.toml").read_text()
+        rendered = (preview / "deliverables/codex/expert-don-norman.toml").read_text()
         self.assertIn("# expert_roles.version: 0.0.0-preview", rendered)
         self.assertEqual(tomllib.loads(current), tomllib.loads(rendered))
         self.assertFalse((preview / ".git").exists())
@@ -166,11 +173,27 @@ class ContributionReleaseTests(unittest.TestCase):
         self.assertFalse(preview.exists())
         self.assertEqual(before, self.snapshot())
 
+    def test_old_and_new_export_scopes_remain_release_owned(self):
+        for relative in ("dist/codex/old.toml", "deliverables/README.md",
+                         "deliverables/codex/new.toml", "deliverables/claude/new.md"):
+            with self.subTest(path=relative):
+                path = self.root / relative
+                path.parent.mkdir(parents=True, exist_ok=True)
+                before = path.read_bytes() if path.exists() else None
+                path.write_text("changed release output\n")
+                with redirect_stdout(StringIO()), redirect_stderr(StringIO()):
+                    errors = check_changes(self.root, "HEAD")
+                self.assertIn(f"Release-owned file changed: {relative}", errors)
+                if before is None:
+                    path.unlink()
+                else:
+                    path.write_bytes(before)
+
     def test_contributions_reject_release_edits_and_stale_catalogues(self):
         edits = {
             "VERSION": "1.2.0-dev\n",
-            "dist/codex/expert-don-norman.toml": "# changed\n",
-            "dist/claude/new-untracked-file.md": "# untracked\n",
+            "deliverables/codex/expert-don-norman.toml": "# changed\n",
+            "deliverables/claude/new-untracked-file.md": "# untracked\n",
             "README.md": (self.root / "README.md").read_text().replace("7 experts", "8 experts"),
             "src/roles/README.md": (self.root / "src/roles/README.md").read_text().replace("Other Expert", "Changed Expert"),
             "CHANGELOG.md": "# Changelog\n\n## Unreleased\n\n## v1.2.0 — 2026-10-23\n",
@@ -231,7 +254,7 @@ class ContributionReleaseTests(unittest.TestCase):
         changelog = self.root / "CHANGELOG.md"
         changelog.write_text(changelog.read_text().replace("## Unreleased", "## Unreleased\n\n## v1.2.0 — 2026-10-23\n"))
         self.assertEqual(self.run_generator("--release"), 0)
-        (self.root / "dist/codex/obsolete.toml").write_text("# obsolete\n")
+        (self.root / "deliverables/codex/obsolete.toml").write_text("# obsolete\n")
         with redirect_stdout(StringIO()), redirect_stderr(StringIO()):
             self.assertTrue(check_changes(self.root, "HEAD", release=True))
 

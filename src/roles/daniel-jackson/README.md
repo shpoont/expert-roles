@@ -8,8 +8,8 @@ MIT computer scientist and designer of Alloy with his research group. His
 books Software Abstractions and The Essence of Software develop lightweight
 formal modeling and a concept-based approach to software design.
 
-[Codex role file](../../../dist/codex/expert-daniel-jackson.toml) ·
-[Claude Code role file](../../../dist/claude/expert-daniel-jackson.md) ·
+[Codex role file](../../../deliverables/codex/expert-daniel-jackson.toml) ·
+[Claude Code role file](../../../deliverables/claude/expert-daniel-jackson.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

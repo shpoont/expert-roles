@@ -70,8 +70,8 @@ Question assumptions in an argument
 
 ## Use a role
 
-1. Choose a [Codex](dist/codex/README.md) or
-   [Claude Code](dist/claude/README.md) role and follow the
+1. Choose a [Codex](deliverables/codex/README.md) or
+   [Claude Code](deliverables/claude/README.md) role and follow the
    [setup guide](docs/delivery.md#use-a-native-role).
 2. Describe your task, relevant evidence and constraints. Let the assistant
    select a suitable available role, or request an expert role by name.
@@ -104,7 +104,8 @@ versioned role files are updated during
 ## Project documentation
 
 [Project scope](PROJECT.md) · [Design and current work](docs/README.md) ·
-[Sources and generation](src/README.md) · [Checks](tests/README.md)
+[Sources and generation](src/README.md) · [Checks](tests/README.md) ·
+[Deliverables](deliverables/README.md)
 
 Maintained by Leon.id Komarovsky.
 

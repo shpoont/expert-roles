@@ -228,7 +228,7 @@ class HarborComparisonTests(unittest.TestCase):
         for expert in {c["expert"] for c in cases}:
             rendered = (self.experiment / "instructions" / expert / "updated.txt").read_text()
             self.assertEqual(rendered, suite.render_instruction(suite.ROOT, source, expert))
-            exported = tomllib.loads(native[Path(f"dist/codex/expert-{expert}.toml")])
+            exported = tomllib.loads(native[Path(f"deliverables/codex/expert-{expert}.toml")])
             self.assertEqual(rendered, exported["developer_instructions"])
 
     def test_host_log_ownership_keeps_the_agent_non_root(self):

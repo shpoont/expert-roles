@@ -8,8 +8,8 @@ Surgeon, writer and health-systems researcher who co-founded Ariadne Labs.
 The author of The Checklist Manifesto, he examines gaps between medical
 knowledge and reliable delivery of care.
 
-[Codex role file](../../../dist/codex/expert-atul-gawande.toml) ·
-[Claude Code role file](../../../dist/claude/expert-atul-gawande.md) ·
+[Codex role file](../../../deliverables/codex/expert-atul-gawande.toml) ·
+[Claude Code role file](../../../deliverables/claude/expert-atul-gawande.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

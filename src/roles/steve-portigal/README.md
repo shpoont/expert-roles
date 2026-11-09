@@ -8,8 +8,8 @@ User research consultant and author of *Interviewing Users* and *Doorbells,
 Danger, and Dead Batteries*. His work addresses interviewing, fieldwork and
 turning what researchers learn about people's experiences into useful insights.
 
-[Codex role file](../../../dist/codex/expert-steve-portigal.toml) ·
-[Claude Code role file](../../../dist/claude/expert-steve-portigal.md) ·
+[Codex role file](../../../deliverables/codex/expert-steve-portigal.toml) ·
+[Claude Code role file](../../../deliverables/claude/expert-steve-portigal.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

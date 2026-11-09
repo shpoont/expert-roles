@@ -48,8 +48,8 @@ Retain copyright and permission notices when copying or redistributing material.
 ## Source changes and releases
 
 Ordinary PRs include canonical changes, fresh source catalogues, relevant docs
-and an Unreleased note; leave `VERSION`, `dist/` and dated changelog history
-unchanged. Routine expert additions follow CONTRIBUTING without extending
+and an Unreleased note; leave `VERSION`, generated `deliverables/` host files,
+all three generated indexes and dated changelog history unchanged. Routine expert additions follow CONTRIBUTING without extending
 project-wide decision or status records. Maintainers record approved tooling or
 policy contracts in [design](docs/design.md) before implementation.
 
@@ -60,11 +60,13 @@ README text and the fixed six-expert homepage sample. Follow the
 [checks](tests/README.md), including the full suite, ownership checks and
 references in a complete external preview. External URLs are not fetched by CI.
 
-Keep native files at stable `dist/codex/expert-<slug>.toml` and
-`dist/claude/expert-<slug>.md` paths; specialties organize index links rather
+Keep native files at stable `deliverables/codex/expert-<slug>.toml` and
+`deliverables/claude/expert-<slug>.md` paths; specialties organize index links rather
 than duplicate exports. Preserve source/version/expert-ID provenance keys,
 Claude comments inside frontmatter and Codex comments outside settings.
-The generator rejects obsolete/duplicate files and never deletes them for you.
+The generator rejects obsolete/duplicate files, including retained `dist/`
+exports, and never deletes them for you. Historical release tags keep their
+original paths; D085 authorizes their replacement for v2.0.0 only.
 
 Follow the [release procedure](docs/delivery.md#versions-and-releases).
 Only an authorized separate PR labeled `release` chooses a new stable VERSION,

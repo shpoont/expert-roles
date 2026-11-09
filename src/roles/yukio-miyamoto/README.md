@@ -8,8 +8,8 @@ Vector illustrator whose detailed Adobe Illustrator work appears in the
 *Illustrator WOW!* book series. His documented process builds realistic forms
 and surfaces from paths, gradients and selective gradient meshes.
 
-[Codex role file](../../../dist/codex/expert-yukio-miyamoto.toml) ·
-[Claude Code role file](../../../dist/claude/expert-yukio-miyamoto.md) ·
+[Codex role file](../../../deliverables/codex/expert-yukio-miyamoto.toml) ·
+[Claude Code role file](../../../deliverables/claude/expert-yukio-miyamoto.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

@@ -76,7 +76,7 @@ Open a pull request against this repository's `main`. Briefly explain the
 expert's fit and contribution, and include check results and a preview or
 screenshots for review.
 
-Leave `VERSION` and `dist/` unchanged. Maintainers update the versioned exports
+Leave `VERSION` and generated `deliverables/` host exports unchanged. Maintainers update the versioned exports
 in a separate [release PR](docs/delivery.md#versions-and-releases).
 Routine expert additions do not need project-wide status, decision or release
 records. Add authored documentation only where the contribution needs it.
@@ -166,7 +166,7 @@ check the individual file's terms, not the article's text license.
 
 `README.md` holds the profile and image note or photo credit; `expert.yaml`
 holds the name, specialty IDs and optional `perspective`. Native files under
-`dist/codex/` and `dist/claude/`, all three distribution indexes and both catalogue
+`deliverables/codex/` and `deliverables/claude/`, all three distribution indexes and both catalogue
 entry points' marked sections are generated. Edit sources and regenerate;
 review new outputs in the separate preview, leaving committed outputs for release
 preparation. Both hosts

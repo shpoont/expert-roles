@@ -8,8 +8,8 @@ Environmental scientist and systems thinker, lead author of The Limits to Growth
 and a 1994 MacArthur Fellow. Her work explains how feedback, delays and system
 structure shape behavior over time.
 
-[Codex role file](../../../dist/codex/expert-donella-meadows.toml) ·
-[Claude Code role file](../../../dist/claude/expert-donella-meadows.md) ·
+[Codex role file](../../../deliverables/codex/expert-donella-meadows.toml) ·
+[Claude Code role file](../../../deliverables/claude/expert-donella-meadows.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

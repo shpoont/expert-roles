@@ -1,5 +1,40 @@
 # Evidence and supporting records
 
+## Deliverables path migration — 2026-11-09
+
+D085 moves generated exports and indexes to `deliverables/` in v2.0.0. At the
+same declared version, all 148 native outputs are byte-identical to the v1.5.0
+exports. Profile prose changes only in the two host download links; metadata,
+visuals, shared instructions and old release tags are preserved. Source changes
+retain the old committed export tree until the separate release PR.
+
+Current generator and boundary checks reserve both old and new export scopes,
+reject leftover old files and obsolete/duplicate native files, and retain authored
+handover documents outside the host directories. Previews regenerate host files
+rather than copy stale retained exports. The migration adds no runtime call,
+installation or behavioral effectiveness claim. Hosted delivery and publication
+must be established from the source/release PRs, exact-commit checks and final
+remote tag and release.
+
+
+## Project Structure v1.1.0 adoption — 2026-11-09
+
+Compared the published v1.1.0 starter with the adopted v1.0.1 baseline. The
+[adoption decision](../docs/decisions.md#d084--2026-11-09-adopt-project-structure-v110)
+records the upstream revision and local adaptations. Metadata, optional
+[deliverables guidance](../deliverables/README.md), navigation and curated
+preview inclusion are updated. The initial plan retained native exports in `dist/`; D085 subsequently adopts
+`deliverables/` for v2.0.0.
+
+All 115 offline tests pass, including deliverables documentation surviving a
+preview without checkout changes. All 153 generated files match; contribution
+ownership and complete-preview checks pass across 182 documents, 2,701 local
+references and 154 images. All 382 protected expert, template, vocabulary,
+native-export and library-version files retain their exact bytes. UTF-8, local
+references and public-suitability scans pass. Those checks cover the initial local increment; D085 authorizes subsequent
+source/release delivery, verified separately.
+
+
 ## Harbor migration code review — 2026-11-08
 
 Final review reproduced task mutation before execution, rewritten prior answers

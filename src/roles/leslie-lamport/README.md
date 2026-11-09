@@ -8,8 +8,8 @@ Computer scientist and 2013 ACM A. M. Turing Award recipient known for
 foundational work on distributed and concurrent systems. He created TLA+,
 a language for precise mathematical specifications of programs and systems.
 
-[Codex role file](../../../dist/codex/expert-leslie-lamport.toml) ·
-[Claude Code role file](../../../dist/claude/expert-leslie-lamport.md) ·
+[Codex role file](../../../deliverables/codex/expert-leslie-lamport.toml) ·
+[Claude Code role file](../../../deliverables/claude/expert-leslie-lamport.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

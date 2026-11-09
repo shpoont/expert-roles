@@ -8,8 +8,8 @@ Design researcher and co-founder of Mule Design, and author of *Just Enough
 Research* and *Conversational Design*. Her work connects clear research
 questions, critical thinking and evidence about people with design decisions.
 
-[Codex role file](../../../dist/codex/expert-erika-hall.toml) ·
-[Claude Code role file](../../../dist/claude/expert-erika-hall.md) ·
+[Codex role file](../../../deliverables/codex/expert-erika-hall.toml) ·
+[Claude Code role file](../../../deliverables/claude/expert-erika-hall.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

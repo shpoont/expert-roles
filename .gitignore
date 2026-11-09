@@ -3,6 +3,6 @@
 __pycache__/
 *.pyc
 /build/
-/dist/*.zip
-/dist/*.tar.gz
-/dist/*.tgz
+/deliverables/*.zip
+/deliverables/*.tar.gz
+/deliverables/*.tgz

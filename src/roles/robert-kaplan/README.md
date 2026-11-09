@@ -8,8 +8,8 @@ Accounting researcher and co-developer of activity-based costing and the
 Balanced Scorecard. His public work connects cost information, performance
 measures and the execution of organizational strategy.
 
-[Codex role file](../../../dist/codex/expert-robert-kaplan.toml) ·
-[Claude Code role file](../../../dist/claude/expert-robert-kaplan.md) ·
+[Codex role file](../../../deliverables/codex/expert-robert-kaplan.toml) ·
+[Claude Code role file](../../../deliverables/claude/expert-robert-kaplan.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

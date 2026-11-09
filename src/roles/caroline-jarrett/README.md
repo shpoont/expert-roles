@@ -8,8 +8,8 @@ Forms and survey specialist, author of *Surveys That Work* and co-author of
 *Forms that Work*. Her work examines how people understand and answer questions,
 and how survey and form design affect the quality of the resulting data.
 
-[Codex role file](../../../dist/codex/expert-caroline-jarrett.toml) ·
-[Claude Code role file](../../../dist/claude/expert-caroline-jarrett.md) ·
+[Codex role file](../../../deliverables/codex/expert-caroline-jarrett.toml) ·
+[Claude Code role file](../../../deliverables/claude/expert-caroline-jarrett.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

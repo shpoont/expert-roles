@@ -9,8 +9,8 @@ platform strategy, software investment and the relationship between technical
 capabilities and business direction. His Microsoft-era letters and strategy
 provide the basis for this perspective.
 
-[Codex role file](../../../dist/codex/expert-bill-gates.toml) ·
-[Claude Code role file](../../../dist/claude/expert-bill-gates.md) ·
+[Codex role file](../../../deliverables/codex/expert-bill-gates.toml) ·
+[Claude Code role file](../../../deliverables/claude/expert-bill-gates.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

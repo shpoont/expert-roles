@@ -8,8 +8,8 @@ Investor and business leader known for his long record at Berkshire Hathaway.
 His shareholder letters explain business quality, intrinsic value, investment
 judgment and capital allocation from the perspective of a long-term owner.
 
-[Codex role file](../../../dist/codex/expert-warren-buffett.toml) ·
-[Claude Code role file](../../../dist/claude/expert-warren-buffett.md) ·
+[Codex role file](../../../deliverables/codex/expert-warren-buffett.toml) ·
+[Claude Code role file](../../../deliverables/claude/expert-warren-buffett.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent
