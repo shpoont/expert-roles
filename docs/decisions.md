@@ -1740,3 +1740,36 @@ validation remain separate from this addition.
   personal installation or new model/native invocation. Consumers own their
   separately authorized release and selected installations. See the
   [release contract](design.md#release-expert-roles-v150).
+
+## D084 — 2026-11-09: Adopt Project Structure v1.1.0
+
+- **Status:** Owner-requested adoption; local changes prepared for review.
+- **Decision:** Advance starter provenance to v1.1.0 and add its optional
+  deliverables guidance, adapted to this library. Link preparation and handover
+  records and include the new documentation in isolated review previews.
+- **Rationale:** Identify additional files prepared for use or handover while
+  preserving the existing location and meaning of canonical sources and exports.
+- **Source:** [Project Structure v1.1.0](https://github.com/shpoont/project-structure/releases/tag/v1.1.0),
+  commit `c1af270ebf024e4a4ed9ab6eaf0b628493aa7365`.
+- **Boundary:** No result relocation or duplicate native exports. Keep library
+  VERSION, dist, profiles, instructions and earlier adoption records unchanged.
+  The initial adoption was local; D085 subsequently authorizes its source and
+  release delivery. No installation is included.
+
+## D085 — 2026-11-09: Move native exports to deliverables and release v2.0.0
+
+- **Status:** Owner-authorized implementation, source/release PR delivery and
+  publication through the protected process.
+- **Decision:** Replace `dist/` with `deliverables/codex/` and
+  `deliverables/claude/`, with generated indexes. Complete the Project Structure
+  v1.1.0 adoption and publish a major library release for the changed export paths.
+- **Rationale:** Keep finished files under the adopted handover location with
+  one native file per expert/host; coordinate the incompatible source paths
+  with consuming integrations instead of duplicating exports.
+- **Acceptance:** Preserve all 148 native payloads except version comments,
+  update all current links and guards, reject leftover old paths, run full tests
+  and preview checks, and require completed PR/main CI before tagging. Verify
+  remote tag/release, version, all exports and unchanged old tags.
+- **Boundary:** No expert-content changes or personal-role writes. Historical
+  decisions and earlier release snapshots keep their original path references.
+  See the [migration contract](design.md#native-exports-under-deliverables).

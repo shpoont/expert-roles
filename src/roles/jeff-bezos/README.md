@@ -9,8 +9,8 @@ and scaling a business through customer focus, long-term investment and
 experimentation. His public work examines decision speed, organizational
 mechanisms and the danger of treating process as a substitute for outcomes.
 
-[Codex role file](../../../dist/codex/expert-jeff-bezos.toml) ·
-[Claude Code role file](../../../dist/claude/expert-jeff-bezos.md) ·
+[Codex role file](../../../deliverables/codex/expert-jeff-bezos.toml) ·
+[Claude Code role file](../../../deliverables/claude/expert-jeff-bezos.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

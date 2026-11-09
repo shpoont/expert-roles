@@ -8,8 +8,8 @@ MIT researcher in system and software safety, and developer of the STAMP
 accident model and STPA analysis approach. Her work examines how control,
 feedback and organizational conditions contribute to losses in complex systems.
 
-[Codex role file](../../../dist/codex/expert-nancy-leveson.toml) ·
-[Claude Code role file](../../../dist/claude/expert-nancy-leveson.md) ·
+[Codex role file](../../../deliverables/codex/expert-nancy-leveson.toml) ·
+[Claude Code role file](../../../deliverables/claude/expert-nancy-leveson.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

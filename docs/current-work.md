@@ -1,5 +1,26 @@
 # Current work
 
+## Deliverables migration and v2.0.0 — 9 November 2026
+
+The owner authorized moving native exports from `dist/` to `deliverables/`,
+publishing a major release and coordinating consumer adoption. The source PR
+updates the generator, current links, ownership guards and tests, retaining the
+previous release artifacts until the separate release PR. That PR removes the
+old tree and publishes all 148 byte-preserved payloads with updated version
+comments. Existing tags and personal installations remain untouched. Follow
+[D085](decisions.md#d085--2026-11-09-move-native-exports-to-deliverables-and-release-v200).
+
+## Project Structure v1.1.0 adoption — 9 November 2026
+
+The owner requested adoption of the published starter baseline. Metadata now
+records v1.1.0, with optional deliverables guidance linked from project, source
+and delivery records. D085 supersedes the initial choice to retain `dist/` and adopts `deliverables/`
+for the native exports.
+Review previews include the new folder's documentation. Source and release delivery are now authorized under D085; expert content and
+installations remain unchanged.
+See [D084](decisions.md#d084--2026-11-09-adopt-project-structure-v110) and
+the [local checks](../evidence/README.md#project-structure-v110-adoption--2026-11-09).
+
 ## Harbor subscription migration — 8 November 2026
 
 The active [subscription recipe](../tests/harbor/subscription.md) now supports

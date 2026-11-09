@@ -380,7 +380,7 @@ release validation checks committed export headers.
 
 | Check | Observable pass condition |
 | --- | --- |
-| Source layout | Profiles, specialties and templates live under `src/`; ready-to-use exports and generated indexes live under `dist/`. Generator paths, fixtures and links resolve in the adopted layout. |
+| Source layout | Profiles, specialties and templates live under `src/`; ready-to-use exports and generated indexes live under `deliverables/`. Generator paths, fixtures and links resolve in the adopted layout. |
 | Profile coverage | Each completed expert has a linked profile, valid photo or name visual and two portable native files in the preview and at release. Retained committed outputs may lag behind sources between releases. Missing photographs do not block a profile that uses a standard name. |
 | Expert selection guidance | The main README defines an expert, and the linked contribution criteria cover established expertise, accessible work, useful task fit and a preference for public familiarity within the field. Fame alone is insufficient; formal credentials are optional, and living and historical people may qualify. Existing profile fields support editorial selection, without claims of model familiarity or effectiveness. |
 | Profile layout | Every completed profile and the starter show linked specialties once, a short introduction, early role-file/setup links and one independent-AI notice. Suggested uses and references precede visible image provenance: a Photo credit for photographs or an Image section for generated images and placeholders. A collapsed Source files footer retains metadata and shared-instruction links. |
@@ -499,7 +499,7 @@ hidden unused specialties/groups and stable paths/anchors after classification
 changes. Check mode must detect missing or edited indexes and both native
 formats without writing; generation must reject unexpected legacy or nested
 exports before changing any file. Authored profile and starter download links
-must target `dist/`.
+must target the release-owned `deliverables/` host scopes.
 
 Run the full suite and `src/generate.py --check`, native syntax/equality, complete
 local-link/anchor checks, UTF-8/public-suitability and Git diff checks. The

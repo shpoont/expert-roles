@@ -5,6 +5,13 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+- Move native role exports and generated indexes from `dist/` to `deliverables/`.
+  This changes consumer paths and requires v2.0.0; expert payloads are preserved.
+
+- Adopt Project Structure v1.1.0 with optional deliverables guidance and links.
+  Include deliverables documentation in review previews; starter provenance
+  remains separate from the library release.
+
 - Migrate active Harbor case preparation, collection and direct quality review using
   the validated Docker, Codex and ChatGPT subscription recipe. Preserve expert
   developer-instruction delivery and input grading; collect native histories

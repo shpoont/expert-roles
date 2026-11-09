@@ -39,7 +39,7 @@ same contribution process.
 D056 separates source contributions and release preparation; D063 corrects its
 catalogue boundary. Ordinary PRs submit canonical sources, fresh source
 catalogues, relevant authored documentation and Unreleased notes; they leave
-`VERSION` and `dist/` at the previous release. Maintainers update versioned
+`VERSION` and generated release artifacts at the previous release. Maintainers update versioned
 exports and release records in a separate release PR. Source and catalogue
 validation and temporary previews support contribution review; strict
 generated freshness is a release gate. See the
@@ -170,11 +170,12 @@ vocabulary labels retain their
 The adopted Project Structure baseline and upstream source are recorded in
 [.project-structure.yaml](.project-structure.yaml). Project-specific adaptations
 are retained; the metadata records provenance without introducing conformance
-requirements. [D078](docs/decisions.md#d078--2026-10-31-adopt-project-structure-v101-provenance)
-records this update; D003 retains the original v1.0.0 adoption. Expert sources
+requirements. [D084](docs/decisions.md#d084--2026-11-09-adopt-project-structure-v110)
+records the v1.1.0 adoption. [D085](docs/decisions.md#d085--2026-11-09-move-native-exports-to-deliverables-and-release-v200)
+adopts [deliverables/](deliverables/README.md) for native exports in v2.0.0. D078 and D003 retain the earlier adoptions. Expert sources
 live under `src/`; the full catalogue is generated in `src/roles/README.md`, with a fixed
 six-expert showcase and generated count in the main README. Ready-to-use
-exports and their indexes live under `dist/`. Library version `1.5.0` is
+exports and their indexes move to `deliverables/` in v2.0.0. Library version `1.5.0` is
 independent of the starter and consuming integrations. The canonical `VERSION`
 file and both hosts' provenance comments use `1.5.0`.
 The [versioned release record](https://github.com/shpoont/expert-roles/releases/tag/v1.5.0)

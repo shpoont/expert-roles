@@ -1,5 +1,28 @@
 # Design and approach
 
+## Native exports under deliverables
+
+D085 authorizes a v2.0.0 major release with native exports at
+`deliverables/codex/expert-<slug>.toml` and
+`deliverables/claude/expert-<slug>.md`. The host chooser and host indexes live
+alongside them. Replace the previous `dist/` tree without aliases or duplicates;
+old published tags retain their original paths. Existing identifiers, metadata,
+execution instructions, expert sources and visuals remain fixed. Release-version
+comments are the only native-file content change.
+
+Ordinary contributions preserve VERSION and both retained old and new
+release-owned export scopes. Source PRs change the generator, source links,
+documentation and checks; a separate release PR removes `dist/` and emits the
+new versioned outputs. Isolated source previews render the complete new layout.
+Release generation/checks reject leftover old exports rather than deleting them.
+Other authored handover material outside the generated host scopes is allowed.
+
+Update consuming integrations against the verified published v2.0.0 pin, while
+retaining historical release recognition and existing personal ownership records.
+The library release does not authorize bulk personal-role updates. Use signed
+commits, protected source/release PRs and completed successful exact-commit CI on
+PR and main before the signed annotated tag and verified Latest release.
+
 ## Harbor subscription recipe migration
 
 The owner authorized I14's sequential real-project migrations using Sol / High
@@ -170,7 +193,13 @@ instances to force a passing result. Desktop visual acceptance remains open.
 
 ## Starter provenance
 
-D078 adopts [.project-structure.yaml](../.project-structure.yaml) as the source
+D084 adopts Project Structure v1.1.0 and its optional deliverables guidance.
+Use `deliverables/` for additional public handover files when useful; the v2.0.0
+path migration below supersedes the earlier `dist/` export layout. Review previews include the new
+folder's documentation under the existing curated-file rules. Keep starter
+provenance separate from the library version and preserve earlier adoption records.
+
+D078 introduced [.project-structure.yaml](../.project-structure.yaml) as the source
 for the Project Structure baseline and upstream repository. Keep its two fields,
 `version` and `source`, separate from Expert Roles' own `VERSION` and retain
 project-specific adaptations. Copy the metadata into isolated review previews

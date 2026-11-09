@@ -1,5 +1,9 @@
 # Expert sources and generation
 
+Version 2.0.0 changes export paths from `dist/` to `deliverables/`. Source
+contributions preview the new layout; committed exports remain at their last
+release until the separate release PR. Consumers pinning v1.x keep its old paths.
+
 The canonical profiles live in [roles/](roles/README.md). Each
 expert's `expert.yaml` is the single source for their name, assigned
 specialty IDs and optional perspective; the directory name supplies their
@@ -9,9 +13,9 @@ The full [catalogue](roles/README.md) is generated beside the profiles, with
 alphabetical and specialty views. The [main README](../README.md#role-catalogue)
 shows a fixed six-expert sample and the current total.
 
-Ready-to-use files live under [dist/](../dist/README.md), with one stable file
-per expert and host. The [Codex](../dist/codex/README.md) and
-[Claude Code](../dist/claude/README.md) indexes provide alphabetical and specialty
+Ready-to-use files live under [deliverables/](../deliverables/README.md), with one stable file
+per expert and host. The [Codex](../deliverables/codex/README.md) and
+[Claude Code](../deliverables/claude/README.md) indexes provide alphabetical and specialty
 navigation from this same metadata. Specialty assignments affect index links,
 not file paths; an expert may appear under several specialties without duplicate
 exports. Native files and all three distribution indexes are committed during
@@ -21,6 +25,10 @@ and source catalogue are regenerated and committed with source changes, so
 their presentation and expert lists stay current without a release.
 Both formats share the [whole-library version](../README.md#versions-and-releases).
 Consumers pin a released tag or full commit for reproducible imports.
+
+Additional public handover files may use `deliverables/` outside its generated
+host directories. Keep canonical working materials here; identify results and
+their actual delivery status in the [delivery record](../docs/delivery.md).
 
 Specialties help people and AI choose experts for tasks. Their shared labels
 and groups currently live in [specialties.yaml](specialties.yaml); expert
@@ -69,7 +77,7 @@ src/
   check_docs.py
   check_changes.py
   release.py
-dist/
+deliverables/
   README.md
   codex/
     README.md
@@ -292,7 +300,7 @@ plain text does not establish visual verification.
 ### Submit a source contribution
 
 Submit canonical sources, the refreshed generated source views, relevant authored
-documentation and an **Unreleased** changelog note. Leave `VERSION` and `dist/`
+documentation and an **Unreleased** changelog note. Leave `VERSION` and generated host exports
 untouched. These views describe current sources; native files for unreleased
 additions are available in the preview until the next release. Use a released
 tag when you need its complete prepared distribution. Routine expert additions
@@ -311,8 +319,8 @@ Maintainers prepare committed artifacts in a separate
 Release generation reads [VERSION](../VERSION), [specialties.yaml](specialties.yaml), each expert's metadata
 and [the shared instruction](templates/invocation.md). It updates the full
 catalogue in `src/roles/README.md`, the summary and featured sections in the
-main README, the native files under `dist/codex/` and `dist/claude/`, and all
-three `dist` README indexes. Authored text outside the source catalogue and
+main README, the native files under `deliverables/codex/` and `deliverables/claude/`, and all
+three `deliverables` README indexes. Authored text outside the source catalogue and
 main README's marked sections is maintained separately; distribution indexes
 are generated in full.
 It does not install, launch or configure agents, and it does not access the

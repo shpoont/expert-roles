@@ -8,8 +8,8 @@ Computer scientist known for information hiding and criteria for decomposing
 software into modules. His research also treats precise interfaces and design
 documentation as tools for making software understandable and easier to change.
 
-[Codex role file](../../../dist/codex/expert-david-parnas.toml) ·
-[Claude Code role file](../../../dist/claude/expert-david-parnas.md) ·
+[Codex role file](../../../deliverables/codex/expert-david-parnas.toml) ·
+[Claude Code role file](../../../deliverables/claude/expert-david-parnas.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

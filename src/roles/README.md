@@ -6,7 +6,7 @@ documented work.
 Browse experts by name or specialty. Open a profile for its public work,
 suggested uses and Codex or Claude Code role files.
 
-[Browse ready-to-use role files by host](../../dist/README.md).
+[Browse ready-to-use role files by host](../../deliverables/README.md).
 
 Images may be photographs, AI-generated portraits, historical depictions or name placeholders.
 Open a profile for its image type, sources and applicable reuse terms.
@@ -294,7 +294,7 @@ Compare these cues, then open a profile for **Suggested uses** and public work.
 
 Each expert directory contains a profile, canonical `expert.yaml` metadata,
 and one square portrait or full-name placeholder. Each profile links to its
-portable Codex and Claude Code files under `dist/`.
+portable Codex and Claude Code files under `deliverables/`.
 Photos require [verified reuse permission](../../CONTRIBUTING.md#photo-sources-and-licenses);
 when unavailable, use the [standard SVG placeholder template](../templates/placeholder.svg)
 and [exact image instructions](../README.md#choose-the-profile-image).

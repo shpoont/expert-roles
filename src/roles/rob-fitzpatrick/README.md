@@ -8,8 +8,8 @@ Entrepreneur and author of *The Mom Test*, a practical guide to learning from
 customer conversations. His work emphasizes concrete behavior, questions that
 reduce biased feedback, and commitments that help assess early customer interest.
 
-[Codex role file](../../../dist/codex/expert-rob-fitzpatrick.toml) ·
-[Claude Code role file](../../../dist/claude/expert-rob-fitzpatrick.md) ·
+[Codex role file](../../../deliverables/codex/expert-rob-fitzpatrick.toml) ·
+[Claude Code role file](../../../deliverables/claude/expert-rob-fitzpatrick.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

@@ -8,8 +8,8 @@ Illustrative designer, educator and author of *Vector Basic Training*. His
 books and courses connect drawing and shape analysis with precise vector
 construction, color and consistent detailing.
 
-[Codex role file](../../../dist/codex/expert-von-glitschka.toml) ·
-[Claude Code role file](../../../dist/claude/expert-von-glitschka.md) ·
+[Codex role file](../../../deliverables/codex/expert-von-glitschka.toml) ·
+[Claude Code role file](../../../deliverables/claude/expert-von-glitschka.md) ·
 [Setup guide](../../../docs/delivery.md#use-a-native-role).
 
 An independent AI perspective inspired by public work; it does not represent

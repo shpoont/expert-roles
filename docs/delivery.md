@@ -1,5 +1,10 @@
 # Delivery and handover
 
+Native role files and indexes are delivered from [deliverables/](../deliverables/README.md).
+Additional public handover files can also live under `deliverables/`, outside
+the generated host directories. Link to results kept elsewhere and
+record preparation, checks, acceptance and delivery separately.
+
 ## Review the catalogue
 
 Start at the [full catalogue](../src/roles/README.md), then open individual
@@ -49,14 +54,14 @@ identifies the published snapshot.
 
 ## Distribution files
 
-Start at the [host chooser](../dist/README.md), or browse the
-[Codex](../dist/codex/README.md) and [Claude Code](../dist/claude/README.md)
+Start at the [host chooser](../deliverables/README.md), or browse the
+[Codex](../deliverables/codex/README.md) and [Claude Code](../deliverables/claude/README.md)
 indexes directly. Each host index lists experts alphabetically and by specialty,
 using the existing vocabulary and assignments. One expert may appear under
 several specialties while retaining exactly one file per host:
 
-- `dist/codex/expert-<slug>.toml`
-- `dist/claude/expert-<slug>.md`
+- `deliverables/codex/expert-<slug>.toml`
+- `deliverables/claude/expert-<slug>.md`
 
 These paths depend on the expert's stable slug, not specialty labels or groups.
 Consumers importing a collection select `expert-*.toml` or `expert-*.md`;
@@ -89,8 +94,8 @@ and a bounded trusted project-directory check. Desktop labels, broader discovery
 reliability and Claude runtime remain unverified.
 
 1. Open an expert in the [catalogue](../src/roles/README.md) and choose the
-   **Codex** or **Claude Code** file, or use the [distribution indexes](../dist/README.md).
-   From a checkout, use the generated file under `dist/codex/` or `dist/claude/`.
+   **Codex** or **Claude Code** file, or use the [distribution indexes](../deliverables/README.md).
+   From a checkout, use the generated file under `deliverables/codex/` or `deliverables/claude/`.
    On GitHub, use **Download raw file**, preserving its filename and contents.
    Retain [LICENSE](../LICENSE) with copies of the role files.
 2. Register the export with the intended host using the guidance below.
@@ -374,8 +379,10 @@ Choose the increment by its effect on users and consumers:
 
 Maintenance alone need not produce a release. Record meaningful changes under
 **Unreleased** in [CHANGELOG.md](../CHANGELOG.md) until preparing the next version.
-The first stable baseline includes `dist/codex/expert-<slug>.toml` and
-`dist/claude/expert-<slug>.md`; classification changes do not move those files.
+The v1.x releases used `dist/codex/` and `dist/claude/`. Version 2.0.0 moves
+these files to `deliverables/codex/` and `deliverables/claude/`; consumers must
+update their source paths. Historical tags retain their original layout.
+Classification changes still do not move individual files.
 A versioned export is not a broader host-compatibility or effectiveness claim.
 
 Preparation, local commits and publication follow the owner's current
@@ -388,7 +395,7 @@ steps below:
 Submit canonical profile/metadata/image changes, necessary vocabulary or tooling
 changes, relevant authored documentation and an **Unreleased** changelog entry.
 Refresh and include the source catalogues with `src/generate.py --docs`.
-Leave `VERSION` and `dist/` unchanged. Routine
+Leave `VERSION` and generated `deliverables/` exports unchanged. Routine
 expert additions do not require project-wide status, decision or release records.
 Validate sources, run the suite and inspect an isolated preview using the
 [source commands](../src/README.md#generate-the-catalogue-and-native-files).
@@ -491,7 +498,7 @@ commit's successful hosted checks established:
 5. Create the matching GitHub release from the existing tag, with a title naming
    Expert Roles and its version, notes summarizing the baseline, validation and
    limits, and a link to the fixed snapshot. Mark stable library releases Latest.
-   GitHub's tagged source archives include `src/`, `dist/` and the license
+   GitHub's tagged source archives include `src/`, `deliverables/` and the license
    records. Additional host-specific archives are not part of the initial
    release convention.
 6. Read back the remote commit, tag target, release metadata/notes and relevant
