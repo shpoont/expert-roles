@@ -5,6 +5,14 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+### Added
+
+- Add Colin Ware, Ruth Rosenholtz and Tamara Munzner as complementary
+  perspectives on perception-informed visualization, peripheral vision and
+  crowding, and visualization abstraction and validation. Include shared
+  Data visualization and Visual perception specialties and full-name
+  placeholders. Existing expert content and shared instructions are unchanged.
+
 ## v2.0.0 — 2026-11-09
 
 ### Breaking change
