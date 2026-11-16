@@ -106,6 +106,11 @@ cyber-security:
   group: Computing
   reference: http://data.europa.eu/esco/skill/8088750d-8388-4170-a76f-48354c469c44
 
+data-visualization:
+  name: Data visualization
+  group: Design
+  reference: https://www.wikidata.org/wiki/Q6504956
+
 deep-learning:
   name: Deep learning
   group: Computing
@@ -500,6 +505,11 @@ virtue-ethics:
   name: Virtue ethics
   group: Philosophy
   reference: https://www.wikidata.org/wiki/Q1086395
+
+visual-perception:
+  name: Visual perception
+  group: Psychology
+  reference: https://www.wikidata.org/wiki/Q162668
 
 web-accessibility:
   name: Web accessibility

@@ -75,7 +75,7 @@ data is later copied into the repository.
 
 ## Current implementation
 
-[src/specialties.yaml](../../src/specialties.yaml) contains 101 mapped entries.
+[src/specialties.yaml](../../src/specialties.yaml) contains 103 mapped entries.
 Each has exactly three required fields:
 
 - `name`: the common display label, using a preferred source term or recognized alias.
@@ -103,6 +103,17 @@ rows are sorted by name within each group; unassigned terms and empty groups
 are not displayed. Profiles list their most useful specialties first.
 
 ### Mapping history
+
+The visualization additions use Data visualization (Wikidata Q6504956) under
+Design and Visual perception (Q162668) under Psychology. ESCO's related
+knowledge concept, Visual presentation techniques, describes chart and
+interaction techniques rather than the whole visualization field. Its visual
+perception search returns adjacent subjects and clinical activities, so the
+precise Wikidata concepts are used. Existing Human-computer interaction is
+reused where the profile's research supports it. Perspective cues distinguish
+Ware's perceptual design principles, Rosenholtz's peripheral encoding and
+crowding, and Munzner's abstraction and validation framework. These are editorial
+assignments, not claims of tested role effectiveness.
 
 User research uses Wikidata Q17118423 under Design. Qualitative research and
 Survey methodology use Q839486 and Q814232 under Research methods, a shared
