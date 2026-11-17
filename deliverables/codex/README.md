@@ -8,7 +8,7 @@ documented work.
 [Other formats](../README.md) · [Setup guide](../../docs/delivery.md#use-a-native-role) ·
 [Full catalogue](../../src/roles/README.md)
 
-**74 role files.** Each expert has one file in this directory.
+**77 role files.** Each expert has one file in this directory.
 An expert may appear under several specialties below.
 
 For programmatic imports, select `expert-*.toml` files.
@@ -36,6 +36,7 @@ Use your browser's Find (Cmd+F or Ctrl+F) to find a known expert.
 | [Bill Price](../../src/roles/bill-price/README.md) | [expert-bill-price.toml](expert-bill-price.toml) |
 | [Caroline Jarrett](../../src/roles/caroline-jarrett/README.md) | [expert-caroline-jarrett.toml](expert-caroline-jarrett.toml) |
 | [Chip Huyen](../../src/roles/chip-huyen/README.md) | [expert-chip-huyen.toml](expert-chip-huyen.toml) |
+| [Colin Ware](../../src/roles/colin-ware/README.md) | [expert-colin-ware.toml](expert-colin-ware.toml) |
 | [Confucius](../../src/roles/confucius/README.md) | [expert-confucius.toml](expert-confucius.toml) |
 | [Daniel Jackson](../../src/roles/daniel-jackson/README.md) | [expert-daniel-jackson.toml](expert-daniel-jackson.toml) |
 | [Dave Ulrich](../../src/roles/dave-ulrich/README.md) | [expert-dave-ulrich.toml](expert-dave-ulrich.toml) |
@@ -86,12 +87,14 @@ Use your browser's Find (Cmd+F or Ctrl+F) to find a known expert.
 | [Robert S. Kaplan](../../src/roles/robert-kaplan/README.md) | [expert-robert-kaplan.toml](expert-robert-kaplan.toml) |
 | [Roger Fisher](../../src/roles/roger-fisher/README.md) | [expert-roger-fisher.toml](expert-roger-fisher.toml) |
 | [Ross Anderson](../../src/roles/ross-anderson/README.md) | [expert-ross-anderson.toml](expert-ross-anderson.toml) |
+| [Ruth Rosenholtz](../../src/roles/ruth-rosenholtz/README.md) | [expert-ruth-rosenholtz.toml](expert-ruth-rosenholtz.toml) |
 | [Saras Sarasvathy](../../src/roles/saras-sarasvathy/README.md) | [expert-saras-sarasvathy.toml](expert-saras-sarasvathy.toml) |
 | [Socrates](../../src/roles/socrates/README.md) | [expert-socrates.toml](expert-socrates.toml) |
 | [Steve Blank](../../src/roles/steve-blank/README.md) | [expert-steve-blank.toml](expert-steve-blank.toml) |
 | [Steve Jobs](../../src/roles/steve-jobs/README.md) | [expert-steve-jobs.toml](expert-steve-jobs.toml) |
 | [Steve Portigal](../../src/roles/steve-portigal/README.md) | [expert-steve-portigal.toml](expert-steve-portigal.toml) |
 | [Taiichi Ohno](../../src/roles/taiichi-ohno/README.md) | [expert-taiichi-ohno.toml](expert-taiichi-ohno.toml) |
+| [Tamara Munzner](../../src/roles/tamara-munzner/README.md) | [expert-tamara-munzner.toml](expert-tamara-munzner.toml) |
 | [Tomáš Baťa](../../src/roles/tomas-bata/README.md) | [expert-tomas-bata.toml](expert-tomas-bata.toml) |
 | [Von Glitschka](../../src/roles/von-glitschka/README.md) | [expert-von-glitschka.toml](expert-von-glitschka.toml) |
 | [W. Edwards Deming](../../src/roles/w-edwards-deming/README.md) | [expert-w-edwards-deming.toml](expert-w-edwards-deming.toml) |
@@ -141,11 +144,12 @@ in [By name](#by-name) or compare experts in the [full catalogue](../../src/role
 | Specialty | Role files |
 | --- | --- |
 | Contextual design | <a id="specialty-contextual-design"></a>[Karen Holtzblatt](expert-karen-holtzblatt.toml) |
+| Data visualization | <a id="specialty-data-visualization"></a>[Colin Ware](expert-colin-ware.toml) — perceptual principles for visual encoding and visual thinking, including how color, texture, motion and spatial layout support understanding.<br><br>[Tamara Munzner](expert-tamara-munzner.toml) — task and data abstraction, visual encoding and validation at each level of the nested model of visualization design. |
 | Digital illustration | <a id="specialty-digital-illustration"></a>[Von Glitschka](expert-von-glitschka.toml) — systematic sketch-to-vector construction, precise curves and anchor placement, and consistent color, shading and detail across illustrations and icons.<br><br>[Yukio Miyamoto](expert-yukio-miyamoto.toml) — realistic vector illustration through close observation, controlled gradients, selective gradient meshes and detailed treatment of reflections, textures and materials. |
 | Graphic design | <a id="specialty-graphic-design"></a>[Ellen Lupton](expert-ellen-lupton.toml)<br><br>[Von Glitschka](expert-von-glitschka.toml) — systematic sketch-to-vector construction, precise curves and anchor placement, and consistent color, shading and detail across illustrations and icons. |
 | Heuristic evaluation | <a id="specialty-heuristic-evaluation"></a>[Jakob Nielsen](expert-jakob-nielsen.toml) |
 | Human-centered design | <a id="specialty-human-centered-design"></a>[Don Norman](expert-don-norman.toml) — the relationship between people's expectations and a product's conceptual models, discoverability, feedback and errors.<br><br>[Erika Hall](expert-erika-hall.toml) — research questions, method choice and assumptions that connect evidence about people to design decisions.<br><br>[Karen Holtzblatt](expert-karen-holtzblatt.toml) — people's real work and wider activities as the basis for contextual research, product requirements and design. |
-| Human-computer interaction | <a id="specialty-human-computer-interaction"></a>[Alan Cooper](expert-alan-cooper.toml) — user goals, personas and scenarios as foundations for coherent product behavior and interaction workflows.<br><br>[Caroline Jarrett](expert-caroline-jarrett.toml) — how people interpret and answer questions, including survey error, questionnaire design and usable forms.<br><br>[Don Norman](expert-don-norman.toml) — the relationship between people's expectations and a product's conceptual models, discoverability, feedback and errors.<br><br>[Jakob Nielsen](expert-jakob-nielsen.toml) — usability problems in interfaces, heuristic evaluation and evidence from user testing.<br><br>[Karen Holtzblatt](expert-karen-holtzblatt.toml) — people's real work and wider activities as the basis for contextual research, product requirements and design.<br><br>[Léonie Watson](expert-leonie-watson.toml) — inclusive interaction and the practical experience of keyboard and assistive-technology users. |
+| Human-computer interaction | <a id="specialty-human-computer-interaction"></a>[Alan Cooper](expert-alan-cooper.toml) — user goals, personas and scenarios as foundations for coherent product behavior and interaction workflows.<br><br>[Caroline Jarrett](expert-caroline-jarrett.toml) — how people interpret and answer questions, including survey error, questionnaire design and usable forms.<br><br>[Don Norman](expert-don-norman.toml) — the relationship between people's expectations and a product's conceptual models, discoverability, feedback and errors.<br><br>[Jakob Nielsen](expert-jakob-nielsen.toml) — usability problems in interfaces, heuristic evaluation and evidence from user testing.<br><br>[Karen Holtzblatt](expert-karen-holtzblatt.toml) — people's real work and wider activities as the basis for contextual research, product requirements and design.<br><br>[Léonie Watson](expert-leonie-watson.toml) — inclusive interaction and the practical experience of keyboard and assistive-technology users.<br><br>[Ruth Rosenholtz](expert-ruth-rosenholtz.toml) — peripheral vision, visual crowding and visual search, and how limits of visual encoding affect attention and interface design.<br><br>[Tamara Munzner](expert-tamara-munzner.toml) — task and data abstraction, visual encoding and validation at each level of the nested model of visualization design. |
 | Interaction design | <a id="specialty-interaction-design"></a>[Alan Cooper](expert-alan-cooper.toml) |
 | Product design | <a id="specialty-product-design"></a>[Marty Cagan](expert-marty-cagan.toml) — product discovery, empowered product teams and the leadership practices that connect customer problems with viable technology products.<br><br>[Steve Jobs](expert-steve-jobs.toml) — product focus, simplicity and coherence across the complete hardware, software and customer experience. |
 | Typography | <a id="specialty-typography"></a>[Ellen Lupton](expert-ellen-lupton.toml) |
@@ -259,6 +263,7 @@ in [By name](#by-name) or compare experts in the [full catalogue](../../src/role
 | Operant conditioning | <a id="specialty-operant-conditioning"></a>[David Premack](expert-david-premack.toml) |
 | Personality psychology | <a id="specialty-personality-psychology"></a>[Jordan Peterson](expert-jordan-peterson.toml) |
 | Psychological safety | <a id="specialty-psychological-safety"></a>[Amy Edmondson](expert-amy-edmondson.toml) |
+| Visual perception | <a id="specialty-visual-perception"></a>[Colin Ware](expert-colin-ware.toml) — perceptual principles for visual encoding and visual thinking, including how color, texture, motion and spatial layout support understanding.<br><br>[Ruth Rosenholtz](expert-ruth-rosenholtz.toml) — peripheral vision, visual crowding and visual search, and how limits of visual encoding affect attention and interface design. |
 
 ### Research methods
 

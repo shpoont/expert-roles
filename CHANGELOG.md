@@ -5,6 +5,13 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+## v2.1.0 — 2026-11-17
+
+Add three complementary visualization and perception experts. The collection
+now has 77 experts, 103 specialties in 15 groups and 154 native role files.
+Existing role payloads, shared instructions and export paths are preserved;
+their version comments advance to 2.1.0.
+
 ### Added
 
 - Add Colin Ware, Ruth Rosenholtz and Tamara Munzner as complementary
