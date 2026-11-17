@@ -4,6 +4,8 @@
 Hopper only in a disposable copy, including actual built-in image generation,
 both native exports and rendered review. See the
 [observed results](../evidence/README.md#independent-portrait-contribution-walkthrough--2026-10-21).
+The finished-visual contract now also rejects ordinary photos; that clarification
+has automated regression coverage, not a new independent generation walkthrough.
 This reusable protocol is separate from the automated synthetic fixture and
 the catalogue owner's visual acceptance. One successful case supports a bounded
 usability observation, not universal agent reliability.
@@ -36,13 +38,16 @@ roster addition, commit, push, installation or release.
 > references, create a studio-v1 portrait with the built-in image tool, prepare
 > the image and complete its provenance. Validate sources and create a new
 > external unreleased preview containing both native formats and the catalogue.
-> Refresh the copy's source catalogues with --docs; leave VERSION and dist/ unchanged.
+> Refresh the copy's source catalogues with --docs; leave VERSION and deliverables/ unchanged.
 > Use only the documented workflow, shared prompt and credit template. Do not
 > edit existing experts, images, vocabulary or shared instructions. Keep exact
 > generation inputs, masters, corrections and decisions outside the copy.
 > Inspect likeness, gaze and background separately from file validation. Report
 > ambiguous or missing instructions and any blocked step. Do not substitute a
 > placeholder or synthetic test image as evidence that portrait generation passed.
+> An original photo is a reference, not a finished profile image. If permission
+> allows only cropping or generation lacks support, retain a full-name placeholder
+> and report generation as blocked; preserve the research and attempted steps.
 > Do not switch to another image service or API when the built-in tool is
 > unavailable. Do not commit, push, install roles or change global configuration.
 > Run the documented checks and provide the rendered profile/catalogue preview,
@@ -56,6 +61,9 @@ roster addition, commit, push, installation or release.
   chain, and applies the shared style with direct eye contact and its own palette.
 - The completed credit block identifies the output as generated, retains all
   reference attributions and applicable terms, and scopes the output terms.
+- An ordinary cropped photograph cannot complete the generated-portrait task.
+  Compare the actual selected image with the saved recipe/run record and studio
+  brief; rejected candidates and placeholder outcomes stay explicit.
 - The image is 512 × 512 RGB JPEG; the profile has one active visual. Both native
   files and catalogue entries appear in the external `0.0.0-preview` tree;
   source catalogues are fresh while committed native files, VERSION and existing

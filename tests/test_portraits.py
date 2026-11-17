@@ -9,7 +9,7 @@ import unittest
 from PIL import Image
 
 from src.portraits import background_recipe, make_recipe, prepare_image, save_recipe, validate_credit
-from portrait_fixtures import generated_profile
+from portrait_fixtures import cropped_photo_profile, generated_profile
 
 
 class PortraitMethodTests(unittest.TestCase):
@@ -172,18 +172,21 @@ class PortraitMethodTests(unittest.TestCase):
         (self.profile / "README.md").write_text(public_domain)
         validate_credit(self.profile, "portrait.jpg", "Test Expert")
 
-    def test_original_credits_can_describe_a_camera_and_disclaim_ai_generation(self):
-        for historical in (False, True):
-            with self.subTest(historical=historical):
-                label = "**Historical depiction** — not an AI-generated portrait.\n\n" if historical else ""
-                text = ("# Test Expert\n\n## Photo credit\n\n" + label
-                        + "**Model:** Camera model.\n**Method:** Original photograph or scan.\n\n"
-                        + "**Source:** [Original](https://example.org/original).\n\n"
-                        + "**License:** [CC0](https://creativecommons.org/publicdomain/zero/1.0/).\n")
-                (self.profile / "README.md").write_text(text)
-                credit = validate_credit(self.profile, "portrait.jpg", "Test Expert")
-                self.assertIsNone(credit["palette"])
-                self.assertEqual(credit["caption"].startswith("Historical depiction"), historical)
+    def test_historical_depiction_can_describe_a_camera_and_disclaim_ai_generation(self):
+        text = ("# Test Expert\n\n## Photo credit\n\n"
+                "**Historical depiction** — not an AI-generated portrait.\n\n"
+                "**Model:** Camera model.\n**Method:** Original sculpture photograph or scan.\n\n"
+                "**Source:** [Original](https://example.org/original).\n\n"
+                "**License:** [CC0](https://creativecommons.org/publicdomain/zero/1.0/).\n")
+        (self.profile / "README.md").write_text(text)
+        credit = validate_credit(self.profile, "portrait.jpg", "Test Expert")
+        self.assertIsNone(credit["palette"])
+        self.assertEqual(credit["caption"], "Historical depiction; sources and terms on profile")
+
+    def test_original_photograph_is_rejected_even_with_explicit_crop_permission(self):
+        (self.profile / "README.md").write_text(cropped_photo_profile())
+        with self.assertRaisesRegex(ValueError, "Original photographs are references only"):
+            validate_credit(self.profile, "portrait.jpg", "Ruth Rosenholtz")
 
     def test_reference_terms_are_scoped_to_each_source(self):
         original = generated_profile()

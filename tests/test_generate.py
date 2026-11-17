@@ -17,12 +17,13 @@ from PIL import Image
 
 from src.generate import FEATURED_EXPERTS, main, plan_outputs, render_placeholder
 from src.portraits import make_recipe, prepare_image, save_recipe
-from portrait_fixtures import generated_profile
+from portrait_fixtures import cropped_photo_profile, generated_profile
 
 
-# Synthetic test images exercise the credit contract, not portrait likeness.
+# Synthetic historical-depiction images exercise contracts, never real likeness.
 PHOTO_CREDIT = (
     "\n## Photo credit\n\n"
+    "**Historical depiction** — synthetic fixture, not a real person's likeness.\n\n"
     "**Source:** [Synthetic fixture](https://example.org/fixtures/portrait).\n\n"
     "**License:** [CC0](https://creativecommons.org/publicdomain/zero/1.0/).\n"
 )
@@ -425,16 +426,33 @@ class GenerationContractTests(unittest.TestCase):
         readmes = {Path("README.md"), Path("src/roles/README.md")}
         self.assertEqual({p: v for p, v in expected.items() if p not in readmes},
                          {p: v for p, v in actual.items() if p not in readmes})
-        second = self.root / "src/roles/photo-expert"
+        second = self.root / "src/roles/historical-expert"
         second.mkdir()
         self.write_portrait(second)
-        (second / "README.md").write_text("# Photo expert\n" + PHOTO_CREDIT)
-        (second / "expert.yaml").write_text("name: Photo expert\nspecialties: [human-centered-design]\n")
+        (second / "README.md").write_text("# Historical expert\n" + PHOTO_CREDIT)
+        (second / "expert.yaml").write_text("name: Historical expert\nspecialties: [human-centered-design]\n")
         self.assertEqual(self.run_exporter(), 0)
         self.assertEqual(self.run_exporter("--check"), 0)
         catalogue = self.catalogue.read_text()
         self.assertIn('don-norman/placeholder.svg" alt="Don Norman; name placeholder"', catalogue)
-        self.assertIn('photo-expert/portrait.jpg" alt="Photo expert; photo credits on profile"', catalogue)
+        self.assertIn('historical-expert/portrait.jpg" alt="Historical expert; Historical depiction; sources and terms on profile"', catalogue)
+
+    def test_cropped_photograph_fails_every_entrypoint_before_any_output_write(self):
+        self.assertEqual(self.run_exporter(), 0)
+        (self.profile / "README.md").write_text(cropped_photo_profile())
+        before = {p: p.read_bytes() for p in self.root.rglob("*") if p.is_file()}
+        with tempfile.TemporaryDirectory() as outside:
+            preview = Path(outside) / "preview"
+            for arguments in (("--validate",), ("--docs",), ("--check-docs",),
+                              ("--release",), ("--check",), ("--preview", str(preview))):
+                with self.subTest(arguments=arguments):
+                    error = StringIO()
+                    with redirect_stdout(StringIO()), redirect_stderr(error):
+                        result = main(["--root", str(self.root), *arguments])
+                    self.assertEqual(result, 1)
+                    self.assertIn("Original photographs are references only", error.getvalue())
+                    self.assertEqual(before, {p: p.read_bytes() for p in self.root.rglob("*") if p.is_file()})
+                    self.assertFalse(preview.exists())
 
     def test_image_type_disclosure_reaches_catalogues_without_changing_roles(self):
         before = plan_outputs(self.root)

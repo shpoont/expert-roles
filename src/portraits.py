@@ -82,11 +82,12 @@ def validate_credit(directory: Path, filename: str, name: str) -> dict:
         generated_alt = any(i.get("alt", "").endswith(" — AI-generated portrait") for i in images.images)
         if heading != "Photo credit" or generated_metadata or generated_alt:
             raise ValueError(f"Missing AI-generated portrait disclosure or invalid image type: {directory.name}")
+        if "**Historical depiction**" not in body:
+            raise ValueError("Original photographs are references only; use a credited studio-v1 "
+                             f"portrait or full-name placeholder: {directory.name}")
         if not re.search(r"\*\*Source:\*\*\s*\[[^\]]+\]\(https?://", body):
             raise ValueError(f"Photo credit requires a linked Source: {directory.name}")
-        caption = ("Historical depiction; sources and terms on profile"
-                   if "**Historical depiction**" in body else "photo credits on profile")
-        return {"caption": caption, "palette": None}
+        return {"caption": "Historical depiction; sources and terms on profile", "palette": None}
     if heading != "Image" or "{{" in body or "}}" in body:
         raise ValueError(f"Generated portrait needs a completed Image section: {directory.name}")
     expected = {"src": "portrait.jpg", "alt": name + " — AI-generated portrait",

@@ -14,6 +14,7 @@ import yaml
 
 from src.check_changes import check_changes, main as check_main
 from src.generate import FEATURED_EXPERTS, main as generate
+from portrait_fixtures import generated_profile
 
 
 class ContributionReleaseTests(unittest.TestCase):
@@ -57,11 +58,7 @@ class ContributionReleaseTests(unittest.TestCase):
         profile.mkdir()
         metadata = metadata or {"name": slug.replace("-", " ").title(), "specialties": ["human-centered-design"]}
         (profile / "expert.yaml").write_text(yaml.safe_dump(metadata))
-        (profile / "README.md").write_text(
-            f"# {metadata['name']}\n\n## Photo credit\n\n"
-            "**Source:** [Synthetic fixture](https://example.org/fixtures/portrait).\n\n"
-            "**License:** [CC0](https://creativecommons.org/publicdomain/zero/1.0/).\n"
-        )
+        (profile / "README.md").write_text(generated_profile(slug, metadata["name"]))
         Image.new("RGB", (512, 512)).save(profile / "portrait.jpg")
 
     def run_generator(self, *args):

@@ -6,6 +6,22 @@ import re
 from src.portraits import background_recipe
 
 
+def cropped_photo_profile():
+    """Reproduce the rejected MIT News crop submission; no source image is copied."""
+    return (
+        '# Ruth Rosenholtz\n\n'
+        '<img src="portrait.jpg" alt="Portrait of Ruth Rosenholtz" width="240" height="240">\n\n'
+        '## Photo credit\n\nJason Dorfman/CSAIL, MIT News, 4 October 2013.\n\n'
+        '- **Source:** [Original photograph, caption and credit]'
+        '(https://news.mit.edu/2013/taking-a-new-look-at-subway-map-design).\n'
+        '- **License / permission:** [MIT News image reuse terms]'
+        '(https://news.mit.edu/terms-of-use): Attribution Non-Commercial No Derivatives, '
+        'with explicit permission to crop images to size.\n'
+        '- **Changes:** Cropped the 640 × 427 original to 184 × 184, then resized '
+        'to a 512 × 512 RGB JPEG. No AI generation, retouching or background changes.\n'
+    )
+
+
 def generated_profile(slug="test-expert", name="Test Expert"):
     source = Path(__file__).resolve().parents[1]
     template = (source / "src/templates/portrait-credit/README.md").read_text()
