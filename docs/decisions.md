@@ -1773,3 +1773,19 @@ validation remain separate from this addition.
 - **Boundary:** No expert-content changes or personal-role writes. Historical
   decisions and earlier release snapshots keep their original path references.
   See the [migration contract](design.md#native-exports-under-deliverables).
+
+## D086 — 2026-11-17: Enforce the finished portrait contract
+
+- **Status:** Owner-authorized implementation and source PR submission;
+  merging and release remain separate decisions.
+- **Decision:** Photographic subjects use a reference-based studio-v1 portrait
+  or full-name placeholder; original photos are references, not finished visuals.
+  Preserve historical depictions. Supersede the retained-photograph fallback in
+  D048/D053 and align active guidance and existing generator/CI validation.
+- **Verification:** Reproduce and reject the permitted-crop substitution before
+  export writes, preserve valid generated/historical/placeholder paths, and check
+  actual images against existing recipes, run records and the studio brief.
+- **Boundary:** Restore Rosenholtz's placeholder, retain Munzner's supported
+  generated portrait and Ware's placeholder. Preserve expert content, shared
+  execution instructions, VERSION and native files. See the
+  [finished visual contract](design.md#finished-visual-contract).

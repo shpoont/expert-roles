@@ -1,5 +1,50 @@
 # Evidence and supporting records
 
+## Portrait follow-up — 2026-11-17
+
+Tamara Munzner has a studio-v1 portrait generated from Tim Bray's specific
+Commons photograph under CC BY-SA 4.0, with reference credits, source terms and
+preparation history. The exact prompt, input files and hashes, master, output
+hashes and run record are retained privately. Ruth Rosenholtz's original-photo
+crop was an incorrect completion of the studio task. It and its credits remain
+archived outside Git; her original profile and full-name placeholder are restored.
+Expanded searches did not establish generation-compatible references for her or
+Colin Ware; both retain placeholders. D086 clarifies the finished-image contract
+without relaxing source permission or substituting name-only generation.
+
+Before correction, the new permitted-crop regression failed because the old
+validator accepted an ordinary photograph. The corrected validator rejects that
+submission through validation, source catalogue refresh/check, preview and release
+generation/check before output writes. Existing CI invokes the same validator.
+Generated portraits, historical depictions and placeholders retain positive
+coverage. Automated checks inspect declarations; they do not prove permission,
+actual generation, likeness or task completion. A new independent generation
+walkthrough has not been run for this change. Hosted CI is checked separately
+during source PR submission.
+
+All 119 offline tests pass. Source catalogue and contribution-boundary checks,
+UTF-8, public-content and whitespace checks pass; the complete preview has no
+local link, image or anchor errors. All 391 protected expert, vocabulary,
+shared-prompt/instruction, version and native files retain their bytes. The image
+inventory is 55 generated portraits, five historical depictions and 17 placeholders;
+there are no ordinary photographs. Munzner's exact prompt, ordered reference
+files, template/input/master hashes and final output hash match the saved records.
+Replaying preparation from the saved master produced the same JPEG bytes with
+the recorded Pillow version. This does not promise identical model reruns.
+The complete private generation/research tree is now copied to a durable private
+archive outside Git. All 2,149 copied files were verified by size and SHA-256;
+the originals and exact tool arguments are preserved, with relocation instructions.
+Preparation from the archived master also reproduces the selected JPEG bytes.
+
+A fresh isolated Markdown/HTML preview was reviewed in Safari over loopback HTTP.
+The homepage sample, Munzner's 160-pixel catalogue portrait and 240-pixel profile
+portrait render without visible clipping or broken images. Her image disclosure,
+reference attribution and license text are readable; catalogue-to-profile and
+return navigation work. Rosenholtz's and Ware's full-name placeholders also render
+correctly in the catalogue. Screenshots and the renderer are retained privately.
+This confirms the inspected local preview, not hosted GitHub rendering or likeness.
+These local observations precede the authorized source PR submission.
+
 ## Deliverables path migration — 2026-11-09
 
 D085 moves generated exports and indexes to `deliverables/` in v2.0.0. At the

@@ -1,5 +1,22 @@
 # Tests and assessments
 
+## Finished portrait contract
+
+Photographic subjects require a credited studio-v1 generated portrait or the
+full-name placeholder; original photos are reference inputs. Existing historical
+depictions remain supported. See the [contract](../docs/design.md#finished-visual-contract)
+and [reproducible method](../docs/elements/portraits.md).
+
+The MIT News crop regression reproduces the previous validator accepting a
+finished original photograph with valid crop permission. The corrected validator
+rejects it through validation, source catalogue refresh/check, preview and release
+generation/check before writing any output. Positive coverage preserves generated
+credits, historical depictions, placeholders and native payloads across visual
+changes. The existing CI invokes this validation; no separate approval or model
+call is needed. Synthetic fixtures test declarations, not actual likeness or rights.
+Visual review must compare the selected image and private recipe/run record with
+the shared studio brief; passing automated checks does not establish completion.
+
 Checks follow the [project expectations](../PROJECT.md#scope-and-expectations)
 and [implementation contract](../docs/design.md#implementation-contract).
 

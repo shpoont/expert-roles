@@ -2046,6 +2046,42 @@ credits, native equality, protected content, local links and public suitability.
 Keep the release candidate unpublished and record this new work under Unreleased
 until its release scope is agreed.
 
+## Portrait search before placeholders
+
+### Finished visual contract
+
+Photographic subjects use a reference-based AI-generated `studio-v1` portrait
+or the shared full-name placeholder. Original photographs are reference inputs,
+not finished profile visuals. Preserve existing historical depictions without
+generation. This supersedes the earlier retained-photograph fallback in D048
+and D053; historical decisions and evidence keep their original scope.
+
+Source permission must cover generation and the resulting catalogue use;
+permission to crop alone does not qualify a generation reference. If a suitable
+permitted reference or faithful result is unavailable, keep the placeholder.
+Use the existing prompt, recipe helper, credit template and private run record;
+do not substitute a new generation method. Reproducibility covers inputs,
+procedure and deterministic JPEG preparation, not identical model pixels.
+
+The existing generator validation and CI reject an ordinary photograph as a
+finished JPEG while accepting explicitly identified historical depictions and
+fully credited studio portraits. Regress the permitted-crop substitution through
+source validation and export/preview modes, including rejection before writes.
+Declared metadata does not prove actual generation, permission or likeness:
+compare the selected image and private recipe/run records with the studio brief
+at full resolution and both display sizes before reporting completion. Report
+generation, visual review, placeholders and automated checks separately; no new
+approval gate or runtime test is introduced.
+
+For new experts, search the recommended portrait sources before selecting a
+full-name placeholder. Verify the actual person's identity, source terms and
+fitness for the existing portrait workflow. A placeholder remains valid when
+no suitable permitted reference is found or a faithful result is unsupported.
+Record the sources checked and the reason in the contribution PR, separately
+from public image credits. Report each new expert's actual image type in the
+release PR and pre-publication summary. This adds no separate approval gate;
+image-format checks do not establish that research or rights review occurred.
+
 ## Standard export provenance
 
 D054 adopts provenance comments as the standard for every current and future

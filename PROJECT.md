@@ -27,6 +27,10 @@ version comments advance; the v2.0.0 `deliverables/` paths remain unchanged. See
 Every source profile has
 canonical metadata, a short human-readable README and one square visual.
 The adopted [studio-v1 method](docs/elements/portraits.md) is retained.
+Current photographic subjects use generated studio portraits or full-name
+placeholders; source photographs are reference inputs. Historical depictions
+remain unchanged. The [finished visual contract](docs/design.md#finished-visual-contract)
+supersedes the earlier retained-photograph fallback.
 Previews generate a Codex and Claude Code file for every source profile, with
 alphabetical and specialty indexes that link to stable, unduplicated paths.
 Version v2.1.0's `deliverables/` exports and source catalogues cover all 77 experts;

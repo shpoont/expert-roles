@@ -2,6 +2,28 @@
 
 <a id="current-focus-and-status"></a>
 
+## Portrait follow-up — 17 November 2026
+
+The owner requested suitable pictures for the three visualization additions and
+clearer search/reporting guidance. The draft replaces Tamara Munzner's placeholder
+with a credited reference-based studio portrait. Ruth Rosenholtz's original-photo
+crop was an incorrect completion of the studio task; it and its credits are
+archived privately, and her original profile and placeholder are restored.
+Colin Ware retains his placeholder. Suitable generation permission remains
+unverified for both. No name-only generation is used.
+
+[D086](decisions.md#d086--2026-11-17-enforce-the-finished-portrait-contract)
+removes the conflicting ordinary-photo fallback from active guidance and enforces
+the finished-image contract in the existing generator/CI path. The shared prompt,
+recipe, run records and deterministic preparation remain the reproduction method.
+See the [local checks and limits](../evidence/README.md#portrait-follow-up--2026-11-17).
+Generation/research records are archived privately with verified hashes and
+relocation instructions. The final catalogue and Munzner profile have been
+visually checked in a local Safari preview; screenshots are retained privately.
+The owner authorizes a signed source commit, branch push, PR and CI checks.
+Merging, releasing, installation and role invocation remain outside this step.
+VERSION and native deliverables stay unchanged.
+
 ## Visualization and perception additions and v2.1.0 — 17 November 2026
 
 The owner authorizes adding Colin Ware, Ruth Rosenholtz and Tamara Munzner

@@ -36,12 +36,19 @@ or full-name `placeholder.svg` from the shared template. Follow the
 [image instructions](src/README.md#choose-the-profile-image),
 [photo policy](CONTRIBUTING.md#photo-sources-and-licenses) and
 [studio method](docs/elements/portraits.md).
+Photographic subjects use a generated studio portrait or a full-name placeholder;
+original photographs are reference inputs, never finished profile visuals.
 Verify reuse permission for the actual use and edits; always retain attribution,
 source terms and edit history. Missing permission or Wikipedia fair use is
 insufficient. Keep historical depictions unchanged and use only permitted
 photographs as studio references. Generated portraits require direct eye
 contact, distinct moderately muted backgrounds and complete generation credits.
-Use a placeholder when a suitable reference is unavailable; do not invent rights.
+Search the recommended sources before selecting a placeholder, and record
+the fallback reason and sources checked in the PR, following
+[Adding an expert](CONTRIBUTING.md#adding-an-expert). Report new experts'
+image types before publication. Compare the actual selected image and saved run
+with the studio brief before handover; file checks do not establish that result.
+Do not invent rights.
 Original contributions use MIT; preserve individual image and vocabulary terms.
 Retain copyright and permission notices when copying or redistributing material.
 

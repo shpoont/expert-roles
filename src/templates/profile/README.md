@@ -6,8 +6,9 @@ Choose the person using the
 [expert selection criteria](../../../CONTRIBUTING.md#expert-selection).
 After filling expert.yaml, create placeholder.svg using the command in
 [the image guide](../../README.md#choose-the-profile-image).
-Use a permitted photo or clearly labeled generated portrait.jpg when suitable,
-following that guide and docs/elements/portraits.md.
+For photographic subjects, use a reference-based studio-v1 portrait.jpg or keep
+the full-name placeholder, following that guide and docs/elements/portraits.md.
+Original photographs are reference inputs, not finished profile visuals.
 -->
 
 <img src="placeholder.svg" alt="{{name}} — name placeholder" width="240" height="240">
@@ -56,12 +57,18 @@ Use studio-v1: direct eye contact and an individual moderately muted background;
 record its variant and palette. Save the full input/prompt recipe outside the repo.
 Keep a placeholder when likeness is uncertain. Do not claim verified identity.
 Do not generate replacements for drawings, paintings, statues or similar depictions.
-If using a photograph, change the image filename and alt text above,
-then replace this Image section with Photo credit. Record the creator, title,
+For an existing historical depiction, change the image filename and alt text,
+then replace this Image section with Photo credit and the literal label
+**Historical depiction**. Preserve the depiction without generation.
+Record the creator, title,
 exact license/version or other permission terms, required notices and edits,
 and labeled Source and License links. Always retain attribution. Verify that
 the terms permit the actual use and image preparation; do not include an image
 with missing or unclear permission. See CONTRIBUTING.md#photo-sources-and-licenses.
+For studio references, verify generation-compatible permission; crop permission
+alone is insufficient. If unsupported, retain the placeholder and report the gap.
+Before handover, compare the selected image and saved run with the studio brief;
+file checks do not establish actual generation or a faithful likeness.
 Remove this note and the other authoring notes when complete. -->
 
 <details>

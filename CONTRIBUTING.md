@@ -62,8 +62,12 @@ Run commands from the checkout's root.
    [specialty rules](docs/elements/specialties.md#rules); propose an entry if needed.
    Add `perspective` where useful, following the
    [metadata guide](src/README.md#role-metadata-and-descriptions).
-3. Use a permitted photo or clearly labeled generated `portrait.jpg`, or create
-   a `placeholder.svg` using
+3. Search the [recommended portrait sources](#photo-sources-and-licenses) for a
+   suitable, freely reusable photograph before choosing a placeholder. Verify
+   identity and terms permitting generation and catalogue use, then follow the
+   existing studio workflow for a clearly labeled generated `portrait.jpg`.
+   If no suitable permitted reference is found or a faithful likeness is
+   unsupported, create a `placeholder.svg` using
    the [exact image instructions](src/README.md#choose-the-profile-image).
    Portraits need provenance, applicable terms, edits and **Source** links.
    Placeholders need an **Image** section identifying the placeholder.
@@ -74,7 +78,9 @@ Run commands from the checkout's root.
 
 Open a pull request against this repository's `main`. Briefly explain the
 expert's fit and contribution, and include check results and a preview or
-screenshots for review.
+screenshots for review. State each new expert's image type. For a placeholder,
+record the sources checked and why no suitable portrait was selected; keep
+search notes in the PR rather than adding them to profile image credits.
 
 Leave `VERSION` and generated `deliverables/` host exports unchanged. Maintainers update the versioned exports
 in a separate [release PR](docs/delivery.md#versions-and-releases).
@@ -87,16 +93,17 @@ Require exactly one square visual: a portrait named `portrait.jpg`, or a
 `placeholder.svg` made from the [shared template](src/templates/placeholder.svg).
 Use the expert's full name from `expert.yaml`; the command handles line breaks
 and type size automatically.
-Use a suitable, permitted photo, a clearly labeled AI-generated studio portrait,
-or an existing historical depiction.
-Faithful appearance takes priority over polish; keep an existing image or name
-placeholder when a generated likeness is uncertain. Display either at
+For photographic subjects, use a clearly labeled AI-generated `studio-v1`
+portrait or the full-name placeholder. Original photographs are reference inputs,
+not finished profile visuals. Preserve existing historical depictions.
+Faithful appearance takes priority over polish; keep a name placeholder when
+a generated likeness is uncertain. Display either at
 **160 × 160** in the catalogue and **240 × 240** on the profile.
 Follow the linked image instructions to switch.
 
 ## Photo standard
 
-For photographs and generated portraits: **512 × 512 pixels, RGB JPEG**, named
+For generated portraits and historical depictions: **512 × 512 pixels, RGB JPEG**, named
 `portrait.jpg`. Use a clear crop of the expert's face and shoulders.
 Placeholders use the template's 512 × 512
 SVG canvas and consistent styling.
@@ -107,7 +114,7 @@ Follow the reproducible [studio-v1 method](docs/elements/portraits.md): permitte
 photographic references, a new studio sitting, direct eye contact and a distinct,
 moderately muted background for each expert. The shared prompt and helper record
 the exact inputs, stable background recipe and JPEG preparation. Compare likeness
-separately from polish; keep the original or placeholder when uncertain.
+separately from polish; keep the placeholder when uncertain.
 Keep existing drawings, paintings, statues and similar depictions unchanged;
 do not generate replacements for them.
 
@@ -142,7 +149,11 @@ attribution requirement. Always include attribution.** Public-domain / CC0,
 [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) are examples;
 other licenses and clear custom reuse statements can also qualify.
 
-The terms must permit the actual catalogue use and required image preparation.
+The terms must permit the actual catalogue use and required preparation. For
+studio references, this includes reference-based generation and the resulting
+portrait's use. Permission to crop alone is insufficient for generation; retain
+the placeholder if no compatible reference can be found. Historical depictions
+require permission for their actual reuse and technical preparation, without AI.
 Record and follow any conditions. Assess limits on commercial use or edits
 against the planned use, rather than rejecting a license category automatically.
 A clear existing grant supplies permission without a separate request.

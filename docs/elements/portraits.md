@@ -4,6 +4,9 @@ The adopted **studio-v1** style uses a new professional studio sitting,
 **direct eye contact**, faithful apparent age and facial characteristics, and a
 **different moderately muted background for each expert**. Keep one visual per
 profile: `portrait.jpg` or the standard full-name `placeholder.svg`.
+For photographic subjects, the finished visual must be a generated `studio-v1`
+portrait or the placeholder. Original photographs are reference inputs, never
+finished profile visuals. Preserve existing historical depictions without generation.
 
 The method reproduces the inputs, prompt, background recipe and preparation.
 AI generation is variable: identical pixels are not guaranteed, and the built-in
@@ -12,7 +15,8 @@ tool does not expose a fixed seed or necessarily a model identifier.
 ## Choose eligible references
 
 Use only photographic subjects supported by reliably attributed photographs
-whose reuse terms permit the planned use. Follow the
+whose reuse terms permit generation and the resulting catalogue use. Permission
+to crop alone is insufficient. Follow the
 [photo policy](../../CONTRIBUTING.md#photo-sources-and-licenses).
 Before retaining a placeholder for lack of references, try accented and
 unaccented names, aliases, Openverse and original event/photographer collections.
@@ -21,7 +25,7 @@ of a related place, object or diagram do not establish a portrait reference.
 
 - Keep drawings, paintings, engravings, statues and similar depictions in their
   original form with existing credits. Do not generate replacements for them.
-- Retain a photograph or full-name placeholder when references are absent,
+- Retain a full-name placeholder when references are absent,
   insufficient for likeness, or their permission is unclear. Name-only generation
   does not qualify under this method.
 - Prefer two or three clear complementary views from a similar period when
@@ -99,8 +103,8 @@ one selected sample's background as a catalogue-wide template.
 5. Inspect the candidate at full resolution and at **160 × 160** catalogue and
    **240 × 240** profile sizes, then compare backgrounds across the collection.
    Reject uncertain likenesses, excessive retouching and visible artifacts.
-   Retain the original image or placeholder when the result is unsupported or
-   the tool blocks output. Record what was retained and why.
+   Keep the placeholder when the result is unsupported or the tool blocks
+   output; preserve rejected candidates privately. Record the outcome and reason.
 
 Visual inspection is editorial comparison, not biometric identity verification.
 The owner reviews likeness and presentation separately from passing file checks.
@@ -145,8 +149,8 @@ Keep the public profile self-contained; local reference paths and run records
 stay outside the repository. Original generated contributions use the project's
 MIT license to the extent rights can be granted. The public-domain status of a
 reference is separate from the license of a new generated contribution.
-Photographs keep their **Photo credit** sections; historical visuals retain their
-credits and **Historical depiction** label; placeholders keep their standard
+Historical visuals retain their **Photo credit** sections and
+**Historical depiction** label; placeholders keep their standard
 **Image** note and MIT template credit. Do not imply endorsement.
 
 ### Source credits and AI generation
@@ -212,6 +216,21 @@ shasum -a 256 ../portrait-review/martin-fowler/master.png \
   src/roles/martin-fowler/portrait.jpg
 ```
 
+To verify preparation, use the recorded Pillow version, check the saved input
+and template hashes, and prepare the saved master into a new review file:
+
+```sh
+.venv/bin/python src/portraits.py prepare ../portrait-review/martin-fowler/master.png \
+  --output ../portrait-review/martin-fowler/preparation-replay.jpg
+cmp ../portrait-review/martin-fowler/preparation-replay.jpg \
+  src/roles/martin-fowler/portrait.jpg
+```
+
+`cmp` exits successfully when the JPEGs are byte-identical. Preserve the exact
+original generation arguments; verify the prompt and ordered reference hashes
+against the recipe. This checks saved inputs and deterministic preparation;
+rerunning the image model can produce different pixels.
+
 Keep selection decisions and separate likeness, gaze and background observations
 in `decisions.md` under the review folder, and link it from the run report. It
 may live alongside `run.json` or at the review folder's root.
@@ -240,7 +259,11 @@ establish hosted GitHub behavior or owner acceptance.
 
 Run the [generator and checks](../../src/README.md#generate-the-catalogue-and-native-files).
 Review generated-image labels, source terms, links, active images, the complete
-diff and rendered catalogue. Preserve biographies, expert metadata, specialties,
+diff and rendered catalogue. Compare the actual selected image with the studio
+brief and saved recipe/run record, including input hashes, exact prompt, tool,
+output hash and preparation; file validity alone does not complete this review.
+Report the generated result, visual review and any placeholder separately.
+Preserve biographies, expert metadata, specialties,
 shared role instructions and native Codex and Claude bytes during portrait-only
 work. Check that all experts have an explicit generated-or-retained outcome.
 Report rejected or unsupported replacements separately from successful file checks.
@@ -248,8 +271,9 @@ Report rejected or unsupported replacements separately from successful file chec
 Source validation, previews and the strict release **--check** path validate the generated
 Image block, accessible hero label, style/variant/palette/flow, tool/date/model,
 method, changes and linked output/reference terms before any export writes.
-They reject stale generated credits on a placeholder and missing portrait credit
-sections. CI always runs source validation; contributions review a separate
+They reject ordinary photographs as finished profile images, stale generated
+credits on a placeholder and missing portrait credit sections. Explicitly labeled
+historical depictions remain supported. CI always runs source validation; contributions review a separate
 preview and leave committed release outputs unchanged. These checks inspect declared metadata, not
 the truth of a license claim or a visual likeness. Source permissions, completeness
 of supplied-reference credits and visual quality still need review.

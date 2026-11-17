@@ -39,3 +39,9 @@ Source attribution is project policy; applicable license duties are separate.
 Also replace the profile's existing hero image with portrait.jpg and accessible
 text "Full Name — AI-generated portrait", at width="240" height="240".
 Remove placeholder.svg when switching; keep exactly one active visual. -->
+
+<!-- Original photographs are reference inputs, not finished profile visuals.
+If suitable generation permission or a faithful result is unavailable, retain
+the full-name placeholder and its original Image note instead of this block.
+Compare the actual selected image with the recipe, run record and studio brief
+before reporting completion. -->

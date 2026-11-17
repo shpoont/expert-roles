@@ -5,6 +5,21 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+### Maintenance
+
+- Require portrait-source research before choosing a new expert's placeholder,
+  record fallback reasons in contribution PRs, and report new experts' image
+  types in release preparation and the pre-publication summary.
+- Replace Tamara Munzner's placeholder with a credited studio-v1 portrait based
+  on Tim Bray's CC BY-SA 4.0 photograph. Retain Ruth Rosenholtz's and Colin
+  Ware's placeholders where generation-compatible permission is unverified.
+  Expert metadata and native role files are unchanged.
+- Require a generated studio portrait or full-name placeholder for photographic
+  subjects; keep historical depictions unchanged. Reject original-photo
+  substitutions through existing generator and CI validation, with regression
+  coverage for a permitted crop. Align instructions, contribution steps and
+  walkthrough guidance with the existing reproducible studio workflow.
+
 ## v2.1.0 — 2026-11-17
 
 Add three complementary visualization and perception experts. The collection

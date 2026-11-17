@@ -8,7 +8,7 @@ The canonical profiles live in [roles/](roles/README.md). Each
 expert's `expert.yaml` is the single source for their name, assigned
 specialty IDs and optional perspective; the directory name supplies their
 identifier. The profile README
-and photo or name placeholder support browsing and are not injected into the operational prompt.
+and visual support browsing and are not injected into the operational prompt.
 The full [catalogue](roles/README.md) is generated beside the profiles, with
 alphabetical and specialty views. The [main README](../README.md#role-catalogue)
 shows a fixed six-expert sample and the current total.
@@ -368,8 +368,10 @@ Each profile requires exactly one image: a decodable 512 × 512 RGB JPEG named
 expert's name. The exporter validates either image before writing outputs and
 rejects a missing image or both files together. Display either at 160 × 160 in
 the catalogue and 240 × 240 on profiles. See the exact steps below.
-JPEGs may be photographs, original historical depictions or explicitly labeled
-AI-generated studio portraits. Keep drawings, paintings and statues unchanged.
+JPEGs must be original historical depictions or explicitly labeled AI-generated
+studio-v1 portraits. Photographic subjects use a generated portrait or a full-name
+placeholder; original photographs are reference inputs, not finished visuals.
+Keep drawings, paintings and statues unchanged.
 Follow the [portrait workflow](../docs/elements/portraits.md) for source selection,
 generation, appearance review, provenance and uncertainty. File validation does
 not establish likeness or authentic historical appearance.
@@ -431,15 +433,19 @@ files. Perspective whitespace is normalized as described above.
 
 ## Choose the profile image
 
-Use a suitable photograph with verified reuse permission, an existing historical
-depiction or a clearly labeled generated studio portrait following the
+Use an existing historical depiction or a clearly labeled generated studio
+portrait following the
 [portrait workflow](../docs/elements/portraits.md). Do not generate replacements
 for drawings, paintings, statues or similar depictions.
 The versioned [portrait prompt](templates/portrait.txt) and [helper](portraits.py)
 provide stable individual backgrounds, reference hashes and deterministic JPEG
 preparation. Generated portraits require direct eye contact; save run recipes
 outside this public repository.
-Otherwise use a full-name placeholder; uncertain likeness does not block an accepted expert.
+Before choosing a full-name placeholder, search the
+[recommended sources](../CONTRIBUTING.md#photo-sources-and-licenses), verify
+candidate identity and terms, and record the sources checked and fallback
+reason in the PR. Use a placeholder when no suitable permitted reference or
+faithful result is available; uncertain likeness does not block an accepted expert.
 Each profile has exactly one of `portrait.jpg` or `placeholder.svg`. Identify an
 existing artwork or statue with **Historical depiction** in its credit section
 so both catalogue entries retain that distinction.
@@ -491,23 +497,26 @@ credits and terms. Keep this section titled **Image**. Run the generator and
 checks above; the same validation runs in CI. Image generation does not remove
 applicable source rights or establish copyright in the generated portion.
 
-### Use a photograph instead
+### Preserve a historical depiction
 
 Verify permission under the
-[photo policy](../CONTRIBUTING.md#photo-sources-and-licenses), then prepare
+[photo policy](../CONTRIBUTING.md#photo-sources-and-licenses), keep the existing
+depiction unchanged apart from permitted technical preparation, and prepare
 `portrait.jpg` to the [photo standard](../CONTRIBUTING.md#photo-standard).
 Remove the profile's `placeholder.svg` if present. In its README, use:
 
 ```html
-<img src="portrait.jpg" alt="Portrait of Full Name" width="240" height="240">
+<img src="portrait.jpg" alt="Full Name — historical depiction" width="240" height="240">
 ```
 
 Replace `Full Name`, and replace the **Image** placeholder section with
-**Photo credit**. Include the available title/creator, a **Source** link to the
+**Photo credit** and include the literal label **Historical depiction**. Include
+the available title/creator, a **Source** link to the
 specific photo's information page, a **License** link to its exact terms,
 required notices and earlier edits, and our crop, resize or other changes.
 Regenerate and run the checks above. The catalogue selects the supplied file;
-photo terms remain separate from MIT. To switch back to a name placeholder, remove
+source terms remain separate from MIT. Ordinary photographs cannot use this
+path: supply them only as permitted generation references. To switch back to a name placeholder, remove
 `portrait.jpg`, restore the starter's image markup and **Image** section, then
 create `placeholder.svg` and regenerate. Keep historical source findings in the
 project records rather than presenting a placeholder as a photograph.

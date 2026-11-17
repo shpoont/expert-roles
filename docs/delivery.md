@@ -463,6 +463,11 @@ an unsuccessful preflight or hosted gate.
    evidence; choose the intended version and create the release branch as above.
    Use a separate release PR with the maintainer-controlled `release` label.
    The label explicitly selects strict release validation; it does not publish.
+   In the release PR and pre-publication summary, list each new expert's actual
+   image type: AI-generated studio portrait, historical depiction or full-name
+   placeholder. Original photographs are reference inputs, not finished visuals.
+   Link the source PR's search record for placeholders;
+   a valid image file alone does not establish completed portrait research.
 2. Set `VERSION` to the final stable version, without `v` or a development suffix, for a
    stable release. Finalize the dated changelog entry and update the main README
    and this guide's baseline references. Leave **Unreleased** for subsequent work.
