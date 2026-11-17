@@ -18,11 +18,13 @@ roster changes.
 
 ## Scope and expectations
 
-The v2.1.0 release baseline contains 77 experts, 103 specialties in 15 groups,
-54 generated portraits, five original historical depictions and 18 full-name
-placeholders. It adds Colin Ware, Ruth Rosenholtz and Tamara Munzner while
-preserving all existing expert content, visuals and role payloads. Native
-version comments advance; the v2.0.0 `deliverables/` paths remain unchanged. See the
+The v2.1.1 release baseline contains 77 experts, 103 specialties in 15 groups,
+55 generated portraits, five original historical depictions and 17 full-name
+placeholders. It distributes the portrait-workflow correction and Tamara
+Munzner's credited studio portrait from source PR #32. Ruth Rosenholtz and Colin
+Ware retain placeholders; all expert metadata and native role payloads remain
+unchanged. Native version comments advance; the v2.0.0 `deliverables/` paths
+remain unchanged. See the
 [source catalogue](src/roles/README.md) for the collection.
 Every source profile has
 canonical metadata, a short human-readable README and one square visual.
@@ -33,9 +35,9 @@ remain unchanged. The [finished visual contract](docs/design.md#finished-visual-
 supersedes the earlier retained-photograph fallback.
 Previews generate a Codex and Claude Code file for every source profile, with
 alphabetical and specialty indexes that link to stable, unduplicated paths.
-Version v2.1.0's `deliverables/` exports and source catalogues cover all 77 experts;
+Version v2.1.1's `deliverables/` exports and source catalogues cover all 77 experts;
 v2.0.0 contained 74 experts, and v1.5.0 used `dist/` with that earlier roster. The
-[release record](https://github.com/shpoont/expert-roles/releases/tag/v2.1.0)
+[release record](https://github.com/shpoont/expert-roles/releases/tag/v2.1.1)
 establishes hosted publication separately from the version declaration.
 Portrait acceptance is an editorial decision;
 structural validity does not establish likeness. Future additions follow the
@@ -84,10 +86,11 @@ checks but no runtime validation. These observations do not establish broad
 selection reliability or comparative expert benefit; see the
 [current results](evidence/README.md#codex-configuration-trace-and-corrected-host-validation--2026-11-02).
 
-- **Current status and boundary:** the owner authorizes the three visualization
-  and perception additions and a separate v2.1.0 release. Source PR #30 is
-  squash merged; publication requires the release PR, exact-commit CI and
-  verified signed tag and remote release. Deployment and installation belong
+- **Current status and boundary:** the owner authorizes v2.1.1 preparation,
+  release PR, merge and publication after successful checks. Source PR #32 is
+  squash merged; D087 preserves its accepted content. Publication requires
+  successful exact-commit PR/main CI, a verified annotated tag and remote release.
+  Deployment and installation belong
   to consuming integrations. D085 defines the earlier v2.0.0 major release from
   source PR #28. That release moved exports and indexes to `deliverables/`,
   preserved all role payloads and expert sources, and declared 2.0.0 in VERSION
@@ -183,10 +186,10 @@ records the v1.1.0 adoption. [D085](docs/decisions.md#d085--2026-11-09-move-nati
 adopts [deliverables/](deliverables/README.md) for native exports in v2.0.0. D078 and D003 retain the earlier adoptions. Expert sources
 live under `src/`; the full catalogue is generated in `src/roles/README.md`, with a fixed
 six-expert showcase and generated count in the main README. Ready-to-use
-exports and their indexes moved to `deliverables/` in v2.0.0. Library version `2.1.0` is
+exports and their indexes moved to `deliverables/` in v2.0.0. Library version `2.1.1` is
 independent of the starter and consuming integrations. The canonical `VERSION`
-file and both hosts' provenance comments use `2.1.0`.
-The [versioned release record](https://github.com/shpoont/expert-roles/releases/tag/v2.1.0)
+file and both hosts' provenance comments use `2.1.1`.
+The [versioned release record](https://github.com/shpoont/expert-roles/releases/tag/v2.1.1)
 and annotated tag establish publication separately from those declarations.
 The previous v1.2.0 tag remains fixed at
 `c493c44bd14c7a54adce74f10bb6ea3c5bfd7359`. See the

@@ -2191,3 +2191,24 @@ suitability checks. Use a signed commit and explicit topic-branch destination;
 verify the resulting PR and its exact-commit CI. Preserve VERSION, dist, profiles,
 metadata, vocabulary, images, installations and tags. Merging, release preparation
 and publication remain separate decisions.
+
+## Release Expert Roles v2.1.1
+
+Publish the accepted source from [PR #32](https://github.com/shpoont/expert-roles/pull/32)
+as a patch correction to v2.1.0. D086 restores the intended finished-visual
+agreement; the release adds Munzner's credited studio portrait and aligned
+contribution/validation guidance without changing expert scope or native behavior.
+Keep all 77 experts, 103 specialties, shared execution instructions and export
+paths. Regenerate 154 native files and three distribution indexes at 2.1.1; native
+files may differ from v2.1.0 only in version provenance. Preserve all canonical
+profiles, metadata and visuals from the accepted source commit.
+
+The resulting collection has 55 generated portraits, five historical depictions
+and 17 full-name placeholders. Munzner has the generated studio portrait;
+Rosenholtz and Ware retain placeholders with the research limits recorded in
+PR #32. No new expert, generation, deployment or installation is part of release.
+Require signed preparation, strict freshness and release ownership, the full
+offline suite, complete preview reference checks and successful exact-commit
+PR/main workflow and validate checks before the annotated tag and publication.
+Read back the remote tag, release, version and native files; declarations alone
+do not establish publication.

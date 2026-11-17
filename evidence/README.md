@@ -1,5 +1,21 @@
 # Evidence and supporting records
 
+## v2.1.1 release preparation — 2026-11-17
+
+The release candidate distributes accepted source PR #32 at version 2.1.1.
+All 119 offline tests pass, strict generation matches all 159 outputs, and the
+release ownership check passes. All 235 canonical profile, metadata, visual,
+vocabulary and shared-prompt/instruction files match source commit `762dd49`.
+The 154 native files differ from v2.1.0 only in their version comments; previous
+dated changelog history is unchanged. The complete generated preview passes
+local link, image and anchor checks. This release performs no new image
+generation or role runtime calls; the preceding portrait review retains its
+recorded scope and limits.
+
+PR and resulting-main CI must pass on their exact commits before tagging.
+The annotated tag and [release record](https://github.com/shpoont/expert-roles/releases/tag/v2.1.1)
+establish publication separately from these local preparation checks.
+
 ## Portrait follow-up — 2026-11-17
 
 Tamara Munzner has a studio-v1 portrait generated from Tim Bray's specific
