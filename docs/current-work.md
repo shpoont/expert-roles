@@ -2,6 +2,18 @@
 
 <a id="current-focus-and-status"></a>
 
+## Visualization and perception additions and v2.1.0 — 17 November 2026
+
+The owner authorizes adding Colin Ware, Ruth Rosenholtz and Tamara Munzner
+and releasing the updated library. Source PR #30 adds their profiles, full-name
+placeholders and two shared specialties; it preserves existing experts and the
+shared instruction. The separate v2.1.0 release prepares 77 experts, 103
+specialties and 154 native files under the existing `deliverables/` paths.
+Existing payloads differ only in version comments. Publication requires the
+matching signed tag, remote release and successful exact-commit PR/main gates.
+Consumer rollout is coordinated separately; no plugin deployment, personal
+installation or live role invocation is part of this library stage.
+
 ## Deliverables migration and v2.0.0 — 9 November 2026
 
 D085 defines the authorized v2.0.0 major release from source PR #28. The source

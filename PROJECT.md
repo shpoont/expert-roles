@@ -18,19 +18,20 @@ roster changes.
 
 ## Scope and expectations
 
-The v2.0.0 release baseline contains 74 experts, 101 specialties in 15 groups,
-54 generated portraits, five original historical depictions and 15 full-name
-placeholders. It moves native exports from `dist/` to `deliverables/` while preserving all
-expert content, vocabulary, visuals and role payloads. Version comments advance. See the
+The v2.1.0 release baseline contains 77 experts, 103 specialties in 15 groups,
+54 generated portraits, five original historical depictions and 18 full-name
+placeholders. It adds Colin Ware, Ruth Rosenholtz and Tamara Munzner while
+preserving all existing expert content, visuals and role payloads. Native
+version comments advance; the v2.0.0 `deliverables/` paths remain unchanged. See the
 [source catalogue](src/roles/README.md) for the collection.
 Every source profile has
 canonical metadata, a short human-readable README and one square visual.
 The adopted [studio-v1 method](docs/elements/portraits.md) is retained.
 Previews generate a Codex and Claude Code file for every source profile, with
 alphabetical and specialty indexes that link to stable, unduplicated paths.
-Version v2.0.0's `deliverables/` exports and source catalogues cover all 74 experts;
-v1.5.0 used `dist/` with the same roster. The
-[release record](https://github.com/shpoont/expert-roles/releases/tag/v1.5.0)
+Version v2.1.0's `deliverables/` exports and source catalogues cover all 77 experts;
+v2.0.0 contained 74 experts, and v1.5.0 used `dist/` with that earlier roster. The
+[release record](https://github.com/shpoont/expert-roles/releases/tag/v2.1.0)
 establishes hosted publication separately from the version declaration.
 Portrait acceptance is an editorial decision;
 structural validity does not establish likeness. Future additions follow the
@@ -79,9 +80,14 @@ checks but no runtime validation. These observations do not establish broad
 selection reliability or comparative expert benefit; see the
 [current results](evidence/README.md#codex-configuration-trace-and-corrected-host-validation--2026-11-02).
 
-- **Current status and boundary:** D085 defines the v2.0.0 major release from
-  source PR #28. Exports and indexes move to `deliverables/`; all role payloads
-  and expert sources are preserved. VERSION and native comments declare 2.0.0.
+- **Current status and boundary:** the owner authorizes the three visualization
+  and perception additions and a separate v2.1.0 release. Source PR #30 is
+  squash merged; publication requires the release PR, exact-commit CI and
+  verified signed tag and remote release. Deployment and installation belong
+  to consuming integrations. D085 defines the earlier v2.0.0 major release from
+  source PR #28. That release moved exports and indexes to `deliverables/`,
+  preserved all role payloads and expert sources, and declared 2.0.0 in VERSION
+  and native comments.
   The signed tag and remote release establish publication separately. Integration
   source-path updates are coordinated independently; no personal role writes
   are part of this library release.
@@ -173,10 +179,10 @@ records the v1.1.0 adoption. [D085](docs/decisions.md#d085--2026-11-09-move-nati
 adopts [deliverables/](deliverables/README.md) for native exports in v2.0.0. D078 and D003 retain the earlier adoptions. Expert sources
 live under `src/`; the full catalogue is generated in `src/roles/README.md`, with a fixed
 six-expert showcase and generated count in the main README. Ready-to-use
-exports and their indexes move to `deliverables/` in v2.0.0. Library version `2.0.0` is
+exports and their indexes moved to `deliverables/` in v2.0.0. Library version `2.1.0` is
 independent of the starter and consuming integrations. The canonical `VERSION`
-file and both hosts' provenance comments use `2.0.0`.
-The [versioned release record](https://github.com/shpoont/expert-roles/releases/tag/v2.0.0)
+file and both hosts' provenance comments use `2.1.0`.
+The [versioned release record](https://github.com/shpoont/expert-roles/releases/tag/v2.1.0)
 and annotated tag establish publication separately from those declarations.
 The previous v1.2.0 tag remains fixed at
 `c493c44bd14c7a54adce74f10bb6ea3c5bfd7359`. See the
