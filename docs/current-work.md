@@ -2,6 +2,22 @@
 
 <a id="current-focus-and-status"></a>
 
+## v2.1.1 release — 17 November 2026
+
+[D087](decisions.md#d087--2026-11-17-release-expert-roles-v211) authorizes the
+patch release of source PR #32. Prepare VERSION, dated changelog, native version
+comments, distribution indexes and current documentation without changing
+accepted expert sources or role behavior. The candidate contains 77 experts,
+103 specialties, 154 native files, 55 generated portraits, five historical
+depictions and 17 full-name placeholders. Munzner has the generated portrait;
+Rosenholtz and Ware retain placeholders. The research and visual-review limits
+remain in the [source record](../evidence/README.md#portrait-follow-up--2026-11-17).
+
+Publication requires successful local and exact-commit PR/main gates, followed
+by the verified annotated tag and [GitHub release](https://github.com/shpoont/expert-roles/releases/tag/v2.1.1).
+That remote record establishes publication separately from this preparation
+record. No generation, installation or plugin rollout is included.
+
 ## Portrait follow-up — 17 November 2026
 
 The owner requested suitable pictures for the three visualization additions and
@@ -20,9 +36,9 @@ See the [local checks and limits](../evidence/README.md#portrait-follow-up--2026
 Generation/research records are archived privately with verified hashes and
 relocation instructions. The final catalogue and Munzner profile have been
 visually checked in a local Safari preview; screenshots are retained privately.
-The owner authorizes a signed source commit, branch push, PR and CI checks.
-Merging, releasing, installation and role invocation remain outside this step.
-VERSION and native deliverables stay unchanged.
+Source PR #32 is squash merged as `762dd49`; its PR and resulting main CI passed.
+The owner now authorizes the separate v2.1.1 release after the required gates.
+Installation and role invocation remain outside this work.
 
 ## Visualization and perception additions and v2.1.0 — 17 November 2026
 

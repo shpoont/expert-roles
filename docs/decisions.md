@@ -1789,3 +1789,15 @@ validation remain separate from this addition.
   generated portrait and Ware's placeholder. Preserve expert content, shared
   execution instructions, VERSION and native files. See the
   [finished visual contract](design.md#finished-visual-contract).
+
+## D087 — 2026-11-17: Release Expert Roles v2.1.1
+
+- **Status:** Owner-authorized preparation, PR submission, merge and publication
+  after successful local and exact-commit hosted gates.
+- **Decision:** Release D086 and the accepted portrait follow-up from source
+  PR #32 as v2.1.1, preserving roster, metadata, shared instructions, native
+  behavior and export paths. Only native version comments advance.
+- **Boundary:** 55 generated portraits, five historical depictions and 17
+  placeholders; Rosenholtz and Ware retain placeholders. No generation,
+  installation or integration rollout. Preserve existing released tags.
+  See the [release contract](design.md#release-expert-roles-v211).

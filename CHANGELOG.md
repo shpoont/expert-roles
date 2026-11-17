@@ -5,6 +5,13 @@ Record meaningful changes by version under the
 
 ## Unreleased
 
+## v2.1.1 — 2026-11-17
+
+Correct the portrait workflow and add Tamara Munzner's credited studio portrait.
+The collection retains 77 experts, 103 specialties and 154 native role files,
+with 55 generated portraits, five historical depictions and 17 placeholders.
+Native role payloads and paths are unchanged; version comments advance to 2.1.1.
+
 ### Maintenance
 
 - Require portrait-source research before choosing a new expert's placeholder,

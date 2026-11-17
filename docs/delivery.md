@@ -8,11 +8,12 @@ record preparation, checks, acceptance and delivery separately.
 ## Review the catalogue
 
 Start at the [full catalogue](../src/roles/README.md), then open individual
-profiles and their Codex or Claude Code files. The v2.1.0 baseline contains
+profiles and their Codex or Claude Code files. The v2.1.1 baseline contains
 77 profiles, 103 shared specialties in 15 groups and 154 native role files.
-It has 54 generated portraits, five original historical depictions and eighteen
-full-name placeholders. Colin Ware, Ruth Rosenholtz and Tamara Munzner join
-the v2.0.0 collection; all previously accepted experts remain included.
+It has 55 generated portraits, five original historical depictions and seventeen
+full-name placeholders. Tamara Munzner now has a credited studio portrait;
+Ruth Rosenholtz and Colin Ware retain placeholders. Expert content and native
+behavior remain unchanged from v2.1.0.
 
 Review images and their provenance using the
 [portrait workflow](elements/portraits.md). Historical depictions remain unchanged;
@@ -356,7 +357,7 @@ Follow the [photo policy](../CONTRIBUTING.md#photo-sources-and-licenses) and
 
 ## Versions and releases
 
-Library version: **[v2.1.0](https://github.com/shpoont/expert-roles/releases/tag/v2.1.0)**.
+Library version: **[v2.1.1](https://github.com/shpoont/expert-roles/releases/tag/v2.1.1)**.
 The linked GitHub release records publication separately from the version declaration.
 One `MAJOR.MINOR.PATCH` version covers profiles, metadata, vocabulary, shared
 instructions, templates, tooling and both native formats. The consuming plugin
@@ -364,7 +365,7 @@ and other integrations keep independent histories. Individual experts and export
 formats do not have separate versions.
 
 The root [VERSION](../VERSION) file is the machine-readable source for export
-provenance, set to `2.1.0` for this baseline. Contributions leave it unchanged;
+provenance, set to `2.1.1` for this baseline. Contributions leave it unchanged;
 temporary previews use `0.0.0-preview` independently. A version header identifies
 a declared library version, not proof of publication or an
 exact content digest. Keep released tags fixed and use Git refs for snapshots.
@@ -386,8 +387,10 @@ Classification changes still do not move individual files.
 A versioned export is not a broader host-compatibility or effectiveness claim.
 
 Preparation, local commits and publication follow the owner's current
-authorization. The owner authorizes the three additions and v2.1.0 publication
-after the required gates; future releases need their own owner instruction. D085
+authorization. The owner authorizes v2.1.1 preparation, PR submission, merge and
+publication after the required gates under
+[D087](decisions.md#d087--2026-11-17-release-expert-roles-v211).
+Future releases need their own owner instruction. D085
 retains the separate v2.0.0 path-migration authorization. Complete the applicable
 steps below:
 
